@@ -55,7 +55,7 @@ Restrictions:
 Default value: domestic.  The setting is effective for international users, domestic users of level 3 or above.
 
  |
-|SourcePort|String|No|80| You can specify Port 443 and 80. Default value: 800.
+|SourcePort|String|No|80| You can specify Port 443 and 80. Default value: 80.
 
  443 port performs https source.  OSS does not suppport 443 port.
 
