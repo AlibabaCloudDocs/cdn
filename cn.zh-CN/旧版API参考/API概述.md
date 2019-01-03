@@ -2,6 +2,8 @@
 
 本文档介绍了阿里云CDN的各API名称。您可以分别点击链接查看各API接口的具体参数。
 
+**[OpenAPI Explorer](https://api.aliyun.com)** 提供在线调用云产品API、动态生成 SDK示例代码和快速检索接口等功能，能显著降低使用API 的难度，强烈推荐您使用。
+
 ## 服务操作接口 {#section_tsp_qnl_vdb .section}
 
 |API|描述|
