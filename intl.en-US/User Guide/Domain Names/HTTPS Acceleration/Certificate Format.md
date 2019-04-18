@@ -128,12 +128,13 @@ The PFX format is generally used in Windows Server.
 
 ## Free certificates {#section_rbm_std_zdb .section}
 
-The free certificate here is Alibaba Cloud CDN Digicert DV version SSL Free certificate, only available for Alibaba Cloud CDN service. It cannot be managed in the SSL Certificates service of Alibaba Cloud Security. This certificate is only used to enable HTTPS Secure Acceleration in CDN, and you cannot obtain its public and private keys for other use.
+The free certificate is an Alibaba Cloud CDN Digicert DV version SSL Free certificate, only available for the Alibaba Cloud CDN service. It cannot be managed in the SSL Certificates service of Alibaba Cloud Security. This certificate is only used to enable HTTPS Secure Acceleration in CDN, and you cannot obtain its public and private keys for other use.
 
 -   The application process for a free certificate takes 5-10 minutes. While waiting, you can also go back and choose to upload a custom certificate or select a managed certificate.
--   You can always switch among custom, managed or free certificate no matter which one you enable at the beginning.
+-   You can always switch among custom, managed or free certificates no matter which one you enable at the beginning.
 -   Free certificates are valid for one year and automatically renewed upon expiration.
--   When using this product, if you disable the HTTPS settings and then enable the free certificate option again, the system uses the free certificate you applied for previously, provided it has not expired. If your certificate has expired when you enable the free certificate option, the system reapplies for a free certificate.
+-   When using this product, if you disable the HTTPS settings and then enable the free certificate option again, the system will use the free certificate you applied for previously, provided it has not expired. If your certificate has expired when you enable the free certificate option, the system reapplies for a free certificate.
+-   During the application process, the system will check the DNS records of the corresponding domain to verify it points to a correct Alibaba Cloud CDN CNAME. If you request a certificate for a top-level domain, make sure to also point the `www.` subdomain at the Alibaba Cloud CDN domain. The certificate will be requested for both the top-level domain and the `www.` subdomain, so a missing CNAME record for one of those might cause an error to occur during the application.
 
 ## Other certificate issues {#section_ovq_jrl_xdb .section}
 
