@@ -1,32 +1,38 @@
 # DescribeDomainUsageData {#reference4231 .reference}
 
-查询域名在特定计费区域的用量数据。
+调用DescribeDomainUsageData查询域名在特定计费区域的用量数据。
 
 **说明：** 
 
--   支持批量域名查询，多个域名用半角逗号分隔，最多可以一次查询100个域名。如果为空则返回账号下所有域名的数据。
+-   支持批量域名查询，多个域名用`,`分隔，最多可以一次查询100个域名。如果为空则返回账号下所有域名的数据。
 -   用量数据包括流量、带宽和请求数三类，单位分别为byte、bps和次。
 
 ## 请求参数 { .section}
 
-|参数|类型|是否必须|描述|
+|参数|类型|是否必选|描述|
 |:-|:-|:---|:-|
 |Action|String|是|操作接口名，系统规定参数。取值：DescribeDomainUsageData。|
 |DomainName|String|否| -   若参数为空，默认返回所有加速域名合并后数据。
--   可输入需要查询的加速域名，支持批量域名查询，多个域名用半角逗号分隔。
+-   可输入需要查询的加速域名，支持批量域名查询，多个域名用`,`分隔。
 
  |
 |StartTime|String|是|获取数据起始时间点。日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。最小数据粒度为5分钟。|
 |EndTime|String|是|结束时间需大于起始时间，不能相差超过31天。获日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。|
 |DataProtocol|String|否|需要获取的数据的协议。包括https、http和all。默认为all。|
-|Type|String|否|需要获取的用量类型。static代表静态；dynamic 代表动态；all 代表全部。默认为all。|
+|Type|String|否|需要获取的用量类型。默认为all。 -   static：静态。
+-   dynamic：动态。
+-   all：全部。
+
+ |
 |Area|String|否|区域代号。包括：CN、OverSeas、AP1、AP2、AP3、NA、SA、EU、MEAA、all。不传为CN：中国大陆。|
-|Field|String|是|请求的数据类型。包括：bps、traf、acc，其中 acc 不支持area。|
+|Field|String|是|请求的数据类型。包括：bps、traf、acc，其中acc不支持area。|
 |Interval|String|否|强制指定获取指定时间粒度的数据。支持300、3600或86400，分别代表5分钟、1小时和1天。 **说明：** 
 
 -   如果指定Interval为300，最长可查询近半年的数据，单次查询时间跨度最长为3天。
 -   如果指定Interval为3600或86400，最长可查询近1年的数据。
--   如果不指定Interval，单次查询跨度最长为1个月。当查询时间为1-3天时，数据按小时粒度返回。当查询时间大于4天时，数据按天粒度返回。
+-   如果不指定Interval，单次查询跨度最长为1个月。
+    -   当查询时间为1-3天时，数据按小时粒度返回。
+    -   当查询时间大于4天时，数据按天粒度返回。
 
  |
 
@@ -128,7 +134,7 @@
     ```
 
 
-返回示例
+正常返回示例
 
 `JSON`格式
 
@@ -168,7 +174,7 @@
 |OperationDenied|Your CDN service is suspended.|403|CDN服务已被停止。|
 |InvalidDomain.NotFound|The domain provided does not belong to you.|404|域名不存在或不属于当前用户。|
 |InvalidDomain.Offline|The domain provided is offline.|404|域名已下线。|
-|ServiceBusy|The specified Domain is configuring, please retry later.|403|域名正在配置中，请稍后再试。|
+|ServiceBusy|The specified Domain is configuring, please retry later.|403|域名正在配置中，请您稍后再试。|
 |InvalidDomain.Configure\_failed|Failed to configure the provided domain.|500|域名配置失败。|
 |InvalidParameter|Invalid Parameter.|400|参数错误。|
 |InvalidParameterProduct|Invalid Parameter Product.|400|Product参数错误。|
