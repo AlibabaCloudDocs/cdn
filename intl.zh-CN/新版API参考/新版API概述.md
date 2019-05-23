@@ -85,7 +85,6 @@
 
 |API|描述|
 |:--|:-|
-|[BlockObjectCaches](intl.zh-CN/新版API参考/刷新预热接口/BlockObjectCaches.md#)|封禁节点上的文件内容。|
 |[PushObjectCache](intl.zh-CN/新版API参考/刷新预热接口/PushObjectCache.md#)|将源站的内容主动预热到L2 Cache节点上。|
 |[DescribeRefreshQuota](intl.zh-CN/新版API参考/刷新预热接口/DescribeRefreshQuota.md#)|查询刷新、预热URL及目录的最大限制数量，以及当日剩余刷新、预热URL及目录的次数。|
 |[DescribeRefreshTasks](intl.zh-CN/新版API参考/刷新预热接口/DescribeRefreshTasks.md#)|查询刷新、预热状态是否在全网生效。|
