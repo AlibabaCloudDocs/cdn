@@ -14,7 +14,7 @@
 
 |Function|Description|Default|
 |:-------|:----------|:------|
-|[Back-to-source host](intl.en-US/User Guide/Domain Names/Content back-to-source settings/Back-to-source host.md#)|Specifies the host domain name that a CDN node accesses in the back-to-source process. Three options are available: CDN domain name, original site domain name, and custom domain name.|CDN domain name|
+|[Back-to-origin HOST](intl.en-US/User Guide/Domain Names/Content back-to-source settings/Back-to-origin HOST.md#)|Specifies the host domain name that a CDN node accesses in the back-to-source process. Three options are available: CDN domain name, original site domain name, and custom domain name.|CDN domain name|
 |[Back-to-source with the same protocol](intl.en-US/User Guide/Domain Names/Content back-to-source settings/Back-to-origin with the same protocol.md#)|Back-to-source requests for resources use exactly the same protocol as used by the client to request the resources.|Disabled|
 |[Private bucket back-to-origin authentication](https://www.alibabacloud.com/help/doc-detail/57653.htm)|After authentication is successful and authentication configuration is enabled, domain names enabled with private bucket authentication have the permission to access the private bucket.|Disabled|
 
