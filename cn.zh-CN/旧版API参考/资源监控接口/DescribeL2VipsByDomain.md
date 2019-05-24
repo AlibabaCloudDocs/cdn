@@ -6,8 +6,8 @@
 
 **说明：** 
 
--   支持日峰值带宽为**1Gbps**以上的用户提工单申请该接口调用权限，[立即申请](https://workorder.console.aliyun.com/console.htm?lang=#/ticket/add?productCode=cdn)。
--   使用场景介绍，请了解：[CDN的回源地址有哪些？](40205)
+-   支持日峰值带宽为**1Gbps**以上的用户提工单申请该接口调用权限，请单击[立即申请](https://workorder.console.aliyun.com/console.htm?lang=#/ticket/add?productCode=cdn)。
+-   使用场景介绍，请参见[回源的CDN节点的IP有哪些？](https://helpcdn.aliyun.com/knowledge_detail/40205.html)
 
 ## 调试 {#apiExplorer .section}
 
