@@ -2,8 +2,8 @@
 
 调用SetReqAuthConfig接口设置加速域名的访问鉴权配置。
 
--   [鉴权功能说明](~~27135~~)
--   [python版本的鉴权代码示例](~~27277~~)
+-   [配置URL鉴权](https://helpcdn.aliyun.com/document_detail/85117.html)
+-   [python版本的鉴权代码示例](https://helpcdn.aliyun.com/document_detail/85116.html)
 
 ## 调试 {#apiExplorer .section}
 
