@@ -14,7 +14,7 @@
 
 ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5098/15585148394886_zh-CN.png)
 
-1.  终端用户（北京）向`www.a.com`下的某资源发起请求，会先向LDNS发起域名解析请求。
+1.  终端用户（北京）向`www.a.com`下的某资源发起请求，会先向LDNS（本地DNS）发起域名解析请求。
 2.  LDNS检查缓存中是否有www.a.com的ip记录，如果有则直接返回给终端。如果没有则向授权DNS查询。
 3.  当授权DNS解析`www.a.com`时，会发现已经配置了CNAME `www.a.tbcdn.com`。
 4.  解析请求会发送至阿里云DNS调度系统，并为请求分配最佳节点 IP。
