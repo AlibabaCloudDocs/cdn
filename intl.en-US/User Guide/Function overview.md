@@ -48,7 +48,6 @@
 |:-------|:----------|:------|
 |[Back-to-source of range](intl.en-US/User Guide/Domain Names/Video Service Configuration/Back-to-origin of range.md#)|Allows a user to notify an origin site server to return partial content within a specified range. This function helps with accelerated delivery of large files.|Disabled|
 |[Drag/drop playback](intl.en-US/User Guide/Domain Names/Video Service Configuration/Drag__Drop Playback.md#)|Enables random drag or drop playback in a video or audio on-demand scenario.|Disabled|
-|[Notify\_URL](intl.en-US/User Guide/Domain Names/Video Service Configuration/Notify_URl setting.md#)|\(Applicable to Live\) Real-time information callback of stream status, promptly notifies users about the operation results of streaming or stream disconnection.|Disabled|
 
 ## Advanced settings {#section_vbh_cqm_2gb .section}
 
@@ -65,14 +64,14 @@
 
  |Enabled|
 
-## **Data monitoring and statistical analysis** {#section_vfc_kwm_2gb .section}
+## Data monitoring and statistical analysis {#section_vfc_kwm_2gb .section}
 
 |Function|Description|Default|
 |:-------|:----------|:------|
 |[Data monitoring](intl.en-US/User Guide/Data monitoring.md#)|You can select Domain Name, Region, Operator, Time Granularity \(1 minute, 5 minute or 1 hour\) and Time Range \(Today, Yesterday, 7 Days, 30 Days or Custom\) to view the specific condition.|Enabled|
 |[Statistical analysis](intl.en-US/User Guide/Statistical Analysis.md#)|In Statistical Analysis, you can check data of PV and UV, Area and ISP, Domain Name Rankings, Popular Referer, and Popular URLs.|Enabled|
 
-## **Usage query** {#section_dqq_dxm_2gb .section}
+## Usage query {#section_dqq_dxm_2gb .section}
 
 |Function|Description|Default|
 |:-------|:----------|:------|
