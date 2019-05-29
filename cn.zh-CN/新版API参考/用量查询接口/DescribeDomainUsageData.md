@@ -7,6 +7,10 @@
 -   支持批量域名查询，多个域名用`,`分隔，最多可以一次查询100个域名。如果为空则返回账号下所有域名的数据。
 -   用量数据包括流量、带宽和请求数三类，单位分别为byte、bps和次。
 
+## 调试 {#section_bhh_h6f_lht .section}
+
+前往【[API Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeDomainUsageData)】在线调试，API Explorer提供在线调用API、动态生成SDK Example代码和快速检索接口等能力，能显著降低使用云API的难度，强烈推荐使用。
+
 ## 请求参数 { .section}
 
 |参数|类型|是否必选|描述|
@@ -66,7 +70,7 @@
 |:-|:-|:-|
 |TimeStamp|String|时间片起始时刻。|
 |PeakTime|String|Field为bps时，该值为峰值带宽时刻，否则值和TimeStamp相同。|
-|Value|String|用量。|
+|Value|String|用量。单位：byte。|
 
 ## 示例 { .section}
 
