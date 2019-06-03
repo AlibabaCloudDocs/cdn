@@ -4,9 +4,9 @@
 
 When **HTTPS Secure Acceleration** is enabled for a CDN domain, it supports custom settings to perform force redirects on users' original request methods.
 
-For example, when **force HTTPS** redirect is enabled and a user initiates an HTTP request, the server returns a 302 redirect response and the original HTTP request is forcibly redirected to an HTTPS request, as shown in the following figure.
+For example, when **force HTTPS** redirect is enabled and a user initiates an HTTP request, the server returns a 301 redirect response and the original HTTP request is forcibly redirected to an HTTPS request, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5136/15422711173707_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5136/15595712393707_en-US.png)
 
 **Force Redirect** is disabled by default. When you enable the feature, both HTTP and HTTPS requests are enabled simultaneously by default.
 
