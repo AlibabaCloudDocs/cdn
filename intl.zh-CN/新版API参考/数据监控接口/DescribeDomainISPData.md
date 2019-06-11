@@ -1,82 +1,86 @@
-# DescribeDomainISPData {#concept_91100_zh .concept}
+# DescribeDomainISPData {#reference4167 .reference}
 
-获取加速域名天粒度的 用户运营商分布数据统计。
+调用DescribeDomainISPData获取加速域名天粒度的用户运营商分布数据统计。
 
-不指定StartTime和EndTime时，默认读取过去24小时的数据，同时支持按指定的起止时间查询，两者需要同时指定。
+-   不指定StartTime和EndTime时，默认读取过去24小时的数据。
+-   同时指定StartTime和EndTime时，按指定的起止时间查询。
 
 **说明：** 
 
--   只支持一个域名，或当前用户下所有域名。
+-   只支持一个域名或当前用户下所有域名。
 -   最多可获取最近90天的数据。
 
-## 请求参数 { .section}
+## 调试 {#section_bk2_sdh_iqa .section}
 
-|参数|类型|是否必需|描述|
+前往【[API Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeDomainISPData)】在线调试，API Explorer提供在线调用API、动态生成SDK Example代码和快速检索接口等能力，能显著降低使用云API的难度，强烈推荐使用。
+
+## 请求参数 {#section_dnw_t42_tzn .section}
+
+|参数|类型|是否必选|描述|
 |--|--|----|--|
-|Action|String|是|操作接口名，系统规定参数，取值：DescribeDomainISPData|
+|Action|String|是|操作接口名，系统规定参数，取值：DescribeDomainISPData。|
 |DomainName|String|否|需要查询的加速域名，只支持一个域名，不写代表当前用户下所有域名。|
-|StartTime|String|否| -   获取数据起始时间点，北京时间。
+|StartTime|String|否| -   获取数据起始时间点，UTC时间。
 -   格式为：YYYY-MM-DDThh:mm:ssZ。
 -   不写默认读取过去24小时数据。
 
  |
-|EndTime|String|否| -   结束时间需大于起始时间，北京时间。
+|EndTime|String|否| -   结束时间需大于起始时间，UTC时间。
 -   格式为：YYYY-MM-DDThh:mm:ssZ。
 
  |
 
-## 返回参数 { .section}
+## 返回参数 {#section_cky_xl8_fb8 .section}
 
 |名称|类型|描述|
 |--|--|--|
-|DomainName|String|加速域名信息|
+|DomainName|String|加速域名信息。|
 |DataInterval|String|每条记录的时间间隔，固定值1天。|
-|StartTime|DateTime|开始时间|
-|EndTime|DateTime|结束时间|
-|ISPDataInterval|UsageData\[\]|每个时间间隔的用户区域分布统计|
+|StartTime|DateTime|开始时间。|
+|EndTime|DateTime|结束时间。|
+|ISPDataInterval|UsageData\[\]|每个时间间隔的用户区域分布统计。|
 
-## UsageData { .section}
+UsageData
 
 |名称|类型|描述|
 |--|--|--|
 |Value|ISPProportionData\[\]|各运营商访问占比数据list|
 
-## ISPProportionData { .section}
+ISPProportionData
 
 |名称|类型|描述|
 |--|--|--|
-|ISP|String|运营商信息|
-|Proportion|String|占比使用数据|
-|IspEname|String|运营商英文名称|
+|ISP|String|运营商信息。|
+|Proportion|String|占比使用数据。|
+|IspEname|String|运营商英文名称。|
 |AvgObjectSize|String|响应平均大小，单位：byte。|
 |AvgResponseTime|String|平均响应时间，单位：毫秒。|
-|Bps|String|带宽|
-|ByteHitRate|String|字节命中率|
-|Qps|String|每秒查询率|
-|ReqErrRate|String|请求错误率|
-|ReqHitRate|String|请求命中率|
+|Bps|String|带宽。|
+|ByteHitRate|String|字节命中率。|
+|Qps|String|每秒查询率。|
+|ReqErrRate|String|请求错误率。|
+|ReqHitRate|String|请求命中率。|
 |AvgResponseRate|String|平均响应速度，单位：byte/毫秒。|
-|TotalBytes|String|总流量|
-|BytesProportion|String|总流量占比|
-|TotalQuery|String|总请求次数|
+|TotalBytes|String|总流量。|
+|BytesProportion|String|总流量占比。|
+|TotalQuery|String|总请求次数。|
 
-## 示例 { .section}
+## 示例 {#section_wgl_8es_kas .section}
 
-请求示例：
+请求示例
 
-```
+``` {#codeblock_z4l_30t_6sw}
 http://cdn.aliyuncs.com?Action=DescribeDomainISPData&DomainName=example.com
 &StartTime=2015-12-05T00:00:00Z
 &EndTime=2015-12-07T00:00:00Z
 &<公共请求参数>
 ```
 
-返回示例：
+正常返回示例
 
-JSON格式
+`JSON`格式
 
-```language-json
-
+``` {#codeblock_ld0_b4p_6ov .language-json}
 {
   "Value": {
     "ISPProportionData": [
@@ -231,25 +235,24 @@ JSON格式
   "DomainName": "example1.com",
   "EndTime": "2016-03-14T00:00:00Z",
   "StartTime": "2016-03-13T00:00:00Z"
-}
-
+}            
 ```
 
-## 错误码 { .section}
+## 错误码 {#section_il3_dwb_5ir .section}
 
 |错误代码|错误信息|HTTP 状态码|描述|
 |----|----|--------|--|
-|Throttling|Request was denied due to request throttling.|503|请求被流量控制限制|
-|IllegalOperation|Illegal domain, operation is not permitted.|403|非法域名, 无法操作|
-|OperationDenied|Your account does not open CDN service yet.|403|未开通CDN服务|
-|OperationDenied|Your CDN service is suspended.|403|CDN服务已被停止|
-|InvalidDomain.NotFound|The domain provided does not belong to you.|404|域名不存在或不属于当前用户|
-|InvalidDomain.Offline|The domain provided is offline.|404|域名已下线|
+|Throttling|Request was denied due to request throttling.|503|请求被流量控制限制。|
+|IllegalOperation|Illegal domain, operation is not permitted.|403|非法域名, 无法操作。|
+|OperationDenied|Your account does not open CDN service yet.|403|未开通CDN服务。|
+|OperationDenied|Your CDN service is suspended.|403|CDN服务已被停止。|
+|InvalidDomain.NotFound|The domain provided does not belong to you.|404|域名不存在或不属于当前用户。|
+|InvalidDomain.Offline|The domain provided is offline.|404|域名已下线。|
 |ServiceBusy|The specified Domain is configuring, please retry later.|403|域名正在配置中，请稍后再试。|
-|InvalidDomain.Configure\_failed|Failed to configure the provided domain.|500|域名配置失败|
-|MissingParameter|StartTime and EndTime can not be single.|400|StartTime和EndTime不能单独设置|
-|InvalidStartTime.Malformed|Specified start time is malformed.|400|StartTime格式错误|
-|InvalidEndTime.Malformed|Specified end time is malformed.|400|EndTime格式错误|
-|InvalidEndTime.Mismatch|Specified end time does not math the specified start time.|400|EndTime小于StartTime|
-|InvalidStartTime.ValueNotSupported|Specified end time does not math the specified start time.|400|EndTime和StartTime差值超过90天|
+|InvalidDomain.Configure\_failed|Failed to configure the provided domain.|500|域名配置失败。|
+|MissingParameter|StartTime and EndTime can not be single.|400|StartTime和EndTime不能单独设置。|
+|InvalidStartTime.Malformed|Specified start time is malformed.|400|StartTime格式错误。|
+|InvalidEndTime.Malformed|Specified end time is malformed.|400|EndTime格式错误。|
+|InvalidEndTime.Mismatch|Specified end time does not math the specified start time.|400|EndTime小于StartTime。|
+|InvalidStartTime.ValueNotSupported|Specified end time does not math the specified start time.|400|EndTime和StartTime差值超过90天。|
 
