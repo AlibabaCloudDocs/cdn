@@ -7,11 +7,11 @@
 -   支持批量域名查询，多个域名用`,`分隔，最多可以一次查询100个域名。如果为空则返回账号下所有域名的数据。
 -   用量数据包括流量、带宽和请求数三类，单位分别为byte、bps和次。
 
-## 调试 {#section_bhh_h6f_lht .section}
+## 调试 {#section_1a2_d9n_qcy .section}
 
 前往【[API Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeDomainUsageData)】在线调试，API Explorer提供在线调用API、动态生成SDK Example代码和快速检索接口等能力，能显著降低使用云API的难度，强烈推荐使用。
 
-## 请求参数 { .section}
+## 请求参数 {#section_ovv_clg_0pf .section}
 
 |参数|类型|是否必选|描述|
 |:-|:-|:---|:-|
@@ -40,7 +40,7 @@
 
  |
 
-## 参数组合说明 {#section_zk4_tzf_2hb .section}
+参数组合说明
 
 计费数据和参数取值的对应关系如下表，具体调用方法参见请求示例。
 
@@ -52,7 +52,7 @@
 |动态HTTP请求数|http|dynamic|acc|all|
 |动态HTTPS请求数|https|dynamic|acc|all|
 
-## 返回参数 { .section}
+## 返回参数 {#section_e2v_0bl_njb .section}
 
 |名称|类型|描述|
 |:-|:-|:-|
@@ -64,7 +64,7 @@
 |Area|String|用量区域。|
 |UsageDataPerInterval|UsageData\[\]|每个时间间隔的流量数据。|
 
-## UsageData { .section}
+UsageData
 
 |名称|类型|描述|
 |:-|:-|:-|
@@ -72,13 +72,13 @@
 |PeakTime|String|Field为bps时，该值为峰值带宽时刻，否则值和TimeStamp相同。|
 |Value|String|用量。单位：byte。|
 
-## 示例 { .section}
+## 示例 {#section_qwu_d7i_lgy .section}
 
 请求示例
 
 -   获取国内流量
 
-    ```
+    ``` {#codeblock_4qo_m49_n3p}
     http://cdn.aliyuncs.com?Action=DescribeDomainUsageData&DomainName=example.com
     &StartTime=2015-12-10T20:00:00Z
     &EndTime=2015-12-10T22:00:00Z
@@ -89,7 +89,7 @@
 
 -   获取EU大区的带宽
 
-    ```
+    ``` {#codeblock_hzz_9bw_w90}
     http://cdn.aliyuncs.com?Action=DescribeDomainUsageData&DomainName=example.com
     &StartTime=2015-12-10T20:00:00Z
     &EndTime=2015-12-10T22:00:00Z
@@ -100,7 +100,7 @@
 
 -   获取静态https请求数
 
-    ```
+    ``` {#codeblock_6m6_n65_aki}
     http://cdn.aliyuncs.com?Action=DescribeDomainUsageData&DomainName=example.com
     &StartTime=2015-12-10T20:00:00Z
     &EndTime=2015-12-10T22:00:00Z
@@ -113,7 +113,7 @@
 
 -   获取动态http请求数
 
-    ```
+    ``` {#codeblock_6i7_wut_mvn}
     http://cdn.aliyuncs.com?Action=DescribeDomainUsageData&DomainName=example.com
     &StartTime=2015-12-10T20:00:00Z
     &EndTime=2015-12-10T22:00:00Z
@@ -126,7 +126,7 @@
 
 -   获取动态https请求数
 
-    ```
+    ``` {#codeblock_g20_2ff_jq1}
     http://cdn.aliyuncs.com?Action=DescribeDomainUsageData&DomainName=example.com
     &StartTime=2015-12-10T20:00:00Z
     &EndTime=2015-12-10T22:00:00Z
@@ -142,7 +142,7 @@
 
 `JSON`格式
 
-```
+``` {#codeblock_ggb_atx_v7z}
 {
     "DomainName": "example.com",
     "DataInterval": "300",
@@ -168,7 +168,7 @@
 }
 ```
 
-## 错误码 { .section}
+## 错误码 {#section_rj1_67w_1vs .section}
 
 |错误代码|错误信息|HTTP 状态码|描述|
 |:---|:---|:-------|:-|
