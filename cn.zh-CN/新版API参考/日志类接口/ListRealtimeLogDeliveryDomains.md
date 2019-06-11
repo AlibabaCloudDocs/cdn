@@ -1,37 +1,39 @@
 # ListRealtimeLogDeliveryDomains {#reference_ysq_rsy_dgb .reference}
 
-查询实时日志投递服务下所有域名。
+调用ListRealtimeLogDeliveryDomains查询实时日志投递服务下所有域名。
 
 ## 请求参数 {#section_obx_rly_dgb .section}
 
-|参数|类型|是否必需|描述|
+|参数|类型|是否必选|描述|
 |:-|:-|:---|:-|
 |Action|String|是|操作接口名，系统规定参数，取值：ListRealtimeLogDeliveryDomains。|
-|Project|String|是|实时投递sls的ProjectName|
-|Logstore| |是|实时投递sls的LogStoreName|
-|Region| |是|实时投递sls的Region，如上海:cn-shanghai。详情请参见 [附录](../../../../cn.zh-CN/旧版API参考/附录.md#table_nnm_mcz_dgb)。|
+|Project|String|是|实时投递sls的ProjectName。|
+|Logstore|String|是|实时投递sls的LogStoreName。|
+|Region|String|是|实时投递sls的Region，例如上海：cn-shanghai。详情请参见[实时日志投递用户Region列表](../../../../intl.zh-CN/旧版API参考/附录.md#section_exc_kcz_dgb)。|
 
 ## 返回参数 {#section_vbx_rly_dgb .section}
 
 |名称|类型|描述|
 |:-|:-|:-|
-|DomainName|String|域名|
-|Status|String|状态。-   online：正在服务
--   offline：停止服务
+|DomainName|String|域名。|
+|Status|String|状态。 -   online：正在服务。
+-   offline：停止服务。
 
-|
+ |
 
 ## 示例 {#section_ybx_rly_dgb .section}
 
 请求示例
 
-```
+``` {#codeblock_83o_j8o_56w}
 https://cdn.aliyuncs.com?Action=ListRealtimeLogDeliveryDomains&Project=test&Logstore=test&Region=test
 ```
 
-返回示例
+正常返回示例
 
-```
+`JSON`格式
+
+``` {#codeblock_2n1_q04_ete}
 {
     "Content":{
         "Domains":[
