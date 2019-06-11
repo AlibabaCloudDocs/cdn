@@ -1,6 +1,6 @@
 # TagResources {#reference_226991 .reference}
 
-资源打标接口。
+调用TagResources资源打标接口。
 
 ## 请求参数 {#section_6j6_jy9 .section}
 
@@ -25,9 +25,9 @@ https://cdn.aliyuncs.com/?Action=TagResoruces
 &<公共请求参数>
 ```
 
-返回示例
+正常返回示例
 
-JSON格式：
+`JSON`格式
 
 ``` {#codeblock_gu6_skx_8b0}
 {
