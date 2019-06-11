@@ -1,11 +1,11 @@
 # DescribeTagResources {#reference_226964 .reference}
 
-查询资源对应的标签。
+调用DescribeTagResources查询资源对应的标签。
 
 ## 请求参数 {#section_6j6_jy9_tjg .section}
 
-|参数|类型|必要|描述|
-|--|--|--|--|
+|参数|类型|是否必选|描述|
+|--|--|----|--|
 |Action|String|是|操作接口名，系统规定参数，取值：DescribeTagResources。|
 |ResourceId.N|String|是|资源ID，CDN为域名，N的取值范围为\[1, 50\]。|
 |ResourceType|String|是|固定值：DOMAIN。|
@@ -21,9 +21,9 @@ https://cdn.aliyuncs.com/?Action=DescribeTagResources
 &<公共请求参数>
 ```
 
-返回示例
+正常返回示例
 
-JSON格式：
+`JSON`格式
 
 ``` {#codeblock_gu6_skx_8b0}
 {
