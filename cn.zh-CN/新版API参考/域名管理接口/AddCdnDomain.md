@@ -1,19 +1,23 @@
 # AddCdnDomain {#reference_pv4_cvf_cgb .reference}
 
-添加加速域名。一次只能提交一个加速域名，一个用户最多添加20个域名。
+调用AddCdnDomain添加加速域名。一次只能提交一个加速域名，一个用户最多添加20个域名。
 
 **说明：** 
 
--   创建加速域名之前, 您需要先开通CDN服务。请参见[开通CDN服务](../../../../cn.zh-CN/产品定价/开通CDN服务.md#)。
+-   创建加速域名之前, 您需要先开通CDN服务。请参见[开通CDN服务](../../../../intl.zh-CN/产品定价/开通CDN服务.md#)。
 -   加速域名必须已备案完成。
 -   源站内容，如果不在阿里云平台上，需要审核，审核工作会在下一工作日前完成。
 
+## 调试 {#section_l7j_ph7_bu2 .section}
+
+前往【[API Explorer](https://api.aliyun.com/#/?product=Cdn&api=AddCdnDomain)】在线调试，API Explorer提供在线调用API、动态生成SDK Example代码和快速检索接口等能力，能显著降低使用云API的难度，强烈推荐使用。
+
 ## 请求参数 {#section_hjy_xwf_cgb .section}
 
-|参数|类型|是否必需|描述|
+|参数|类型|是否必选|描述|
 |:-|:-|:---|:-|
 |Action|String|是|操作接口名，系统规定参数。 取值：AddCdnDomain。|
-|DomainName|String|是|需要接入CDN的域名。支持泛域名，以符号“.”开头，如：.example.com。|
+|DomainName|String|是|需要接入CDN的域名。支持泛域名，以符号`.`开头，如：`.example.com`。|
 |CdnType|String|是|加速域名的业务类型。 取值： -   web：图片及小文件分发。
 -   download：大文件下载加速。
 -   Video：视频点播加速。
@@ -29,13 +33,15 @@
 |ResourceGroupId|String|否|资源组id，不传时，自动补全默认资源组id。|
 |TopLevelDomain|String|否|顶级接入域。|
 
-## Sources格式 {#section_zkm_fyf_cgb .section}
+Sources格式
 
-\[\{“content”:”1.1.1.1”,”type”:”ipaddr”,””:”20”,”port”:80,”weight”:”15”\}\]
+``` {#codeblock_0du_v7a_4h8}
+[{“content”:”1.1.1.1”,”type”:”ipaddr”,””:”20”,”port”:80,”weight”:”15”}]
+```
 
-## Sources各字段含义 {#section_fmx_gyf_cgb .section}
+Sources各字段含义
 
-|参数|类型|是否必须|描述|
+|参数|类型|是否必选|描述|
 |:-|:-|:---|:-|
 |type|String|是|源站类型 。取值： -   ipaddr：IP源站。
 -   domain：域名源站。
@@ -57,15 +63,15 @@
 
 请求示例
 
-```
+``` {#codeblock_imp_rwt_7hg}
 http://cdn.aliyuncs.com?Action=AddCdnDomain&CdnType=web&DomainName=example.com&Sources=[{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80}]&<公共请求参数>
 ```
 
-返回示例
+正常返回示例
 
 `JSON`格式
 
-```
+``` {#codeblock_jup_d2a_xbx}
 {
   "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
 }
@@ -73,15 +79,13 @@ http://cdn.aliyuncs.com?Action=AddCdnDomain&CdnType=web&DomainName=example.com&S
 
 ## 错误码 {#section_klm_fyf_cgb .section}
 
-公共错误码详情请参见 [附录](../../../../cn.zh-CN/旧版API参考/附录.md)。
-
 |错误代码|错误信息|HTTP 状态码|描述|
 |:---|:---|:-------|:-|
 |InvalidDomainName.Malformed|Specified DomainName is malformed.|400|DomainName 参数错误。|
-|InvalidCdnType.Malformed|Specified CdnType is malformed.|400|CdnType 参数错误。|
-|InvalidSourceType.Malformed|Specified SourceType is malformed.|400|SourceType 参数错误。|
+|InvalidCdnType.Malformed|Specified CdnType is malformed.|400|CdnType参数错误。|
+|InvalidSourceType.Malformed|Specified SourceType is malformed.|400|SourceType参数错误。|
 |InvalidSources.Malformed|Specified Sources is malformed.|400|回源地址与源站类型不一致。|
-|InvalidScope.Malformed|Specified Scope is malformed.|400|Scope 参数错误。|
+|InvalidScope.Malformed|Specified Scope is malformed.|400|Scope参数错误。|
 |InvaildParameter|The Certificate you provided is malformed!|400|https安全加速时证书和密钥长度和过长。|
 |BusinessExist|Business exist do not repeated submission|400|该域名正在添加，不用重复提交。|
 |DomainAlreadyExist|This domain name is exist already|400|该域名已经添加。|
