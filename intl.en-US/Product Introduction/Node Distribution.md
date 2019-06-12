@@ -10,7 +10,7 @@ High-performance nodes enhance information delivery compared with traditional me
 
 You can see the distribution of Alibaba Cloud CDN nodes as the image below.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5099/155357262632402_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5099/156032824332402_en-US.png)
 
 ## Configure nodes {#section_uj3_dr2_zdb .section}
 
