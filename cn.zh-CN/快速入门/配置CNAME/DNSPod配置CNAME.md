@@ -6,7 +6,7 @@
     1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
     2.  进入域名管理页面，复制加速域名对应的CNAME值。 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/155866892245282_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/156041352045282_zh-CN.png)
 
 2.  添加CNAME记录。 
     1.  登录DNSPod（腾讯云）的**域名解析控制台**。
@@ -18,7 +18,7 @@
         -   记录值：填写为步骤1复制的CNAME值。
         -   解析线路：默认值。
         -   TTL：默认值。
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5114/155866892245300_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5114/156041352045300_zh-CN.png)
 
 3.  单击**保存**，配置CNAME完毕。CNAME配置生效后，CDN服务立即生效。 
     -   CNAME配置生效时间：新增CNAME记录会实时生效，而修改CNAME记录需要最多72小时生效时间。
@@ -28,6 +28,6 @@
 
     配置CNAME后，不同的DNS服务商CNAME生效的时间也不同。您可以通过输入`ping`或`dig`您所添加的加速域名来验证，如果被转向`*.*kunlun*.com`，即表示CNAME配置已经生效，CDN功能也已生效。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5114/155866892245299_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/15604135206060_zh-CN.png)
 
 
