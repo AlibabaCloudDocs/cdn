@@ -9,7 +9,7 @@
 
     **说明：** 开通CDN服务需要实名认证，请点击[立即去认证](https://account.console.aliyun.com/#/auth/home)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5108/155704586845185_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5108/156040398845185_zh-CN.png)
 
 3.  CDN服务已开通。您可以进入[CDN控制台](https://cdn.console.aliyun.com)，进行加速域名的**添加**和**管理**，详情请参见[快速入门](../../../../cn.zh-CN/快速入门/快速入门.md#)。
 
