@@ -4,7 +4,7 @@
 
 **说明：** 
 
--   创建加速域名之前, 您需要先开通CDN服务。请参见[开通CDN服务](../../../../intl.zh-CN/产品定价/开通CDN服务.md#)。
+-   创建加速域名之前, 您需要先开通CDN服务。请参见[开通CDN服务](../../../../cn.zh-CN/快速入门/开通CDN服务.md#)。
 -   加速域名必须已备案完成。
 -   源站内容，如果不在阿里云平台上，需要审核，审核工作会在下一工作日前完成。
 
@@ -36,7 +36,7 @@
 Sources格式
 
 ``` {#codeblock_0du_v7a_4h8}
-[{“content”:”1.1.1.1”,”type”:”ipaddr”,””:”20”,”port”:80,”weight”:”15”}]
+[{“content”:”1.1.1.1”,”type”:”ipaddr”,”priority”:”20”,”port”:80,”weight”:”15”}]
 ```
 
 Sources各字段含义
@@ -109,4 +109,6 @@ http://cdn.aliyuncs.com?Action=AddCdnDomain&CdnType=web&DomainName=example.com&S
 |InvalidPriorities.Malformed|The length of priorities is not the same with source.|400|优先级个数与源站个数不同。|
 |NotInternationRealIdentity|You need to do real name authentication when you use Chinese mainland resources.|400|用中国大陆资源时，账号需要国际认证。|
 |DomainReserved|The root domain of your domain is reserved by another account. Submit a ticket to contact customer support.|400|该域名的根域已经被其他账号占用，若需要新增提交工单处理。|
+
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
 
