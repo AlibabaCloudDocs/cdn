@@ -29,7 +29,7 @@
 -   overseas
 -   global
 
- 默认值：domestic。国际用户、国内L3及以上用户设置有效。|
+ |
 |ResourceGroupId|String|否|资源组id，不传时，自动补全默认资源组id。|
 |TopLevelDomain|String|否|顶级接入域。|
 
