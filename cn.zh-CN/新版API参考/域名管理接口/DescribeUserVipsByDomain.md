@@ -25,11 +25,11 @@
 
 请求示例
 
-正常返回示例
-
 ``` {#codeblock_hp7_zzb_du4}
 https://cdn.aliyuncs.com?Action=DescribeUserVipsByDomain&Available=on&DomainName=example.com&<公共请求参数>
 ```
+
+正常返回示例
 
 `JSON`格式
 
