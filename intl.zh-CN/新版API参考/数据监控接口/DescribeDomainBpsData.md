@@ -35,14 +35,12 @@
 
  |
 |Interval|String|否| -   查询数据的时间粒度，支持300、 3600和86400秒。
--   -3天以内（不包含3天整）支持300、 3600、 86400。
--   -3-31天（不包含31天整）支持3600和86400。
--   -31天以上支持86400。
--   -不传和传的值不支持时，使用默认值。
+-   3天以内（不包含3天整）支持300、 3600、 86400。
+-   3-31天（不包含31天整）支持3600和86400。
+-   31天以上支持86400。
+-   不传和传的值不支持时，使用默认值。
 
  |
-|LocationNameEn|String|否|区域英文名，通过DescribeCdnRegionAndIsp接口获得，不传为所有区域。|
-|IspNameEn|String|否|运营商英文名，通过DescribeCdnRegionAndIsp接口获得，不传为所有运营商。|
 |LocationNameEn|String|否|区域英文名，通过DescribeCdnRegionAndIsp接口获得，不传为所有区域。|
 |IspNameEn|String|否|运营商英文名，通过DescribeCdnRegionAndIsp接口获得，不传为所有运营商。|
 
