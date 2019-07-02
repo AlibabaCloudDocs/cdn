@@ -15,10 +15,10 @@ Applicable business type: All.
 1.  Log on to the [CDN console](https://cdnnext.console.aliyun.com/domain/list).
 2.  In the left-side navigation pane, choose **Domain Names**. In the main workspace, select a domain, and in the **Actions** column click **Manage**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5159/15615295683723_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5159/15620459613723_en-US.png)
 
 3.  On the page that is displayed, choose **Performance Optimization** from the left-side navigation pane, and in the **Intelligent Compression** area enable the function.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5159/15615295687301_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5159/15620459617301_en-US.png)
 
 
