@@ -9,10 +9,10 @@ This topic describes how to query domain names by tag.
 
     -   In the left-side navigation pane, choose **Data Monitoring** \> **Resource Monitoring**. In the main workspace, select tags from the **Choose tag** drop-down list and click **Query**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/215865/156189289647680_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/215865/156203609747680_en-US.png)
 
     -   In the left-side navigation pane, click **Usage**. In the main workspace, select tags from the **Choose tag** drop-down list and click **Query**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/215865/156189289647681_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/215865/156203609747681_en-US.png)
 
 
