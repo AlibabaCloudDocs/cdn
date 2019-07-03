@@ -103,3 +103,5 @@ http://cdn.aliyuncs.com?Action=DescribeDomainRealTimeTrafficData&DomainName=exam
 |InvalidEndTime.Mismatch|Specified end time does not math the specified start time.|400|EndTime小于StartTime。|
 |InvalidStartTime.ValueNotSupported|Specified end time does not math the specified start time.|400|EndTime和StartTime差值超过90天。|
 
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+
