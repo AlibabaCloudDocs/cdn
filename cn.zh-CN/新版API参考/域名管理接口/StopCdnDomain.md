@@ -47,3 +47,5 @@ http://cdn.aliyuncs.com?Action=StopCdnDomain&DomainName=example.com&<公共请�
 |IllegalOperation|Illegal domain operate is not permitted.|403|没有权限执行当前操作。|
 |ServiceBusy|The specified Domain is configuring, please retry later.|403|域名正在配置中, 请稍后再试。|
 
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+
