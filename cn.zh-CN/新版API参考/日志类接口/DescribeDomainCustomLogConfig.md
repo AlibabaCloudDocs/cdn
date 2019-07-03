@@ -50,3 +50,5 @@ https://cdn.aliyuncs.com?Action=DescribeDomainCustomLogConfig&DomainName=example
 |:--|:---|:-------|:-|
 |Config.NotFound|The domain provided doesn't belong to you or doesn't apply any custom log config, please refer to the standard log config.|404|无自定义日志配置信息。|
 
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+
