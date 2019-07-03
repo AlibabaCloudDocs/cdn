@@ -81,3 +81,5 @@ http://cdn.aliyuncs.com?Action=SetDomainServerCertificate&DomainName=test.com&Ce
 |Certificate.NotPermittedOff|Turn off certificate will change domain scheduling, please contact customer service.|400|关闭证书会影响该域名调度，请联系客服调整。|
 |Certificate.SettedNotEffect|Certificate was successfully setted but does't take effect for protecting current service, please contact customer service.|400|证书已经设置成功，但为保护当前服务还未生效，请联系客服处理。|
 
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+
