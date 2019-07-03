@@ -110,10 +110,10 @@ Functions格式
 |l2\_oss\_key|私有buckct回源|private\_oss\_auth：私有Bucket回源开关，支持on/off。|
 |range|range回源|enable：开关，支持on/off/force。|
 |video\_seek|视频拖拽播放|enable：开关，支持on/off|
-|https\_tls\_version|TLS协议版本| -   tls1.0：开启 TLSv1.0。默认：on，支持on/off。
--   tls1.1：开启 TLSv1.1。默认：on，支持on/off。
--   tls1.2：开启 TLSv1.2。默认：on，支持on/off。
--   tls1.3：开启 TLSv1.3。默认：on，支持on/off。
+|https\_tls\_version|TLS协议版本| -   tls10：开启 TLSv1.0。默认：on，支持on/off。
+-   tls11：开启 TLSv1.1。默认：on，支持on/off。
+-   tls12：开启 TLSv1.2。默认：on，支持on/off。
+-   tls13：开启 TLSv1.3。默认：on，支持on/off。
 
  |
 |HSTS|HSTS| -   enabled：开关，必填。默认：off，支持on/off。
