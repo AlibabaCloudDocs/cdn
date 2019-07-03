@@ -9,7 +9,7 @@
 |Action|String|是|操作接口名，系统规定参数，取值：CreateRealtimeLogDelivery。|
 |Project|String|是|实时投递sls的ProjectName。|
 |Logstore|String|是|实时投递sls的LogStoreName。|
-|Region|String|是|实时投递sls的Region，例如上海：cn-shanghai。详情请参见[实时日志投递用户Region列表](../../../../intl.zh-CN/旧版API参考/附录.md#section_exc_kcz_dgb)。|
+|Region|String|是|实时投递sls的Region，例如上海：cn-shanghai。详情请参见[实时日志投递用户Region列表](../../../../cn.zh-CN/旧版API参考/附录.md#section_exc_kcz_dgb)。|
 |Domain|String|是|开启实时日志投递服务域名。|
 
 ## 返回参数 {#section_uqf_jhy_dgb .section}
@@ -42,4 +42,6 @@ https://cdn.aliyuncs.com?Action=CreateRealtimeLogDelivery?Domain=xxx.com&Project
 |:--|:---|:-------|
 |Unauthorized|没有开启实时投递授权|403|
 |LogstoreNotExist|未找到对应Logstore 信息|404|
+
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
 
