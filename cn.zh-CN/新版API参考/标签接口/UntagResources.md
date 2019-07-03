@@ -33,3 +33,5 @@ https://cdn.aliyuncs.com/?Action=UntagResoruces
 }
 ```
 
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+
