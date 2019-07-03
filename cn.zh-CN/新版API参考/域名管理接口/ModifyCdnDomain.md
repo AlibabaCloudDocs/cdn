@@ -2,7 +2,7 @@
 
 调用ModifyCdnDomain修改加速域名。
 
-**说明：** 创建加速域名之前，您需要[开通CDN服务](../../../../intl.zh-CN/产品定价/开通CDN服务.md#)。
+**说明：** 创建加速域名之前，您需要[../../../../dita-oss-bucket/SP\_19/DNCDN11886185/ZH-CN\_TP\_5108\_V7.md\#](../../../../cn.zh-CN/快速入门/开通CDN服务.md#)。
 
 ## 调试 {#section_tzh_t0i_f0s .section}
 
@@ -75,4 +75,6 @@ http://cdn.aliyuncs.com?Action=ModifyCdnDomain&SourceType=domain&DomainName=exam
 |Abs.resourceGroupId.Malformed|Specified ResourceGroupId is malformed.|400|资源组id参数不正确。|
 |EntityNotExists.ResourceGroup|The resource group does not exist.|400|资源组不存在。|
 |InvalidStatus.ResourceGroup|It's now allowed to do this operation because of the current status of resource-group.|400|资源组状态检查失败。|
+
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
 
