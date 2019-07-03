@@ -110,3 +110,5 @@ http://cdn.aliyuncs.com?Action=DescribeDomainBpsDataByTimeStamp&DomainName=examp
 |InvaildParameter|IspNames Not Supported|400|ISP不支持。|
 |InvaildParameter|LocationNames Not Supported|400|Location不支持。|
 
+CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+
