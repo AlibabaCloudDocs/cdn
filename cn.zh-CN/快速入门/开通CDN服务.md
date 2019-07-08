@@ -1,14 +1,14 @@
 # 开通CDN服务 {#task_187531 .task}
 
-通过本文档，您可以详细了解快速开通CDN服务的方法。
+您在使用CDN之前，需要先开通CDN服务，本文详细介绍了快速开通CDN服务的方法。
 
-在使用阿里云CDN服务之前，请确保您已经注册了阿里云账号并完成[实名认证](https://account.console.aliyun.com/#/auth/home)。如果您还没有创建阿里云账号，系统会在您开通 CDN 时提示您[注册账号](https://account.aliyun.com/register/register.htm)。
+在使用阿里云CDN服务之前，请确保您已完成阿里云[账号注册](https://account.aliyun.com/register/register.htm)和[实名认证](https://account.console.aliyun.com/#/auth/home)。
 
-1.  单击[**立即开通**](https://cdn.console.aliyun.com/)开通阿里云CDN服务。
-2.  在云产品开通页选择适合您的计费方式，然后单击**确定**确认订单，CDN服务即开通。 
+1.  登录[阿里云CDN平台](https://www.aliyun.com/product/cdn)。
+2.  单击**立即开通**。
+3.  在云产品开通页，选择适合您的**计费方式**和**购买数量**。 
 
-    **说明：** 开通CDN服务需要实名认证，请点击[立即去认证](https://account.console.aliyun.com/#/auth/home)。
+    CDN的计费方式请参考[计费方式](https://www.alibabacloud.com/zh/product/cdn/pricing)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5108/156163013245185_zh-CN.png)
-
+4.  选中**我已阅读并同意**复选框，单击**立即开通**。
 
