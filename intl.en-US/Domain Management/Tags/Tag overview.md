@@ -17,8 +17,8 @@ This topic provides an overview of domain name tags. Each tag is represented by 
 
 You can use tags to perform the following operations:
 
--   Attach tags to domain names to identify or group the domain names. For more information, see [Attach tags](intl.en-US/Domain Management/Tags/Attach tags to a domain name.md#).
--   Detach tags from domain names. For more information, see [Detach tags](intl.en-US/Domain Management/Tags/Detach tags from a domain name.md#).
--   Manage domain names based on their tags. For more information, see [Manage domain names by tag](intl.en-US/Domain Management/Tags/Manage tags.md#).
--   Query the domain names to which specific tags are attached. For more information, see [Filter domain names by tag](intl.en-US/Domain Management/Tags/Query domain names by tag.md#).
+-   Attach tags to domain names to identify or group the domain names. For more information, see [Attach tags](reseller.en-US/Domain Management/Tags/Attach tags to a domain name.md#).
+-   Detach tags from domain names. For more information, see [Detach tags](reseller.en-US/Domain Management/Tags/Detach tags from a domain name.md#).
+-   Manage domain names based on their tags. For more information, see [Manage domain names by tag](reseller.en-US/Domain Management/Tags/Manage domain names by tag.md#).
+-   Query the domain names to which specific tags are attached. For more information, see [Filter domain names by tag](reseller.en-US/Domain Management/Tags/Query domain names by tag.md#).
 
