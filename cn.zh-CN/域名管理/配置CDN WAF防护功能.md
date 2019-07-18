@@ -41,7 +41,7 @@ CDN的WAF服务主要适用于金融、电商、O2O、互联网+、游戏、政�
 3.  在WAF页面，打开**WAF功能配置**开关。
 4.  单击**修改配置**。 
 
-    ![界面图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/134870/156333497451524_zh-CN.png)
+    ![界面图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/134870/156341726551524_zh-CN.png)
 
 5.  根据页面提示，配置Web应用攻击防护和精准访问控制。 
 
