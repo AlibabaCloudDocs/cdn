@@ -8,9 +8,9 @@
     -   按峰值带宽计费
     -   按使用流量计费
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=ModifyCdnService)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=ModifyCdnService&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -26,7 +26,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -52,12 +52,11 @@ http(s)://cdn.aliyuncs.com?Action=ModifyCdnService
 
 ``` {#xml_return_success_demo}
 <APINAMEResponse>
-  <RequestId>C961B79B-237A-4E6F-B46C-1A0C0F8E743C</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>CSS_CHECK_UPDOWNGRADE_ERROR</Code>
-  <Message>You have an order not yet effective</Message>
+	  <RequestId>C961B79B-237A-4E6F-B46C-1A0C0F8E743C</RequestId>
+	  <HostId>cdn.aliyuncs.com</HostId>
+	  <Code>CSS_CHECK_UPDOWNGRADE_ERROR</Code>
+	  <Message>You have an order not yet effective</Message>
 </APINAMEResponse>
-
 ```
 
 `JSON` 格式
@@ -80,5 +79,5 @@ http(s)://cdn.aliyuncs.com?Action=ModifyCdnService
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_INVALID\_PAY\_METHOD|INVALID\_PAY\_METHOD|付款方式无效。|
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_HASORDER|You have an order not yet effective|您有未生效的订单。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
