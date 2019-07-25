@@ -6,9 +6,9 @@
 -   不支持批量域名查询。
 -   最多可获取最近30天的数据。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeDomainSlowRatio)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeDomainSlowRatio&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -40,7 +40,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -65,28 +65,28 @@
 |SlowRatioDataPerInterval| | |慢速比数据列表
 
  |
-|└IspNameEn|String|unicom|运营商英文信息
+|IspNameEn|String|unicom|运营商英文信息
 
  |
-|└IspNameZh|String|联通|运营商中文信息
+|IspNameZh|String|联通|运营商中文信息
 
  |
-|└RegionNameEn|String|beijing|地区英文信息
+|RegionNameEn|String|beijing|地区英文信息
 
  |
-|└RegionNameZh|String|北京市|地区中文信息
+|RegionNameZh|String|北京市|地区中文信息
 
  |
-|└SlowRatio|Float|0.2|慢速比例
+|SlowRatio|Float|0.2|慢速比例
 
  |
-|└SlowUsers|Integer|3|慢速用户数
+|SlowUsers|Integer|3|慢速用户数
 
  |
-|└Time|String|2017-09-30T16:00:00Z|时间点
+|Time|String|2017-09-30T16:00:00Z|时间点
 
  |
-|└TotalUsers|Integer|15|总用户数
+|TotalUsers|Integer|15|总用户数
 
  |
 
@@ -108,36 +108,35 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainSlowRatio
 
 ``` {#xml_return_success_demo}
 <APINAMEResponse>
-  <DataInterval>300</DataInterval>
-  <EndTime>2017-09-30T17:00:00Z</EndTime>
-  <PageNumber>1</PageNumber>
-  <PageSize>20</PageSize>
-  <SlowRatioDataPerInterval>
-    <SlowRatioData>
-      <IspNameEn>telecom</IspNameEn>
-      <IspNameZh>电信</IspNameZh>
-      <RegionNameEn>guangdong</RegionNameEn>
-      <RegionNameZh>广东省</RegionNameZh>
-      <SlowRatio>0.1</SlowRatio>
-      <SlowUsers>2</SlowUsers>
-      <Time>2017-09-30T16:00:00Z</Time>
-      <TotalUsers>20</TotalUsers>
-    </SlowRatioData>
-    <SlowRatioData>
-      <IspNameEn>unicom</IspNameEn>
-      <IspNameZh>联通</IspNameZh>
-      <RegionNameEn>beijing</RegionNameEn>
-      <RegionNameZh>北京市</RegionNameZh>
-      <SlowRatio>0.2</SlowRatio>
-      <SlowUsers>3</SlowUsers>
-      <Time>2017-09-30T16:00:00Z</Time>
-      <TotalUsers>15</TotalUsers>
-    </SlowRatioData>
-  </SlowRatioDataPerInterval>
-  <StartTime>2017-09-30T16:00:00Z</StartTime>
-  <TotalCount>2</TotalCount>
+	  <DataInterval>300</DataInterval>
+	  <EndTime>2017-09-30T17:00:00Z</EndTime>
+	  <PageNumber>1</PageNumber>
+	  <PageSize>20</PageSize>
+	  <SlowRatioDataPerInterval>
+		    <SlowRatioData>
+			      <IspNameEn>telecom</IspNameEn>
+			      <IspNameZh>电信</IspNameZh>
+			      <RegionNameEn>guangdong</RegionNameEn>
+			      <RegionNameZh>广东省</RegionNameZh>
+			      <SlowRatio>0.1</SlowRatio>
+			      <SlowUsers>2</SlowUsers>
+			      <Time>2017-09-30T16:00:00Z</Time>
+			      <TotalUsers>20</TotalUsers>
+		    </SlowRatioData>
+		    <SlowRatioData>
+			      <IspNameEn>unicom</IspNameEn>
+			      <IspNameZh>联通</IspNameZh>
+			      <RegionNameEn>beijing</RegionNameEn>
+			      <RegionNameZh>北京市</RegionNameZh>
+			      <SlowRatio>0.2</SlowRatio>
+			      <SlowUsers>3</SlowUsers>
+			      <Time>2017-09-30T16:00:00Z</Time>
+			      <TotalUsers>15</TotalUsers>
+		    </SlowRatioData>
+	  </SlowRatioDataPerInterval>
+	  <StartTime>2017-09-30T16:00:00Z</StartTime>
+	  <TotalCount>2</TotalCount>
 </APINAMEResponse>
-
 ```
 
 `JSON` 格式
@@ -179,5 +178,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainSlowRatio
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
