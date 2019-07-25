@@ -14,22 +14,22 @@
 
 |API|描述|
 |:--|:-|
-|[RefreshObjectCaches](cn.zh-CN/旧版API参考/刷新预热接口/RefreshObjectCaches.md#)|刷新节点上的文件内容，支持批量。|
-|[PushObjectCache](cn.zh-CN/旧版API参考/刷新预热接口/PushObjectCache.md#)|将源站的内容主动预热到L2 Cache节点上，用户首次访问可直接命中缓存，缓解源站压力，支持批量。|
-|[DescribeRefreshTasks](cn.zh-CN/旧版API参考/刷新预热接口/DescribeRefreshTasks.md#)|查询预热刷新状态，是否在全网生效。|
-|[DescribeRefreshQuota](cn.zh-CN/旧版API参考/刷新预热接口/DescribeRefreshQuota.md#)|查询预热刷新操作余量。|
+|[RefreshObjectCaches](cn.zh-CN/旧版API参考/刷新预热类接口/RefreshObjectCaches.md#)|刷新节点上的文件内容，支持批量。|
+|[PushObjectCache](cn.zh-CN/旧版API参考/刷新预热类接口/PushObjectCache.md#)|将源站的内容主动预热到L2 Cache节点上，用户首次访问可直接命中缓存，缓解源站压力，支持批量。|
+|[DescribeRefreshTasks](cn.zh-CN/旧版API参考/刷新预热类接口/DescribeRefreshTasks.md#)|查询预热刷新状态，是否在全网生效。|
+|[DescribeRefreshQuota](cn.zh-CN/旧版API参考/刷新预热类接口/DescribeRefreshQuota.md#)|查询预热刷新操作余量。|
 
 ## 日志信息接口 {#section_c3h_xnl_vdb .section}
 
 |API|描述|
 |:--|:-|
-|[DescribeCdnDomainLogs](cn.zh-CN/旧版API参考/日志信息接口/DescribeCdnDomainLogs.md#)|获取指定域名的原始访问日志的下载地址。|
-|[DescribeCustomLogConfig](cn.zh-CN/旧版API参考/日志信息接口/DescribeCustomLogConfig.md#)|根据configId查询自定义日志配置详细信息。|
-|[DescribeDomainCustomLogConfig](cn.zh-CN/旧版API参考/日志信息接口/DescribeDomainCustomLogConfig.md#)|获取域名自定义日志格式配置信息。|
-|[DescribeUserCustomLogConfig](cn.zh-CN/旧版API参考/日志信息接口/DescribeUserCustomLogConfig.md#)|获取用户所有自定义日志配置信息。|
-|[ListDomainsByLogConfigId](cn.zh-CN/旧版API参考/日志信息接口/ListDomainsByLogConfigId.md#)|查询应用某自定义日志格式的所有域名列表。|
-|[ModifyDomainCustomLogConfig](cn.zh-CN/旧版API参考/日志信息接口/ModifyDomainCustomLogConfig.md#)|修改域名所属日志自定义日志配置信息。|
-|[ModifyUserCustomLogConfig](cn.zh-CN/旧版API参考/日志信息接口/ModifyUserCustomLogConfig.md#)|修改用户下自定义日志配置信息。|
+|[DescribeCdnDomainLogs](cn.zh-CN/旧版API参考/日志接口/DescribeCdnDomainLogs.md#)|获取指定域名的原始访问日志的下载地址。|
+|[DescribeCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/DescribeCustomLogConfig.md#)|根据configId查询自定义日志配置详细信息。|
+|[DescribeDomainCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/DescribeDomainCustomLogConfig.md#)|获取域名自定义日志格式配置信息。|
+|[DescribeUserCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/DescribeUserCustomLogConfig.md#)|获取用户所有自定义日志配置信息。|
+|[ListDomainsByLogConfigId](cn.zh-CN/旧版API参考/日志接口/ListDomainsByLogConfigId.md#)|查询应用某自定义日志格式的所有域名列表。|
+|[ModifyDomainCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/ModifyDomainCustomLogConfig.md#)|修改域名所属日志自定义日志配置信息。|
+|[ModifyUserCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/ModifyUserCustomLogConfig.md#)|修改用户下自定义日志配置信息。|
 
 ## 配置操作接口 {#section_lqd_5nl_vdb .section}
 
@@ -87,7 +87,7 @@
 
 |API|描述|
 |:--|:-|
-|[DescribeIpInfo](cn.zh-CN/旧版API参考/辅助工具接口/DescribeIpInfo.md#)|验证指定的IP是否为阿里云CDN节点的IP地址。|
+|[DescribeIpInfo](cn.zh-CN/旧版API参考/辅助工接口/DescribeIpInfo.md#)|验证指定的IP是否为阿里云CDN节点的IP地址。|
 
 ## 资源监控接口 {#section_mn2_wnl_vdb .section}
 
