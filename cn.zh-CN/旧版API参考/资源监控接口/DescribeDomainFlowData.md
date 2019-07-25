@@ -8,9 +8,9 @@
 -   支持批量域名查询，多个域名用逗号（半角）分隔。
 -   最多可获取最近90天的数据。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeDomainFlowData)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeDomainFlowData&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -62,7 +62,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -81,34 +81,34 @@
 |FlowDataPerInterval| | |每个时间间隔的流量数据
 
  |
-|└TimeStamp|String|2017-12-22T08:00:00:00Z|时间片起始时刻
+|TimeStamp|String|2017-12-22T08:00:00:00Z|时间片起始时刻
 
  |
-|└Value|String|423304182|总流量
+|Value|String|423304182|总流量
 
  |
-|└DomesticValue|String|0|国内流量
+|DomesticValue|String|0|国内流量
 
  |
-|└OverseasValue|String|0|海外流量
+|OverseasValue|String|0|海外流量
 
  |
-|└DynamicValue|String|0|全站加速，动态流量。当按区域运营商查询时，此值为空。
+|DynamicValue|String|0|全站加速，动态流量。当按区域运营商查询时，此值为空。
 
  |
-|└DynamicDomesticValue|String|0|全站加速，国内动态流量。当按区域运营商查询时，此值为空。
+|DynamicDomesticValue|String|0|全站加速，国内动态流量。当按区域运营商查询时，此值为空。
 
  |
-|└DynamicOverseasValue|String|0|全站加速，海外动态流量。当按区域运营商查询时，此值为空。
+|DynamicOverseasValue|String|0|全站加速，海外动态流量。当按区域运营商查询时，此值为空。
 
  |
-|└StaticValue|String|0|全站加速，静态流量。当按区域运营商查询时，此值为空。
+|StaticValue|String|0|全站加速，静态流量。当按区域运营商查询时，此值为空。
 
  |
-|└StaticDomesticValue|String|0|全站加速，国内静态流量。当按区域运营商查询时，此值为空。
+|StaticDomesticValue|String|0|全站加速，国内静态流量。当按区域运营商查询时，此值为空。
 
  |
-|└StaticOverseasValue|String|0|全站加速，海外静态流量。当按区域运营商查询时，此值为空。
+|StaticOverseasValue|String|0|全站加速，海外静态流量。当按区域运营商查询时，此值为空。
 
  |
 |RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
@@ -132,55 +132,54 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainFlowData
 
 ``` {#xml_return_success_demo}
 <APINAMEResponse>
-  <DomainName>test.com</DomainName>
-  <DataInterval>300</DataInterval>
-  <FlowDataPerInterval>
-    <DataModule>
-      <TimeStamp>2015-12-10T20:00:00Z</TimeStamp>
-      <Value>423304182</Value>
-      <DynamicValue>0</DynamicValue>
-      <DynamicDomesticValue>0</DynamicDomesticValue>
-      <DynamicOverseasValue>0</DynamicOverseasValue>
-      <StaticValue>0</StaticValue>
-      <StaticDomesticValue>0</StaticDomesticValue>
-      <StaticOverseasValue>0</StaticOverseasValue>
-    </DataModule>
-    <DataModule>
-      <TimeStamp>2015-12-10T20:05:00Z</TimeStamp>
-      <Value>454680793</Value>
-      <DynamicValue>0</DynamicValue>
-      <DynamicDomesticValue>0</DynamicDomesticValue>
-      <DynamicOverseasValue>0</DynamicOverseasValue>
-      <StaticValue>0</StaticValue>
-      <StaticDomesticValue>0</StaticDomesticValue>
-      <StaticOverseasValue>0</StaticOverseasValue>
-    </DataModule>
-    <DataModule>
-      <TimeStamp>2015-12-10T20:10:00Z</TimeStamp>
-      <Value>501718342</Value>
-      <DynamicValue>0</DynamicValue>
-      <DynamicDomesticValue>0</DynamicDomesticValue>
-      <DynamicOverseasValue>0</DynamicOverseasValue>
-      <StaticValue>0</StaticValue>
-      <StaticDomesticValue>0</StaticDomesticValue>
-      <StaticOverseasValue>0</StaticOverseasValue>
-    </DataModule>
-    <DataModule>
-      <TimeStamp>2015-12-10T20:15:00Z</TimeStamp>
-      <Value>434816025</Value>
-      <DynamicValue>0</DynamicValue>
-      <DynamicDomesticValue>0</DynamicDomesticValue>
-      <DynamicOverseasValue>0</DynamicOverseasValue>
-      <StaticValue>0</StaticValue>
-      <StaticDomesticValue>0</StaticDomesticValue>
-      <StaticOverseasValue>0</StaticOverseasValue>
-    </DataModule>
-  </FlowDataPerInterval>
-  <RequestId>B955107D-E658-4E77-B913-E0AC3D31693E</RequestId>
-  <StartTime>2015-12-10T20:00Z</StartTime>
-  <EndTime>2015-12-10T21:00Z</EndTime>
+	  <DomainName>test.com</DomainName>
+	  <DataInterval>300</DataInterval>
+	  <FlowDataPerInterval>
+		    <DataModule>
+			      <TimeStamp>2015-12-10T20:00:00Z</TimeStamp>
+			      <Value>423304182</Value>
+			      <DynamicValue>0</DynamicValue>
+			      <DynamicDomesticValue>0</DynamicDomesticValue>
+			      <DynamicOverseasValue>0</DynamicOverseasValue>
+			      <StaticValue>0</StaticValue>
+			      <StaticDomesticValue>0</StaticDomesticValue>
+			      <StaticOverseasValue>0</StaticOverseasValue>
+		    </DataModule>
+		    <DataModule>
+			      <TimeStamp>2015-12-10T20:05:00Z</TimeStamp>
+			      <Value>454680793</Value>
+			      <DynamicValue>0</DynamicValue>
+			      <DynamicDomesticValue>0</DynamicDomesticValue>
+			      <DynamicOverseasValue>0</DynamicOverseasValue>
+			      <StaticValue>0</StaticValue>
+			      <StaticDomesticValue>0</StaticDomesticValue>
+			      <StaticOverseasValue>0</StaticOverseasValue>
+		    </DataModule>
+		    <DataModule>
+			      <TimeStamp>2015-12-10T20:10:00Z</TimeStamp>
+			      <Value>501718342</Value>
+			      <DynamicValue>0</DynamicValue>
+			      <DynamicDomesticValue>0</DynamicDomesticValue>
+			      <DynamicOverseasValue>0</DynamicOverseasValue>
+			      <StaticValue>0</StaticValue>
+			      <StaticDomesticValue>0</StaticDomesticValue>
+			      <StaticOverseasValue>0</StaticOverseasValue>
+		    </DataModule>
+		    <DataModule>
+			      <TimeStamp>2015-12-10T20:15:00Z</TimeStamp>
+			      <Value>434816025</Value>
+			      <DynamicValue>0</DynamicValue>
+			      <DynamicDomesticValue>0</DynamicDomesticValue>
+			      <DynamicOverseasValue>0</DynamicOverseasValue>
+			      <StaticValue>0</StaticValue>
+			      <StaticDomesticValue>0</StaticDomesticValue>
+			      <StaticOverseasValue>0</StaticOverseasValue>
+		    </DataModule>
+	  </FlowDataPerInterval>
+	  <RequestId>B955107D-E658-4E77-B913-E0AC3D31693E</RequestId>
+	  <StartTime>2015-12-10T20:00Z</StartTime>
+	  <EndTime>2015-12-10T21:00Z</EndTime>
 </APINAMEResponse>
-
 ```
 
 `JSON` 格式
@@ -247,5 +246,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainFlowData
 |400|InvalidEndTime.Malformed|Specified EndTime is malformed.|结束时间格式错误。日期格式请参考所调用API的帮助文档说明。|
 |400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|开始时间设置错误，请检查更新后重试。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
