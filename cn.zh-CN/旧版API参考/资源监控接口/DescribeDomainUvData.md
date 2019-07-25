@@ -6,9 +6,9 @@
 -   只支持一个域名，或当前用户下所有域名。
 -   最多可获取最近90天的数据。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeDomainUvData)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeDomainUvData&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -33,7 +33,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -55,10 +55,10 @@
 |UvDataInterval| | |数据
 
  |
-|└TimeStamp|String|2015-11-29T20:00:00Z|时间戳
+|TimeStamp|String|2015-11-29T20:00:00Z|时间戳
 
  |
-|└Value|String|318|uv
+|Value|String|318|uv
 
  |
 
@@ -79,12 +79,11 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainUvData
 
 ``` {#xml_return_success_demo}
 <APINAMEResponse>
-  <RequestId>B8E521F9-CFBB-4814-A01C-C8EEC6678687</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>InvalidStartTime.Malformed</Code>
-  <Message>Specified StartTime is malformed.</Message>
+	  <RequestId>B8E521F9-CFBB-4814-A01C-C8EEC6678687</RequestId>
+	  <HostId>cdn.aliyuncs.com</HostId>
+	  <Code>InvalidStartTime.Malformed</Code>
+	  <Message>Specified StartTime is malformed.</Message>
 </APINAMEResponse>
-
 ```
 
 `JSON` 格式
@@ -109,5 +108,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainUvData
 |400|InvalidDomainName.ValueNotSupported|The specified value of parameter DomainName only support one or empty value.|参数DomainName可以为空或最多1个域名。|
 |400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|开始时间设置错误，请检查更新后重试。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
