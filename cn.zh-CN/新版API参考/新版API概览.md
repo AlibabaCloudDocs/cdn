@@ -59,27 +59,26 @@
 |[BatchStopCdnDomain](intl.zh-CN/新版API参考/域名管理类接口/BatchStopCdnDomain.md#)|批量停用加速域名。|
 |[DescribeCdnDomainConfigs](intl.zh-CN/新版API参考/域名管理类接口/DescribeCdnDomainConfigs.md#)|查询域名配置。|
 |[DeleteSpecificConfig](intl.zh-CN/新版API参考/域名管理类接口/DeleteSpecificConfig.md#)|删除加速域名的配置。|
-|[DescribeUserVipsByDomain](intl.zh-CN/新版API参考/域名管理类接口/DescribeUserVipsByDomain.md#)|按域名查询vip列表。|
+|[DescribeUserVipsByDomain](intl.zh-CN/新版API参考/域名管理类接口/DescribeUserVipsByDomain.md#)|按域名查询VIP列表。|
 
 ## 日志类接口 {#section_c3h_xnl_vdb .section}
 
 |API|描述|
 |:--|:-|
-|[DescribeCdnDomainLogs](intl.zh-CN/新版API参考/日志信息类接口/DescribeCdnDomainLogs.md#)|查询域名实时日志投递信息。|
-|[CreateRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/CreateRealtimeLogDelivery.md#)|创建域名实时日志投递。|
+|[DescribeCdnDomainLogs](intl.zh-CN/新版API参考/日志信息类接口/DescribeCdnDomainLogs.md#)|获取指定域名的原始访问日志的下载地址。|
+|[CreateRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/CreateRealtimeLogDelivery.md#)|创建域名实时日志推送。|
 |[DeleteRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/DeleteRealtimeLogDelivery.md#)|删除实时日志推送域名。|
 |[DescribeDomainRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/DescribeDomainRealtimeLogDelivery.md#)|获取用户所有自定义日志配置信息。|
-|[DescribeRealtimeDeliveryAcc](intl.zh-CN/新版API参考/日志信息类接口/DescribeRealtimeDeliveryAcc.md#)|实时日志投递次数查询。|
-|[DisableRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/DisableRealtimeLogDelivery.md#)|暂停域名实时日志投递。|
-|[EnableRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/EnableRealtimeLogDelivery.md#)|开启域名实时日志投递。|
-|[ListRealtimeLogDeliveryDomains](intl.zh-CN/新版API参考/日志信息类接口/ListRealtimeLogDeliveryDomains.md#)|查询实时日志投递服务下所有域名。|
-|[ModifyRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/ModifyRealtimeLogDelivery.md#)|更改域名实时日志投递\(一个域名同时仅支持投递单个logstore\)。|
-|[ListRealtimeLogDeliveryInfos](intl.zh-CN/新版API参考/日志信息类接口/ListRealtimeLogDeliveryInfos.md#)|查询所有实时日志投递服务信息。|
+|[DescribeRealtimeDeliveryAcc](intl.zh-CN/新版API参考/日志信息类接口/DescribeRealtimeDeliveryAcc.md#)|实时日志推送次数查询。|
+|[DisableRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/DisableRealtimeLogDelivery.md#)|暂停域名实时日志推送。|
+|[EnableRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/EnableRealtimeLogDelivery.md#)|开启域名实时日志推送。|
+|[ListRealtimeLogDeliveryDomains](intl.zh-CN/新版API参考/日志信息类接口/ListRealtimeLogDeliveryDomains.md#)|查询实时日志推送服务下所有域名。|
+|[ModifyRealtimeLogDelivery](intl.zh-CN/新版API参考/日志信息类接口/ModifyRealtimeLogDelivery.md#)|更改域名实时日志推送（一个域名同时仅支持投递单个logstore）。|
+|[ListRealtimeLogDeliveryInfos](intl.zh-CN/新版API参考/日志信息类接口/ListRealtimeLogDeliveryInfos.md#)|查询所有实时日志推送服务信息。|
 |[DescribeCustomLogConfig](intl.zh-CN/新版API参考/日志信息类接口/DescribeCustomLogConfig.md#)|根据configId查询自定义日志配置详细信。|
 |[DescribeDomainCustomLogConfig](intl.zh-CN/新版API参考/日志信息类接口/DescribeDomainCustomLogConfig.md#)|获取域名自定义日志格式配置信息。|
 |[ListDomainsByLogConfigId](intl.zh-CN/新版API参考/日志信息类接口/ListDomainsByLogConfigId.md#)|查询应用某自定义日志格式的所有域名列表。|
 |[ListUserCustomLogConfig](intl.zh-CN/新版API参考/日志信息类接口/ListUserCustomLogConfig.md#)|获取用户下所有自定义日志配置信息。|
-|[ModifyDomainCustomLogConfig](intl.zh-CN/新版API参考/日志信息类接口/ModifyDomainCustomLogConfig.md#)|修改域名所属日志自定义日志配置信息。|
 |[ModifyUserCustomLogConfig](intl.zh-CN/新版API参考/日志信息类接口/ModifyUserCustomLogConfig.md#)|修改用户下自定义日志配置信息。|
 
 ## 刷新预热接口 {#section_lqd_5nl_vdb .section}
@@ -117,6 +116,6 @@
 |---|--|
 |[DescribeTagResources](intl.zh-CN/新版API参考/标签类接口/DescribeTagResources.md#)|查询资源对应的标签。|
 |[DescribeUserTags](intl.zh-CN/新版API参考/标签类接口/DescribeUserTags.md#)|查询用户标签。|
-|[TagResources](intl.zh-CN/新版API参考/标签类接口/TagResources.md#)|资源打标接口。|
+|[TagResources](intl.zh-CN/新版API参考/标签类接口/TagResources.md#)|资源打标签接口。|
 |[UntagResources](intl.zh-CN/新版API参考/标签类接口/UntagResources.md#)|删除资源标签接口。|
 
