@@ -15,5 +15,5 @@ In Statistical Analysis, you can check data of PV and UV, Area and ISP, Domain N
 ## Procedure {#section_kv5_hd2_xdb .section}
 
 1.  Log on to the [CDN console](https://cdnnext.console.aliyun.com/domain/list).
-2.  In the left-side navigation pane, choose **Statistical Analysis**. In the main workspace, select monitoring items and metrics, and click **Query**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5169/15641328518915_en-US.png)
+2.  In the left-side navigation pane, choose **Statistical Analysis**. In the main workspace, select monitoring items and metrics, and click **Query**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5169/15641329478915_en-US.png)
 
