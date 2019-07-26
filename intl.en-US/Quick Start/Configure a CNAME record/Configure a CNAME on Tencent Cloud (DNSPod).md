@@ -3,10 +3,10 @@
 This topic describes how to configure a CNAME on Tencent Cloud \(formerly DNSPod\). After you add a domain, Alibaba Cloud CDN assigns a CNAME address to the domain. You must point the domain to its CNAME address so that CDN can direct the requests destined for the domain to CDN nodes.
 
 1.  Obtain the CNAME of the target domain name. To obtain the CNAME, complete these steps: 
-    1.  Log on to the [Alibaba Cloud CDN console](https://partners-intl.aliyun.com/login-required#/cdn).
+    1.  Log on to the [Alibaba Cloud CDN console](https://cdnnext.console.aliyun.com/overview).
     2.  In the left-side navigation pane, click **Domain Names**, then find the target domain name. In the **CNAME** column, copy the CNAME. 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/156412955945282_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/156413150945282_en-US.png)
 
 2.  Add a CNAME record to Tentcent Cloud \(DNSPod\). To add a CNAME record to Tencent, complete these steps: 
     1.  Log on to the DNS console of Tencent Cloud \(DNSPod\).
@@ -29,6 +29,6 @@ This topic describes how to configure a CNAME on Tencent Cloud \(formerly DNSPod
 
     You can run the ping or dig command to check whether the target domain is accessible. If the access request is directed to `*.*kunlun*.com`, the CNAME record and CDN service both take effect.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/15641295596060_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/15641315106060_en-US.png)
 
 
