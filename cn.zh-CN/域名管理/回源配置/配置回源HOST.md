@@ -21,13 +21,14 @@
 -   在您的源站是域名源站`www.a.com`的情况下，您选择将回源HOST设置为`www.b.com`， 则实际回源的是`www.a.com`解析到的IP站点`www.b.com`。
 -   在您的源站是IP源站`1.1.1.1`的情况下，您选择将回源HOST设置为`www.b.com`，则实际回源的是`1.1.1.1`对应的主机上的站点`www.b.com`。
 
-1.  登录[CDN控制台](https://cdnnext.console.aliyun.com)。
-2.  单击**域名管理**。
-3.  在域名管理页面，单击目标域名后的**管理**。
-4.  单击**回源配置**。
-5.  在**回源HOST**区域框，单击**修改配置**。
-6.  打开**回源HOST**开关，选择**域名类型**，单击**确认**，配置成功。 
+1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
+2.  在左侧导航栏，单击**域名管理**。
+3.  在域名管理页面，单击目标域名对应的**管理**。
+4.  在指定域名的左侧导航栏，单击**回源配置**。
+5.  在**回源HOST**区域，单击**修改配置**。
+6.  打开**回源HOST**开关，选择**域名类型**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5145/15639619723347_zh-CN.png)
+    ![回源配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5145/15641351983347_zh-CN.png)
 
+7.  单击**确认**。
 
