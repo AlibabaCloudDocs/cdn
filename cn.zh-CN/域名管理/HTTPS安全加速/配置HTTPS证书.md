@@ -1,8 +1,12 @@
 # 配置HTTPS证书 {#task_261642 .task}
 
-阿里云CDN仅支持PEM格式的证书和私钥，您需要上传HTTPS证书至CDN，开启HTTPS安全加速。本文档介绍了不同类型的HTTPS证书的认证方式和配置方法。
+HTTPS以安全为目标的HTTP通道，HTTPS在CDN上的应用，为CDN的网络内容传输提供了更好的保障， 客户端在极速访问内容的同时，可以更安全有效的浏览网站内容。本文档介绍了不同类型的HTTPS证书的认证方式和配置方法。
 
 配置HTTPS证书前，您需要先购买证书，您可以在[云盾控制台](https://yundun.console.aliyun.com/?spm=5176.8232292.domaindetail.24.9498142fSMfoJd&p=cas#/cas/home)快速申请免费的证书或购买高级证书。
+
+目前CDN仅支持`PEM`格式的证书，如果您的证书不是PEM格式，请进行格式转换，操作方法请参见[证书格式转换方式](cn.zh-CN/域名管理/HTTPS安全加速/证书格式说明.md#section_cn2_rql_xdb)。
+
+HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费用单独按量计费，不包含在CDN流量包内。HTTPS计费介绍，请参见[增值服务计费](../../../../cn.zh-CN/产品定价/计费方式/增值服务计费.md#)。
 
 根据证书认证级别分类如下：
 
@@ -10,15 +14,13 @@
 -   OV是Organization Validation，验证企业组织真实性的标准型SSL证书，比DV SSL证书更安全可信，审核更严格，审核周期也更长。一般多用于电商，教育，游戏等领域。
 -   EV是Extended Validation，CA/browser forum指定的全球统一标准，通过证书object identifier（OID）来识别，显示完整企业名称，是目前全球最高等级的SSL证书，多用于金融支付，网上银行等领域。
 
-**说明：** 目前CDN仅支持`PEM`格式的证书，如果您的证书不是PEM格式，请进行格式转换，操作方法请参见[证书格式转换方式](cn.zh-CN/域名管理/HTTPS安全加速/证书格式说明.md#section_cn2_rql_xdb)。
-
 1.  登录[CDN控制台](https://cdnnext.console.aliyun.com)。
 2.  在左侧导航栏，单击**域名管理**。
 3.  在域名管理界面，单击目标域名后的**管理**。
 4.  在左侧导航栏，单击**HTTPS配置**。
 5.  在HTTPS证书界面，单击**修改配置**。 
 
-    ![HTTPS证书](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/156414061711410_zh-CN.png)
+    ![HTTPS证书](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/156437177311410_zh-CN.png)
 
 6.  在HTTPS设置界面，打开**HTTPS安全加速**开关，配置证书相关参数。 
 
@@ -48,7 +50,7 @@
     |内容|当**证书类型**选择**自定义**时，需要配置该参数。配置方法请参考**内容**输入框下方的**pem编码参考样例**。|
     |私钥|当**证书类型**选择**自定义**时，需要配置该参数。配置方法请参考**私钥**输入框下方的**pem编码参考样例**。|
 
-    ![修改HTTPS证书](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/156414061811413_zh-CN.png)
+    ![修改HTTPS证书](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/156437177311413_zh-CN.png)
 
 7.  单击**确认**。 
 
@@ -58,6 +60,6 @@
 
     更新HTTPS证书1分钟后全网生效，使用HTTPS方式访问资源，如果浏览器中出现绿色HTTPS标识，则HTTPS安全加速生效。
 
-    ![验证结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/15641406183701_zh-CN.png)
+    ![验证结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/15643717733701_zh-CN.png)
 
 
