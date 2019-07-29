@@ -20,7 +20,7 @@ CDN must allow for switchovers between primary and secondary origins.undefined
 5.  In the **Origin Information** section, click **Modify**.
 6.  In the Modify Origin Information dialog box, set the origin type, IP address, and port number. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/223013/156440866947757_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/223013/156440874947757_en-US.png)
 
     The following table describes the **Type** parameter.
 
