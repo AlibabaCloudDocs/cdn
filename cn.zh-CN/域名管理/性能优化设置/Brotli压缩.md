@@ -15,6 +15,6 @@ Brotli是开源的一种新型压缩算法。开启Brotli压缩功能后，CDN�
 4.  在指定域名的左侧导航栏，单击**性能优化**。
 5.  在Brotli压缩区域框中，打开Brotli压缩开关。 
 
-    ![Brotli压缩](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301855/156414089948022_zh-CN.png)
+    ![Brotli压缩](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301855/156436309248022_zh-CN.png)
 
 
