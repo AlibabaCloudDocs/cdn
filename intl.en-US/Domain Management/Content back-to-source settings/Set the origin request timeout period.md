@@ -13,7 +13,7 @@ This topic describes how to set the origin request timeout period. Specifically,
 
     -   The timeout period of back-to-origin requests directed to CDN nodes does not exceed 100 seconds.
     -   You must set the timeout period to a value less than or equal to 900 seconds.
-    ![回源请求超时时间](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/908787/156456724051614_en-US.png)
+    ![回源请求超时时间](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/908787/156463863151614_en-US.png)
 
 7.  Click **OK**.
 
