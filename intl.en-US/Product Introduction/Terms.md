@@ -6,7 +6,7 @@ This topic explains the commonly used terms in Alibaba Cloud CDN products.
 
 An accelerating domain is a domain that uses CDN to accelerate content distribution. A domain is the server IP address of a website, email, or FTP server.
 
-**说明：** In this document, an accelerating domain is a referred to domain in most cases.
+**Note:** In this document, an accelerating domain is referred to as a domain in most cases.
 
 ## Origin {#section_dym_wtb_p2b .section}
 
