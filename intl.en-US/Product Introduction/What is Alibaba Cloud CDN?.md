@@ -1,48 +1,39 @@
 # What is Alibaba Cloud CDN? {#concept_aml_tlg_tdb .concept}
 
-Alibaba Cloud Content Delivery Network \(CDN\) caches contents at physical nodes, then strategically delivers them to end users. It allows the users to efficiently acquire the resources they need, avoids the possible network congestion, and enhances the user experience.
+Content Delivery Network \(CDN\) is built on a bearer network that uses a distributed architecture of edge node clusters located in different regions. CDN offloads traffic from origins to prevent network congestion, thereby accelerating web content distribution in different regions and various scenarios while increasing resource access speed.
 
-## How it works {#section_dsj_nlb_n2b .section}
+Alibaba Cloud CDN caches the resources from origins to the accelerating nodes that are distributed across the globe. When a user requests access to such resources, the system does not need to direct the requests to the origin that serves the user. Instead, the system automatically obtains the resources cached on the CDN node closest to the user. For information about how to connect to Alibaba Cloud CDN, see [Quick start](../../../../intl.en-US/Quick Start/Quick start.md#).
 
-Suppose that your origin site is in Hong Kong, and the domain name www.a.com has access to the CDN service. The following steps take place when a user in Beijing requests contents from your site.
+Some CDN nodes support access through IPv6 addresses.
 
-Now, IPv6 has been adopted on several Alibaba Cloud CDN edge nodes.
+## About CDN {#section_i4g_cnf_l2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5098/15543483564886_en-US.png)
+The following table lists the documents that help you to better understand the functions of Alibaba Cloud CDN.
 
-1.  A user in Beijing requests content from your website or application \(with the domain name of www.a.com\).
-2.  The LDNS routes the request to the node that is the shortest geographical distance from the user \(steps 2 to 6 in the figure above\), which in this case is Beijing Node 2.2.2.2.
-    -   LDNS resolves the domain name www.a.com, then gets the response of the CNAME \(www.a.tbcdn.com\).
-    -   LDNS requests contents from Alibaba Scheduling System. The system then allocates and returns the most suitable node’s IP.
-3.  The user requests content from the routed node, Beijing Node 2.2.2.2 \(steps 7 to 10 in the figure above\).
-    -   If the content has been cached at the Beijing node, CDN directly delivers them to the user.
-    -   If the files are not in the cache of the Beijing node, the node requests the content from the origin site. When the content is received, the Beijing node forwards to the user, in the light of his customized caching policy.
+|Reference document|CDN knowledge|
+|------------------|-------------|
+|[Terms](intl.en-US/Product Introduction/Terms.md#)|Provides terms related to Alibaba Cloud CDN.|
+|[CDN Learning Path](https://www.alibabacloud.com/getting-started/learningpath/cdn)|Helps you quickly get started with Alibaba Cloud CDN.|
+|[API](https://www.alibabacloud.com/help/zh/doc-detail/91856.htm)|Describes the API actions that you can call to operate Alibaba Cloud CDN.|
 
-## Operations {#section_i4g_cnf_l2b .section}
+## CDN pricing {#section_c3q_dnf_l2b .section}
 
-Before your Alibaba CDN trip, refer to [basic concepts](https://www.alibabacloud.com/help/doc-detail/27102.htm). It will help you understand CDN quickly.
+The basic services and value-added services of CDN are charged separately according to different billing methods.
 
-To get started with CDN, go to Quick Start. You can also follow the [CDN Learning Path](https://www.alibabacloud.com/getting-started/learningpath/cdn) to get a complete understanding of CDN.
+-   For information about the billing method for basic services, see [Basic Service](../../../../intl.en-US/Pricing/Billing method/Basic Service.md#).
+-   For information about the billing method for value-added services, see [Value-added service](../../../../intl.en-US/Pricing/Billing method/Value-added service.md#).
 
-You can log on [CDN Console](https://cdn.console.aliyun.com) to enjoy all functions.
+For information about the pricing of CDN services, see [CDN pricing details](https://www.alibabacloud.com/product/cdn/pricing).
 
-Moreover, you can check [API documentations](https://www.alibabacloud.com/help/doc-detail/27155.htm) to flexibly realize your business targets.
+## Related products {#section_tii_up6_o8n .section}
 
-## Price and billing {#section_cdg_yqb_n2b .section}
+This section describes the CDN-related products, helping you to better understand the position and usage of Alibaba Cloud CDN in the Alibaba Cloud.
 
-See [Pricing overview](https://www.alibabacloud.com/help/doc-detail/73877.htm) to quickly know how Alibaba Cloud CDN charges. Basic services and value-added services are the main two parts. You can choose PayByTraffic or PayByBandwidth for basic services.
-
-## Related services {#section_lpx_g3f_l2b .section}
-
-[Dynamic Route for CDN](https://www.alibabacloud.com/help/product/64812.htm): Distinguishes dynamic and static resources and accelerates both separately.
-
-[Object Storage Service \(OSS\)](https://www.alibabacloud.com/help/product/31815.htm): Improves website access speed and reduces the data charges that may be incurred on the external network.
-
-[ApsaraVideo Live service](https://www.alibabacloud.com/help/product/29949.htm): Delivers an integrated solution including media asset, slice transcoding, visiting authentication, and content delivery acceleration.
-
-[Alibaba Cloud DNS](https://www.alibabacloud.com/help/product/34269.htm): Provides powerful but stable resolutions and dispatches services, ensuring a smooth experience for visiting users.
-
-[Elastic Compute Service \(ECS\)](https://www.alibabacloud.com/help/product/25365.htm): Enhances website availability, protects the information on a server’s source station, and lowers the cost of bandwidth use.
-
-[Server Load Balancer](ttps://www.alibabacloud.com/help/product/27537.htm): Sets the server's IP address to the source site, which relieves the bandwidth pressure.
+|Related product|Function|
+|---------------|--------|
+|[What is OSS?](../../../../intl.en-US/Product Introduction/What is OSS?.md#)|You can use CDN in OSS to increase website access speed and decrease the charges for Internet traffic consumed by OSS.|
+|[ApsaraVideo for VOD](https://www.alibabacloud.com/help/product/29932.htm?spm=a2c63.m28257.a1.44.570b5922KlB7Uv)|You can use CDN in ApsaraVideo VOD to decrease the buffer time and increase playback smoothness.|
+|[Alibaba Cloud DNS](https://www.alibabacloud.com/help/product/34269.htm?spm=a2c63.m28257.a1.52.76e95922llSifd)|You can use the powerful, stable parsing and scheduling interfaces provided by Alibaba Cloud DNS to guarantee smooth access to resources.|
+|[What is ECS?](../../../../intl.en-US/Product Introduction/What is ECS?.md#)|You can use ECS to increase website availability and protect origin information while decreasing the operational bandwidth.|
+|[What is Server Load Balancer?](../../../../intl.en-US/Product Introduction/What is Server Load Balancer?.md#)|You can set the IP address of a server load balancer as the back-to-origin address to decrease the bandwidth required for directing back-to-origin traffic.|
 
