@@ -31,7 +31,7 @@ TLS has four versions:
 4.  In the left-side navigation pane, click **HTTPS**.
 5.  In the **TLS Version Control** section, enable or disable the TLS versions you want. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41679/156456683847114_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41679/156505457947114_en-US.png)
 
     **Note:** TLSv1.0, TLSv1.1, and TLSv1.2 are enabled by default.
 
