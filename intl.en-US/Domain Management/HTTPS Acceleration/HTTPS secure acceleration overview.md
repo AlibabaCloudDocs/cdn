@@ -14,7 +14,7 @@ After you enable HTTPS on the Alibaba Cloud CDN console, the requests from your 
 
 The following figure shows the HTTPS encryption process.
 
-![HTTPS principle](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15469/156437992347884_en-US.png)
+![HTTPS principle](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15469/156505452847884_en-US.png)
 
 1.  The client sends an HTTPS access request.
 2.  The server generates a public key and a private key, which you can prepare on your own or apply for from a professional organization.
@@ -64,13 +64,13 @@ HTTPS is used in the following five scenarios.
 |Configuration| -   The following are service types that support HTTPS secure acceleration:
     -   [Image and Small File](../../../../intl.en-US/Product Introduction/Scenarios/Image and Small File.md#): This service is suitable for web portals, e-commerce websites, news websites and applications, government or enterprise official websites, and entertainment or gaming websites and applications.
     -   [Acceleration for large static files](../../../../intl.en-US/.md#): This service is suitable to audio and video applications and to websites that provides content for users to download.
-    -   [VOD](../../../../intl.en-US/.md#): This service is suitable to websites and applications that provide audio and video content such as movies, online education, news, and social networking.
-    -   [Live Streaming](../../../../intl.en-US/.md#): This service is suitable to suitable to websites and vertical industry portals that provide live streaming content such as interactive online education and live game, show, or event broadcasts.
-    -   [DCDN](../../../../intl.en-US/.md#): This service is suitable to e-commerce, social networking, government, enterprise, gaming, and finance platforms.
+    -   [VOD](../../../../intl.en-US/Product Introduction/Scenarios/VOD.md#): This service is suitable to websites and applications that provide audio and video content such as movies, online education, news, and social networking.
+    -   [Live Streaming](../../../../intl.en-US/Product Introduction/Scenarios/Live Streaming.md#): This service is suitable to suitable to websites and vertical industry portals that provide live streaming content such as interactive online education and live game, show, or event broadcasts.
+    -   [DCDN](../../../../intl.en-US/Product Introduction/Scenarios/DCDN.md#): This service is suitable to e-commerce, social networking, government, enterprise, gaming, and finance platforms.
 -   You can enable HTTPS for wildcard domains.
 -   You can enable or disable HTTPS secure acceleration as needed.
-    -   When HTTPS secure acceleration is enabled: You can modify certificates. The system supports HTTP and HTTPS requests by default. In addition, you can enable the Force Redirect function to customize request methods. For more information, see [EN-US\_TP\_5136.md\#](intl.en-US/Domain Management/HTTPS Acceleration/Force Redirect.md#).
-    -   When HTTPS secure acceleration is disabled: The system no longer supports HTTPS requests. In addition, the system no longer reserve certificate or private key information. To enable certificates again, you need to re-upload the certificates or private keys. For more information, see [EN-US\_TP\_5134.md\#](intl.en-US/Domain Management/HTTPS Acceleration/HTTPS Secure Acceleration.md#).
+    -   When HTTPS secure acceleration is enabled: You can modify certificates. The system supports HTTP and HTTPS requests by default. In addition, you can enable the Force Redirect function to customize request methods. For more information, see [Enable Force Redirect](intl.en-US/Domain Management/HTTPS Acceleration/Enable Force Redirect.md#).
+    -   When HTTPS secure acceleration is disabled: The system no longer supports HTTPS requests. In addition, the system no longer reserve certificate or private key information. To enable certificates again, you need to re-upload the certificates or private keys. For more information, see [Configure HTTPS certificates](intl.en-US/Domain Management/HTTPS Acceleration/Configure HTTPS certificates.md#).
 -   You can view certificates but not private keys. Keep certificate-related information safe.
 -   You can update certificates but with caution. An HTTPS certificate takes effect on the entire network after being updated.
 
@@ -82,7 +82,7 @@ HTTPS is used in the following five scenarios.
  |
 |Certificates| -   You need to upload certificate and private files in PEM format for domains for which HTTPS secure acceleration is enabled.
 
-**Note:** The Tengine web server used by CDN is designed based on the Nginx web server architecture and therefore supports only certificate files in PEM format, which can be read by Nginx. For more information, see [Certificate Format](intl.en-US/Domain Management/HTTPS Acceleration/Certificate Format.md#).
+**Note:** The Tengine web server used by CDN is designed based on the Nginx web server architecture and therefore supports only certificate files in PEM format, which can be read by Nginx. For more information, see [Overview of certificate formats](intl.en-US/Domain Management/HTTPS Acceleration/Overview of certificate formats.md#).
 
 -   The uploaded certificate file must match the private key. Otherwise, the authentication fails.
 -   A private key cannot carry a password.
@@ -96,9 +96,9 @@ You can enable the following functions as needed to increase data security:
 
 |Function|Description|
 |--------|-----------|
-|[EN-US\_TP\_5134.md\#](intl.en-US/Domain Management/HTTPS Acceleration/HTTPS Secure Acceleration.md#)|Allows for HTTPS secure acceleration.|
-|[EN-US\_TP\_5137.md\#](intl.en-US/Domain Management/HTTPS Acceleration/HTTP__2.md#)|The most advanced HTTP protocol, which is used by most major browsers such as Google Chrome, Internet Explorer 11, Safari, and Mozilla Firefox.|
-|[EN-US\_TP\_5136.md\#](intl.en-US/Domain Management/HTTPS Acceleration/Force Redirect.md#)|Supports force redirects on users' original request methods.|
-|[TLS](intl.en-US/Domain Management/HTTPS Acceleration/TLS.md#)|Helps to ensure communication security and data integrity.|
-|[EN-US\_TP\_41680.md\#](intl.en-US/Domain Management/HTTPS Acceleration/HSTS.md#)|Forces clients such as browsers to establish HTTPS connections with servers, reducing hijacking risks in the first access requests.|
+|[Configure HTTPS certificates](intl.en-US/Domain Management/HTTPS Acceleration/Configure HTTPS certificates.md#)|Allows for HTTPS secure acceleration.|
+|[Enable HTTP/2](intl.en-US/Domain Management/HTTPS Acceleration/Enable HTTP__2.md#)|The most advanced HTTP protocol, which is used by most major browsers such as Google Chrome, Internet Explorer 11, Safari, and Mozilla Firefox.|
+|[Enable Force Redirect](intl.en-US/Domain Management/HTTPS Acceleration/Enable Force Redirect.md#)|Supports force redirects on users' original request methods.|
+|[EN-US\_TP\_41679.md\#](intl.en-US/Domain Management/HTTPS Acceleration/Configure TLS.md#)|Helps to ensure communication security and data integrity.|
+|[Configure HSTS](intl.en-US/Domain Management/HTTPS Acceleration/Configure HSTS.md#)|Forces clients such as browsers to establish HTTPS connections with servers, reducing hijacking risks in the first access requests.|
 
