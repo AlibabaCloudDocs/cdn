@@ -14,6 +14,6 @@ A preview of QUIC is currently available. Follow the prompts to scan the QR code
 
     Follow the prompts below to enable the QUIC protocol.
 
-    ![QUIC preview](images/52642_en-US.png)
+    ![QUIC preview](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/974425/156525528552642_en-US.png)
 
 

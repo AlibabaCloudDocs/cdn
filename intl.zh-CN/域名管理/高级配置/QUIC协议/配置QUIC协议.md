@@ -14,6 +14,6 @@ QUIC协议提供与TLS/SSL相当的安全性，同时具有更低的连接和传
 
     根据下图提示，开启QUIC协议。
 
-    ![QUIC公测](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/974425/156524356652642_zh-CN.png)
+    ![QUIC公测](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/974425/156525528152642_zh-CN.png)
 
 
