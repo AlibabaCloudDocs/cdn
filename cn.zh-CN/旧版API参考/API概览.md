@@ -2,11 +2,12 @@
 
 CDN提供以下相关API接口。
 
-## 资源监控接口 {#section_6mo_o6n_gav .section}
+## 资源监控接口 {#section_rdn_zbg_ygk .section}
 
 |API|描述|
 |---|--|
 |[DescribeTopDomainsByFlow](cn.zh-CN/旧版API参考/资源监控接口/DescribeTopDomainsByFlow.md)|调用DescribeTopDomainsByFlow接口获取用户按流量排名的域名。|
+|[DescribeDomainTopReferVisit](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainTopReferVisit.md)|获取加速域名某天的热门页面引用次数排名。|
 |[DescribeDomainBpsData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainBpsData.md)|调用DescribeDomainBpsData接口获取加速域名的网络带宽监控数据。|
 |[DescribeDomainFlowData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainFlowData.md)|调用DescribeDomainFlowData接口获取加速域名的网络流量监控数据。|
 |[DescribeDomainSrcBpsData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainSrcBpsData.md)|调用DescribeDomainSrcBpsData接口获取加速域名的回源带宽监控数据。|
@@ -31,10 +32,9 @@ CDN提供以下相关API接口。
 |[DescribeDomainRealTimeByteHitRateData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainRealTimeByteHitRateData.md)|调用DescribeDomainRealTimeByteHitRateData接口获取域名1分钟粒度字节命中率数据。|
 |[DescribeDomainRealTimeQpsData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainRealTimeQpsData.md)|调用DescribeDomainRealTimeQpsData接口获取域名1分钟粒度每秒访问次数数据。|
 |[DescribeDomainRealTimeReqHitRateData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainRealTimeReqHitRateData.md)|调用DescribeDomainRealTimeReqHitRateData接口获取域名1分钟粒度请求命中率数据。|
-|[DescribeDomainTopReferVisit](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainTopReferVisit.md)|调用DescribeDomainTopReferVisit接口获取加速域名某天的热门页面引用次数排名。|
 |[DescribeDomainQpsData](cn.zh-CN/旧版API参考/资源监控接口/DescribeDomainQpsData.md)|调用DescribeDomainQpsData接口获取加速域名的每秒访问次数QPS。|
 
-## 服务操作接口 {#section_5zf_cuk_org .section}
+## 服务操作接口 {#section_yzi_tal_tyh .section}
 
 |API|描述|
 |---|--|
@@ -42,7 +42,7 @@ CDN提供以下相关API接口。
 |[DescribeCdnService](cn.zh-CN/旧版API参考/服务操作接口/DescribeCdnService.md)|调用DescribeCdnService接口查询CDN服务状态。|
 |[ModifyCdnService](cn.zh-CN/旧版API参考/服务操作接口/ModifyCdnService.md)|调用ModifyCdnService接口变更CDN服务的计费类型。|
 
-## 日志信息接口 {#section_xwa_d9p_l0p .section}
+## 日志信息接口 {#section_l9v_b5k_mna .section}
 
 |API|描述|
 |---|--|
@@ -54,7 +54,7 @@ CDN提供以下相关API接口。
 |[ModifyDomainCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/ModifyDomainCustomLogConfig.md)|调用ModifyDomainCustomLogConfig接口修改域名所属日志自定义日志配置信息。|
 |[ModifyUserCustomLogConfig](cn.zh-CN/旧版API参考/日志接口/ModifyUserCustomLogConfig.md)|调用ModifyUserCustomLogConfig接口修改用户下自定义日志配置信息。|
 
-## 域名接口 {#section_mrg_uue_snq .section}
+## 域名接口 {#section_huw_kro_jrm .section}
 
 |API|描述|
 |---|--|
@@ -67,7 +67,7 @@ CDN提供以下相关API接口。
 |[DeleteCdnDomain](cn.zh-CN/旧版API参考/域名操作接口/DeleteCdnDomain.md)|调用DeleteCdnDomain接口删除已添加的加速域名。|
 |[DescribeDomainsBySource](cn.zh-CN/旧版API参考/域名操作接口/DescribeDomainsBySource.md)|调用DescribeDomainsBySource接口查询用户名下源站对应的所有域名名称列表|
 
-## 配置操作接口 {#section_1rp_nbd_azr .section}
+## 配置操作接口 {#section_kau_h53_ttw .section}
 
 |API|描述|
 |---|--|
@@ -105,13 +105,13 @@ CDN提供以下相关API接口。
 |[SetIpAllowListConfig](cn.zh-CN/旧版API参考/配置操作接口/SetIpAllowListConfig.md)|调用SetIpAllowListConfig接口设置加速域名的IP白名单。|
 |[DescribeUserConfigs](cn.zh-CN/旧版API参考/配置操作接口/DescribeUserConfigs.md)|调用DescribeUserConfigs接口获取用户相应的配置。|
 
-## 辅助工具接口 {#section_fer_4pe_ffo .section}
+## 辅助工具接口 {#section_n0x_xge_n0q .section}
 
 |API|描述|
 |---|--|
 |[DescribeIpInfo](cn.zh-CN/旧版API参考/辅助工接口/DescribeIpInfo.md)|调用DescribeIpInfo接口验证指定的IP是否为阿里云CDN节点的IP地址。|
 
-## 刷新预热接口 {#section_4x9_jjb_pjs .section}
+## 刷新预热接口 {#section_llp_me0_ozz .section}
 
 |API|描述|
 |---|--|
@@ -120,19 +120,19 @@ CDN提供以下相关API接口。
 |[DescribeRefreshTasks](cn.zh-CN/旧版API参考/刷新预热类接口/DescribeRefreshTasks.md)|调用DescribeRefreshTasks接口查询刷新、预热状态是否在全网生效。|
 |[DescribeRefreshQuota](cn.zh-CN/旧版API参考/刷新预热类接口/DescribeRefreshQuota.md)|调用DescribeRefreshQuota接口刷新（包含预热）URL及目录的最大限制数量。|
 
-## 全站加速接口 {#section_aa7_4vj_dg9 .section}
+## 全站加速接口 {#section_vif_9v6_cta .section}
 
 |API|描述|
 |---|--|
 |[SetDynamicConfig](cn.zh-CN/旧版API参考/全站加速接口/SetDynamicConfig.md)|调用SetDynamicConfig接口配置全站加速缓存规则。|
 
-## RAM资源授权 {#section_fnj_fmu_myt .section}
+## RAM资源授权 {#section_2ls_6on_rzy .section}
 
 |API|描述|
 |---|--|
 |[CDN API鉴权规则](cn.zh-CN/旧版API参考/RAM资源授权/CDN API鉴权规则.md)|CDN API鉴权规则|
 
-## 数据类型 {#section_5fm_vcx_k0h .section}
+## 数据类型 {#section_ufc_pfu_fgx .section}
 
 |API|描述|
 |---|--|
