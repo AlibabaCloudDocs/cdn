@@ -12,7 +12,7 @@ Currently, Alibaba Cloud CDN supports the layer-7 QUIC \(HTTP over QUIC\) protoc
 
 The following figure shows how QUIC is used in Alibaba Cloud CDN.
 
-![QUIC schematic](images/52635_en-US.png)
+![QUIC schematic](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1054402/156552271952635_en-US.png)
 
 ## Client requirements {#section_mib_tch_z1i .section}
 
