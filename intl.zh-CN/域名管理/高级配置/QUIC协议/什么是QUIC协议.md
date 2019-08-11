@@ -12,7 +12,7 @@ QUIC（Quick UDP Internet Connections）是一种实验性传输层网络协议�
 
 在阿里云CDN中使用QUIC的工作原理如下图所示。
 
-![Quic原理图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1054402/156552271652635_zh-CN.png)
+![Quic原理图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1054402/156552285952635_zh-CN.png)
 
 ## 对客户端的要求 {#section_mib_tch_z1i .section}
 
