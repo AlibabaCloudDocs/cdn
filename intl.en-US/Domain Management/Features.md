@@ -6,7 +6,7 @@ The Alibaba Cloud CDN console not only allows you to complete basic operations s
 
 The following figure shows the CDN console interface.
 
-![CDN console](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5118/156535856454228_en-US.png)
+![CDN console](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5118/156552078954228_en-US.png)
 
 The following table describes the CDN console interface.
 
@@ -20,6 +20,7 @@ The following table describes the CDN console interface.
 |6|Billing method|Displays the billing method you have selected. You can also modify the billing method as needed. For more information, see [Basic Service](../../../../intl.en-US/Pricing/Billing method/Basic Service.md#) and [Value-added service](../../../../intl.en-US/Pricing/Billing method/Value-added service.md#).|
 |7|All domains|Allows you to quickly manage the existing domains, add domains, and perform the refresh or preload operation.|
 |8|Other acceleration products|Displays CDN-related products.|
+|9|Traffic-based domain ranking|Displays top five CDN domains by traffic.|
 
 ## Domain management features {#section_2le_by2_8r4 .section}
 
