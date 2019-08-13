@@ -6,7 +6,7 @@ This topic describes how to configure a CNAME on Xinnet. After you add a domain,
     1.  Log on to the [Alibaba Cloud CDN console](https://cdnnext.console.aliyun.com/overview).
     2.  In the left-side navigation pane, choose **Domain Names**, find the target domain name and in the **CNAME** column copy the CNAME. 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/156413179445282_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/156565803445282_en-US.png)
 
 2.  Add a CNAME record to Xinnet. To add a CNAME record to Xinnet, complete these steps: 
     1.  Log on to the DNS console of Xinnet.
@@ -29,6 +29,6 @@ This topic describes how to configure a CNAME on Xinnet. After you add a domain,
 
     You can run the ping or dig command to check whether the target domain is accessible. If the access request is directed to `*.*kunlun*.com`, the CNAME record and CDN service both take effect.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/15641317946060_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5113/15656580346060_en-US.png)
 
 
