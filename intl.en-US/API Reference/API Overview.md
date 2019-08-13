@@ -99,13 +99,12 @@
 |[DescribeDomainBpsDataByTimeStamp](https://www.alibabacloud.com/help/doc-detail/43473.htm)|Obtain the bandwidth data of a CDN domain name on different locations and ISPs at specific time. The unit is bit/second.|
 |[DescribeDomainMax95BpsData](https://www.alibabacloud.com/help/doc-detail/60698.htm)|Obtain the 95th percentile bandwidth metric data of CDN domain names. Unit: bit/second. Unit: bit/second.|
 |[DescribeDomainPathData](https://www.alibabacloud.com/help/doc-detail/61132.htm)|Obtain metric data of 5 minutes of CDN domain names path level, including traffic and times of accesses.|
-|[DescribeL2VipsByDomain](https://www.alibabacloud.com/help/doc-detail/48769.htm)| Query the virtual IP address list of an L2 node by the domain name. This interface takes effect after a whitelist is configured.|
+|[DescribeL2VipsByDomain](https://www.alibabacloud.com/help/doc-detail/48769.htm)|Query the virtual IP address list of an L2 node by the domain name. This interface takes effect after a whitelist is configured.|
 |[Describerangedatabylocateandispservice](https://www.alibabacloud.com/help/doc-detail/44723.htm)|Gets bandwidth data on different locates and ISPs for an accelerated domain name at a certain time.|
 |[DescribeDomainRealTimeBpsData](https://www.alibabacloud.com/help/doc-detail/67951.htm)|Obtain bandwidth data of domain name with 1-minute granularity.|
 |[DescribeDomainRealTimeByteHitRateData](https://www.alibabacloud.com/help/doc-detail/65027.htm)|Obtain byte hit rate data of domain names with 1-minute granularity.|
 |[DescribeDomainRealTimeQpsData](https://www.alibabacloud.com/help/doc-detail/65028.htm)|Obtain Queries per second \(QPS\) of the domain name for every 1 minute.|
 |[DescribeDomainRealTimeReqHitRateData](https://www.alibabacloud.com/help/doc-detail/65029.htm)|Obtain the request hit rate of the domain name with 1-minute granularity.|
-|[DescribeDomainSlowRatio](https://www.alibabacloud.com/help/doc-detail/63078.htm)|Obtain slow ration of video CDN domain names with 5-minute granularity.|
 
 ## Dynamic Route for CDN Interface {#section_ggs_h2x_yfb .section}
 
