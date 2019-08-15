@@ -1,6 +1,6 @@
 # 开通CDN服务 {#task_187531 .task}
 
-您在使用CDN之前，需要先开通CDN服务，本文详细介绍了快速开通CDN服务的方法。
+在使用CDN之前，您需要先开通CDN服务，本文详细介绍了快速开通CDN服务的方法。
 
 执行本文操作之前，请确保您已完成阿里云[账号注册](https://account.alibabacloud.com/register/intl_register.htm)和[实名认证](https://account-intl.console.aliyun.com/#/intlAuth)。
 
