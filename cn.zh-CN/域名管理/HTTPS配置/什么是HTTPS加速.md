@@ -14,7 +14,7 @@ HTTP协议以明文方式发送内容，不提供任何方式的数据加密。H
 
 HTTPS加密流程如下图所示。
 
-![流程图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15469/156505451447884_zh-CN.png)
+![流程图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15469/156587025947884_zh-CN.png)
 
 1.  客户端发起HTTPS请求。
 2.  服务端生成公钥和私钥（可以自己制作，也可以向专业组织申请）。
