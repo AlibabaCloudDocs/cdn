@@ -5,7 +5,7 @@
 单位：byte。
 
 -   不指定**StartTime**和**EndTime**时，默认读取过去24小时的数据，同时支持按指定的起止时间查询，两者需要同时指定。
--   支持批量域名查询，多个域名用逗号（半角）分隔。
+-   支持批量域名查询，多个域名用逗号（,）分隔。
 -   最多可获取最近90天的数据。
 
 ## 调试 {#api_explorer .section}
@@ -21,7 +21,7 @@
  |
 |DomainName|String|否|www.yourdomain.com|-   若参数为空，默认返回所有加速域名合并后数据。
 -   可输入需要查询的加速域名。
--   支持批量域名查询，多个域名用逗号（半角）分隔。
+-   支持批量域名查询，多个域名用逗号（,）分隔。
 
  |
 |DomainType|String|否|dynamic|查询类型。
@@ -30,14 +30,16 @@
 -   不传时查询静态资源的实时流量。
 
  |
-|EndTime|String|否|2017-12-22T08:00:00:00Z|-   结束时间需大于起始时间。
+|EndTime|String|否|2017-12-22T08:00:00:00Z|获取数据结束时间点。
+
+ -   结束时间需大于起始时间。
 -   获日期格式按照ISO8601表示法，并使用UTC时间。
 -   格式为：YYYY-MM-DDThh:mmZ。
 
  |
 |Interval|String|否|300|查询数据的时间粒度。
 
- -   支持300, 3600, 14400, 28800和86400秒。
+ -   支持300、3600、14400、28800和86400秒。
 -   不传和传的值不支持时，使用默认值300秒。
 
  |
@@ -66,31 +68,31 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|DomainName|String|test.com|加速域名信息
+|DomainName|String|test.com|加速域名信息。
 
  |
 |DataInterval|String|300|每条记录的时间间隔，以秒为单位。
 
  |
-|StartTime|String|2015-12-10T20:00Z|开始时间
+|StartTime|String|2015-12-10T20:00Z|开始时间。
 
  |
-|EndTime|String|2015-12-10T21:00Z|结束时间
+|EndTime|String|2015-12-10T21:00Z|结束时间。
 
  |
-|FlowDataPerInterval| | |每个时间间隔的流量数据
+|FlowDataPerInterval| | |每个时间间隔的流量数据。
 
  |
-|TimeStamp|String|2017-12-22T08:00:00:00Z|时间片起始时刻
+|TimeStamp|String|2017-12-22T08:00:00:00Z|时间片起始时刻。
 
  |
-|Value|String|423304182|总流量
+|Value|String|423304182|总流量。
 
  |
-|DomesticValue|String|0|国内流量
+|DomesticValue|String|0|国内流量。
 
  |
-|OverseasValue|String|0|海外流量
+|OverseasValue|String|0|海外流量。
 
  |
 |DynamicValue|String|0|全站加速，动态流量。当按区域运营商查询时，此值为空。
@@ -111,7 +113,7 @@
 |StaticOverseasValue|String|0|全站加速，海外静态流量。当按区域运营商查询时，此值为空。
 
  |
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
 
@@ -120,10 +122,8 @@
 请求示例
 
 ``` {#request_demo}
-
 http(s)://cdn.aliyuncs.com?Action=DescribeDomainFlowData
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -131,7 +131,7 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainFlowData
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
+<DescribeDomainFlowDataResponse>
 	  <DomainName>test.com</DomainName>
 	  <DataInterval>300</DataInterval>
 	  <FlowDataPerInterval>
@@ -179,7 +179,7 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainFlowData
 	  <RequestId>B955107D-E658-4E77-B913-E0AC3D31693E</RequestId>
 	  <StartTime>2015-12-10T20:00Z</StartTime>
 	  <EndTime>2015-12-10T21:00Z</EndTime>
-</APINAMEResponse>
+</DescribeDomainFlowDataResponse>
 ```
 
 `JSON` 格式
