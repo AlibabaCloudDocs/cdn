@@ -4,9 +4,9 @@
 
 CDN服务状态包括：当前计费类型，服务开通时间，下次生效的计费类型，当前业务状态等。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeCdnService)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeCdnService&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -16,7 +16,7 @@ CDN服务状态包括：当前计费类型，服务开通时间，下次生效�
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -41,7 +41,7 @@ CDN服务状态包括：当前计费类型，服务开通时间，下次生效�
 |OperationLocks| | |业务锁定状态。例如：欠费，安全等。
 
  |
-|└LockReason|String|financial|业务锁定的原因。
+|LockReason|String|financial|业务锁定的原因。
 
  |
 |RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
@@ -56,10 +56,8 @@ CDN服务状态包括：当前计费类型，服务开通时间，下次生效�
 请求示例
 
 ``` {#request_demo}
-
 http(s)://cdn.aliyuncs.com?Action=DescribeCdnService
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -67,16 +65,15 @@ http(s)://cdn.aliyuncs.com?Action=DescribeCdnService
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <ChangingChargeType>PayByTraffic</ChangingChargeType>
-  <OpeningTime>2016-12-14T02:34:12Z</OpeningTime>
-  <InstanceId>1394881682333599</InstanceId>
-  <RequestId>4D2605E0-F729-41FF-B553-8C4CB15D5808</RequestId>
-  <ChangingAffectTime>2018-08-06T16:00:00Z</ChangingAffectTime>
-  <OperationLocks/>
-  <InternetChargeType>PayByTraffic</InternetChargeType>
-</APINAMEResponse>
-
+<DescribeCdnServiceResponse>
+	  <ChangingChargeType>PayByTraffic</ChangingChargeType>
+	  <OpeningTime>2016-12-14T02:34:12Z</OpeningTime>
+	  <InstanceId>139488168233xxxx</InstanceId>
+	  <RequestId>4D2605E0-F729-41FF-B553-8C4CB15D5808</RequestId>
+	  <ChangingAffectTime>2018-08-06T16:00:00Z</ChangingAffectTime>
+	  <OperationLocks></OperationLocks>
+	  <InternetChargeType>PayByTraffic</InternetChargeType>
+</DescribeCdnServiceResponse>
 ```
 
 `JSON` 格式
@@ -100,5 +97,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeCdnService
 |--------|---|----|--|
 |400|UnsupportedParameter|There is unsupported parameters|不支持该参数，请您检查该参数是否正确。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
