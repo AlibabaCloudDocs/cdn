@@ -2,13 +2,15 @@
 
 调用DescribeDomainTopUrlVisit接口获取加速域名某天内的热门URL列表。
 
+ **调用该接口前，请您注意：** 
+
 -   不指定**StartTime**，默认读取前一天的数据。
 -   只支持一个域名，或当前用户下所有域名。
 -   最多可获取最近90天的数据。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeDomainTopUrlVisit)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeDomainTopUrlVisit&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -34,107 +36,107 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|AllUrlList| | |全部热门URLlist
+|AllUrlList| | |全部热门URLlist。
 
  |
-|└Flow|String|460486880|流量。单位：byte
+|Flow|String|460486880|流量。单位：byte
 
  |
-|└FlowProportion|Float|0.35|流量占比
+|FlowProportion|Float|0.35|流量占比
 
  |
-|└UrlDetail|String|http://test.com/nn\_live/nn\_x64/a0.m3u8|完整的Url地址
+|UrlDetail|String|http://test.com/nn\_live/nn\_x64/a0.m3u8|完整的Url地址
 
  |
-|└VisitData|String|161673|访问次数
+|VisitData|String|161673|访问次数
 
  |
-|└VisitProportion|Float|0.35|访问占比
+|VisitProportion|Float|0.35|访问占比
 
  |
-|DomainName|String|test.com|加速域名
+|DomainName|String|test.com|加速域名。
 
  |
-|RequestId|String|64D28B53-5902-409B-94F6-FD46680144FE|请求ID
+|RequestId|String|64D28B53-5902-409B-94F6-FD46680144FE|请求ID。
 
  |
-|StartTime|String|2015-12-03|查询指定日期
+|StartTime|String|2015-12-03|查询指定日期。
 
  |
-|Url200List| | |返回为2xx的Urllist
+|Url200List| | |返回为2xx的Urllist。
 
  |
-|└Flow|String|460486880|流量。单位：byte。
+|Flow|String|460486880|流量。单位：byte。
 
  |
-|└FlowProportion|Float|0.35|流量占比
+|FlowProportion|Float|0.35|流量占比。
 
  |
-|└UrlDetail|String|http://test.com/nn\_live/nn\_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8|完整的Url地址
+|UrlDetail|String|http://test.com/nn\_live/nn\_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8|完整的Url地址。
 
  |
-|└VisitData|String|161673|访问次数
+|VisitData|String|161673|访问次数。
 
  |
-|└VisitProportion|Float|0.35|访问占比
+|VisitProportion|Float|0.35|访问占比。
 
  |
-|Url300List| | |返回为3xx的Urllist
+|Url300List| | |返回为3xx的Urllist。
 
  |
-|└Flow|String|460486880|流量。单位：byte。
+|Flow|String|460486880|流量。单位：byte。
 
  |
-|└FlowProportion|Float|0.35|流量占比
+|FlowProportion|Float|0.35|流量占比。
 
  |
-|└UrlDetail|String|http://test.com/nn\_live/nn\_x64/a0.m3u8|完整的Url地址
+|UrlDetail|String|http://test.com/nn\_live/nn\_x64/a0.m3u8|完整的Url地址。
 
  |
-|└VisitData|String|161673|次数
+|VisitData|String|161673|次数。
 
  |
-|└VisitProportion|Float|0.35|访问占比
+|VisitProportion|Float|0.35|访问占比。
 
  |
-|Url400List| | |返回为4xx的Urllist
+|Url400List| | |返回为4xx的Urllist。
 
  |
-|└Flow|String|460486880|流量。单位：byte。
+|Flow|String|460486880|流量。单位：byte。
 
  |
-|└FlowProportion|Float|0.35|流量占比
+|FlowProportion|Float|0.35|流量占比。
 
  |
-|└UrlDetail|String|http://test.com/nn\_live/nn\_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8|完整的Url地址
+|UrlDetail|String|http://test.com/nn\_live/nn\_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8|完整的Url地址。
 
  |
-|└VisitData|String|1884|次数
+|VisitData|String|1884|次数。
 
  |
-|└VisitProportion|Float|0.35|访问占比
+|VisitProportion|Float|0.35|访问占比。
 
  |
-|Url500List| | |返回为5xx的Urllist
+|Url500List| | |返回为5xx的Urllist。
 
  |
-|└Flow|String|460486880|流量。单位：byte。
+|Flow|String|460486880|流量。单位：byte。
 
  |
-|└FlowProportion|Float|0.35|流量占比
+|FlowProportion|Float|0.35|流量占比。
 
  |
-|└UrlDetail|String|http://test.com/nn\_live/nn\_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8|完整的Url地址
+|UrlDetail|String|http://test.com/nn\_live/nn\_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8|完整的Url地址。
 
  |
-|└VisitData|String|161673|次数
+|VisitData|String|161673|次数。
 
  |
-|└VisitProportion|Float|0.35|访问占比
+|VisitProportion|Float|0.35|访问占比。
 
  |
 
@@ -143,10 +145,10 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=DescribeDomainTopUrlVisit
+http://cdn.aliyuncs.com?Action=DescribeDomainTopUrlVisit
+&DomainName=example.com
+&StartTime=2018-10-03T16:00:00Z
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -154,23 +156,190 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainTopUrlVisit
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <RequestId>3C7D07F5-44D2-474A-8365-B08FAF439E25</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>InvalidStartTime.ValueNotSupported</Code>
-  <Message>The specified value of parameter StartTime is not supported.</Message>
-</APINAMEResponse>
-
+<DescribeDomainTopUrlVisitResponse>
+	  <AllUrlList>
+		    <UrlList>
+			      <VisitData>161673</VisitData>
+			      <UrlDetail>http://example.com/nn_live/nn_x64/a0.m3u8</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+		    <UrlList>
+			      <VisitData>37</VisitData>
+			      <UrlDetail>http://example1.com/nn_live/nn_x64/ZXg9MQ,,/HNJSMPP360.ts</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+	  </AllUrlList>
+	  <Url300List>
+		    <UrlList>
+			      <VisitData>161673</VisitData>
+			      <UrlDetail>http://example3.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+		    <UrlList>
+			      <VisitData>3</VisitData>
+			      <UrlDetail>http://example4.com/nn_live/nn_x64/aWQ9SE5KU01QUDZXg9MQ,,/HNJSMPP360.ts</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+	  </Url300List>
+	  <Url400List>
+		    <UrlList>
+			      <VisitData>1884</VisitData>
+			      <UrlDetail>http://example6.com/nn_live/nn_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+		    <UrlList>
+			      <VisitData>1</VisitData>
+			      <UrlDetail>http://example7.com/nn_live/nn_x64/aWQ9SEEwODgmpbmRleZPTE,/HNJSMPP360.ts</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+	  </Url400List>
+	  <RequestId>64D28B53-5902-409B-94F6-FD46680144FE</RequestId>
+	  <DomainName>example.com</DomainName>
+	  <Url200List>
+		    <UrlList>
+			      <VisitData>161673</VisitData>
+			      <UrlDetail>http://example8.com/nn_live/nn_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+		    <UrlList>
+			      <VisitData>3</VisitData>
+			      <UrlDetail>http://example9.com/nn_live/nn_x64/aWQ9SE5KU01QUDMlPTIwMTxMDk5ZXg9MQ,,/HNJSMPP360.ts</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+	  </Url200List>
+	  <StartTime>2018-10-03T16:00:00Z</StartTime>
+	  <Url500List>
+		    <UrlList>
+			      <VisitData>161673</VisitData>
+			      <UrlDetail>http://example10.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+		    <UrlList>
+			      <VisitData>3</VisitData>
+			      <UrlDetail>http://example11.com/nn_live/nn_x64/aWQ9SE5KU01QUDZXg9MQ,,/HNJSMPP360.ts</UrlDetail>
+			      <VisitProportion>0.35</VisitProportion>
+			      <Flow>460486880</Flow>
+			      <FlowProportion>0.35</FlowProportion>
+		    </UrlList>
+	  </Url500List>
+</DescribeDomainTopUrlVisitResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The specified value of parameter StartTime is not supported.",
-	"RequestId":"3C7D07F5-44D2-474A-8365-B08FAF439E25",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"InvalidStartTime.ValueNotSupported"
+	"Url300List":{
+		"UrlList":[
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"161673",
+				"UrlDetail":"http://example3.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8",
+				"FlowProportion":0.35
+			},
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"3",
+				"UrlDetail":"http://example4.com/nn_live/nn_x64/aWQ9SE5KU01QUDZXg9MQ,,/HNJSMPP360.ts",
+				"FlowProportion":0.35
+			}
+		]
+	},
+	"AllUrlList":{
+		"UrlList":[
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"161673",
+				"UrlDetail":"http://example.com/nn_live/nn_x64/a0.m3u8",
+				"FlowProportion":0.35
+			},
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"37",
+				"UrlDetail":"http://example1.com/nn_live/nn_x64/ZXg9MQ,,/HNJSMPP360.ts",
+				"FlowProportion":0.35
+			}
+		]
+	},
+	"Url400List":{
+		"UrlList":[
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"1884",
+				"UrlDetail":"http://example6.com/nn_live/nn_x64/aWQ9SE5KU01QUhbGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8",
+				"FlowProportion":0.35
+			},
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"1",
+				"UrlDetail":"http://example7.com/nn_live/nn_x64/aWQ9SEEwODgmpbmRleZPTE,/HNJSMPP360.ts",
+				"FlowProportion":0.35
+			}
+		]
+	},
+	"RequestId":"64D28B53-5902-409B-94F6-FD46680144FE",
+	"DomainName":"example.com",
+	"Url200List":{
+		"UrlList":[
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"161673",
+				"UrlDetail":"http://example8.com/nn_live/nn_x64/aWQ9SE5KU0bGxfcGNfbGl2ZQ,,/HNJSMPP360.m3u8",
+				"FlowProportion":0.35
+			},
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"3",
+				"UrlDetail":"http://example9.com/nn_live/nn_x64/aWQ9SE5KU01QUDMlPTIwMTxMDk5ZXg9MQ,,/HNJSMPP360.ts",
+				"FlowProportion":0.35
+			}
+		]
+	},
+	"StartTime":"2018-10-03T16:00:00Z",
+	"Url500List":{
+		"UrlList":[
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"161673",
+				"UrlDetail":"http://example10.com/nn_live/nn_x64/aWQ9SE5KU0GNfbGl2ZQ,,/HNJSMPP360.m3u8",
+				"FlowProportion":0.35
+			},
+			{
+				"Flow":"460486880",
+				"VisitProportion":0.35,
+				"VisitData":"3",
+				"UrlDetail":"http://example11.com/nn_live/nn_x64/aWQ9SE5KU01QUDZXg9MQ,,/HNJSMPP360.ts",
+				"FlowProportion":0.35
+			}
+		]
+	}
 }
 ```
 
@@ -183,5 +352,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainTopUrlVisit
 |400|InvalidDomainName.ValueNotSupported|The specified value of parameter DomainName only support one or empty value.|参数DomainName可以为空或最多1个域名。|
 |400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|开始时间设置错误，请检查更新后重试。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
