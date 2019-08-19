@@ -2,11 +2,13 @@
 
 调用ModifyCdnService接口变更CDN服务的计费类型。
 
--   需先开通才可执行此操作。
+ **调用该接口前，需要您注意：** 
+
+-   需要先开通CDN服务才可执行此操作。
 -   变更计费类型，次日00:00生效；多次变更以最新提交的为准。
 -   计费类型：
-    -   按峰值带宽计费
-    -   按使用流量计费
+    -   按峰值带宽计费。
+    -   按使用流量计费。
 
 ## 调试 {#api_explorer .section}
 
@@ -30,7 +32,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
 
@@ -39,11 +41,9 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=ModifyCdnService
+https://cdn.aliyuncs.com?&Action=ModifyCdnService
 &InternetChargeType=PayByTraffic
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -51,22 +51,16 @@ http(s)://cdn.aliyuncs.com?Action=ModifyCdnService
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-	  <RequestId>C961B79B-237A-4E6F-B46C-1A0C0F8E743C</RequestId>
-	  <HostId>cdn.aliyuncs.com</HostId>
-	  <Code>CSS_CHECK_UPDOWNGRADE_ERROR</Code>
-	  <Message>You have an order not yet effective</Message>
-</APINAMEResponse>
+<ModifyCdnServiceResponse>
+  <RequestId>FD4E70AC-B791-43FA-B7BD-2DED234094C1</RequestId>
+</ModifyCdnServiceResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"You have an order not yet effective",
-	"RequestId":"C961B79B-237A-4E6F-B46C-1A0C0F8E743C",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"CSS_CHECK_UPDOWNGRADE_ERROR"
+	"RequestId":"97C68796-EB7F-4D41-9D5B-12B909D76508"
 }
 ```
 
