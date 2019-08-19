@@ -18,9 +18,11 @@
  |
 |ServerCertificateStatus|String|是|on|HTTPS证书是否启用。取值：
 
- -   **on**：启用
--   **off**：不启用
--   默认值：**off**
+ -   **on**：启用。
+-   **off**：不启用。
+
+默认值：**off**。
+
 
  |
 |ForceSet|String|否|1|设置为1时，忽略证书名称重复的校验，覆盖原有同名证书信息。
@@ -38,9 +40,11 @@
 |PrivateKey|String|否|xxxxxxxx|私钥内容，不启用证书则无需输入，配置证书请输入私钥内容。
 
  |
-|CertType|String|否|free|-   **upload**：上传证书
--   **cas**：证书中心证书
--   **free**：免费证书
+|CertType|String|否|free|证书类型。
+
+ -   **upload**：上传证书。
+-   **cas**：证书中心证书。
+-   **free**：免费证书。
 
  |
 
@@ -48,7 +52,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
 
@@ -57,12 +61,12 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=SetDomainServerCertificate
-&DomainName=www.yourdomain.com
+http://cdn.aliyuncs.com?Action=SetDomainServerCertificate
+&DomainName=example.com
 &ServerCertificateStatus=on
+&ServerCertificate=xxx
+&PrivateKey=yyy
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -70,22 +74,16 @@ http(s)://cdn.aliyuncs.com?Action=SetDomainServerCertificate
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-	  <RequestId>3DEF9962-AD9E-43A2-851B-0945684F9513</RequestId>
-	  <HostId>cdn.aliyuncs.com</HostId>
-	  <Code>InvalidDomain.NotFound</Code>
-	  <Message>The domain provided does not belong to you.</Message>
-</APINAMEResponse>
+<SetDomainServerCertificateResponse>
+    <RequestId>8436769A-55D0-4DF8-BBA7-0DBC156D7AAF</RequestId>
+</SetDomainServerCertificateResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The domain provided does not belong to you.",
-	"RequestId":"3DEF9962-AD9E-43A2-851B-0945684F9513",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"InvalidDomain.NotFound"
+	"RequestId":"0AEDAF20-4DDF-4165-8750-47FF9C1929C9"
 }
 ```
 
