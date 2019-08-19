@@ -27,7 +27,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|6649A92B-F105-48A0-BC94-E5BB38570652|该条任务请求ID
+|RequestId|String|6649A92B-F105-48A0-BC94-E5BB38570652|请求ID。
 
  |
 
@@ -36,12 +36,10 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=SetHttpsOptionConfig
+http://cdn.aliyuncs.com/?Action=SetHttpsOptionConfig
 &DomainName=xxx
 &Http2=on
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -49,22 +47,16 @@ http(s)://cdn.aliyuncs.com?Action=SetHttpsOptionConfig
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <RequestId>6649A92B-F105-48A0-BC94-E5BB38570652</RequestId>
-	  <HostId>cdn.aliyuncs.com</HostId>
-	  <Code>InvalidDomain.NotFound</Code>
-	  <Message>The domain provided does not belong to you.</Message>
-</APINAMEResponse>
+<SetHttpsOptionConfigResponse>
+      <RequestId>AED00EC1-32A8-4D48-BEB9-BD782AF3C6BD</RequestId>
+</SetHttpsOptionConfigResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The domain provided does not belong to you.",
-	"RequestId":"6649A92B-F105-48A0-BC94-E5BB38570652",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"InvalidDomain.NotFound"
+	"RequestId":"04F0F334-1335-436C-A1D7-6C044FE73368"
 }
 ```
 
@@ -75,5 +67,5 @@ http(s)://cdn.aliyuncs.com?Action=SetHttpsOptionConfig
 |400|MissingParameter|The specified value of parameter DomainName can not be empty.|参数DomainName不能为空。|
 |400|HttpsNotEnabled|Please open https first.|请先开通HTTPS安全加速功能。|
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/Cdn)查看更多错误码。
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
