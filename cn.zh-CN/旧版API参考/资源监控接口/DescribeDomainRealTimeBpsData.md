@@ -2,6 +2,8 @@
 
 调用DescribeDomainRealTimeBpsData接口获取域名1分钟粒度带宽数据。
 
+ **调用该接口前，请您注意：** 
+
 -   可以查询7天内的数据，单次查询**StartTime**和**EndTime**跨度不能超过24小时。
 -   如果**StartTime**和**EndTime**均未指定，默认返回当前时间起一小时内的数据.。
 
@@ -44,7 +46,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|Data| | |返回数据
+|Data| | |返回数据。
 
  |
 |Bps|Float|16710625.733333332|带宽数据。单位：bit/second。
@@ -56,7 +58,7 @@
 -   例如：2016-10-20T04:00:00Z。
 
  |
-|RequestId|String|B49E6DDA-F413-422B-B58E-2FA23F286726|请求ID
+|RequestId|String|B49E6DDA-F413-422B-B58E-2FA23F286726|请求ID。
 
  |
 
@@ -65,11 +67,12 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=DescribeDomainRealTimeBpsData
-&DomainName=test.test.com
+https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeBpsData
+&DomainName=example.com
+&EndTime=2016-10-20T04:00:00Z
+&IspNameEn=telecom
+&LocationNameEn=beijing
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -77,22 +80,38 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainRealTimeBpsData
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-	  <RequestId>0F2DBA09-A6B7-4D4E-85FE-9E27FC4FBEF3</RequestId>
-	  <HostId>cdn.aliyuncs.com</HostId>
-	  <Code>InvalidDomain.NotFound</Code>
-	  <Message>The domain provided does not belong to you.</Message>
-</APINAMEResponse>
+<DescribeDomainRealTimeBpsDataResponse>
+	  <Data>
+		    <BpsModel>
+			      <TimeStamp>2018-01-02T11:05:00Z</TimeStamp>
+			      <Bps>16710625.733333332</Bps>
+		    </BpsModel>
+		    <BpsModel>
+			      <TimeStamp>2018-01-02T11:04:00Z</TimeStamp>
+			      <Bps>59392614.8</Bps>
+		    </BpsModel>
+	  </Data>
+	  <RequestId>B49E6DDA-F413-422B-B58E-2FA23F286726</RequestId>
+</DescribeDomainRealTimeBpsDataResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The domain provided does not belong to you.",
-	"RequestId":"0F2DBA09-A6B7-4D4E-85FE-9E27FC4FBEF3",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"InvalidDomain.NotFound"
+	"Data":{
+		"BpsModel":[
+			{
+				"TimeStamp":"2018-01-02T11:05:00Z",
+				"Bps":16710625.733333332
+			},
+			{
+				"TimeStamp":"2018-01-02T11:04:00Z",
+				"Bps":59392614.8
+			}
+		]
+	},
+	"RequestId":"B49E6DDA-F413-422B-B58E-2FA23F286726"
 }
 ```
 
