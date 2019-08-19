@@ -2,14 +2,15 @@
 
 调用DescribeDomainRealTimeByteHitRateData接口获取域名1分钟粒度字节命中率数据。
 
+**说明：** 
+
+-   由于存在多域名合并存储的情况，可能会导致命中率数据不准确，具体情况以配置为准。
 -   可以查询7天内的数据，单次查询**StartTime**和**EndTime**跨度不能超过24小时。
 -   如果**StartTime**和**EndTime**均未指定，默认返回当前时间起一小时内的数据。
 
-**说明：** 由于存在多域名合并存储的情况，可能会导致命中率数据不准确，具体情况以配置为准。
+## 调试 {#api_explorer .section}
 
-## 调试 {#apiExplorer .section}
-
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeDomainRealTimeByteHitRateData)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeDomainRealTimeByteHitRateData&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -18,7 +19,7 @@
 |Action|String|是|DescribeDomainRealTimeByteHitRateData|操作接口名，系统规定参数。取值：**DescribeDomainRealTimeByteHitRateData**。
 
  |
-|DomainName|String|是|test.test.com|加速域名
+|DomainName|String|是|test.test.com|加速域名。
 
  |
 |EndTime|String|否|2016-10-20T04:00:00Z|结束时间。
@@ -36,23 +37,23 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|Data| | |返回数据
+|Data| | |返回数据。
 
  |
-|└ByteHitRate|Float|0.8956940476262277|字节命中率数据
+|ByteHitRate|Float|0.8956940476262277|字节命中率数据。
 
  |
-|└TimeStamp|String|2016-10-20T04:00:00Z|数据时间戳。
+|TimeStamp|String|2016-10-20T04:00:00Z|数据时间戳。
 
  -   日期格式按照ISO8601表示法，并使用UTC时间。
 -   例如：2016-10-20T04:00:00Z。
 
  |
-|RequestId|String|70A26B11-3673-479C-AEA8-E03FC5D3496D|请求ID
+|RequestId|String|70A26B11-3673-479C-AEA8-E03FC5D3496D|请求ID。
 
  |
 
@@ -61,11 +62,10 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=DescribeDomainRealTimeByteHitRateData
-&DomainName=test.test.com
+https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeByteHitRateData
+&DomainName=example.com
+&EndTime=2016-10-20T04:00:00Z
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -73,23 +73,38 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainRealTimeByteHitRateData
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <RequestId>3FAF1DD8-3CD9-4C37-A5D5-172DB33F4614</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>InvalidDomain.NotFound</Code>
-  <Message>The domain provided does not belong to you.</Message>
-</APINAMEResponse>
-
+<DescribeDomainRealTimeByteHitRateDataResponse>
+	  <Data>
+		    <ByteHitRateModel>
+			      <TimeStamp>2018-01-02T11:26:00Z</TimeStamp>
+			      <ByteHitRate>0.8956940476262277</ByteHitRate>
+		    </ByteHitRateModel>
+		    <ByteHitRateModel>
+			      <TimeStamp>2018-01-02T11:25:00Z</TimeStamp>
+			      <ByteHitRate>0.8429129920796812</ByteHitRate>
+		    </ByteHitRateModel>
+	  </Data>
+	  <RequestId>70A26B11-3673-479C-AEA8-E03FC5D3496D</RequestId>
+</DescribeDomainRealTimeByteHitRateDataResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The domain provided does not belong to you.",
-	"RequestId":"3FAF1DD8-3CD9-4C37-A5D5-172DB33F4614",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"InvalidDomain.NotFound"
+	"Data":{
+		"ByteHitRateModel":[
+			{
+				"ByteHitRate":0.8956940476262277,
+				"TimeStamp":"2018-01-02T11:26:00Z"
+			},
+			{
+				"ByteHitRate":0.8429129920796812,
+				"TimeStamp":"2018-01-02T11:25:00Z"
+			}
+		]
+	},
+	"RequestId":"70A26B11-3673-479C-AEA8-E03FC5D3496D"
 }
 ```
 
@@ -99,5 +114,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeDomainRealTimeByteHitRateData
 |--------|---|----|--|
 |400|InvalidTime.Malformed|Specified StartTime or EndTime is malformed.|开始时间或结束时间格式错误。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
