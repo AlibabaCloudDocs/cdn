@@ -9,9 +9,9 @@
 -   一个用户只能开通一次。
 -   开通条件：帐号已通过实名认证。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=OpenCdnService)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=OpenCdnService&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -22,18 +22,18 @@
  |
 |InternetChargeType|String|是|PayByTraffic|开通服务的计费类型。
 
- -   按流量\(\*\*PayByTraffic\*\*\)
--   按带宽峰值\(\*\*PayByBandwidth\*\*\)。
+ -   **PayByTraffic**：按流量。
+-   **PayByBandwidth**：按带宽峰值。
 
- 如果用户不指定，默认按流量（**PayByTraffic**）。
+ 如果用户不指定，默认按流量。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
 
@@ -42,11 +42,9 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=OpenCdnService
-&InternetChargeType=PayByTraffic
+https://cdn.aliyuncs.com?&Action=OpenCdnService
+&InternetChargeType=PayByBandwidth
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -54,23 +52,16 @@ http(s)://cdn.aliyuncs.com?Action=OpenCdnService
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <RequestId>5D34B892-D693-4357-9D36-C503F4529582</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>CdnService.HasOpened</Code>
-  <Message>Your cdn service has opened.</Message>
-</APINAMEResponse>
-
+<OpenCdnServiceResponse>
+    <RequestId>FD4E70AC-B791-43FA-B7BD-2DED234094C1</RequestId>
+</OpenCdnServiceResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"Your cdn service has opened.",
-	"RequestId":"5D34B892-D693-4357-9D36-C503F4529582",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"CdnService.HasOpened"
+	"RequestId":"97C68796-EB7F-4D41-9D5B-12B909D76508"
 }
 ```
 
@@ -88,5 +79,5 @@ http(s)://cdn.aliyuncs.com?Action=OpenCdnService
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_USERPROFILECOMPLETE|MISSING\_USERPROFILE|缺少用户配置文件。|
 |400|LX\_CREATE\_ORDER\_FAILED|Create order failed|订单创建失败。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
