@@ -9,9 +9,9 @@
 -   支持日峰值带宽为**1Gbps**以上的用户提工单申请该接口调用权限，请单击[立即申请](https://workorder.console.aliyun.com/console.htm?lang=#/ticket/add?productCode=cdn)。
 -   使用场景介绍，请参见[回源的CDN节点的IP有哪些？](https://helpcdn.aliyun.com/knowledge_detail/40205.html)
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=DescribeL2VipsByDomain)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeL2VipsByDomain&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -24,17 +24,17 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|DomainName|String|xxxx.com|域名
+|DomainName|String|xxxx.com|域名。
 
  |
-|Vips| |"Vip": \[ "1.1.1.1/25", "2.2.2.2/25" \]|Vip列表
+|Vips| |"Vip": \[ "1.1.1.1/25", "2.2.2.2/25" \]|Vip列表。
 
  |
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
 
@@ -43,11 +43,9 @@
 请求示例
 
 ``` {#request_demo}
-
 http(s)://cdn.aliyuncs.com?Action=DescribeL2VipsByDomain
 &DomainName=www.yourdomain.com
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -55,23 +53,30 @@ http(s)://cdn.aliyuncs.com?Action=DescribeL2VipsByDomain
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <RequestId>CC6986CB-7A85-4094-B1E1-D65A9AAB8A4E</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>InvalidDomain.NotFound</Code>
-  <Message>The domain provided does not belong to you.</Message>
-</APINAMEResponse>
-
+<DescribeL2VipsByDomainResponse>
+	  <Vips>
+		    <Vip>111.111.111.xxx/25</Vip>
+		    <Vip>112.112.112.xxx/25</Vip>
+		    <Vip>122.72.33.xxx/25</Vip>
+	  </Vips>
+	  <RequestId>820E7900-5CA9-4AEF-B0DD-20ED5F64BE55</RequestId>
+	  <DomainName>example.com</DomainName>
+</DescribeL2VipsByDomainResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The domain provided does not belong to you.",
-	"RequestId":"CC6986CB-7A85-4094-B1E1-D65A9AAB8A4E",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"InvalidDomain.NotFound"
+	"Vips":{
+		"Vip":[
+			"111.111.111.xxx/25",
+			"112.112.112.xxx/25",
+			"122.72.33.xxx/25"
+		]
+	},
+	"RequestId":"820E7900-5CA9-4AEF-B0DD-20ED5F64BE55",
+	"DomainName":"example.com"
 }
 ```
 
@@ -82,5 +87,5 @@ http(s)://cdn.aliyuncs.com?Action=DescribeL2VipsByDomain
 |400|MissingParameter|The specified value of parameter "DomainName" can not be empty.|参数“DomainName”不能为空。|
 |400|IllegalOperation|Illegal domain operate is not permitted.|非法操作。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
