@@ -7,9 +7,9 @@
 -   创建加速域名之前，必须先开通CDN服务。
 -   加速域名必须已备案完成。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cdn&api=ModifyCdnDomain)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=ModifyCdnDomain&type=RPC&version=2014-11-11)
 
 ## 请求参数 {#parameters .section}
 
@@ -23,7 +23,7 @@
  |
 |Priorities|String|否|20|源站地址对应的优先级。
 
- 多个源站时，用逗号分隔。
+ 多个源站时，用逗号（,）分隔。
 
  默认值：20。
 
@@ -36,11 +36,11 @@
  |
 |SourceType|String|否|domain|源站类型。取值：
 
- -   **ipaddr**：IP源站
--   **domain**：域名源站
--   **oss**：OSS Bucket为源站（内部common：公共源）
+ -   **ipaddr**：IP源站。
+-   **domain**：域名源站。
+-   **oss**：OSS Bucket为源站（内部common：公共源）。
 
- **说明：** 若选择了直播流媒体加速的业务类型，无需填写源站类型和信息。
+ **说明：** 如果您选择了直播流媒体加速的业务类型，无需填写源站类型和信息。
 
  |
 |Sources|String|否|yourdomain.com|回源地址，可以是IP或域名。
@@ -54,11 +54,11 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
 
@@ -67,11 +67,10 @@
 请求示例
 
 ``` {#request_demo}
-
-http(s)://cdn.aliyuncs.com?Action=ModifyCdnDomain
-&DomainName=www.yourdomain.com
+http://cdn.aliyuncs.com?Action=ModifyCdnDomain&SourceType=domain
+&DomainName=example.com
+&Sources=example.com
 &<公共请求参数>
-
 ```
 
 正常返回示例
@@ -79,23 +78,16 @@ http(s)://cdn.aliyuncs.com?Action=ModifyCdnDomain
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<APINAMEResponse>
-  <RequestId>7747D191-6756-42F4-8559-7D101B3CD3F0</RequestId>
-  <HostId>cdn.aliyuncs.com</HostId>
-  <Code>Abs.Sources.Malformed</Code>
-  <Message>The specified Sources is invalid.</Message>
-</APINAMEResponse>
-
+<ModifyCdnDomainResponse>
+    <RequestId>A22F5DDD-E6B8-4DB4-A210-FF3CA5A82644</RequestId>
+</ModifyCdnDomainResponse>
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"Message":"The specified Sources is invalid.",
-	"RequestId":"7747D191-6756-42F4-8559-7D101B3CD3F0",
-	"HostId":"cdn.aliyuncs.com",
-	"Code":"Abs.Sources.Malformed"
+	"RequestId":"15C66C7B-671A-4297-9187-2C4477247A74"
 }
 ```
 
@@ -118,5 +110,5 @@ http(s)://cdn.aliyuncs.com?Action=ModifyCdnDomain
 |400|TopLevelDomain.NotFound|TopLevelDomain is not exist.|TopLevelDomain 不存在。|
 |403|DomainInProtectedMode|This domain is in the protected mode. if you want to do this operation, please contact us!|此域名处于被保护模式。如果您想做这个操作，请联系我们。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cdn)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
