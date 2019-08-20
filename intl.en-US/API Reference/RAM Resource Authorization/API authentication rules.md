@@ -2,9 +2,9 @@
 
 ## **Use RAM to give a subaccount access to its primary account’s CDN resources.** {#section_kgk_hpf_vdb .section}
 
--   When an Alibaba Cloud account activates the CDN service and creates CDN domains, all services and CDN domains are held as resources of this account.  By default, accounts have full operation permissions on their resources.
--   Alibaba Cloud Resource Access Management \(RAM\) allows you to grant RAM sub-users the permission  to access and manage the resources under your Alibaba Cloud account.
--   Make sure that you have read the [RAM product documentation](../../../../reseller.en-US/Product Introduction/What is RAM.md#) and [API documentation](../../../../reseller.en-US/API reference/API Reference (RAM)/Introduction/RAM introduction.md#) carefully before learning how to use RAM to grant access to CDN resources.
+-   When an Alibaba Cloud account activates the CDN service and creates CDN domains, all services and CDN domains are held as resources of this account. By default, accounts have full operation permissions on their resources.
+-   Alibaba Cloud Resource Access Management \(RAM\) allows you to grant RAM sub-users the permission to access and manage the resources under your Alibaba Cloud account.
+-   Make sure that you have read the [RAM product documentation](../../../../intl.en-US/Product Introduction/What is RAM?.md#) and [API documentation](../../../../intl.en-US/API Reference/(Old Version) API Reference (RAM)/Introduction/RAM introduction.md#) carefully before learning how to use RAM to grant access to CDN resources.
 -   If you do not need RAM, skip this section.
 
 ## **CDN authorizable resource type in RAM** {#section_pqv_ypf_vdb .section}
@@ -13,20 +13,20 @@ Currently, authorizable resource type and description methods in RAM are set out
 
 |Resource type|Resource descriptions in authorization policy|Description|
 |:------------|:--------------------------------------------|:----------|
-|service|acs:cdn:\*:$accountid:\*|Authorizes subaccounts to manage CDN services, such as changing configuration and querying account information.|
-|domain|acs:cdn:\*:$accountid:domain/$domainNameacs:cdn:\*:$accountid:domain/\*|Authorizes subaccounts to manage their own CDN domains, such as adding, configuring, and querying domain names.|
+|service|acs:cdn:\*:$accountid:\*|Authorizes subaccounts to manage CDN services,such as changing configuration and querying account information.|
+|domain|acs:cdn:\*:$accountid:domain/$domainNameacs:cdn:\*:$accountid:domain/\*|Authorizes subaccounts to manage their own CDN domains,such as adding, configuring, and querying domain names.|
 
 ## **CDN API authentication rules when a subaccount requests access to resources of primary CDN account** {#section_d22_cqf_vdb .section}
 
-When a subaccount requests access to resources of primary CDN account through CDN Open APIs, CDN backend sends one corresponding request to RAM  to check authority granting, in order to ensure that the resource owner grants the caller access right to relevant resources.
+When a subaccount requests access to resources of primary CDN account through CDN Open APIs, CDN backend sends one corresponding request to RAM to check authority granting, in order to ensure that the resource owner grants the caller access right to relevant resources.
 
 Each different CDN API determines authority of relevant resources according to the involved resources and the semantics of the API. Authentication rules for each API are listed as follows:
 
 |API|Authentication rules|
 |:--|:-------------------|
-|OpenCdnService|acs:cdn::$accountid:|
-|Describecdnservice|acs:cdn::$accountid:|
-|ModifyCdnService|acs:cdn::$accountid:|
+|OpenCdnService|acs:cdn:\*:$accountid:\*|
+|Describecdnservice|acs:cdn:\*:$accountid:\*|
+|ModifyCdnService|acs:cdn:\*:$accountid:\*|
 |DescribeUserDomains|acs:cdn::$accountid:domain/|
 |DescribeCdnDomainDetail|acs:cdn:\*:$accountid:domain/$domainName|
 |AddCdnDomain|acs:cdn::$accountid:domain/|
