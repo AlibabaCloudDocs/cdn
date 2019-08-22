@@ -1,115 +1,175 @@
-# BatchAddCdnDomain {#reference_1095928 .reference}
+# BatchAddCdnDomain {#doc_api_Cdn_BatchAddCdnDomain .reference}
 
 调用BatchAddCdnDomain批量添加加速域名，一个用户最多添加20个域名。
 
-调用BatchAddCdnDomain您需要注意以下三点：
+添加加速域名，一次只能提交一个加速域名，一个用户最多添加20个域名。 限制条件如下所示：
 
--   创建加速域名之前，您需要开通CDN服务，具体操作请参见[开通CDN服务](../../../../cn.zh-CN/快速入门/开通CDN服务.md#)。
--   您的加速域名已完成备案。
--   如果您的源站内容不在阿里云平台上，阿里云需要对您的源站内容进行审核，审核工作会在下一个工作日前完成。
+-   创建加速域名之前, 必须先开通CDN服务，具体操作请参见[开通CDN服务](~~27272~~)。
+-   加速域名必须已备案完成。
+-   源站内容，如果不在阿里云平台上，需要审核，审核工作会在下一工作日前完成。
 
-## 调试 {#section_bxb_qz6_941 .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/new#/?product=Cdn&api=BatchAddCdnDomain)】在线调试，API Explorer提供在线调用API、动态生成SDK Example代码和快速检索接口等能力，能显著降低使用云API的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=BatchAddCdnDomain&type=RPC&version=2018-05-10)
 
-## 请求参数 {#section_2ee_pea_5ra .section}
+## 请求参数 {#parameters .section}
 
-|参数|类型|是否必选|描述|
-|:-|:-|:---|:-|
-|Action|String|是|操作接口名，系统规定参数。 取值：BatchAddCdnDomain。|
-|DomainName|String|是|需要接入CDN的域名。多个域名之间用逗号（,）隔开。|
-|CdnType|String|是|加速域名的业务类型。 取值： -   web：图片及小文件分发。
--   download：大文件下载加速。
--   Video：视频点播加速。
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|BatchAddCdnDomain|操作接口名，系统规定参数。 取值：**BatchAddCdnDomain**。
 
  |
-|Sources|String|是|回源地址列表。|
-|CheckUrl|String|否|检测url。|
-|Scope|String|否|取值范围： -   domestic
--   overseas
--   global
+|CdnType|String|是|web|加速域名的业务类型。 取值：
+
+ -   **web**：图片及小文件分发。
+-   **download**：大文件下载加速。
+-   **Video**：视频点播加速。
 
  |
-|ResourceGroupId|String|否|资源组id，不传时，自动补全默认资源组id。|
-|TopLevelDomain|String|否|顶级接入域。|
+|DomainName|String|是|example.com|需要接入CDN的域名。多个域名之间用逗号（,）隔开。
 
-Sources格式
+ |
+|Sources|String|是|\[\{“content”:”1.1.1.1”,”type”:”ipaddr”,”priority”:”20”,”port”:80,”weight”:”15”\}\]|回源地址列表。
 
-``` {#codeblock_424_9ii_bb8}
-[{“content”:”1.1.1.1”,”type”:”ipaddr”,”priority”:”20”,”port”:80,”weight”:”15”}]
-```
+ |
+|CheckUrl|String|否|url|检测url。
+
+ |
+|ResourceGroupId|String|否|123|资源组id，不传时，自动补全默认资源组id。
+
+ |
+|Scope|String|否|domestic|取值范围：
+
+ -   **domestic**
+-   **overseas**
+-   **global**
+
+ |
+|TopLevelDomain|String|否|www.yourdomain.com|顶级接入域。
+
+ |
 
 Sources各字段含义
 
-|参数|类型|是否必选|描述|
-|:-|:-|:---|:-|
-|type|String|是|源站类型 。取值： -   ipaddr：IP源站。
--   domain：域名源站。
--   oss：OSS Bucket为源站。
--   fc\_domain：函数计算源站。
+|参数
+
+|类型
+
+|必须?
+
+|描述
+
+|
+|----|----|-----|----|
+|type
+
+|String
+
+|是
+
+|源站类型取值：ipaddr：IP源站；domain：域名源站；oss：OSSBucket为源站；fc\_domain：函数计算源站。
+
+|
+|content
+
+|String
+
+|是
+
+|回源地址，可以是IP或域名。
+
+|
+|port
+
+|Integer
+
+|否
+
+|可以指定443,80。默认值80。443的话走https回源。也可以自定义端口。
+
+|
+|priority
+
+|String
+
+|否
+
+|源站地址对应的优先级，默认20。
+
+|
+|weight
+
+|String
+
+|否
+
+|回源权重，默认10。
+
+|
+
+## 返回数据 {#resultMapping .section}
+
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|RequestId|String|15C66C7B-671A-4297-9187-2C4477247A74|请求ID。
 
  |
-|content|String|是|回源地址。可以是IP或域名。|
-|port|Integer|否|可以指定端口为443或80。默认值：80。443走https回源或自定义端口。|
-|priority|String|否|源站地址对应的优先级。默认值：20。|
-|weight|String|否|回源权重。默认值：10。|
 
-## 返回参数 {#section_szl_9bz_to8 .section}
-
-|名称|类型|描述|
-|:-|:-|:-|
-|RequestID|String|该条任务请求ID。|
-
-## 示例 {#section_sax_dww_8mr .section}
+## 示例 {#demo .section}
 
 请求示例
 
-``` {#codeblock_eqm_gi5_lvu}
-http://cdn.aliyuncs.com?Action=BatchAddCdnDomain&CdnType=web&DomainName=example.com&Sources=[{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80}]&<公共请求参数>
+``` {#request_demo}
+http(s)://cdn.aliyuncs.com/?Action=BatchAddCdnDomain
+&CdnType=web
+&DomainName=example.com
+&Sources=[{“content”:”1.1.1.1”,”type”:”ipaddr”,”priority”:”20”,”port”:80,”weight”:”15”}]
+&<公共请求参数>
 ```
 
 正常返回示例
 
-`JSON`格式
+`XML` 格式
 
-``` {#codeblock_yoa_1so_l47}
+``` {#xml_return_success_demo}
+<BatchAddCdnDomainResponse>
+	  <RequestId>15C66C7B-671A-4297-9187-2C4477247A74</RequestId>
+</BatchAddCdnDomainResponse>
+```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
 {
-  "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
+	"RequestId":"15C66C7B-671A-4297-9187-2C4477247A74"
 }
 ```
 
-## 错误码 {#section_npn_9i6_km8 .section}
+## 错误码 { .section}
 
-|错误代码|错误信息|HTTP 状态码|描述|
-|:---|:---|:-------|:-|
-|InvalidDomainName.Malformed|Specified DomainName is malformed.|400|DomainName 参数错误。|
-|InvalidCdnType.Malformed|Specified CdnType is malformed.|400|CdnType参数错误。|
-|InvalidSourceType.Malformed|Specified SourceType is malformed.|400|SourceType参数错误。|
-|InvalidSources.Malformed|Specified Sources is malformed.|400|回源地址与源站类型不一致。|
-|InvalidScope.Malformed|Specified Scope is malformed.|400|Scope参数错误。|
-|InvaildParameter|The Certificate you provided is malformed!|400|https安全加速时证书和密钥长度和过长。|
-|BusinessExist|Business exist do not repeated submission|400|该域名正在添加，请不要重复提交。|
-|DomainAlreadyExist|This domain name is exist already|400|该域名已经添加。|
-|DomainOverLimit|The Number of Domain is over the limit|403|超过域名个数限制。|
-|DomainNotRegistration|The Domain name is not registered|404|该域名没有备案。|
-|IllegalOperation|Illegal domain operate is not permitted.|403|没有权限执行当前操作。|
-|ServiceBusy|The specified Domain is configuring, please retry later.|403|域名正在配置中, 请稍后再试。|
-|InvalidDomain.NotFound|The domain provided does not belong to you.|404|域名不存在或不属于当前用户。|
-|InnerAddDomainDenied|Your account haven’t bind aoneId, can not add domain.|400|内部账号未绑定aoneId，不能添加域名。|
-|ExtensiveAndAllBothExist|Extensive domain and the domain begins with ‘all.’ can not exist at the same time.|400|泛域名与`all.`开头域名不能同时存在。|
-|CdnTypeNotSupportExtensiveDomain|Extensive domain not supported for this cdn type.|400|泛域名不支持该业务类型。|
-|ExtensiveAndSpecificDomainConflict|Extensive domain and corresponding specific domain are mutually exclusive.|400|泛域名与对应同级别精确域名互斥。|
-|InvalidParameter|Add live region parameters have error.|400|添加的直播region信息时出错。|
-|InvalidRegion.Malformed|Specified Region is malformed.|400|region参数不正确。|
-|Abs.resourceGroupId.Malformed|Specified ResourceGroupId is malformed.|400|资源组id参数不正确。|
-|InvalidTopLevelDomain.Malformed|Specified TopLevelDomain is malformed.|400|TopLevelDomain参数不正确。|
-|TopLevelDomain.NotFound|TopLevelDomain is not exist.|400|TopLevelDomain不存在。|
-|InvalidResourceGroupId.Malformed|Specified ResourceGroupId is malformed.|400|ResourceGroupId参数不正确。|
-|EntityNotExists.ResourceGroup|The resource group does not exist.|400|资源组不存在。|
-|InvalidStatus.ResourceGroup|It’s now allowed to do this operation because of the current status of resource-group.|400|资源组状态检查失败。|
-|InvalidPriorities.Malformed|The length of priorities is not the same with source.|400|优先级个数与源站个数不同。|
-|NotInternationRealIdentity|You need to do real name authentication when you use Chinese mainland resources.|400|用中国大陆资源时，账号需要国际认证。|
-|DomainReserved|The root domain of your domain is reserved by another account. Submit a ticket to contact customer support.|400|该域名的根域已经被其他账号占用，若需要新增提交工单处理。|
+|HttpCode|错误码|错误信息|描述|
+|--------|---|----|--|
+|400|InvalidDomainName.Malformed|Specified DomainName is malformed.|域名格式错误或批量新增不支持泛域名。|
+|400|MissingParameter|The input parameter cdnType that is mandatory for processing this request is not supplied.|参数cdnType为必填。|
+|400|InvalidCdnType.Malformed|Specified CdnType is malformed.|参数CdnType不支持该参数值， 取值：web：图片及小文件分发；download：大文件下载加速；video：视音频点播加速；liveStream：直播流媒体加速。|
+|400|InvalidSources.Malformed|Specified Sources is malformed.|参数Sources格式错误。可以是IP或域名；IP支持最多20个，以逗号区分，域名只能输入一个。IP与域名不能同时输入。|
+|400|MissingParameter|The input parameter sourceType that is mandatory for processing this request is not supplied.|参数sourceType为必填。|
+|400|InvalidSourceType.Malformed|Specified CdnType is malformed.|CdnType格式错误。|
+|400|InvalidScope.Malformed|Specified Scope is malformed.|Scope格式错误。|
+|400|SourceIp.Exceed|The Certificate you provided is malformed!|证书格式不正确。|
+|400|InvalidCertificate|The Certificate you provided is malformed!|证书格式不正确。|
+|400|InvalidCertificate.TooLong|The Certificate you provided is over the max length!|证书和私钥长度超出限制。|
+|400|InnerAddDomainDenied|Your account haven't bind aoneId, can not add domain.|您的帐户没有绑定aoneId，不能添加域名。|
+|400|ExtensiveAndAllBothExist|Extensive domain and the domain begins with 'all.' can not exist at the same time.|泛域名与all.开头域名不能同时存在。|
+|400|CdnTypeNotSupportExtensiveDomain|Extensive domain not supported for this cdn type.|泛域名不支持该业务类型，目前泛域名只支持图片小文件加速，大文件下载加速，视频点播加速，请知悉。|
+|400|ExtensiveAndSpecificDomainConflict|Extensive domain and corresponding specific domain are mutually exclusive.|泛域名和同级精确域名互斥，请重新添加。|
+|400|InvalidResourceGroupId.Malformed|Specified ResourceGroupId is malformed.|参数 ResourceGroupId格式错误。|
+|400|InvalidDomainNameLevel|Domain name suffixed with alicdn.com only support third level.|alicdn.com最多支持三级域名。|
+|400|InvalidTopLevelDomain.Malformed|Specified TopLevelDomain is malformed.|参数 TopLevelDomain 错误。|
+|400|TopLevelDomain.NotFound|TopLevelDomain is not exist.|TopLevelDomain 不存在。|
+|400|EntityNotExists.ResourceGroup|The resource group does not exist.|资源组不存在。|
+|400|InvalidStatus.ResourceGroup|It's now allowed to do this operation because of the current status of resource-group.|资源组当前状态不允许进行此操作。|
+|400|NotInternationRealIdentity|You need to do real name authentication when you use Chinese mainland resources.|根据中华人民共和国法律规定，在中国境内购买使用信息服务的用户需要进行实名登记。|
 
-CDN所有API错误码，详情请参见[CDN错误码](https://error-center.aliyun.com/status/product/Cdn)。
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
