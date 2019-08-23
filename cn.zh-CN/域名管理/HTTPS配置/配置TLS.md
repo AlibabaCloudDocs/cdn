@@ -9,7 +9,8 @@ TLS（Transport Layer Security）即安全传输层协议，在两个通信应�
 1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 2.  在左侧导航栏，单击**域名管理**。
 3.  在域名管理页面，单击目标域名对应的**管理**。
-4.  在**TLS版本控制**区域，根据所需开启或关闭对应的TLS版本。 
+4.  在指定域名的左侧导航栏，单击**HTTPS配置**。
+5.  在**TLS版本控制**区域，根据所需开启或关闭对应的TLS版本。 
 
     TLS协议说明如下表所示。
 
@@ -33,7 +34,7 @@ TLS（Transport Layer Security）即安全传输层协议，在两个通信应�
     -   Firefox 63+
  |
 
-    ![TLS版本控制](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41679/156505457447114_zh-CN.png)
+    ![TLS版本控制](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41679/156653142647114_zh-CN.png)
 
     **说明：** 目前TLSv1.0、TLSv1.1和TLSv1.2版本默认开启。
 
