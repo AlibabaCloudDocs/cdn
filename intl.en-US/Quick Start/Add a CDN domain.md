@@ -2,11 +2,11 @@
 
 If you want to use CDN to accelerate business on a specific website, you need to use the website as the origin site to add a CDN domain for it. CDN caches resources on the origin site to the CDN acceleration node through the CDN domain to accelerate resource access. This topic describes how to add a CDN domain.
 
-1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+1.  Log on to the [Alibaba Cloud CDN console](https://partners-intl.aliyun.com/login-required#cdn).
 2.  In the left-side navigation pane, click **Domain Names**.
 3.  On the Domain Names page, click **Add Domain Name**. 
 
-    ![add domain](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156535620654969_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156654189957076_en-US.png)
 
 4.  Configure the following parameters: **Domain Name**, **Resource Group**, **Business Type**, **Origin Info**, and **Region**. 
 
@@ -17,26 +17,25 @@ If you want to use CDN to accelerate business on a specific website, you need to
     |Domain Name|N/A| Enter a domain name, for example, ch.aliyun.com. Follow these restrictions and guidelines:
 
     -   Generally, a subdomain name or a wildcard domain name is used as the CDN domain name, for example, `cdntest.example.com`.
-    -   Wildcard domain acceleration is supported. Chinese domain acceleration is not supported. Follow rules to enter a wildcard domain name, such as `*.test.com`. For more information, see [Rules for adding wildcard domain names](https://www.alibabacloud.com/help/faq-detail/40182.htm).
-    -   A CDN domain cannot be added multiple times. If a **DomainAlreadyExist** error occurs, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
+    -   A CDN domain cannot be added multiple times. If a **DomainAlreadyExist** error occurs, submit a ticket.
     -   Up to 50 CDN domains can be added under each account. To add more CDN domains, submit a ticket.
-    -   The content in the domain must comply with CDN specifications. For more information, see [Limits](../intl.en-US/Product Introduction/Limits on domains.md#).
+    -   The content in the domain must comply with CDN specifications. For more information, see [Limits](../reseller.en-US/Product Introduction/Limits on domains.md#).
  |
-    |Business Type|[Image and Small File](../intl.en-US/Product Introduction/Scenarios/Image and Small File.md#)|If you want to accelerate the small-sized static content on your website, such as small files, images, and style sheets, we recommend that you select the **Image and Small File** type.|
-    |[Large File Download](../intl.en-US/.md#)|If you want to accelerate large files \(static files larger than 20 MB\), such as game installation package, app update, mobile ROM upgrade, and app package download, we recommend that you select the **Large File Download** type.|
-    |[VOD](../intl.en-US/Product Introduction/Scenarios/VOD.md#)|If you want to accelerate on-demand video or audio content, we recommend that you select the **VOD** type.|
-    |[Live Streaming](../intl.en-US/Product Introduction/Scenarios/Live Streaming.md#)|If you want to accelerate live streaming content, we recommend that you select the **Live Streaming** type. Follow these restrictions and guidelines:     -   Only streams in RTMP or HLS format are supported.
+    |Business Type|[Images and small files](../reseller.en-US/Product Introduction/Scenarios/Images and small files.md#)|If you want to accelerate the small-sized static content on your website, such as small files, images, and style sheets, we recommend that you select the **Image and Small File** type.|
+    |[Large file download](../reseller.en-US/Product Introduction/Scenarios/Large file download.md#)|If you want to accelerate large files \(static files larger than 20 MB\), such as game installation package, app update, mobile ROM upgrade, and app package download, we recommend that you select the **Large File Download** type.|
+    |[VOD](../reseller.en-US/Product Introduction/Scenarios/VOD.md#)|If you want to accelerate on-demand video or audio content, we recommend that you select the **VOD** type.|
+    |[Live Streaming](../reseller.en-US/Product Introduction/Scenarios/Live Streaming.md#)|If you want to accelerate live streaming content, we recommend that you select the **Live Streaming** type. Follow these restrictions and guidelines:     -   Only streams in RTMP or HLS format are supported.
     -   Custom origins are not supported. CDN provides a unified live center server: `video-center.alivecdn.com`.
  |
     |Type|IP|You can specify the public IP addresses of multiple servers. IP addresses of Alibaba Cloud ECS instances are exempt from manual review.|
-    |Origin Domain|You can specify the domain names of multiple origin servers. **Note:** The origin domain you specified cannot be the same as the CDN domain. Otherwise, a DNS resolution loop will occur, and the origin requests cannot be forwarded correctly. For example, if the CDN domain name is set to cdn.yourdomain.com, you can set the origin domain to img.yourdomain.com.
+    |Origin Domain|You can specify the domain names of multiple origin servers. **Note:** The origin domain you specified cannot be the same as the CDN domain. Otherwise, a DNS resolution loop will occur, and the origin requests cannot be forwarded correctly. For example, if you set the CDN domain name to cdn.yourdomain.com, you can set the origin domain to img.yourdomain.com.
 
  |
     |OSS Domain|You can manually enter the Internet domain name of an Alibaba Cloud OSS bucket, such as xxx.oss-cn-hangzhou.aliyuncs.com. To view the Internet domain name of the OSS bucket, go to the OSS console. You can also directly select an OSS bucket under the same account.|
-    |FC Domain|You must specify the Region and Domain Name of Function Compute. For more information, see [Set a Function Compute domain name](https://www.alibabacloud.com/help/doc-detail/90759.htm).|
+    |FC Domain|You must specify the Region and Domain Name of Function Compute.|
     |Region|All Regions Excluding Mainland China|If you select this option, no ICP filing is required.|
-    |All Regions Including Mainland China|If you select this option, you must apply for an ICP license with the Ministry of Industry and Information Technology \(MIIT\). For more information, see [Domain filing](../intl.en-US/Product Introduction/Limits on domains.md#section_r1h_lgx_wdb).|
-    |Mainland China|If you select this option, you must apply for an ICP license with the Ministry of Industry and Information Technology \(MIIT\). For more information, see [Domain filing](../intl.en-US/Product Introduction/Limits on domains.md#section_r1h_lgx_wdb).|
+    |All Regions Including Mainland China|If you select this option, you must apply for an ICP license with the Ministry of Industry and Information Technology \(MIIT\). For more information, see [Domain filing](../reseller.en-US/Product Introduction/Limits on domains.md#section_r1h_lgx_wdb).|
+    |Mainland China|If you select this option, you must apply for an ICP license with the Ministry of Industry and Information Technology \(MIIT\). For more information, see [Domain filing](../reseller.en-US/Product Introduction/Limits on domains.md#section_r1h_lgx_wdb).|
 
 5.  Click **Next**. 
 
