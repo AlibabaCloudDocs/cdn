@@ -4,7 +4,7 @@
 -   [CDN支持泛域名加速吗？](#section_0t3_151_igy)
 -   [CDN添加加速域名时是否允许多个帐号添加不同的子域名？](#section_bku_a88_d1h)
 -   [回源的CDN节点IP有哪些？](#section_c26_23o_jt8)
--   [CDN添加域名加速时，报错信息为"DOMAIN\_OWNER\_CONFLICT"是什么原因？](#section_1il_kqh_an7)
+-   [CDN添加域名加速时，报错信息为DOMAIN\_OWNER\_CONFLICT是什么原因？](#section_1il_kqh_an7)
 -   [回源HOST与源站的区别是什么？](#section_n1b_xgn_1ql)
 -   [加速域名审核失败原因是什么？如何重新提交？](#section_knf_0z5_qga)
 -   [多个源站的回源策略是什么？](#section_19x_pnf_8k8)
@@ -18,19 +18,19 @@
 -   方法1：通过输入`ping`或`dig`您所添加的加速域名来验证，如果被转向`*.*kunlun*.com`，表示CDN服务已生效。
     -   `ping`
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046147559_zh-CN.png)
+        ![ping](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142047559_zh-CN.png)
 
     -   `dig`
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046147560_zh-CN.png)
+        ![dig](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142147560_zh-CN.png)
 
 -   方法2：通过nslookup或dig命令，可以查看相应的加速域名访问CDN节点的IP和延时丢包等基本信息。您可以通过CDN控制台的[IP检测工具](https://cdnnext.console.aliyun.com/tool)，查看解析出来的IP是否为CDN节点的IP，如果是，则说明CDN服务已生效。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046147561_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142157280_zh-CN.png)
 
 -   方法3：您也可以获取对应加速域名资源的response头查看是否有CDN加速对应的节点信息来判断CDN是否生效。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046247562_zh-CN.jpg)
+    ![response](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142147562_zh-CN.jpg)
 
 
 ## CDN支持泛域名加速吗？ {#section_0t3_151_igy .section}
@@ -68,7 +68,7 @@
 
 如果您有特殊业务需求，源站上有安全狗等防护软件确实需要配置白名单，请调用接口[DescribeL2VipsByDomain](../cn.zh-CN/旧版API参考/资源监控接口/DescribeL2VipsByDomain.md#)，获取CDN回源的节点IP列表并添加到您源站服务器的白名单中，以免影响CDN回源获取资源。
 
-## CDN添加域名加速时，报错信息为"DOMAIN\_OWNER\_CONFLICT"是什么原因？ {#section_1il_kqh_an7 .section}
+## CDN添加域名加速时，报错信息为DOMAIN\_OWNER\_CONFLICT是什么原因？ {#section_1il_kqh_an7 .section}
 
 原因：添加子域名的用户与泛域名所属的用户不是同一个用户。
 
@@ -115,8 +115,6 @@
 
 阿里云CDN可设置多个IP、源站域名为源站，同时还可以设置各个源站的优先级，优先级包括主和备。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046247724_zh-CN.png)
-
 **说明：** 
 
 -   源站健康检查：实行主动四层健康检查机制，测试源站的80端口。每2.5秒检查一次，连续3次失败标记为不可用。
@@ -126,11 +124,9 @@
 
 ## 设置回源HOST的作用是什么？ {#section_bps_wtg_8a4 .section}
 
-如果CDN后端用户的的源站web服务上没有绑定加速域名，只绑定了其他域名，未限制域名访问（比如通过服务器IP可以访问到默认网站），那么您可以通过CDN控制台设置回源HOST，这样web服务器上可以在未绑定加速域名的情况下使用CDN服务。
+如果CDN后端用户的的源站web服务上没有绑定加速域名，只绑定了其他域名，未限制域名访问（例如通过服务器IP可以访问到默认网站），那么您可以通过CDN控制台设置回源HOST，这样web服务器上可以在未绑定加速域名的情况下使用CDN服务。
 
 示例：假设您的服务器上只绑定了`test.abc.com`，没有绑定`cdn.abc.com`，那么您只需要在回源HOST中填写`test.abc.com`即可访问。
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046247726_zh-CN.png)
 
 测试验证
 
@@ -138,7 +134,7 @@
 2.  使用`-H`参数将加速域名`cdn.abc.com`传递测试，也不能打开网站，说明web源站上没有绑定加速域名。
 3.  使用`-H`参数将`test.abc.com`传递，可以正常打开网站，说明源站绑定了该域名。同时在CDN控制台设置了回源HOST为`test.abc.com`后，经测试，`cdn.abc.com`可以打开。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046247728_zh-CN.jpg)
+    ![host](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142147728_zh-CN.jpg)
 
 
 ## 域名如何绑定HOST？ {#section_h8a_ifi_9my .section}
@@ -150,7 +146,7 @@
 1.  在C:\\Windows\\System32\\drivers\\etc目录下打开hosts文件。
 2.  输入IP地址+空格+您的域名。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156223046347729_zh-CN.png)
+    ![host](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142247729_zh-CN.png)
 
     此时，如果您运行`ping www.test.com`，那么解析指向的IP为`1.1.1.1`。
 
@@ -159,5 +155,5 @@
 
 示例：您的域名`www.test.com`使用了CDN加速服务，当您打开`www.test.com`时访问错误，但是又不方便修改域名解析，此时您可以通过修改本地host文件解决该问题。
 
-如果修改host IP为源站服务器后，打开报错，说明源站出错，不在CDN上。如果修改host IP为源站服务器后打开正常，CDN加速域名打开有问题，可以对比一下两个链接，如果CDN开启过滤参数，会过滤掉URL中`？`后面的参数，比如访问`www.test.com`实际打开的是`www.test.com/?***=**`，实际打开CDN加速域名`?***=**`会被过滤掉，关闭过滤参数即可。
+如果修改host IP为源站服务器后，打开报错，说明源站出错，不在CDN上。如果修改host IP为源站服务器后打开正常，CDN加速域名打开有问题，可以对比一下两个链接，如果CDN开启过滤参数，会过滤掉URL中`？`后面的参数，例如访问`www.test.com`实际打开的是`www.test.com/?***=**`，实际打开CDN加速域名`?***=**`会被过滤掉，关闭过滤参数即可。
 
