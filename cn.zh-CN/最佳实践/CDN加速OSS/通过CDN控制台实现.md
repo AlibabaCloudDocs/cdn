@@ -8,7 +8,7 @@
 2.  在左侧导航栏，单击**域名管理**。
 3.  在域名管理页面，单击**添加域名**。 
 
-    ![添加加速域名_中国站](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156436286852553_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156654390657074_zh-CN.png)
 
 4.  填写加速域名信息，并选择源站类型为**OSS域名**。 
 
