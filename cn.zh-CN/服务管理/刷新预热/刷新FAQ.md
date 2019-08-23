@@ -19,7 +19,7 @@ CDN提供了JAVA、python、php、.Net等多种语言的SDK，详情请参见[SD
 
     请在pom.xml文件中增加以下依赖，准确的SDK版本号请参见[SDK参考](../intl.zh-CN/SDK参考/SDK参考.md#)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156646635247741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156655275047741_zh-CN.png)
 
 2.  初始化Client。
 
@@ -88,7 +88,7 @@ CDN提供了JAVA、python、php、.Net等多种语言的SDK，详情请参见[SD
 
 您可以通过访问具体URL时的Via头信息，判断预热是否成功。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156646635247744_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156655275047744_zh-CN.png)
 
 -   Via的前半部分代表二级节点状态，其中的`H`表示命中，说明文件已经预热到二级节点了，不需要再回源站了。
 -   Via的后半部分代表一级节点的状态，`M`表示一级节点上没有缓存，需要向二级节点回源。
@@ -98,7 +98,5 @@ CDN提供了JAVA、python、php、.Net等多种语言的SDK，详情请参见[SD
 ## CDN服务如何刷新文件？ {#section_kp1_uui_147 .section}
 
 -   建议源站的内容不使用同名更新，以版本号的方式同步。
--   对于必须做同名更新的文件，您可以通过以下两种方式同步。
-    -   通过CDN控制台提交刷新任务，请参见[配置刷新预热](intl.zh-CN/服务管理/刷新预热/配置刷新和预热.md#)。
-    -   通过OPENAPI提交刷洗任务，请参见[RefreshObjectCaches](../intl.zh-CN/旧版API参考/刷新预热类接口/RefreshObjectCaches.md#)。
+-   对于必须做同名更新的文件，您可以通过CDN控制台提交刷新任务，请参见[配置刷新预热](intl.zh-CN/服务管理/刷新预热/配置刷新和预热.md#)。
 
