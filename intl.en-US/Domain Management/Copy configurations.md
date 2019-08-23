@@ -13,7 +13,7 @@ Note the following points when you copy configurations of a domain:
 2.  In the left-side navigation pane, click **Domain Names**.
 3.  On the Domain Names page, find the domain from which you want to copy configurations, and click **Copy Configurations**. 
 
-    ![Copy configurations](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15658360368715_en-US.png)
+    ![Copy configurations](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15665280948715_en-US.png)
 
 4.  Select the configuration items you want to copy, and click **Next**. 
 
@@ -25,14 +25,11 @@ Note the following points when you copy configurations of a domain:
     -   The HTTP headers are not incrementally copied. For example, if the cache\_control HTTP header is set to private for Domain A and to public for Domain B and you copy the HTTP header configuration of Domain B to Domain A, the cache\_control HTTP header of Domain A is set to public.
     -   If you copy switch-related configurations or Refer or IP address blacklists or whitelists, the new configurations overwrite the original configurations of the target domains.
     -   The new configurations overwrite the original configurations of the target domains.
-    ![Select configuration items](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15658360368716_en-US.png)
+    ![Select configuration items](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15665280948716_en-US.png)
 
 5.  Select the domains to which you want to copy the configurations, and click **Next**. You can enter a keyword in the search bar to search for a domain.
 
-    ![Select domain](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15658360368717_en-US.png)
+    ![Select domain](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15665280948717_en-US.png)
 
-6.  In the **Copy Configurations** dialog box, click **OK**. 
-
-    ![Copy configuration confirmation](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17043/15658360368719_en-US.png)
-
+6.  In the **Copy Configurations** dialog box, click **OK**.
 
