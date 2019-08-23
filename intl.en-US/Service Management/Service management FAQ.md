@@ -18,13 +18,13 @@
 -   CNZZ collects statistics by embedding a piece of JavaScript code in each Web page of a website. After a user visits a Web page, statistics can be collected only if the Web page is loaded successfully. If the Web page fails to be loaded or the Web page does not contain the JavaScript code, statistics cannot be collected. In addition, if a file or image on this website is referenced by another website, CNZZ cannot collect the corresponding statistics.
 -   CDN collects statistics based on every access request in the logs. Therefore, the statistics are more comprehensive. In addition, when CDN calculates page views \(PVs\), multiple PVs are counted if the same page contains multiple iframe tags.
 
-If the issue still persists, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex).
+If the issue still persists, .
 
 ## Why is there an entry with status code 408 in the CDN log? {#section_4ut_ssu_g6r .section}
 
 This log entry is resulted from the CDN health check on the origin site. The CDN upper-layer node sends a TCP request \(similar to Telnet\) to the origin site. This health check does not affect the origin site.
 
-If the issue still persists, [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex).
+If the issue still persists, .
 
 ## What is the meaning of status code 304 in the CDN log? {#section_ohl_cql_ilp .section}
 
@@ -34,11 +34,11 @@ Example:
 
 As shown in the following figure, when the client requests an image for the first time, the server returns a response with status code 200. The response includes the Last-Modified and ETag fields.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156652561748445_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156653576048445_en-US.png)
 
 When the client requests the image again, the last modification time and ETag are added to the request header. As shown in the following figure, the server checks whether the content has been modified based on the ETag and Last-Modified fields. If no modification is made, status code 304 is returned. If the content has been modified, the latest content is returned to the client with status code 200.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156652561848446_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156653576048446_en-US.png)
 
 Therefore, it is normal that status code 304 is included in the server log information, CDN log information, or OSS log information. This indicates that the Web cache already contains the content and has not been modified since the last request. To update the local Web cache, press Ctrl + F5. As a result, the client clears the local Web cache and sends a request to the server. The server returns the requested content with status code 200.
 

@@ -34,15 +34,15 @@
 
 如下图所示，客户端第一次访问一个图片，请求成功后服务器返回200状态码，response响应包里会包含文件最近修改时间last-modified和etag标记。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156652560548445_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156653574848445_zh-CN.png)
 
 当客户端再次访问时，会在请求头带上上次读取内容的修改时间和etag标记，如下图，服务器会根据etag和last-modified判断文档内容最近有没有修改过，如若没有则返回304状态码，如若修改过则把最新内容返回客户端，状态码则是200。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156652560548446_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/314939/156653574848446_zh-CN.png)
 
 所以，有时候服务器日志、CDN日志、OSS日志出现304状态码，是正常现象，说明web缓存已经有这些内容了，并且在这期间这些内容并没有修改过，如果想更新web缓存，可以按ctrl+F5页面，客户端会清除本地web缓存从服务器发送请求，服务器则返回请求内容，并且状态码是200。
 
-如问题还未解决，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)。
+如问题还未解决，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex)。
 
 ## 如何分析CDN访问日志？ {#section_fpd_8ri_7k7 .section}
 
@@ -67,11 +67,11 @@
 
 CDN日志字段说明，请参见[日志下载](intl.zh-CN/服务管理/日志管理/日志下载.md#)。
 
-如问题还未解决，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)。
+如问题还未解决，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex)。
 
 ## 如何查询CDN节点的IP？ {#section_9p1_r9f_r2g .section}
 
 您可以通过CDN控制台的诊断工具，确定IP是否为CDN节点IP。详细说明请参见[诊断工具](intl.zh-CN/服务管理/诊断工具.md#)。
 
-如问题还未解决，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)。
+如问题还未解决，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex)。
 
