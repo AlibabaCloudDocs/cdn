@@ -88,6 +88,7 @@ The following tables list API operations available for use in CDN. For more info
 |[PushObjectCache](intl.en-US/New API Reference/Refresh and preload operations/PushObjectCache.md#)|Preloads the content on the specified origin sites to L2 cache nodes.|
 |[DescribeRefreshQuota](intl.en-US/New API Reference/Refresh and preload operations/DescribeRefreshQuota.md#)|Queries the maximum number of URLs and directories that can be refreshed and preloaded daily, and the remaining number of URLs and directories.|
 |[DescribeRefreshTasks](intl.en-US/New API Reference/Refresh and preload operations/DescribeRefreshTasks.md#)|Queries the status of refresh and preload tasks.|
+|[RefreshObjectCaches](https://www.alibabacloud.com/help/doc-detail/91164.htm)|Refreshes the files or directories on L2 cache nodes.|
 
 ## Service management operations {#section_iv2_tnl_vdb .section}
 
