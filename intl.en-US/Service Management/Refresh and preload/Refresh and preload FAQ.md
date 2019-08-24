@@ -7,19 +7,19 @@
 
 ## How can I actively preload files to a CDN node? {#section_pt8_7vj_8a7 .section}
 
-You can actively preload files to a CDN L2 node by using the preload feature. As a result, when a client visits a relevant URL, the CDN L1 node will retrieve data directly from the CDN L2 node without requesting data from the origin. For more information about the preload feature, see [EN-US\_TP\_5168.md\#](reseller.en-US/Service Management/Refresh and preload/Refresh and Preload.md#).
+You can actively preload files to a CDN L2 node by using the preload feature. As a result, when a client visits a relevant URL, the CDN L1 node will retrieve data directly from the CDN L2 node without requesting data from the origin. For more information about the preload feature, see [Refresh and Preload](https://www.alibabacloud.com/help/doc-detail/27140.htm).
 
 ## How does CDN use the JAVA SDK to refresh the cache? {#section_zj5_11c_aor .section}
 
-Alibaba Cloud CDN provides SDKs for multiple languages including JAVA, Python, PHP, and .NET. For more information, see [SDK Reference](../reseller.en-US/Developer Guide/SDK Reference.md#).
+Alibaba Cloud CDN provides SDKs for multiple languages including JAVA, Python, PHP, and .NET. For more information, see [SDK Reference](../../../../reseller.en-US/Developer Guide/SDK Reference.md#).
 
 To use the JAVA SDK to refresh the cache, follow these steps:
 
 1.  Import the SDK to your project.
 
-    Add the following dependencies to the pom. xml file. For more information about SDK versions, see [SDK Reference](../reseller.en-US/Developer Guide/SDK Reference.md#).
+    Add the following dependencies to the pom. xml file. For more information about SDK versions, see [SDK Reference](../../../../reseller.en-US/Developer Guide/SDK Reference.md#).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661532147741_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661559747741_en-US.png)
 
 2.  Initialize the client.
 
@@ -82,21 +82,21 @@ To use the JAVA SDK to refresh the cache, follow these steps:
     ```
 
 
-If the issue still persists, .
+If the issue still persists, submit a ticket.
 
 ## How can I identify whether a CDN preload task is complete? {#section_9ni_ayq_8ol .section}
 
 After you send a preload request to a URL, you can check the Via header in the received response to identify whether the preload task is complete.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661532147744_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661559747744_en-US.png)
 
 -   The first half of the Via header indicates the status of the L2 node. The `H` field indicates a hit. This indicates that the specified content has been preloaded to the L2 node and that you do not need to request the content from the origin.
 -   The second half of the Via header represents the status of the L1 node. The `M` field indicates that no cache is available on the L1 node and that the L1 node needs to request the content from the L2 node.
 
-If the issue still persists, .
+If the issue still persists, submit a ticket.
 
 ## How can I use CDN to refresh files? {#section_kp1_uui_147 .section}
 
 -   We recommend that you synchronize files of the origin by using version numbers instead of file names.
--   To synchronize files that must be updated with the same name, submit a refresh task in the CDN console. For more information, see [EN-US\_TP\_5168.md\#](reseller.en-US/Service Management/Refresh and preload/Refresh and Preload.md#).
+-   To synchronize files that must be updated with the same name, submit a refresh task in the CDN console. For more information, see [Refresh and Preload](https://www.alibabacloud.com/help/doc-detail/27140.htm).
 
