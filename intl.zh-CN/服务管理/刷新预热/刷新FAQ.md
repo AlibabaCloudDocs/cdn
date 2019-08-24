@@ -19,7 +19,7 @@ CDN提供了JAVA、python、php、.Net等多种语言的SDK，详情请参见[SD
 
     请在pom.xml文件中增加以下依赖，准确的SDK版本号请参见[SDK参考](../intl.zh-CN/SDK参考/SDK参考.md#)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661499847741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661531147741_zh-CN.png)
 
 2.  初始化Client。
 
@@ -88,7 +88,7 @@ CDN提供了JAVA、python、php、.Net等多种语言的SDK，详情请参见[SD
 
 您可以通过访问具体URL时的Via头信息，判断预热是否成功。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661499847744_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/222601/156661531147744_zh-CN.png)
 
 -   Via的前半部分代表二级节点状态，其中的`H`表示命中，说明文件已经预热到二级节点了，不需要再回源站了。
 -   Via的后半部分代表一级节点的状态，`M`表示一级节点上没有缓存，需要向二级节点回源。
