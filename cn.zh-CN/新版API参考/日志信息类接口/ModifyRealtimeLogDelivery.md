@@ -22,7 +22,7 @@
 |Project|String|是|ProjectName|实时投递sls的LogStoreName。
 
  |
-|Region|String|是|ch-shanghai|实时投递sls的Region，详情请参见[实时日志投递用户Region列表](~~22732~~)。
+|Region|String|是|ch-shanghai|实时投递sls的Region，详情请参见[实时日志投递用户Region列表](~~27232~~)。
 
  |
 
