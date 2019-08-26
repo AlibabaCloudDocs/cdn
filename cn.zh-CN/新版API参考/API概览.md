@@ -2,7 +2,7 @@
 
 CDN提供以下相关API接口。
 
-## 数据监控接口 {#section_gri_4cy_axg .section}
+## 数据监控接口 {#section_f8d_imp_j8e .section}
 
 |API|描述|
 |---|--|
@@ -37,8 +37,9 @@ CDN提供以下相关API接口。
 |[DescribeDomainUvData](cn.zh-CN/新版API参考/数据监控类接口/DescribeDomainUvData.md)|调用DescribeDomainUvData获取加速域名最小1小时粒度的 UV页面独立访问统计。|
 |[DescribeDomainPvData](cn.zh-CN/新版API参考/数据监控类接口/DescribeDomainPvData.md)|调用DescribeDomainPvData获取加速域名最小1小时粒度的 PV页面访问统计。|
 |[ListFCTrigger](cn.zh-CN/新版API参考/数据监控类接口/ListFCTrigger.md)|调用ListFCTrigger获取指定事件的函数计算触发器列表。|
+|[DescribeDomainQpsData](cn.zh-CN/新版API参考/数据监控类接口/DescribeDomainQpsData.md)|调用DescribeDomainQpsData获取加速域名的每秒访问次数QPS。|
 
-## 域名管理接口 {#section_b5k_6tj_5tq .section}
+## 域名管理接口 {#section_qdf_t0u_evm .section}
 
 |API|描述|
 |---|--|
@@ -67,8 +68,9 @@ CDN提供以下相关API接口。
 |[SetWafConfig](cn.zh-CN/新版API参考/域名管理类接口/SetWafConfig.md)|调用SetWafConfig设置加速域名的Waf防护功能。|
 |[DescribeCdnDomainByCertificate](cn.zh-CN/新版API参考/域名管理类接口/DescribeCdnDomainByCertificate.md)|调用DescribeCdnDomainByCertificate根据证书信息获取加速域名。|
 |[SetWaitingRoomConfig](cn.zh-CN/新版API参考/域名管理类接口/SetWaitingRoomConfig.md)|调用SetWaitingRoomConfig设置waiting\_room功能，只支持全站加速类型域名。|
+|[DescribeCdnCertificateDetail](cn.zh-CN/新版API参考/域名管理类接口/DescribeCdnCertificateDetail.md)|调用DescribeCdnCertificateDetail查询cdn证书详细信息。|
 
-## 日志类接口 {#section_ssb_urc_wbv .section}
+## 日志类接口 {#section_wv5_e24_lkd .section}
 
 |API|描述|
 |---|--|
@@ -88,7 +90,7 @@ CDN提供以下相关API接口。
 |[ModifyUserCustomLogConfig](cn.zh-CN/新版API参考/日志信息类接口/ModifyUserCustomLogConfig.md)|调用ModifyUserCustomLogConfig修改用户下自定义日志配置信息。|
 |[DescribeCustomLogConfig](cn.zh-CN/新版API参考/日志信息类接口/DescribeCustomLogConfig.md)|调用DescribeCustomLogConfig根据configId查询自定义日志配置详细信息。|
 
-## 刷新预热接口 {#section_5wm_vid_kjj .section}
+## 刷新预热接口 {#section_lwo_jel_que .section}
 
 |API|描述|
 |---|--|
@@ -97,7 +99,7 @@ CDN提供以下相关API接口。
 |[DescribeRefreshQuota](cn.zh-CN/新版API参考/刷新预热类接口/DescribeRefreshQuota.md)|调用DescribeRefreshQuota查询刷新、预热URL及目录的最大限制数量，以及当日剩余刷新、预热URL及目录的次数。|
 |[DescribeRefreshTasks](cn.zh-CN/新版API参考/刷新预热类接口/DescribeRefreshTasks.md)|调用DescribeRefreshTasks查询刷新、预热状态是否在全网生效。|
 
-## 服务类接口 {#section_81o_hrn_nef .section}
+## 服务类接口 {#section_owx_r3n_yd5 .section}
 
 |API|描述|
 |---|--|
@@ -107,23 +109,24 @@ CDN提供以下相关API接口。
 |[DescribeCdnUserResourcePackage](cn.zh-CN/新版API参考/服务类类接口/DescribeCdnUserResourcePackage.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
 |[DescribeCdnUserQuota](cn.zh-CN/新版API参考/服务类类接口/DescribeCdnUserQuota.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
 
-## 用量查询接口 {#section_1w1_6hc_cjk .section}
+## 用量查询接口 {#section_g8a_3js_1ta .section}
 
 |API|描述|
 |---|--|
 |[DescribeUserUsageDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DescribeUserUsageDataExportTask.md)|调用DescribeUserUsageDataExportTask列出用户最近三个月的用量导出任务信息。|
-|[CreateUserUsageDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/CreateUserUsageDataExportTask.md)|调用CreateUserUsageDataExportTask创建账号历史用量数据导出任务, 将历史用量生成PDF文件用于下载。|
+|[CreateUserUsageDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/CreateUserUsageDataExportTask.md)|调用CreateUserUsageDataExportTask创建账号历史用量数据导出任务，将历史用量生成PDF文件用于下载。|
 |[CreateUsageDetailDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/CreateUsageDetailDataExportTask.md)|调用CreateUsageDetailDataExportTask创建您账户下单个或多个域名5分钟明细数据的导出任务，生成用于下载的excel文件。|
 |[DescribeUserUsageDetailDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DescribeUserUsageDetailDataExportTask.md)|调用DescribeUserUsageDetailDataExportTask查询您账户下单个或多个域名5分钟明细数据的导出任务。|
 |[DescribeDomainUsageData](cn.zh-CN/新版API参考/用量查询类接口/DescribeDomainUsageData.md)|调用DescribeDomainUsageData查询域名在特定计费区域的用量数据。|
-|[DeleteUserUsageDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DeleteUserUsageDataExportTask.md)|调用DeleteUserUsageDataExportTask创建历史用量信息导出任务, 将详细用量生成excel文件用于下载. 最长可创建查询近1年数据的任务，单次导出任务跨度最长为1个月。|
+|[DeleteUserUsageDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DeleteUserUsageDataExportTask.md)|调用DeleteUserUsageDataExportTask创建历史用量信息导出任务，将详细用量生成excel文件用于下载。最长可创建查询近1年数据的任务，单次导出任务跨度最长为1个月。|
 |[DeleteUsageDetailDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DeleteUsageDetailDataExportTask.md)|调用DeleteUsageDetailDataExportTask删掉用量详细数据导出任务。|
 
-## 标签接口 {#section_iez_jay_8lc .section}
+## 标签接口 {#section_cxg_s0m_7do .section}
 
 |API|描述|
 |---|--|
 |[DescribeTagResources](cn.zh-CN/新版API参考/标签类接口/DescribeTagResources.md)|调用DescribeTagResources查询资源对应的标签。|
 |[DescribeUserTags](cn.zh-CN/新版API参考/标签类接口/DescribeUserTags.md)|调用DescribeUserTags查询用户标签。|
 |[UntagResources](cn.zh-CN/新版API参考/标签类接口/UntagResources.md)|调用UntagResources删除资源标签接口。|
+|[TagResources](cn.zh-CN/新版API参考/标签类接口/TagResources.md)|调用TagResources资源打标接口。|
 
