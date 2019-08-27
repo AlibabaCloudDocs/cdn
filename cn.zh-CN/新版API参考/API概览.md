@@ -2,7 +2,7 @@
 
 CDN提供以下相关API接口。
 
-## 数据监控接口 {#section_f8d_imp_j8e .section}
+## 数据监控接口 {#section_cca_chx_ylo .section}
 
 |API|描述|
 |---|--|
@@ -39,7 +39,7 @@ CDN提供以下相关API接口。
 |[ListFCTrigger](cn.zh-CN/新版API参考/数据监控类接口/ListFCTrigger.md)|调用ListFCTrigger获取指定事件的函数计算触发器列表。|
 |[DescribeDomainQpsData](cn.zh-CN/新版API参考/数据监控类接口/DescribeDomainQpsData.md)|调用DescribeDomainQpsData获取加速域名的每秒访问次数QPS。|
 
-## 域名管理接口 {#section_qdf_t0u_evm .section}
+## 域名管理接口 {#section_ndy_jhp_ynh .section}
 
 |API|描述|
 |---|--|
@@ -70,7 +70,7 @@ CDN提供以下相关API接口。
 |[SetWaitingRoomConfig](cn.zh-CN/新版API参考/域名管理类接口/SetWaitingRoomConfig.md)|调用SetWaitingRoomConfig设置waiting\_room功能，只支持全站加速类型域名。|
 |[DescribeCdnCertificateDetail](cn.zh-CN/新版API参考/域名管理类接口/DescribeCdnCertificateDetail.md)|调用DescribeCdnCertificateDetail查询cdn证书详细信息。|
 
-## 日志类接口 {#section_wv5_e24_lkd .section}
+## 日志类接口 {#section_u5h_73q_srt .section}
 
 |API|描述|
 |---|--|
@@ -90,7 +90,7 @@ CDN提供以下相关API接口。
 |[ModifyUserCustomLogConfig](cn.zh-CN/新版API参考/日志信息类接口/ModifyUserCustomLogConfig.md)|调用ModifyUserCustomLogConfig修改用户下自定义日志配置信息。|
 |[DescribeCustomLogConfig](cn.zh-CN/新版API参考/日志信息类接口/DescribeCustomLogConfig.md)|调用DescribeCustomLogConfig根据configId查询自定义日志配置详细信息。|
 
-## 刷新预热接口 {#section_lwo_jel_que .section}
+## 刷新预热接口 {#section_nsc_s0d_o6y .section}
 
 |API|描述|
 |---|--|
@@ -99,7 +99,7 @@ CDN提供以下相关API接口。
 |[DescribeRefreshQuota](cn.zh-CN/新版API参考/刷新预热类接口/DescribeRefreshQuota.md)|调用DescribeRefreshQuota查询刷新、预热URL及目录的最大限制数量，以及当日剩余刷新、预热URL及目录的次数。|
 |[DescribeRefreshTasks](cn.zh-CN/新版API参考/刷新预热类接口/DescribeRefreshTasks.md)|调用DescribeRefreshTasks查询刷新、预热状态是否在全网生效。|
 
-## 服务类接口 {#section_owx_r3n_yd5 .section}
+## 服务类接口 {#section_akw_hlk_r9p .section}
 
 |API|描述|
 |---|--|
@@ -109,7 +109,7 @@ CDN提供以下相关API接口。
 |[DescribeCdnUserResourcePackage](cn.zh-CN/新版API参考/服务类类接口/DescribeCdnUserResourcePackage.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
 |[DescribeCdnUserQuota](cn.zh-CN/新版API参考/服务类类接口/DescribeCdnUserQuota.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
 
-## 用量查询接口 {#section_g8a_3js_1ta .section}
+## 用量查询接口 {#section_qky_pup_bkr .section}
 
 |API|描述|
 |---|--|
@@ -121,7 +121,7 @@ CDN提供以下相关API接口。
 |[DeleteUserUsageDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DeleteUserUsageDataExportTask.md)|调用DeleteUserUsageDataExportTask创建历史用量信息导出任务，将详细用量生成excel文件用于下载。最长可创建查询近1年数据的任务，单次导出任务跨度最长为1个月。|
 |[DeleteUsageDetailDataExportTask](cn.zh-CN/新版API参考/用量查询类接口/DeleteUsageDetailDataExportTask.md)|调用DeleteUsageDetailDataExportTask删掉用量详细数据导出任务。|
 
-## 标签接口 {#section_cxg_s0m_7do .section}
+## 标签接口 {#section_2cn_awz_awi .section}
 
 |API|描述|
 |---|--|
