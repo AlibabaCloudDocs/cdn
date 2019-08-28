@@ -17,7 +17,7 @@ If you want to implement access control based on the User-Agent field, you must 
 5.  Click **UserAgent Blacklist/Whitelist**.
 6.  On the UserAgent Blacklist/Whitelist tab, click **Modify**. 
 
-    ![User-Agent blacklist or whitelist](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301857/156653361550946_en-US.png)
+    ![User-Agent blacklist or whitelist](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301857/156698432350946_en-US.png)
 
 7.  Configure **Blacklist** or **Whitelist** as prompted. 
 
