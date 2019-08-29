@@ -20,10 +20,10 @@
 
 CDN的计费方式包括基础服务计费和增值服务计费。
 
--   基础服务计费方式， 请参见[基础服务计费](../../../../intl.zh-CN/产品定价/计费方式/基础服务计费.md#)。
+-   基础服务计费方式，请参见[基础服务计费](../../../../intl.zh-CN/产品定价/计费方式/基础服务计费.md#)。
 -   增值服务计费方式，请参见[增值服务计费](../../../../intl.zh-CN/产品定价/计费方式/增值服务计费.md#)。
 
-关于CDN的具体计费价格，请参见[CDN详细价格信息](https://www.alibabacloud.com/zh/product/cdn/pricing)。
+关于CDN具体计费价格，请参见[CDN详细价格信息](https://www.alibabacloud.com/zh/product/cdn/pricing)。
 
 ## 相关产品 {#section_tii_up6_o8n .section}
 
