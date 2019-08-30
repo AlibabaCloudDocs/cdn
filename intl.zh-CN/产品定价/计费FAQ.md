@@ -12,7 +12,7 @@
 ## 停用CDN服务后，为什么仍会有一部分费用产生？ {#section_o69_4e5_r87 .section}
 
 -   如果您的LocalDNS服务器有缓存且未过期，那么在停用CDN服务后，LocalDNS仍会将访问已停用CDN域名的请求解析到CDN节点，造成少量CDN流量计费。
--   一些下载类软件也存在LocalDNS缓存，在这部分缓存过期前，下载类软件也会把访问已停用CDN域名的请求解析到CDN节点上，造成少量CDN流量计费。
+-   下载类软件也存在LocalDNS缓存，在这部分缓存过期前，下载类软件也会把访问已停用CDN域名的请求解析到CDN节点上，造成少量CDN流量计费。
 
 ## CDN按月95计费有哪些说明？ {#section_6xd_ewl_qey .section}
 
@@ -21,8 +21,8 @@
 
     **说明：** 
 
-    -   95带宽峰值计费按自然月结算，在一个自然月内，按账户取每5分钟有效带宽值进行降序排列，然后把带宽数值较高的5%的点去掉，剩下的最高带宽就是95带宽峰值计费值。以一月30天为例，默认均为有效取值点：每5分钟1个带宽取值点，每小时12个取值点，每月取值点数为 12 x 24 x 30 = 8640个；将所有的点按带宽数值降序排列，去掉前5%的点 8640 x 5% = 432 个点，即第433个点为计费点。
-    -   国内和国外的95带宽将分开统计。即国内和国外的带宽分别排序，取各自的95峰值和对应的峰值时刻用于计费值。
+    -   95带宽峰值计费按自然月结算，在一个自然月内，按账户取每5分钟有效带宽值进行降序排列，然后把带宽数值较高的5%的点去掉，剩下的较高带宽就是95带宽峰值计费值。以一月30天为例，默认均为有效取值点：每5分钟1个带宽取值点，每小时12个取值点，每月取值点数为 12 x 24 x 30 = 8640个；将所有的点按带宽数值降序排列，去掉前5%的点 8640 x 5% = 432 个点，即第433个点为计费点。
+    -   中国大陆和海外的95带宽将分开统计。即中国大陆和海外的带宽分别排序，取各自的95峰值和对应的峰值时刻用于计费值。
 -   计费规则
 
     -   付费方式：后付费。
@@ -43,7 +43,7 @@
 
 阿里云CDN和OSS只对流出的流量进行计费，所以流量从那个产品流出，就由哪个产品计费。 当CDN回源，从OSS获取资源时， 流量是从OSS流向CDN的， 那么这部分流量由OSS计费，关于OSS的详细计费信息请参见[计量项和计费项](../../../../../intl.zh-CN/计量计费/计量项和计费项.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156626629147996_zh-CN.png)
+![OSS流量计算](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714826147996_zh-CN.png)
 
 ## 源站在海外时，使用国内CDN节点加速如何计费？ {#section_3ue_eo2_rt1 .section}
 
@@ -94,13 +94,13 @@
     1.  登录[CDN控制台](https://cdnnext.console.aliyun.com)。
     2.  在概览页查看HTTPS请求数。
 
-        ![CDN控制台](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156626629147999_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714826157321_zh-CN.png)
 
 -   方式二
     1.  登录[CDN控制台](https://cdnnext.console.aliyun.com)。
     2.  选择**数据监控** \> **资源监控**。
     3.  在访问次数页签，按域名、运营商、区域等维度查看HTTPS请求数。
 
-        ![资源监控](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156626629148000_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714826157322_zh-CN.png)
 
 
