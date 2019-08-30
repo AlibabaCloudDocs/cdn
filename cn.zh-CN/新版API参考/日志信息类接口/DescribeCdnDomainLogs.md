@@ -16,7 +16,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|DomainName|String|是|www.yourdomain.com|域名（只支持单个查询）。
+|DomainName|String|是|www.yourdomain.com|域名，只支持单个查询。
 
  |
 |Action|String|否|DescribeCdnDomainLogs|操作接口名，系统规定参数，取值：**DescribeCdnDomainLogs**。
@@ -24,10 +24,10 @@
  |
 |EndTime|String|否|2017-12-22T08:00:00:00Z|获取日志结束时间。结束时间需大于起始时间，起止时间和结束时间，间隔不超过一年。
 
- 获取日期格式按照ISO8601表示法，并使用UTC时间。例如：2016-10-20T04:00:00Z。
+ 获取日期格式按照ISO8601表示法，并使用UTC时间。
 
  |
-|PageNumber|Long|否|2|取得第几页，取值范围为：大于1的任意整数。
+|PageNumber|Long|否|2|取得第几页，取值范围为：大于**1**的任意整数。
 
  |
 |PageSize|Long|否|300|分页大小，默认**300**，最大**1000**，取值：**1**~**1000**。
@@ -35,7 +35,7 @@
  |
 |StartTime|String|否|2017-12-21T08:00:00:00Z|获取日志起始时间点。
 
- 日期格式按照ISO8601表示法，并使用UTC时间。例如：2016-10-20T04:00:00Z。
+ 日期格式按照ISO8601表示法，并使用UTC时间。
 
  |
 
@@ -92,8 +92,9 @@
 
 ``` {#request_demo}
 https://cdn.aliyuncs.com?Action=DescribeCdnDomainLogs
-&DomainName=gc.ggter.com
-&LogDay=2015-05-24
+&DomainName=www.yourdomain.com
+&StartTime=2017-12-21T08:00:00:00Z
+&EndTime=2017-12-22T08:00:00:00Z
 &<公共请求参数>
 ```
 
@@ -112,14 +113,14 @@ https://cdn.aliyuncs.com?Action=DescribeCdnDomainLogs
 			      <DomainLogDetail>
 				        <EndTime>2015-05-23T04:00:00Z</EndTime>
 				        <LogName>gc.ggter.com_2015_05_23_1100_1200.gz</LogName>
-				        <LogPath>cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1100_1200.gz?OSSAccessKeyId=3xmgf7JheOfOTUTf&amp;Expires=1432539994&amp;Signature=7Ly4ccKN3afzAGYyWDbxBcOcn2I%3D</LogPath>
+				        <LogPath>cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1100_1200.gz?OSSAccessKeyId=3xmgf7JheOfxxxxx&amp;Expires=1432539994&amp;Signature=7Ly4ccKN3afzAGYyWDbxBcOcnxxxx</LogPath>
 				        <LogSize>257</LogSize>
 				        <StartTime>2015-05-23T03:00:00Z</StartTime>
 			      </DomainLogDetail>
 			      <DomainLogDetail>
 				        <EndTime>2015-05-23T08:00:00Z</EndTime>
 				        <LogName>gc.ggter.com_2015_05_23_1500_1600.gz</LogName>
-				        <LogPath>cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=3xmgf7JheOfOTUTf&amp;Expires=1432539994&amp;Signature=dMv7VqPqZHXVbKPmorGIvylC66c%3D</LogPath>
+				        <LogPath>cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=3xmgf7JheOfxxxxx&amp;Expires=1432539994&amp;Signature=dMv7VqPqZHXVbKPmorGIvylC66xxxx</LogPath>
 				        <LogSize>194</LogSize>
 				        <StartTime>2015-05-23T07:00:00Z</StartTime>
 			      </DomainLogDetail>
@@ -148,14 +149,14 @@ https://cdn.aliyuncs.com?Action=DescribeCdnDomainLogs
 			"DomainLogDetail":[
 				{
 					"LogName":"gc.ggter.com_2015_05_23_1100_1200.gz",
-					"LogPath":"cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1100_1200.gz?OSSAccessKeyId=3xmgf7JheOfOTUTf&Expires=1432539994&Signature=7Ly4ccKN3afzAGYyWDbxBcOcnxxxx",
+					"LogPath":"cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1100_1200.gz?OSSAccessKeyId=3xmgf7JheOfOTUTf&Expires=1432539994&Signature=7Ly4ccKN3afzAGYyWDbxBcOcnxxxx",
 					"EndTime":"2015-05-23T04:00:00Z",
 					"StartTime":"2015-05-23T03:00:00Z",
 					"LogSize":257
 				},
 				{
 					"LogName":"gc.ggter.com_2015_05_23_1500_1600.gz",
-					"LogPath":"cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=3xmgf7JheOfOxxxx&Expires=1432539994&Signature=dMv7VqPqZHXVbKPmorGIvylC6xxxx",
+					"LogPath":"cdnlog.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=3xmgf7JheOfOxxxx&Expires=1432539994&Signature=dMv7VqPqZHXVbKPmorGIvylC6xxxx",
 					"EndTime":"2015-05-23T08:00:00Z",
 					"StartTime":"2015-05-23T07:00:00Z",
 					"LogSize":194
