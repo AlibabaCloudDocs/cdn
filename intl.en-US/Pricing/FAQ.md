@@ -43,8 +43,6 @@
 
 Only outbound traffic from CDN nodes and OSS is billed. Therefore, the service from which the traffic flows is billed. When CDN nodes retrieve resources from OSS, traffic flows from OSS to CDN. Therefore, the traffic is billed on OSS. For more information about OSS billing methods, see [Billing items](../../../../reseller.en-US/Pricing/Billing items.md#).
 
-![](images/47996_en-US.png)
-
 ## If the origin server is located outside Mainland China, how is the acceleration service of CDN nodes in Mainland China billed? {#section_3ue_eo2_rt1 .section}
 
 Only outbound traffic from CDN nodes is billed. If you select Mainland China as the acceleration region, and the origin server is located outside Mainland China, the acceleration service of CDN nodes is billed based on the pricing standard in Mainland China.
@@ -94,13 +92,13 @@ You can use the following methods to view the number of HTTPS requests:
     1.  Log on to the [CDN console](https://cdnnext.console.aliyun.com).
     2.  On the Overview page, view the number of HTTPS requests.
 
-        ![](http://icms-static-translation.oss-cn-hangzhou.aliyuncs.com/SP_19/DNCDN11855815/images/47999_zh-CN.png?Expires=1565342390&OSSAccessKeyId=LTAIJfoPL6wmrirR&Signature=iMGE4YiZYB6ZMK3F9bPcemjHHEk%3D)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714972758613_en-US.png)
 
 -   Method 2
     1.  Log on to the [CDN console](https://cdnnext.console.aliyun.com).
     2.  In the left-side navigation pane, choose **Monitoring** \> **Resource Monitoring**.
     3.  On the Resource Monitoring page, click the Visits tab. You can view the number of HTTPS requests based on multiple dimensions such as domain, provider, and region.
 
-        ![](http://icms-static-translation.oss-cn-hangzhou.aliyuncs.com/SP_19/DNCDN11855815/images/48000_zh-CN.png?Expires=1565342391&OSSAccessKeyId=LTAIJfoPL6wmrirR&Signature=sa4wLnvZ5UpxT%2Fx%2Bd94kv%2BDOU8w%3D)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714972758612_en-US.png)
 
 
