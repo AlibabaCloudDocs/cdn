@@ -4,9 +4,9 @@ HTTPS以安全为目标的HTTP通道，HTTPS在CDN上的应用，为CDN的网络
 
 配置HTTPS证书前，您需要先购买证书，您可以在[云盾控制台](https://yundun.console.aliyun.com/?spm=5176.8232292.domaindetail.24.9498142fSMfoJd&p=cas#/cas/home)快速申请免费的证书或购买高级证书。
 
-目前CDN仅支持`PEM`格式的证书，如果您的证书不是PEM格式，请进行格式转换，操作方法请参见[证书格式转换方式](../cn.zh-CN/域名管理/HTTPS配置/证书格式说明.md#section_cn2_rql_xdb)。
+目前CDN仅支持`PEM`格式的证书，如果您的证书不是PEM格式，请进行格式转换，操作方法请参见[证书格式转换方式](../intl.zh-CN/域名管理/HTTPS配置/证书格式说明.md#section_cn2_rql_xdb)。
 
-HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费用单独按量计费，不包含在CDN流量包内。HTTPS计费介绍，请参见[增值服务计费](../cn.zh-CN/产品定价/计费方式/增值服务计费.md#)。
+HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费用单独按量计费，不包含在CDN流量包内。HTTPS计费介绍，请参见[增值服务计费](../intl.zh-CN/产品定价/计费方式/增值服务计费.md#)。
 
 根据证书认证级别分类如下：
 
@@ -18,7 +18,7 @@ HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费�
 2.  在左侧导航栏，选择**证书服务**。
 3.  在证书中心页面，单击**配置证书**。 
 
-    ![配置证书](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1135062/156646619453674_zh-CN.png)
+    ![配置证书](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1135062/156715580153674_zh-CN.png)
 
 4.  在配置证书界面，配置证书相关参数。 
 
@@ -50,18 +50,18 @@ HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费�
 
 5.  单击**下一步**。 
 
-    ![关联域名](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1135062/156646619553679_zh-CN.png)
+    ![关联域名](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1135062/156715580153679_zh-CN.png)
 
 6.  选择域名，单击**确定**。 
 
     **说明：** 如果您选择的域名已配置证书，本次操作将会替换已有证书。
 
-    ![完成](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1135062/156646619553683_zh-CN.png)
+    ![完成](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1135062/156715580253683_zh-CN.png)
 
 7.  验证证书是否生效。 
 
     更新HTTPS证书1分钟后全网生效，使用HTTPS方式访问资源，如果浏览器中出现绿色HTTPS标识，则HTTPS安全加速生效。
 
-    ![验证结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/15664661953701_zh-CN.png)
+    ![验证结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5134/15671558023701_zh-CN.png)
 
 
