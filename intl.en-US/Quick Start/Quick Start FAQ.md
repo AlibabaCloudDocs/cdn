@@ -22,15 +22,15 @@ The following methods can be used to verify whether your CDN configuration is ap
 
     -   `dig`
 
-        ![dig](../DNCDN11855815/images/47560_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715347358622_en-US.png)
 
 -   Method 2: Run the nslookup or dig command to check the basic information of CDN nodes such as IP addresses, latency, and packet loss. You can use [IP check tools](https://cdnnext.console.aliyun.com/tool) in the CDN console to check whether a resolved IP address is the IP address of a CDN node. If yes, your CDN configuration is applied.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715287458619_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715347358619_en-US.png)
 
 -   Method 3: Obtain the response header corresponding to the CDN domain and check whether the CDN node information exists.
 
-    ![response](../DNCDN11855815/images/47562_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715347358623_en-US.png)
 
 
 ## Does CDN support wildcard domain acceleration? {#section_0t3_151_igy .section}
@@ -41,9 +41,9 @@ Wildcard domains indicate that you can use a wildcard \(\*\) in a CDN domain to 
 
 CDN supports wildcard domain acceleration. The following types of acceleration services support wildcard domain acceleration:
 
--   [Images and small files](../reseller.en-US/Product Introduction/Scenarios/Images and small files.md#)
--   [Large file download](../reseller.en-US/Product Introduction/Scenarios/Large file download.md#)
--   [VOD](../reseller.en-US/Product Introduction/Scenarios/VOD.md#)
+-   [Images and small files](../../../../reseller.en-US/Product Introduction/Scenarios/Images and small files.md#)
+-   [Large file download](../../../../reseller.en-US/Product Introduction/Scenarios/Large file download.md#)
+-   [VOD](../../../../reseller.en-US/Product Introduction/Scenarios/VOD.md#)
 
 The following rules apply when you add wildcard domains:
 
@@ -66,7 +66,7 @@ To prevent the origin server from being attacked, many customers expect CDN to p
 
 However, different CDN nodes are intelligently allocated to access your origin server during the back-to-origin process each time. IP addresses of the back-to-origin CDN nodes are not fixed. Therefore, we do not recommend you set the back-to-origin policy of the origin server to a fixed IP address list. This may cause back-to-origin failure.
 
-If you need to configure a whitelist for protection software such as dongle on the origin server, you can call the [../DNCDN18101146/EN-US\_TP\_65081.md\#](../reseller.en-US/New API Reference/Data monitoring operations/DescribeL2VipsByDomain.md#) operation to obtain IP addresses of CDN back-to-origin nodes and add them to the whitelist, so as not to affect resource retrieval.
+If you need to configure a whitelist for protection software such as dongle on the origin server, you can call the [DescribeL2VipsByDomain](../../../../reseller.en-US/New API Reference/Data monitoring operations/DescribeL2VipsByDomain.md#) operation to obtain IP addresses of CDN back-to-origin nodes and add them to the whitelist, so as not to affect resource retrieval.
 
 ## Why is the "DOMAIN\_OWNER\_CONFLICT" error message reported when I add a CDN domain? {#section_1il_kqh_an7 .section}
 
@@ -102,7 +102,7 @@ If the content from your origin server is not stored on Alibaba Cloud, the conte
 -   Illegal hospital and medicine websites
 -   Websites related to pornography, drugs, and gambling
 
-For more information, see [Limits on domains](../reseller.en-US/Product Introduction/Limits on domains.md#).
+For more information, see [Limits on domains](../../../../reseller.en-US/Product Introduction/Limits on domains.md#).
 
 The following steps describe how to view reasons for rejection and resubmit the CDN domain for approval:
 
@@ -128,15 +128,13 @@ If the origin Web server of a CDN user is bound with another domain rather than 
 
 If your Web server is bound to `test.abc.com` instead of `cdn.abc.com`, you only need to enter `test.abc.com` in the Origin Host dialog box.
 
-![host](../DNCDN11855815/images/47729_en-US.png)
-
 Test and verification
 
 1.  When you access the server `127.0.0.1` by running the curl command, no website contents are returned. This indicates that a domain may be bounded to the origin server or access to the domain is limited.
 2.  When you use the `-H` parameter to transfer the CDN domain `cdn.abc.com`, the website cannot be opened. This indicates that this CDN domain is not bounded to the origin server.
 3.  When you use the `-H` parameter to transfer the CDN domain `test.abc.com`, the website can be opened. This indicates that this CDN domain is not bounded to the origin server. Set the origin host to `test.abc.com` in the CDN console. After a test, you will find that `cdn.abc.com` can be accessed.
 
-    ![host](../DNCDN11855815/images/47728_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715347358624_en-US.png)
 
 
 ## How do I bind a host to a domain? {#section_h8a_ifi_9my .section}
@@ -148,7 +146,7 @@ You can perform the following steps:
 1.  Open the hosts file in the C:\\Windows\\System32\\drivers\\etc directory.
 2.  Enter an IP address, a space, and your domain.
 
-    ![host](../DNCDN11855815/images/47729_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715347358626_en-US.png)
 
     If you run the `ping www.test.com` command, the resolved IP address is `1.1.1.1`.
 
