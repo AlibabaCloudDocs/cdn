@@ -1,6 +1,6 @@
 # DescribeRealtimeDeliveryAcc {#doc_api_Cdn_DescribeRealtimeDeliveryAcc .reference}
 
-调用DescribeRealtimeDeliveryAcc实时日志投递次数查询。
+调用DescribeRealtimeDeliveryAcc查询实时日志投递次数。
 
 ## 调试 {#api_explorer .section}
 
@@ -21,7 +21,7 @@
 |Interval|String|否|300|查询数据的时间粒度，支持**300**、**3600**、**86400**秒。
 
  -   不传和传的值不支持时，时间跨度不超过3天，默认值**300**秒。
--   超过3天默认值**3600**秒。
+-   超过3天不超过30天默认值**3600**秒。
 -   超过30天默认值**86400**秒。
 
  |
