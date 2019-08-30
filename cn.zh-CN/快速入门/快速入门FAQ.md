@@ -18,19 +18,19 @@
 -   方法1：通过输入`ping`或`dig`您所添加的加速域名来验证，如果被转向`*.*kunlun*.com`，表示CDN服务已生效。
     -   `ping`
 
-        ![ping](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142047559_zh-CN.png)
+        ![ping](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715286247559_zh-CN.png)
 
     -   `dig`
 
-        ![dig](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142147560_zh-CN.png)
+        ![dig](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715286247560_zh-CN.png)
 
 -   方法2：通过nslookup或dig命令，可以查看相应的加速域名访问CDN节点的IP和延时丢包等基本信息。您可以通过CDN控制台的[IP检测工具](https://cdnnext.console.aliyun.com/tool)，查看解析出来的IP是否为CDN节点的IP，如果是，则说明CDN服务已生效。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142157280_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715286257280_zh-CN.png)
 
 -   方法3：您也可以获取对应加速域名资源的response头查看是否有CDN加速对应的节点信息来判断CDN是否生效。
 
-    ![response](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142147562_zh-CN.jpg)
+    ![response](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715286247562_zh-CN.jpg)
 
 
 ## CDN支持泛域名加速吗？ {#section_0t3_151_igy .section}
@@ -41,9 +41,9 @@
 
 阿里云CDN支持泛域名加速。目前支持泛域名加速的加速业务类型如下：
 
--   [图片小文件](../cn.zh-CN/产品简介/应用场景/图片小文件.md#)
--   [大文件下载](../cn.zh-CN/产品简介/应用场景/大文件下载.md#)
--   [视音频点播](../cn.zh-CN/产品简介/应用场景/视音频点播.md#)
+-   [图片小文件](../intl.zh-CN/产品简介/应用场景/图片小文件.md#)
+-   [大文件下载](../intl.zh-CN/产品简介/应用场景/大文件下载.md#)
+-   [视音频点播](../intl.zh-CN/产品简介/应用场景/视音频点播.md#)
 
 泛域名添加规则：
 
@@ -66,7 +66,7 @@
 
 但是，由于CDN回源时会智能分配节点访问您的源站服务器，回源的节点IP是不固定的，因此不建议您将源站服务器的回源策略设置为固定的节点IP列表，这样可能会发生回源失败的情况。
 
-如果您有特殊业务需求，源站上有安全狗等防护软件确实需要配置白名单，请调用接口[DescribeL2VipsByDomain](../cn.zh-CN/旧版API参考/资源监控接口/DescribeL2VipsByDomain.md#)，获取CDN回源的节点IP列表并添加到您源站服务器的白名单中，以免影响CDN回源获取资源。
+如果您有特殊业务需求，源站上有安全狗等防护软件确实需要配置白名单，请调用接口[DescribeL2VipsByDomain](../intl.zh-CN/新版API参考/数据监控类接口/DescribeL2VipsByDomain.md#)，获取CDN回源的节点IP列表并添加到您源站服务器的白名单中，以免影响CDN回源获取资源。
 
 ## CDN添加域名加速时，报错信息为DOMAIN\_OWNER\_CONFLICT是什么原因？ {#section_1il_kqh_an7 .section}
 
@@ -102,7 +102,7 @@
 -   违规医院和药品类网站
 -   涉黄、涉毒、涉赌等
 
-详细说明，请参见[使用限制](../cn.zh-CN/产品简介/使用限制.md#)。
+详细说明，请参见[使用限制](../intl.zh-CN/产品简介/使用限制.md#)。
 
 查看审核失败具体原因及重新提交审核的方法如下：
 
@@ -134,7 +134,7 @@
 2.  使用`-H`参数将加速域名`cdn.abc.com`传递测试，也不能打开网站，说明web源站上没有绑定加速域名。
 3.  使用`-H`参数将`test.abc.com`传递，可以正常打开网站，说明源站绑定了该域名。同时在CDN控制台设置了回源HOST为`test.abc.com`后，经测试，`cdn.abc.com`可以打开。
 
-    ![host](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142147728_zh-CN.jpg)
+    ![host](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715286247728_zh-CN.jpg)
 
 
 ## 域名如何绑定HOST？ {#section_h8a_ifi_9my .section}
@@ -146,7 +146,7 @@
 1.  在C:\\Windows\\System32\\drivers\\etc目录下打开hosts文件。
 2.  输入IP地址+空格+您的域名。
 
-    ![host](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156655142247729_zh-CN.png)
+    ![host](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/221210/156715286247729_zh-CN.png)
 
     此时，如果您运行`ping www.test.com`，那么解析指向的IP为`1.1.1.1`。
 
