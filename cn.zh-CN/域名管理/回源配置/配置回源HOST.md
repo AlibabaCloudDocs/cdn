@@ -27,7 +27,7 @@
 4.  在指定域名的左侧导航栏，单击**回源配置**。
 5.  在**回源HOST**区域，单击**修改配置**。 
 
-    ![回源配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5145/15665284873347_zh-CN.png)
+    ![回源配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5145/15672640213347_zh-CN.png)
 
 6.  打开**回源HOST**开关，选择**域名类型**。
 7.  单击**确定**。
