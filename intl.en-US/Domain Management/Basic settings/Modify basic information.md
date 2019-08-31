@@ -1,13 +1,14 @@
 # Modify basic information {#task_270225 .task}
 
-This topic describes how to modify the basic information of a domain \(specifically, the acceleration region\) on the Alibaba Cloud CDN console. With this function, you can change the scope of your CDN services.
+You can change the scope of your CDN service by switching between regions.
 
-1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com/overview).
+1.  Log on to the [Alibaba Cloud CDN console](https://partners-intl.aliyun.com/login-required#cdn).
 2.  In the left-side navigation pane, click **Domain Names**.
-3.  On the Domain Names page, find the domain name you want to set, and in the **Actions** column click **Manage**.
+3.  On the Domain Names page, find the target domain name and click **Manage**.
 4.  In the **Basic Information** section, click **Modify**.
-5.  In the Area dialog box, select a region and click **OK**. 
+5.  In the **Region** dialog box, set **Region**. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/223009/156552089847753_en-US.png)
+    ![Basic information](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/223009/156726391947753_en-US.png)
 
+6.  Click **OK**.
 
