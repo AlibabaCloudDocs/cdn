@@ -8,7 +8,7 @@
 2.  在左侧导航栏，单击**RAM角色管理**。
 3.  在RAM角色管理页面，单击RAM角色名称**AliyunCDNAccessingPrivateOSSRole**。 
 
-    ![RAM角色管理](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156653071745856_zh-CN.png)
+    ![RAM角色管理](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156726419845856_zh-CN.png)
 
 4.  单击待删除权限对应的**移除权限**。 在移除权限确认对话框中，单击**确认**。
 5.  返回RAM角色管理页面，单击待删除角色对应的**删除**。 
