@@ -13,16 +13,16 @@ The CDN log storage service uses Function Compute to store logs for an extended 
 
     Before you click Next, select the check box to agree that fees will be incurred by Function Compute after activating Log Storage.
 
-    ![Select trigger](http://icms-static-translation.oss-cn-hangzhou.aliyuncs.com/SP_19/DNCDN11828177/images/11014_zh-CN.png?Expires=1565490623&OSSAccessKeyId=LTAIJfoPL6wmrirR&Signature=A3xw9ZkgKD8GhmnOMcmJFE68TlA%3D)
+    ![](images/11014_en-US_source.png)
 
 6.  Click the **Authorize** button next to Service Authentication. On the RAM page, authorize Function Compute to write data to OSS and execute functions.
 7.  Click the **Authorize** button next to Authorize Trigger. On the RAM page, authorize CDN to access Function Compute.
 8.  Select domains and click **Create**. 
 
-    ![Select domains](http://icms-static-translation.oss-cn-hangzhou.aliyuncs.com/SP_19/DNCDN11828177/images/11058_zh-CN.png?Expires=1565490624&OSSAccessKeyId=LTAIJfoPL6wmrirR&Signature=BljLxtYJINRB%2BDIe8Epijo1LXXw%3D)
+    ![](images/11058_en-US_source.png)
 
 9.  Click **Done**. 
 
-    ![Done](http://icms-static-translation.oss-cn-hangzhou.aliyuncs.com/SP_19/DNCDN11828177/images/11059_zh-CN.png?Expires=1565490624&OSSAccessKeyId=LTAIJfoPL6wmrirR&Signature=nKYIKcAXuAXjQ7kHi%2BQBPvhdMek%3D)
+    ![](images/11059_en-US_source.png)
 
 
