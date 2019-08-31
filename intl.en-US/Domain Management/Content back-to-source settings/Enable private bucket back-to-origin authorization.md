@@ -19,11 +19,8 @@ You can use functions such as the referer hotlink protection and authentication 
 4.  In the left-side navigation pane of the specified domain, click **Back-to-origin**.
 5.  In the Private Bucket Access section, click **Authorize**. 
 
-    ![Authorization confirmation](images/52546_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156726512358650_en-US.png)
 
-6.  Click **Confirm**. 
-
-    ![Confirm](images/45826_en-US.png)
-
+6.  Click **Confirm**.
 7.  In the Private Bucket Access section, turn on Private Bucket Access. For more information, see [Disable private bucket back-to-origin authorization](reseller.en-US/Domain Management/Content back-to-source settings/Disable private bucket back-to-origin authorization.md#).
 
