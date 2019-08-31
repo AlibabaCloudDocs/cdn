@@ -19,11 +19,11 @@
 4.  在指定域名的左侧导航栏，单击**回源配置**。
 5.  在私有Bucket回源区域，单击**点击授权**。 
 
-    ![点击授权](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156653412952546_zh-CN.png)
+    ![点击授权](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156726415052546_zh-CN.png)
 
 6.  单击**同意授权**。 
 
-    ![同意授权](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156653412945826_zh-CN.png)
+    ![同意授权](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5143/156726415045826_zh-CN.png)
 
 7.  在私有Bucket回源区域，打开私有Bucket回源开关。 了解如何关闭私有Bucket，请参见[关闭私有Bucket回源](intl.zh-CN/域名管理/回源配置/关闭私有Bucket回源授权.md#)。
 
