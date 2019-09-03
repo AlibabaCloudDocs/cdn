@@ -8,7 +8,7 @@
 2.  在左侧导航栏，单击**域名管理**。
 3.  在域名管理页面，单击**添加域名**。 
 
-    ![添加加速域名_中国站](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156436288852553_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156750094657074_zh-CN.png)
 
 4.  将ECS服务器作为源站，配置加速域名的相关信息，选择源站类型为**IP**或**源站域名**。 
 
