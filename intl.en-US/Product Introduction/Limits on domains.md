@@ -4,7 +4,7 @@ This topic describes the limits that Alibaba Cloud CDN imposes on domains.
 
 ## Domain filing {#section_r1h_lgx_wdb .section}
 
-We recommend that you use Alibaba Cloud ICP Filing to file domains. If you select a region outside Mainland China, you do not need to file domains.
+We recommend that you use Alibaba Cloud ICP Filing to file domains.
 
 ## Content moderation {#section_8ow_zg9_l29 .section}
 
@@ -23,7 +23,6 @@ All domains connected to CDN must go through content moderation. The unauthorize
 
 -   If any of the preceding unauthorized content is detected in a domain, CDN immediately stops and forbids the domain. In certain circumstances, CDN even may forbid all domains under your Alibaba Cloud account forever. In such case, you shall bear any possible risks that may arise.
 -   If you connect a wildcard domain \(for example, `*.example.com`\) to Alibaba Cloud CDN and a specific domain \(for example, `a.example.com`\) contains unauthorized content, Alibaba Cloud CDN stops and forbids the wildcard domain.
--   If a domain is rejected due to content moderation, you can view the cause of rejection in the instance list on the CDN console, make modifications accordingly, and then re-submit the domain to CDN for review.
 
 ## Limits on domains {#section_dop_a6z_3lb .section}
 
