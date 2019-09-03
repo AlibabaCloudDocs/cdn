@@ -3,7 +3,7 @@
 -   [停用CDN服务后，为什么仍会有一部分费用产生？](#section_o69_4e5_r87)
 -   [CDN按月95计费有哪些说明？](#section_6xd_ewl_qey)
 -   [CDN回源OSS的流量如何计费？](#section_vqv_h1w_oo2)
--   [源站在海外时，使用国内CDN节点加速如何计费？](#section_3ue_eo2_rt1)
+-   [源站在海外时，使用中国大陆CDN节点加速如何计费？](#section_3ue_eo2_rt1)
 -   [我买了流量包为什么还在扣费？](#section_bcn_0d3_inu)
 -   [计费流量与日志监控流量的区别是什么？](#section_zxj_ldg_kh1)
 -   [CDN/全站加速资源包的抵扣顺序是什么？](#section_4x3_ouz_srr)
@@ -43,11 +43,13 @@
 
 阿里云CDN和OSS只对流出的流量进行计费，所以流量从那个产品流出，就由哪个产品计费。 当CDN回源，从OSS获取资源时， 流量是从OSS流向CDN的， 那么这部分流量由OSS计费，关于OSS的详细计费信息请参见[计量项和计费项](../../../../../intl.zh-CN/计量计费/计量项和计费项.md#)。
 
-![OSS流量计算](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714826147996_zh-CN.png)
+![OSS流量计算](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156749282247996_zh-CN.png)
 
-## 源站在海外时，使用国内CDN节点加速如何计费？ {#section_3ue_eo2_rt1 .section}
+## 源站在海外时，使用中国大陆CDN节点加速如何计费？ {#section_3ue_eo2_rt1 .section}
 
-阿里云CDN只对从CDN节点流出的流量收费，因此如果选择加速区域为中国大陆（使用国内的CDN节点），而您的服务器源站在海外，那么CDN的收费是按国内CDN加速服务的标准收费的。
+阿里云CDN只对从CDN节点流出的流量收费，因此如果选择加速区域为仅中国大陆（使用中国大陆的CDN节点），而您的服务器源站在海外，那么CDN按中国大陆CDN加速服务的标准收费。
+
+**说明：** 海外包括：中国香港、中国澳门、中国台湾和海外。
 
 ## 我买了流量包为什么还在扣费？ {#section_bcn_0d3_inu .section}
 
@@ -61,7 +63,9 @@
 
 -   海外节点费用
 
-    目前海外节点的计费只支持按流量计费，因此如果您有域名的加速区域是港澳台及海外、全球加速，那么您在购买下行流量包时请注意针对加速区域选择不同地区的下行流量包。海外节点的计费价格请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。
+    目前海外节点的计费只支持按流量计费，因此如果您域名的加速区域是全球（不包含中国大陆）或全球，那么您在购买下行流量包时，请注意针对加速区域选择不同地区的下行流量包。海外节点的计费价格请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。
+
+    **说明：** 海外包括：中国香港、中国澳门、中国台湾和海外。
 
 
 ## 计费流量与日志监控流量的区别是什么？ {#section_zxj_ldg_kh1 .section}
@@ -94,13 +98,13 @@
     1.  登录[CDN控制台](https://cdnnext.console.aliyun.com)。
     2.  在概览页查看HTTPS请求数。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714826157321_zh-CN.png)
+        ![HTTPS请求数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156749282257321_zh-CN.png)
 
 -   方式二
     1.  登录[CDN控制台](https://cdnnext.console.aliyun.com)。
     2.  选择**数据监控** \> **资源监控**。
     3.  在访问次数页签，按域名、运营商、区域等维度查看HTTPS请求数。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714826157322_zh-CN.png)
+        ![HTTPS访问次数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156749282257322_zh-CN.png)
 
 

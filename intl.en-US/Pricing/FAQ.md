@@ -34,14 +34,14 @@
     **Note:** 
 
     -   Issuing time of bills: When a billing cycle ends, a bill will be issued in the early morning on the first day of the next calendar month. For example, the February bill for the 95th percentile bandwidth consumed from 2017-02-01 00:00:00 to 2017-02-28 23:59:59 was issued on March 1.
-    -   Settlement time: After bills are issued on the first day of each calendar month, fees are deducted from your account automatically. Make sure that you have enough balance in your account when bills are issued and payments are settled. For more information, see [Overdue payments](reseller.en-US/Pricing/Overdue payments.md#). You can go to the [Usage page of the CDN console](https://cdn.console.aliyun.com/?spm=a2c4g.11186623.2.8.d76365a8u9GLOM#/usage/usageQuery) to view the 95th percentile bandwidth for the current month and estimate how much it will cost.
+    -   Settlement time: After bills are issued on the first day of each calendar month, fees are deducted from your account automatically. Make sure that you have enough balance in your account when bills are issued and payments are settled. For more information, see [Overdue payments](intl.en-US/Pricing/Overdue payments.md#). You can go to the [Usage page of the CDN console](https://cdn.console.aliyun.com/?spm=a2c4g.11186623.2.8.d76365a8u9GLOM#/usage/usageQuery) to view the 95th percentile bandwidth for the current month and estimate how much it will cost.
     -   The effective time of a new billing method:
         -   When you change the billing method from PayByTraffic or PayByBandwidth to 95th percentile bandwidth billing, the new billing method will take effect at 00:00 on the next day.
         -   When you change the billing method from 95th percentile bandwidth billing to PayByTraffic or PayByBandwidth, the new billing method will take effect at 00:00 on the first day of the next calendar month. You cannot change the billing method again within the month. For more information, see [CDN pricing](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.9.d76365a8u9GLOM#/cdn/detail).
 
 ## How is the traffic billed when CDN nodes retrieve resources from OSS? {#section_vqv_h1w_oo2 .section}
 
-Only outbound traffic from CDN nodes and OSS is billed. Therefore, the service from which the traffic flows is billed. When CDN nodes retrieve resources from OSS, traffic flows from OSS to CDN. Therefore, the traffic is billed on OSS. For more information about OSS billing methods, see [Billing items](../../../../reseller.en-US/Pricing/Billing items.md#).
+Only outbound traffic from CDN nodes and OSS is billed. Therefore, the service from which the traffic flows is billed. When CDN nodes retrieve resources from OSS, traffic flows from OSS to CDN. Therefore, the traffic is billed on OSS. For more information about OSS billing methods, see [Billing items](../../../../intl.en-US/Pricing/Billing items.md#).
 
 ## If the origin server is located outside Mainland China, how is the acceleration service of CDN nodes in Mainland China billed? {#section_3ue_eo2_rt1 .section}
 
@@ -55,7 +55,7 @@ Only outbound traffic from CDN nodes is billed. If you select Mainland China as 
 
 -   Value-added service fees
 
-    If you purchase CDN or DCDN resource packages and select PayByTraffic, charges may still incur. In this case, check whether value-added services are enabled, such as HTTPS, real-time logging, or pornographic image detection. Value-added services are billed on the PayByTraffic basis. The system automatically deducts fees from your account balance. You can purchase a resource package. For more information, see [Value-added service billing](reseller.en-US/Pricing/Billing method/Value-added service billing.md#).
+    If you purchase CDN or DCDN resource packages and select PayByTraffic, charges may still incur. In this case, check whether value-added services are enabled, such as HTTPS, real-time logging, or pornographic image detection. Value-added services are billed on the PayByTraffic basis. The system automatically deducts fees from your account balance. You can purchase a resource package. For more information, see [Value-added service billing](intl.en-US/Pricing/Billing method/Value-added service billing.md#).
 
 -   Fees for CDN nodes outside Mainland China
 
@@ -92,13 +92,13 @@ You can use the following methods to view the number of HTTPS requests:
     1.  Log on to the [CDN console](https://cdnnext.console.aliyun.com).
     2.  On the Overview page, view the number of HTTPS requests.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714972758613_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156749282658613_en-US.png)
 
 -   Method 2
     1.  Log on to the [CDN console](https://cdnnext.console.aliyun.com).
     2.  In the left-side navigation pane, choose **Monitoring** \> **Resource Monitoring**.
     3.  On the Resource Monitoring page, click the Visits tab. You can view the number of HTTPS requests based on multiple dimensions such as domain, provider, and region.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156714972758612_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301655/156749282658612_en-US.png)
 
 
