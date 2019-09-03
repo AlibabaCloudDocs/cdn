@@ -6,7 +6,7 @@ If you want to use CDN to accelerate business on a specific website, you need to
 2.  In the left-side navigation pane, click **Domain Names**.
 3.  On the Domain Names page, click **Add Domain Name**. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156654207057076_en-US.png)
+    ![domain](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156749262758690_en-US.png)
 
 4.  Configure the following parameters: **Domain Name**, **Resource Group**, **Business Type**, **Origin Info**, and **Region**. 
 
@@ -40,6 +40,8 @@ If you want to use CDN to accelerate business on a specific website, you need to
 5.  Click **Next**. 
 
     After your CDN domain is reviewed and approved, you can view the domain name on the **Domain Names** page. If the domain is added, its state is displayed as **Enabled**.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156749262758691_en-US.png)
 
     **Note:** 
 
