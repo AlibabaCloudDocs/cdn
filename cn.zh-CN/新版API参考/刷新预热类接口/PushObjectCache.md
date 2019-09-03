@@ -8,11 +8,12 @@
 
  
 
--   刷新预热类接口包含 RefreshObjectCaches 刷新接口和PushObjectCache预热接口。
+-   刷新预热类接口包含RefreshObjectCaches刷新接口和PushObjectCache预热接口。
 
 -   同一个ID每天最多可提交2000条URL预热。
 -   每次请求最多只能提交100条URL预热。
 -   每秒最多50次请求。
+-   单个ID的预热队列最大限制为100条，根据提交的先后顺序来预热。如果队列任务堆积到100条，则需要等提交的预热请求完成之后才能提交新的，以此来保持队列大小始终不超过100。
 
 ## 调试 {#api_explorer .section}
 
