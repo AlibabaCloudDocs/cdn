@@ -10,12 +10,12 @@
 2.  在左侧导航栏，单击**域名管理**。
 3.  在域名管理页面，单击目标域名对应的**管理**。 
 
-    ![域名管理-管理](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1618167/156758966859014_zh-CN.png)
+    ![域名管理-管理](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1618167/156758991259014_zh-CN.png)
 
 4.  单击**IPv6配置**。
 5.  打开**IPv6开关**。 
 
-    ![打开IPv6开关](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1618167/156758966859015_zh-CN.png)
+    ![打开IPv6开关](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1618167/156758991259015_zh-CN.png)
 
 6.  IPv6功能开启，您可以在客户端通过IPv6协议访问CDN节点，阿里云CDN节点也将通过IPv6协议信息访问您的源站
 
