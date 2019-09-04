@@ -1,6 +1,6 @@
 # DescribeDomainPathData {#doc_api_Cdn_DescribeDomainPathData .reference}
 
-调用DescribeDomainPathData接口获取加速域名路径级别的5分钟维度的监控数据。
+调用DescribeDomainPathData接口获取加速域名路径级别的5分钟维度的监控数据，该接口仅限白名单用户使用。
 
 监控数据，包括流量和访问次数。
 
@@ -71,6 +71,9 @@
 
  |
 |PathDataPerInterval| | |路径带宽数据列表。
+
+ |
+|UsageData| | |路径带宽数据列表。
 
  |
 |Acc|Integer|10|访问次数。
