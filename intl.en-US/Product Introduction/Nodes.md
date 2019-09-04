@@ -1,16 +1,16 @@
 # Nodes {#concept_uqm_5h3_tdb .concept}
 
-This topic describes the benefits of Alibaba Cloud Content Delivery Network \(CDN\) nodes and how these nodes are distributed across the globe.
+Alibaba Cloud has over 2,800 nodes worldwide. More than 2,300 nodes are deployed in Mainland China, covering 34 provincial regions. A large number of nodes are deployed in first-tier cities such as provincial capitals. More than 500 nodes are deployed across 70 countries and regions outside Mainland China, including China \(Hong Kong\), China \(Macao\), and China \(Taiwan\).
 
-## Background information {#section_8yx_aw9_qne .section}
+Each node in Alibaba Cloud CDN supports 10 Gbit/s optical NICs, 40 TB to 1.5 PB storage, 40 Gbit/s to 200 Gbit/s operational bandwidth, and 130 Tbit/s reservable bandwidth.
 
-Each node in Alibaba Cloud CDN supports 10 Gbit/s optical NICs, 40 TB to 1.5 PB storage, 40 Gbit/s to 200 Gbit/s operational bandwidth, and 120 Tbit/s reservable bandwidth.
-
-The widely distributed high-performance CDN nodes help to expedite data transmission and cope with emergencies.
+The widely distributed high-performance CDN nodes help to accelerate data transmission and cope with emergencies.
 
 ## Geographical distribution {#section_vbx_pq2_zdb .section}
 
-Alibaba Cloud CDN has more than 500 nodes spread out over 70 countries. Within China, Alibaba Cloud has more extensive coverage than any other cloud provider, with over 2,500 nodes strategically distributed to serve end users in highly-populated areas. See the following figure.
+-   Regions in Mainland China
+-   Regions outside Mainland China, including China \(Hong Kong\), China \(Macao\), and China \(Taiwan\)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5099/156354300032402_en-US.png)
+    ![Regions outside Mainland China, including China (Hong Kong), China (Macao), and China (Taiwan)](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5099/156759917332402_en-US.png)
+
 
