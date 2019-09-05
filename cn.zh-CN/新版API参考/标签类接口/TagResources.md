@@ -1,6 +1,6 @@
 # TagResources {#doc_api_Cdn_TagResources .reference}
 
-调用TagResources资源打标接口。
+调用TagResources添加资源标签。
 
 ## 调试 {#api_explorer .section}
 
@@ -13,7 +13,7 @@
 |Action|String|是|TagResources|操作接口名，系统规定参数，取值：**TagResources**。
 
  |
-|ResourceId.N|RepeatList|是|example.com|资源ID，CDN为域名，N的取值范围为**1**~**50**。
+|ResourceId.N|RepeatList|是|example.com|资源ID，CDN域名，N的取值范围为**1**~**50**。
 
  |
 |ResourceType|String|是|DOMAIN|固定值：**DOMAIN**。
@@ -25,7 +25,7 @@
 |Tag.N.Key|String|否|env|标签键。N的取值范围为**1**~**20**。
 
  |
-|Tag.N.Value|String|否|value|标签键。N的取值范围为**1**~**20**。
+|Tag.N.Value|String|否|value|标签值。N的取值范围为**1**~**20**。
 
  |
 
