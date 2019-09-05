@@ -10,7 +10,7 @@
 
 2019年9月3日至2019年9月30日，阿里云官网已实名认证的注册会员用户，均可参加910会员节CDN专场。活动期间，用户通过活动页面，购买活动产品的，可享受相应的优惠折扣（具体以活动页面展示为准）。活动详情，请参见[阿里云CDN910会员节活动](https://www.aliyun.com/acts/member-2019/cdn)。
 
-![910](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/14250/156758498458814_zh-CN.png)
+![910](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/14250/156767304458814_zh-CN.png)
 
 ## CDN使用 {#section_i4g_cnf_l2b .section}
 
@@ -20,7 +20,7 @@
 |----|-----|
 |[CDN基本概念](cn.zh-CN/产品简介/基本概念.md#)|您可以了解阿里云CDN的基本概念。|
 |[CDN学习路径](https://help.aliyun.com/learn/learningpath/cdn.html)|您可以快速了解并使用CDN。|
-|[API](../cn.zh-CN/新版API参考/简介.md#)|您可以对CDN执行相关操作。|
+|[CDN API](../cn.zh-CN/新版API参考/简介.md#)|您可以调用API来实现对应的控制台操作。|
 
 ## CDN定价 {#section_c3q_dnf_l2b .section}
 
