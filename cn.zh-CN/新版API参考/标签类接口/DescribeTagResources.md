@@ -13,7 +13,7 @@
 |Action|String|是|DescribeTagResources|操作接口名，系统规定参数，取值：**DescribeTagResources**。
 
  |
-|ResourceId.N|RepeatList|是|ResourceId.1|资源ID，CDN为域名，N的取值范围为**1**~**50**。
+|ResourceId.N|RepeatList|是|example.com|资源ID，CDN为域名，N的取值范围为**1**~**50**。
 
  |
 |ResourceType|String|是|DOMAIN|固定值：**DOMAIN**。
@@ -22,10 +22,10 @@
 |RegionId|String|否|ch-hangzhou|地域ID。
 
  |
-|Tag.N.Key|String|否|Tag.1.Key|标签键。N的取值范围为**1**~**20**。
+|Tag.N.Key|String|否|key|标签键。N的取值范围为**1**~**20**。
 
  |
-|Tag.N.Value|String|否|Tag.2.Value|标签值。N的取值范围为**1**~**20**。
+|Tag.N.Value|String|否|value|标签值。N的取值范围为**1**~**20**。
 
  |
 
