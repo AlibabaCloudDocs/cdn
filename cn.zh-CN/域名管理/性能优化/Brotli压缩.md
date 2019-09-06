@@ -7,7 +7,10 @@ Brotli是开源的一种新型压缩算法。开启Brotli压缩功能后，CDN�
 -   当客户端的请求携带请求头`Accept-Encoding: br`时，表示客户端希望获取对应资源时进行Brotli压缩。
 -   当服务端响应携带响应头`Content-Encoding: br`时，表示服务端响应的内容是Brotli压缩的资源。
 
-**说明：** 当Brotli压缩和Gzip压缩同时开启时，客户端请求头`Accept-Encoding`同时带`br`和`gzip`时，CDN节点将优先选择Brotli压缩。
+**说明：** 
+
+-   当Brotli压缩和Gzip压缩同时开启时，客户端请求头`Accept-Encoding`同时带`br`和`gzip`时，CDN节点将优先选择Brotli压缩。
+-   如果源站已经开启压缩功能，并且响应中携带`content_encoding`，则无法开启Brotli压缩功能。
 
 1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 2.  在左侧导航栏，单击**域名管理**。
@@ -15,6 +18,6 @@ Brotli是开源的一种新型压缩算法。开启Brotli压缩功能后，CDN�
 4.  在指定域名的左侧导航栏，单击**性能优化**。
 5.  在Brotli压缩区域框中，打开Brotli压缩开关。 
 
-    ![Brotli压缩](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301855/156653374148022_zh-CN.png)
+    ![Brotli压缩](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/301855/156774111548022_zh-CN.png)
 
 
