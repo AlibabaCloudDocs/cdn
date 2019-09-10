@@ -1,25 +1,24 @@
 # 通过OSS控制台实现 {#task_828194 .task}
 
-通过本文您可以详细了解，通过OSS控制台实现CDN加速OSS的操作方法。
+通过本文您可以详细了解，在OSS控制台上实现CDN加速OSS的操作方法。
 
-进行操作前，请确保您已经注册了阿里云账号。如还未注册，请先完成[注册账号](https://account.aliyun.com/register/register.htm)。
+执行本文操作之前，请确保您已完成阿里云[账号注册](https://account.aliyun.com/register/register.htm)和[实名认证](https://account.console.aliyun.com/#/auth/home)。
 
 1.  登录[OSS 管理控制台](https://oss.console.aliyun.com/overview)。
 2.  在左侧**存储空间**列表中，单击目标存储空间名称。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/669803/156205172750559_zh-CN.png)
+    ![OSS控制台](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/669803/156810971350559_zh-CN.png)
 
 3.  单击**域名管理** \> **绑定用户域名**，打开绑定用户域名页面。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/615645/156205172849828_zh-CN.png)
+    ![绑定用户域名](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/615645/156810971349828_zh-CN.png)
 
 4.  设置绑定用户域名信息。 
 
     |参数|说明|
     |--|--|
     |用户域名|输入用户域名，例如：hello-world.com。|
-    |阿里云CDN加速|打开阿里云CDN加速开关。|
-    |自动添加CNAME记录|添加的域名是您当前阿里云账号下管理的域名，可以自动添加CNAME记录；非本账号下的域名，需要在域名解析商处手动配置云解析，操作方法请参考[阿里云/万网配置流程](../../../../cn.zh-CN/快速入门/配置CNAME/阿里云__万网配置流程.md#)、[DNSPod配置流程](../../../../cn.zh-CN/快速入门/配置CNAME/DNSPod配置流程.md#)或[新网配置流程](../../../../cn.zh-CN/快速入门/配置CNAME/新网配置流程.md#)。|
+    |自动添加CNAME记录|添加的域名是您当前阿里云账号下管理的域名，可以自动添加CNAME记录；非本账号下的域名，需要在域名解析商处手动配置云解析，操作方法请参考[阿里云/万网配置流程](../cn.zh-CN/快速入门/配置CNAME/阿里云__万网配置流程.md#)、[DNSPod配置流程](../cn.zh-CN/快速入门/配置CNAME/DNSPod配置流程.md#)或[新网配置流程](../cn.zh-CN/快速入门/配置CNAME/新网配置流程.md#)。|
 
 5.  单击**提交**。 
 
