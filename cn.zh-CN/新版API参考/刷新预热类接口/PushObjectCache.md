@@ -52,7 +52,7 @@
 请求示例
 
 ``` {#request_demo}
-http(s)://[Endpoint]/?Action=PushObjectCache
+http(s)://cdn.aliyuncs.com/?Action=PushObjectCache
 &ObjectPath=abc.com/image/1.png
 &<公共请求参数>
 ```
