@@ -1,6 +1,6 @@
 # UntagResources {#doc_api_Cdn_UntagResources .reference}
 
-调用UntagResources删除资源标签接口。
+调用UntagResources删除资源标签。
 
 ## 调试 {#api_explorer .section}
 
