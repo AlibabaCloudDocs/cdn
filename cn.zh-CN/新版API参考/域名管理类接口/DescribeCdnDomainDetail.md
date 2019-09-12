@@ -64,6 +64,9 @@
 |SourceModels| | |源站信息。
 
  |
+|SourceModel| | |源站信息。
+
+ |
 |Content|String|test.com|回源地址。
 
  |
@@ -80,7 +83,7 @@
 
  -   **ipaddr**：IP源站。
 -   **domain**：域名源站。
-    -   **oss**：OSSBucket为源站。
+-   **oss**：OSSBucket为源站。
 
  |
 |Weight|String|10|回源权重。
