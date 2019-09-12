@@ -17,7 +17,7 @@ The Data Monitoring module includes resource monitoring and real-time monitoring
         |Hit Rate|None|
         |HTTPCODE|5xx, 4xx, 3xx, and 2xx status codes|
 
-        ![Resource monitoring](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15915/156826934352270_en-US.png)
+        ![Resource monitoring](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15915/156826957552270_en-US.png)
 
         The data shown in the resource monitoring line chart differs slightly from the billing data. For example, a 30-day resource statistics line chart is plotted at 14,400s intervals, while the billing data is plotted at 300s intervals. The line chart does not take into account certain points and is mainly used to show the bandwidth trend. The billing data has finer granularity to help you calculate the actual bandwidth usage.
 
