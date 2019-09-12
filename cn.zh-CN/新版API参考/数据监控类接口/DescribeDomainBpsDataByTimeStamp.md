@@ -19,7 +19,7 @@
 |Action|String|是|DescribeDomainBpsDataByTimeStamp|操作接口名，系统规定参数。取值：**DescribeDomainBpsDataByTimeStamp**。
 
  |
-|DomainName|String|是|www.yourdomain.com|要查询的域名，不能为空。
+|DomainName|String|是|www.yourdomain.com|要查询的域名，仅支持单个查询。
 
  |
 |IspNames|String|是|unicom,telecom|需要查询目标Isp列表，用逗号（,）隔开，不能为空， ISP名通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。
@@ -43,13 +43,16 @@
 |DomainName|String|abc.cn|加速域名信息。
 
  |
-|BpsDataList| | |每个Locate、Isp对应的bps值。
+|BpsDataList| | |每个区域、运营商对应的bps值。
 
  |
-|LocationName|String|Liaoning|节点名。
+|BpsDataModel| | |每个区域、运营商对应的bps值。
 
  |
-|IspName|String|unicom|Isp名。
+|LocationName|String|Liaoning|节点（区域）名。
+
+ |
+|IspName|String|unicom|运营商（Isp）名称。
 
  |
 |Bps|Long|52119553|对应的带宽值。
