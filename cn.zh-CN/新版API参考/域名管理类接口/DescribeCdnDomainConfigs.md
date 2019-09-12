@@ -20,6 +20,170 @@
 
  |
 
+功能列表说明如下所示。
+
+|名称
+
+|说明
+
+|
+|----|----|
+|referer\_white\_list\_set
+
+|refer白名单
+
+|
+|referer\_black\_list\_set
+
+|refer黑名单
+
+|
+|filetype\_based\_ttl\_set
+
+|文件过期时间设置
+
+|
+|path\_based\_ttl\_set
+
+|目录过期时间设置
+
+|
+|cc\_defense
+
+|防CC攻击
+
+|
+|oss\_auth
+
+|OSS鉴权Bucket
+
+|
+|ip\_black\_list\_set
+
+|IP黑名单
+
+|
+|ip\_white\_list\_set
+
+|IP白名单
+
+|
+|error\_page
+
+|错误页面重定向
+
+|
+|tesla
+
+|页面优化加速
+
+|
+|set\_req\_host\_header
+
+|修改回源host头
+
+|
+|set\_req\_header
+
+|修改回源自定义头
+
+|
+|set\_hashkey\_args
+
+|忽略url参数
+
+|
+|aliauth
+
+|阿里鉴权
+
+|
+|set\_resp\_header
+
+|设置响应头（浏览器端可见）
+
+|
+|video\_seek
+
+|视频切片拖拽开关
+
+|
+|range
+
+|Range请求功能
+
+|
+|gzip
+
+|页面Gzip优化
+
+|
+|https\_force
+
+|强制HTTPS跳转
+
+|
+|http\_force
+
+|强制HTTP跳转
+
+|
+|alilive
+
+|视频直播配置
+
+|
+|forward\_scheme
+
+|静态协议跟随回源
+
+|
+|tmd\_signature
+
+|TMD自定义规则
+
+|
+|cdn\_waf
+
+|WAF基础防护
+
+|
+|https\_origin\_sni
+
+|回源SNI
+
+|
+|quic
+
+|QUIC基础参数
+
+|
+|forward\_timeout
+
+|回源请求超时
+
+|
+|ali\_video\_split
+
+|音视频分离
+
+|
+|ipv6
+
+|ipv6配置
+
+|
+|ali\_video\_preview
+
+|视频试看
+
+| |
+|default\_ttl\_code
+
+|状态码缓存时间
+
+|
+
 ## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
@@ -27,10 +191,16 @@
 |DomainConfigs| | |域名配置。
 
  |
-|ConfigId|String|6295|配置id。
+|DomainConfig| | |域名配置。
 
  |
-|FunctionArgs| | |各个function。
+|ConfigId|String|6295|配置ID。
+
+ |
+|FunctionArgs| | |各个功能说明。
+
+ |
+|FunctionArg| | |各个功能说明。
 
  |
 |ArgName|String|auth\_type|配置名称。
@@ -39,7 +209,7 @@
 |ArgValue|String|req\_auth|配置值。
 
  |
-|FunctionName|String|aliauth|function名称。
+|FunctionName|String|aliauth|功能名称。
 
  |
 |Status|String|success|状态，包括**success**、**testing**、**failed**、**configuring**。
