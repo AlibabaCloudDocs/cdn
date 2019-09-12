@@ -4,7 +4,7 @@ This topic describes the instructions for using the log download function, log f
 
 Instructions for using the log download function:
 
--   Logs are generated four hours later. During peak hours, logs are generated four to eight hours later. You can query the generated log files in the Log Management module.
+-   The typical latency to ingest log data is within 24 hours. However, it may also exceed 24 hours. You can query the generated log files in the Log Management module.
 -   Log files are generated once every hour. The log files are segmented based on the number of logs generated during the hour they were generated.
 -   You can download all logs generated in the last month.
 -   Naming convention: CDNDomain\_Year\_Month\_Date\_StartTime\_EndTime Example: www.test.com\_2018\_10\_30\_000000\_010000.gz
@@ -36,15 +36,15 @@ Log field description:
     |text/html|File type|
 
 
-1.  Log on to the [Alibaba Cloud CDN console](https://partners-intl.aliyun.com/login-required#cdn).
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 2.  In the left-side navigation pane, click **Logs**.
 3.  On the Log Download page, select a domain from the drop-down list and select a time range from the calendar, and then click Search.
 4.  Click **Download** in the Actions column corresponding to a log file to download the file. 
 
-    ![Log download](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5171/156726318021219_en-US.png)
+    ![Log download](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5171/156826643121219_en-US.png)
 
 
 ## API {#example_q59_7yh_4dh .example}
 
-You can call API operations to implement the log download function. For more information, see [DescribeCdnDomainLogs](../reseller.en-US/New API Reference/Log operations/DescribeCdnDomainLogs.md#).
+You can call API operations to implement the log download function. For more information, see [DescribeCdnDomainLogs](../intl.en-US/New API Reference/Log operations/DescribeCdnDomainLogs.md#).
 
