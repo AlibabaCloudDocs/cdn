@@ -2,7 +2,7 @@
 
 调用ModifyCdnService变更CDN服务的计费类型。
 
-**请确保在使用该接口前，已充分了解CDN产品的收费方式和\[价格\]\(https://www.aliyun.com/price/product\#/cdn/detail\)**。
+请确保在使用该接口前，已充分了解CDN产品的收费方式和[价格](https://www.aliyun.com/price/product#/cdn/detail)。
 
 您需要先开通CDN服务才可以调用该接口。变更计费类型，次日00:00生效，多次变更以最新提交的为准。计费类型：
 
