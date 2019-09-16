@@ -6,7 +6,7 @@ When no cache rule is configured on CDN, a static file cannot be cached on the C
 
 As shown in the following figure, the x-swift-cachetime response header shows that the cache duration of the static file on CDN is zero seconds. This indicates that CDN will not cache this static file because the ETag and Last-Modified response headers are not returned.
 
-![Response header exception](images/50553_en-US.png)
+![Response header exception](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/711757/156860580560553_en-US.png)
 
 If the origin server is configured with the following response headers, CDN will not cache the resource even if you have configured a cache rule. This is because these response headers have the highest priority in terms of CDN cache rules.
 
@@ -20,7 +20,7 @@ If the origin server is configured with the following response headers, CDN will
 4.  In the left-side navigation pane of the specified domain, click **Cache**.
 5.  On the **Cache Expiration** tab, click **Create Rule**. 
 
-    ![Cache expiration](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5147/156860492353307_en-US.png)
+    ![Cache expiration](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5147/156860580553307_en-US.png)
 
 6.  In the Create Expiration Rule dialog box that appears, select a rule type as prompted. 
 
