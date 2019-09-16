@@ -11,6 +11,6 @@ The widely distributed high-performance CDN nodes help to accelerate data transm
 -   Regions in Mainland China
 -   Regions outside Mainland China, including China \(Hong Kong\), China \(Macao\), and China \(Taiwan\)
 
-    ![Regions outside Mainland China, including China (Hong Kong), China (Macao), and China (Taiwan)](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5099/156759917332402_en-US.png)
+    ![Regions outside Mainland China, including China (Hong Kong), China (Macao), and China (Taiwan)](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5099/156860683332402_en-US.png)
 
 
