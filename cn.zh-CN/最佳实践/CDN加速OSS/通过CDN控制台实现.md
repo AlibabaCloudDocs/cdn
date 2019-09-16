@@ -2,24 +2,24 @@
 
 通过本文您可以详细了解，在CDN控制台上实现CDN加速OSS的操作方法。
 
-执行本文操作之前，请确保您已完成阿里云[账号注册](https://account.aliyun.com/register/register.htm)和[实名认证](https://account.console.aliyun.com/#/auth/home)。
+执行本文操作之前，请确保您已完成阿里云[账号注册](https://account.alibabacloud.com/register/intl_register.htm)和[实名认证](https://account-intl.console.aliyun.com/#/intlAuth)。
 
 1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 2.  在左侧导航栏，单击**域名管理**。
 3.  在域名管理页面，单击**添加域名**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156750090357074_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/545079/156860454757074_zh-CN.png)
 
 4.  填写加速域名信息，并选择源站类型为**OSS域名**。 
 
     |参数|说明|
     |:-|:-|
     |**加速域名**|输入加速域名，例如：ch.aliyun.com。|
-    |**业务类型**|不同的业务类型有不同的流量分配，按照您存储的内容及使用情况选择合适的业务类型。     -   [图片和小文件下载](cn.zh-CN/产品简介/应用场景/图片小文件.md#)
-    -   [大文件下载](cn.zh-CN/产品简介/应用场景/图片小文件.md#)
-    -   [视频点播加速](cn.zh-CN/产品简介/应用场景/视音频点播.md#)
-    -   [直播流媒体](../cn.zh-CN/产品简介/应用场景/直播流媒体.md#)
-    -   [全站加速](../cn.zh-CN/产品简介/应用场景/全站加速.md#)
+    |**业务类型**|不同的业务类型有不同的流量分配，按照您存储的内容及使用情况选择合适的业务类型。     -   [图片和小文件下载](intl.zh-CN/产品简介/应用场景/图片小文件.md#)
+    -   [大文件下载](intl.zh-CN/产品简介/应用场景/图片小文件.md#)
+    -   [视频点播加速](intl.zh-CN/产品简介/应用场景/视音频点播.md#)
+    -   [直播流媒体](../intl.zh-CN/产品简介/应用场景/直播流媒体.md#)
+    -   [全站加速](../intl.zh-CN/产品简介/应用场景/全站加速.md#)
  |
     |**源站信息**|选择您需要加速的OSS域名。     -   OSS域名
     -   IP
@@ -37,6 +37,6 @@
 5.  单击**下一步**，等待审核。
 6.  加速域名审核通过后，会出现在**域名管理**列表中，状态为**正常运行**。 
 
-    加速域名添加成功后，会生成一个CNAME值，只有将这个CNAME值添加到域名解析内，CDN加速服务才会生效，操作方法请参见[阿里云/万网配置流程](../cn.zh-CN/快速入门/配置CNAME/阿里云__万网配置流程.md#)、[DNSPod配置流程](../cn.zh-CN/快速入门/配置CNAME/DNSPod配置流程.md#)或[新网配置流程](../cn.zh-CN/快速入门/配置CNAME/新网配置流程.md#)。
+    加速域名添加成功后，会生成一个CNAME值，只有将这个CNAME值添加到域名解析内，CDN加速服务才会生效，操作方法请参见[阿里云/万网配置流程](../intl.zh-CN/快速入门/配置CNAME/阿里云__万网配置流程.md#)、[DNSPod配置流程](../intl.zh-CN/快速入门/配置CNAME/DNSPod配置流程.md#)或[新网配置流程](../intl.zh-CN/快速入门/配置CNAME/新网配置流程.md#)。
 
 
