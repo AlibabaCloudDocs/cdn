@@ -1,6 +1,6 @@
 # DeleteUserUsageDataExportTask {#doc_api_Cdn_DeleteUserUsageDataExportTask .reference}
 
-调用DeleteUserUsageDataExportTask创建历史用量信息导出任务，将详细用量生成excel文件用于下载。最长可创建查询近1年数据的任务，单次导出任务跨度最长为1个月。
+调用DeleteUserUsageDataExportTask删除账号历史用量数据导出任务。
 
 ## 调试 {#api_explorer .section}
 
