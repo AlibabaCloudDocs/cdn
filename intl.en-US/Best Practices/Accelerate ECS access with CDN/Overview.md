@@ -10,9 +10,9 @@ Alibaba Cloud CDN works with a precise scheduling system. Your requests for stat
 
 Dynamic resources stored on ECS instances include Web programs and databases. Static resources include static scripts, images, attachments, and audio or video content. When you access or download a resource from an ECS instance that serves as the origin, the resource is directly returned to you if it is dynamic. If the requested resource is static, your access can be accelerated by CDN. CDN caches the resources on the ECS instance to the nearest CDN node and returns the requested resource from its cache. The following figure shows the architecture of CDN's accelerating access to resources on an ECS instance.
 
-![Architecture diagram](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/855874/156860463951266_en-US.png)
+![Architecture diagram](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/855874/156877590151266_en-US.png)
 
-**Note:** If you want to accelerate the delivery of dynamic resources on the ECS instance, you can use the Dynamic Route for CDN service. For more information, see [Dynamic Route for CDN documentation](https://help.aliyun.com/product/64812.html).
+**Note:** If you want to accelerate the delivery of dynamic resources on the ECS instance, you can use the Dynamic Route for CDN service. For more information, see [Dynamic Route for CDN documentation](https://www.alibabacloud.com/help/product/64812.htm).
 
 This architecture has the following benefits:
 
@@ -22,7 +22,10 @@ This architecture has the following benefits:
 
 ## How to implement CDN-based ECS access acceleration {#section_rcj_rmc_3iw .section}
 
-For CDN to accelerate the delivery of resources on an ECS instance, you need to bind the domain name or IP address of the ECS instance to a CDN domain and enable CDN acceleration for the CDN domain. For more information, see [Implement acceleration from the CDN console](reseller.en-US/Best Practices/Accelerate ECS access with CDN/Implement acceleration from the CDN console.md#).
+For CDN to accelerate the delivery of resources on an ECS instance, you need to bind the domain name or IP address of the ECS instance to a CDN domain and enable CDN acceleration for the CDN domain. For more information, see [Implement acceleration from the CDN console](intl.en-US/Best Practices/Accelerate ECS access with CDN/Implement acceleration from the CDN console.md#).
 
 ## Related products {#section_7pf_xpx_lg8 .section}
+
+-   You can use ECS to improve website availability, protect origin information, and minimize bandwidth usage costs. For more information, see [ECS documentation](../../../../intl.en-US/Product Introduction/What is ECS?.md#).
+-   You can use Dynamic Route for CDN to accelerate the delivery of dynamic resources on ECS instances. For more information, see [Dynamic Route for CDN documentation](https://www.alibabacloud.com/help/zh/product/64812.htm).
 
