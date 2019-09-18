@@ -25,7 +25,7 @@
 |Action|String|否|CreateUserUsageDataExportTask|操作接口名，系统规定参数。取值：**CreateUserUsageDataExportTask**。
 
  |
-|Language|String|否|en|语种。支持**en**、**cn**。
+|Language|String|否|en|导出文件的语言，支持**zh-cn**和**en-us**，分别为简体中文和英文，默认为中文**zh-cn**。
 
  |
 |TaskName|String|否|刷新|任务名称。
