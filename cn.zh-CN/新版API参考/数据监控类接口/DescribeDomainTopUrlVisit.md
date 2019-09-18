@@ -19,7 +19,9 @@
 |Action|String|是|DescribeDomainTopUrlVisit|操作接口名，系统规定参数，取值：**DescribeDomainTopUrlVisit**。
 
  |
-|DomainName|String|是|test.test.com|只支持一个域名，如果参数为空，默认返回所有加速域名合并后数据。
+|DomainName|String|是|test.test.com|只支持单个域名查询。
+
+ 如果该参数为空，默认返回所有加速域名合并后数据。
 
  |
 |StartTime|String|否|2018-10-03T16:00:00Z|开始获取数据的时间点。
@@ -44,6 +46,9 @@
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |AllUrlList| | |全部热门URLlist。
+
+ |
+|UrlList| | |全部热门URLlist。
 
  |
 |Flow|String|460486880|流量。单位：byte。
@@ -73,6 +78,9 @@
 |Url200List| | |返回为2xx的Urllist。
 
  |
+|UrlList| | |返回为2xx的Urllist。
+
+ |
 |Flow|String|460486880|流量。单位：byte。
 
  |
@@ -89,6 +97,9 @@
 
  |
 |Url300List| | |返回为3xx的Urllist。
+
+ |
+|UrlList| | |返回为3xx的Urllist。
 
  |
 |Flow|String|460486880|流量。单位：byte。
@@ -109,6 +120,9 @@
 |Url400List| | |返回为4xx的Urllist。
 
  |
+|UrlList| | |返回为4xx的Urllist。
+
+ |
 |Flow|String|460486880|流量。单位：byte。
 
  |
@@ -125,6 +139,9 @@
 
  |
 |Url500List| | |返回为5xx的Urllist。
+
+ |
+|UrlList| | |返回为5xx的Urllist。
 
  |
 |Flow|String|460486880|流量。单位：byte。
