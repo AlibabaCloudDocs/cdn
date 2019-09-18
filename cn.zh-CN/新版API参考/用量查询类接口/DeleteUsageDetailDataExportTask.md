@@ -1,6 +1,6 @@
 # DeleteUsageDetailDataExportTask {#doc_api_Cdn_DeleteUsageDetailDataExportTask .reference}
 
-调用DeleteUsageDetailDataExportTask删掉用量详细数据导出任务。
+调用DeleteUsageDetailDataExportTask删除用量详细数据导出任务。
 
 ## 调试 {#api_explorer .section}
 
