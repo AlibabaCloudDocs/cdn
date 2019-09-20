@@ -1,11 +1,10 @@
 # DescribeDomainPvData {#doc_api_Cdn_DescribeDomainPvData .reference}
 
-调用DescribeDomainPvData获取加速域名最小1小时粒度的 PV页面访问统计。
+调用DescribeDomainPvData获取加速域名最小1小时粒度的PV页面访问统计。
 
  **调用该接口前，请您注意：** 
 
 -   不指定StartTime和EndTime时，默认读取过去24小时的数据。同时指定StartTime和EndTime时，按指定的起止时间查询。
-
 -   只支持一个域名，或当前用户下所有域名。
 -   最多可获取最近90天的数据。
 
@@ -20,13 +19,13 @@
 |Action|String|是|DescribeDomainPvData|操作接口名，系统规定参数。取值：**DescribeDomainPvData**。
 
  |
-|DomainName|String|是|test.test.com|需要查询的加速域名，只支持一个域名，不写代表当前用户下所有域名。
+|DomainName|String|是|test.test.com|需要查询的加速域名，只支持一个域名，不写代表查询当前用户下所有域名。
 
  |
 |EndTime|String|否|2015-11-29T00:00:00Z|获取数据结束时间点。
 
  -   结束时间需大于起始时间。
--   获日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+-   日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 
  |
 |StartTime|String|否|2015-11-28T00:00:00Z|获取数据起始时间点。
@@ -40,7 +39,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|DataInterval|String|3600|每条记录的时间间隔，固定值1小时或1天。
+|DataInterval|String|3600|每条记录的时间间隔，单位为秒，固定值1小时（3600秒）或1天（86400秒）。
 
  |
 |DomainName|String|test.test.com|加速域名。
@@ -50,6 +49,9 @@
 
  |
 |PvDataInterval| | |每个时间间隔的页面访问次数。
+
+ |
+|UsageData| | |每个时间间隔的页面访问次数。
 
  |
 |TimeStamp|String|2015-11-28T03:00:00Z|时间片起始时刻。
