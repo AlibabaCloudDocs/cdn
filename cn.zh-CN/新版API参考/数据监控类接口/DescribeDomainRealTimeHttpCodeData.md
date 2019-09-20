@@ -26,7 +26,7 @@
 |EndTime|String|否|2015-11-30T05:40:00Z|获取数据结束时间点。
 
  -   结束时间需大于起始时间。
--   获日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+-   日期格式按照ISO8601表示法，并使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 
  |
 |IspNameEn|String|否|beijing|运营商英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得，不传为所有运营商。
@@ -58,10 +58,16 @@
 |RealTimeHttpCodeData| | |每个时间间隔的HTTP返回码占比数据。
 
  |
+|UsageData| | |每个时间间隔的HTTP返回码占比数据。
+
+ |
 |TimeStamp|String|2015-11-30T05:39:00Z|时间片起始时刻。
 
  |
 |Value| | |各返回码占比使用数据list。
+
+ |
+|RealTimeCodeProportionData| | |各返回码占比使用数据list。
 
  |
 |Code|String|500|http返回码。
