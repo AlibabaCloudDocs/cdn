@@ -19,7 +19,7 @@
 |Action|String|否|DescribeDomainHitRateData|操作接口名，系统规定参数。取值：**DescribeDomainHitRateData**。
 
  |
-|DomainName|String|否|www.yourdomain.com|需要查询的加速域名，只支持一个域名。不填代表该账户下所有域名。
+|DomainName|String|否|www.yourdomain.com|需要查询的加速域名，只支持一个域名。不填代表查询当前用户下所有域名。
 
  |
 |EndTime|String|否|2017-12-22T08:00:00:00Z|获取数据结束时间点。
@@ -61,6 +61,9 @@
 
  |
 |HitRateInterval| | |每个时间间隔的字节命中百分占比。
+
+ |
+|DataModule| | |每个时间间隔的字节命中百分占比。
 
  |
 |TimeStamp|String|2017-12-22T08:00:00:00Z|时间片起始时刻。
