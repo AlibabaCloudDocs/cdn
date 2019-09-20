@@ -32,6 +32,9 @@
 |Vips| |"Vip": \[ "1.1.1.1/25", "2.2.2.2/25" \]|Vip列表。
 
  |
+|Vip| | |Vip列表。
+
+ |
 |RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。
 
  |
