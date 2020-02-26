@@ -14,7 +14,7 @@ The following table lists the documents that help you to better understand the f
 |------------------|-------------|
 |[Terms](intl.en-US/Product Introduction/Terms.md#)|Provides terms related to Alibaba Cloud CDN.|
 |[CDN Learning Path](https://www.alibabacloud.com/getting-started/learningpath/cdn)|Helps you quickly get started with Alibaba Cloud CDN.|
-|[API](https://www.alibabacloud.com/help/zh/doc-detail/91856.htm)|Describes the API actions that you can call to operate Alibaba Cloud CDN.|
+|[API](https://www.alibabacloud.com/help/en/doc-detail/91856.htm)|Describes the API actions that you can call to operate Alibaba Cloud CDN.|
 
 ## CDN pricing {#section_c3q_dnf_l2b .section}
 
