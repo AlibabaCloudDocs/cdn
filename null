@@ -62,5 +62,5 @@ http://cdn.aliyuncs.com?Action=SetCdnDomainCSRCertificate
 |500|Internal.ForbidError|You cannot modify the configurations when some features of the domain are in a canary deployment.|该域名有功能在灰度，不能进行变更|
 |500|Internal.ConfigError|An error occurred while configuring the certificate.|配置接口调用失败|
 
-访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Cdn)查看更多错误码。
 
