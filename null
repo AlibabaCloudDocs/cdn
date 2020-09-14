@@ -1,0 +1,73 @@
+# 创建证书签名请求文件
+
+调用CreateCdnCertificateSigningRequest创建 CSR（证书签名请求）文件。
+
+## 调试
+
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=CreateCdnCertificateSigningRequest&type=RPC&version=2018-05-10)
+
+## 请求参数
+
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|CreateCdnCertificateSigningRequest|操作接口名，系统规定参数。取值：**CreateCdnCertificateSigningRequest**。 |
+|CommonName|String|是|xxx|证书通用名称CN字段。 |
+|SANs|String|否|example.com|证书扩展字段，绑定的域名，多个域名用逗号（,）分隔。 |
+|Organization|String|否|Alibaba Inc|机构名称，默认：Alibaba Inc。 |
+|OrganizationUnit|String|否|Aliyun CDN|部门名称，默认：Aliyun CDN。 |
+|Country|String|否|CN|所属国家，默认：CN。 |
+|State|String|否|Zhejiang|省级地区，默认：Zhejiang。 |
+|City|String|否|Hangzhou|市级地区，默认：Hangzhou。 |
+|Email|String|否|xxx.com|邮箱。 |
+
+## 返回数据
+
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|CommonName|String|example.com|证书通用名称。 |
+|Csr|String|xxx|证书签名请求文件内容。 |
+|PubMd5|String|629bf4fd8104eda171135bcb0f77xxxx|证书公钥信息Md5值。 |
+|RequestId|String|0AEDAF20-4DDF-4165-8750-47FF9C1929C9|请求ID。 |
+
+## 示例
+
+请求示例
+
+```
+http://cdn.aliyuncs.com?Action=CreateCdnCertificateSigningRequest
+&CommonName=xxxx
+&SANs=xx.com,xxx.xx.com
+&<公共请求参数>
+```
+
+正常返回示例
+
+`XML` 格式
+
+```
+<CreateCdnCertificateSigningRequestResesponse>
+  <RequestId>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</RequestId>
+  <CommonName>example.com</CommonName>
+  <Csr>-----BEGIN CERTIFICATE REQUEST-----
+MIIC/zqTxxxxx
+-----END CERTIFICATE REQUEST-----
+</Csr>
+  <PubMd5>629bf4fd8104eda171135bcb0f77xxxx</PubMd5>
+</CreateCdnCertificateSigningRequestResesponse>
+```
+
+`JSON` 格式
+
+```
+{
+    "RequestId": "0AEDAF20-4DDF-4165-8750-47FF9C1929C9",
+    "CommonName":"example.com",
+    "Csr": "-----BEGIN CERTIFICATE REQUEST-----\nMIIC/zqTxxxxx\n-----END CERTIFICATE REQUEST-----\n",
+    "PubMd5":"629bf4fd8104eda171135bcb0f77xxxx"
+}
+```
+
+## 错误码
+
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
+
