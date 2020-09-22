@@ -1,6 +1,8 @@
 # DescribeCdnDomainByCertificate
 
-You can call this operation to query CDN domains by certificate.
+Queries accelerated domain names by SSL certificate.
+
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
@@ -11,20 +13,29 @@ You can call this operation to query CDN domains by certificate.
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeCdnDomainByCertificate|The operation that you want to perform. Set the value to **DescribeCdnDomainByCertificate**. |
-|SSLPub|String|Yes|yourSSLPub|The public key of the certificate. You must encode the public key with Base64 and then call the encodeURIComponent function. You can specify the public key in the PEM format. |
+|SSLPub|String|Yes|yourSSLPub|The public key of the SSL certificate. You must encode the public key in Base64 and then call the encodeURIComponent function to encode the public key again.
+
+ The public key must be in the PEM format. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|CertInfos|N/A|N/A|The certificate information returned. |
-|CertCaIsLegacy|String|yes|Indicates whether the CA certificate is obsolete.**yes**: obsolete. **no**: active and not obsolete. |
+|CertInfos|Array| |The information about the SSL certificate. |
+|CertInfo| | | |
+|CertCaIsLegacy|String|yes|Indicates whether the SSL certificate is obsolete. Valid values:
+
+ -   **yes**: The certificate is obsolete.
+-   **no**: The certificate is working as expected. |
 |CertExpireTime|String|Nov 29 00:00:00 2016 GMT|The time when the certificate expires. |
-|CertExpired|String|yes|Indicates whether the certificate has expired. **yes**: expired. **no**: not expired. |
-|CertStartTime|String|Nov 29 23:59:59 2017 GMT|The time when the certificate starts to take effect. |
+|CertExpired|String|yes|Indicates whether the certificate is expired. Valid values:
+
+ -   **yes**: The certificate is expired.
+-   **no**: The certificate is not expired. |
+|CertStartTime|String|Nov 29 23:59:59 2017 GMT|The time when the certificate became effective. |
 |CertSubjectCommonName|String|test.example.com|The name of the certificate owner. |
-|CertType|String|RSA|The returned certificate type. Valid responses: **RSA**, **DSA**, and **ECDSA**. |
-|DomainList|String|example1.com,example2.com|The CDN domain names that match the certificate. Multiple CDN domain names are separated with commas \(,\). An empty string may be returned for the **DomainList** parameter. |
+|CertType|String|RSA|The type of the certificate. Valid responses: **RSA**, **DSA**, and **ECDSA**. |
+|DomainList|String|example1.com,example2.com|If a value is returned, the value matches the certificate. Multiple domain names are separated with commas \(,\). |
 |DomainNames|String|\*.example1.com,example2.com|The domain names \(DNS fields\) that match the certificate. Multiple domain names are separated with commas \(,\). |
 |Issuer|String|C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1|The certificate authority that issues the certificate. |
 |RequestId|String|ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D|The ID of the request. |
@@ -34,7 +45,7 @@ You can call this operation to query CDN domains by certificate.
 Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeCdnDomainByCertificate
+http://cdn.aliyuncs.com/?Action=DescribeCdnDomainByCertificate
 &SSLPub=xxx
 &<Common request parameters>
 ```
@@ -64,26 +75,29 @@ Sample success responses
 
 ```
 {
-	"content":[
-		{
-			"CertExpired":"yes",
-			"Issuer":"C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1",
-			"DomainNames":"*.example1.com,example2.com",
-			"CertSubjectCommonName":"test.example.com",
-			"CertType":"RSA",
-			"CertExpireTime":"Nov 29 00:00:00 2016 GMT",
-			"DomainList":"example1.com,example2.com",
-			"CertStartTime":"Nov 29 23:59:59 2017 GMT",
-			"CertCaIsLegacy":"yes"
-		}
-	],
-	"RequestId":"ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D"
+    "RequestId": "ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D",
+    "content": [
+        {
+            "Issuer": "C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1",
+            "CertType": "RSA",
+            "CertSubjectCommonName": "test.example.com",
+            "CertStartTime": "Nov 29 23:59:59 2017 GMT",
+            "CertExpireTime": "Nov 29 00:00:00 2016 GMT",
+            "DomainNames": "*.example1.com,example2.com",
+            "DomainList": "example1.com,example2.com",
+            "CertExpired": "yes",
+            "CertCaIsLegacy": "yes"
+        }
+     ]
 }
 ```
 
 ## Error codes
 
-For more information about error codes, visit [API Error Center](https://error-center.aliyun.com/status/product/Cdn).
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|Certificate.FormatError|The format of the certificate is invalid.|The error message returned because the format of the specified certificate is invalid.|
+|500|InternalError|The request processing has failed due to backend service exception.|The error message returned because an internal error occurred. Try again later. If the error persists, submit a ticket.|
 
-For more information about error codes, visit [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
