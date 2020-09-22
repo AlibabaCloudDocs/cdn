@@ -1,67 +1,100 @@
 # DescribeDomainCertificateInfo
 
-You can call the DescribeDomainCertificateInfo operation to query the certificate information of a CDN domain.
+Queries the certificate information about an accelerated domain name.
+
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeDomainCertificateInfo) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeDomainCertificateInfo&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String|Yes|The operation that you want to perform. Set this parameter to DescribeDomainCertificateInfo.|
-|DomainName|String|Yes|The name of the CDN domain of which the certificate information is queried.|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeDomainCertificateInfo|The operation that you want to perform. Set the value to **DescribeDomainCertificateInfo**. |
+|DomainName|String|Yes|example.com|The accelerated domain name. You can specify only one domain name. |
 
 ## Response parameters
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|CertInfos|CertInfo\[\]|The certificate information.|
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|CertInfos|Array| |The certificate information. |
+|CertInfo| | | |
+|CertDomainName|String|example.com|The domain name that is specified in the certificate. |
+|CertExpireTime|String|2018-06-03T22:03:39Z|The time when the certificate expires. |
+|CertLife|String|months|The unit of the validity period of the certificate.
 
-Parameters in CertInfo
+-   **months**: The validity period is measured in months.
+-   **years**: The validity period is measured in years. |
+|CertName|String|example.com|The name of the certificate. |
+|CertOrg|String|Let's Encrypt|The name of the certificate authority \(CA\) that issued the certificate. |
+|CertStartTime|String|2018-06-03T22:03:39Z|The time when the certificate became effective. |
+|CertType|String|free|The type of the certificate. Valid values:
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|DomainName|String|The name of the CDN domain.|
-|CertName|String|The name of the certificate.|
-|CertDomainName|String|The domain name that matches the certificate.|
-|CertStartTime|String|The time when the certificate starts to take effect.|
-|CertUpdateTime|String|The time when the certificate was last updated.|
-|CertExpireTime|String|The time when the certificate expires.|
-|CertLife|String|The validity period of the certificate. -   months: The validity period is measured in months.
--   years: The validity period is measured in years. |
-|CertType|String|The type of the certificate. -   free: a free certificate
--   cas: a certificate purchased from Alibaba Cloud SSL Certificates Service
--   upload: a user uploaded certificate |
-|ServerCertificateStatus|String|The status of HTTPS. -   on: The HTTPS protocol is enabled.
--   off: The HTTPS protocol is disabled. |
-|Status|String|The status of the certificate. -   success: The certificate has taken effect.
--   checking: The system is checking whether the domain has been accelerated by using Alibaba Cloud CDN.
--   cname\_error: No valid CNAME record has been added for the CDN domain.
--   top\_domain\_cname\_error: No valid CNAME record has been added for the primary domain.
--   domain\_invalid: The domain name contains invalid characters.
--   unsupport\_wildcard: The domain name is a wildcard domain name, which is not supported.
--   applying: The certificate is in the application process.
--   get\_token\_timeout: The certificate application request has timed out.
--   check\_token\_timeout: The verification has timed out.
--   get\_cert\_timeout: The request for obtaining the certificate has timed out.
--   failed: The certificate application request failed. |
-|ServerCertificate|String|The public key of the certificate.|
-|DomainCnameStatus|String|The status of the CNAME. -   ok: The CNAME has been accelerated by using Alibaba Cloud CDN.
--   cname\_error: No valid CNAME record has been added for the CNAME of the CDN domain.
--   top\_domain\_cname\_error: No valid CNAME record has been added for the CNAME of the primary domain.
--   unsupport\_wildcard: the CNAME is a wildcard domain name, which is not supported. |
+-   **free**: a free certificate.
+-   **cas**: a certificate purchased from Alibaba Cloud SSL Certificates Service.
+-   **upload**: a user-uploaded certificate. |
+|CertUpdateTime|String|2018-06-03T22:03:39Z|The time when the certificate was renewed. |
+|DomainCnameStatus|String|ok|The status of the CNAME of the domain name.
+
+-   **ok**: The domain name points to a CNAME assigned from Alibaba Cloud Content Delivery Network \(CDN\).
+-   **cname\_error**: An error occurred and the domain name cannot point to the CNAME.
+-   **top\_domain\_cname\_error**: An error occurred to the CNAME of the top-level domain name. The domain name cannot point to the CNAME.
+-   **unsupport\_wildcard**: Wildcard domain names are not supported. |
+|DomainName|String|example.com|The accelerated domain name. |
+|ServerCertificate|String|asdadaxxxx|The public key of the certificate. |
+|ServerCertificateStatus|String|on|The status of HTTPS.
+
+-   **on**: enabled
+-   **off**: disabled |
+|Status|String|success|The status of the certificate.
+
+-   **success**: The certificate is effective.
+-   **checking**: The system is checking whether the domain name is accelerated by Alibaba Cloud CDN.
+-   **cname\_error**: The domain name is not accelerated by Alibaba Cloud CDN.
+-   **top\_domain\_cname\_error**: The top-level domain name is not an accelerated domain name.
+-   **domain\_invalid**: The domain name contains invalid characters.
+-   **unsupport\_wildcard**: Wildcard domain names are not supported.
+-   **applying**: The application for a certificate is in the process.
+-   **fget\_token\_timeout**: The application for a certificate timed out.
+-   **check\_token\_timeout**: The verification timed out.
+-   **get\_cert\_timeout**: The request to obtain the certificate timed out.
+-   **failed**: The application for a certificate failed. |
+|RequestId|String|5C1E43DC-9E51-4771-82C0-7D5ECEB547A1|The ID of the request. |
 
 ## Examples
 
-Sample request
+Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeDomainCertificateInfo&DomainName=example.com&<Common request parameters>
+http://cdn.aliyuncs.com?Action=DescribeDomainCertificateInfo
+&DomainName=example.com
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeDomainCertificateInfo>
+      <CertInfos>
+            <CertInfo>
+                  <Status>success</Status>
+                  <CertLife>3 months</CertLife>
+                  <ServerCertificateStatus>on</ServerCertificateStatus>
+                  <CertType>cas</CertType>
+                  <CertName>example.com</CertName>
+                  <CertDomainName>example.com</CertDomainName>
+                  <DomainName>example.com</DomainName>
+                  <CertOrg>Let's Encrypt</CertOrg>
+                  <CertExpireTime>2018-06-03T22:03:39Z</CertExpireTime>
+            </CertInfo>
+      </CertInfos>
+      <RequestId>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</RequestId>
+</DescribeDomainCertificateInfo>
+```
 
 `JSON` format
 
@@ -86,11 +119,7 @@ Sample success response
 }
 ```
 
-## Error codes
+## Errors
 
-|Error code|Error message|HTTP status code|Description|
-|:---------|:------------|:---------------|:----------|
-|InvalidDomain.NotFound|The domain provided does not belong to you.|404|The error message returned because the specified domain does not exist or does not belong to you.|
-
-This table lists the error codes that the operation can return. For more information, see [Error codes](https://error-center.aliyun.com/status/product/Cdn).
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
