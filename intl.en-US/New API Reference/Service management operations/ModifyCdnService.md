@@ -1,58 +1,67 @@
-# ModifyCdnService {#reference_llj_4bt_vdb .reference}
+# ModifyCdnService
 
-You can call the ModifyCdnService operation to change the billing method of the CDN service.
+Changes the billing method of Alibaba Cloud Content Delivery Network \(CDN\).
 
-CDN supports the following billing methods:
+**When you call this operation, note the following information:**
 
--   Pay by peak bandwidth
--   Pay by data transfer
+-   You must activate Alibaba Cloud CDN before you can call this operation.
+-   The new billing method takes effect at 00:00 the following day. If you change the billing method several times, the last change takes effect. The following billing methods are supported: pay-by-bandwidth and pay-by-data-transfer.
+-   You can call this operation up to 10 times per second with each account.
 
-**Note:** 
+## Debugging
 
--   To call this operation, make sure that the CDN service is activated.
--   The new billing method takes effect at 00:00 the following day. If you change the billing method multiple times, the most recent change takes effect.
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=ModifyCdnService&type=RPC&version=2018-05-10)
 
-## Debugging {#section_3t7_wdr_tyf .section}
+## Request parameters
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=ModifyCdnService) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|ModifyCdnService|The operation that you want to perform. Set the value to **ModifyCdnService**. |
+|InternetChargeType|String|Yes|PayByTraffic|The new billing method that Alibaba Cloud CDN will use. Valid values:
 
-## Request parameters {#section_udw_bqn_cgb .section}
+-   **PayByTraffic**: pay-by-data-transfer.
+-   **PayByBandwidth**: pay-by-bandwidth. |
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to ModifyCdnService.|
-|InternetChargeType|String |Yes|The new billing method. Valid values: PayByTraffic and PayByBandwidth.|
+## Response parameters
 
-## Response parameters {#section_zp9_g9h_5rw .section}
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|The ID of the request. |
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|RequestId|String|The ID of the request.|
+## Examples
 
-## Examples {#section_sz4_ctt_vdb .section}
+Sample requests
 
-Sample request
-
-``` {#codeblock_jt2_kxs_skt}
-https://cdn.aliyuncs.com?&Action=ModifyCdnService&InternetChargeType=PayByTraffic&<Common request parameters>
+```
+https://cdn.aliyuncs.com?&Action=ModifyCdnService
+&InternetChargeType=PayByTraffic
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<ModifyCdnServiceResponse>
+    <RequestId>97C68796-EB7F-4D41-9D5B-12B909D76508</RequestId>
+</ModifyCdnServiceResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_1si_5fc_4nc}
-{
-"RequestId":"97C68796-EB7F-4D41-9D5B-12B909D76508"
-}
+```
+{ "RequestId":"97C68796-EB7F-4D41-9D5B-12B909D76508" }
 ```
 
-## Error codes {#section_rr2_nqn_cgb .section}
+## Error codes
 
-|Error code|Error message|HTTP status code|Description|
-|:---------|:------------|:---------------|:----------|
-|OperationDenied|Your account does not open CDN service yet.|403|The error message returned because CDN has not been activated for your account.|
-|InvalidParameter|The specified value of parameter parameter name is not valid.|400|The error message returned because the specified parameters are invalid.|
-|InsufficientBalance|Your account does not have enough balance.|400|The error message returned because your account balance is insufficient.|
-|Forbidden.NotVerified|Your account is not verified yet.|403|The error message returned because your account is not verified.|
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|InvalidParameter|The specified value of parameter "InternetChargeType" is not valid.|The error message returned because the specified value of the InternetChargeType parameter is invalid.|
+|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because your account balance is insufficient. Top up your account and try again.|
+|400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_INVALID\_PAY\_METHOD|INVALID\_PAY\_METHOD|The error message returned because the specified payment method is invalid.|
+|400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_HASORDER|You have an order not yet effective|The error message returned because you have pending orders.|
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
