@@ -1,123 +1,150 @@
-# DescribeCdnDomainLogs {#reference3345 .reference}
+# DescribeCdnDomainLogs
 
-You can call the DescribeCdnDomainLogs operation to query the raw access log information for a specific CDN domain, including log path.
+Queries the address where you can download the raw access log data of a specific domain name.
 
--   If you do not specify the StartTime or EndTime parameters, the log data within the last 24 hours is queried.
--   If you specify both the StartTime and EndTime parameters, the log data within the specified time range is queried.
+**When you call this operation, note that:**
 
-**Note:** Log data can be retained for a maximum of one year.
+-   If you do not specify the StartTime or EndTime parameter, data collected within the last 24 hours is queried. If you specify both the StartTime and EndTime parameters, data collected within the specified time range is queried.
+-   You can download log data that was collected within the last one month.
+-   The log data was collected at an interval of one hour.
+-   The maximum number of times that each user can call this operation per second is 100.
 
-## Debugging {#section_vjf_owz_5xn .section}
+## Debugging
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeCdnDomainLogs) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCdnDomainLogs&type=RPC&version=2018-05-10)
 
-## Request parameters {#section_30m_b02_2vn .section}
+## Request parameters
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to DescribeCdnDomainLogs.|
-|DomainName|String|Yes|The name of the CDN domain to query log data for. You can specify only one domain name.|
-|StartTime|String|No| The beginning of the time range where the log data is queried.
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|No|DescribeCdnDomainLogs|The operation that you want to perform. Set the value to **DescribeCdnDomainLogs**. |
+|DomainName|String|Yes|www.yourdomain.com|The accelerated domain name. You can specify only one domain name. |
+|PageSize|Long|No|300|The number of entries to return on each page. Valid values: **1** to **1000**. Maximum value: **1000**. Default value: **300**. |
+|PageNumber|Long|No|2|The number of the page to return. Valid values: integers larger than **1**. |
+|StartTime|String|No|2017-12-21T08:00:00Z|The beginning of the time range to query.
 
- -   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
--   The time must be in UTC.
+ Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
+|EndTime|String|No|2017-12-22T08:00:00Z|The end of the time range to query. The end time must be later than the start time. The time period between the start time and end time cannot exceed one year.
 
- |
-|EndTime|String|No| The end of the time range where the log data is queried. The end time must be later than the start time.
+ Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
 
- -   The maximum time range that can be queried is one year.
--   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
--   The time must be in UTC.
+## Response parameters
 
- |
-|PageSize|Long|No| The maximum number of entries to return on each page. Valid values: 1 to 1000.
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|DomainLogDetails|Array| |The detailed log information, which is indicated by the DomainLogDetail parameter. Data type: array. |
+|DomainLogDetail| | | |
+|DomainName|String|example.com|The accelerated domain name. |
+|LogCount|Long|10|The total number of entries returned on the current page. |
+|LogInfos|Array| |The detailed log information, which is indicated by the LogInfoDetail parameter. Data type: array. |
+|LogInfoDetail| | | |
+|EndTime|String|2015-05-23T14:00:00Z|The end of the time range that was queried. |
+|LogName|String|gc.ggter.com\_2015\_05\_23\_2100\_2200.gz|The name of the log file. |
+|LogPath|String|cdnlog.cn-hangzhou.xxx|The path of the log file. |
+|LogSize|Long|258|The size of the log file. |
+|StartTime|String|2015-05-23T13:00:00Z|The beginning of the time range that was queried. |
+|PageInfos|Array| |The detailed log information, which is indicated by the PageInfoDetail parameter. Data type: array. |
+|PageInfoDetail| | | |
+|PageIndex|Long|1|The page number of the returned page. |
+|PageSize|Long|1|The number of entries returned per page. |
+|Total|Long|3|The total number of entries returned. |
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|The ID of the request. |
 
- -   Default value: 300.
--   Maximum value: 1000.
+## Examples
 
- |
-|PageNumber|Long|No|The number of the page to return. Pages start from page 1.|
+Sample requests
 
-## Response parameters {#section_a7q_lno_237 .section}
-
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|DomainLogDetails|DomainLogDetail|The detailed log information.|
-|RequestID|String|The ID of the request.|
-
-Parameters in DomainLogDetail
-
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|LogCount|Long|The total number of entries returned on this page.|
-|DomainName|String|The domain name.|
-|PageInfos|PageInfoDetail|The detailed page information.|
-|LogInfos|LogInfoDetail|The detailed log information.|
-
-Parameters in PageInfoDetail
-
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|PageIndex|Long|The number of the page returned.|
-|PageSize|Long|The maximum number of entries that can be returned on each page.|
-|Total|Long|The total number of entries returned.|
-
-Parameters in LogInfoDetail
-
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|LogName|String |The name of the log.|
-|LogPath|String|The path of the log to download.|
-|StartTime|String|The beginning of the time range where the log data was queried.|
-|End time.|String|The end of the time range where the log data was queried.|
-|LogSize|Long|The size of the log.|
-
-## Examples {#section_5jq_67n_9xh .section}
-
-Sample request
-
-``` {#codeblock_2qf_jfp_98b}
-https://cdn.aliyuncs.com?Action=DescribeCdnDomainLogs&DomainName=test1.example.com&<Common request parameters>
+```
+https://cdn.aliyuncs.com?Action=DescribeCdnDomainLogs
+&DomainName=www.yourdomain.com
+&StartTime=2017-12-21T08:00:00Z
+&EndTime=2017-12-22T08:00:00Z
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DomainLogModel>
+    <DomainName>example.com</DomainName>
+    <PageNumber>1</PageNumber>
+    <TotalCount>3</TotalCount>
+    <PageSize>100</PageSize>
+    <DomainLogDetails>
+        <DomainLogDetail>
+            <EndTime>2015-05-23T04:00:00Z</EndTime>
+            <LogName>gc.ggter.com_2015_05_23_1100_1200.gz</LogName>
+            <LogPath>test.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1100_1200.gz? OSSAccessKeyId=3xmgf7JheOfOxxxx&amp;Expires=1432539994&amp;Signature=7Ly4ccKN3afzAGYyWDbxBcOcnxxxx</LogPath>
+            <LogSize>257</LogSize>
+            <StartTime>2015-05-23T03:00:00Z</StartTime>
+        </DomainLogDetail>
+        <DomainLogDetail>
+            <EndTime>2015-05-23T08:00:00Z</EndTime>
+            <LogName>gc.ggter.com_2015_05_23_1500_1600.gz</LogName>
+            <LogPath>test.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz? OSSAccessKeyId=3xmgf7JheOfOxxxx&amp;Expires=1432539994&amp;Signature=dMv7VqPqZHXVbKPmorGIvylC6xxxx</LogPath>
+            <LogSize>194</LogSize>
+            <StartTime>2015-05-23T07:00:00Z</StartTime>
+        </DomainLogDetail>
+        <DomainLogDetail>
+            <EndTime>2015-05-23T14:00:00Z</EndTime>
+            <LogName>gc.ggter.com_2015_05_23_2100_2200.gz</LogName>
+            <LogPath>test.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_2100_2200.gz? OSSAccessKeyId=3xmgf7JheOfOxxxx&amp;Expires=1432539994&amp;Signature=FpSQCbgNcxCBYIxKVoKC8mGxxxx</LogPath>
+            <LogSize>258</LogSize>
+            <StartTime>2015-05-23T13:00:00Z</StartTime>
+        </DomainLogDetail>
+    </DomainLogDetails>
+</DomainLogModel>
+<RequestId>1805F349-0A2B-41D9-B4AD-33632AFC27F1</RequestId>
+```
 
 `JSON` format
 
-``` {#codeblock_1wo_yk3_5jz}
+```
 {
-    "RequestId": "077D0284-F041-4A41-A932-B48377FDAA25",
-    "DomainLogDetails": {
-        "DomainLogDetail": [
-            {
-                "LogInfos": {
-                    "LogInfoDetail": [
-                        {
-                            "LogName": "example1.com_2018_03_25_180000_190000.gz",
-                            "LogPath": "cdnlog2.aliyuncs.com/test1.example.com/2018_03_25/example1.com_2018_03_25_180000_190000.gz? xxx",
-                            "EndTime": "2018-05-31T04:00:00Z",
-                            "StartTime": "2018-05-31T03:00:00Z",
-                            "LogSize": 2645401
-                        },
-                        {
-                            "LogName": "example1.com_2018_03_25_190000_200000.gz",
-                            "LogPath": "cdnlog2.aliyuncs.com/test1.example.com/2018_03_25/example1.com_2018_03_25_190000_200000.gz? xxx",
-                            "EndTime": "2018-05-31T06:00:00Z",
-                            "StartTime": "2018-05-31T05:00:00Z",
-                            "LogSize": 2653965
-                        }
-                    ]
+    "DomainLogModel": {
+        "DomainName": "example.com",
+        "PageNumber": 1,
+        "TotalCount": 3,
+        "PageSize": 100,
+        "DomainLogDetails": {
+            "DomainLogDetail": [
+                {
+                    "EndTime": "2015-05-23T04:00:00Z",
+                    "LogName": "gc.ggter.com_2015_05_23_1100_1200.gz",
+                    "LogPath": "test.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1100_1200.gz? OSSAccessKeyId=3xmgf7JheOfOxxxx&Expires=1432539994&Signature=7Ly4ccKN3afzAGYyWDbxBcOcnxxxx",
+                    "LogSize": 257,
+                    "StartTime": "2015-05-23T03:00:00Z"
                 },
-                "LogCount": 20,
-                "PageInfos": {
-                    "PageIndex": 1,
-                    "PageSize": 20,
-                    "Total": 20
+                {
+                    "EndTime": "2015-05-23T08:00:00Z",
+                    "LogName": "gc.ggter.com_2015_05_23_1500_1600.gz",
+                    "LogPath": "test.cn-hangzhou.oss.aliyun-inc.com/gc.xxx.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz? OSSAccessKeyId=3xmgf7JheOfOxxxx&Expires=1432539994&Signature=dMv7VqPqZHXVbKPmorGIvylC6xxxx",
+                    "LogSize": 194,
+                    "StartTime": "2015-05-23T07:00:00Z"
                 },
-                "DomainName": "test1.example.com"
-            }
-        ]
-    }
+                {
+                    "EndTime": "2015-05-23T14:00:00Z",
+                    "LogName": "gc.ggter.com_2015_05_23_2100_2200.gz",
+                    "LogPath": "test.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_2100_2200.gz? OSSAccessKeyId=3xmgf7JheOfOxxxx&Expires=1432539994&Signature=FpSQCbgNcxCBYIxKVoKC8mGxxxx",
+                    "LogSize": 258,
+                    "StartTime": "2015-05-23T13:00:00Z"
+                }
+            ]
+        }
+    },
+    "RequestId": "1805F349-0A2B-41D9-B4AD-33632AFC27F1"
 }
 ```
+
+## Error codes
+
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|InvalidStartTime.Malformed|Specified StartTime is malformed.|The error message returned because the format of the specified start time is invalid. For more information about the time format, see the Request parameters section.|
+|400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the end time is invalid. For more information about the time format, see the Request parameters section.|
+|400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is invalid.|
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
