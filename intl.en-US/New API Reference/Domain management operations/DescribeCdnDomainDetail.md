@@ -1,95 +1,108 @@
-# DescribeCdnDomainDetail {#reference2293 .reference}
+# DescribeCdnDomainDetail
 
-You can call the DescribeCdnDomainDetail operation to query the basic information about a CDN domain.
+Queries the basic information about an accelerated domain name.
 
-## Debugging {#section_c8r_h64_2ru .section}
+The maximum number of times that each user can call this operation per second is 30.
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeCdnDomainDetail) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+## Debugging
 
-## Request parameters {#section_25m_1p7_e6o .section}
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCdnDomainDetail&type=RPC&version=2018-05-10)
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to DescribeCdnDomainDetail.|
-|DomainName|String|Yes|The name of the CDN domain of which the basic information is queried.|
+## Request parameters
 
-## Response parameters {#section_jpf_k0w_n6e .section}
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeCdnDomainDetail|The operation that you want to perform. Set the value to **DescribeCdnDomainDetail**. |
+|DomainName|String|Yes|www.yourdomain.com|The accelerated domain name. You can specify only one domain name. |
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|DomainName|String|The name of the CDN domain.|
-|Cname|String|The CNAME generated for the CDN domain. You must add a CNAME record with your DNS provider to map the CDN domain name to the CNAME.|
-|HttpsCname|String|The CNAME for which the HTTPS protocol is enabled.|
-|DomainStatus|String|The status of the CDN domain. -   online: The CDN domain is enabled.
--   offline: The CDN domain is disabled.
--   configuring: The CDN domain is being configured.
--   configure\_failed: The CDN domain failed to be configured.
--   checking: The CDN domain is under review.
--   check\_failed: The CDN domain failed the manual review.
+## Response parameters
 
- |
-|ServerCertificateStatus|String|Indicates whether the SSL certificate is enabled. -   on: The SSL certificate is enabled.
--   off: The SSL certificate is disabled.
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|GetDomainDetailModel|Struct| |The detailed information about the accelerated domain name. |
+|CdnType|String|web|The workload type of the accelerated domain name. Valid values:
 
- |
-|GmtCreated|String|The time when the CDN domain was added.|
-|GmtModified|String|The time when the CDN domain was last modified.|
-|ResourceGroupId|String|The ID of the resource group.|
-|Description|String|The description.|
-|Scope|String|The scope.|
-|SourceModels|SourceModel\[\]|The origin information of the CDN domain.|
+ -   **web**: images and small files.
+-   **download**: downloads of larges files.
+-   **video**: on-demand video and audio streaming. |
+|Cname|String|domain.w.alikunlun.net|The CNAME assigned to the accelerated domain name. You must add the CNAME record to the system of your DNS provider to map the accelerated domain name to the CNAME. |
+|Description|String|Live streaming|The remarks of the accelerated domain. |
+|DomainName|String|yourdomain.com|The accelerated domain name. |
+|DomainStatus|String|online|The status of the accelerated domain name. |
+|GmtCreated|String|2015-06-25T03:30:50Z|The time when the domain name was added to Alibaba Cloud Content Delivery network \(CDN\). |
+|GmtModified|String|2017-06-25T03:30:50Z|The last time when the accelerated domain name was modified. |
+|HttpsCname|String|yourdomain.com.alikunlun.com|The CNAME for which the HTTPS protocol is enabled. |
+|ResourceGroupId|String|abcd1234abcd1234|The ID of the resource group. |
+|Scope|String|domestic|The accelerated region. |
+|ServerCertificateStatus|String|on|Indicates whether the Secure Sockets Layer \(SSL\) certificate is enabled.
 
-Parameters in SourceModel
+ -   **on**: enabled
+-   **off**: disabled |
+|SourceModels|Array| |The information about the origin server. |
+|SourceModel| | | |
+|Content|String|test.com|The address of the origin server. |
+|Enabled|String|online|The status of the origin server. |
+|Port|Integer|80|The port that redirects back-to-origin requests. Ports 443 and 80 are supported. |
+|Priority|String|20|The priority of the origin server if multiple origin servers are specified. |
+|Type|String|domain|The type of the origin server. Valid values:
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|Content|String|The origin address.|
-|Type|String|The address type of the origin. -   ipaddr: IP address
--   domain: domain name
--   oss: URL of an Alibaba Cloud OSS bucket
+ -   **ipaddr**: an IP address.
+-   **domain**: a domain name.
+-   **oss**: an Object Storage Service \(OSS\) bucket. |
+|Weight|String|10|The weight of the origin server if multiple origin servers are specified. |
+|RequestId|String|18CF38AA-1275-451D-A12B-4EC0BF1C5E30|The ID of the request. |
 
- |
-|Port|Integer|The port number: 443 or 80.|
-|Enabled|String|The status of the origin.|
-|Priority|String|The priority of the origin if multiple origins are specified.|
-|Weight|String|The weight of the origin if multiple origins are specified.|
+## Examples
 
-## Examples {#section_w01_vy2_t2x .section}
+Sample requests
 
-Sample request
-
-``` {#codeblock_pqx_3zc_fyb}
-http://cdn.aliyuncs.com?Action=DescribeCdnDomainDetail&DomainName=example.com&<Common request parameters>
+```
+http://cdn.aliyuncs.com/?Action=DescribeCdnDomainDetail
+&DomainName=www.yourdomain.com
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeCdnDomainDetailResponse>
+	  <GetDomainDetailModel>
+		    <CdnType>web</CdnType>
+		    <Cname>bb.test.com.w.kunlunle.com</Cname>
+		    <DomainName>bb.test.com</DomainName>
+		    <DomainStatus>online</DomainStatus>
+		    <GmtCreated>2015-06-25T03:30:50Z</GmtCreated>
+		    <GmtModified>2015-06-25T03:30:53Z</GmtModified>
+		    <HttpsCname>bb-test-com.alikunlun.com</HttpsCname>
+		    <SourceType>domain</SourceType>
+		    <Region>huadong</Region>
+		    <ResourceGroupId>abcd1234abcd1234</ResourceGroupId>
+		    <SourceModels>
+			      <SourceModel>
+				        <Enabled>online</Enabled>
+				        <Port>80</Port>
+				        <Type>domain</Type>
+				        <Content>test.com</Content>
+				        <Priority>20</Priority>
+			      </SourceModel>
+		    </SourceModels>
+		    <Sources>
+			      <Source>test.com</Source>
+		    </Sources>
+	  </GetDomainDetailModel>
+	  <RequestId>18CF38AA-1275-451D-A12B-4EC0BF1C5E30</RequestId>
+</DescribeCdnDomainDetailResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_a51_uuz_5wv .language-json}
-{
-  "GetDomainDetailModel": {
-    "Cname": "example.com.w.kunlunle.com",
-    "DomainName": "example.com",
-    "DomainStatus": "online",
-    "GmtCreated": "2015-06-25T03:30:50Z",
-    "GmtModified": "2015-06-25T03:30:53Z",
-    "HttpsCname": "example.com.alikunlun.com",
-    "ResourceGroupId":"abcd1234abcd1234",
-    "SourceModels": {
-        "SourceModel": [
-            {
-             "Enabled": "online",
-             "Port": 80,
-             "Type": "domain",
-             "Content": "example.com",
-             "Priority": "20",
-             "Weight": "10"
-             }
-           ]
-            }
-  },
-  "RequestId": "18CF38AA-1275-451D-A12B-4EC0BF1C5E30"
-}
 ```
+{ "GetDomainDetailModel": { "CdnType": "web", "Cname": "bb.test.com.w.kunlunle.com", "DomainName": "bb.test.com", "DomainStatus": "online", "GmtCreated": "2015-06-25T03:30:50Z", "GmtModified": "2015-06-25T03:30:53Z", "HttpsCname": "bb-test-com.alikunlun.com", "SourceType": "domain", "Region":"huadong", "ResourceGroupId":"abcd1234abcd1234", "SourceModels": { "SourceModel": [ { "Enabled": "online", "Port": 80, "Type": "domain", "Content": "test.com", "Priority": "20" } ] }, "Sources": { "Source": [ "test.com" ] } }, "RequestId": "18CF38AA-1275-451D-A12B-4EC0BF1C5E30" }
+```
+
+## Errors
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
