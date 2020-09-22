@@ -1,51 +1,59 @@
-# DescribeCustomLogConfig {#reference3345 .reference}
+# DescribeCustomLogConfig
 
-You can call the DescribeCustomLogConfig operation to query the detailed information about a custom log configuration. You can use the ConfigId parameter to specify a custom log configuration.
+Queries the details of a custom log configuration.
 
-## Debugging {#section_jcc_wap_prp .section}
+The maximum number of times that each user can call this operation per second is 100.
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeCustomLogConfig) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+## Debugging
 
-## Request parameters {#section_ubn_32b_mgb .section}
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCustomLogConfig&type=RPC&version=2018-05-10)
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String|Yes|The operation that you want to perform. Set this parameter to DescribeCustomLogConfig.|
-|ConfigId|String|Yes|The ID of the log configuration.|
+## Request parameters
 
-## Response parameters {#section_fcn_32b_mgb .section}
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|No|DescribeCustomLogConfig|The operation that you want to perform. Set the value to **DescribeCustomLogConfig**. |
+|ConfigId|String|Yes|123|The ID of the custom configuration. |
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|Tag|String|The tag information of the log configuration.|
-|Remark|String|The format of the log configuration.|
-|Sample|String|The sample log configuration.|
+## Response parameters
 
-## Examples {#section_zcn_32b_mgb .section}
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Remark|String|$time\_iso8601\_$request\_method\_$|The format of the log configuration. |
+|RequestId|String|94E3559F-7B6A-4A5E-AFFD-44E2A208A249|The ID of the request. |
+|Sample|String|"\[9/Jun/2015:01:58:09 +0800\] 188.165.15.75 - 1542 \\"-\\" \\"GEThttp: //www.aliyun.com/index.html\\" 200|A sample log configuration. |
+|Tag|String|img1|The tag information of the log configuration. |
 
-Sample request
+## Examples
 
-``` {#codeblock_7rg_nr4_5xm}
-https://cdn.aliyuncs.com? Action=DescribeCustomLogConfig?ConfigId=2df93fd7-5bbc-48c0-bae2-1ee1032d8d86<Common request parameters>
+Sample requests
+
+```
+http(s)://cdn.aliyuncs.com/? Action=DescribeCustomLogConfig
+&ConfigId=123
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeCustomLogConfigResponse>
+	  <Tag>xxxxx</Tag>
+	  <RequestId>F32C57AA-7BF8-49AE-A2CC-3F42390F5A16</RequestId>
+	  <Sample>[9/Jun/2015:01:58:09 +0800] 188.165.15.75 - 1542 "-" "GEThttp: //www.aliyun.com/index.html" 200</Sample>
+	  <Remark>$time_iso8601_$request_method_$server_protocol..... </Remark>
+</DescribeCustomLogConfigResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_vf6_dg3_cq0}
-{
-    "Tag": "xxxxx",
-    "RequestId": "F32C57AA-7BF8-49AE-A2CC-3F42390F5A16",
-    "Sample": "[9/Jun/2015:01:58:09 +0800] 188.165.15.75 - 1542 \"-\" \"GEThttp: //example.com/index.html\" 200",
-    "Remark": "$time_iso8601_$request_method_$server_protocol....."
-}
+```
+{ "Tag": "xxxxx", "RequestId": "F32C57AA-7BF8-49AE-A2CC-3F42390F5A16", "Sample": "[9/Jun/2015:01:58:09 +0800] 188.165.15.75 - 1542 \"-\" \"GEThttp: //www.aliyun.com/index.html\" 200", "Remark": "$time_iso8601_$request_method_$server_protocol....." }
 ```
 
-## Error codes {#section_sqb_hfb_mgb .section}
+## Error codes
 
-|Error code|Error message|HTTP status code|Description|
-|:---------|:------------|:---------------|:----------|
-|Config.NotFound|Config does not exist or does not belong to the current user|404|The error message returned because the specified log configuration does not exist or does not belong to you.|
-|InvalidConfigId|Illegal ConfigId|403|The error message returned because the specified ConfigId parameter is invalid.|
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
