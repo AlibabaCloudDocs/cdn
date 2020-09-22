@@ -1,53 +1,99 @@
-# DescribeCdnUserResourcePackage {#reference2380 .reference}
+# DescribeCdnUserResourcePackage
 
-You can call the DescribeCdnUserResourcePackage operation to query the resource plans under your account.
+Queries the current resource plans that you have purchased for Alibaba Cloud Content Delivery Network \(CDN\).
 
-## Debugging {#section_tso_p8t_q0x .section}
+You can call this operation up to 30 times per second with each account.
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeCdnUserResourcePackage) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+## Debugging
 
-## Request parameters {#section_kez_pic_x1w .section}
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCdnUserResourcePackage&type=RPC&version=2018-05-10)
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to DescribeCdnUserResourcePackage.|
+## Request parameters
 
-## Response parameters {#section_gwr_ps8_dc7 .section}
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeCdnUserResourcePackage|The operation that you want to perform. Set the value to **DescribeCdnUserResourcePackage**. |
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|RequestId|String|The ID of the request.|
-|ResourcePackageInfos|\[ResourcePackageInfo\]|The details about each resource plan, which is indicated by the ResourcePackageInfo parameter.|
+## Response parameters
 
-Parameters in ResourcePackageInfo
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|84839536-2B7E-457D-9D8C-82E6C7D4E1A3|The ID of the request. |
+|ResourcePackageInfos|Array| |The details of each resource plan that is indicated by the ResourcePackageInfo parameter. |
+|ResourcePackageInfo| | | |
+|CommodityCode|String|cdnflowbag|The code of the resource plan. |
+|CurrCapacity|String|10995089554629|The remaining quota of the resource plan.
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|CurrCapacity|String|The remaining capacity of the instance.|
-|InitCapacity|String|The total resource capacity.|
-|CommodityCode|String |The code of the resource plan.|
-|DisplayName|String|The display name of the resource plan. For example, CDN Data Transfer Plan \(Mainland China Edition\) .|
-|InstanceId|String|The ID of the instance.|
-|Status|String|The status of the resource plan. -   valid: active
--   closed: expired
+ -   The remaining network traffic in the resource plan. The network traffic is consumed when you access the specified URL. Unit: bytes.
+-   The remaining number of requests that are supported by the resource plan. |
+|DisplayName|String|CDN resource plan \(mainland China\)|The name of the resource plan. |
+|EndTime|String|2018-07-01T08:00:00Z|The time when the resource plan expires. |
+|InitCapacity|String|536870912000|The total quota of the resource plan.
 
- |
-|StartTime|String|The time when the resource plan takes effect.|
-|EndTime|String|The time when the resource plan expires.|
+ -   The remaining network traffic in the resource plan. The network traffic is consumed when you access the specified URL. Unit: bytes.
+-   The maximum number of requests that are supported by the resource plan. |
+|InstanceId|String|FP-ilttxc23a|The ID of the instance. |
+|StartTime|String|2017-12-05T19:10:58Z|The time when the resource plan takes effect. |
+|Status|String|valid|The status of the resource plan. Valid values:
 
-## Examples {#section_wdn_7pi_cib .section}
+ -   **valid**: The resource plan is valid.
+-   **closed**: The resource plan is expired. |
+|TemplateName|String|CDN resource plan|The name of the template. |
 
-Sample request
+## Examples
 
-``` {#codeblock_a6p_5wo_mmg}
-https://cdn.aliyuncs.com?&Action=DescribeCdnUserResourcePackage&<Common request parameters>
+Sample requests
+
+```
+https://cdn.aliyuncs.com/?Action=DescribeCdnUserResourcePackage
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeCdnUserResourcePackageResponse>
+	  <ResourcePackageInfos>
+		    <ResourcePackageInfo>
+			      <Status>closed</Status>
+			      <InstanceId>FP-mkqgwsyui</InstanceId>
+			      <CommodityCode>cdnflowbag</CommodityCode>
+			      <InitCapacity>10995116277760</InitCapacity>
+			      <EndTime>2017-01-30T08:00:00Z</EndTime>
+			      <StartTime>2016-01-30T03:40:06Z</StartTime>
+			      <DisplayName>CDN resource plan (mainland China)</DisplayName>
+			      <CurrCapacity>10995089554629</CurrCapacity>
+		    </ResourcePackageInfo>
+		    <ResourcePackageInfo>
+			      <Status>valid</Status>
+			      <InstanceId>FP-ilttxc23a</InstanceId>
+			      <CommodityCode>cdnflowbag</CommodityCode>
+			      <InitCapacity>536870912000</InitCapacity>
+			      <EndTime>2018-07-01T08:00:00Z</EndTime>
+			      <StartTime>2017-07-01T01:26:41Z</StartTime>
+			      <DisplayName>CDN resource plan (mainland China)</DisplayName>
+			      <CurrCapacity>0</CurrCapacity>
+		    </ResourcePackageInfo>
+		    <ResourcePackageInfo>
+			      <Status>valid</Status>
+			      <InstanceId>CDNHTTPSBAG-cn-v0h0dnlq4000m9</InstanceId>
+			      <CommodityCode>cdnhttpsbag</CommodityCode>
+			      <InitCapacity>10000000</InitCapacity>
+			      <EndTime>2018-12-06T08:00:00Z</EndTime>
+			      <StartTime>2017-12-05T19:10:58Z</StartTime>
+			      <DisplayName>CDN HTTPS request resource plan</DisplayName>
+			      <CurrCapacity>9999645</CurrCapacity>
+		    </ResourcePackageInfo>
+	  </ResourcePackageInfos>
+	  <RequestId>84839536-2B7E-457D-9D8C-82E6C7D4E1A3</RequestId>
+</DescribeCdnUserResourcePackageResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_ojs_amf_1a4}
+```
 {
     "ResourcePackageInfos": {
         "ResourcePackageInfo": [
@@ -58,7 +104,7 @@ Sample success response
                 "InitCapacity": "10995116277760",
                 "EndTime": "2017-01-30T08:00:00Z",
                 "StartTime": "2016-01-30T03:40:06Z",
-                "DisplayName": "CDN Data Transfer Plan (Mainland China Edition) ",
+                "DisplayName": "CDN resource plan (mainland China)",
                 "CurrCapacity": "10995089554629"
             },
             {
@@ -68,7 +114,7 @@ Sample success response
                 "InitCapacity": "536870912000",
                 "EndTime": "2018-07-01T08:00:00Z",
                 "StartTime": "2017-07-01T01:26:41Z",
-                "DisplayName": "CDN Data Transfer Plan (Mainland China Edition)",
+                "DisplayName": "CDN resource plan (mainland China)",
                 "CurrCapacity": "0"
             },
             {
@@ -78,7 +124,7 @@ Sample success response
                 "InitCapacity": "10000000",
                 "EndTime": "2018-12-06T08:00:00Z",
                 "StartTime": "2017-12-05T19:10:58Z",
-                "DisplayName": "CDN HTTPS Requests Plan",
+                "DisplayName": "CDN HTTPS request resource plan",
                 "CurrCapacity": "9999645"
             }
         ]
@@ -86,4 +132,8 @@ Sample success response
     "RequestId": "84839536-2B7E-457D-9D8C-82E6C7D4E1A3"
 }
 ```
+
+## Error codes
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
