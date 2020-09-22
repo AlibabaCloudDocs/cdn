@@ -1,0 +1,54 @@
+# EnableRealtimeLogDelivery
+
+Enables real-time log delivery for specific accelerated domain names.
+
+You can call this operation up to 100 times per second with each account.
+
+## Debugging
+
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=EnableRealtimeLogDelivery&type=RPC&version=2018-05-10)
+
+## Request parameters
+
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|EnableRealtimeLogDelivery|The operation that you want to perform. Set the value to **EnableRealtimeLogDelivery**. |
+|Domain|String|Yes|example.com|The accelerated domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas \(,\). |
+
+## Response parameters
+
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|9732E117-8A37-49FD-A36F-ABBB87556CA7|The ID of the request. |
+
+## Examples
+
+Sample requests
+
+```
+https://cdn.aliyuncs.com?Action=EnableRealtimeLogDelivery
+&Domain=xxx.com
+```
+
+Sample success responses
+
+`XML` format
+
+```
+<EnableRealtimeLogDeliveryResponse>
+	  <RequestId>9732E117-8A37-49FD-A36F-ABBB87556CA7</RequestId>
+</EnableRealtimeLogDeliveryResponse>
+```
+
+`JSON` format
+
+```
+{
+    "RequestId": "9732E117-8A37-49FD-A36F-ABBB87556CA7"
+}
+```
+
+## Error codes
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
+
