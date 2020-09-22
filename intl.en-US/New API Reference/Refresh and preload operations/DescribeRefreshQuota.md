@@ -1,61 +1,85 @@
-# DescribeRefreshQuota {#reference1270 .reference}
+# DescribeRefreshQuota
 
-You can call the DescribeRefreshQuota operation to query the limits of the URLs and directories that can be refreshed or preloaded. The limits include the daily maximum number and the remaining number of the day.
+Queries the maximum and remaining numbers of URLs and directories for object refreshing, the maximum and remaining numbers of URLs for object prefetching, and the maximum and remaining numbers of URLs and directories that can be blocked.
 
-**Note:** You can call the RefreshObjectCaches operation to refresh content and call the PushObjectCache operation to preload content.
+**Note:** You can call the RefreshObjectCaches operation to refresh content and call the PushObjectCache operation to prefetch content.
 
-## Debugging {#section_d1i_7pl_5au .section}
+The maximum number of times that each user can call this operation per second is 20.
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeRefreshQuota) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+## Debugging
 
-## Request parameters {#section_o0i_gyr_18p .section}
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRefreshQuota&type=RPC&version=2018-05-10)
 
-|Parameter|Type|Required|Description|
-|---------|----|--------|-----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to DescribeRefreshQuota.|
+## Request parameters
 
-## Response parameters {#section_6ln_5bx_pxm .section}
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeRefreshQuota|The operation that you want to perform. Set the value to **DescribeRefreshQuota**. |
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|RequestId|String|The ID of the request.|
-|UrlQuota|String|The maximum number of URLs that can be refreshed each day.|
-|DirQuota|String|The maximum number of directories that can be refreshed each day.|
-|UrlRemain|String|The remaining number of URLs that can be refreshed for the day.|
-|DirRemain|String|The remaining number of directories that can be refreshed for the day.|
-|PreloadQuota|String|The maximum number of URLs that can be preloaded each day.|
-|PreloadRemain|String|The remaining number of URLs that can be preloaded for the day.|
+## Response parameters
 
-## Examples {#section_um3_web_d8x .section}
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|42E0554B-80F4-4921-AED6-ACFB22CAAAD0|The ID of the request. |
+|UrlQuota|String|2000|The maximum number of URLs that can be refreshed on the current day. |
+|DirQuota|String|100|The maximum number of directories that can be refreshed on the current day. |
+|UrlRemain|String|1996|The remaining number of URLs that can be refreshed on the current day. |
+|DirRemain|String|99|The remaining number of directories that can be refreshed on the current day. |
+|PreloadQuota|String|500|The maximum number of URLs that can be prefetched on the current day. |
+|PreloadRemain|String|400|The remaining number of URLs that can be prefetched on the current day. |
+|BlockQuota|String|300|The maximum number of URLs and directories that can be blocked on the current day. |
+|BlockRemain|String|100|The remaining number of URLs and directories that can be blocked on the current day. |
+|RegexQuota|String|20|The maximum number of times that you can use regular expressions to refresh directories or URLs on the current day. |
+|RegexRemain|String|10|The remaining number of times that you can use regular expressions to refresh directories or URLs on the current day. |
 
-Sample request
+## Examples
 
-``` {#codeblock_z4x_e2q_s17}
+Sample requests
+
+```
 http://cdn.aliyuncs.com?Action=DescribeRefreshQuota
 &<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeRefreshQuotaResponse>
+      <RequestId>42E0554B-80F4-4921-AED6-ACFB22CAAAD0</RequestId>
+	  <UrlQuota>2000</UrlQuota>
+      <DirQuota>100</DirQuota>
+      <UrlRemain>1996</UrlRemain>
+	  <DirRemain>99</DirRemain>
+	  <PreloadQuota>500</PreloadQuota>
+	  <PreloadRemain>400</PreloadRemain>
+      <BlockQuota>300</BlockQuota>
+      <RegexQuota>20</RegexQuota>
+      <RegexRemain>10</RegexRemain>
+      <blockRemain>200</blockRemain>
+</DescribeRefreshQuotaResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_hyl_pwx_p08 .language-json}
+```
 {
-    "DirQuota": "100",
-    "DirRemain": "99",
     "RequestId": "42E0554B-80F4-4921-AED6-ACFB22CAAAD0",
-    "UrlQuota": "2000",
-    "UrlRemain": "1996",
-    "PreloadQuota": "500",
-    "PreloadRemain": "400"
+    "UrlQuota": 2000,
+    "DirQuota": 100,
+    "UrlRemain": 1996,
+    "DirRemain": 99,
+    "PreloadQuota": 500,
+    "PreloadRemain": 400,
+    "BlockQuota": 300,
+    "RegexQuota": 20,
+    "RegexRemain": 10,
+    "blockRemain": 200
 }
 ```
 
-## Error codes {#section_qox_6sx_qoq .section}
+## Error codes
 
-|Error code|Error message|HTTP status code|Description|
-|:---------|:------------|:---------------|:----------|
-|Throttling|Request was denied due to request throttling.|503|The error message returned because the request was denied due to throttling.|
-|OperationDenied|Your account does not open CDN service yet.|403|The error message returned because CDN has not been activated for your account.|
-|OperationDenied|Your CDN service is suspended.|403|The error message returned because CDN has been suspended for your account.|
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
