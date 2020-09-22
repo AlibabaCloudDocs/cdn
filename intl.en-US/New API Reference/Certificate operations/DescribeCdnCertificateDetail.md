@@ -1,6 +1,8 @@
 # DescribeCdnCertificateDetail
 
-You can call this operation to query the detailed information about a CDN certificate.
+Queries the detailed information about the SSL certificate.
+
+The maximum number of times that each user can call this operation per second is 20.
 
 ## Debugging
 
@@ -8,19 +10,19 @@ You can call this operation to query the detailed information about a CDN certif
 
 ## Request parameters
 
-|Parameter|Type|Required|Example|Description |
-|---------|----|--------|-------|------------|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeCdnCertificateDetail|The operation that you want to perform. Set the value to **DescribeCdnCertificateDetail**. |
-|CertName|String|Yes|xxx|The name of the certificate to query. |
+|CertName|String|Yes|cert-15480655xxxx|The ID of the certificate. You can query only one certificate at a time. |
 
 ## Response parameters
 
-|Parameter|Type|Example|Description |
-|---------|----|-------|------------|
-|Cert|String|xxxxx|The certificate content returned. |
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Cert|String|-----BEGIN CERTIFICATE-----\\nMIIFzDCCBLSgAwIBxxxx|The content of the certificate. |
 |CertId|Long|881049|The ID of the certificate. |
-|CertName|String|test|The name of the certificate. |
-|Key|String|xxxxx|The key of the certificate. |
+|CertName|String|cert-15480655xxxx|The name of the certificate. |
+|Key|String|xxxx|The key of the certificate. |
 |RequestId|String|0AEDAF20-4DDF-4165-8750-47FF9C1929C9|The ID of the request. |
 
 ## Examples
@@ -29,7 +31,7 @@ Sample requests
 
 ```
 http://cdn.aliyuncs.com?Action=DescribeCdnCertificateDetail
-&CertName=xxxx
+&CertName=cert-15480655xxxx
 &<Common request parameters>
 ```
 
@@ -39,11 +41,12 @@ Sample success responses
 
 ```
 <DescribeCdnCertificateDetailResponse>
-	  <RequestId>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</RequestId>
-	  <Cert>xxxxx</Cert>
-	  <Key>xxxxx</Key>
-	  <CertId>881049</CertId>
-	  <CertName>test</CertName>
+  <CertId>881049</CertId>
+  <RequestId>34D625D3-E316-460C-B87D-85BB5AD8AEAD</RequestId>
+  <CertName>cert-15480655xxxx</CertName>
+  <Cert>-----BEGIN CERTIFICATE-----
+MIIFzDCCBLSgAwIBxxxx</Cert>
+  <Key>xxxx</Key>
 </DescribeCdnCertificateDetailResponse>
 ```
 
@@ -51,15 +54,15 @@ Sample success responses
 
 ```
 {
-	"CertId":"881049",
-	"Key":"xxxxx",
-	"RequestId":"0AEDAF20-4DDF-4165-8750-47FF9C1929C9",
-	"CertName":"test",
-	"Cert":"xxxxx"
+	"CertId": 881049,
+	"RequestId": "34D625D3-E316-460C-B87D-85BB5AD8AEAD",
+	"CertName": "cert-15480655xxxx",
+	"Cert": "-----BEGIN CERTIFICATE-----\nMIIFzDCCBLSgAwIBxxxx",
+    "Key":"xxxx"
 }
 ```
 
 ## Error codes
 
-For more information about error codes, visit [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
