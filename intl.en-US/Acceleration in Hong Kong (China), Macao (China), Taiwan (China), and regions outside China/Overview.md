@@ -67,7 +67,7 @@ This section describes the related services of Alibaba Cloud CDN to help you und
 |Related service|Benefit|
 |---------------|-------|
 |[Object Storage Service \(OSS\)](/intl.en-US/Product Introduction/What is OSS?.md)|You can integrate Alibaba Cloud CDN with OSS to accelerate access to websites. This way, you can retrieve content directly from CDN nodes to reduce the costs of Internet data transfer.|
-|[ApsaraVideo Live](https://www.alibabacloud.com/help/zh/product/29949.htm)|You can integrate Alibaba Cloud CDN with ApsaraVideo Live to achieve media feed storage, video segmentation and transcoding, access authentication, and content delivery acceleration.|
+|[ApsaraVideo Live](https://www.alibabacloud.com/help/product/29949.htm)|You can integrate Alibaba Cloud CDN with ApsaraVideo Live to achieve media feed storage, video segmentation and transcoding, access authentication, and content delivery acceleration.|
 |[Alibaba Cloud DNS](https://www.alibabacloud.com/help/zh/product/34269.htm)|You can use Alibaba Cloud DNS that is highly available and scalable to ensure smooth access to resources.|
 |[Elastic Compute Service \(ECS\)](/intl.en-US/Product Introduction/What is ECS?.md)|You can use Alibaba Cloud CDN with ECS to improve website availability, protect origin information, and minimize bandwidth usage costs.|
 |[Server Load Balancer \(SLB\)](/intl.en-US/Product Introduction/What is SLB?.md)|You can specify the IP address of an SLB instance as the origin address to balance the bandwidth required for retrieving resources from the origin server.|
