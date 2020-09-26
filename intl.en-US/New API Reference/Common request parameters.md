@@ -62,7 +62,7 @@ Sample responses in JSON format
 
 A 4xx or 5xx status code indicates a failed call. The request ID, host ID, error code, and error message are returned to you.
 
-You can troubleshoot the error based on the error code. For more information, see [Error codes](https://error-center.aliyun.com/status/product/Cdn). Alternatively, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) and provide additional inputs such as the host ID and request ID to request technical support from Alibaba Cloud.
+You can troubleshoot the error based on the error code. For more information, see [Error codes](https://error-center.alibabacloud.com). Alternatively, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) and provide additional inputs such as the host ID and request ID to request technical support from Alibaba Cloud.
 
 Sample responses in XML format
 
