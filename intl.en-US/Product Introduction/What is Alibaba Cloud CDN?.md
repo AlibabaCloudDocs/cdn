@@ -27,7 +27,7 @@ The basic services and value-added services of Alibaba Cloud CDN are charged bas
 -   For more information about the billing methods for basic services, see [Pricing of basic services](/intl.en-US/Pricing/Billing method/Basic service billing.md).
 -   For more information about the billing methods for value-added services, see [Pricing of value-added services](/intl.en-US/Pricing/Billing method/Value-added service billing.md).
 
-For more information about the pricing of Alibaba Cloud CDN, see [Pricing of CDN](https://www.alibabacloud.com/zh/product/cdn/pricing).
+For more information about the pricing of Alibaba Cloud CDN, see [Pricing of CDN](https://www.alibabacloud.com/product/cdn/pricing).
 
 ## Related services
 
@@ -36,7 +36,7 @@ This section describes related services of Alibaba Cloud CDN to help you underst
 |Related service|Benefit|
 |---------------|-------|
 |[Object Storage Service \(OSS\)](/intl.en-US/Product Introduction/What is OSS?.md)|You can integrate Alibaba Cloud CDN with OSS to accelerate access to websites. This way, you can retrieve content directly from CDN nodes to reduce the costs of Internet data transfer.|
-|[ApsaraVideo Live](https://www.alibabacloud.com/help/zh/product/29949.htm)|You can integrate Alibaba Cloud CDN with ApsaraVideo Live to achieve media feed storage, video segmentation and transcoding, access authentication, and content delivery acceleration.|
+|[ApsaraVideo Live](https://www.alibabacloud.com/help/product/29949.htm)|You can integrate Alibaba Cloud CDN with ApsaraVideo Live to achieve media feed storage, video segmentation and transcoding, access authentication, and content delivery acceleration.|
 |[Alibaba Cloud Domain Name System \(DNS\)](https://www.alibabacloud.com/help/zh/product/34269.htm)|You can use Alibaba Cloud DNS that is highly available and scalable to ensure smooth access to resources.|
 |[Elastic Compute Service \(ECS\)](/intl.en-US/Product Introduction/What is ECS?.md)|You can use Alibaba Cloud CDN with ECS to improve website availability, protect origin information, and minimize bandwidth usage costs.|
 |[Server Load Balancer \(SLB\)](/intl.en-US/Product Introduction/What is SLB?.md)|You can specify the IP address of an SLB instance as the origin address to balance the bandwidth required for retrieving resources from the origin server.|
