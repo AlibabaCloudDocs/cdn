@@ -1,28 +1,28 @@
-# Overview {#concept_1460619 .concept}
+# Overview
 
-You can analyze CDN logs to locate and resolve issues to improve the overall performance of your CDN service. This topic describes the log functions of CDN.
+You can analyze log data of Alibaba Cloud Content Delivery Network \(CDN\) to locate and resolve issues. This improves the overall performance of your CDN service. This topic describes the log management features of Alibaba Cloud CDN and the related services.
 
-## Log functions {#section_8uz_81g_v67 .section}
+## Log management features
 
-CDN supports the following log functions:
+Alibaba Cloud CDN supports the following log management features:
 
-|Function|Description|
-|--------|-----------|
-|[EN-US\_TP\_5171.md\#](reseller.en-US/Service Management/Log Management/Log Downloading.md#)|You can query log data within the specified time range or for a specified domain name, and then download the log data.|
-|[Configure log storage](reseller.en-US/Service Management/Log Management/Configure log storage.md#)|By default, CDN only stores log data for one month. You can import the log data to Object Storage Service \(OSS\) for persistent storage. This allows you to analyze the log data at any time.|
+|Feature|Description|
+|-------|-----------|
+|[Download logs](/intl.en-US/Service Management/Log Management/Download logs.md)|You can query log data within the specified time range or for a specified domain name, and then download the log data.|
+|[Log storage](/intl.en-US/Service Management/Log Management/Log storage.md)|By default, Alibaba Cloud CDN retains log data for up to one month. To retain log data for a longer period of time, import the log data to Object Storage Service \(OSS\). This allows you to analyze the log data at any time.|
 
-## Related products {#section_n1r_ytd_j2w .section}
+## Related services
 
-The log management functions of CDN work with the following products:
+The log management features of Alibaba Cloud CDN can be integrated with the following services:
 
 -   Function Compute
 
-    Function Compute is used in various CDN events, including log storage, refresh and preload, resource blocking, domain name addition and deletion, and domain name enabling and disabling. For more information about how these events are triggered, see [CDN event triggers](https://www.alibabacloud.com/help/zh/doc-detail/73333.htm).
+    Function Compute supports various events for CDN. You can use Function Compute events to import log data of Alibaba Cloud CDN to another service, refresh and prefetch content, add domain names to be accelerated, delete accelerated domain names, enables domain names, and disables domain names. For more information about how these events are triggered, see [CDN event triggers](https://www.alibabacloud.com/help/zh/doc-detail/73333.htm).
 
     For more information about Function Compute, see [What is Function Compute](https://www.alibabacloud.com/help/zh/doc-detail/52895.htm).
 
--   OSS
+-   Object Storage Service \(OSS\)
 
-    For more information about OSS, see [What is OSS?](../../../../reseller.en-US/Product Introduction/What is OSS?.md#).
+    For more information about OSS, see [What is OSS?](/intl.en-US/Product Introduction/What is OSS?.md)
 
 
