@@ -17,8 +17,8 @@ The following table lists the documents that describe the features of Alibaba Cl
 |Document|Description|
 |--------|-----------|
 |[Terms](/intl.en-US/Product Introduction/Terms.md)|Introduces terms related to Alibaba Cloud CDN.|
-|[CDN Learning Path](https://www.alibabacloud.com/zh/getting-started/learningpath/cdn)|Helps you quickly get started with Alibaba Cloud CDN.|
-|[API Reference](https://www.alibabacloud.com/help/zh/doc-detail/91856.htm)|Describes the API operations that you can call to use Alibaba Cloud CDN features.|
+|[CDN Learning Path](https://www.alibabacloud.com/getting-started/learningpath/cdn)|Helps you quickly get started with Alibaba Cloud CDN.|
+|[API Reference](https://www.alibabacloud.com/help/doc-detail/91856.htm)|Describes the API operations that you can call to use Alibaba Cloud CDN features.|
 
 ## Pricing
 
