@@ -15,7 +15,7 @@ Common parameters include common request parameters and common response paramete
 |Format|String|No|The format in which to return the response. Valid values: JSON and XML. Default value: XML.|
 |Version|String|Yes|The version number of the API. Specify the version number in the YYYY-MM-DD format. Set the value to 2018-05-10.|
 |AccessKeyId|String|Yes|The AccessKey ID provided to you by Alibaba Cloud.|
-|Signature|String|Yes|The signature string of the current request. For more information, see [Signature method]().|
+|Signature|String|Yes|The signature string of the current request. For more information, see [Signature method](/intl.en-US/New API Reference/Signature method.md).|
 |SignatureMethod|String|Yes|The encryption method of the signature string. Set the value to HMAC-SHA1.|
 |Timestamp|String|Yes|The timestamp of the request. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2018-05-10T12:00:00Z, which represents 20:00:00 on Thursday, May 10, 2018 \(UTC+8\). |
 |SignatureVersion|String|Yes|The version of the signature encryption algorithm. Set the value to 1.0.|
