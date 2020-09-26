@@ -1,24 +1,26 @@
-# Benefits {#concept_g5j_zt2_zdb .concept}
+# Benefits
 
-You can be abreast of Alibaba Cloud CDN's benefits in this document.
+This topic describes the benefits of Alibaba Cloud CDN.
 
-## Stable and fast {#section_xwq_p52_zdb .section}
+## Stability and high speed
 
--   Advanced distributed system architecture: 2500+ globally.
--   Adequate bandwidth and storage resources: a single node provides a bandwidth of more than 40 Gbps and a storage capacity of 40 TB to 1.5 PB.
--   Stable and efficient performance indicators: greater than 95% hit rate and video fluency rate, and millisecond-level response time.
--   Mature monitoring and service systems: 24/7 network-wide monitoring, smart monitoring and scheduling based on service quality.
+-   Advanced distributed system architecture: more than 2,300 nodes in Mainland China, and more than 500 nodes outside Mainland China, including China \(Hong Kong\), China \(Macau\), and China \(Taiwan\). Alibaba Cloud CDN nodes are deployed across six continents. Alibaba Cloud CDN provides the largest number of nodes in Mainland China.
+-   Sufficient bandwidth and storage resources: a bandwidth of more than 40 Gbit/s per node and a total bandwidth of 130 Tbit/s.
+-   Stable performance and high efficiency: a cache hit ratio of more than 95%, a video smooth streaming rate of more than 95%, and millisecond-level response time.
+-   Comprehensive monitoring and service systems: 24/7 network-wide monitoring, and intelligent monitoring and scheduling based on service quality.
 
-## Cost-effective {#section_q3h_v52_zdb .section}
+## Cost-effectiveness
 
--   With scalable resources, you are charged only for resources you use, and can achieve cross-carrier, cross-region network-wide coverage.
--   Two billing methods are provided, PayByTraffic, and PayByBandwidth, to satisfy different business needs.
--   The service automatically responds to site traffic spikes and makes adjustments without user intervention, reducing pressure on the origin site.
+-   You can elastically scale resources and pay for the resources based on the actual usage. You can achieve network-wide coverage across service providers and regions.
+-   Alibaba Cloud CDN provides pay-by-traffic and pay-by-bandwidth billing methods. Both billing methods are used on a pay-as-you-go basis. You can select a billing method based on your business needs.
+-   Alibaba Cloud CDN automatically responds to site traffic spikes and makes adjustments, which effectively reduces workloads on origins.
 
-## Easy to use {#section_flv_w52_zdb .section}
+## Ease of use
 
--   You can add, delete, modify, and query domain names on your own by using a wide range of simple custom configuration options. CDN supports customizing anti-leech measures, cache policies, HTTP request headers, and other functions.
--   The open API interfaces provide functions such as service activation, content refreshing, monitoring data retrieval, and distribution log downloads.
+-   Alibaba Cloud CDN provides an easy-to-use console. In this console, you can use a wide range of custom configuration items to add, delete, modify, and query domain names. Alibaba Cloud CDN also allows you to customize hotlink protection rules, cache policies, and HTTP response headers.
+-   Alibaba Cloud CDN provides a wide array of API operations. You can call these API operations to use Alibaba Cloud CDN features including service activation, content refresh, monitoring, and log download and distribution.
 
-For more information on Alibaba Cloud CDN's functions, refer to [Alibaba Cloud CDN Function List](https://www.alibabacloud.com/help/doc-detail/27125.htm).
+## High efficiency and intelligence
+
+The Alibaba Cloud CDN console can automatically and quickly respond to standardized configuration requests that you submit, which improves user experience. Compared with other CDN services, Alibaba Cloud CDN does not require manual intervention in this process, which minimizes the response time.
 
