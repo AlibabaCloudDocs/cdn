@@ -1,17 +1,22 @@
-# Overview {#concept_490971 .concept}
+---
+keyword: Refresh and prefetch
+---
 
-CDN supports the resource refresh and preload features. The refresh feature allows you to force CDN nodes to communicate with origins and obtain the latest files. The preload feature allows you to preload popular resources during peak hours from origins to CDN nodes to improve resource access efficiency. This topic describes how the refresh and preload features work, the time required by a refresh or preload task to take effect, and the related API operations.
+# Overview
 
-The concepts of refresh and preload in CDN are as follows:
+Alibaba Cloud Content Delivery Network \(CDN\) supports resource refresh and prefetch. The refresh feature allows you to force CDN nodes to retrieve the latest version of the resources from the origin. The prefetch feature allows you to cache frequently requested resources on CDN nodes before peak hours to accelerate content delivery. This topic describes how the refresh and prefetch features work, the amount of time that it takes to refresh or prefetch resources, and the related API operations.
 
--   Refresh: After a URL refresh or directory refresh request is submitted, the content cached on the CDN node will forcibly expire. When you request resources from the CDN node, the CDN node directly forwards the request to the origin to query the corresponding resources. The CDN node then returns the resources to you and caches them. The refresh feature reduces the cache hit rate.
--   Preload: After a URL preload request is submitted, the origin site automatically caches the corresponding resources to the CDN node. When you request the resources for the first time, you can obtain the latest resources directly from the CDN node cache without having the request rerouted to the origin site. The preload feature increases the cache hit rate.
+The refresh and prefetch features of Alibaba Cloud CDN are described as follows:
 
-The following table describes the refresh and preload features.
+-   Refresh: After you submit a URL or directory refresh request, the corresponding resource cached on the CDN node will forcibly expire. When a client requests the resource, the CDN node retrieves the latest version of the resource from the origin, returns the resource to the client, and then caches the resource. The refresh feature reduces the cache hit ratio.
+-   Prefetch: After you submit a URL prefetch request, the origin automatically caches the corresponding resource on the CDN node. When a client requests the resource for the first time, the CDN node returns the cached resource to the client without the need to reroute the request to the origin. The prefetch feature increases the cache hit ratio.
 
-|Category|How it works|Time to take effect|API operation|
-|--------|------------|-------------------|-------------|
-|URL refresh|Specify files to force a CDN node to retrieve the latest files from the origin.|Within 5 minutes|[RefreshObjectCaches](https://www.alibabacloud.com/help/doc-detail/91164.htm)|
-|Directory refresh|Specify directories to force a CDN node to retrieve the latest files in the directories from the origin.|[RefreshObjectCaches](https://www.alibabacloud.com/help/doc-detail/91164.htm)|
-|URL preload|Specify files to actively preload corresponding resources from the origin to a CDN L2 node. As a result, users can directly hit the cache upon their first visits to these resources.|[PushObjectCache](https://www.alibabacloud.com/help/doc-detail/91161.htm)|
+The following table describes the refresh and prefetch features in details.
+
+|Category|How it works|Time consumption|API operation|
+|--------|------------|----------------|-------------|
+|URL refresh|CDN nodes are forced to retrieve the latest version of the specified files from the origin.|It takes less than five minutes to refresh or prefetch resources.|[RefreshObjectCaches](/intl.en-US/New API Reference/Refresh and preload operations/RefreshObjectCaches.md)|
+|Directory refresh|CDN nodes are forced to retrieve the latest version of the files in the specified directories from the origin.|[RefreshObjectCaches](/intl.en-US/New API Reference/Refresh and preload operations/RefreshObjectCaches.md)|
+|URL refresh using regular expressions|You can use regular expressions to refresh all matching URLs.|N/A|
+|URL prefetch|Alibaba Cloud CDN retrieves the specified resources from the origin and caches them on CDN L2 nodes. When a client requests these resources for the first time, the nearest CDN L2 node returns the cached resources to the client.|[t65109.md\#](/intl.en-US/New API Reference/Refresh and preload operations/PushObjectCache.md)|
 
