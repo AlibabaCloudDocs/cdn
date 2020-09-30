@@ -42,7 +42,7 @@
 
 4.  使用wireshark，选择**WLAN 2**同步开始抓包。筛选的条件为`udp.port == 443`。
 
-    Mac操作系统可以看到Protocol显示的是GQUIC，Windows操作系统可以看到Protocol显示的是UDP。
+    Mac操作系统可以看到Protocol显示的是QUIC，Windows操作系统可以看到Protocol显示的是UDP。
 
     ![抓包](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1816190061/p169770.png)![UDP](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1390201061/p170311.png)
 
