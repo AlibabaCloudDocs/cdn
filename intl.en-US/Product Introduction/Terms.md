@@ -1,61 +1,67 @@
-# Terms {#concept_plh_jlc_5db .concept}
+# Terms
 
-This topic explains the commonly used terms in Alibaba Cloud CDN products.
+This topic introduces the common terms of Alibaba Cloud Content Delivery Network \(CDN\) to help you understand and use features of Alibaba Cloud CDN.
 
-## Accelerating domain {#section_obn_stb_p2b .section}
+## Accelerated domain name
 
-An accelerating domain is a domain that uses CDN to accelerate content distribution. A domain is the server IP address of a website, email, or FTP server.
+An accelerated domain name is a domain name that uses Alibaba Cloud CDN to accelerate content delivery. A domain name is the address of a group of servers, such as web servers, email servers, and FTP servers.
 
-**Note:** In this document, an accelerating domain is referred to as a domain in most cases.
+## CNAME record
 
-## Origin {#section_dym_wtb_p2b .section}
+A canonical name \(CNAME\) record is an alias record used to map a domain name to another domain name that provides an IP address. Example:
 
-An origin is the server that provides services. Specifically, an origin specifies the IP address to which CDN redirects back-to-origin requests. You can set your origin type to **OSS Domain**, **IP**, or **Origin Domain** on the Alibaba Cloud CDN console.
+1.  The domain name `docs.example.com` can be used to access the data stored on your server. However, you also want the data to be accessible through the domain name `documents.example.com`.
+2.  You can add a CNAME record to the Domain Name System \(DNS\) server to map `documents.example.com` to `docs.example.com`.
+3.  After you add the CNAME record, all requests sent to `documents.example.com` are redirected to `docs.example.com`.
 
-## CNAME record {#section_cm2_nlc_5db .section}
+## CNAME
 
-A Canonical Name \(CNAME\) is an alias, which is used to point a domain to another domain that provides an IP address.
+After you add a domain name to Alibaba Cloud CDN, the domain name is assigned a CNAME. The CNAME is in the format of `*.*kunlun*.com`. You must add a CNAME record to the DNS server to map the accelerated domain name to `*.*kunlun*.com`. After the CNAME record takes effect, all requests sent to the accelerated domain name are redirected to a CDN node. This enables Alibaba Cloud CDN to accelerate content delivery.
 
-For example, a large amount of information is stored on your server, and you can access the information through `docs.example.com`. If you also want to be able to access the information through `documents.example.com`, you can add a CNAME record at your DNS provider side, pointing `documents.example.com` to `docs.example.com`. Then, all requests destined for `documents.example.com` are redirected to `docs.example.com`, from which you can obtain the requested information.
+## DNS
 
-## CNAME {#section_dm2_nlc_5db .section}
+Domain Name System \(DNS\) is a service used to resolve domain names to the corresponding IP addresses that can be recognized by machines. One domain name is mapped to one IP address. The process to map a domain name to the corresponding IP address is called DNS resolution. A dedicated DNS server is used to automatically resolve domain names to the corresponding IP addresses. For example, if you enter `www.baidu.com` into the address bar of your browser, the DNS server automatically resolves the domain name to `220.181.112.143`.
 
-After you connect to Alibaba Cloud CDN and add your domain name on the Alibaba Cloud CDN console, Alibaba Cloud CDN assigns a CNAME in `*.*kunlun*.com` format to your domain. You can add a CNAME record at your DNS provider side, pointing your domain to the domain `*.*kunlun*.com`. When the CNAME record takes effect, all requests destined for your domain are redirected to your CDN node to accelerate content distribution.
+## SSL/TLS
 
-## DNS {#section_em2_nlc_5db .section}
+Secure Sockets Layer \(SSL\) is a TCP-based secure communication protocol. It helps to ensure the integrity and security of data transmitted over the Internet. After SSL is standardized, its name is changed to Transport Layer Security \(TLS\). Therefore, SSL and TLS are collectively known as SSL/TLS.
 
-Domain Name System \(DNS\) is used to translate domain names into IP addresses that can be recognized by the Internet. A dedicated DNS server must be used to automatically translate domain names into IP addresses. For example, if you enter the domain name `www.baidu.com`, the DNS server automatically translates it into the IP address `220.181.112.143`.
+## Edge node
 
-## SSL/TLS {#section_ghx_z5v_m2b .section}
+In the documentation of Alibaba Cloud CDN, an Alibaba Cloud edge node is also referred as a CDN node, cache node, acceleration node, Alibaba Cloud node, or node. The purpose of edge nodes is to simplify the complex network structure. Edge nodes are located closer to users on the network and are more efficient compared with origin servers. Alibaba Cloud CDN caches frequently accessed content to edge nodes to improve user experience.
 
-Secure Sockets Layer \(SSL\) is a TCP-based secure communications protocol. It helps to protect the integrity and security of data when the data is being transmitted over the Internet. After SSL is standardized, its name is changed to TLS. Therefore, SSL and TLS are collectively known as SSL/TLS.
+## Origin server
 
-## Edge node {#section_fm2_nlc_5db .section}
+An origin server is the server where your actual workloads are running. When you add a domain name to Alibaba Cloud CDN, you can specify the origin server by using the domain name of an Object Storage Service \(OSS\) bucket, the IP address or domain name of a web server that is accessible to the Internet, or a Function Compute domain name.
 
-In this document, the terms edge node, CDN node, cache node, accelerating node, and Alibaba Cloud node all refer to Alibaba Cloud edge node, sometimes shortened to node. The edge node concept is proposed to simplify the complex network structure. Edge nodes are located near end users on the network, therefore they can respond and connect to the network faster than origins. CDN caches the content that is frequently accessed by end users to edge nodes, increasing user access speeds and network quality.
+## Back-to-origin
 
-## Origin host {#section_gm2_nlc_5db .section}
+If a CDN node has not cached a resource that a client requests or the cached resource has expired, a back-to-origin process is triggered. The CDN node retrieves the resource from the corresponding origin server and then returns the resource to the client.
 
-An origin host specifies the host to which CDN redirects back-to-origin requests.
+For example, when a user requests a resource through a URL, if the optimal CDN node whose geographic location is closest to the user has not cached the resource, the CDN node retrieves the resource directly from the origin server and then returns the resource to the user.
 
-Example 1:
+## Origin host
 
-If your origin is the domain `www.a.com` and your origin host is `www.b.com`, then CDN redirects back-to-origin requests to the IP address that is translated from `www.a.com` and this IP address belongs to the `www.b.com` host.
+An origin host refers to the website domain name on the origin server accessed by a CDN node during a back-to-origin process.
 
-Example 2:
+Example 1: The origin server uses a domain name.
 
-If your origin is the IP address `1.1.1.1` and your origin host is `www.b.com`, then CDN redirects back-to-origin requests to the `www.b.com` host corresponding to the IP address `1.1.1.1`.
+If the origin server is set to `www.a.com` and the origin host is set to `www.b.com`, Alibaba Cloud CDN requests content from the website `www.b.com` that is hosted on the origin server `www.a.com`.
 
-## Origin protocol {#section_hm2_nlc_5db .section}
+Example 2: The origin server uses an IP address.
 
-An origin protocol is the protocol that CDN uses to redirect back-to-origin requests. If you set **Redirect Type** to **Follow** on the Alibaba Cloud CDN console, CDN redirects back-to-origin requests by using the same protocol as used by your client to request resources. In such case, if your client requests resources by using HTTPS \(or HTTP\), your CDN node redirects the requests to your origin also by using HTTPS \(or HTTP\) in case that the requested resources are not cached on the node.
+If the origin is set to 1.1.1.1 and the origin host is set to `www.b.com`, Alibaba Cloud CDN requests content from the website `www.b.com` that is hosted on the origin server 1.1.1.1.
 
-## Filter Parameter {#section_im2_nlc_5db .section}
+## Origin protocol policy
 
-Filter Parameter is a function, which enables you to filter out the parameters that follow a question mark \(?\) in the URL of each request based on your business needs.
+The protocol policy that you want Alibaba Cloud CDN to use when it retrieves content from the origin server. If you set the origin protocol policy to Follow in the Alibaba Cloud CDN console, Alibaba Cloud CDN communicates with the origin server based on the protocol of the request. For example, if a client sends an HTTP request, Alibaba Cloud CDN communicates with the origin server also over HTTP.
 
--   When you enable this function, your CDN node filters out the parameters that follow a question mark \(?\) from each URL. In addition, if multiple URLs are the same after the parameters are filtered out, your CDN node caches only one replica for these URLs.
--   When you disable this function, your CDN node caches a replica of each URL.
+## Parameter filtering
 
-If the URLs of the resources that you request contain different parameters that indicate the same content, we recommend that you enable this function to increase the cache hit ratio.
+Parameter filtering is a feature provided by Alibaba Cloud CDN. You can enable or disable this feature to determine whether to ignore the parameters that follow the question mark \(`?`\) in the URL of each request when Alibaba Cloud CDN caches content from the origin server.
+
+-   After parameter filtering is enabled, CDN nodes ignore the parameters following the question mark \(?\) in the URL to request content from the origin server when the requested content is accessed for the first time. Then, CDN nodes cache one version of the retrieved content and serve all subsequent requests with the cached version.
+-   After parameter filtering is disabled, CDN nodes cache a version of the requested content for each request with a unique URL that includes parameters.
+
+If URLs with different parameters point to the same resource, we recommend that you enable this feature to increase the cache hit ratio.
 
