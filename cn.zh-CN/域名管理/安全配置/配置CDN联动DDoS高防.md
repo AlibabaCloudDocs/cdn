@@ -37,7 +37,7 @@ CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒�
 
 6.  配置**DDoS联动产品**、**联动目标类型**及**联动目标**。
 
-    ![ddos高防](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1009068951/p113561.png)
+    ![ddos高防](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2210652061/p113561.png)
 
     **说明：** 当前域名没有查询到DDoS高防配置。
 
@@ -50,7 +50,7 @@ CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒�
 
 ![ddos-2](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1009068951/p113576.png)
 
-您使用联动DDoS功能，CDN将自动为您创建AliyunCDNAccessingDDoSRole角色，并授权CDN使用该角色授权CDN访问DDoS高防产品中的资源。AliyunCDNAccessingDDoSRole角色中包含的权限包括如下接口：
+您使用联动DDoS功能，CDN将自动为您创建AliyunServiceRoleForCDNAccessingDDoS角色，并授权CDN使用该角色授权CDN访问DDoS高防产品中的资源。AliyunServiceRoleForCDNAccessingDDoS角色中包含的权限包括如下接口：
 
 -   DescribeDomainAttackEvents：查询针对网站业务的攻击事件。
 -   DescribeDomainDDoSAttackEvents：查询DDoS的攻击事件。
@@ -59,5 +59,5 @@ CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒�
 -   DescribeDomainQPSList：查询网站业务的QPS统计信息。
 -   DescribeCdnLinkageRules：查询联动配置。
 
-如果您希望删除该AliyunCDNAccessingDDoSRole角色，您需要关闭所有域名的DDoS联动功能，然后才能在RAM中删除该SLR。详情请参见[SLR详细介绍](/cn.zh-CN/角色管理/服务关联角色.md)。
+如果您希望删除该AliyunServiceRoleForCDNAccessingDDoS角色，您需要关闭所有域名的DDoS联动功能，然后才能在RAM中删除该SLR。详情请参见[SLR详细介绍](/cn.zh-CN/角色管理/服务关联角色.md)。
 
