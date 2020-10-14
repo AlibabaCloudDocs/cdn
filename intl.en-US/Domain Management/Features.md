@@ -1,65 +1,74 @@
-# Features {#concept_tvm_vhx_wdb .concept}
+---
+keyword: [Alibaba Cloud CDN library, CDN console navigation, CDN console pages]
+---
 
-The Alibaba Cloud CDN console not only allows you to complete basic operations such as domain name configuration, but also provides resource monitoring services for real-time data analysis. You can also learn about your billing information and change the billing method at any time. This topic describes the CDN console and the domain management features.
+# Features
 
-## Console guide {#section_75m_vfk_6p8 .section}
+In the Alibaba Cloud Content Delivery Network \(CDN\) console, you can configure domain names and perform other basic operations. You can also view resource monitoring data and analyze data in real time. The Alibaba Cloud CDN console provides you with your billing information and allows you to change the billing method based on your business requirements. This topic describes the layout of the Alibaba Cloud CDN console and the domain management features of Alibaba Cloud CDN.
 
-The following figure shows the CDN console interface.
+**Note:** To help you understand and obtain up-to-date information about Alibaba Cloud CDN, operations that you can perform in the console are classified into domain management features and service management features.
 
-![CDN console](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5118/156552078954228_en-US.png)
+## Console layout
 
-The following table describes the CDN console interface.
+The following figure shows the layout of the Alibaba Cloud CDN console.
 
-|No.|Element|Description|
+![Alibaba Cloud CDN console](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2950462061/p54228.png)
+
+The following figure shows the layout of the Alibaba Cloud CDN console.
+
+|NO.|Section|Description|
 |---|-------|-----------|
-|1|Left-side navigation pane|Displays the navigation pane for domain management. For more information, see [Domain management features](#section_2le_by2_8r4).|
-|2|Basic data|Displays the usage status of each billing item based on the billing method of your CDN service. For more information, see [Basic Service](../../../../intl.en-US/Pricing/Billing method/Basic Service.md#).|
-|3|Hot services|Shows you how to quickly access the frequently used CDN features.|
-|4|CDN user guide|Displays the links of the CDN help documents to which you can refer. For more information, see [CDN Learning Path](https://www.alibabacloud.com/zh/getting-started/learningpath/cdn?spm=a2796.7980202.1167821.2.44fb5f45Bo5QjO).|
-|5|Configure log storage|The log storage service uses Function Compute to store logs for a long time period. For more information, see [Configure log storage](../../../../intl.en-US/Service Management/Log Management/Configure log storage.md#).|
-|6|Billing method|Displays the billing method you have selected. You can also modify the billing method as needed. For more information, see [Basic Service](../../../../intl.en-US/Pricing/Billing method/Basic Service.md#) and [Value-added service](../../../../intl.en-US/Pricing/Billing method/Value-added service.md#).|
-|7|All domains|Allows you to quickly manage the existing domains, add domains, and perform the refresh or preload operation.|
-|8|Other acceleration products|Displays CDN-related products.|
-|9|Traffic-based domain ranking|Displays top five CDN domains by traffic.|
+|1|Left-side navigation pane|The navigation pane of the Alibaba Cloud CDN console. For more information, see [Domain management features](#section_2le_by2_8r4).|
+|2|Basic information|Displays the usage of each billing item based on the billing method of your CDN service. For more information, see [Pricing of basic services](/intl.en-US/Pricing/Billing method/Pricing of basic services.md).|
+|3|Popular services|Displays popular features of Alibaba Cloud CDN.|
+|4|User guide|Displays the links of Alibaba Cloud CDN documents. For more information, see [CDN Learning Path](https://www.alibabacloud.com/zh/getting-started/learningpath/cdn?spm=a2796.7980202.1167821.2.44fb5f45Bo5QjO).|
+|5|Billing method|Displays the billing method of your CDN service. You can also change the billing method as needed. For more information, see [Pricing of basic services](/intl.en-US/Pricing/Billing method/Pricing of basic services.md) and [Billing of value-added services](/intl.en-US/Pricing/Billing method/Billing of value-added services.md).|
+|6|Resource plans|Displays the resource plans that you have purchased. For more information, see [Resource plans](/intl.en-US/Service Management/Monitoring and Usage Analytics/Usage Query/Resource plans.md).|
+|7|Total domain names|Allows you to manage accelerated domain names, add domain names, and perform the refresh or prefetch operation.|
+|8|Related products|Displays related products and other relevant information.|
+|9|Domain names ranked by network traffic|Displays the top five accelerated domain names ranked by network traffic.|
 
-## Domain management features {#section_2le_by2_8r4 .section}
+## Domain management features
 
-The following table lists the CDN domain management features.
+The following table lists the domain management features.
 
 |Feature|Reference|Description|Default value|
 |-------|---------|-----------|-------------|
-|Bulk copying|[Copy configurations](intl.en-US/Domain Management/Copy configurations.md#)|Allows you to copy one or more configurations of a CDN domain to another one or more CDN domains.|None|
-|Alert settings|[Set an alarm rule](intl.en-US/Domain Management/Set an alarm rule.md#)|Monitors CDN domains by using the following metrics: peak bandwidth, 4xx code proportion, 5xx code proportion, hit rate, Internet downstream traffic, and QPS. When an alert rule is triggered, Alibaba Cloud CloudMonitor sends an alert message through SMS or email based on the settings.|None|
-|Tag management|[Attach tags to a domain name](intl.en-US/Domain Management/Tags/Attach tags to a domain name.md#)|Allows you to add tags to a domain name or group domain names by tags.|None|
-|[Manage domain names by tag](intl.en-US/Domain Management/Tags/Manage domain names by tag.md#)|Allows you to use tags to quickly filter domain names for group management.|None|
-|[Query domain names by tag](intl.en-US/Domain Management/Tags/Query domain names by tag.md#)|Allows you to use tags to quickly filter domain names for data query.|None|
-|Basic information settings|[Modify basic information](intl.en-US/Domain Management/Basic settings/Modify basic information.md#)|Allows you to modify the accelerated region.|None|
-|[Modify origin information](intl.en-US/Domain Management/Basic settings/Modify origin information.md#)|Allows you to modify the origin information.|None|
-|Back-to-origin settings|[Configure an origin host](intl.en-US/Domain Management/Content back-to-source settings/Configure an origin host.md#)|Allows you to modify the domain name of the origin host.|Enabled|
-|[Configure an origin protocol](intl.en-US/Domain Management/Content back-to-source settings/Configure an origin protocol.md#)|CDN communicates with your origin according to the specified origin protocol policy. If you specify the Follow policy, CDN communicates with your origin over HTTP or HTTPS, depending on the protocol of the client request.|Disabled|
-|[Configure the private bucket access control](intl.en-US/Domain Management/Content back-to-source settings/Enable private bucket back-to-origin authentication.md#)|Grants CDN permissions to access the specified private OSS bucket that serves as the origin.|Disabled|
-|[Back-to-origin SNI](intl.en-US/Domain Management/Content back-to-source settings/Back-to-origin SNI.md#)|If you have bound your origin IP address to multiple domain names, you must specify the SNI of a specific domain when CDN nodes access your origin site over HTTPS.|Disabled|
-|[Customize an origin HTTP header](intl.en-US/Domain Management/Content back-to-source settings/Customize an origin HTTP header.md#)|If you configure CDN to use HTTP to communicate with your origin, you can add or remove HTTP header fields.|Disabled|
-|[Set the origin request timeout period](intl.en-US/Domain Management/Content back-to-source settings/Set the origin request timeout period.md#)|Allows you to set the maximum amount of time that CDN waits for a response after it forwards a request to an origin. When CDN does not receive any response before the timeout period expires, the connection between the CDN node and the origin is terminated.|30 seconds|
-|Cache settings|[Configure cache expiration](intl.en-US/Domain Management/Cache settings/Create a cache expiration rule.md#)|Allows you to customize cache expiration rules for specified resources.|None|
-|[Set HTTP code expiration time](intl.en-US/Domain Management/Cache settings/Set HTTP code expiration time.md#)|Allows you to customize the expiration rules for the status codes of the resources that are specified by directory or file extension.|None|
-|[Set the HTTP header](intl.en-US/Domain Management/Cache settings/Create an HTTP header.md#)|Allows you to customize the HTTP request header. Currently, 10 HTTP request header fields are available for customization.|None|
-|[Customize an error page](intl.en-US/Domain Management/Cache settings/Customize an error page.md#)|Allows you to customize a complete URL to redirect for an HTTP or HTTPS response code.|404|
-|[Rewrite](intl.en-US/Domain Management/Cache settings/Rewrite.md#)|Allows you to modify a request URI and perform a 302 redirect to the specified target URI.|None|
-|HTTPS secure acceleration|[Configure HTTPS certificates](intl.en-US/Domain Management/HTTPS Acceleration/Configure HTTPS certificates.md#)|Provides an end-to-end HTTPS secure acceleration solution. You only need to enable the secure acceleration mode and then upload the certificate and private key for a CDN domain. This feature also allows you to view, disable, enable, or modify certificates.|Disabled|
-|[Enable HTTP/2](intl.en-US/Domain Management/HTTPS Acceleration/Enable HTTP__2.md#)|The HTTP/2 protocol is binary and has multiple advantages including scalability, security, multiplexing, and header compression.|Disabled|
-|[Enable Force Redirect](intl.en-US/Domain Management/HTTPS Acceleration/Enable Force Redirect.md#)|If HTTP secure acceleration is enabled, you can configure CDN to forcibly redirect user requests to HTTPS or HTTP.|Disabled|
-|[Configure TLS](intl.en-US/Domain Management/HTTPS Acceleration/Configure TLS.md#)|After a TLS protocol version is enabled, the TLS handshake is enabled for the CDN domain. Currently, only TLS version 1.0, TLS version 1.1, TLS version 1.2, and TLS version 1.3 are supported.|Disabled|
-|[Configure HSTS](intl.en-US/Domain Management/HTTPS Acceleration/Configure HSTS.md#)|HSTS is used to force clients \(such as browsers\) to use HTTPS to create connections with the server.|Disabled|
-|Access control|[Configure hotlinking protection](intl.en-US/Domain Management/Access Control Settings/Anti-leech.md#)|Allows you to configure a referer blacklist or whitelist to identify and filter visitors.|Disabled|
-|[Configure URL authentication](intl.en-US/Domain Management/Access Control Settings/Business type/Authentication configuration.md#)|Allows you to configure URL authentication to prevent unauthorized downloads and theft of the resources on the site.|Disabled|
-|[Configure an IP blacklist or whitelist](intl.en-US/Domain Management/Access Control Settings/IP Blacklist and Whitelist.md#)|Allows you to configure an IP blacklist or whitelist to identify and filter visitors.|Disabled|
-|[UA blacklist and whitelist](intl.en-US/Domain Management/Access Control Settings/UA blacklist and whitelist.md#)|Allows you to configure a User-Agent blacklist or whitelist to identify and filter visitors.|Disabled|
-|Performance optimization|[Configure HTML optimization](intl.en-US/Domain Management/Performance Optimization settings/Page Optimization.md#)|Compresses and removes HTML redundant content, such as blank lines and carriage return characters, to reduce the file size.|Disabled|
-|[Configure intelligent compression](intl.en-US/Domain Management/Performance Optimization settings/Brotli Compression.md#)|Supports intelligent compression for content in multiple formats to reduce the size of user transmitted content.|Disabled|
-|[Brotli compression](intl.en-US/Domain Management/Performance Optimization settings/Brotli compression.md#)|If you want to compress static text files, you can enable this feature. It can reduce the size of the transmitted content and accelerate content delivery.|Disabled|
-|[Configure parameter filtering](intl.en-US/Domain Management/Performance Optimization settings/Filter Parameter.md#)|After a CDN node receives a URL request that includes the question mark \(`?`\) and Parameters, it determines whether the URL request needs to be rerouted to the origin site with the parameters.|Disabled|
-|Advanced settings|[Configure a bandwidth cap](intl.en-US/Domain Management/Advanced settings/Peak Bandwidth.md#)|Allows you to set the maximum bandwidth value for average bandwidth measured during each statistical cycle \(5 minutes\). To protect the CDN domain, the domain automatically becomes disabled when the average bandwidth exceeds the maximum value. In this situation, all requests are forwarded to the origin site.|Disabled|
-|Video-related settings|[Configure object chunking](intl.en-US/Domain Management/Video Service Configuration/Back-to-origin of range.md#)|Reduces back-to-origin traffic consumption and shortens resource response time.|Disabled|
-|[Configure video seeking](intl.en-US/Domain Management/Video Service Configuration/Drag__Drop Playback.md#)|After this feature is enabled, you can drag and drop the playback progress of an audio or video content without affecting the playback effect.|Disabled|
+|Batch copying|[Copy configurations](/intl.en-US/Domain Management/Copy configurations.md)|Copies one or more specific configurations of an accelerated domain name to another one or more accelerated domain names.|None|
+|Alert settings|[Set an alert rule](/intl.en-US/Domain Management/Set an alert rule.md)|Monitors accelerated domains based on metrics, such as peak bandwidth, proportions of HTTP status codes, hit ratios, outbound Internet traffic, and queries per second. When an alert rule is triggered, Cloud Monitor sends notifications to you through SMS messages or emails.|None|
+|Tag management|[Attach tags to a domain name](/intl.en-US/Domain Management/Tags/Attach tags to a domain name.md)|Attaches tags to a domain name or group domain names by tag.|None|
+|[Use tags to manage domain names](/intl.en-US/Domain Management/Tags/Use tags to manage domain names.md)|Filters or groups domain names based on specific tags.|None|
+|[Query domain names by tag](/intl.en-US/Domain Management/Tags/Query domain names by tag.md)|Filters domain names and queries data based on specific tags.|None|
+|Basic settings|[Modify basic information](/intl.en-US/Domain Management/Basic settings/Modify basic information.md)|Modifies the accelerated region.|None|
+|[Configure an origin server](/intl.en-US/Domain Management/Basic settings/Configure an origin.md)|Modifies the origin information.|None|
+|Back-to-origin settings|[Configure an origin host](/intl.en-US/Domain Management/Back-to-origin settings/Configure an origin host.md)|Modifies the domain name of the origin host.|Enable|
+|[Configure the origin protocol policy](/intl.en-US/Domain Management/Back-to-origin settings/Configure the origin protocol policy.md)|Alibaba Cloud CDN communicates with origin servers based on the specified origin protocol policy. If you specify the Follow policy, Alibaba Cloud CDN communicates with origin servers based on the protocol of the request sent from the client.|Disable|
+|[Enable private bucket back-to-origin authorization](/intl.en-US/Domain Management/Back-to-origin settings/Enable private bucket back-to-origin authorization.md)|Grants Alibaba Cloud CDN permissions to access the private Object Storage Service \(OSS\) bucket that is used as the origin server.|Disable|
+|[Configure an origin SNI](/intl.en-US/Domain Management/Back-to-origin settings/Configure an origin SNI.md)|Sets a Server Name Indication \(SNI\) value to specify the requested domain name in an HTTPS back-to-origin request. You must enable this feature when the IP address of the origin server is mapped to multiple domain names.|Disable|
+|[Customize an HTTP header](/intl.en-US/Domain Management/Back-to-origin settings/Customize an HTTP header.md)|Adds or removes HTTP headers when HTTP requests are redirected to origin servers.|Disable|
+|[Set the origin request timeout period](/intl.en-US/Domain Management/Back-to-origin settings/Set the origin request timeout.md)|Sets the maximum amount of time that Alibaba Cloud CDN waits for a response after it redirects a request to the origin server. If Alibaba Cloud CDN does not receive a response before the timeout period ends, the connection between the CDN node and the origin server is closed.|30 seconds|
+|Cache settings|[Create a cache expiration rule](/intl.en-US/Domain Management/Cache settings/Create a cache expiration rule.md)|Customizes cache expiration rules for specific resources.|None|
+|[Create a status code expiration rule](/intl.en-US/Domain Management/Cache settings/Create a status code expiration rule.md)|Customizes expiration rules for the status codes of the resources in the specified directories or with the specified file extensions.|None|
+|[Create an HTTP header](/intl.en-US/Domain Management/Cache settings/Customize an HTTP response header.md)|Customizes HTTP request headers. Alibaba Cloud CDN provides 10 types of HTTP request header.|None|
+|[Customize an error page](/intl.en-US/Domain Management/Cache settings/Customize an error page.md)|Customizes complete URLs to which requests are redirected based on the HTTP or HTTPS status code.|404|
+|[Configure a rewrite rule](/intl.en-US/Domain Management/Cache settings/Configure a rewrite rule.md)|Modifies request URIs and redirects them to the specified URIs based on the 302 status code.|None|
+|HTTPS secure acceleration|[Configure an SSL certificate](/intl.en-US/Domain Management/HTTPS/Configure an SSL certificate.md)|Provides an end-to-end HTTPS secure acceleration solution. You can enable the secure acceleration mode and upload an SSL certificate and the private key for an accelerated domain name. This feature also allows you to view, disable, enable, or modify the certificate.|Disable|
+|[Enable HTTP/2](/intl.en-US/Domain Management/HTTPS/Enable HTTP/2.md)|Enables the binary protocol HTTP/2 to provide multiple benefits including scalability, security, multiplexing, and header compression.|Disable|
+|[Enable force redirect](/intl.en-US/Domain Management/HTTPS/Enable force redirect.md)|Redirects requests from clients to L1 nodes as HTTP or HTTPS requests.|Disable|
+|[Configure TLS](/intl.en-US/Domain Management/HTTPS/Configure TLS.md)|Enables a TLS protocol version for an accelerated domain name to enable TLS handshakes. TLS 1.0, TLS 1.1, TLS 1.2, and TLS 1.3 are supported.|Disable|
+|[Configure HSTS](/intl.en-US/Domain Management/HTTPS/Configure HSTS.md)|Configures HTTP Strict Transport Security \(HSTS\) to allow clients such as browsers to use only HTTPS to connect to the server.|Disable|
+|Access control|[Configure hotlink protection](/intl.en-US/Domain Management/Access control/Configure hotlink protection.md)|Configures a referer blacklist or whitelist to identify and filter visitors. Only authorized users have access to resources on CDN nodes.|Disable|
+|[Configure URL signing](/intl.en-US/Domain Management/Access control/Business type/Configure URL signing.md)|Configures URL authentication to prevent unauthorized downloads of resources on the origin server.|Disable|
+|[Configure an IP address blacklist or whitelist](/intl.en-US/Domain Management/Access control/Configure an IP address blacklist or whitelist.md)|Configures an IP address blacklist or whitelist to identify and filter visitors. Only authorized users have access to resources on CDN nodes.|Disable|
+|[Configure a User-Agent blacklist or whitelist](/intl.en-US/Domain Management/Access control/Configure a User-Agent blacklist or whitelist.md)|Configures a User-Agent blacklist or whitelist to identify and filter visitors. Only authorized users have access to resources on CDN nodes.|Disable|
+|Performance optimization|[Configure HTML optimization](/intl.en-US/Domain Management/Performance optimization/Configure HTML optimization.md)|Compresses and removes HTML redundant content, such as space characters and carriage return characters, to reduce the file size.|Disable|
+|[Configure intelligent compression](/intl.en-US/Domain Management/Performance optimization/Configure intelligent compression.md)|Intelligently compresses multiple formats of content to reduce the size of transmitted content.|Disable|
+|[Configure Brotli compression](/intl.en-US/Domain Management/Performance optimization/Configure Brotli compression.md)|Compresses static text files to reduce the size of transmitted content and accelerate content delivery.|Disable|
+|[Configure parameter filtering](/intl.en-US/Domain Management/Performance optimization/Configure parameter filtering.md)|Specifies whether Alibaba Cloud CDN retains parameters that follow a question mark \(`?`\) in the URL of a back-to-origin request. You can enable this feature when the URL includes a question mark and parameters.|Disable|
+|Advanced settings|[Configure bandwidth cap](/intl.en-US/Domain Management/Advanced settings/Configure bandwidth cap.md)|Specifies a maximum bandwidth value. If the average bandwidth measured at five-minute intervals exceeds the maximum bandwidth, the accelerated domain name is disabled automatically. This can protect the accelerated domain name. In this case, all requests are redirected to the origin server.|Disable|
+|Video-related settings|[Configure object chunking](/intl.en-US/Domain Management/Video Service Configuration/Configure object chunking.md)|Enables Alibaba Cloud CDN to retrieve content from origin servers based on HTTP range requests. This reduces the back-to-origin data usage and response time.|Disable|
+|[Video seeking](/intl.en-US/Domain Management/Video Service Configuration/Video seeking.md)|Allows you to seek through video or audio without affecting the playback quality.|Disable|
+|[Configure audio or video preview](/intl.en-US/Domain Management/Video Service Configuration/Configure audio or video preview.md)|Allows you to preview audio and video content.|Disable|
+|[Audio extraction](/intl.en-US/Domain Management/Video Service Configuration/Audio extraction.md)|Extracts audio data from a video file and returns the audio data to the client. This reduces data usage.|Disable|
+|IPv6|[Configure IPv6 settings](/intl.en-US/Domain Management/Configure IPv6 settings.md)|Allows IPv6 clients to send requests to Alibaba Cloud CDN over IPv6. Alibaba Cloud CDN can also bring the IPv6 information of the clients in back-to-origin requests.|Disable|
 
