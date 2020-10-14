@@ -1,17 +1,25 @@
-# Set an alert rule {#task_261642 .task}
+---
+keyword: [alert rule, CDN]
+---
 
-This topic describes how to create an alert rule in the Alibaba Cloud CDN console. You can use CloudMonitor to set alert rules specific to CDN domain metrics. When an alert rule is triggered, CloudMonitor sends an alert by using the specified notification method \(for example, SMS or email\).
+# Set an alert rule
 
-1.  Log on to the [Alibaba Cloud CDN console](https://partners-intl.aliyun.com/login-required#cdn).
+This topic describes how to create an alert rule in the Cloud Monitor console. Alert rules can be used to monitor peak bandwidth values, proportions of the HTTP 4xx or 5xx status code, hit ratios, inbound traffic, and the number of queries per second of accelerated domain names. When an alert rule is triggered, Cloud Monitor sends notifications to you through SMS or emails.
+
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+
 2.  In the left-side navigation pane, click **Domain Names**.
-3.  On the Domain Names page, click **Alert Settings** to go to the CloudMonitor console. 
 
-    ![Domain names](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/156476/156652813644264_en-US.png)
+3.  On the **Domain Names** page, click **CloudMonitor** to go to the Cloud Monitor console.
 
-4.  Choose **Cloud Service Monitoring** \> **CDN**, and click the **Alert Rules** tab.
-5.  Click **Create Alert Rule**. 
+    ![Click Domain Names](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7746219951/p44264.png)
 
-    ![CloudMonitor console](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/156476/156652813644266_en-US.png)
+4.  Choose **Overview** \> **CDN**, and click the **Alert Rules** tab.
 
-6.  Create a CDN alert rule. For more information, see [Create a threshold alarm rule](../../../../../reseller.en-US/User Guide/Alarm service/Alarm rules/Create a threshold alarm rule.md#).
+5.  Click **Create Alert Rule**.
+
+6.  Create an alert rule for monitoring Alibaba Cloud Content Delivery Network \(CDN\). For more information, see [t111649.md\#](/intl.en-US/Alarm service/Alarm rules/Create a threshold-triggered alert rule.md).
+
+7.  Click **Confirm**.
+
 
