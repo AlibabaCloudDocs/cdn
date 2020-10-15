@@ -9,7 +9,7 @@ This topic describes what can cause your bills to be higher than expected and th
 
 ## Solutions
 
-To ensure that your CDN service runs as expected and prevent higher than expected bills, we recommend that you enable protection features to manage network traffic. For more information, see the [product page of Anti-DDoS](https://www.alibabacloud.com/zh/product/ddos).
+To ensure that your CDN service runs as expected and prevent higher than expected bills, we recommend that you enable protection features to manage network traffic. For more information, see the [product page of Anti-DDoS](https://www.alibabacloud.com/product/ddos).
 
 The following table lists the features that can be used to manage network traffic.
 
