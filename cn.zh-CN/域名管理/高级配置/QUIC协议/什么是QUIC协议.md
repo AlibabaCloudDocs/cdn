@@ -6,7 +6,7 @@
 
 QUIC（Quick UDP Internet Connections）是一种实验性传输层网络协议，提供与TLS/SSL相当的安全性，同时具有更低的连接和传输延迟。QUIC基于UDP，因此拥有极佳的弱网性能，在丢包和网络延迟严重的情况下仍可提供可用的服务。QUIC在应用程序层面就能实现不同的拥塞控制算法，不需要操作系统和内核支持，这相比于传统的TCP协议，拥有了更好的改造灵活性，非常适合在TCP协议优化遇到瓶颈的业务。
 
-目前，阿里云CDN开放使用的是七层协议的QUIC（HTTP over QUIC），版本号为Q46。
+目前，阿里云CDN开放使用的是七层协议的QUIC（HTTP over QUIC），版本号为Q39、Q43或Q46。
 
 ## 工作原理
 
@@ -18,7 +18,7 @@ QUIC（Quick UDP Internet Connections）是一种实验性传输层网络协议�
 
 QUIC协议对客户端的要求如下：
 
--   如果您使用Chrome浏览器，当前阿里云CDN支持的QUIC协议是Q46版本，Chrome支持直接对阿里云CDN发起QUIC请求。
+-   如果您使用Chrome浏览器，当前阿里云CDN支持的QUIC协议是Q39、Q43或Q46版本，Chrome支持直接对阿里云CDN发起QUIC请求。
 -   如果您使用自研App，则App必须集成支持QUIC协议的网络库，例如：lsquic-client或cronet网络库。
 
 ## QUIC计费规则
@@ -33,6 +33,8 @@ QUIC协议请求统计规则如下。
 -   CDN优先判断是否为QUIC协议请求，如果是，则对其进行QUIC请求数计费，不再匹配是否为HTTPS请求；如果不是，则会匹配HTTPS请求。
 
 ## 使用QUIC
+
+开启IPv6的域名暂不支持开启QUIC协议。
 
 QUIC第一轮内测已经于2020年6月结束，目前暂不支持新用户接入，敬请期待下一轮内测。
 
