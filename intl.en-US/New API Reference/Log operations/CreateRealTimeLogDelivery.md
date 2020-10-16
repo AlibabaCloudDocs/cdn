@@ -1,8 +1,8 @@
 # CreateRealTimeLogDelivery
 
-Configures real-time log delivery for specific accelerated domain names.
+Configures real-time log delivery for specified accelerated domain names.
 
-You can call this operation up to 100 times per second with each account.
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
