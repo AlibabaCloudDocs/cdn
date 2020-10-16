@@ -2,11 +2,11 @@
 
 Changes the billing method of Alibaba Cloud Content Delivery Network \(CDN\).
 
-**When you call this operation, note the following information:**
+**When you call this operation, note that:**
 
 -   You must activate Alibaba Cloud CDN before you can call this operation.
 -   The new billing method takes effect at 00:00 the following day. If you change the billing method several times, the last change takes effect. The following billing methods are supported: pay-by-bandwidth and pay-by-data-transfer.
--   You can call this operation up to 10 times per second with each account.
+-   The maximum number of times that each user can call this operation per second is 10.
 
 ## Debugging
 
@@ -17,7 +17,7 @@ Changes the billing method of Alibaba Cloud Content Delivery Network \(CDN\).
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|ModifyCdnService|The operation that you want to perform. Set the value to **ModifyCdnService**. |
-|InternetChargeType|String|Yes|PayByTraffic|The new billing method that Alibaba Cloud CDN will use. Valid values:
+|InternetChargeType|String|Yes|PayByTraffic|The new billing method that you want Alibaba Cloud CDN to use. Valid values:
 
 -   **PayByTraffic**: pay-by-data-transfer.
 -   **PayByBandwidth**: pay-by-bandwidth. |
@@ -59,7 +59,7 @@ Sample success responses
 |HttpCode|Error code|Error message|Description|
 |--------|----------|-------------|-----------|
 |400|InvalidParameter|The specified value of parameter "InternetChargeType" is not valid.|The error message returned because the specified value of the InternetChargeType parameter is invalid.|
-|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because your account balance is insufficient. Top up your account and try again.|
+|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because the balance in your account is insufficient. Top up your account balance and try again.|
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_INVALID\_PAY\_METHOD|INVALID\_PAY\_METHOD|The error message returned because the specified payment method is invalid.|
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_HASORDER|You have an order not yet effective|The error message returned because you have pending orders.|
 
