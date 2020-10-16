@@ -25,50 +25,50 @@ Queries the status of refresh or prefetch tasks under an accelerated domain name
 |PageNumber|Integer|No|1|The number of the page to return. Valid values: **1** to **100000**. |
 |ObjectType|String|No|file|The type of the task. Valid values:
 
- -   **file**: refreshes an individual file.
+-   **file**: refreshes an individual file.
 -   **directory**: refreshes files under the specified directories.
 -   **preload**: prefetches an individual file.
 
- If you specify the **DomainName** or **TaskStatus** parameter, you mus also set this parameter. |
+If you set the **DomainName** or **TaskStatus** parameter, you mus also set this parameter. |
 |DomainName|String|No|www.yourdomain.com|The accelerated domain name. You can specify only one domain name.
 
- By default, this operation queries the status of tasks under all accelerated domain names. |
+By default, this operation queries the status of tasks under all accelerated domain names. |
 |Status|String|No|Complete|The status of the task. Valid values:
 
- -   **Complete**: The task is completed.
+-   **Complete**: The task is completed.
 -   **Refreshing**: The task is in progress.
 -   **Failed**: The task failed. |
 |PageSize|Integer|No|20|The number of entries to be returned on each page. Default value: **20**. Maximum value: **100**. Valid values: **1** to **100**. |
 |StartTime|String|No|2017-12-21T08:00:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
-|EndTime|String| No|2017-12-22T08:00:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+|EndTime|String|No|2017-12-22T08:00:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
- The end time must be later than the start time. |
+The end time must be later than the start time. |
 |ResourceGroupId|String|No|your resourceGroupId|The ID of the resource group. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Tasks|Array| |The detailed information about the tasks that were queried. |
+|Tasks|Array of CDNTask| |The detailed information about the tasks that were queried. |
 |CDNTask| | | |
 |TaskId|String|704225667|The ID of the task. |
-|ObjectPath|String|http://aaa.com/1.txt|The path to the object that the task refreshed. |
+|ObjectPath|String|http://aaa.com/1.txt|The path of the object that was refreshed by the task. |
 |Status|String|Complete|The status of the task. Valid values:
 
- -   **Complete**: The task is completed.
+-   **Complete**: The task is completed.
 -   **Refreshing**: The task is in progress.
 -   **Failed**: The task failed.
--   **Pending**: The task is in the pending state. |
+-   **Pending**: The task is pending. |
 |Process|String|100%|The progress of the task. Unit: percentage. |
 |ObjectType|String|file|The type of the task. Valid values:
 
- -   **file**: refreshes an individual file.
+-   **file**: refreshes an individual file.
 -   **directory**: refreshes files under the specified directories.
 -   **preload**: prefetches an individual file. |
 |CreationTime|String|2014-11-27T08:23:22Z|The time when the task was created. The time is displayed in UTC. |
-|Description|String|Internal Error|The error message returned when the refresh or prefetch task has failed.
+|Description|String|Internal Error|The type of the error returned when the refresh or prefetch task failed.
 
- -   **InternalError**: An internal error occurred.
+-   **InternalError**: An internal error occurred.
 -   **OriginTimeout**: The response from the origin server timed out.
 -   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error. |
 |PageSize|Long|1|The number of entries returned per page. |
@@ -93,29 +93,29 @@ Sample success responses
 `XML` format
 
 ```
-<DescribeRefreshTasksResponse>	
-	  <Tasks>
-		    <CDNTask>
-			      <CreationTime>2014-11-27T08:23:22Z</CreationTime>
-			      <ObjectPath>http://aaa.com/1.txt</ObjectPath>
-			      <Status>Complete</Status>
-			      <TaskId>704225667</TaskId>
-			      <ObjectType>file</ObjectType>
-			      <Process>100%</Process>
-		    </CDNTask>
-		    <CDNTask>
-			      <CreationTime>2014-11-27T08:18:38Z</CreationTime>
-			      <ObjectPath>http://bbb.com/1.txt</ObjectPath>
-			      <Status>Complete</Status>
-			      <TaskId>704222904</TaskId>
-			      <ObjectType>file</ObjectType>
-			      <Process>100%</Process>
-		    </CDNTask>
-	  </Tasks>
-	  <PageNumber>1</PageNumber>
-	  <PageSize>10</PageSize>
-	  <TotalCount>2</TotalCount>
-	  <RequestId>174F6032-AA26-470D-B90E-36F0EB205BEE</RequestId>
+<DescribeRefreshTasksResponse>    
+      <Tasks>
+            <CDNTask>
+                  <CreationTime>2014-11-27T08:23:22Z</CreationTime>
+                  <ObjectPath>http://aaa.com/1.txt</ObjectPath>
+                  <Status>Complete</Status>
+                  <TaskId>704225667</TaskId>
+                  <ObjectType>file</ObjectType>
+                  <Process>100%</Process>
+            </CDNTask>
+            <CDNTask>
+                  <CreationTime>2014-11-27T08:18:38Z</CreationTime>
+                  <ObjectPath>http://bbb.com/1.txt</ObjectPath>
+                  <Status>Complete</Status>
+                  <TaskId>704222904</TaskId>
+                  <ObjectType>file</ObjectType>
+                  <Process>100%</Process>
+            </CDNTask>
+      </Tasks>
+      <PageNumber>1</PageNumber>
+      <PageSize>10</PageSize>
+      <TotalCount>2</TotalCount>
+      <RequestId>174F6032-AA26-470D-B90E-36F0EB205BEE</RequestId>
 </DescribeRefreshTasksResponse>
 ```
 
@@ -123,29 +123,29 @@ Sample success responses
 
 ```
 {
-	"Tasks": {
-		"CDNTask": [
+    "Tasks": {
+        "CDNTask": [
             {
-			"CreationTime": "2014-11-27T08:23:22Z",
-			"ObjectPath": "http://aaa.com/1.txt",
-			"Status": "Complete",
-			"TaskId": "704225667",
-			"ObjectType": "file",
-			"Process": "100%"
-		}, {
-			"CreationTime": "2014-11-27T08:18:38Z",
-			"ObjectPath": "http://bbb.com/1.txt",
-			"Status": "Complete",
-			"TaskId": "704222904",
-			"ObjectType": "file",
-			"Process": "100%"
-		}
+            "CreationTime": "2014-11-27T08:23:22Z",
+            "ObjectPath": "http://aaa.com/1.txt",
+            "Status": "Complete",
+            "TaskId": "704225667",
+            "ObjectType": "file",
+            "Process": "100%"
+        }, {
+            "CreationTime": "2014-11-27T08:18:38Z",
+            "ObjectPath": "http://bbb.com/1.txt",
+            "Status": "Complete",
+            "TaskId": "704222904",
+            "ObjectType": "file",
+            "Process": "100%"
+        }
       ]
-	},
-	"PageNumber": 1,
-	"PageSize": 10,
-	"TotalCount": 2,
-	"RequestId": "174F6032-AA26-470D-B90E-36F0EB205BEE"
+    },
+    "PageNumber": 1,
+    "PageSize": 10,
+    "TotalCount": 2,
+    "RequestId": "174F6032-AA26-470D-B90E-36F0EB205BEE"
 }
 ```
 
