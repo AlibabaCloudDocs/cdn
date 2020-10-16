@@ -1,8 +1,8 @@
 # ModifyRealtimeLogDelivery
 
-Modifies the configurations of real-time log delivery for a specified domain name. Each domain name supports only one Logstore.
+Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
 
-You can call this operation up to 100 times per second with each account.
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
@@ -15,7 +15,7 @@ You can call this operation up to 100 times per second with each account.
 |Action|String|Yes|ModifyRealtimeLogDelivery|The operation that you want to perform. Set the value to **ModifyRealtimeLogDelivery**. |
 |Domain|String|Yes|example.com|The accelerated domain name for which you want to modify the configurations of real-time log delivery. Only one domain name is supported. |
 |Project|String|Yes|testProject|The name of the Log Service project that is used for real-time log delivery. |
-|Logstore|String|Yes|TestLog|The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network \(CDN\) in real time. |
+|Logstore|String|Yes|TestLog|The name of the Logstore. |
 |Region|String|Yes|ch-shanghai|The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~). |
 
 ## Response parameters
