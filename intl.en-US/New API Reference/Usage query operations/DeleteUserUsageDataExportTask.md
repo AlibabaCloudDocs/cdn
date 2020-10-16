@@ -12,7 +12,7 @@ The maximum number of times that each user can call this operation per second is
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|No|DeleteUserUsageDataExportTask|The operation that you want to perform. Set the value to **DeleteUserUsageDataExportTask**. |
+|Action|String|Yes|DeleteUserUsageDataExportTask|The operation that you want to perform. Set the value to **DeleteUserUsageDataExportTask**. |
 |TaskId|String|Yes|10|The ID of the export task that you want to delete. |
 
 ## Response parameters
@@ -37,7 +37,7 @@ Sample success responses
 
 ```
 <DeleteUserUsageDataExportTaskResponse>
-	  <RequestId>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</RequestId>
+      <RequestId>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</RequestId>
 </DeleteUserUsageDataExportTaskResponse>
 ```
 
