@@ -2,7 +2,7 @@
 
 Enables real-time log delivery for specific accelerated domain names.
 
-You can call this operation up to 100 times per second with each account.
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
@@ -13,7 +13,7 @@ You can call this operation up to 100 times per second with each account.
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|EnableRealtimeLogDelivery|The operation that you want to perform. Set the value to **EnableRealtimeLogDelivery**. |
-|Domain|String|Yes|example.com|The accelerated domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas \(,\). |
+|Domain|String|Yes|example.com|The accelerated domain name for which you want to enable real-time log delivery. You can specify multiple domain names and separate them with commas \(,\). |
 
 ## Response parameters
 
@@ -36,7 +36,7 @@ Sample success responses
 
 ```
 <EnableRealtimeLogDeliveryResponse>
-	  <RequestId>9732E117-8A37-49FD-A36F-ABBB87556CA7</RequestId>
+      <RequestId>9732E117-8A37-49FD-A36F-ABBB87556CA7</RequestId>
 </EnableRealtimeLogDeliveryResponse>
 ```
 
