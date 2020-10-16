@@ -1,8 +1,8 @@
 # DescribeCdnUserQuota
 
-Queries the quotas and usage of Alibaba Cloud Content Delivery Network \(CDN\) resources.
+Queries the quotas and usage of Alibaba Cloud Content Delivery Network \(CDN\) resources under your Alibaba Cloud account.
 
-You can call this operation up to 30 times per second with each account.
+The maximum number of times that each user can call this operation per second is 30.
 
 ## Debugging
 
@@ -18,15 +18,15 @@ You can call this operation up to 30 times per second with each account.
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|BlockQuota|Integer|100|The maximum number of URLs and directories that can be blocked by each account. |
-|BlockRemain|Integer|100|The remaining number of URLs and directories that can be blocked by each account. |
-|DomainQuota|Integer|50|The maximum number of accelerated domain names that are allowed for each account. |
-|PreloadQuota|Integer|500|The maximum number of URLs that can be prefetched by each account. |
-|PreloadRemain|Integer|100|The remaining number of URLs that can be prefetched by each account. |
-|RefreshDirQuota|Integer|100|The maximum number of directories that can be refreshed by each account. |
-|RefreshDirRemain|Integer|500|The remaining number of directories that can be refreshed by each account. |
-|RefreshUrlQuota|Integer|2000|The maximum number of URLs that can be refreshed by each account. |
-|RefreshUrlRemain|Integer|2000|The remaining number of URLs that can be refreshed by each account. |
+|BlockQuota|Integer|100|The maximum number of URLs and directories that can be blocked. |
+|BlockRemain|Integer|100|The remaining number of URLs and directories that can be blocked. |
+|DomainQuota|Integer|50|The maximum number of accelerated domain names that can be added to Alibaba Cloud CDN. |
+|PreloadQuota|Integer|500|The maximum number of URLs that can be prefetched. |
+|PreloadRemain|Integer|100|The remaining number of URLs that can be prefetched. |
+|RefreshDirQuota|Integer|100|The maximum number of directories that can be refreshed. |
+|RefreshDirRemain|Integer|500|The remaining number of directories that can be refreshed. |
+|RefreshUrlQuota|Integer|2000|The maximum number of URLs that can be refreshed. |
+|RefreshUrlRemain|Integer|2000|The remaining number of URLs that can be refreshed. |
 |RequestId|String|BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23|The ID of the request. |
 
 ## Examples
