@@ -2,7 +2,7 @@
 
 Queries the information about real-time log delivery in a specified region.
 
-You can call this operation up to 100 times per second with each account.
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
@@ -18,7 +18,7 @@ You can call this operation up to 100 times per second with each account.
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Content|Array| |The content of the log entry. |
+|Content|Array of RealtimeLogDeliveryInfos| |The content of the log entry. |
 |RealtimeLogDeliveryInfos| | | |
 |Logstore|String|LogstoreName|The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network \(CDN\) in real time. |
 |Project|String|ProjectName|The name of the Log Service project that is used for real-time log delivery. |
@@ -40,19 +40,19 @@ Sample success responses
 
 ```
 <ListRealtimeLogDeliveryInfosResponse>
-	  <Content>
-		    <RealtimeLogDeliveryInfos>
-			      <Project>test</Project>
-			      <Logstore>test</Logstore>
-			      <Region>cn-shanghai</Region>
-		    </RealtimeLogDeliveryInfos>
-		    <RealtimeLogDeliveryInfos>
-			      <Project>test1</Project>
-			      <Logstore>test2</Logstore>
-			      <Region>cn-shanghai</Region>
-		    </RealtimeLogDeliveryInfos>
-	  </Content>
-	  <RequestId>95D5B69F-8AEC-419B-8F3A-612B35032B0D</RequestId>
+      <Content>
+            <RealtimeLogDeliveryInfos>
+                  <Project>test</Project>
+                  <Logstore>test</Logstore>
+                  <Region>cn-shanghai</Region>
+            </RealtimeLogDeliveryInfos>
+            <RealtimeLogDeliveryInfos>
+                  <Project>test1</Project>
+                  <Logstore>test2</Logstore>
+                  <Region>cn-shanghai</Region>
+            </RealtimeLogDeliveryInfos>
+      </Content>
+      <RequestId>95D5B69F-8AEC-419B-8F3A-612B35032B0D</RequestId>
 </ListRealtimeLogDeliveryInfosResponse>
 ```
 
