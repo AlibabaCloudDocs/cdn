@@ -21,23 +21,23 @@ The maximum number of times that each user can call this operation per second is
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|CertInfos|Array| |The information about the SSL certificate. |
+|CertInfos|Array of CertInfo| |The information about the SSL certificate. |
 |CertInfo| | | |
 |CertCaIsLegacy|String|yes|Indicates whether the SSL certificate is obsolete. Valid values:
 
- -   **yes**: The certificate is obsolete.
--   **no**: The certificate is working as expected. |
-|CertExpireTime|String|Nov 29 00:00:00 2016 GMT|The time when the certificate expires. |
-|CertExpired|String|yes|Indicates whether the certificate is expired. Valid values:
+ -   **yes**: The SSL certificate is obsolete.
+-   **no**: The SSL certificate is working as expected. |
+|CertExpireTime|String|Nov 29 00:00:00 2016 GMT|The time when the SSL certificate expires. |
+|CertExpired|String|yes|Indicates whether the SSL certificate is expired. Valid values:
 
- -   **yes**: The certificate is expired.
--   **no**: The certificate is not expired. |
-|CertStartTime|String|Nov 29 23:59:59 2017 GMT|The time when the certificate became effective. |
-|CertSubjectCommonName|String|test.example.com|The name of the certificate owner. |
+ -   **yes**: The SSL certificate is expired.
+-   **no**: The SSL certificate is not expired. |
+|CertStartTime|String|Nov 29 23:59:59 2017 GMT|The time when the SSL certificate became effective. |
+|CertSubjectCommonName|String|test.example.com|The name of the SSL certificate owner. |
 |CertType|String|RSA|The type of the certificate. Valid responses: **RSA**, **DSA**, and **ECDSA**. |
-|DomainList|String|example1.com,example2.com|If a value is returned, the value matches the certificate. Multiple domain names are separated with commas \(,\). |
-|DomainNames|String|\*.example1.com,example2.com|The domain names \(DNS fields\) that match the certificate. Multiple domain names are separated with commas \(,\). |
-|Issuer|String|C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1|The certificate authority that issues the certificate. |
+|DomainList|String|example1.com,example2.com|If a value is returned, the value matches the SSL certificate. Multiple domain names are separated with commas \(,\). |
+|DomainNames|String|\*.example1.com,example2.com|The domain names \(DNS fields\) that match the SSL certificate. Multiple domain names are separated with commas \(,\). |
+|Issuer|String|C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1|The certificate authority that issues the SSL certificate. |
 |RequestId|String|ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D|The ID of the request. |
 
 ## Examples
