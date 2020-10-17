@@ -1,52 +1,78 @@
 # DescribeCdnCertificateList
 
-You can call the DescribeCdnCertificateList operation to query the certificates of a specific CDN domain.
+Queries the list of SSL certificates for specified accelerated domain names.
+
+The maximum number of times that each user can call this operation per second is 30.
 
 ## Debugging
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeCdnCertificateList) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCdnCertificateList&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String|Yes|The operation that you want to perform. Set this parameter to DescribeCdnCertificateList.|
-|DomainName|String|No|The name of the CDN domain of which the certificates are queried.|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeCdnCertificateList|The operation that you want to perform. Set the value to **DescribeCdnCertificateList**. |
+|DomainName|String|No|example.com|The accelerated domain names. Separate multiple domain names with commas \(,\).
+
+By default, this operation queries the list of SSL certificates for all accelerated domain names. |
 
 ## Response parameters
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|RequestId|String|The ID of the request.|
-|CertificateListModel|CertificateListModel|The certificate information.|
-
-Parameters in CertificateListModel
-
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|Count|Integer|The number of certificates returned.|
-|CertList|Cert|The detailed information about each certificate.|
-
-Parameters in Cert
-
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|CertName|String|The name of the certificate.|
-|CertId|Long|The ID of the certificate.|
-|Fingerprint|String|The fingerprint of the certificate.|
-|Common|String|The common name of the certificate.|
-|Issuer|String|The CA that issued the certificate.|
-|LastTime|Long|The time when the certificate was issued.|
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|CertificateListModel|Struct| |The data type of the SSL certificates information. |
+|CertList|Array of Cert| |The detailed information about each SSL certificate. |
+|Cert| | | |
+|CertId|Long|1|The ID of the SSL certificate. |
+|CertName|String|Certificate 1|The name of the SSL certificate. |
+|Common|String|example.com|The Common Name \(CN\) attribute of the SSL certificate. Typically, the CN is the domain name. |
+|Fingerprint|String|xxx|The fingerprint of the SSL certificate. |
+|Issuer|String|xxx|The certificate authority \(CA\) that issued the SSL certificate. |
+|LastTime|Long|1512388610|The timestamp when the SSL certificate was issued. |
+|Count|Integer|2|The number of SSL certificates returned. |
+|RequestId|String|FC0E34AC-0239-44A7-AB0E-800DE522C8DA|The ID of the request. |
 
 ## Examples
 
-Sample request
+Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeCdnCertificateList&DomainName=xxx&<Common request parameters>
+http://cdn.aliyuncs.com?Action=DescribeCdnCertificateList
+&DomainName=xxx
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeCdnCertificateListResponse>
+      <CertificateListModel>
+            <Count>2</Count>
+            <CertList>
+                  <Cert>
+                        <CertName>Certificate 1</CertName>
+                        <Issuer>xxx</Issuer>
+                        <LastTime>1512388610</LastTime>
+                        <CertId>1</CertId>
+                        <Common>test</Common>
+                        <Fingerprint>xxx</Fingerprint>
+                  </Cert>
+                  <Cert>
+                        <CertName>Certificate 2</CertName>
+                        <Issuer>xxx</Issuer>
+                        <LastTime>1512388659</LastTime>
+                        <CertId>2</CertId>
+                        <Common>test</Common>
+                        <Fingerprint>xxx</Fingerprint>
+                  </Cert>
+            </CertList>
+      </CertificateListModel>
+      <RequestId>FC0E34AC-0239-44A7-AB0E-800DE522C8DA</RequestId>
+</DescribeCdnCertificateListResponse>
+```
 
 `JSON` format
 
@@ -57,18 +83,18 @@ Sample success response
         "CertList": {
             "Cert": [
                 {
-                    "CertName": "certificate1",
+                    "CertName": "certificate 1",
                     "Issuer": "xxx",
                     "LastTime": 1512388610,
-                    "CertId": xxx,
+                    "CertId": 1,
                     "Common": "test",
                     "Fingerprint": "xxx"
                 },
                 {
-                    "CertName": "certificate2",
+                    "CertName": "certificate 2",
                     "Issuer": "xxx",
                     "LastTime": 1512388659,
-                    "CertId": xxx,
+                    "CertId": 2,
                     "Common": "test",
                     "Fingerprint": "xxx"
                 }
@@ -79,5 +105,7 @@ Sample success response
 }
 ```
 
-This table lists the error codes that the operation can return. For more information, see [Error codes](https://error-center.aliyun.com/status/product/Cdn).
+## Error codes
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
