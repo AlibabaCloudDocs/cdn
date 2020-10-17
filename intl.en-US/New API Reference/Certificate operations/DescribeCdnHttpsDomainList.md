@@ -1,6 +1,8 @@
 # DescribeCdnHttpsDomainList
 
-You can call this operation to query all certificate information under your account.
+Queries the information about the SSL certificates under your account.
+
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
@@ -11,32 +13,33 @@ You can call this operation to query all certificate information under your acco
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeCdnHttpsDomainList|The operation that you want to perform. Set the value to **DescribeCdnHttpsDomainList**. |
-|Keyword|String|No|com|The keyword to be matched. |
-|PageNumber|Integer|No|5|The number of the page to return. Valid values: **1**to**100000**. |
+|PageNumber|Integer|No|5|The number of the page to return. Valid values: **1** to **100000**. |
 |PageSize|Integer|No|20|The maximum number of entries to return on each page. Default value: **20**. |
+|Keyword|String|No|com|The keyword used for search. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|CertInfos|N/A|N/A|The certificate information. |
-|CertCommonName|String|xxx.com|The returned primary domain name of the certificate. |
-|CertExpireTime|String|2018-12-26 14:45:09|The time when the certificate expires. |
-|CertName|String|xxx|The name of the certificate. |
-|CertStartTime|String|2018-11-26 14:45:09|The time when the certificate starts to take effect. |
-|CertStatus|String|mismatch|The returned certificate state. Valid responses:
+|CertInfos|Array of CertInfo| |The information about the SSL certificate. |
+|CertInfo| | | |
+|CertCommonName|String|xxx.com|The Common Name on the SSL certificate. |
+|CertExpireTime|String|2018-12-26 14:45:09|The time when the SSL certificate expires. |
+|CertName|String|xxx|The name of the SSL certificate. |
+|CertStartTime|String|2018-11-26 14:45:09|The time when the SSL certificate became effective. |
+|CertStatus|String|mismatch|The status of the SSL certificate. Valid values:
 
- -   **ok**: The certificate is normal.
--   **mismatch**: The certificate does not match the domain.
--   **expired**: The certificate has expired.
--   **expire\_soon**: The certificate will expire soon. |
-|CertType|String|free|The returned certificate type. Valid responses:
+ -   **ok**: The SSL certificate is working as expected.
+-   **mismatch**: The SSL certificate does not match the specified domain name.
+-   **expired**: The SSL certificate has expired.
+-   **expire\_soon**: The SSL certificate will expire soon. |
+|CertType|String|free|The type of the SSL certificate. Valid values:
 
- -   **free**: a free certificate.
--   **cas**: a certificate purchased from Alibaba Cloud SSL Certificates Service.
--   **upload**: a user uploaded certificate. |
-|CertUpdateTime|String|2019-01-08 18:33:16|The time when the certificate was last updated. |
-|DomainName|String|xxx|The name of the CDN domain for which the certificate information was queried. |
+ -   **free**: a free SSL certificate.
+-   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.
+-   **upload**: a user-uploaded SSL certificate. |
+|CertUpdateTime|String|2019-01-08 18:33:16|The time when the certificate was renewed. |
+|DomainName|String|xxx|The accelerated domain name. |
 |RequestId|String|F5E8DF64-7175-4186-9B06-F002C0BBD0C5|The ID of the request. |
 |TotalCount|Integer|16|The total number of entries returned. |
 
@@ -76,28 +79,26 @@ Sample success responses
 
 ```
 {
-	"TotalCount":16,
-	"RequestId":"F5E8DF64-7175-4186-9B06-F002C0BBD0C5",
-	"CertInfos":{
-		"CertInfo":[
-			{
-				"CertUpdateTime":"2019-01-08 18:33:16",
-				"CertType":"",
-				"CertName":"",
-				"DomainName":"xxx",
-				"CertStatus":"mismatch",
-				"CertExpireTime":"2018-12-26 14:45:09",
-				"CertStartTime":"2018-11-26 14:45:09",
-				"CertCommonName":"*.xxx.com"
-			}
-		]
-	}
+    "CertInfos": {
+        "CertInfo": [
+            {
+                "CertUpdateTime": "2019-01-08 18:33:16",
+                "CertType": "",
+                "CertName": "",
+                "DomainName": "xxx",
+                "CertStatus": "mismatch",
+                "CertExpireTime": "2018-12-26 14:45:09",
+                "CertStartTime": "2018-11-26 14:45:09",
+                "CertCommonName": "*.xxx.com"
+            }
+        ]
+    },
+    "TotalCount": 16,
+    "RequestId": "F5E8DF64-7175-4186-9B06-F002C0BBD0C5"
 }
 ```
 
 ## Error codes
 
-For more information about error codes, visit [API Error Center](https://error-center.aliyun.com/status/product/Cdn).
-
-For more information about error codes, visit [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
