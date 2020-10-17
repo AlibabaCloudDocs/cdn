@@ -19,7 +19,7 @@ The maximum number of times that each user can call this operation per second is
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
 |RequestId|String|34AB41F1-04A5-496F-8C8D-634BDBE6A9FB|The ID of the request. |
-|Tags|Array| |The tags. |
+|Tags|Array of Tag| |The list of tags returned. |
 |Key|String|env|The key of the tag. |
 |Value|List|product|The value of the tag. |
 
