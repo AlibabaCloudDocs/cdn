@@ -1,6 +1,6 @@
 # DescribeCdnCertificateDetail
 
-Queries the detailed information about the SSL certificate.
+Queries the detailed information about an SSL certificate.
 
 The maximum number of times that each user can call this operation per second is 20.
 
@@ -13,16 +13,16 @@ The maximum number of times that each user can call this operation per second is
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeCdnCertificateDetail|The operation that you want to perform. Set the value to **DescribeCdnCertificateDetail**. |
-|CertName|String|Yes|cert-15480655xxxx|The ID of the certificate. You can query only one certificate at a time. |
+|CertName|String|Yes|cert-15480655xxxx|The ID of the SSL certificate. You can query only one certificate at a time. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Cert|String|-----BEGIN CERTIFICATE-----\\nMIIFzDCCBLSgAwIBxxxx|The content of the certificate. |
-|CertId|Long|881049|The ID of the certificate. |
-|CertName|String|cert-15480655xxxx|The name of the certificate. |
-|Key|String|xxxx|The key of the certificate. |
+|Cert|String|-----BEGIN CERTIFICATE-----\\nMIIFzDCCBLSgAwIBxxxx|The content of the SSL certificate. |
+|CertId|Long|881049|The ID of the SSL certificate. |
+|CertName|String|cert-15480655xxxx|The name of the SSL certificate. |
+|Key|String|xxxx|The key of the SSL certificate. |
 |RequestId|String|0AEDAF20-4DDF-4165-8750-47FF9C1929C9|The ID of the request. |
 
 ## Examples
