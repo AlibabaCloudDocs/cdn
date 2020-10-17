@@ -10,7 +10,7 @@ If you want to use Alibaba Cloud Content Delivery Network \(CDN\) to accelerate 
 
 Beginning February 13, 2020, Alibaba Cloud CDN no longer supports the **Live Streaming** option when you set the **Business Type** parameter.
 
-1.  Log on to the[Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
 2.  In the left-side navigation pane, click **Domain Names**.
 
