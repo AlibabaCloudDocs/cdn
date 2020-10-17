@@ -2,7 +2,7 @@
 
 Checks whether a specified IP address is assigned to an Alibaba Cloud Content Delivery Network \(CDN\) node.
 
-You can call this operation up to 50 times per second with each account.
+The maximum number of times that each user can call this operation per second is 50.
 
 ## Debugging
 
@@ -13,7 +13,7 @@ You can call this operation up to 50 times per second with each account.
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeIpInfo|The operation that you want to perform. Set the value to **DescribeIpInfo**. |
-|IP|String|Yes|1.2.3.4|The IP address to that you want to check. Only one IP address is supported in each call. |
+|IP|String|Yes|1.2.3.4|The IP address that you want to query. You can specify only one IP address in each request. |
 
 ## Response parameters
 
@@ -22,9 +22,9 @@ You can call this operation up to 50 times per second with each account.
 |RequestId|String|123847FA-9A00-4426-83B8-B4B45D475930|The ID of the request. |
 |CdnIp|String|True|Indicates whether the specified IP address is assigned to an Alibaba Cloud CDN node.
 
- -   **True**: Yes
+-   **True**: Yes
 -   **False**: No |
-|ISP|String|China Telecom|The name of the Internet service provider \(ISP\). |
+|ISP|String|China Telecom|The Chinese name of the Internet service provider \(ISP\). |
 |Region|String|China-Guizhou-Guiyang|The Chinese name of the region. |
 |IspEname|String|telecom|The English name of the ISP. |
 |RegionEname|String|China-Guizhou-guiyang|The English name of the region. |
@@ -71,8 +71,8 @@ Sample success responses
 
 |HttpCode|Error code|Error message|Description|
 |--------|----------|-------------|-----------|
-|400|InvalidIP.ValueNotSupported|The specified value of parameter IP is not supported.|The error message returned because the specified IP parameter is not supported. Modify the value of the IP parameter and try again.|
-|400|MissingParameter|The specified value of parameter "IP" is not valid.|The error message returned because the specified IP parameter is invalid.|
+|400|InvalidIP.ValueNotSupported|The specified value of parameter IP is not supported.|The error message returned because the specified IP address is invalid. Check the IP address and try again.|
+|400|MissingParameter|The specified value of parameter "IP" is not valid.|The error message returned because the value of the IP parameter is invalid.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
