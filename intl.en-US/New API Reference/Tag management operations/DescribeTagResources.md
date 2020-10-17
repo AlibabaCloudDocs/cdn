@@ -1,6 +1,6 @@
 # DescribeTagResources
 
-Queries the tags of resources.
+Queries the tags that are attached to specified resources.
 
 The maximum number of times that each user can call this operation per second is 10.
 
@@ -13,19 +13,19 @@ The maximum number of times that each user can call this operation per second is
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeTagResources|The operation that you want to perform. Set the value to **DescribeTagResources**. |
-|ResourceId.N|RepeatList|Yes|example.com|The ID of the resource that you want to query. Specify an accelerated domain name as the resource ID. Valid values of N: **1** to **50**. |
+|ResourceId.N|RepeatList|Yes|example.com|The ID of the resource for which tags are queried. Specify an accelerated domain name as the resource ID. Valid values of N: **1** to **50**. |
 |ResourceType|String|Yes|DOMAIN|The resource type. Set the value to **DOMAIN**. |
 |Tag.N.Key|String|No|key|The key of the tag. Valid values of N: **1** to **20**. |
-|Tag.N.Value|String| No|value|The value of the tag. Valid values of N: **1** to **20**. |
+|Tag.N.Value|String|No|value|The value of the tag. Valid values of N: **1** to **20**. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
 |RequestId|String|34AB41F1-04A5-496F-8C8D-634BDBE6A9FB|The ID of the request. |
-|TagResources|Array| |The tags that are attached to the specified resource. |
+|TagResources|Array of TagResource| |The tags that are attached to the specified resource. |
 |ResourceId|String|example.com|The ID of the resource. |
-|Tag|Array| |The key-value pair of the tag. |
+|Tag|Array of Tag| |The key-value pair of the tag. |
 |Key|String|env|The key of the tag. |
 |Value|String|product|The value of the tag. |
 
