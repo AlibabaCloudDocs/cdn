@@ -1,10 +1,10 @@
 # DescribeUserUsageDetailDataExportTask
 
-Queries tasks that were used to export resource usage details of one or more accelerated domain names for your account. The resource usage information was collected at intervals of five minutes within a specific time range.
+Queries tasks that were used to export resource usage details of one or more accelerated domain names under your account. The resource usage information was collected at intervals of five minutes within a specific time range.
 
-**Note:** This operation has been available since July 20, 2018. Only the tasks that have been collected within the last 12 months can be queried.
+**Note:** This operation has been available starting from July 20, 2018. You can query data generated within the last 12 months.
 
-You can call this operation up to 100 times per second with each account.
+The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
@@ -25,8 +25,8 @@ You can call this operation up to 100 times per second with each account.
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
 |RequestId|String|A91BE91F-0B34-4CBF-8E0F-A2977E15AA52|The ID of the request. |
-|UsageDataPerPage|Struct| |The task details on the page. |
-|Data|Array| |The description of the task. |
+|UsageDataPerPage|Struct| |The usage details returned per page. |
+|Data|Array of DataItem| |The information about the task. |
 |DataItem| | | |
 |CreateTime|String|2018-10-09T06:33:38Z|The time when the task was created. |
 |DownloadUrl|String|https://test.oss-cn-beijing.aliyuncs.com/billing\_data/xxx|The download URL. |
@@ -37,8 +37,8 @@ You can call this operation up to 100 times per second with each account.
 |TaskId|String|11|The ID of the task. |
 |TaskName|String|Refresh|The name of the task. |
 |UpdateTime|String|2018-10-09T06:35:46Z|The last time when the task was modified. |
-|PageNumber|Integer|1|The page number of the returned page. |
-|PageSize|Integer|10|The number of entries that were returned per page. |
+|PageNumber|Integer|1|The current page number. |
+|PageSize|Integer|10|The number of the entries returned per page. |
 |TotalCount|Integer|1|The total number of entries returned. |
 
 ## Examples
