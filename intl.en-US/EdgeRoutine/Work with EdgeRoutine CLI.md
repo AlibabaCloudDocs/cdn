@@ -4,7 +4,7 @@ Alibaba Cloud Content Delivery Network \(CDN\) provides the EdgeRoutine CLI to r
 
 The runtime environment of the EdgeRoutine CLI must be Node.js 8.0 or later.
 
-To enable EdgeRoutine, you must map the serverless computing environment on CDN nodes to your accelerated domain name. If you have not prepared the accelerated domain name and AccessKey information for mapping, you must log on to the Alibaba Cloud CDN console with your Alibaba Cloud account. In the console, you can add the domain name to Alibaba Cloud CDN. For more information, see [Add a domain name for CDN](/intl.en-US/Quick Start/Add a domain.md). You can also retrieve the AccessKey information including the AccessKey ID and AccessKey secret in the console. For more information, see [Create an AccessKey pair]().
+To enable EdgeRoutine, you must map the serverless computing environment on CDN nodes to your accelerated domain name. If you have not prepared the accelerated domain name and AccessKey information for mapping, you must log on to the Alibaba Cloud CDN console with your Alibaba Cloud account. In the console, you can add the domain name to Alibaba Cloud CDN. For more information, see [Add a domain name to Alibaba Cloud CDN](/intl.en-US/Quick Start/Add a domain name to Alibaba Cloud CDN.md). You can also retrieve the AccessKey information including the AccessKey ID and AccessKey secret in the console. For more information, see [Create an AccessKey pair]().
 
 1.  Install the EdgeRoutine CLI.
 
@@ -13,6 +13,8 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     ```
     $ npm install @alicloud/edgeroutine-cli -g
     ```
+
+    **Note:** The latest version of CLI is 2.0.0. After installation, you can run the `edgeroutine-cli -v` command line to query the version number. If you are a regular user, it is recommended that you upgrade to the latest version.
 
 2.  Run the following command to create a code directory and change to the directory:
 
@@ -75,14 +77,6 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
         $ edgeroutine-cli build --delete
         ```
 
-    4.  Roll back the code in the canary release environment.
-
-        After you roll back the code, configurations that are published to the production environment overwrite those in the canary release environment.
-
-        ```
-        $ edgeroutine-cli build --rollback
-        ```
-
 6.  Validate the code in the canary release environment.
 
     You must connect to the accelerated domain name in the terminal environment by using the IP address of the canary environment for EdgeRoutine. The IP address is 42.123.119.50 or 42.123.119.51.
@@ -98,6 +92,8 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
         ```
         $ edgeroutine-cli publish
         ```
+
+        **Note:** Edgescript and Edgeroutine share the same publishing system. If you also use the [EdgeScript](/intl.en-US/EdgeScript/Introduction/Overview.md) production, Therefore, when you execute `edgeroutine-cli publish` in edgeroutine cli, the system will publish Edgescript and Edgeroutine configuration in the staging environment to the production environment. You can use `edgeroutine-cli build -s` to view the Edgescript and Edgeroutine configuration in the staging environment before publishing. After confirmed and tested fully, you can execute `edgeroutine-cli publish` to the production environment.
 
     2.  View the code in the production environment.
 
