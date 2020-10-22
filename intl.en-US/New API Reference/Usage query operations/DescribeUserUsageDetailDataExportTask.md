@@ -1,8 +1,8 @@
 # DescribeUserUsageDetailDataExportTask
 
-Queries tasks that were used to export resource usage details of one or more accelerated domain names under your account. The resource usage information was collected at intervals of five minutes within a specific time range.
+Queries tasks that were used to export resource usage details of one or more accelerated domain names under your account. The resource usage information was collected every five minutes within a specific time range.
 
-**Note:** This operation has been available starting from July 20, 2018. You can query data generated within the last 12 months.
+**Note:** This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
 
 The maximum number of times that each user can call this operation per second is 100.
 
@@ -12,8 +12,8 @@ The maximum number of times that each user can call this operation per second is
 
 ## Request parameters
 
-|Parameter|Type|Required|Example|Description|
-|---------|----|--------|-------|-----------|
+|Parameter|Type|Required|Example|Description |
+|---------|----|--------|-------|------------|
 |Action|String|Yes|DescribeUserUsageDetailDataExportTask|The operation that you want to perform. Set the value to **DescribeUserUsageDetailDataExportTask**. |
 |PageSize|String|No|10|The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
 
@@ -26,7 +26,7 @@ The maximum number of times that each user can call this operation per second is
 |---------|----|-------|-----------|
 |RequestId|String|A91BE91F-0B34-4CBF-8E0F-A2977E15AA52|The ID of the request. |
 |UsageDataPerPage|Struct| |The usage details returned per page. |
-|Data|Array of DataItem| |The information about the task. |
+|Data|Array of DataItem| |The description of the task. |
 |DataItem| | | |
 |CreateTime|String|2018-10-09T06:33:38Z|The time when the task was created. |
 |DownloadUrl|String|https://test.oss-cn-beijing.aliyuncs.com/billing\_data/xxx|The download URL. |
@@ -37,7 +37,7 @@ The maximum number of times that each user can call this operation per second is
 |TaskId|String|11|The ID of the task. |
 |TaskName|String|Refresh|The name of the task. |
 |UpdateTime|String|2018-10-09T06:35:46Z|The last time when the task was modified. |
-|PageNumber|Integer|1|The current page number. |
+|PageNumber|Integer|1|The number of the page returned. |
 |PageSize|Integer|10|The number of the entries returned per page. |
 |TotalCount|Integer|1|The total number of entries returned. |
 
