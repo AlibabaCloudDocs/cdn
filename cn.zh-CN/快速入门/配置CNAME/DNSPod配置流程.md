@@ -6,8 +6,6 @@ keyword: [DNSPod, CNAME]
 
 本文为您介绍了如何在DNSPod配置CNAME。如果您想启用CDN加速服务，您需要将加速域名指向CDN节点的CNAME地址，这样访问加速域名的请求才能转发到CDN节点上，达到加速效果。
 
-已登录[CDN控制台](https://cdn.console.aliyun.com)。
-
 1.  获取加速域名的CNAME地址。
 
     1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
@@ -48,4 +46,10 @@ keyword: [DNSPod, CNAME]
 
         ![CNAME生效验证](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6423839951/p66693.png)
 
+
+## 相关文档
+
+-   您的源站如果没有配置缓存过期时间，且源站和CDN上也没有配置缓存策略，则CDN采用默认缓存时长，CDN的默认缓存时间是3600秒。您成功添加加速域名后，可以修改默认缓存时间。设置的缓存时间长短会导致回源流量不一样，费用也有所不同，建议根据不同的业务需求设置缓存时长。缓存时间设置的过短，会导致CDN频繁回源，从而会增加源站的流量消耗。具体操作请参见[配置缓存过期时间](/cn.zh-CN/域名管理/缓存配置/配置缓存过期时间.md)。
+-   使用CDN加速后如果缓存命中率低，您需要排查缓存命中率低的具体原因，请参见[CDN缓存命中率较低](https://help.aliyun.com/knowledge_detail/63874.html)。
+-   为提高缓存命中率，您可以设置预热等功能，具体请参见[优化CDN缓存命中率](/cn.zh-CN/最佳实践/优化CDN缓存命中率/概述.md)。
 
