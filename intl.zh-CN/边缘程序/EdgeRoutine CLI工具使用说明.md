@@ -95,7 +95,7 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
         $ edgeroutine-cli publish
         ```
 
-        **说明：** 目前EdgeScript和EdgeRoutine共用一个发布系统，如果您同时使用了[EdgeScript](/intl.zh-CN/边缘脚本/简介/EdgeScript概述.md)和EdgeRoutine功能，当您在EdgeRoutine CLI中执行`edgeroutine-cli publish`命令进行发布时，系统会将模拟环境中的EdgeScript和EdgeRoutine配置一起发布至生产环境。您可以在执行publish前使用`edgeroutine-cli build -s`查看模拟环境中的EdgeScript和EdgeRoutine配置，确认无误后再执行publish发布至生产环境。
+        **说明：** 目前EdgeScript和EdgeRoutine共用一个发布系统，如果您同时使用了[EdgeScript](/intl.zh-CN/边缘脚本/简介/EdgeScript概述.md)和EdgeRoutine功能，当您在EdgeRoutine CLI中执行`edgeroutine-cli publish`命令进行发布时，系统会将灰度环境中的EdgeScript和EdgeRoutine配置一起发布至生产环境。您可以在执行publish前使用`edgeroutine-cli build -s`查看灰度环境中的EdgeScript和EdgeRoutine配置，确认无误后再执行publish发布至生产环境。
 
     2.  查看线上环境代码。
 
