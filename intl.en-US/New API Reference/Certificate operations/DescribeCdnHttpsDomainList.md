@@ -1,6 +1,6 @@
 # DescribeCdnHttpsDomainList
 
-Queries the information about the SSL certificates under your account.
+Queries the information about the SSL certificates under your Alibaba Cloud account.
 
 The maximum number of times that each user can call this operation per second is 100.
 
@@ -19,11 +19,11 @@ The maximum number of times that each user can call this operation per second is
 
 ## Response parameters
 
-|Parameter|Type|Example|Description|
-|---------|----|-------|-----------|
+|Parameter|Type|Example|Description |
+|---------|----|-------|------------|
 |CertInfos|Array of CertInfo| |The information about the SSL certificate. |
 |CertInfo| | | |
-|CertCommonName|String|xxx.com|The Common Name on the SSL certificate. |
+|CertCommonName|String|\*.xxx.com|The Common Name on the SSL certificate. |
 |CertExpireTime|String|2018-12-26 14:45:09|The time when the SSL certificate expires. |
 |CertName|String|xxx|The name of the SSL certificate. |
 |CertStartTime|String|2018-11-26 14:45:09|The time when the SSL certificate became effective. |
@@ -37,9 +37,9 @@ The maximum number of times that each user can call this operation per second is
 
  -   **free**: a free SSL certificate.
 -   **cas**: an SSL certificate purchased from Alibaba Cloud SSL Certificates Service.
--   **upload**: a user-uploaded SSL certificate. |
+-   **upload**: a user uploaded certificate. |
 |CertUpdateTime|String|2019-01-08 18:33:16|The time when the certificate was renewed. |
-|DomainName|String|xxx|The accelerated domain name. |
+|DomainName|String|example.com|The accelerated domain name. |
 |RequestId|String|F5E8DF64-7175-4186-9B06-F002C0BBD0C5|The ID of the request. |
 |TotalCount|Integer|16|The total number of entries returned. |
 
@@ -48,7 +48,7 @@ The maximum number of times that each user can call this operation per second is
 Sample requests
 
 ```
-http(s)://cdn.aliyuncs.com? Action=DescribeCdnHttpsDomainList
+http(s)://cdn.aliyuncs.com/? Action=DescribeCdnHttpsDomainList
 &<Common request parameters>
 ```
 
@@ -63,7 +63,7 @@ Sample success responses
 			      <CertUpdateTime>2019-01-08 18:33:16</CertUpdateTime>
 			      <CertType></CertType>
 			      <CertName></CertName>
-			      <DomainName>xxx</DomainName>
+			      <DomainName>example.com</DomainName>
 			      <CertStatus>mismatch</CertStatus>
 			      <CertExpireTime>2018-12-26 14:45:09</CertExpireTime>
 			      <CertStartTime>2018-11-26 14:45:09</CertStartTime>
@@ -85,7 +85,7 @@ Sample success responses
                 "CertUpdateTime": "2019-01-08 18:33:16",
                 "CertType": "",
                 "CertName": "",
-                "DomainName": "xxx",
+                "DomainName": "example.com",
                 "CertStatus": "mismatch",
                 "CertExpireTime": "2018-12-26 14:45:09",
                 "CertStartTime": "2018-11-26 14:45:09",
