@@ -8,7 +8,7 @@ This topic describes the billing items and rules for value-added services of Ali
 
 ## Static HTTPS requests
 
-After you enable HTTPS in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com), you are charged for static HTTPS. For more information about the pricing, see [CDN pricing](https://www.alibabacloud.com/zh/product/cdn/pricing).
+After you enable HTTPS in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com), you are charged for static HTTPS. For more information about the pricing, see [CDN pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
 ## DCDN
 
