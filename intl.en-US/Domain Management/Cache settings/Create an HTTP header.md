@@ -1,43 +1,55 @@
-# Create an HTTP header {#task_261642 .task}
+---
+keyword: [HTTP response header, CDN, cross-origin request]
+---
 
-The HTTP header fields describe the requested resources and the client or server behavior, and also define the operating parameters of an HTTP transaction. This topic describes how to create an HTTP header.
+# Create an HTTP header
 
-The HTTP header refers to the header component in the request and response messages sent over Hypertext Transfer Protocol \(HTTP\).
+HTTP headers define the resources being requested, the behavior of the client or server, and the operation parameters of an HTTP transaction. This topic describes how to create an HTTP response header.
 
-HTTP header fields include General-header, Client Request-header, and Server Response-header fields. The following table describes the 10 HTTP header parameters provided by Alibaba Cloud CDN. You can define the value of each parameter.
+HTTP headers are components of the header section of request and response messages transmitted over Hypertext Transfer Protocol \(HTTP\).
 
-|Parameter|Description|
-|:--------|:----------|
-|Content-Type|Specifies the content type of the objects requested by a client program.|
-|Cache-Control|Specifies the caching policy that a client program follows when initiating requests and making responses.|
-|Content-Disposition|Specifies the default file name provided by a client program when the requested content is saved as a file.|
-|Content-Language|Specifies the language of the objects requested by a client program.|
-|Expires|Specifies the expiration time of the objects requested by a client program.|
-|Access-Control-Allow-Origin|Specifies the domains from which cross-domain requests are allowed.|
-|Access-Control-Allow-Headers|Specifies the fields that are allowed in cross-domain requests.|
-|Access-Control-Allow-Methods|Specifies the cross-domain request methods that are allowed.|
-|Access-Control-Max-Age|Specifies the duration in which the response result can be retained and cached for a prefetch request initiated by a client program for a particular resource.|
-|Access-Control-Expose-Headers|Specifies the custom header information that is allowed to be accessed.|
+HTTP header fields include the General-header, Client Request-header, and Server Response-header fields.
 
-When you create an HTTP response header, note the following limits:
+**Note:**
 
--   The HTTP response header configurations of a domain affect the response behavior of all client programs such as browsers in this domain. However, the configurations do not affect the behavior of the cache server.
--   Alibaba Cloud CDN supports only the 10 HTTP header parameters described in the preceding table. If you require other HTTP header parameters, .
--   The Access-Control-Allow-Origin parameter can be set as an asterisk \(`*`\) to allow cross-domain requests or a specific domain name such as `www.aliyun.com`.
--   Alibaba Cloud CDN does not support wildcard domains.
+-   The configurations of the HTTP response header of an accelerated domain name affect the response behavior of all client programs such as browsers in this domain. However, the configurations do not affect the behavior of the cache server.
+-   Alibaba Cloud Content Delivery Network \(CDN\) does not allow you to configure response headers for wildcard domain names.
 
-1.  Log on to the [Alibaba Cloud CDN console](https://partners-intl.aliyun.com/login-required#cdn).
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+
 2.  In the left-side navigation pane, click **Domain Names**.
+
 3.  On the Domain Names page, find the target domain name and click **Manage**.
+
 4.  In the left-side navigation pane of the specified domain, click **Cache**.
-5.  Click **HTTP Header**.
-6.  On the HTTP Header tab, click **Customize**. 
 
-    ![Customize HTTP Header](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5149/15665309897278_en-US.png)
+5.  Click the **Custom HTTP Response Header** tab.
 
-7.  In the Customize HTTP Header dialog box that appears, set the parameters.
-8.  Click **OK**. 
+6.  On the **Custom HTTP Response Header** tab, click **Customize**.
 
-    You can click **Modify** or **Delete** in the Actions column corresponding to an HTTP header to modify or delete the HTTP header.
+7.  In the Cache Response Headers dialog box, set the parameters to create an HTTP response header.
+
+    Alibaba Cloud CDN provides 10 types of HTTP response header. You can also create a custom HTTP response header. The following table lists different types of HTTP response header. If you need to create a custom HTTP response header that is not included in the preceding types,[submit a ticket](https://workorder-intl.console.aliyun.com).
+
+    **Note:** When you add an HTTP header to responses, you can set the **Allow Duplicates** parameter to specify whether duplicate headers are allowed. A value of **Yes** indicates that duplicate headers are allowed. The header returned from the origin server and the header added to the response are both returned to the client. A value of **No** indicates that duplicate headers are not allowed. The header returned from the origin server is overwritten by the header added to the response.
+
+    ![Set HTTP header parameters](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7875973061/p69929.png)
+
+    |Parameter|Description|Example|
+    |:--------|:----------|-------|
+    |Content-Type|Specifies the MIME type of the content returned to the client program.|image|
+    |Cache-Control|Specifies the cache policy that requests and responses follow.|no-cache|
+    |Content-Disposition|Specifies the default file name when the requested content is saved as a file on the client program.|123.txt|
+    |Content-Language|Specifies the language of the returned content for the intended audience.|zh-CN|
+    |Expires|Specifies the date and time after which the response is considered stale.|Wed, 21 Oct 2015 07:28:00 GMT|
+    |Access-Control-Allow-Origin|Specifies the origin servers from which cross-origin requests are allowed.|\* **Note:** You can enter an asterisk \(`*`\) in the Header Value field to specify all domain names. You can also enter a specific domain name, for example, `www.aliyun.com`. |
+    |Access-Control-Allow-Headers|Specifies the fields that are allowed in cross-origin requests.|X-Custom-Header|
+    |Access-Control-Allow-Methods|Specifies the request methods that are allowed for cross-origin requests.|POST and GET**Note:** Separate POST and GET with a comma \(,\). |
+    |Access-Control-Max-Age|Specifies the time-to-live \(TTL\) value during which the response can be cached on the client program for a request that prefetches a particular resource.|600|
+    |Access-Control-Expose-Headers|Specifies the headers that can be exposed as part of the response.|Content-Length|
+
+8.  Click **OK**.
+
+    In the **Custom HTTP Response Header** list, you can click **Modify** or **Delete** in the Actions column to modify or delete HTTP response headers.
 
 
