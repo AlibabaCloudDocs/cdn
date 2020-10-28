@@ -100,5 +100,5 @@ https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeDetailData
 |--------|---|----|--|
 |400|InvalidTime.Malformed|Specified StartTime or EndTime is malformed.|开始时间或结束时间格式错误。|
 
-访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Cdn)查看更多错误码。
 
