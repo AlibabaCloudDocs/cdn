@@ -1,49 +1,49 @@
-# 获取带宽和访问次数数据
+# DescribeDomainRealTimeDetailData
 
-调用DescribeDomainRealTimeDetailData批量获取域名的各地区运营商带宽和访问次数的1分钟粒度数据，支持查询7天内的数据。
+Queries the data usage of each ISP and the number of visits in each region. The data was collected at intervals of one minute. You can query data that has been collected within the last seven days.
 
-**调用该接口前，请您注意：**
+**When you call this operation, note that:**
 
--   单次查询数据，StartTime和EndTime的填写跨度不能超过10分钟。
--   单用户调用频率：10次/秒。
+-   The time range specified by the StartTime and EndTime parameters cannot exceed 10 minutes.
+-   You can call this operation up to 10 times per second with each account.
 
-## 调试
+## Debugging
 
-[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeDomainRealTimeDetailData&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeDomainRealTimeDetailData&type=RPC&version=2018-05-10)
 
-## 请求参数
+## Request parameters
 
-|名称|类型|是否必选|示例值|描述|
-|--|--|----|---|--|
-|Action|String|是|DescribeDomainRealTimeDetailData|操作接口名，系统规定参数，取值：**DescribeDomainRealTimeDetailData**。 |
-|DomainName|String|是|example.com|加速域名，多个用英文逗号（,）分隔。 |
-|StartTime|String|是|2019-11-30T05:33:00Z|获取数据起始时间点。日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。 |
-|EndTime|String|是|2019-11-30T05:40:00Z|获取数据结束时间点。日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeDomainRealTimeDetailData|The operation that you want to perform. Set the value to **DescribeDomainRealTimeDetailData**. |
+|DomainName|String|Yes|example.com|The accelerated domain name for which you want to query data. You can specify multiple accelerated domain names and separate them with commas \(,\). |
+|StartTime|String|Yes|2019-11-30T05:33:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
+|EndTime|String|Yes|2019-11-30T05:40:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
- 结束时间需大于起始时间。 |
-|Field|String|是|qps|获取的类别信息，多个用英文逗号（,）分隔。取值：
+The end of the time range to query. The end time must be later than the start time. |
+|Field|String|Yes|qps|The type of data usage that you want to query. You can specify multiple data types and separate them with commas \(,\). Valid values:
 
- -   qps：每秒访问次数。
--   bps：带宽数据。
--   http\_code：http返回码。 |
-|LocationNameEn|String|否|beijing|地域英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)获得，默认查询所有地域。 |
-|IspNameEn|String|否|unicom|运营商英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)获得，默认查询所有运营商。 |
-|Merge|String|否|false|是否输出汇总值。取值：
+-   qps: the number of queries per second.
+-   bps: bandwidth data.
+-   http\_code: HTTP status codes. |
+|LocationNameEn|String|No|beijing|The English name of the region. To query region names, call the [DescribeCdnRegionAndIsp](~~91077~~) operation. If you do not set this parameter, all regions are used to query data usage. |
+|IspNameEn|String|No|unicom|The name of the Internet Service Provider \(ISP\). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are used to query data usage. |
+|Merge|String|No|false|Specifies whether to return the merged result. Valid values:
 
- -   **true**：输出。
--   **false**（默认值）：不输出。 |
-|MergeLocIsp|String|否|false|该参数暂未启用，使用时无需传参。 |
+-   **true**: returns the merged result is returned.
+-   **false**: does not return the merged result. This is the default value. |
+|MergeLocIsp|String|No|false|This parameter is unavailable. You do not need to set this parameter. |
 
-## 返回数据
+## Response parameters
 
-|名称|类型|示例值|描述|
-|--|--|---|--|
-|Data|String|"Data":\{ "2018-06-05T20:00:00Z": \{ "example.com": \{ "Guangdong": \{ "telecom": 10.0 \}, "Jiangsu": \{ "unicom": 11.1 \} \} \} \}|地区运营商详细数据。 |
-|RequestId|String|B49E6DDA-F413-422B-B58E-2FA23F286726|请求ID。 |
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Data|String|"Data":\{ "2018-06-05T20:00:00Z": \{ "example.com": \{ "Guangdong": \{ "telecom": 10.0 \}, "Jiangsu": \{ "unicom": 11.1 \} \} \} \}|The details of the returned ISPs and regions. |
+|RequestId|String|B49E6DDA-F413-422B-B58E-2FA23F286726|The ID of the request. |
 
-## 示例
+## Examples
 
-请求示例
+Sample requests
 
 ```
 https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeDetailData
@@ -51,12 +51,12 @@ https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeDetailData
 &field=qps
 &StartTime=2018-06-05T20:00:00Z
 &EndTime=2018-06-05T20:03:00Z
-&<公共请求参数>
+&<Common request parameters>
 ```
 
-正常返回示例
+Sample success responses
 
-`XML` 格式
+`XML` format
 
 ```
 <DescribeDomainRealTimeDetailDataResponse>
@@ -74,7 +74,7 @@ https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeDetailData
 </DescribeDomainRealTimeDetailDataResponse>
 ```
 
-`JSON` 格式
+`JSON` format
 
 ```
 {
@@ -94,11 +94,11 @@ https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeDetailData
 }
 ```
 
-## 错误码
+## Error codes
 
-|HttpCode|错误码|错误信息|描述|
-|--------|---|----|--|
-|400|InvalidTime.Malformed|Specified StartTime or EndTime is malformed.|开始时间或结束时间格式错误。|
+|HTTP status code|Error code|Error message|Description|
+|----------------|----------|-------------|-----------|
+|400|InvalidTime.Malformed|Specified StartTime or EndTime is malformed.|The error message returned because the format of the specified start time or end time is invalid.|
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/Cdn)查看更多错误码。
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
