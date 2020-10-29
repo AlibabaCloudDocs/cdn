@@ -34,8 +34,8 @@
 -   `E[attr^="a"]`：选择标签E，标签的属性含有名attr，且值为a，不区分大小写。
 -   `E[attr$="a"]`：选择标签E，标签的属性含有名attr，且值以“a”结尾。
 -   `E[attr^="a"]`：选择标签E，标签的属性含有名attr，且值以“a”开头。
--   `E[attr*="a"]`：选择标签E，标签的属性含有名attr，且值含有"a"。
--   `E[attr|="a"]`：选择标签E，标签的属性含有名attr，且值以"a-"开头的一串英文逗号（,）分隔的列表，例如en-ch, en-us。
+-   `E[attr*="a"]`：选择标签E，标签的属性含有名attr，且值含有“a”。
+-   `E[attr|="a"]`：选择标签E，标签的属性含有名attr，且值以“a-”开头的一串英文逗号（,）分隔的列表，例如en-ch, en-us。
 -   序列选择：
 
 -   `E F`：选择标签F，且F存在父节点元素E中。
@@ -48,9 +48,9 @@
 
 |回调函数|说明|回调函数签名|
 |----|--|------|
-|element|该属性必须为一个非异步函数，该属性会在元素被解析完毕时调用。|回调函数的签名为function\(e\)，传入对象为Element对象。具体请参见[Element]()。|
-|comments|该属性必须为一个非异步函数，该属性会在元素选择器选中的元素中存在注释时被调用。|回调函数的签名为function\(e\)，传入对象为Comments对象。具体请参见[Comments]()。|
-|text|该属性必须为一个非异步函数，该属性会在元素选择器的元素text部分被解析时被调用。|回调函数的签名为function\(e\)，传入对象为TextChunk对象。具体请参见[TextChunk]()。**说明：** 该函数会被调用多次，当HTMLStream每次都从HTML原始数据流中读一部分出来text时，每次解析完毕就会调用这个函数。如果您想看到整个text，需要自己缓冲text后拼接起来。 |
+|element|该属性必须为一个非异步函数，该属性会在元素被解析完毕时调用。|回调函数的签名为function\(e\)，传入对象为Element对象。更多信息，请参见[Element](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。|
+|comments|该属性必须为一个非异步函数，该属性会在元素选择器选中的元素中存在注释时被调用。|回调函数的签名为function\(e\)，传入对象为Comments对象。更多信息，请参见[Comments](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。|
+|text|该属性必须为一个非异步函数，该属性会在元素选择器的元素text部分被解析时被调用。|回调函数的签名为function\(e\)，传入对象为TextChunk对象。更多信息，请参见[TextChunk](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。**说明：** 该函数会被调用多次，当HTMLStream每次都从HTML原始数据流中读一部分出来text时，每次解析完毕就会调用这个函数。如果您想看到整个text，需要自己缓冲text后拼接起来。 |
 
 **说明：** 元素选择器可以不包含以上三个函数，此时对应的元素会被直接输出。如果您只想修改某一部分内容，只需要注册对应的回调函数。
 
@@ -64,10 +64,10 @@
 
 |回调函数|说明|回调函数签名|
 |----|--|------|
-|doctype|该属性必须为一个非异步函数，该属性会在文档的doctype被解析后被调用。|回调函数的签名为function\(e\)，传入对象为Doctype对象。具体请参见[Doctype]()。|
-|comments|该属性必须为一个非异步函数，该属性会在文档级别的comments被调用。|回调函数的签名为function\(e\)，传入对象为Comments对象。具体请参见[Comments]()。|
-|text|该属性必须为一个非异步函数，该属性会在文档级别非元素的text节点遇到时被调用。|回调函数的签名为function\(e\)，传入对象为TextChunk对象。具体请参见[TextChunk]()。**说明：** 该函数会被调用多次，当HTMLStream每次都从HTML原始数据流中读一部分出来text时，每次解析完毕就会调用这个函数。如果您想看到整个text，需要自己缓冲text后拼接起来。 |
-|docend|该属性必须为一个非异步函数，该属性会在文档被解析完毕时调用，主要为了追加内容到文档末端，通常可以以注释的形式记录一些debug信息到HTML末尾，用于后续排查和追踪问题。|回调函数签名为function\(e\)，传入对象为Docend对象。具体请参见[Docend]()。|
+|doctype|该属性必须为一个非异步函数，该属性会在文档的doctype被解析后被调用。|回调函数的签名为function\(e\)，传入对象为Doctype对象。更多信息，请参见[Doctype](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。|
+|comments|该属性必须为一个非异步函数，该属性会在文档级别的comments被调用。|回调函数的签名为function\(e\)，传入对象为Comments对象。更多信息，请参见[Comments](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。|
+|text|该属性必须为一个非异步函数，该属性会在文档级别非元素的text节点遇到时被调用。|回调函数的签名为function\(e\)，传入对象为TextChunk对象。更多信息，请参见[TextChunk](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。**说明：** 该函数会被调用多次，当HTMLStream每次都从HTML原始数据流中读一部分出来text时，每次解析完毕就会调用这个函数。如果您想看到整个text，需要自己缓冲text后拼接起来。 |
+|docend|该属性必须为一个非异步函数，该属性会在文档被解析完毕时调用，主要为了追加内容到文档末端，通常可以以注释的形式记录一些debug信息到HTML末尾，用于后续排查和追踪问题。|回调函数签名为function\(e\)，传入对象为Docend对象。更多信息，请参见[Docend](/intl.zh-CN/边缘程序/EdgeRoutine编程介绍/HTMLStream/回调参数.md)。|
 
 ## 异常错误处理
 
