@@ -1,48 +1,73 @@
-# DescribeL2VipsByDomain {#reference1049 .reference}
+# DescribeL2VipsByDomain
 
-You can call the DescribeL2VipsByDomain operation to query the origin IP addresses of L2 nodes by domain name.
+Queries the virtual IP addresses of L2 Content Delivery Network \(CDN\) nodes for a specific domain name.
 
-## Debugging {#section_o7j_67t_u0f .section}
+This operation is available to only users whose daily peak bandwidth is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex) to apply for permissions to use this operation.
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeL2VipsByDomain) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+The maximum number of time that each user can call this operation per second is 40.
 
-## Request parameters {#section_wut_2zs_wk9 .section}
+## Debugging
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String|Yes|The operation that you want to perform. Set this parameter to DescribeL2VipsByDomain.|
-|DomainName|String|Yes|The domain name you want to query. You can specify only one domain name.|
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeL2VipsByDomain&type=RPC&version=2018-05-10)
 
-## Response parameters {#section_wg3_ic6_wgn .section}
+## Request parameters
 
-|Parameter|Type|Description|
-|---------|----|-----------|
-|DomainName|String|The domain name information.|
-|Vips|Vip\[\]|The list of origin IP addresses.|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeL2VipsByDomain|The operation that you want to perform. Set the value to **DescribeL2VipsByDomain**. |
+|DomainName|String|Yes|www.yourdomain.com|The accelerated domain name. You can specify only one domain name. |
 
-## Examples {#section_3fm_gpn_noc .section}
+## Response parameters
 
-Sample request
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|DomainName|String|xxxx.com|The accelerated domain name. |
+|Vips|List|"Vip": \[ "1.1.1.1/25", "2.2.2.2/25" \]|A list of virtual IP addresses of L2 CDN nodes. |
+|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|The ID of the request. |
 
-``` {#codeblock_ird_b8k_cxz}
-https://cdn.aliyuncs.com?Action=DescribeL2VipsByDomain&DomainName=example.com&<Common request parameters>
+## Examples
+
+Sample requests
+
+```
+https://cdn.aliyuncs.com/?Action=DescribeL2VipsByDomain
+&DomainName=example.com
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeL2VipsByDomainResponse>
+	  <Vips>
+		    <Vip>xxx.111.111/25</Vip>
+		    <Vip>xxx.112.112/25</Vip>
+		    <Vip>xxx.33.190/25</Vip>
+		    <Vip>xxx.96.109/25</Vip>
+		    <Vip>xxx.20.226/25</Vip>
+		    <Vip>xxx.19.140/25</Vip>
+		    <Vip>xxx.215.140/25</Vip>
+	  </Vips>
+	  <RequestId>820E7900-5CA9-4AEF-B0DD-20ED5F64BE55</RequestId>
+	  <DomainName>example.com</DomainName>
+</DescribeL2VipsByDomainResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_9np_kzn_zcc .language-json}
+```
 {
   "Vips": {
     "Vip": [
-      "111.111.111.xxx/25",
-      "112.112.112.xxx/25",
-      "122.72.33.xxx/25",
-      "119.14.96.xxx/25",
-      "221.13.20.xxx/25",
-      "124.95.19.xxx/25",
-      "58.211.215.xxx/25"
+      "xxx.111.111/25",
+      "xxx.112.112/25",
+      "xxx.33.190/25",
+      "xxx.96.109/25",
+      "xxx.20.226/25",
+      "xxx.19.140/25",
+      "xxx.215.140/25"
     ]
   },
   "RequestId": "820E7900-5CA9-4AEF-B0DD-20ED5F64BE55",
@@ -50,9 +75,12 @@ Sample success response
 }
 ```
 
-## Error codes {#section_104_5ek_xm2 .section}
+## Error codes
 
-|Error code|Error message|HTTP status code|Description|
-|----------|-------------|----------------|-----------|
-|MissingParameter|The specified value of parameter "DomainName" can not be empty.|400|The error message returned because the DomainName parameter cannot be blank.|
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|MissingParameter|The specified value of parameter "DomainName" can not be empty.|The error message returned because the DomainName parameter is not set.|
+|400|IllegalOperation|Illegal domain operate is not permitted.|The error message returned because the specified operation is invalid.|
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
