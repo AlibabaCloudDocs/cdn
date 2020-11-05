@@ -1,77 +1,95 @@
-# DescribeDomainRealTimeReqHitRateData {#reference1612 .reference}
+# DescribeDomainRealTimeReqHitRateData
 
-You can call the DescribeDomainRealTimeReqHitRateData operation to query the request hit rate with a time granularity of one minute.
+Queries the request hit ratios of accelerated domain names. The data is collected at an interval of one minute. You can only query the data collected within the last seven days.
 
-**Note:** 
+**When you call this operation, note that:**
 
--   You can query the data within the last seven days. The time range specified by the StartTime and EndTime parameters cannot exceed 24 hours.
--   If neither the StartTime nor EndTime parameter is set, the data within the last hour is queried.
--   The network traffic destined for different domain names may be redirected to the same origin. Therefore, the obtained request hit rates may be inaccurate. The accuracy of query results depends on the actual configurations.
+-   The time range specified by the StartTime and EndTime parameters cannot exceed 24 hours.
+-   If you do not set StartTime or EndTime, data collected within the last one hour is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
+-   The network traffic destined for different domain names may be redirected to the same origin. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+-   The maximum number of times that each user can call this operation per second is 10.
 
-## Debugging {#section_jcp_2qe_dyh .section}
+**Note:** By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
 
-Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#/?product=Cdn&api=DescribeDomainRealTimeReqHitRateData) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
+## Debugging
 
-## Request parameters {#section_0as_nfw_ec6 .section}
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeDomainRealTimeReqHitRateData&type=RPC&version=2018-05-10)
 
-|Parameter|Type|Required|Description|
-|---------|----|--------|-----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to DescribeDomainRealTimeReqHitRateData.|
-|DomainName|String|Yes|The domain name.|
-|StartTime|String|Yes|The beginning of the time range where the data is queried. -   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
--   Example: 2016-10-20T04:00:00Z.
+## Request parameters
 
- |
-|EndTime|String|Yes|The end of the time range where the data is queried. The end time must be later than the start time. -   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
--   Example: 2016-10-20T04:00:00Z.
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeDomainRealTimeReqHitRateData|The operation that you want to perform. Set the value to **DescribeDomainRealTimeReqHitRateData**. |
+|DomainName|String|Yes|test.test.com|The accelerated domain names. Separate multiple domain names with commas \(,\). |
+|StartTime|String|No|2018-01-02T11:23:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
+|EndTime|String|No|2018-01-02T11:26:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
- |
+The end time must be later than the start time. |
 
-## Response parameters {#section_znz_pgg_aev .section}
+## Response parameters
 
-|Parameter|Type|Description|
-|---------|----|-----------|
-|RequestId|String|The ID of the request.|
-|TimeStamp|String|The time stamp of data. -   The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
--   Example: 2016-10-20T04:00:00Z.
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Data|Array of ReqHitRateDataModel| |The response parameters. |
+|ReqHitRateDataModel| | | |
+|ReqHitRate|Float|0.8956940476262277|The request hit ratio. |
+|TimeStamp|String|2018-01-02T11:26:00Z|The timestamp. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. |
+|RequestId|String|70A26B11-3673-479C-AEA8-E03FC5D3496D|The ID of the request. |
 
- |
-|ReqHitRate|Float|The request hit rate.|
+## Examples
 
-## Examples {#section_2fu_d9u_671 .section}
+Sample requests
 
-Sample request
-
-``` {#codeblock_m9p_v9t_yli}
-https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeReqHitRateData&DomainName=example.com&EndTime=2018-01-02T11%3A05%3A37Z<Common request parameters>
+```
+https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeReqHitRateData
+&DomainName=www.domainname.com
+&StartTime=2018-01-02T11:23:00Z
+&EndTime=2018-01-02T11:26:00Z
+&<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeDomainRealTimeReqHitRateDataResponse>
+      <Data>
+            <ReqHitRateDataModel>
+                  <TimeStamp>2018-01-02T11:26:00Z</TimeStamp>
+                  <ReqHitRate>0.8956940476262277</ReqHitRate>
+            </ReqHitRateDataModel>
+            <ReqHitRateDataModel>
+                  <TimeStamp>2018-01-02T11:25:00Z</TimeStamp>
+                  <ReqHitRate>0.8429129920796812</ReqHitRate>
+            </ReqHitRateDataModel>
+      </Data>
+      <RequestId>70A26B11-3673-479C-AEA8-E03FC5D3496D</RequestId>
+</DescribeDomainRealTimeReqHitRateDataResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_xrf_vh6_9vn .language-json}
+```
 {
-   "Data":{
-      "ReqHitRateModel":[
-         {
-            "TimeStamp":"2018-01-02T11:26:00Z",
-            "ReqHitRate":0.8956940476262277
-         },
-         {
-            "TimeStamp":"2018-01-02T11:25:00Z",
-            "ReqHitRate":0.8429129920796812
-         }
-      ]
-   },
-   "RequestId":"70A26B11-3673-479C-AEA8-E03FC5D3496D"
+    "Data": {
+        "ReqHitRateDataModel": [{
+            "TimeStamp": "2018-01-02T11:26:00Z",
+            "ReqHitRate": 0.8956940476262277
+        }, {
+            "TimeStamp": "2018-01-02T11:25:00Z",
+            "ReqHitRate": 0.8429129920796812
+        }]
+    },
+    "RequestId": "70A26B11-3673-479C-AEA8-E03FC5D3496D"
 }
 ```
 
-## Error codes {#section_wfm_ior_p0r .section}
+## Error codes
 
-|Error code|Error message|HTTP status code|Description|
-|----------|-------------|----------------|-----------|
-|InvalidTime.Malformed|Specified time is malformed.|400|The error message returned because the time parameters are invalid.|
-|InvalidDomainName.Malformed|Specified DomainName is malformed.|400|The error message returned because the domain name is not specified or the specified domain name does not exist.|
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|InvalidTime.Malformed|Specified StartTime or EndTime is malformed.|The error message returned because the format of the specified start time or end time is invalid.|
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
