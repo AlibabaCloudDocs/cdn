@@ -5,9 +5,9 @@ This topic describes how to call the AddCdnDomain operation to add a domain name
 Before you call this operation, complete the following steps:
 
 -   [Create an Alibaba Cloud account](https://account.alibabacloud.com/register/intl_register.htm)
--   [Complete real-name verification](https://www.alibabacloud.com/help/zh/doc-detail/52595.htm)
+-   [Complete real-name verification](https://www.alibabacloud.com/help/doc-detail/52595.htm)
 -   [Activate Alibaba Cloud Content CDN](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure CDN acceleration in accelerated regions outside mainland China in the CDN console.md)
--   [Use Alibaba Cloud SDK for Java](https://www.alibabacloud.com/help/zh/doc-detail/66496.htm)
+-   [Use Alibaba Cloud SDK for Java](https://www.alibabacloud.com/help/doc-detail/66496.htm)
 
 Alibaba Cloud CDN applies to a wide array of scenarios, including but not limited to:
 
