@@ -9,5 +9,5 @@ An AccessKey pair consists of an AccessKey ID and an AccessKey secret.
 
 **Warning:** If the AccessKey pair of your Alibaba Cloud account is disclosed, your resources may be exposed to potential risks. We recommend that you use the AccessKey pair of a RAM user to call API operations. This minimizes the risks of disclosing the AccessKey pair of your Alibaba Cloud account.
 
-For more information, see [Create an AccessKey]().
+For more information, see [Create an AccessKey pair]().
 
