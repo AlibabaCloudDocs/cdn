@@ -1,6 +1,6 @@
 # DescribeDomainSrcQpsData
 
-Queries the number of queries per second for back-to-origin requests. You can query data collected within the last 90 days.
+Queries the number of queries per second for accelerated domain names. You can query data collected within the last 90 days.
 
 **When you call this operation, note that:**
 
@@ -14,8 +14,8 @@ Queries the number of queries per second for back-to-origin requests. You can qu
 
 ## Request parameters
 
-|Parameter|Type|Required|Example|Description |
-|---------|----|--------|-------|------------|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeDomainSrcQpsData|The operation that you want to perform. Set the value to **DescribeDomainSrcQpsData**. |
 |DomainName|String|No|example.com|The accelerated domain names that you want to query. Separate multiple domain names with commas \(,\).
 
@@ -36,13 +36,13 @@ Queries the number of queries per second for back-to-origin requests. You can qu
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|DataInterval|String|300|The minimum time interval between the entries returned. Unit: seconds. |
+|DataInterval|String|300|The time interval between the data entries. Unit: seconds. |
 |DomainName|String|example.com|The accelerated domain name. |
 |EndTime|String|2019-11-30T05:40:00Z|The end of the time range that was queried. |
 |RequestId|String|7CBCD6AD-B016-42E5-AE0B-B3731DE8F755|The ID of the request. |
-|SrcQpsDataPerInterval|Array| |The back-to-origin bandwidth information returned at each interval. |
+|SrcQpsDataPerInterval|Array of DataModule| |The back-to-origin bandwidth information at each interval. |
 |DataModule| | | |
-|TimeStamp|String|2015-12-10T21:00:00Z|The timestamp of the data returned. |
+|TimeStamp|String|2015-12-10T21:00:00Z|The timestamp of the data. |
 |Value|String|0|The number of queries per second. |
 |StartTime|String|2019-11-30T05:33:00Z|The beginning of the time range that was queried. |
 
@@ -114,7 +114,7 @@ Sample success responses
 |400|InvalidStartTime.Malformed|Specified StartTime is malformed.|The error message returned because the format of the specified start time is invalid. For more information about the time format, see the Request parameters section.|
 |400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the end time is invalid. For more information about the time format, see the Request parameters section.|
 |400|InvalidEndTime.Mismatch|Specified end time does not math the specified start time.|The error message returned because the end time must be later than the start time.|
-|400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is invalid.|
+|400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is not supported.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
