@@ -12,7 +12,7 @@ The EdgeScript CLI supports the following functions:
 
 ## Download the EdgeScript CLI
 
-You can click [here](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip) to download the EdgeScript CLI.
+You can click [attachment](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip) to download the EdgeScript CLI.
 
 ## Work with EdgeScript CLI
 
