@@ -295,7 +295,7 @@ Details about this function:
 
 -   References
 
-    For more information about the PCRE syntax, see [https://www.pcre.org/current/doc/html/pcre2syntax.html](https://www.pcre.org/current/doc/html/pcre2syntax.html).
+    For more information about the PCRE syntax, see [pcre2syntax man page](https://www.pcre.org/current/doc/html/pcre2syntax.html).
 
 
 ## split
