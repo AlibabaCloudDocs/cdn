@@ -10,11 +10,11 @@ Alibaba Cloud CDN provides a wide variety of integrated features, advanced techn
 
 -   Alibaba Cloud CDN has the largest number of CDN nodes for content delivery acceleration in mainland China. Alibaba Cloud has deployed more than 2,300 CDN nodes in mainland China and over 500 CDN nodes across regions outside of mainland China. For more information, see [Node distribution](/intl.en-US/Product Introduction/Node distribution.md).
 -   The bandwidth capacity of Alibaba Cloud CDN far outweighs that of other similar CDN products in mainland China. The bandwidth capacity of any single CDN node exceeds 40 Gbit/s, and the total bandwidth capacity of all CDN nodes in mainland China is 130 Tbit/s.
--   Excellent key performance metrics ensure optimal user experience. Alibaba Cloud CDN provides a cache hit ratio of over 95%, with response times measured in milliseconds, and over 95% smoothness rate for accelerated video delivery. For more information, see [Common performance indicators](/intl.en-US/Product Introduction/Why choose Alibaba Cloud CDN?.md).
+-   Excellent key performance metrics ensure optimal user experience. Alibaba Cloud CDN provides a cache hit ratio of over 95%, with response times measured in milliseconds, and over 95% smoothness rate for accelerated video delivery. For more information, see [Common performance indicators](/intl.en-US/Product Introduction/Performance indicators of Alibaba Cloud CDN.md).
 
 **Ease of use**
 
-Alibaba Cloud CDN can accelerate content delivery in a variety of scenarios, such as downloads of small and large files, on-demand video and audio streaming, live streaming media, Dynamic Route for CDN \(DCDN\), and Secure Content Delivery Network \(SCDN\). You can easily customize CDN to fit your needs by using EdgeScript. Alibaba Cloud CDN has been popular for the achievements brought to the customers. For more information, see [Case studies for CDN](/intl.en-US/Product Introduction/Case studies for CDN.md) and [Alibaba Cloud safeguards AirAsia seasonal promotions](/intl.en-US/Successful Cases/Alibaba Cloud safeguards AirAsia seasonal promotions.md).
+Alibaba Cloud CDN can accelerate content delivery in a variety of scenarios, such as downloads of small and large files, on-demand video and audio streaming, live streaming media, Dynamic Route for CDN \(DCDN\), and Secure Content Delivery Network \(SCDN\). You can easily customize CDN to fit your needs by using EdgeScript. Alibaba Cloud CDN has been popular for the achievements brought to the customers. For more information, see [Case studies](/intl.en-US/Product Introduction/Case studies.md) and [Alibaba Cloud safeguards AirAsia seasonal promotions](/intl.en-US/Successful Cases/Alibaba Cloud safeguards AirAsia seasonal promotions.md).
 
 -   The [CDN console](https://cdn.console.aliyun.com/overview) provides a graphical overview of the features provided and simplifies management. For more information, see [Domain Management](/intl.en-US/Domain Management/Features.md) and [Service Management](/intl.en-US/Service Management/Overview.md).
 -   You can use EdgeScript to customize CDN to fit your needs and shorten the time to release custom features. For more information, see [Overview of EdgeScript](/intl.en-US/EdgeScript/Introduction/Overview.md).
@@ -22,7 +22,7 @@ Alibaba Cloud CDN can accelerate content delivery in a variety of scenarios, suc
 ## Technological competitiveness
 
 -   Advanced infrastructure: Linux Virtual Server \(LVS\) is used for Layer-4 load balancing and Tengine for Layer-7 load balancing. The HTTP caching protocol is written in Swift.
--   Rich API operations: In addition to using the console, you can manage the CDN service by calling specific API operations. We recommend that you use the latest API operations. For more information, see [New API Reference](/intl.en-US/New API Reference/Overview.md).
+-   Rich API operations: In addition to using the console, you can manage the CDN service by calling specific API operations. We recommend that you use the latest API operations. For more information, see [New API Reference](/intl.en-US/New API Reference/Introduction to the API.md).
 -   SDKs for multiple languages: SDK guides are available to instruct you to download, install, and use Alibaba Cloud SDKs. For more information, see [SDK for Java](https://develop.aliyun.com/tools/sdk?java#/java), [SDK for Python](https://develop.aliyun.com/tools/sdk?java#/python), [SDK for PHP](https://develop.aliyun.com/tools/sdk?java#/php), [SDK for .NET](https://develop.aliyun.com/tools/sdk?java#/dotnet), [SDK for C or C++](https://develop.aliyun.com/tools/sdk?java#/c), and [SDK for Go](https://develop.aliyun.com/tools/sdk?java#/go).
 
 ## Pricing competitiveness
@@ -49,8 +49,6 @@ Alibaba Cloud provides an ecosystem of diversified services and products. The fo
     |Scenario|Recommended service|Benefit|
     |--------|-------------------|-------|
     |Accelerate dynamic and static content delivery|[DCDN]()|DCDN is a branch of Alibaba Cloud CDN that integrates acceleration technology for dynamic and static content. DCDN automatically separates dynamic content from static content and accelerates the delivery of both content types in parallel.|
-    |Integrate security with acceleration|[SCDN](https://help.aliyun.com/product/63560.html?spm=a2c4g.11186623.2.18.7acd5cd5EGu1Qx)|SCDN is a branch of Alibaba Cloud CDN that integrates security protections. SCDN stabilizes the acceleration of content delivery and protects resources against Distributed Denial of Service \(DDoS\) attacks and HTTP flood attacks.|
-    |Support the bandwidth of more than 10 Gbit/s in specific scenarios, such as video live streaming, on-demand video streaming, and large file downloads.|[PCDN](https://help.aliyun.com/product/54287.html)|P2P CDN \(PCDN\) integrates with PCDN SDKs to achieve the acceleration performance equivalent to or slightly superior to that of CDN. PCDN can also minimize the costs of content delivery.|
 
 -   If you have already activated Alibaba Cloud CDN, you can integrate CDN with other relevant services to support your special scenarios.
 
@@ -69,7 +67,7 @@ Alibaba Cloud CDN provides comprehensive service support, including:
 
 -   End-to-end 24/7 monitoring and support systems.
 -   Enriched documentation and training systems and open technical exchanges:
-    -   For more information about CDN documents, see [CDN documentation](/intl.en-US/Product Introduction/What is Alibaba Cloud CDN?.md).
+    -   For more information about CDN documents, see [What is Alibaba Cloud CDN?](/intl.en-US/Product Introduction/What is Alibaba Cloud CDN?.md).
     -   For more information about basic online courses on CDN, see [Alibaba Cloud Academy](https://edu.aliyun.com/course/explore?title=CDN).
     -   For more information about the open platform for CDN developers and users, see [Alibaba Cloud Community](https://developer.aliyun.com/?spm=5176.12825654.h2v3icoap.940.2fed2c4aiuQBu4&aly_as=xIPi0tJy).
 -   Responsive troubleshooting systems:
@@ -82,9 +80,9 @@ To activate Alibaba Cloud CDN, perform the following steps:
 
 1.  Create an Alibaba Cloud account and pass real-name verification.
 2.  Log on to the [Alibaba Cloud CDN console](https://www.alibabacloud.com/en/product/cdn) to select the required billing method. For more information, see [Recommended billing methods](#section_2k3_p0x_sci).
-3.  Click **Activate Now**. For more information, see [Activate the CDN service](/intl.en-US/Quick Start/Activate the CDN service.md).
+3.  Click **Activate Now**. For more information, see [Activate Alibaba Cloud CDN](/intl.en-US/Quick Start/Activate the CDN service.md).
 
-After you activate the service, you can log on to the CDN console and create an accelerated domain name. Then, Alibaba Cloud CDN team assigns a canonical name \(CNAME\) address to the accelerated domain name. You must configure a CNAME record to map the accelerated domain name to the CNAME address. After the CNAME record takes effect, Alibaba Cloud CDN can accelerate access to the accelerated domain name. For more information, see [Add a domain name for CDN](/intl.en-US/Quick Start/Add a domain.md) and [Configure a CNAME record in Alibaba Cloud DNS](/intl.en-US/Quick Start/Configure a CNAME record/Configure a CNAME record in Alibaba Cloud DNS.md).
+After you activate the service, you can log on to the CDN console and create an accelerated domain name. Then, Alibaba Cloud CDN team assigns a canonical name \(CNAME\) address to the accelerated domain name. You must configure a CNAME record to map the accelerated domain name to the CNAME address. After the CNAME record takes effect, Alibaba Cloud CDN can accelerate access to the accelerated domain name. For more information, see [Add a domain name to Alibaba Cloud CDN](/intl.en-US/Quick Start/Add a domain name to Alibaba Cloud CDN.md) and [Configure a CNAME record in Alibaba Cloud DNS](/intl.en-US/Quick Start/Configure a CNAME record/Configure a CNAME record in Alibaba Cloud DNS.md).
 
 ## Recommended billing methods and resource plans
 
@@ -100,5 +98,5 @@ Alibaba Cloud CDN supports multiple billing methods and resource plans that are 
 
 For more information about the billing methods of Alibaba Cloud CDN, see [Pricing of CDN](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail). You can also use the price calculator to estimate your expenses.
 
-You can click [here](https://www.aliyun.com/price/product?spm=5176.7933777.1398156.1.2fef56f5Tev9PO&aly_as=TgCS3ZC5#/cdn/detail) to purchase the service.
+You can click [purchase Alibaba Cloud CDN](https://www.aliyun.com/price/product?spm=5176.7933777.1398156.1.2fef56f5Tev9PO&aly_as=TgCS3ZC5#/cdn/detail) to purchase the service.
 
