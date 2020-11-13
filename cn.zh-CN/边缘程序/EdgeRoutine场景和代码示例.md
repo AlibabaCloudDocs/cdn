@@ -328,6 +328,7 @@ function _shouldDoABTest(request) {
   }
 }
 async function _handleABTest(event, json) {
+  event.request.headers.delete("content-length");
   const fetchInit = {
     method : event.request.method,
     headers: event.request.headers,
