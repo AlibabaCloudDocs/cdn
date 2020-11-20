@@ -14,7 +14,7 @@ Alibaba Cloud CDN provides a wide variety of integrated features, advanced techn
 
 **Ease of use**
 
-Alibaba Cloud CDN can accelerate content delivery in a variety of scenarios, such as downloads of small and large files, on-demand video and audio streaming, live streaming media, Dynamic Route for CDN \(DCDN\), and Secure Content Delivery Network \(SCDN\). You can easily customize CDN to fit your needs by using EdgeScript. Alibaba Cloud CDN has been popular for the achievements brought to the customers. For more information, see [Case studies](/intl.en-US/Product Introduction/Case studies.md) and [Alibaba Cloud safeguards AirAsia seasonal promotions](/intl.en-US/Successful Cases/Alibaba Cloud safeguards AirAsia seasonal promotions.md).
+Alibaba Cloud CDN can accelerate content delivery in a variety of scenarios, such as downloads of small and large files, on-demand video and audio streaming, live streaming media, Dynamic Route for CDN \(DCDN\), and Secure Content Delivery Network \(SCDN\). You can easily customize CDN to fit your needs by using EdgeScript. Alibaba Cloud CDN has been popular for the achievements brought to the customers. For more information, see [Case studies](/intl.en-US/Product Introduction/Case studies.md).
 
 -   The [CDN console](https://cdn.console.aliyun.com/overview) provides a graphical overview of the features provided and simplifies management. For more information, see [Domain Management](/intl.en-US/Domain Management/Features.md) and [Service Management](/intl.en-US/Service Management/Overview.md).
 -   You can use EdgeScript to customize CDN to fit your needs and shorten the time to release custom features. For more information, see [Overview of EdgeScript](/intl.en-US/EdgeScript/Introduction/Overview.md).
