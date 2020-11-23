@@ -1,6 +1,6 @@
 # 配置边缘Web应用防火墙
 
-CDN结合边缘Web应用防火墙 WAF（Web Application Firewall）能力，将业务流量进行恶意特征识别及防护，将正常、安全的流量回源到服务器。避免网站服务器被恶意入侵，保障业务的核心数据安全，解决因恶意攻击导致的服务器性能异常问题。 通过本文，您可以了解WAF防护功能、使用场景、费用说明和设置方法。
+CDN结合边缘Web应用防火墙WAF（Web Application Firewall）能力，将业务流量进行恶意特征识别及防护，将正常、安全的流量回源到服务器。避免网站服务器被恶意入侵，保障业务的核心数据安全，解决因恶意攻击导致的服务器性能异常问题。 通过本文您可以了解WAF防护功能、使用场景、费用说明和设置方法。
 
 ## 前提条件
 
@@ -15,7 +15,7 @@ CDN的WAF服务主要适用于金融、电商、O2O、互联网+、游戏、政�
 
 使用CDN WAF功能后，可以帮助您解决以下问题：
 
--   防数据泄密，避免因黑客的注入入侵攻击，导致网站核心数据被拖库泄露。
+-   防数据泄密，避免因黑客的注入式攻击导致网站核心数据被拖库泄露。
 -   阻止木马上传网页篡改，保障网站的公信力。
 -   提供虚拟补丁，针对网站被曝光的最新漏洞，最大可能地提供快速修复规则。
 
@@ -31,7 +31,7 @@ CDN的WAF服务主要适用于金融、电商、O2O、互联网+、游戏、政�
 
 4.  在指定域名的左侧导航栏，单击**安全配置**。
 
-5.  在**边缘Web应用防火墙**页签，打开**边缘Web应用防火墙-中国大陆**开关。
+5.  在**边缘Web应用防火墙**页签，打开边缘Web应用防火墙开关。
 
 6.  单击**修改配置**。
 
@@ -45,7 +45,7 @@ CDN的WAF服务主要适用于金融、电商、O2O、互联网+、游戏、政�
     |**防护规则组**|Web入侵防护规则如下：    -   **宽松规则**：当您发现在**中等规则**下存在较多误拦截时，建议您选择**宽松规则**。宽松模式下对业务的误报程度最低，但也容易漏过攻击。
     -   **中等规则**：默认使用中等规则。
     -   **严格规则**：当您需要更严格地防护路径穿越、SQL注入、命令执行时，建议您选择**严格规则**。 |
-    |**解码设置**|设置需要正则防护引擎解码分析的内容格式。    1.  单击![jiema](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3506924061/p178440.png)，打开配置窗口。
+    |**解码设置**|设置需要正则防护引擎解码分析的内容格式。    1.  单击![jiema](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3506924061/p178440.png)，打开配置窗口。
     2.  选中或取消选中要解码的格式。
         -   不支持取消的格式：**URL解码**、**JavaScript Unicode解码**、**Hex解码**、**注释处理**、**空格压缩**。
         -   支持取消的格式：**Multipart解析**、**JSON解析**、**XML解析**、**PHP序列化解码**、**HTML实体解码**、**UTF-7解码**、**Base64解码**、**Form解析**。
@@ -87,5 +87,5 @@ AliyunServiceRoleForCDNAccessingWAF角色中包含的权限包括如下接口：
 -   DescribeInstanceSpecInfo
 -   DescribeDomainBasicConfigs
 
-如果您希望删除该AliyunCDNAccessingWAFRole角色，您需要提交工单删除CDN WAF实例，关闭所有域名的CDN WAF功能，然后才能在RAM中删除该SLR。
+如果您希望删除该AliyunServiceRoleForCDNAccessingWAF角色，您需要[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)删除CDN WAF实例，关闭所有域名的CDN WAF功能，然后才能在RAM中删除该SLR。
 
