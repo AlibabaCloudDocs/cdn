@@ -19,7 +19,7 @@ Before you perform the tasks described in this document, make sure that you have
 
 3.  Select a**billing method** and select **Alibaba Cloud CDN Terms of Service**.
 
-    For more information about billing methods supported by Alibaba Cloud CDN, see[CDN Pricing](https://www.alibabacloud.com/zh/product/cdn/pricing).
+    For more information about billing methods supported by Alibaba Cloud CDN, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
 4.  Click **Activate Now**.
 
