@@ -9,7 +9,7 @@ HTTPS是以安全为目标的HTTP通道，为CDN的网络内容传输提供了�
 -   [源站的HTTPS证书更新了，CDN上需要同步更新吗？](#section_zjb_jyq_cc4)
 -   [已经配置了HTTPS，为什么客户端还是HTTP访问？](#section_cst_8gc_503)
 -   [CDN的免费HTTPS证书申请失败怎么办？](#section_l5z_efq_tf3)
--   [上传HTTPS证书，提示证书重复怎么办?](#section_37t_zop_u9j)
+-   [上传HTTPS证书，提示证书重复怎么办？](#section_37t_zop_u9j)
 -   [配置HTTPS证书时提示“证书格式不对”，如何进行转换？](#section_nn1_mcd_0e7)
 -   [开启HTTPS加速会消耗更多资源或降低访问速度吗？](#section_hlw_5tz_zgb)
 -   [站点只有登录才需要HTTPS，其他都不需要HTTPS吗？](#section_epq_ztz_zgb)
@@ -45,7 +45,7 @@ HTTPS是客户端和服务端的交互，未使用CDN之前，是客户端直接
 
 在阿里云CDN控制台中申请免费HTTPS证书时存在一些限制，这些限制可能导致免费HTTPS证书申请失败，如果免费HTTPS证书申请失败，优先建议您前往[SSL证书控制台](https://yundunnext.console.aliyun.com/?p=cas)申请免费证书并进行部署。
 
-## 上传HTTPS证书，提示证书重复怎么办?
+## 上传HTTPS证书，提示证书重复怎么办？
 
 当您上传**自定义上传（证书+私钥）**类型的证书时，如果系统提示证书重复，您需要修改证书名称后再重新上传。
 
