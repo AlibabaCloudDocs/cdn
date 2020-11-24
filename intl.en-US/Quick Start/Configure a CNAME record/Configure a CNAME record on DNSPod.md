@@ -8,7 +8,7 @@ This topic describes how to configure a CNAME record on DNSPod. After you add a 
 
 You have logged on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
-1.  a CNAME.
+1.  Obtain the CNAME assigned to the accelerated domain name.
 
     1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
@@ -16,7 +16,7 @@ You have logged on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun
 
     3.  On the **Domain Names** page, copy the CNAME of the accelerated domain name.
 
-        ![Domain Names page](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3630062061/p66555.png)
+        ![Click Domain Names](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3630062061/p66555.png)
 
 2.  Add a CNAME record to DNSPod. To add a CNAME record, complete these steps:
 
@@ -43,8 +43,8 @@ You have logged on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun
 
     1.  Open the Command Prompt in Windows.
 
-    2.  Use the Command Prompt to ping the accelerated domain name. If the CNAME in the output matches the CNAME assigned to the accelerated domain name in the Alibaba Cloud CDN console, it indicates that CDN acceleration is enabled.
+    2.  Use the Command Prompt to ping the accelerated domain name. If the CNAME in the output matches the CNAME assigned to the accelerated domain name in the Alibaba Cloud CDN console, it indicates that the CDN service is enabled for the domain name.
 
-        ![Check whether the CNAME record has taken effect](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7423839951/p66693.png)
+        ![Check whether the CNAME record has taken effect](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7423839951/p66693.png)
 
 
