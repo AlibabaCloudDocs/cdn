@@ -1,44 +1,57 @@
-# Log storage {#task_187634 .task}
+---
+keyword: log storage
+---
 
-The CDN log storage service uses Function Compute to store logs for an extended period of time. You can analyze the logs to further understand CDN service quality and client access behavior. This can help you make more informed decisions.
+# Log storage
 
-The CDN log storage service uses Function Compute to store logs. You must activate Function Compute before you can use the log storage service. After you authorize CDN to access Function Compute, CDN creates a Function Compute instance to store logs. You can also log on to the [Function Compute console](https://fc.console.aliyun.com) and use an existing Function Compute instance to store logs.
+The log storage service of Alibaba Cloud Content Delivery Network \(CDN\) uses Function Compute to deliver logs to Object Storage Service for a longer retention period of the logs. You can analyze the log data to further understand your CDN service quality and user behaviors. This helps you make informed decisions.
 
--   The CDN offline log service stores logs for only one month. You can use the CDN log storage service to store logs to OSS, where logs can be stored for a longer period of time. This facilitates log storage and analysis.
--   Billing: The log storage service is free of charge. However, you will consume Function Compute resources during the log storage process. You are charged when the amount of Function Compute resources consumed in each month exceeds the specified quota. For more information about Function Compute pricing, see [Function Compute billing methods](https://www.alibabacloud.com/help/doc-detail/54301.htm).
+The log storage service of Alibaba Cloud CDN integrates with Function Compute to deliver logs. You must activate Function Compute before you can use the log storage service. After you authorize Alibaba Cloud CDN to access Function Compute, Alibaba Cloud CDN creates a Function Compute service to deliver logs. You can also log on to the [Function Compute console](https://fc.console.aliyun.com) and use an existing Function Compute service to deliver logs.
 
--   CDN is seamlessly integrated with Function Compute. This allows you to configure functions for processing a wide range of events and receive only events from the domains with specific name fields. After receiving events that meet the filtering criteria, CDN automatically calls functions to process the events.
+-   The offline log service of Alibaba Cloud CDN stores logs for only one month. You can use the log storage service of Alibaba Cloud to deliver logs to OSS, where logs can be stored for a longer period of time. This facilitates log storage and analysis.
+-   Billing: The log storage service is free of charge. However, you will consume Function Compute resources during the log storage process. You are charged at a lower price rate when the amount of Function Compute resources consumed in each month exceeds the specified quota. For more information about Function Compute pricing, see [Function Compute billing methods](https://www.alibabacloud.com/help/doc-detail/54301.htm).
+
+-   Alibaba Cloud CDN is seamlessly integrated with Function Compute. This allows you to configure functions for processing different events and filter events by parameter such as domain name to collect data from specific domain names. After receiving events that meet the filter conditions, Alibaba Cloud CDN automatically calls functions to process the events.
 
 1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+
 2.  In the left-side navigation pane, click **Logs**.
-3.  On the Log Management page, click the Log Storage tab.
-4.  On the Log Storage tab, click **Activate Log Storage**.
-5.  In the Authorize and Activate dialog box, enter a service name in the **Service Name** field, select an OSS bucket from the **OSS Bucket** drop-down list, and click **Next**. 
 
-    Before you click Next, select the check box to agree that fees will be incurred by Function Compute after activating Log Storage.
+3.  On the **Log Management** page, click the **Log Storage** tab.
 
-    ![](images/11014_en-US_source.png)
+4.  On the **Log Storage** tab, click **Activate Log Storage**.
 
-6.  Click the **Authorize** button next to Service Authentication. On the RAM page, authorize Function Compute to write data to OSS and execute functions.
-7.  Click the **Authorize** button next to Authorize Trigger. On the RAM page, authorize CDN to access Function Compute.
-8.  Select domains and click **Create**. 
+5.  In the Authorize and Activate dialog box, enter a service name in the Service Name field, select an OSS bucket from the OSS Bucket drop-down list, and then click **Next**.
 
-    ![](images/11058_en-US_source.png)
+    You must select I understand and agree that fees will be incurred by Function Compute after I activate Log Storage before you can perform the next step.
 
-9.  Click **Done**. 
+    ![Set the parameters on the Select Trigger page](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4886916061/p63361.png)
 
-    ![](images/11059_en-US_source.png)
+6.  Click **Authorize** next to Service Authentication.
+
+    On the RAM page, authorize Function Compute to write data to OSS and execute functions.
+
+7.  Click **Authorize** next to Authorize Trigger.
+
+    On the RAM page, authorize Alibaba Cloud CDN to access Function Compute.
+
+8.  Select domain names to be associated with the Function Compute service and click **Create**.
+
+    ![Select domain names](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4886916061/p63249.png)
+
+9.  Click **Done**.
+
+    ![The service is created](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9019438951/p11059.png)
 
 
-## API {#example_q6q_p33_swv .example}
+## Call an API operation to use the log storage service.
 
-You can call API operations listed in the following table to implement the log storage function.
+You can call API operations listed in the following table to use the log storage service.
 
-|Operation|Description|
-|---------|-----------|
-|[DescribeCustomLogConfig](../intl.en-US/New API Reference/Log operations/DescribeCustomLogConfig.md#)| |
-|[DescribeDomainCustomLogConfig](../intl.en-US/New API Reference/Log operations/DescribeDomainCustomLogConfig.md#)| |
-|[ListDomainsByLogConfigId](../intl.en-US/New API Reference/Log operations/ListDomainsByLogConfigId.md#)| |
-|[ListUserCustomLogConfig](../intl.en-US/New API Reference/Log operations/ListUserCustomLogConfig.md#)| |
-| | |
+|API|Description|
+|---|-----------|
+|[DescribeCustomLogConfig](/intl.en-US/New API Reference/Log operations/DescribeCustomLogConfig.md)|Queries the detailed information about a custom log configuration.|
+|[DescribeDomainCustomLogConfig](/intl.en-US/New API Reference/Log operations/DescribeDomainCustomLogConfig.md)|Queries the custom log configuration of an accelerated domain name.|
+|[ListDomainsByLogConfigId](/intl.en-US/New API Reference/Log operations/ListDomainsByLogConfigId.md)|Queries all accelerated domain names associated with a custom log configuration.|
+|[ListUserCustomLogConfig](/intl.en-US/New API Reference/Log operations/ListUserCustomLogConfig.md)|Queries all custom log configurations under your account.|
 
