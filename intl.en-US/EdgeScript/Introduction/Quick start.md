@@ -6,7 +6,7 @@ You can use EdgeScript to perform the following operations:
 
 -   Save a script to a local file.
 
-    For example, the m3u8.es script is used to block all .m3u8 requests. You can save the script to a local file.
+    For example, the m3u8.es script is used to block all M3U8 requests. You can save the script to a local file.
 
     ```
     $cat m3u8.es
@@ -16,7 +16,7 @@ You can use EdgeScript to perform the following operations:
     }
     ```
 
--   Publish a script to the test environment.
+-   Publish a script to the staging environment.
 
     ```
     $./es.py action=push_test_env domain=<your domain> rule='{"pos":"head","pri":"0","rule_path":"./m3u8.es","enable":"on"}'
@@ -32,7 +32,7 @@ You can use EdgeScript to perform the following operations:
     }
     ```
 
--   Query scripts in the test environment.
+-   Query scripts in the staging environment.
 
     ```
     $./es.py action=query_test_env domain=<your domain>
@@ -75,7 +75,7 @@ You can use EdgeScript to perform the following operations:
 -   Test scripts.
 
     ```
-    $curl -x Test environment IP:80 -o /dev/null -v 'http://www.archnote.net/test.m3u8'
+    $curl -x Staging environment IP:80 -o /dev/null -v 'http://www.archnote.net/test.m3u8'
     < HTTP/1.1 400 Bad Request
     < Server: Tengine
     < Date: Thu, 18 Jul 2019 09:40:41 GMT
@@ -88,7 +88,7 @@ You can use EdgeScript to perform the following operations:
     < EagleId: 2a7b771b15634428415537484e
     ```
 
--   Publish all scripts in the test environment to the production environment.
+-   Publish all scripts from the staging environment to the production environment.
 
     ```
     $./es.py action=push_product_env domain=<your domain>
@@ -117,7 +117,7 @@ You can use EdgeScript to perform the following operations:
         "DomainConfigs": {
             "DomainConfig": [
                 {
-                    "Status":"success", 
+                    "Status": "success", 
                     "ConfigId": 17432558, 
                     "FunctionArgs": {
                         "FunctionArg": [
