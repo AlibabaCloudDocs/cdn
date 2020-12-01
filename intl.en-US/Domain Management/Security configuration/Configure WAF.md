@@ -1,9 +1,9 @@
 # Configure WAF
 
-Alibaba Cloud Content Delivery Network \(CDN\) integrates with Web Application Firewall \(WAF\) to filter out malicious requests and redirect secure requests to origin servers. WAF can protect web servers against intrusions, secure core data, and prevent server abnormalities caused by attacks. This topic describes the features, scenarios, and billing methods of WAF and how to configure WAF.
+Alibaba Cloud Content Delivery Network \(CDN\) integrates with Web Application Firewall \(WAF\) to filter out malicious requests and redirect secure requests to origin servers. WAF can protect web servers against intrusions, secure core data, and prevent server anomalies caused by attacks. This topic describes the features, scenarios, and billing methods of WAF and how to configure WAF.
 
--   WAF is activated in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To activate WAF in the Alibaba Cloud CDN console, choose **Security & Protection** \> **WAF** and click **Activate**.
--   WAF can be used to protect only CDN nodes in mainland China. Before you activate WAF, confirm the accelerated region of your domain name. For more information about how to modify the accelerated region, see [Modify basic information](/intl.en-US/Domain Management/Basic settings/Modify basic information.md).
+-   WAF is activated in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To activate WAF in the Alibaba Cloud CDN console, choose **Security & Protection** \> **WAF** in the left-side navigation pane and click **Activate**.
+-   WAF can be used to protect only CDN nodes in mainland China. Before you activate WAF, confirm the accelerated region of your domain name. For more information about how to change the accelerated region, see [Modify basic information](/intl.en-US/Domain Management/Basic settings/Modify basic information.md).
 
 Alibaba Cloud CDN can be integrated with WAF. After WAF is activated, it can protect CDN nodes. For more information about features of WAF, see [What is WAF?](/intl.en-US/Product Introduction/What is WAF?.md).
 
@@ -25,7 +25,7 @@ After you activate WAF for a domain name, WAF detects all requests sent to the d
 
 3.  On the Domain Names page, find the target domain name and click **Manage**.
 
-4.  In the left-side navigation tree, click **Security Settings**.
+4.  In the left-side domain name management pane, click **Security Settings**.
 
 5.  Click the WAF tab and turn on the **WAF Configuration** switch.
 
@@ -45,7 +45,7 @@ Directly blocks detected attacks.
 Sends alerts after attacks are detected but does not block the attacks. |
     |**Mode of protection policy**|Web application protection supports the following protection policies:     -   **Loose rule group**
 
-If the **Medium rule group** causes a high rate of false positive, we recommend that you select the **Loose rule group**. The loose rule group has the lowest false positive rate but the highest false negative rate.
+If the **Medium rule group** causes a high rate of false positives, we recommend that you select the **Loose rule group**. The loose rule group has the lowest false positive rate but the highest false negative rate.
 
     -   **Medium rule group**
 
@@ -55,16 +55,16 @@ The default policy.
 
 If you require stronger protection against path traversal, SQL injections, and command execution attacks, we recommend that you select the **Strict rule group**.
 
-If the protection policy causes a high rate of false negative, you can change the protection policy. The loose rule group has the lowest false positive rate but the highest false negative rate. |
+If the protection policy causes a high rate of false negatives, you can change the protection policy. The loose rule group has the lowest false positive rate but the highest false negative rate. |
     |**HTTP ACL Policy**|**Status**|Turn on or off the HTTP ACL policy feature.|
     |**Rule**|A default rule is provided. You can click **Settings** to add a rule or modify the default rule. Each rule can contain up to three match conditions and the logical relationship among the conditions are AND. It indicates that a rule is hit only when all the three match conditions are met.|
 
 
 ## Assign a service linked role
 
-After WAF is activated, the service linked role AliyunCDNAccessingWAFRole is automatically created and assigned to Alibaba Cloud CDN. Alibaba Cloud CDN can assume this role to access resources in WAF.
+After WAF is activated, the service linked role AliyunServiceRoleForCDNAccessingWAF is automatically created and assigned to Alibaba Cloud CDN. Alibaba Cloud CDN can assume this role to access resources in WAF.
 
-The AliyunCDNAccessingWAFRole role supports the following API operations:
+AliyunServiceRoleForCDNAccessingWAF has the following permissions:
 
 -   DescribePayInfo
 -   CreatePostpaidInstance
@@ -92,5 +92,5 @@ The AliyunCDNAccessingWAFRole role supports the following API operations:
 -   DescribeInstanceSpecInfo
 -   DescribeDomainBasicConfigs
 
-If you need to delete the AliyunCDNAccessingWAFRole role, submit a ticket to delete the WAF instance and disable WAF features for all accelerated domain names. Then, delete this role in the Resource Access Management \(RAM\) console.
+If you need to delete the AliyunServiceRoleForCDNAccessingWAF role, submit a ticket to delete the WAF instance and disable WAF features for all accelerated domain names. Then, delete this role in the Resource Access Management \(RAM\) console.
 
