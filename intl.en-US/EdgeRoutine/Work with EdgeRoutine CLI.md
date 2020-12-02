@@ -14,7 +14,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     $ npm install @alicloud/edgeroutine-cli -g
     ```
 
-    **Note:** The latest version of the EdgeRoutine CLI is 2.0.0. After the installation, you can run the `edgeroutine-cli -v` command to query the version number. We recommend that you upgrade your EdgeRoutine CLI to the latest version.
+    **Note:** The latest version of the EdgeRoutine CLI is 2.0.3. After the installation, you can run the `edgeroutine-cli -v` command to query the version number. We recommend that you upgrade your EdgeRoutine CLI to the latest version.
 
 2.  Run the following command to create a code directory and change to the directory:
 
