@@ -1,59 +1,77 @@
-# DescribeRealtimeDeliveryAcc {#reference_qn5_qly_dgb .reference}
+# DescribeRealtimeDeliveryAcc
 
-You can call the DescribeRealtimeDeliveryAcc operation to query the number of real-time log deliveries.
+Queries the number of real-time log deliveries.
 
-## Request parameters {#section_obx_rly_dgb .section}
+The maximum number of times that each user can call this operation per second is 100.
 
-|Parameter|Type|Required|Description|
-|:--------|:---|:-------|:----------|
-|Action|String |Yes|The operation that you want to perform. Set this parameter to DescribeRealtimeDeliveryAcc.|
-|StartTime|String|No|The beginning of the time range where the log data is queried. -   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
--   The time must be in UTC.
+## Debugging
 
- |
-|EndTime|String|No| -   The end of the time range where the log data is queried. The end time must be later than the start time.
--   The maximum time range that can be queried is one year.
--   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
--   The time must be in UTC.
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRealtimeDeliveryAcc&type=RPC&version=2018-05-10)
 
- |
-|Interval|String|No| -   The data sampling interval. Unit: seconds. Valid values: 300, 3600, and 86400.
--   If you do not specify this parameter or the specified parameter value is invalid, the default value applies. If the specified time range is no more than three days, the default value is 300.
--   If the specified time range is more than three days and no more than 30 days, the default value is 3600.
--   If the specified time range is more than 30 days, the default value is 86400.
+## Request parameters
 
- |
-|Project|String|No|The project name for the real-time log delivery.|
-|Logstore|String|No|The Logstore name for the real-time log delivery.|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|No|DescribeRealtimeDeliveryAcc|The operation that you want to perform. Set the value to **DescribeRealtimeDeliveryAcc**. |
+|StartTime|String|No|2016-10-20T04:00:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
+|EndTime|String|No|2016-10-20T05:00:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
-## Response parameters {#section_vbx_rly_dgb .section}
+ The end of the time range to query. The end time must be later than the start time. |
+|Interval|String|No|300|The time interval between the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|RequestId|String|The ID of the request.|
+ -   If the time span between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.
+-   If the time span between StartTime and EndTime is from 3 to 31 days \(31 days excluded\), valid values are **3600** and **86400**. Default value: **3600**.
+-   If the time span between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**. |
+|Project|String|No|Project|The name of the Log Service project that is used for real-time log delivery. By default, all projects are queried. |
+|LogStore|String|No|LogStore|The name of the Logstore that collects log data from Alibaba Cloud Content Delivery Network \(CDN\) in real time. By default, all Logstores are queried. |
 
-Parameters in AccData
+## Response parameters
 
-|Parameter|Type|Description|
-|:--------|:---|:----------|
-|TimeStamp|String|The timestamp of the data.|
-|FailedNum|Integer|The number of failed attempts to import log data to Log Service.|
-|SuccessNum|Integer|The number of successful attempts to import log data to Log Service.|
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|ReatTimeDeliveryAccData|Array of AccData| |The information about real-time log delivery. |
+|AccData| | | |
+|FailedNum|Integer|2|The number of failed attempts to deliver log data to Log Service. |
+|SuccessNum|Integer|2|The number of successful deliveries of log data to Log Service. |
+|TimeStamp|String|2018-09-03T06:00:00Z|The timestamp of the data. |
+|RequestId|String|684306D2-2511-4977-991D-CE97E91FD7C0|The ID of the request. |
 
-## Examples {#section_ybx_rly_dgb .section}
+## Examples
 
-Sample request
+Sample requests
 
-``` {#codeblock_ia8_i75_jhy}
-http://cdn.aliyuncs.com?Action=DescribeRealtimeDeliveryAcc&StartTime=2015-12-10T20:00:00Z&EndTime=2015-12-10T21:05:00Z
+```
+http://cdn.aliyuncs.com?Action=DescribeRealtimeDeliveryAcc
+&StartTime=2016-10-20T04:00:00Z
+&EndTime=2016-10-20T05:00:00Z
 &<Common request parameters>
 ```
 
-Sample success response
+Sample success responses
+
+`XML` format
+
+```
+<DescribeRealtimeDeliveryAccResponse>
+	  <RequestId>684306D2-2511-4977-991D-CE97E91FD7C0</RequestId>
+	  <ReatTimeDeliveryAccData>
+		    <AccData>
+			      <TimeStamp>2018-09-03T06:00:00Z</TimeStamp>
+			      <FailedNum>0</FailedNum>
+			      <SuccessNum>321321</SuccessNum>
+		    </AccData>
+		    <AccData>
+			      <TimeStamp>2018-09-03T07:00:00Z</TimeStamp>
+			      <FailedNum>0</FailedNum>
+			      <SuccessNum>32943</SuccessNum>
+		    </AccData>
+	  </ReatTimeDeliveryAccData>
+</DescribeRealtimeDeliveryAccResponse>
+```
 
 `JSON` format
 
-``` {#codeblock_bl9_fey_apk}
+```
 {
     "RequestId": "684306D2-2511-4977-991D-CE97E91FD7C0",
     "ReatTimeDeliveryAccData": {
@@ -68,18 +86,19 @@ Sample success response
                 "FailedNum": 0,
                 "SuccessNum": 32943
             }
-            ...
+            
         ]
     }
 }
 ```
 
-## Error codes {#section_zbx_rly_dgb .section}
+## Error codes
 
-|Error code|Error message|HTTP status code|Description|
-|:---------|:------------|:---------------|:----------|
-|InvalidStartTime.Malformed|Specified StartTime is malformed.|400|The error message returned because the specified StartTime parameter is invalid.|
-|InvalidEndTime.Malformed|Specified EndTime is malformed.|400|The error message returned because the specified EndTime parameter is invalid.|
-|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|400|The error message returned because the time range specified by the EndTime and StartTime parameters exceeds the maximum value of 90 days.|
-|InvalidEndTime.Mismatch|Specified EndTime does not math the specified StartTime.|400|The error message returned because the specified EndTime parameter is earlier than the specified StartTime parameter.|
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|InvalidStartTime.Malformed|Specified StartTime is malformed.|The error message returned because the format of the specified start time is invalid. For more information about the time format, see the Request parameters section.|
+|400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the end time is invalid. For more information about the time format, see the Request parameters section.|
+|400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is invalid.|
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
