@@ -19,15 +19,13 @@ keyword: [CDN服务, 云产品开通]
 
 3.  选择适合您的**计费类型**，并选中**服务协议**。
 
-    CDN的计费方式请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。
+    CDN的计费方式，请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。
 
-    ![云产品开通页](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4078749951/p66557.png)
+    ![云产品开通页](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4078749951/p66557.png)
 
 4.  单击**立即开通**。
 
-5.  成功开通CDN服务后，您可以单击**管理控制台**，进入CDN控制台。
-
-    ![开通成功](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5078749951/p66558.png)
+    成功开通CDN服务后，您可以单击**管理控制台**，进入CDN控制台。
 
 
 ## 相关API
@@ -36,9 +34,9 @@ keyword: [CDN服务, 云产品开通]
 
 |API|描述|
 |---|--|
-|[OpenCdnService](/cn.zh-CN/新版API参考/服务操作接口/开通CDN服务.md)|调用OpenCdnService开通CDN服务。只有开通服务后，才能进行域名操作。|
-|[ModifyCdnService](/cn.zh-CN/新版API参考/服务操作接口/修改CDN服务的计费类型.md)|调用ModifyCdnService变更CDN服务的计费类型。|
-|[DescribeCdnService](/cn.zh-CN/新版API参考/服务操作接口/获取CDN服务状态.md)|调用DescribeCdnService查询CDN服务状态。包括：当前计费类型、服务开通时间、下次生效的计费类型、当前业务状态等。|
-|[DescribeCdnUserResourcePackage](/cn.zh-CN/新版API参考/服务操作接口/获取CDN用户流量包信息.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
-|[DescribeCdnUserQuota](/cn.zh-CN/新版API参考/服务操作接口/获取用户资源使用信息.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
+|[OpenCdnService](/cn.zh-CN/新版API参考/服务类接口/开通CDN服务.md)|调用OpenCdnService开通CDN服务。只有开通服务后，才能进行域名操作。|
+|[ModifyCdnService](/cn.zh-CN/新版API参考/服务类接口/修改CDN服务的计费类型.md)|调用ModifyCdnService变更CDN服务的计费类型。|
+|[DescribeCdnService](/cn.zh-CN/新版API参考/服务类接口/获取CDN服务状态.md)|调用DescribeCdnService查询CDN服务状态。包括：当前计费类型、服务开通时间、下次生效的计费类型、当前业务状态等。|
+|[DescribeCdnUserResourcePackage](/cn.zh-CN/新版API参考/服务类接口/获取CDN用户流量包信息.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
+|[DescribeCdnUserQuota](/cn.zh-CN/新版API参考/服务类接口/获取用户资源使用信息.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
 
