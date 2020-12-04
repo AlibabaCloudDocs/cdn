@@ -17,17 +17,13 @@ keyword: [CDN服务, 云产品开通]
 
 2.  单击**立即购买**。
 
-3.  选择适合您的**计费方式**，并选中**服务协议**。
+3.  选择**计费方式**，默认按使用流量计费，并选中**服务协议**。
 
-    CDN的计费方式请参见[CDN定价](https://www.alibabacloud.com/zh/product/cdn/pricing)。
-
-    ![开通](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3968749951/p162155.png)
+    ![开通](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4904607061/p162155.png)
 
 4.  单击**立即开通**。
 
-5.  成功开通CDN服务后，您可以单击**管理控制台**，进入CDN控制台。
-
-    ![开通成功](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5078749951/p66558.png)
+    成功开通CDN服务后，您可以单击**管理控制台**，进入CDN控制台。
 
 
 ## 相关API
