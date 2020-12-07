@@ -1,43 +1,89 @@
-# 图片处理方法及优势
+# Image customization
 
-阿里云CDN为您提供图片处理功能，您可以对CDN上的原图进行处理，例如添加图片水印、转换图片格式等。本文为您介绍图片处理的优势和方法。
+Alibaba Cloud Content Delivery Network \(CDN\) allows you to customize images. This topic describes how to customize images.
 
-**说明：** 您可以根据图片处理参数对图片做多种类型的处理。目前该功能处于内测阶段，您需[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex)申请。
+## Feature description
 
-## 图片处理优势
+You can specify conditions to customize images.
 
--   更快分发：原图在回源节点被缓存后，边缘触发的多尺寸图片访问需求直接在回源节点进行处理和分发，减少回源链路，可以更快到达边缘。
--   减少源站压力：衍生图大量消耗源站的存储和计算能力，增加了源站的维护成本。通过CDN进行图片处理，所有的图片处理和缓存都通过CDN节点完成，您的源站无感知。
--   提升刷新预热效率：原图失效后原图对应的衍生图也会全部失效且无法访问，对图片进行处理可以降低提交刷新预热的次数和回源的带宽，加速新图片的更新，避免原图和衍生图的访问失效问题。
--   边缘需求定制：通过图片处理参数对图片处理进行控制，可以根据不同的浏览器和客户端版本定制不同的图片处理需求，满足不同的业务能力。
+This feature is in private preview. To apply for the use of this feature,[submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex).
 
-## 图片处理方法
+## Basic settings
 
-CDN支持边缘图片处理，处理的类型以参数形式传入，请求参数为`image_process`。同时支持多个转换参数，例如`crop`、`rotate`等，多个转换参数以正斜线（/）分隔。
+Alibaba Cloud CDN allows you to customize images on CDN nodes. You can pass parameters to the `image_process` object to specify how you want to customize the images.
 
-处理方法：`image_process=action1,param_value1/action2,param_value2`。
+You can pass multiple parameters to the object. Separate multiple parameters with forward slashes \(/\).
 
-操作示例：`image_process=resize,l_200/quality,q_90/format,webp`。
+Format: `image_process=action1,param_value1/action2,param_value2`.
 
-## 图片处理转换参数
+Example: `image_process=resize,l_200/quality,q_90/format,webp`.
 
-CDN支持使用一个或多个转换参数处理图片，下表为您汇总了各图片处理参数，您可以根据实际需求，对CDN上的图片进行处理。
+The following settings are supported:
 
-|图片处理|参数|说明|
-|----|--|--|
-|[图片格式转换](/intl.zh-CN/域名管理/性能优化/图片格式转换.md)|format|转换图片格式。|
-|[图片质量转换](/intl.zh-CN/域名管理/性能优化/图片质量转换.md)|quality|调整图片的质量。|
-|[图片裁剪](/intl.zh-CN/域名管理/性能优化/图片裁剪.md)|crop|裁剪指定大小的图片。|
-|[图片缩放](/intl.zh-CN/域名管理/性能优化/图片缩放.md)|resize|将图片缩放至指定大小。|
-|[图片旋转](/intl.zh-CN/域名管理/性能优化/图片旋转.md)|-   自适应旋转：auto-orient
--   按指定方向旋转：rotate
+-   image\_transform\_enable: Specify whether to enable image customization. Valid values: on and off.
+-   image\_transform\_filetype: Specify the image formats. Both the original format and desired format must be supported by image customization. Valid values: jpg, png, and webp.
 
-|将携带旋转参数的图片进行自适应旋转或按指定角度以顺时针方向旋转图片。|
-|[图片色彩](/intl.zh-CN/域名管理/性能优化/图片色彩.md)|-   图片亮度：bright
--   图片对比度：contrast
--   图片锐化：sharpen
+## Resize images
 
-|调整图片的亮度、对比度和清晰度。|
-|[水印管理](/intl.zh-CN/域名管理/性能优化/水印管理.md)|watermark|为图片添加图片水印或文字水印。|
-|[获取图片信息](/intl.zh-CN/域名管理/性能优化/获取图片信息.md)|info|获取图片信息，包括图片宽高、图片大小和图片格式等信息。|
+Set the action to `resize`.
+
+-   Specify the longer side to resize images based on a specific aspect ratio. Example: `image_process=resize,l_200`.
+-   Specify the shorter side to resize images based on a specific aspect ratio. Example: `image_process=resize,s_200`.
+-   Specify the width to resize images based on a specific aspect ratio. Example: `image_process=resize,w_200`.
+-   Specify the height to resize images based on a specific aspect ratio. Example: `image_process=resize,h_200`.
+-   Specify both the width and height to resize images. Example: `image_process=resize,fw_200,fh_200`.
+
+If the value is set to a negative number, images remain at their original sizes.
+
+## Crop images
+
+Set the action to `crop`.
+
+-   You can specify the x coordinate, y coordinate, width, and height to crop an image. The x and y coordinates specify the lower-left corner of an image. The width and height specify the size to which you want to crop the image. Example: `image_process=crop,x_10,y_10,w_400,h_200`.
+-   You can specify the width and height to crop equally on all four sides at a time. Example: `image_process=crop,mid,w_400,h_200`.
+
+If the value is set to a negative number, images remain at their original sizes.
+
+## Adjust image quality
+
+Set the action to `quality`.
+
+-   Image quality can be represented by an absolute value. You cannot adjust the image quality to a higher value. For example, if you set `image_process=quality,Q_90`, the attempt to adjust the image quality from 80 to 90 fails and the image quality remains at 80.
+-   Image quality can be adjusted based on the original quality and a quality coefficient. For example, if you set `image_process=quality,q_90` to adjust an image whose quality is 80, the image quality is adjusted to 72.
+
+Valid range of the quality coefficient: 0 < quality < 100. The coefficient must be a positive multiple of 5 \(quality % 5 == 0\). Other values are not supported.
+
+## Sharpen images
+
+Set the action to `sharpen`.
+
+Images sharpening increases the apparent sharpness of an image. Valid values are 50, 100, 150, 200, 250, and 300.
+
+Example: `image_process=sharpen,100`.
+
+## Rotate images
+
+Set the action to `rotate`.
+
+Images can be rotated to a specific angle clockwise. Supported angles are 90, 180, and 270. Example: `image_process=rotate,180`.
+
+## Automatically orient images
+
+Set the action to `auto-orient`.
+
+Images taken by some cameras may be displayed in a specific orientation. You can specify whether to automatically rotate these images to a proper orientation. Example: `image_process=auto-orient`.
+
+## Convert image formats
+
+Set the action to `format`.
+
+You can convert images to a specific format. Example: `image_process=format,webp`.
+
+## Compress images
+
+This feature is enabled after your application for the image customization feature is approved. This feature reduces the size of all images under a domain name without changing the resolution, format, or quality of the images.
+
+## Automatically convert images to WebP
+
+This feature is enabled after your application for the image customization feature is approved. Alibaba Cloud CDN determines whether to convert images in a response to the WebP format based on the Accept parameter in the request header. If `image/webp` is included in the request header, images in the response are converted to the WebP format. Example: `Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9`.
 
