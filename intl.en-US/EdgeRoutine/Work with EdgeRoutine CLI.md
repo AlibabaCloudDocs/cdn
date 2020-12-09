@@ -14,7 +14,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     $ npm install @alicloud/edgeroutine-cli -g
     ```
 
-    **Note:** The latest version of the EdgeRoutine CLI is 2.0.3. After the installation, you can run the `edgeroutine-cli -v` command to query the version number. We recommend that you upgrade your EdgeRoutine CLI to the latest version.
+    **Note:** The latest version of the EdgeRoutine CLI is 2.0.0. After you install the EdgeRoutine CLI, you can run the `edgeroutine-cli -v` command to query the version number. We recommend that you upgrade your EdgeRoutine CLI to the latest version. If you use the latest version of the EdgeRoutine CLI to perform the build operation and the message "The specified ArgValue is invalid" appears, run the `edgeroutine-cli config` command to initialize the config.js file and perform the build operation again.
 
 2.  Run the following command to create a code directory and change to the directory:
 
@@ -55,33 +55,33 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     $ edgeroutine-cli config
     ```
 
-5.  Deploy the code to the canary release environment.
+5.  Deploy the code to the staging environment.
 
-    **Note:** Before you deploy the code to the production environment, you must validate the code in the canary release environment.
+    **Note:** Before you deploy the code to the production environment, you must validate the code in the staging environment.
 
-    1.  Build the code in the canary release environment.
+    1.  Build the code in the staging environment.
 
         ```
         $ edgeroutine-cli build
         ```
 
-    2.  View the code in the canary release environment.
+    2.  View the code in the staging environment.
 
         ```
         $ edgeroutine-cli build --show
         ```
 
-    3.  Delete the code in the canary release environment.
+    3.  Delete the code in the staging environment.
 
-        This operation deletes configurations from the canary release environment. Proceed with caution.
+        This operation deletes configurations from the staging environment. Proceed with caution.
 
         ```
         $ edgeroutine-cli build --delete
         ```
 
-6.  Validate the code in the canary release environment.
+6.  Validate the code in the staging environment.
 
-    You must connect to the accelerated domain name in the terminal environment by using the IP address of the canary environment for EdgeRoutine. The IP address is 42.123.119.50 or 42.123.119.51.
+    You must connect to the accelerated domain name in the terminal environment by using the IP address of the staging environment for EdgeRoutine. The IP address is 42.123.119.50 or 42.123.119.51.
 
     ```
     $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.50:80
@@ -89,13 +89,13 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
 
 7.  Deploy the code to the production environment.
 
-    1.  After you validate the code in the canary release environment, you can deploy the code to the production environment.
+    1.  After you validate the code in the staging environment, you can deploy the code to the production environment.
 
         ```
         $ edgeroutine-cli publish
         ```
 
-        **Note:** EdgeScript and EdgeRoutine use the same deployment system. If you use [EdgeScript](/intl.en-US/EdgeScript/Introduction/Overview.md) and EdgeRoutine at the same time, the `edgeroutine-cli publish` command that is run in the EdgeRoutine CLI will deploy scripts of both EdgeScript and EdgeRoutine from the canary release environment to the production environment. Before you deploy code, you can run the `edgeroutine-cli build -s` command to query scripts of EdgeScript and EdgeRoutine that are in the canary release environment. After you confirm the configurations that you want to deploy to the production environment, run the edgeroutine-cli publish commend to deploy the configurations.
+        **Note:** EdgeScript and EdgeRoutine use the same deployment system. If you use [EdgeScript](/intl.en-US/EdgeScript/Introduction/Overview.md) and EdgeRoutine at the same time, the `edgeroutine-cli publish` command that is run in the EdgeRoutine CLI will deploy scripts of both EdgeScript and EdgeRoutine from the staging environment to the production environment. Before you deploy code, you can run the `edgeroutine-cli build -s` command to query scripts of EdgeScript and EdgeRoutine that are in the staging environment. After you confirm the configurations that you want to deploy to the production environment, run the edgeroutine-cli publish commend to deploy the configurations.
 
     2.  View the code in the production environment.
 
