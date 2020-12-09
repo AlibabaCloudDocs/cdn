@@ -1,6 +1,6 @@
 # DescribeUserDomains
 
-Queries all domain names accelerated by Alibaba Cloud Content Delivery Network \(CDN\) under your account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
+Queries all domain names accelerated by Alibaba Cloud Content Delivery Network \(CDN\) under your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
 
 The maximum number of times that each user can call this operation per second is 100.
 
@@ -10,12 +10,10 @@ The maximum number of times that each user can call this operation per second is
 
 ## Request parameters
 
-|Parameter|Type|Required|Example|Description|
-|---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeUserDomains|The operation that you want to perform. Set the value to DescribeUserDomains. |
-|PageSize|Integer|No|5|The number of entries to return on each page. Valid values: **1** to **500**.
-
- Default value: **20**. |
+|Parameter|Type|Required|Example|Description |
+|---------|----|--------|-------|------------|
+|Action|String|Yes|DescribeUserDomains|The operation that you want to perform. Set the value to **DescribeUserDomains**. |
+|PageSize|Integer|No|5|The number of entries to return on each page. Valid value: **1 to 50**. Default value: **20**. Maximum value: **50**. |
 |PageNumber|Integer|No|1|The number of the page to return. Valid values: **1** to **100000**. |
 |DomainName|String|No|example.com|The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.
 
@@ -23,11 +21,13 @@ The maximum number of times that each user can call this operation per second is
 |DomainStatus|String|No|configure\_failed|The status of the domain name. You can filter domain names by status. Valid values:
 
  -   **online**: The domain name is enabled.
--   **offline**: The domain is disabled.
--   **configuring**: The domain is being configured.
--   **configure\_failed**: The domain failed to be configured.
--   **checking**: The domain is under review.
+-   **offline**: The domain name is disabled.
+-   **configuring**: The domain name is being configured.
+-   **configure\_failed**: The domain name failed to be configured.
+-   **checking**: The domain name is under review.
 -   **check\_failed**: The domain name failed the review.
+-   **stopping**: The domain name is suspended.
+-   **deleting**: The domain name is being deleted.
 
  If you do not set this parameter, all states are queried. |
 |DomainSearchType|String|No|fuzzy\_match|The search method. Valid values:
@@ -36,10 +36,10 @@ The maximum number of times that each user can call this operation per second is
 -   **pre\_match**: prefix match.
 -   **suf\_match**: suffix match.
 -   **full\_match**: exact match. |
-|CdnType|String|No|download, web, video, video, video|The type of workload accelerated by Alibaba Cloud CDN. Separate multiple types with commas \(,\).
+|CdnType|String|No|download, web, video, video, video|The type of workload accelerated by Alibaba Cloud CDN. Separate multiple types with commas \(,\). Valid values:
 
- -   **web**: images and small files.
--   **download**: downloads of large files.
+ -   **web**: image and small file delivery.
+-   **download**: large file delivery.
 -   **video**: on-demand video and audio streaming.
 
  By default, all workload types are queried. |
@@ -59,9 +59,9 @@ The maximum number of times that each user can call this operation per second is
  By default, all tag values are queried. |
 |Coverage|String|No|domestic|The accelerated region. By default, all accelerated regions are queried. Valid values:
 
- -   **domestic**: mainland China only.
--   **global**: global.
--   **overseas**: global \(excluding mainland China\). |
+ -   **domestic**: accelerated regions in mainland China.
+-   **global**: accelerated regions inside and outside mainland China.
+-   **overseas**: accelerated regions outside mainland China. |
 
 ## Response parameters
 
@@ -71,41 +71,43 @@ The maximum number of times that each user can call this operation per second is
 |PageData| | | |
 |CdnType|String|download|The type of workload accelerated by Alibaba Cloud CDN. Valid values:
 
- -   **web**: images and small files.
--   **download**: downloads of large files.
+ -   **web**: image and small file delivery.
+-   **download**: large file delivery.
 -   **video**: on-demand video and audio streaming. |
 |Cname|String|example.com.w.alikunlun.net|The canonical name \(CNAME\) assigned to the accelerated domain name. |
 |Coverage|String|domestic|The accelerated region. Valid values:
 
- -   **domestic**: mainland China only.
--   **global**: global.
--   **overseas**: global \(excluding mainland China\). |
-|Description|String|audit failed|The reason that causes the review failure. |
+ -   **domestic**: accelerated regions in mainland China.
+-   **global**: accelerated region inside and outside main China.
+-   **overseas**: accelerated regions outside mainland China. |
+|Description|String|audit failed|The reason why the accelerated domain name failed the review. |
 |DomainName|String|example.com|The accelerated domain name. |
 |DomainStatus|String|configure\_failed|The status of the accelerated domain name. Valid values:
 
- -   **online**: The domain is enabled.
--   **offline**: The domain is disabled.
--   **configuring**: The domain is being configured.
--   **configure\_failed**: The domain failed to be configured.
--   **checking**: The domain is under review.
--   **check\_failed**: The domain has failed the review. |
-|GmtCreated|String|2015-10-28T09:32:51Z|The time when the accelerated domain was added to Alibaba Cloud CDN. |
+ -   **online**: The domain name is enabled.
+-   **offline**: The domain name is disabled.
+-   **configuring**: The domain name is being configured.
+-   **configure\_failed**: The domain name failed to be configured.
+-   **checking**: The domain name is under review.
+-   **check\_failed**: The domain name failed the review.
+-   **stopping**: The domain name is suspended.
+-   **deleting**: The domain name is being deleted. |
+|GmtCreated|String|2015-10-28T09:32:51Z|The time when the accelerated domain name was added to Alibaba Cloud CDN. |
 |GmtModified|String|2015-10-28T11:05:52Z|The last time when the accelerated domain name was modified. |
 |ResourceGroupId|String|abcd1234abcd1234|The ID of the resource group. |
-|Sandbox|String|normal|Indicates whether the accelerated domain is in a sandbox. |
-|Sources|Array of Source| |The data type of the domain name information. |
+|Sandbox|String|normal|Indicates whether the accelerated domain name is in a sandbox. |
+|Sources|Array of Source| |The information about the accelerated domain name. |
 |Source| | | |
 |Content|String|cdn.aliyuncs.com|The address of the origin server. |
 |Port|Integer|80|The port of the origin server. |
-|Priority|String|high|The priority of the origin server if multiple origin servers are specified. |
+|Priority|String|high|The priority of the origin server if multiple origin servers have been specified. |
 |Type|String|oss|The type of the origin server. |
-|Weight|String|weight|The weight of the origin server if multiple origin servers are specified. |
+|Weight|String|weight|The weight of the origin server if multiple origin servers have been specified. |
 |SslProtocol|String|on|The status of HTTPS.
 
  -   **on**: enabled
 -   **off**: disabled |
-|PageNumber|Long|1|The number of the page returned. |
+|PageNumber|Long|1|The page number of the returned page. |
 |PageSize|Long|5|The number of entries returned per page. |
 |RequestId|String|AA75AADB-5E25-4970-B480-EAA1F5658483|The ID of the request. |
 |TotalCount|Long|16|The total number of entries returned. |
