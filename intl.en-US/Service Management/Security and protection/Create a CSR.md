@@ -8,7 +8,7 @@ You can use the following methods to upload a custom SSL certificate. The differ
 
     You can create a private key and a CSR in the Alibaba Cloud Content Delivery Network \(CDN\) console, and use the CSR to apply for an SSL certificate from a CA. After the application is approved, upload the certificate to Alibaba Cloud CDN. If you use this method, your private key file is exposed to only Alibaba Cloud CDN. This method is more secure than the other method.
 
-    **Note:** After you create a CSR, you can download it in the Alibaba Cloud CDN console. However, you cannot download the private key in the console. If you need to download both the CSR and private key, create them by using tools other than the Alibaba Cloud CDN console. For more information,see [How do I create a CSR file?](https://www.alibabacloud.com/help/zh/doc-detail/42218.htm)
+    **Note:** After you create a CSR, you can download it in the Alibaba Cloud CDN console. However, you cannot download the private key in the console. If you need to download both the CSR and private key, create them by using tools other than the Alibaba Cloud CDN console. For more information,see [How do I create a CSR file?](https://www.alibabacloud.com/help/doc-detail/42218.htm)
 
 -   **Upload Custom Certificate \(Certificate+Private Key\)**
 
