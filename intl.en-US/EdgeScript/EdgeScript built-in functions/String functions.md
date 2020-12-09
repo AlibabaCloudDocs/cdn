@@ -9,12 +9,12 @@ Details about this function:
 -   Syntax: `substr(s, i, j)`.
 -   Description
 
-    Extracts parts of a string.
+    Extracts parts from a string.
 
 -   Parameters
     -   s: the string that you want to extract.
-    -   i: the position to start extraction in the source string, counting from 1. A value of -1 specifies the rightmost character of the string.
-    -   j: the position to end extraction in the source string, counting from 1. A value of -1 specifies the rightmost character of the string.
+    -   i: the position to start extraction in the source string, counting from 1. A value of -1 specifies the rightmost character of the string. Data type: integer.
+    -   j: the position to end extraction in the source string, counting from 1. A value of -1 specifies the rightmost character of the string. Data type: integer.
 -   Response parameters
 
     Returns the substring `s[i, j]` of `s`.
@@ -22,7 +22,7 @@ Details about this function:
 -   Examples
 
     ```
-    //The two methods that are used to determine whether a file is an M3U8 file
+    //The two methods that are used to determine whether a file is an M3U8 file.
     if eq(substr($uri, -5, -1), '.m3u8') {
         say(concat($uri, ' is .m3u8'))
     }
@@ -54,7 +54,7 @@ Details about this function:
 -   Examples
 
     ```
-    //The two methods that are used to determine whether a file is an M3U8 file
+    //The two methods that are used to determine whether a file is an M3U8 file.
     if eq(substr($uri, -5, -1), '.m3u8') {
         say(concat($uri, ' is .m3u8'))
     }
@@ -146,7 +146,7 @@ Details about this function:
 -   Examples
 
     ```
-    //The two methods that are used to determine whether a file is an M3U8 file
+    //The two methods that are used to determine whether a file is an M3U8 file.
     if eq(substr($uri, -5, -1), '.m3u8') {
         say(concat($uri, ' is .m3u8'))
     }
@@ -193,7 +193,7 @@ Details about this function:
 -   Syntax: `match_re(s, p [, o])`.
 -   Description
 
-    Uses the PCRE engine for regular expression matching.
+    Uses the Perl Compatible Regular Expressions \(PCRE\) engine for regular expression matching.
 
 -   Parameters
     -   s: the string that you want to match. Data type: string.
@@ -233,7 +233,7 @@ Details about this function:
 
 -   Parameters
     -   s: the string that you want to match. Data type: string.
-    -   p: the regular expression. Data type: string.
+    -   p: the regular expression for matching. Data type: string.
     -   init: the position to start matching, counting from 1. Data type: integer.
 -   Response parameters
 
@@ -279,7 +279,7 @@ Details about this function:
     -   option: the regular expression engine. Data type: string. This parameter is optional.
 -   Response parameters
 
-    Replaces all substrings that match the specified `regex` parameter in the specified `subject` parameter with the specified `replace` parameter and returns the string after the replacement.
+    Replaces all substrings that match the specified `regex` parameter in the specified `subject` parameter with those specified by the `replace` parameter and returns the string after the replacement.
 
 -   Examples
 
@@ -295,7 +295,7 @@ Details about this function:
 
 -   References
 
-    For more information about the PCRE syntax, see [pcre2syntax man page](https://www.pcre.org/current/doc/html/pcre2syntax.html).
+    For more information about PCRE, see [pcre2syntax man page](https://www.pcre.org/current/doc/html/pcre2syntax.html).
 
 
 ## split
@@ -347,7 +347,7 @@ Details about this function:
     -   sep: the separator that is used to split the string. Data type: string.
 -   Response parameters
 
-    Returns response parameters in the same way as the `split()` function. However, the `key` parameter is named after each split element: `element 1` -\> `element 2`.
+    Returns response parameters in the same way as the `split()` function. However, the `key` parameter is named after each split element: `Element 1` -\> `Element 2`.
 
 -   Examples
 
@@ -388,7 +388,7 @@ Details about this function:
 -   Examples
 
     ```
-    //A response header is added
+    //A response header is added.
     //X-DSL-TOHEX: 4ad583af22c2e7d40c1c916b2920299155a46464     
     
     digest = sha1('xxxx')
@@ -416,7 +416,7 @@ Details about this function:
 -   Examples
 
     ```
-    //A response header is added
+    //A response header is added.
     //X-DSL-TOSTRING: 123    
     
     s = tostring(123)
@@ -443,14 +443,14 @@ Details about this function:
 -   Examples
 
     ```
-    //Output: A response header is added
+    //Output: A response header is added.
     //X-DSL-TOCHAR: a
     //X-DSL-TOCHAR: ab
     
     add_rsp_header('X-DSL-TOCHAR', tochar(97))
     add_rsp_header('X-DSL-TOCHAR', tochar(97, 98), true)
     
-    //Output: A response header is added
+    //Output: A response header is added.
     //Content-Disposition: attachment;filename="The value of the filename parameter"   
     
     if $arg_filename {
