@@ -90,7 +90,7 @@ Details about this function:
 -   Syntax: `localtime()`.
 -   Description
 
-    Queries the current UTC time in the format of yyyy-mm-dd hh:mm:ss.
+    Queries the current date and time in the format of yyyy-mm-dd hh: mm: ss.
 
 -   Parameters
 
@@ -98,7 +98,7 @@ Details about this function:
 
 -   Response parameters
 
-    Queries the current UTC time in the format of yyyy-mm-dd hh:mm:ss.
+    Returns the current date and time in the format of yyyy-mm-dd hh: mm: ss.
 
 -   Examples
 
@@ -125,7 +125,7 @@ Details about this function:
 
 -   Response parameters
 
-    Queries the current UTC time in the format of yyyy-mm-dd hh:mm:ss.
+    Returns the current UTC time in the format of yyyy-mm-dd hh:mm:ss.
 
 -   Examples
 
@@ -152,7 +152,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns a time string in the cookie time format based on the specified `sec` parameter.
+    Returns a time string in the cookie time format based on the UNIX timestamp specified by the `sec` parameter.
 
 -   Examples
 
@@ -179,7 +179,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns a time string in the HTTP header time format based on the specified `sec` parameter.
+    Returns a time string in the HTTP header time format based on the UNIX timestamp specified by the `sec` parameter.
 
 -   Examples
 
@@ -200,7 +200,7 @@ Details about this function:
 
     Parses a time string in the HTTP header time format and returns the corresponding UNIX timestamp.
 
--   Field
+-   Parameters
 
     str: the time string in the HTTP header format that you want to parse. Example: `Thu, 22-Dec-10 10:20:35 GMT`. To obtain the time string, you can call the `http_time()` function.
 
@@ -234,9 +234,9 @@ Details about this function:
     -   hour: specifies the hour.
     -   min: specifies the minute.
     -   sec: specifies the second.
--   Valid values:
+-   Response parameters
 
-    Returns the UNIX timestamp.
+    Returns a UNIX timestamp.
 
 -   Examples
 
