@@ -4,12 +4,12 @@ keyword: [download log, download CDN log]
 
 # Download log data
 
-This topic describes the usage notes and procedure for downloading log data, and the definitions of the fields in each log entry. This feature allows you to check the log data of a domain name.
+This topic describes the usage notes and procedure for downloading log data, and the definitions of fields in a log entry. This feature allows you to check the log data of a domain name.
 
 Usage notes:
 
 -   Log update delay: Typically, log data is generated within 24 hours after an event occurs. However, in some cases, the log data may be generated after 24 hours.
--   Automatic log generation: The number of log files generated for a specific time period is dynamically adjusted based on the amount of log data.
+-   You can download log data generated within the last 30 days. If you need to retain log data for a longer period of time, you can use the log storage feature to deliver log data to an Object Storage Service \(OSS\) bucket.
 -   Naming rule for log entries: Accelerated domain name\_year\_month\_day\_start time\_end time\[extension field\].gz. The extension field must start with an underscore \(\_\). Example: `example.com_2018_10_30_000000_010000_xx.gz`.
 
     **Note:** Some log entries may not contain an extension field. Example: `example.com_2018_10_30_000000_010000.gz`.
@@ -31,15 +31,15 @@ The following table describes the fields in a log entry.
     |`192.168.15.75`|The IP address of the client that initiated the request.|
     |`-`|The proxy IP address of the client.|
     |`1542`|The response time.Unit: milliseconds. |
-    |`"-"`|The referer header field in HTTP requests.|
+    |`"-"`|The referer header field in the HTTP request.|
     |`GET`|The request method.|
-    |`http://www.aliyun.com/index.html`|The URI of the request.|
+    |`http://www.aliyun.com/index.html`|The URI in the request.|
     |`200`|The HTTP status code.|
     |`191`|The size of the request.Unit: bytes. |
     |`2830`|The size of the response.Unit: bytes. |
     |`MISS`|The cache hit status.|
     |`Mozilla/5.0(compatible; AhrefsBot/5.0; +http://ahrefs.com/robot/)`|The information about the proxy of the client.|
-    |`text/html`|The type of file that was requested.|
+    |`text/html`|The type of the requested file.|
     |`quic/https/http`|The protocol over which the request was transmitted.**Note:** This field is available beginning November 12, 2020. |
 
 
