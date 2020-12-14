@@ -16,7 +16,7 @@ Queries the address where you can download the raw access log data of a specific
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|No|DescribeCdnDomainLogs|The operation that you want to perform. Set the value to **DescribeCdnDomainLogs**. |
+|Action|String|Yes|DescribeCdnDomainLogs|The operation that you want to perform. Set the value to **DescribeCdnDomainLogs**. |
 |DomainName|String|Yes|www.yourdomain.com|The accelerated domain name. You can specify only one domain name. |
 |PageSize|Long|No|300|The number of entries to return on each page. Valid values: **1** to **1000**. Maximum value: **1000**. Default value: **300**. |
 |PageNumber|Long|No|2|The number of the page to return. Valid values: integers greater than **1**. |
