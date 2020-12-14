@@ -35,7 +35,9 @@ The first time a domain name is added to Alibaba Cloud CDN, you can add a DNS re
 
 The first time a domain name is added to Alibaba Cloud CDN, you can upload a verification file to prove that you own the domain name.
 
-1.  2.  In the left-side navigation pane, choose **Domain Names** \> **Add Domain Name** \> **Method 2: Verification File**.
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+
+2.  In the left-side navigation pane, choose **Domain Names** \> **Add Domain Name** \> **Method 2: Verification File**.
 
 3.  Download the `verification.html` verification file.
 
