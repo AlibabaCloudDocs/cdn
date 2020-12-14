@@ -17,9 +17,9 @@ The log management features of Alibaba Cloud CDN can be integrated with the foll
 
 -   Function Compute
 
-    Function Compute supports various events for Alibaba Cloud CDN. You can use Function Compute events to import log data of Alibaba Cloud CDN to another service, refresh and prefetch content, add domain names to be accelerated, delete accelerated domain names, enables accelerated domain names, and disables accelerated domain names. For more information about how these events are triggered, see [CDN event triggers](https://www.alibabacloud.com/help/zh/doc-detail/73333.htm).
+    Function Compute supports various events for Alibaba Cloud CDN. You can use Function Compute events to import log data of Alibaba Cloud CDN to another service, refresh and prefetch content, add domain names to be accelerated, delete accelerated domain names, enables accelerated domain names, and disables accelerated domain names. For more information about how these events are triggered, see [CDN event triggers](https://www.alibabacloud.com/help/doc-detail/73333.htm).
 
-    For more information about Function Compute, see [What is Function Compute?](https://www.alibabacloud.com/help/zh/doc-detail/52895.htm).
+    For more information about Function Compute, see [What is Function Compute?](https://www.alibabacloud.com/help/doc-detail/52895.htm).
 
 -   Object Storage Service \(OSS\)
 
