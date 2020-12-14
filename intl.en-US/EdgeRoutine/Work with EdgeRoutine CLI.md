@@ -8,13 +8,13 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
 
 1.  Install the EdgeRoutine CLI.
 
-    Open your terminal and run the following command to install EdgeRoutine CLI:
+    Open your terminal and run the following command to install the EdgeRoutine CLI:
 
     ```
     $ npm install @alicloud/edgeroutine-cli -g
     ```
 
-    **Note:** The latest version of the EdgeRoutine CLI is 2.0.0. After you install the EdgeRoutine CLI, you can run the `edgeroutine-cli -v` command to query the version number. We recommend that you upgrade your EdgeRoutine CLI to the latest version. If you use the latest version of the EdgeRoutine CLI to perform the build operation and the message "The specified ArgValue is invalid" appears, run the `edgeroutine-cli config` command to initialize the config.js file and perform the build operation again.
+    **Note:** The latest version of the EdgeRoutine CLI is 2.0.3. After you install the EdgeRoutine CLI, you can run the `edgeroutine-cli -v` command to query the version number. We recommend that you upgrade your EdgeRoutine CLI to the latest version. If you use the latest version of the EdgeRoutine CLI to perform the build operation and the message "The specified ArgValue is invalid" appears, run the `edgeroutine-cli config` command to initialize the config.js file and perform the build operation again.
 
 2.  Run the following command to create a code directory and change to the directory:
 
@@ -30,7 +30,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     $ edgeroutine-cli init
     ```
 
-    The following example shows a code template. If you want to use your own code, you can move your code file to the code directory that you have created, and rename the code file edge.js.
+    The following example shows a code template. If you want to use your own code, you can move your code file to the code directory that you have created and rename the code file edge.js.
 
     ```
     /**
