@@ -1,17 +1,16 @@
 # RefreshObjectCaches
 
-Refreshes files on Content Delivery Network \(CDN\) nodes. Alibaba Cloud CDN allows you to refresh content from multiple URLs at a time.
+Refreshes files on Alibaba Cloud Content Delivery Network \(CDN\) nodes. After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN redirects the requests to the origin server of the content. Then, Alibaba Cloud CDN caches the latest content to CND nodes and returns it to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at a time.
 
-**When you call this operation, note that:**
+**Note:**
 
 -   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
--   You can call the **RefreshObjectCaches** operation to refresh content and call the **PushObjectCache** operation to prefecth content.
--   You can refresh content from a maximum of 2,000 URLs and 100 directories per day under each Alibaba Cloud account. Subdirectories are included.
+-   You can call the **RefreshObjectCaches** operation to refresh content and call the **PushObjectCache** operation to prefetch content.
+-   You can refresh content from a maximum of 2,000 URLs and 100 directories per day with each Alibaba Cloud account. Subdirectories are also refreshed.
 -   You can specify a maximum of 1,000 URLs in each refresh request.
+-   You can specify a maximum of 1,000 URLs per minute for a single accelerated domain name.
 -   The maximum number of times that each user can call this operation per second is 50.
-
-**Note:** For more information about how to automate refresh or prefetch tasks, see [Prefetch and refresh task scripts](~~151829~~).
-
+-   For more information about how to automate refresh or prefetch tasks, see [Prefetch and refresh task scripts](~~151829~~).
 
 ## Debugging
 
@@ -22,27 +21,29 @@ Refreshes files on Content Delivery Network \(CDN\) nodes. Alibaba Cloud CDN all
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|RefreshObjectCaches|The operation that you want to perform. Set the value to **RefreshObjectCaches**. |
-|ObjectPath|String|Yes|abc.com/image/1.png\\nabc.com/image/2.png|The URLs from which content is refreshed. Format: **Accelerated domain name/paths or directories of files to be refreshed**.
+|ObjectPath|String|Yes|abc.com/image/1.png\\nabc.com/image/2.png|The URLs from which content is refreshed. Format: **accelerated domain name/paths or directories of files to be refreshed**.
 
  Separate multiple URLs with line feed characters \(\\n\) or a pair of carriage return and line feed characters \(\\r\\n\). |
 |ObjectType|String|No|File|The type of content to be refreshed. Valid values:
 
- -   **File**: files with the specified URLs. This is the default value.
--   **Directory**: files under the specified directories. |
+ -   **File**: a file.
+-   **Directory**: the files under the specified directory.
+
+ Default value: **File**. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
 |RefreshTaskId|String|704222904|The ID of the refresh task. If multiple tasks are returned, the IDs are separated with commas \(,\). |
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|The ID of the request. |
+|RequestId|String|D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C|The ID of the request. |
 
 ## Examples
 
 Sample requests
 
 ```
-https://cdn.aliyuncs.com?&Action=RefreshObjectCaches
+http(s)://cdn.aliyuncs.com/? Action=RefreshObjectCaches
 &ObjectPath=abc.com/image/1.png\nabc.com/image/2.png
 &ObjectType=File
 &<Common request parameters>
@@ -53,10 +54,10 @@ Sample success responses
 `XML` format
 
 ```
-<RefreshObjectCaches>	
+<RefreshObjectCachesResponse>
   <RefreshTaskId>704222904</RefreshTaskId>
-	  <RequestId>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</RequestId>
-</RefreshObjectCaches>
+  <RequestId>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</RequestId>
+</RefreshObjectCachesResponse>
 ```
 
 `JSON` format
