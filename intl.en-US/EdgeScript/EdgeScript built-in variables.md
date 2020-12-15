@@ -8,11 +8,11 @@ The following table lists the EdgeScript built-in variables.
 |-----------------|-----------|--------------|
 |$arg\_\{name\}|The value of the `name` parameter in the `Query String`. The `Query String` represents request parameters in an HTTP request.|$arg\_ **Note:** Hyphens \(-\) in the `{name}` field must be replaced by underscores \(\_\). For example, `X-USER-ID` must be changed to `$arg_x_user_id`. |
 |$http\_\{name\}|The value of the name field in the request header.|$http\_ **Note:** Hyphens \(-\) in the `{name}` field must be replaced by underscores \(\_\). For example, `X-USER-ID` must be changed to `$http_x_user_id`. |
-|$cookie\_\{name\}|The value of the name field in the request cookie header.|$cookie\_ **Note:** Hyphens \(-\) in the `{name}` field must be replaced by underscores \(\_\). For example, `X-USER-ID` must be changed to `$http_x_user_id`. |
+|$cookie\_\{name\}|The value of the name field in the request cookie header.|$cookie\_ **Note:** Hyphens \(-\) in the `{name}` field must be replaced by underscores \(\_\). For example, `X-USER-ID` must be changed to `$cookie_x_user_id`. |
 |$scheme|The protocol type.|$scheme|
 |$server\_protocol|The version of the protocol.|$server\_protocol|
 |$host|The original host.|$host|
-|$uri|The original URI.|-|
+|$uri|The original URI.|None|
 |$args|`$args` represents all request parameters in an HTTP request, excluding question marks \(`?`\). For example, the URI of the request is `http://www.a.com/1k.file?k1=v1&k2=v2`. -   `$arg_k1` returns the value of the k1 parameter: `v1`.
 -   `$args` is used to return the entire Query String: `k1=v1&k2=v2`. Question marks \(`?`\) are excluded.
 
