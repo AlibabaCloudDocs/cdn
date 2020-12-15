@@ -40,7 +40,7 @@ The following table describes the fields in a log entry.
     |`MISS`|The cache hit status.|
     |`Mozilla/5.0(compatible; AhrefsBot/5.0; +http://ahrefs.com/robot/)`|The information about the proxy of the client.|
     |`text/html`|The type of the requested file.|
-    |`quic/https/http`|The protocol over which the request was transmitted.**Note:** This field is available beginning November 12, 2020. |
+    |`quic/https/http`|The protocol over which the request was transmitted.|
 
 
 1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
