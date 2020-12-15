@@ -2,7 +2,7 @@
 
 Updates the configurations of multiple accelerated domain names at a time.
 
-The maximum number of times that each user can call this operation per second is 30.
+**Note:** The maximum number of times that each user can call this operation per second is 30.
 
 ## Debugging
 
@@ -13,10 +13,14 @@ The maximum number of times that each user can call this operation per second is
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|BatchUpdateCdnDomain|The operation that you want to perform. Set the value to **BatchUpdateCdnDomain**. |
-|DomainName|String|Yes|example.com|The accelerated domain names. You can specify one or more accelerated domain names. Separate multiple domain names with commas \(,\). |
-|Sources|String|No|\[\{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80,"weight":"15"\}\]|The list of origin URLs. |
-|ResourceGroupId|String|No|abc|The ID of the resource group. |
-|TopLevelDomain|String|No|example.com|The top-level domain name. |
+|DomainName|String|Yes|example.com,example1.com|The accelerated domain names. Separate multiple domain names with commas \(,\). |
+|Sources|String|No|\[\{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80,"weight":"15"\}\]|The list of origin URLs.
+
+ **Note:** You cannot set both the **Sources** and **TopLevelDomain** parameters in the same request. Otherwise, ********the **TopLevelDomain** parameter cannot take effect. |
+|ResourceGroupId|String|No|rg-acfmyuji4b6r4\*\*|The ID of the resource group. |
+|TopLevelDomain|String|No|example.com|The top-level domain name.
+
+ **Note:** You cannot set both the **Sources** and **TopLevelDomain** parameters in the same request. Otherwise, ********the **TopLevelDomain** parameter cannot take effect. |
 
 The following table lists the descriptions of fields in the Sources parameters.
 
@@ -26,15 +30,15 @@ The following table lists the descriptions of fields in the Sources parameters.
 
 |Required
 
-|Decription |
-|-------|------|----------|------------|
+|Description |
+|-------|------|----------|-------------|
 |type
 
 |String
 
 |Yes
 
-|The type of the origin server. Valid values:
+|The type of origin server. Valid values:
 
  ipaddr: The origin server uses an IP address.
 
@@ -42,7 +46,7 @@ The following table lists the descriptions of fields in the Sources parameters.
 
  oss: The origin server is an Object Storage Service \(OSS\) bucket.
 
- fc\_domain: The origin server uses a Function Compute domain name |
+ fc\_domain: The origin server uses a Function Compute domain name. |
 |content
 
 |String
@@ -56,21 +60,21 @@ The following table lists the descriptions of fields in the Sources parameters.
 
 |No
 
-|The port number. You can specify port 443, port 80, or a custom port. Default value: 80. If you specify port 443, Alibaba Cloud CDN will communicate with the origin server over HTTPS. |
+|The port number. You can specify port 80, port 443, or a custom port. Default value: 80. If you specify port 443, Alibaba Cloud CDN communicates with the origin server over HTTPS. |
 |priority
 
 |String
 
 |No
 
-|The priority of the origin server if multiple origin servers are specified. Valid values: 20 and 30. Default value: 20. A value of 20 specifies that the origin server is the primary origin server. A value of 30 specifies that the origin server is a secondary origin. |
+|The priority of the origin server if multiple origin servers are specified. Valid values: 20 and 30. Default value: 20. A value of 20 specifies that the origin server is the primary origin server. A value of 30 specifies that the origin server is a secondary origin server. |
 |weight
 
 |String
 
 |No
 
-|The weight of the origin server if multiple origin servers are specified. You must specify a value less than 100. Default value: 10. |
+|The weight of the origin server if multiple origin servers are specified. You must specify a value of less than 100. Default value: 10. |
 
 ## Response parameters
 
@@ -83,7 +87,7 @@ The following table lists the descriptions of fields in the Sources parameters.
 Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=BatchUpdateCdnDomain
+http(s)://cdn.aliyuncs.co/? Action=BatchUpdateCdnDomain
 &DomainName=example.com,example1.com
 &Sources=[{"content":"1.1.1.1","type":"ipaddr","priority":"20","port":80}]
 &<Common request parameters>
@@ -111,7 +115,7 @@ Sample success responses
 
 |HttpCode|Error code|Error message|Description|
 |--------|----------|-------------|-----------|
-|400|InvalidSources.Malformed|Specified Sources is malformed.|The error message returned because the specified Sources parameter is invalid. You can specify up to 20 IP addresses that are separated with commas \(,\) or one domain name. You cannot specify both IP addresses and domain names in the same request.|
+|400|InvalidSources.Malformed|Specified Sources is malformed.|The error message returned because the format of the specified Sources parameter is invalid. You can set Sources to an IP address or a domain name. You can specify up to 20 IP addresses or one domain name. Separate multiple IP addresses with commas \(,\). You cannot specify both IP addresses and domain names in the same request.|
 |400|EntityNotExists.ResourceGroup|The resource group does not exist.|The error message returned because the specified resource group does not exist.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
