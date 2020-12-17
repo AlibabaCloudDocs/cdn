@@ -8,27 +8,26 @@
 
 -   中国内地节点数最多的CDN服务商。目前阿里云CDN在中国内地（大陆）拥有2300+节点，在港澳台和海外拥有超过500个节点。节点详情，请参见[节点分布](/intl.zh-CN/产品简介/节点分布.md)。
 -   中国内地领先的带宽输出能力。单节点带宽超过40 Gbps，全网带宽输出能力130 Tbps。
--   关键性能指标业内领先。包括缓存命中率超过95%、响应时间达到毫秒级、加速视频时的视频流畅率超过95%。关于CDN的通用性能，请参见[通用指标](/intl.zh-CN/产品简介/CDN的衡量指标.md)了解详情。
+-   关键性能指标业内领先。包括缓存命中率超过95%、响应时间达到毫秒级、加速视频时的视频流畅率超过95%。关于CDN的通用性能，请参见[通用指标](/intl.zh-CN/产品简介/CDN的衡量指标.md)。
 
 **产品易用**
 
 阿里云CDN支持多种行业、多种场景内容加速，例如：图片小文件、大文件下载、视音频点播、直播流媒体、全站加速、安全加速，并为您提供易用性的功能配置和脚本服务。已经成功接入阿里云CDN并实现业务加速的案例，请参见[客户案例](/intl.zh-CN/产品简介/客户案例.md)。
 
--   操作简单、功能丰富的[控制台](https://cdn.console.aliyun.com/overview)，可以帮助您可视化实现多样性配置和管理需求。详细信息，请参见[域名配置](/intl.zh-CN/域名管理/功能概述.md)和[服务管理](/intl.zh-CN/服务管理/功能概述.md)。
--   边缘脚本服务，可以快速支持您的定制化业务需求，解决定制化需求发布周期长等问题。详细信息，请参见[边缘脚本概述](/intl.zh-CN/边缘脚本/简介/EdgeScript概述.md)。
+-   操作简单、功能丰富的[控制台](https://cdn.console.aliyun.com)，可以帮助您可视化实现多样性配置和管理需求。详细信息，请参见[域名配置](/intl.zh-CN/域名管理/功能概述.md)和[服务管理](/intl.zh-CN/服务管理/功能概述.md)。
+-   边缘脚本服务，可以快速支持您的定制化业务需求，解决定制化需求发布周期长等问题。详细信息，请参见[EdgeScript概述](/intl.zh-CN/边缘脚本/简介/EdgeScript概述.md)。
 
 ## 技术竞争力
 
 -   先进的基础架构：在LVS采用四层负载均衡、Tengine采用七层负载均衡，以Swift作为HTTP缓存。
 -   丰富的API接口：除了控制台，阿里云CDN还开发了多样化的接口。目前我们推荐您使用新版API。详细信息，请参见[新版API参考](/intl.zh-CN/新版API参考/简介.md)。
--   多语言SDK工具包：我们为您准备了SDK使用说明，以便您了解如何获取、安装和调用阿里云SDK。您可以单击下载：[Java](https://develop.aliyun.com/tools/sdk?java#/java)、[Python](https://develop.aliyun.com/tools/sdk?java#/python)、[PHP](https://develop.aliyun.com/tools/sdk?java#/php)、[.NET](https://develop.aliyun.com/tools/sdk?java#/dotnet)、[C或C++](https://develop.aliyun.com/tools/sdk?java#/c)、[Go](https://develop.aliyun.com/tools/sdk?java#/go)。
 
 ## 价格竞争力
 
 性能和技术强大的同时，阿里云CDN的价格同样很有竞争力：
 
 -   计费方式灵活多样，详细信息，请参见[为您选型](#section_2k3_p0x_sci)。
--   预付费套餐包价格常年优惠，详细信息，请参见[加速资源包](https://common-buy.aliyun.com/?spm=5176.7933777.1398157.2.2fef56f5Tev9PO&commodityCode=dcdnpaybag&aly_as=L0rjD3H0#/buy)。
+-   预付费套餐包价格常年优惠，详细信息，请参见[CDN资源包](https://common-buy-intl.alibabacloud.com/?spm=a2796.11741934.1343434330.1.873772f0KN5Jz5&commodityCode=%20cdn_bag_intl#/buy)。
 -   如果您的业务需求量很大，您可以单独联系阿里云商务。
 
 ## 生态竞争力
@@ -66,7 +65,7 @@
 -   完善的服务体系：7\*24小时全网监控和服务。
 -   完善的资料体系：学习产品知识，请参见[什么是阿里云CDN](/intl.zh-CN/产品简介/什么是阿里云CDN.md)。
 -   完善的问题解决体系：
-    -   在线服务：您可以单击右侧**联系我们**，在智能顾问中咨询售前、售后问题，提交反馈建议。
+    -   在线服务：您可以单击右侧**电话图标**，进行售前和售后问题咨询，提交反馈建议。
     -   工单服务：您也可以[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex)和我们联系。
 
 ## 极速开通
@@ -74,7 +73,7 @@
 阿里云CDN的开通方式非常简单。
 
 1.  完成阿里云账号注册和实名认证。
-2.  登录[阿里云CDN平台](https://www.alibabacloud.com/en/product/cdn)，选择适合您的计费类型。您也可以参见[为您选型](#section_2k3_p0x_sci)，帮助您更好地决策选型。
+2.  登录[阿里云CDN平台](https://www.alibabacloud.com/zh/product/cdn)，选择适合您的计费类型。您也可以参见[为您选型](#section_2k3_p0x_sci)，帮助您更好地决策选型。
 3.  单击**立即开通**。完整操作步骤，请参见[开通CDN服务](/intl.zh-CN/快速入门/开通CDN服务.md)。
 
 开通服务后，您可以在控制台添加加速域名并配置CNAME，来最终实现加速访问您的域名站点内容。相关文档，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)和[阿里云（原万网）配置流程](/intl.zh-CN/快速入门/配置CNAME/阿里云（原万网）配置流程.md)。
@@ -85,13 +84,9 @@
 
 |如果您的业务场景是...|我们建议您选择...|
 |------------|----------|
-|终端用户访问您源站内容占用带宽资源较少，访问流量较大|按峰值带宽计费方式。|
+|终端用户访问您源站内容占用带宽资源较少，访问流量较大|按峰值带宽计费方式。**说明：** 如果您需要按带宽峰值计费，请[提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex)或联系阿里云商务申请。 |
 |您的源站内容日常访问流量较少，或某个时段内占用带宽资源较大|按流量计费方式。 **说明：** 推荐您购买更划算的[预付费资源包](https://common-buy.aliyun.com/?spm=5176.8064714.323101.1.720cSlWXSlWXoT&commodityCode=dcdnpaybag#/buy)。我们为您提供多个加速区域、多种规格的套餐。您可以根据实际需求，购买100GB~50PB的套餐包。 |
-|当您开通HTTPS功能，且终端用户以HTTPS协议访问您的源站内容|[动静态请求数套餐包](https://common-buy.aliyun.com/?spm=5176.8064714.323101.1.720cSlWXSlWXoT&commodityCode=dcdnpaybag#/buy)。动静态HTTPS请求数优先抵用资源包，超出后按量付费。|
-|需要开通CDN的图片鉴黄功能帮助您，日常鉴黄需求量较大|[CDN图片鉴黄资源包](https://common-buy.aliyun.com/?commodityCode=cdnpornbag#/buy)。我们有50万张~5亿张等多种规格，您可以根据实际选择。|
 |如果您的月消费金额大于10万|阿里云CDN为您提供月结95带宽峰值计费方式，您可以联系阿里云商务洽谈。|
 
-关于阿里云CDN全部的计费方式，请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。您还可以使用价格计算器，快速估算您的费用。
-
-现在您已全面了解了阿里云CDN。如果您想购买，请单击[购买CDN服务](https://www.aliyun.com/price/product?spm=5176.7933777.1398156.1.2fef56f5Tev9PO&aly_as=TgCS3ZC5#/cdn/detail)。
+关于阿里云CDN全部的计费方式，请参见[CDN定价](https://www.alibabacloud.com/zh/product/cdn/pricing)。您还可以使用价格计算器，快速估算您的费用。如果您想购买，请单击[购买CDN服务](https://www.alibabacloud.com/zh/product/cdn/pricing)。
 
