@@ -18,11 +18,11 @@ If you need to implement access control based on the User-Agent field, you can c
 
 2.  In the left-side navigation pane, click **Domain Names**.
 
-3.  On the Domain Names page, find the target domain name and click **Manage**.
+3.  On the **Domain Names** page, find the domain name that you want to manage and click **Manage** in the Actions column of the domain name.
 
-4.  In the left-side navigation pane of the specified domain, click **Access Control**.
+4.  In the management pane of the domain name, click **Access Control**.
 
-5.  In the left-side navigation pane, click **UserAgent Blacklist/Whitelist**.
+5.  Click the **UserAgent Blacklist/Whitelist** tab.
 
 6.  On the **UserAgent Blacklist/Whitelist** tab, click **Modify**.
 
@@ -42,8 +42,8 @@ Requests that contain the User-Agent fields in the blacklist cannot access resou
 
 Only requests that contain User-Agent fields in the whitelist can access resources. Other requests cannot access resources.
 
-The blacklist and whitelist are mutually exclusive, and whichever configure last takes effect. |
-    |**Rules**|When you specify User-Agent fields, separate multiple fields with vertical bars \(\|\). You can use asterisks \(\*\) to specify wildcard fields. Example: \*curl\*\|\*IE\*\|\*chrome\*\|\*firefox\*|
+**Note:** The blacklist and whitelist are mutually exclusive, and whichever configure last takes effect. |
+    |**Rules**|When you specify User-Agent fields, separate multiple fields with vertical bars \(\|\). The wildcard character asterisk \(\*\) is supported. Example: \*curl\*\|\*IE\*\|\*chrome\*\|\*firefox\* **Note:** Use `^$` to specify empty User-Agent fields. |
 
 8.  Click **OK**.
 
