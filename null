@@ -1,83 +1,83 @@
-# 查询所有的域名与状态
+# DescribeCdnUserDomainsByFunc
 
-调用DescribeCdnUserDomainsByFunc查询用户名下所有的域名及其状态。
+Queries all accelerated domain names under your Alibaba Cloud account and their status.
 
-## 调试
+## Debugging
 
-[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeCdnUserDomainsByFunc&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCdnUserDomainsByFunc&type=RPC&version=2018-05-10)
 
-## 请求参数
+## Request parameters
 
-|名称|类型|是否必选|示例值|描述|
-|--|--|----|---|--|
-|Action|String|是|DescribeCdnUserDomainsByFunc|操作接口名，系统规定参数。取值：**DescribeCdnUserDomainsByFunc**。 |
-|FuncId|Integer|是|7|功能ID。
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeCdnUserDomainsByFunc|The operation that you want to perform. Set the value to **DescribeCdnUserDomainsByFunc**. |
+|FuncId|Integer|Yes|7|The ID of the feature.
 
- 例如：路径过期时间设置的功能ID为7。 |
-|PageNumber|Integer|否|10|页码，默认值：**1**。
+ For example, the ID of the feature that sets an expiration time for paths is 7. |
+|PageNumber|Integer|No|10|The number of the page to return. Default value: **1**.
 
- 取值范围：**1**~**100000**。 |
-|PageSize|Integer|否|20|单页显示域名的数量，默认值：**20**。
+ Valid values: **1** to **100000**. |
+|PageSize|Integer|No|20|The number of entries to return on each page. Default value: **20**.
 
- 取值范围：**1**~**50**。 |
-|ResourceGroupId|String|否|rg-xxxxx|资源组ID。 |
+ Valid values: **1** to **50**. |
+|ResourceGroupId|String|No|rg-xxxxx|The ID of the resource group. |
 
-## 返回数据
+## Response parameters
 
-|名称|类型|示例值|描述|
-|--|--|---|--|
-|Domains|Array of PageData| |加速域名数据类型。 |
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Domains|Array of PageData| |The type of the data returned. |
 |PageData| | | |
-|CdnType|String|web|加速业务类型。取值：
+|CdnType|String|web|The type of workload accelerated by Alibaba Cloud Content Delivery Network \(CDN\). Valid values:
 
- -   **web**：图片小文件加速。
--   **download**：大文件下载加速。
--   **video**：视音频点播加速。
--   **liveStream**：直播流媒体加速。 |
-|Cname|String|example.com.w.alikunlun.com|加速域名对应的CNAME域名。 |
-|Description|String|audit failed|状态描述。 |
-|DomainName|String|example.com|加速域名名称。 |
-|DomainStatus|String|configure\_failed|加速域名状态。取值：
+ -   **web**: image and small file delivery.
+-   **download**: large file delivery.
+-   **video**: on-demand video and audio streaming.
+-   **liveStream**: live streaming. |
+|Cname|String|example.com.w.alikunlun.com|The canonical name \(CNAME\) assigned to the accelerated domain name. |
+|Description|String|audit failed|The description of the status. |
+|DomainName|String|example.com|The accelerated domain name. |
+|DomainStatus|String|configure\_failed|The status of the accelerated domain name. Valid values:
 
- -   **online**：启用。
--   **offline**：停用。
--   **configuring**：配置中。
--   **configure\_failed**：配置失败。
--   **checking**：正在审核。
--   **check\_failed**：审核失败。 |
-|GmtCreated|String|2015-10-28T11:05:52Z|加速域名创建时间。 |
-|GmtModified|String|2015-10-29T10:15:31Z|加速域名修改时间。 |
-|ResourceGroupId|String|rg-xxxxx|资源组ID。 |
-|Sandbox|String|normal|沙箱。 |
-|Sources|Array of Source| |源站信息。 |
+ -   **online**: The domain name is enabled.
+-   **offline**: The domain name is disabled.
+-   **configuring**: The domain name is being configured.
+-   **configure\_failed**: The domain name failed to be configured.
+-   **checking**: The domain name is under review.
+-   **check\_failed**: The domain name failed the review. |
+|GmtCreated|String|2015-10-28T11:05:52Z|The time when the accelerated domain name was added to Alibaba Cloud CDN. |
+|GmtModified|String|2015-10-29T10:15:31Z|The last time when the accelerated domain name was modified. |
+|ResourceGroupId|String|rg-xxxxx|The ID of the resource group. |
+|Sandbox|String|normal|Indicates whether the accelerated domain name is in a sandbox. |
+|Sources|Array of Source| |The information about the origin server. |
 |Source| | | |
-|Content|String|1.1.1.1|源站地址。 |
-|Port|Integer|80|源站端口。 |
-|Priority|String|20|优先级。 |
-|Type|String|ipaddr|源站类型。 |
-|Weight|String|10|回源权重。 |
-|SslProtocol|String|on|https开关。取值：
+|Content|String|1.1.1.1|The address of the origin server. |
+|Port|Integer|80|The port of the origin server. |
+|Priority|String|20|The priority of the origin server if multiple origin servers are specified. |
+|Type|String|ipaddr|The type of the origin server. |
+|Weight|String|10|The weight of the origin server if multiple origin servers are specified. |
+|SslProtocol|String|on|The status of HTTPS. Valid values:
 
- -   **on**：已开启。
--   **off**：未开启。 |
-|PageNumber|Long|1|页码。 |
-|PageSize|Long|5|单页显示域名的数量。 |
-|RequestId|String|AA75AADB-5E25-4970-B480-EAA1F5658483|请求ID。 |
-|TotalCount|Long|16|域名总个数。 |
+ -   **on**: enabled
+-   **off**: disabled |
+|PageNumber|Long|1|The number of the returned page. |
+|PageSize|Long|5|The number of entries returned per page. |
+|RequestId|String|AA75AADB-5E25-4970-B480-EAA1F5658483|The ID of the request. |
+|TotalCount|Long|16|The total number of entries returned. |
 
-## 示例
+## Examples
 
-请求示例
+Sample requests
 
 ```
-http(s)://cdn.aliyuncs.com?Action=DescribeCdnUserDomainsByFunc
+http(s)://cdn.aliyuncs.com? Action=DescribeCdnUserDomainsByFunc
 &FuncId=7
-&<公共请求参数>
+&<Common request parameters>
 ```
 
-正常返回示例
+Sample success responses
 
-`XML` 格式
+`XML` format
 
 ```
 <DescribeCdnUserDomainsByFuncResponse>
@@ -125,7 +125,7 @@ http(s)://cdn.aliyuncs.com?Action=DescribeCdnUserDomainsByFunc
 </DescribeCdnUserDomainsByFuncResponse>
 ```
 
-`JSON` 格式
+`JSON` format
 
 ```
 {
@@ -177,7 +177,7 @@ http(s)://cdn.aliyuncs.com?Action=DescribeCdnUserDomainsByFunc
  }
 ```
 
-## 错误码
+## Error codes
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/Cdn)查看更多错误码。
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
