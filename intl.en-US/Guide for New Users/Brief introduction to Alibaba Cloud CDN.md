@@ -22,8 +22,6 @@ Alibaba Cloud CDN is applicable to the following scenarios:
 
 During the use of Alibaba Cloud CDN, you can determine the acceleration effect based on the latency, download speed, website content loading speed, packet loss rate, ratio between the number of back-to-origin requests and the total number of requests, and cache hit ratio.
 
-You can watch the following video to learn more about Alibaba Cloud CDN. 
-
 ## Billing methods
 
 Alibaba Cloud CDN is charged for basic services and value-added services.
@@ -35,8 +33,6 @@ Alibaba Cloud CDN is charged for basic services and value-added services.
     If you choose pay-by-data-transfer, you can purchase an outbound data transfer plan on an annual basis to minimize the costs. For more information, see [CDN/DCDN resource plans](https://common-buy.aliyun.com/?spm=a2c4g.11186623.2.11.69cf4ee26lJyhT&commodityCode=dcdnpaybag#/buy).
 
 -   Value-added services are charged for HTTP requests, HTTPS requests, QUIC requests, real-time log entries, content moderation, and DCDN.
-
-If you spend more than CNY 100,000 on Alibaba Cloud CDN per month, we recommend that you choose the 95th percentile bandwidth metering method.
 
 ## Related topics
 
@@ -55,7 +51,7 @@ For more information about the billing methods of Alibaba Cloud CDN, see:
 
 -   [Pricing of basic services](/intl.en-US/Pricing/Billing method/Pricing of basic services.md)
 -   [Billing of value-added services](/intl.en-US/Pricing/Billing method/Billing of value-added services.md)
--   [Change the billing method](/intl.en-US/Pricing/Change the billing method.md)
+-   [Change the metering method](/intl.en-US/Pricing/Change the metering method.md)
 -   [Overdue payments](/intl.en-US/Pricing/Overdue payments.md)
 
 ## Get started with Alibaba Cloud CDN
@@ -63,5 +59,5 @@ For more information about the billing methods of Alibaba Cloud CDN, see:
 For more information about how to get started with Alibaba Cloud CDN, see:
 
 -   [Get started with Alibaba Cloud CDN](/intl.en-US/Guide for New Users/Get started with Alibaba Cloud CDN.md)
--   [Brief introduction to basic features of Alibaba Cloud CDN](/intl.en-US/Guide for New Users/Brief introduction to basic features.md)
+-   [Brief introduction to basic features of Alibaba Cloud CDN](/intl.en-US/Guide for New Users/Brief introduction to basic features of Alibaba Cloud CDN.md)
 
