@@ -30,7 +30,7 @@ Alibaba Cloud CDN is charged for basic services and value-added services.
 
     **Note:** The pay-by-bandwidth billing method applies if the amount of network traffic that goes through your domain name remains relatively stable but the bandwidth utilization exceeds a daily rate of 30%. The pay-by-data-transfer billing method applies if the amount of network traffic that goes through your domain name encounters substantial fluctuations and bandwidth spikes but the daily bandwidth utilization is lower than 30%.
 
-    If you choose pay-by-data-transfer, you can purchase an outbound data transfer plan on an annual basis to minimize the costs. For more information, see [CDN/DCDN resource plans](https://common-buy.aliyun.com/?spm=a2c4g.11186623.2.11.69cf4ee26lJyhT&commodityCode=dcdnpaybag#/buy).
+    If you choose pay-by-data-transfer, you can purchase an outbound data transfer plan on an annual basis to minimize the costs. For more information, see [CDN resource plans](https://common-buy-intl.alibabacloud.com/?spm=a2c63.p38356.879954.4.798276ad33R6vU&commodityCode=%20cdn_bag_intl#/buy).
 
 -   Value-added services are charged for HTTP requests, HTTPS requests, QUIC requests, real-time log entries, content moderation, and DCDN.
 
