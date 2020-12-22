@@ -2,9 +2,10 @@
 
 Activates Alibaba Cloud Content Delivery Network \(CDN\). You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
 
-The maximum number of times that each user can call this operation per second is 5.
+**Note:**
 
-**Note:** You can activate Alibaba Cloud CDN only one time with each Alibaba Cloud account. Your account must pass real-name verification before you can activate Alibaba Cloud CDN.
+-   You can activate Alibaba Cloud CDN only one time under each Alibaba Cloud account. You must pass real-name verification before you can activate Alibaba Cloud CDN.
+-   The maximum number of times that each user can call this operation per second is 5.
 
 ## Debugging
 
@@ -14,11 +15,11 @@ The maximum number of times that each user can call this operation per second is
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|OpenCdnService|The operation that you want to perform. Set the value to OpenCdnService. |
-|InternetChargeType|String|Yes|PayByTraffic|The billing method of Alibaba Cloud CDN.
+|Action|String|Yes|OpenCdnService|The operation that you want to perform. Set the value to **OpenCdnService**. |
+|InternetChargeType|String|Yes|PayByTraffic|The metering method of Alibaba Cloud CDN. Valid values:
 
--   **PayByTraffic**: pay-by-data-transfer.
--   **PayByBandwidth**: pay-by-bandwidth. |
+-   **PayByTraffic**: You are charged based on data transfer.
+-   **PayByBandwidth**: You are charged based on peak bandwidth values. |
 
 ## Response parameters
 
@@ -60,12 +61,12 @@ Sample success responses
 |--------|----------|-------------|-----------|
 |403|Forbidden.Intl|User not authorized to open Intl service.|The error message returned because Alibaba Cloud CDN is available to only selected users.|
 |400|InvalidInternetChargeType.ValueNotSupported|The specified value of parameter "InternetChargeType" is not valid.|The error message returned because the specified value of the InternetChargeType parameter is invalid.|
-|400|CdnService.HasOpened|Your cdn service has opened.|The error message returned because Alibaba Cloud CDN is already activated under your account. You do not need to activate the service again.|
-|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because the balance in your account is insufficient. Top up your account balance and try again.|
-|400|NoRealNameAuthentication|Real name authentication is needed.|The error message returned because your account has not passed real-name verification.|
+|400|CdnService.HasOpened|Your cdn service has opened.|The error message returned because Alibaba Cloud CDN is already activated under your Alibaba Cloud account. You do not need to activate the service again.|
+|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because your Alibaba Cloud account has an insufficient balance. Top up your account and try again.|
+|400|NoRealNameAuthentication|Real name authentication is needed.|The error message returned because your Alibaba Cloud account has not passed real-name verification.|
 |403|Forbidden.BidUser|Bid user is limited to open service.|The error message returned because you are not authorized to use this service.|
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_INVALID\_PAY\_METHOD|INVALID\_PAY\_METHOD|The error message returned because the specified payment method is invalid.|
-|400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_USERPROFILECOMPLETE|MISSING\_USERPROFILE|The error message returned because the required user profile is missing.|
+|400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_USERPROFILECOMPLETE|MISSING\_USERPROFILE|The error message returned because a required user profile is missing.|
 |400|LX\_CREATE\_ORDER\_FAILED|Create order failed|The error message returned because the order failed to be created.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
