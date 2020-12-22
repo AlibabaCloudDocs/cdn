@@ -50,7 +50,7 @@ ER provides a fully integrated JavaScript runtime environment that allows you to
 
 ## Use ER
 
-The first private preview of ER was completed in September 2020. You cannot activate ER after the private preview is completed. If you have already activated ER, you can continue using ER free of charge. The next private preview of ER is expected to begin in January 2021.
+The first private preview of ER was completed in September 2020. You cannot activate ER after the private preview is completed. If you have already activated ER, you can continue using ER free of charge. The next private preview of ER is expected to begin in February 2021.
 
 After ER is activated, you can use the [EdgeRoutine CLI](/intl.en-US/EdgeRoutine/Work with EdgeRoutine CLI.md) to submit JavaScript code to CDN nodes where the JavaScript code will be automatically deployed.
 
