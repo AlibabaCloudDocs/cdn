@@ -1,11 +1,11 @@
 # 开通CDN服务
 
-调用OpenCdnService开通CDN服务。只有开通服务后，才能进行域名操作。
+调用OpenCdnService开通CDN服务。开通服务后才能进行域名操作。
 
 **说明：**
 
 -   一个用户只能开通一次，且要求阿里云账号已通过实名认证。
--   单用户调用频率：5次/秒。
+-   单用户调用频率为5次/秒。
 
 ## 调试
 
@@ -25,14 +25,14 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|请求ID。 |
+|RequestId|String|97C68796-EB7F-4D41-9D5B-12B909D76508|请求ID。 |
 
 ## 示例
 
 请求示例
 
 ```
-http(s):///cdn.aliyuncs.com/?Action=OpenCdnService
+http(s)://cdn.aliyuncs.com/?Action=OpenCdnService
 &InternetChargeType=PayByTraffic
 &<公共请求参数>
 ```
