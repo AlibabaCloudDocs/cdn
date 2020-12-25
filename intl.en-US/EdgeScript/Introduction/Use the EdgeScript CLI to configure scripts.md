@@ -1,22 +1,22 @@
 # Use the EdgeScript CLI to configure scripts
 
-This topic describes the functions of the EdgeScript command line interface \(CLI\) and how to use the EdgeScript CLI.
+This topic describes the features of the EdgeScript command-line interface \(CLI\) and how to use the EdgeScript CLI.
 
-## Functions
+## Features
 
-The EdgeScript CLI supports the following functions:
+The EdgeScript CLI supports the following features:
 
 -   Publish scripts to the staging environment.
--   Publish scripts from the staging environment to all CDN nodes \(production environment\), and roll back scripts from the production environment to the staging environment.
--   Query, modify, and delete scripts in the staging and production environments.
+-   Publish scripts from the staging environment to all CDN nodes \(production environment\) or roll back scripts from the production environment to the staging environment.
+-   Query, modify, or delete scripts in the staging and production environments.
 
 ## Download the EdgeScript CLI
 
-You can click [attachment](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip) to download the EdgeScript CLI.
+You can click [here](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip) to download the EdgeScript CLI.
 
 ## Work with EdgeScript CLI
 
-You can use the EdgeScript CLI to perform the following tasks:
+You can use EdgeScript CLI to perform the following tasks:
 
 -   Configure your AccessKey pair.
 
@@ -54,7 +54,7 @@ You can use the EdgeScript CLI to perform the following tasks:
     ./es.py action=del_product_env domain=<domain> configid=<configid>                  
     ```
 
-    **Note:** You can also call an API operation to query the configuration IDs \(configid\) of scripts.
+    **Note:** You can call an API operation to query the configuration IDs \(configid\) of scripts.
 
 -   Publish scripts from the staging environment to the production environment or roll back scripts from the production environment to the staging environment.
 
