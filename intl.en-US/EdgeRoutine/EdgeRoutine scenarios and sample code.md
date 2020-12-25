@@ -1,6 +1,6 @@
 # EdgeRoutine scenarios and sample code
 
-This topic describes the scenarios supported by EdgeRoutine \(ER\) and test instructions. ER is a lightweight and serverless computing environment that can run custom JavaScript code on Alibaba Cloud Content Delivery Network \(CDN\) nodes. Provided with more than 2,500 CDN edge nodes deployed across the world, ER supports programmable CDN and serverless services that can be automatically deployed and consumed from the nearest CDN node.
+This topic describes the scenarios that are supported by EdgeRoutine \(ER\) and test instructions. ER is a lightweight and serverless computing environment that can run custom JavaScript code on Alibaba Cloud Content Delivery Network \(CDN\) nodes. Provided with more than 2,500 CDN edge nodes deployed across the world, ER supports programmable Alibaba Cloud CDN and serverless services. These services can be automatically deployed and consumed on responsive CDN nodes that are closest to clients.
 
 ## Prepare the CLI environment
 
@@ -8,9 +8,9 @@ For more information, see [Work with EdgeRoutine CLI](/intl.en-US/EdgeRoutine/Wo
 
 ## Events
 
-You can use the addEventListener method to register an event handler. Fetch events are supported. Fetch events are triggered by HTTP requests sent to Alibaba Cloud CDN. Each request sent from a client to a CDN-accelerated domain name is redirected to the nearest CDN node. Fetch events are automatically associated with serverless services deployed on the CDN node. Requests are coupled with the lifecycle of Alibaba Cloud CDN and then blocked or redirected based on the lifecycle stage to which Alibaba Cloud CDN belongs. This allows you to program your CDN service or use the CDN service as a serverless origin server.
+You can use the addEventListener method to register an event handler. Fetch events are supported. Fetch events are triggered by HTTP requests that are sent to Alibaba Cloud CDN. Each request that a client sends to an accelerated domain name is redirected to the responsive CDN node that is closest to the client. Fetch events are automatically associated with serverless services that are deployed on the CDN node. Requests are coupled with the lifecycle of Alibaba Cloud CDN and then blocked or redirected based on the lifecycle stage to which Alibaba Cloud CDN belongs. This allows you to program your Alibaba Cloud CDN service or use the Alibaba Cloud CDN service as a serverless origin server.
 
-In the event handler, use the event.respondWith method to register a function that executes operations asynchronously. This function returns the Promise object, which is a core feature of ECMAScript 6 \(ES6\) in the implementation of asynchronous programming. In later versions, the Promise object will be parsed into the actual response header and returned to Alibaba Cloud CDN or even clients. Most programs call the addEventListener method in this way.
+In the event handler, use the event.respondWith method to register a function that asynchronously executes operations. This function returns the Promise object. This object is a core feature of ECMAScript 6 \(ES6\) in the implementation of asynchronous programming. In later versions, the Promise object will be parsed into the actual response header and returned to Alibaba Cloud CDN or clients. Most programs call the addEventListener method in this way.
 
 Sample code:
 
@@ -24,16 +24,16 @@ addEventListener('fetch', (event) => {
 });
 ```
 
-ER supports the Service Worker API, which is a web API. This API is compatible with ES6 syntax and can directly use third-party Node.js libraries. ES also supports standard JavaScript development models. This topic provides several code blocks that can be used in different scenarios.
+ER supports the Service Worker API, which is a web API. This API is compatible with ES6 syntax and can use third-party Node.js libraries. ES also supports standard JavaScript development models. This topic provides several code blocks that can be used in different scenarios.
 
 edge.ialicdn.com is used in the following examples to test a preconfigured JavaScript demo. The sample source code is provided at the end of this topic.
 
 -   The sample code uses JavaScript to build code snippets that can be used in a variety of scenarios. Alibaba Cloud CDN provides more than 15 sample scenarios.
--   To distinguish between different scenarios, the request body must carry a key-value pair in JSON format. This way, requests are redirected to the desired functions.
+-   To distinguish between different scenarios, the request body must carry a key-value pair in the JSON format. This way, requests are redirected to the required functions.
 
 ## Hello World
 
-Requirements: This scenario shows how to build a simple serverless service on a CDN node where content can be directly generated. This way, Alibaba Cloud CDN does not need to redirect requests to the origin server.
+Requirements: This scenario shows how to build a simple serverless service on a CDN node where content can be generated. This way, Alibaba Cloud CDN does not need to redirect requests to an origin server.
 
 Command:
 
@@ -41,11 +41,11 @@ Command:
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "helloworld"}'
 ```
 
-![hello world](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102006.gif)
+![hello world](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102006.gif)
 
 ## Geo
 
-Requirements: This scenario shows how to build a simple service that enables event tracking on CDN nodes. Event tracking collects information about requests sent to CDN nodes, such as the IP address, geographic location, and device information.
+Requirements: This scenario shows how to build a simple service that enables event tracking on CDN nodes. Event tracking collects information about requests that are sent to CDN nodes, such as the IP address, geographic location, and device information.
 
 Command:
 
@@ -53,7 +53,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "geo"}' -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36"
 ```
 
-![hello world](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102006.gif)
+![Geo](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5720888061/p102007.gif)
 
 ## Fetch
 
@@ -65,7 +65,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "fetch", "url": "http://a.hongxiaolong.com/xx"}'
 ```
 
-![fetch](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102008.gif)
+![fetch](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102008.gif)
 
 ## Request
 
@@ -77,7 +77,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"request", "headers":{"aa":"bb"}, "body":"Hello ER!"}'
 ```
 
-![request](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102009.gif)
+![request](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102009.gif)
 
 ## Response
 
@@ -89,7 +89,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/?xx=yy' -d '{"name":"response", "headers":{"ra":"rb"}}'
 ```
 
-![response](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102010.gif)
+![response](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102010.gif)
 
 ## AB test
 
@@ -101,11 +101,11 @@ Command:
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"ab-test"}' -H "user-agent: a/canary-client/b"
 ```
 
-![ab test](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102011.gif)
+![ab test](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102011.gif)
 
 ## Multi origin
 
-Requirements: This scenario shows how to enable aggregation of content retrieved from different origin servers. This feature returns aggregated content retrieved from different origin servers to the clients.
+Requirements: This scenario shows how to enable aggregation of content that is retrieved from different origin servers. This allows you to return aggregated content from different origin servers to clients.
 
 Command:
 
@@ -113,11 +113,11 @@ Command:
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"multi-origin"}'
 ```
 
-![origin](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102012.gif)
+![origin](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102012.gif)
 
 ## Precache/Prefetch
 
-Requirements: This scenario shows how to prefetch content from the origin server. Prefetch tasks are performed asynchronously while the CDN node returns responses to the clients. This feature will be supported in later versions.
+Requirements: This scenario shows how to prefetch content from an origin server. Prefetch tasks are asynchronously performed when CDN nodes return responses to clients. This feature will be supported in later versions.
 
 Command:
 
@@ -125,13 +125,13 @@ Command:
 curl -v 'http://edge.ialicdn.com/' -d '{"name": "prefetch", "prefetch": ["http://a.hongxiaolong.com/prefetch", "http://b.hongxiaolong.com/prefetch"]}'
 ```
 
-![Precache/Prefetch •](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7244083061/p102013.gif)
+![Precache/Prefetch •](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7244083061/p102013.gif)
 
-![Precache/Prefetch •1](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8244083061/p102014.gif)
+![Precache/Prefetch •1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8244083061/p102014.gif)
 
 ## Race
 
-Requirements: This scenario shows how to retrieve content from multiple origin servers and return the content that is retrieved the earliest.
+Requirements: This scenario shows how to retrieve content from multiple origin servers and return the content that is first retrieved to clients.
 
 Command:
 
@@ -139,7 +139,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"race", "fetchList" : [ "https://www.taobao.com", "https://www.tmall.com", "https://www.baidu.com" ]}'
 ```
 
-![race](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8244083061/p102016.gif)
+![race](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8244083061/p102016.gif)
 
 ## ESI
 
@@ -151,7 +151,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/' -d '{"name":"esi","esi" : "<esi:include src=@http://www.baidu.com@> This is after the ESI for www.baidu.com"}'
 ```
 
-![esi](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8244083061/p102017.gif)
+![esi](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8244083061/p102017.gif)
 
 ## Log
 
@@ -163,11 +163,11 @@ Command:
 curl -v 'http://edge.ialicdn.com/' -d '{"name":"log"}'
 ```
 
-![log](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8244083061/p102018.gif)
+![log](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8244083061/p102018.gif)
 
 ## 3xx
 
-Requirements: This scenario shows how to enable CDN nodes to redirect to the corresponding addresses, retrieve the requested content, and then return the content to the clients after the CDN nodes receive the 302 status code from the origin servers.
+Requirements: This scenario shows how to enable CDN nodes to redirect requests to the required addresses, retrieve the requested content, and then return the content to the clients after the CDN nodes receive the 302 status code from the origin servers.
 
 Command:
 
@@ -175,7 +175,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/' -d '{"name":"3xx"}'
 ```
 
-![3xx](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8244083061/p102020.gif)
+![3xx](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8244083061/p102020.gif)
 
 ## Redirect
 
@@ -187,7 +187,7 @@ Command:
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "redirect"}'
 ```
 
-![redirect](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9244083061/p102021.gif)
+![redirect](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9244083061/p102021.gif)
 
 ## Deny bot
 
@@ -199,7 +199,7 @@ Command:
 curl -v 'http://edge.ialicdn.com' -d '{"name":"deny-bot"}' -H "user-agent: xxxspider"
 ```
 
-![deny bot](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9244083061/p102022.gif)
+![deny bot](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9244083061/p102022.gif)
 
 ## Waf
 
@@ -211,7 +211,7 @@ Command:
 curl -v 'http://edge.ialicdn.com' -d '{"name":"waf", "city":"Hangzhou"}'
 ```
 
-![waf](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9244083061/p102023.gif)
+![waf](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9244083061/p102023.gif)
 
 ## Sample source code
 
