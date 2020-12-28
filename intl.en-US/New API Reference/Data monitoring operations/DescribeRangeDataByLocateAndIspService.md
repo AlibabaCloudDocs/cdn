@@ -6,7 +6,7 @@ Queries the bandwidth values at a specific time based on each Internet service p
 
 ## Debugging
 
-[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer automatically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRangeDataByLocateAndIspService&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRangeDataByLocateAndIspService&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
@@ -16,14 +16,14 @@ Queries the bandwidth values at a specific time based on each Internet service p
 |DomainNames|String|Yes|example.com|The accelerated domain name. |
 |EndTime|String|Yes|2019-11-30T05:40:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
-The end time must be later than the start time. |
+**Note:** The end time must be later than the start time. The difference between the end time and the start time cannot exceed one hour. |
 |StartTime|String|Yes|2019-11-30T05:33:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
-|IspNames|String|No|unicom,telecom|The name of the ISP. You can specify one or more ISP names. Separate multiple ISP names with commas \(,\).
+|IspNames|String|No|unicom,telecom|The name of the ISP. You can specify multiple ISP names and separate multiple ISP names with commas \(,\).
 
-To query the ISP names, you can call the [DescribeCdnRegionAndIsp](~~91077~~) operation. |
-|LocationNames|String|No|liaoning,guangxi|The names of the regions. Separate multiple region names with commas \(,\).
+You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. |
+|LocationNames|String|No|liaoning,guangxi|The names of the regions. Separate multiple regions with commas \(,\).
 
-To retrieve the region names, you can call the [DescribeCdnRegionAndIsp](~~91077~~) operation. |
+You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. |
 
 ## Response parameters
 
@@ -257,8 +257,8 @@ Sample success responses
 |HTTP status code|Error code|Error message|Description|
 |----------------|----------|-------------|-----------|
 |400|InvalidStartTime.Malformed|Specified StartTime is malformed.|The error message returned because the format of the specified start time is invalid. For more information about the time format, see the Request parameters section.|
-|400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the specified end time is invalid. For more information about the time format, see the Request parameters section.|
-|400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is invalid.|
+|400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the end time is invalid. For more information about the time format, see the Request parameters section.|
+|400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is invalid. Rectify the start time and try again.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
