@@ -1,10 +1,10 @@
 # Features of EdgeRoutine
 
-EdgeRoutine \(ER\) is a lightweight and serverless computing environment. It can run custom JavaScript code on CDN nodes. You do not need to manage the underlying infrastructure, such as hardware configurations, region settings, scheduling, and elastic scaling. After you use the EdgeRoutine CLI to deploy code to the production environment, the system automatically runs the code on all CDN nodes. The CDN nodes process requests in different regions worldwide by following the logical rules of the code.
+EdgeRoutine \(ER\) is a lightweight and serverless computing environment. It can run custom JavaScript code on CDN nodes. After you use the EdgeRoutine command-line interface \(CLI\) to deploy code to the production environment, the system automatically runs the code on all CDN nodes. The CDN nodes process requests in different regions worldwide by following the logical rules of the code.
 
 ## Benefits
 
-Traditional CDN services are used to only cache and distribute content, but cannot provide the computing feature for workloads. To process a large number of requests sent to CDN nodes, Alibaba Cloud CDN must redirect the requests to origin servers that support complex computing. This back-to-origin process consumes resources on origin servers and requires a complex origin architecture. ER enables CDN nodes to provide the computing feature. You can use ER to customize your CDN service and process complex requests. This feature reduces the number of back-to-origin requests and accelerates content delivery. CDN nodes support high availability, high scalability, and global load balancing. These features allow CDN nodes to support computing in more scenarios. ER provides a computing environment on each CDN node and allows you to run custom JavaScript code on CDN nodes.
+Traditional CDN services are used to only cache and distribute content, but cannot provide the computing feature for workloads. To process a large number of requests that are sent to CDN nodes, Alibaba Cloud Content Delivery Network \(CDN\) must redirect the requests to origin servers that support complex computing. This back-to-origin process consumes resources on origin servers and requires a complex origin architecture. ER enables CDN nodes to provide the computing feature. You can use ER to customize your Alibaba Cloud CDN service and process complex requests. This feature reduces the number of back-to-origin requests and accelerates content delivery. CDN nodes support high availability, high scalability, and global load balancing. These features allow CDN nodes to support computing in more scenarios. ER provides a computing environment on each CDN node and allows you to run custom JavaScript code on CDN nodes. You do not need to be concerned about the hardware configuration, region, scheduling, and auto scaling for code deployment.
 
 ## How ER works
 
@@ -14,11 +14,11 @@ ER runs on CDN nodes and provides a serverless JavaScript runtime environment fo
 
 ## Scenarios
 
-ER provides a fully integrated JavaScript runtime environment that allows you to manage comprehensive logic of request processing. You can also use ER to enable CDN nodes to asynchronously retrieve content from origin servers over HTTP or HTTPS. ER can be used in a wide array of scenarios. The following table lists the scenarios supported by ER.
+ER provides a fully integrated JavaScript runtime environment that allows you to manage comprehensive logic of request processing. You can also use ER to enable CDN nodes to asynchronously retrieve content from origin servers over HTTP or HTTPS. ER can be used in a wide array of scenarios. The following table lists the scenarios that are supported by ER.
 
 |Scenario|Feature|
 |--------|-------|
-|Authentication|Custom CDN authentication and asynchronous authentication|
+|Authentication|Custom Alibaba Cloud CDN authentication and asynchronous authentication|
 |Originless responses|Static content delivery|
 |Network security|-   Anti-bot protection
 -   Web Application Firewall \(WAF\) deployed on CDN nodes |
@@ -50,14 +50,14 @@ ER provides a fully integrated JavaScript runtime environment that allows you to
 
 ## Use ER
 
-The first private preview of ER was completed in September 2020. You cannot activate ER after the private preview is completed. If you have already activated ER, you can continue using ER free of charge. The next private preview of ER is expected to begin in February 2021.
+The first private preview of ER was completed in September 2020. You cannot activate ER after the private preview is completed. If you have activated ER, you can continue to use ER free of charge. The next private preview of ER is expected to begin in February 2021.
 
-After ER is activated, you can use the [EdgeRoutine CLI](/intl.en-US/EdgeRoutine/Work with EdgeRoutine CLI.md) to submit JavaScript code to CDN nodes where the JavaScript code will be automatically deployed.
+After ER is activated, you can use the [EdgeRoutine CLI](/intl.en-US/EdgeRoutine/Work with EdgeRoutine CLI.md) to submit JavaScript code to CDN nodes. Then the JavaScript code will be automatically deployed on the CDN nodes.
 
 **Note:** ER is free of charge in private preview. When you write JavaScript code, take note of the following rules:
 
 -   The code file must be smaller than 1 MB.
--   The CPU time for processing an individual request must be less than 50 milliseconds.
+-   The CPU time that is consumed to process an individual request must be less than 50 milliseconds.
 -   The response time for an individual request must be less than 120 seconds.
 -   The total amount of consumed memory on an individual CDN node must be less than 128 MB.
 
