@@ -35,7 +35,6 @@ keyword: [CDN服务, 云产品开通]
 |API|描述|
 |---|--|
 |[OpenCdnService](/cn.zh-CN/新版API参考/服务类接口/开通CDN服务.md)|调用OpenCdnService开通CDN服务。只有开通服务后，才能进行域名操作。|
-|[ModifyCdnService](/cn.zh-CN/新版API参考/服务类接口/修改CDN服务的计费类型.md)|调用ModifyCdnService变更CDN服务的计费类型。|
 |[DescribeCdnService](/cn.zh-CN/新版API参考/服务类接口/获取CDN服务状态.md)|调用DescribeCdnService查询CDN服务状态。包括：当前计费类型、服务开通时间、下次生效的计费类型、当前业务状态等。|
 |[DescribeCdnUserResourcePackage](/cn.zh-CN/新版API参考/服务类接口/获取CDN用户流量包信息.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
 |[DescribeCdnUserQuota](/cn.zh-CN/新版API参考/服务类接口/获取用户资源使用信息.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
