@@ -41,9 +41,9 @@ CDN提供以下相关API接口。
 |[ListFCTrigger](/intl.zh-CN/新版API参考/数据监控类接口/获取指定事件的触发器列表.md)|调用ListFCTrigger获取指定事件的函数计算触发器列表。|
 |[DescribeDomainQpsDataByLayer](/intl.zh-CN/新版API参考/数据监控类接口/获取各维度的每秒访问次数.md)|调用DescribeDomainQpsDataByLayer获取加速域名的每秒访问次数QPS，支持获取最近90天的数据。|
 |[DescribeDomainTopClientIpVisit](/intl.zh-CN/新版API参考/数据监控类接口/获取Client IP列表排序数据.md)|调用DescribeDomainTopClientIpVisit获取加速域名在指定时间范围内按照访问次数或流量排序的Client IP排行，支持获取最近90天的数据。|
-|[DescribeDomainRealTimeDetailData](/intl.zh-CN/新版API参考/数据监控类接口/获取带宽和访问次数数据.md)|调用DescribeDomainRealTimeDetailData批量获取域名的各地区运营商流量和访问次数的1分钟粒度数据，支持查询7天内的数据。|
-|[DescribeDomainSrcTopUrlVisit](/intl.zh-CN/新版API参考/数据监控类接口/获取回源热门Url.md)|调用DescribeDomainSrcTopUrlVisit获取加速域名回源的热门Url。|
-|[获取回源请求QPS数据](/intl.zh-CN/新版API参考/数据监控类接口/获取回源请求QPS数据.md)|调用DescribeDomainSrcQpsData获取加速域名的回源请求QPS数据。|
+|[DescribeDomainRealTimeDetailData]()|调用DescribeDomainRealTimeDetailData批量获取域名的各地区运营商流量和访问次数的1分钟粒度数据，支持查询7天内的数据。|
+|[DescribeDomainSrcTopUrlVisit](/intl.zh-CN/新版API参考/数据监控类接口/获取回源热门URL.md)|调用DescribeDomainSrcTopUrlVisit获取加速域名回源的热门URL。|
+|[DescribeDomainSrcQpsData](/intl.zh-CN/新版API参考/数据监控类接口/获取回源请求QPS数据.md)|调用DescribeDomainSrcQpsData获取加速域名的回源请求QPS数据。|
 
 ## 域名管理类接口
 
@@ -91,16 +91,15 @@ CDN提供以下相关API接口。
 |API|描述|
 |---|--|
 |[PushObjectCache](/intl.zh-CN/新版API参考/刷新预热类接口/预热源站内容到缓存节点.md)|调用PushObjectCache将源站的内容主动预热到L2 Cache节点上，您首次访问可直接命中缓存，缓解源站压力。|
-|[DescribeRefreshQuota](/intl.zh-CN/新版API参考/刷新预热类接口/获取缓存刷新预热信息.md)|DescribeRefreshQuota查询当天url刷新、目录刷新、预热及封禁的最大限制数量和剩余量。|
+|[DescribeRefreshQuota](/intl.zh-CN/新版API参考/刷新预热类接口/获取缓存刷新预热信息.md)|DescribeRefreshQuota查询当天URL刷新、目录刷新、预热及封禁的最大限制数量和剩余量。|
 |[DescribeRefreshTasks](/intl.zh-CN/新版API参考/刷新预热类接口/获取刷新预热任务信息.md)|调用DescribeRefreshTasks查询刷新、预热状态是否在全网生效。|
-|[RefreshObjectCaches](/intl.zh-CN/新版API参考/刷新预热类接口/刷新节点上的文件内容.md)|调用RefreshObjectCaches刷新节点上的文件内容。刷新指定URL内容至Cache节点，支持URL批量刷新。|
+|[RefreshObjectCaches](/intl.zh-CN/新版API参考/刷新预热类接口/刷新节点上的文件内容.md)|调用RefreshObjectCaches刷新节点上的文件内容。被刷新的文件缓存将立即失效，新的请求将回源获取最新的文件，支持URL批量刷新。|
 
 ## 服务类接口
 
 |API|描述|
 |---|--|
 |[OpenCdnService](/intl.zh-CN/新版API参考/服务类接口/开通CDN服务.md)|调用OpenCdnService开通CDN服务。只有开通服务后，才能进行域名操作。|
-|[ModifyCdnService](/intl.zh-CN/新版API参考/服务类接口/修改CDN服务的计费类型.md)|调用ModifyCdnService变更CDN服务的计费类型。|
 |[DescribeCdnService](/intl.zh-CN/新版API参考/服务类接口/获取CDN服务状态.md)|调用DescribeCdnService查询CDN服务状态。包括：当前计费类型、服务开通时间、下次生效的计费类型、当前业务状态等。|
 |[DescribeCdnUserResourcePackage](/intl.zh-CN/新版API参考/服务类接口/获取CDN用户流量包信息.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
 |[DescribeCdnUserQuota](/intl.zh-CN/新版API参考/服务类接口/获取用户资源使用信息.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
@@ -128,7 +127,7 @@ CDN提供以下相关API接口。
 |[CreateUserUsageDataExportTask](/intl.zh-CN/新版API参考/用量查询类接口/创建历史用量数据导出任务.md)|调用CreateUserUsageDataExportTask创建账号历史用量数据导出任务，将历史用量生成PDF文件用于下载。|
 |[CreateUsageDetailDataExportTask](/intl.zh-CN/新版API参考/用量查询类接口/创建用量数据导出任务.md)|调用CreateUsageDetailDataExportTask创建用量详细数据导出任务，将详细用量生成excel文件用于下载。|
 |[DescribeUserUsageDetailDataExportTask](/intl.zh-CN/新版API参考/用量查询类接口/获取用量明细导出任务信息.md)|调用DescribeUserUsageDetailDataExportTask查询您账户下单个或多个域名5分钟明细数据的导出任务。|
-|[DescribeDomainUsageData](/intl.zh-CN/新版API参考/用量查询类接口/获取在特定区域的用量数据.md)|调用DescribeDomainUsageData查询域名在特定计费区域的用量数据。|
+|[DescribeDomainUsageData](/intl.zh-CN/新版API参考/用量查询类接口/获取特定区域的用量数据.md)|调用DescribeDomainUsageData查询域名在特定计费区域的用量数据。|
 |[DeleteUserUsageDataExportTask](/intl.zh-CN/新版API参考/用量查询类接口/删除历史用量数据导出任务.md)|调用DeleteUserUsageDataExportTask删除账号历史用量数据导出任务。|
 |[DeleteUsageDetailDataExportTask](/intl.zh-CN/新版API参考/用量查询类接口/删除用户用量数据导出任务.md)|调用DeleteUsageDetailDataExportTask删除用量详细数据导出任务。|
 
@@ -146,6 +145,6 @@ CDN提供以下相关API接口。
 |API|描述|
 |---|--|
 |[DescribeIpInfo](/intl.zh-CN/新版API参考/辅助工具类接口/验证IP是否为CDN节点.md)|调用DescribeIpInfo验证指定的IP是否为阿里云CDN节点的IP地址。|
-|[创建违规URL导出任务](/intl.zh-CN/新版API参考/日志信息类接口/创建违规URL导出任务.md)|调用CreateIllegalUrlExportTask提交违规URL导出任务。|
-|[获取违规URL导出任务信息](/intl.zh-CN/新版API参考/日志信息类接口/获取违规URL导出任务信息.md)|调用DescribeIllegalUrlExportTask查询违规URL导出任务.。|
+|[CreateIllegalUrlExportTask](/intl.zh-CN/新版API参考/日志信息类接口/创建违规URL导出任务.md)|调用CreateIllegalUrlExportTask提交违规URL导出任务。|
+|[DescribeIllegalUrlExportTask](/intl.zh-CN/新版API参考/日志信息类接口/获取违规URL导出任务信息.md)|调用DescribeIllegalUrlExportTask查询违规URL导出任务.。|
 
