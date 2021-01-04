@@ -30,10 +30,9 @@ You must activate Alibaba Cloud Content Delivery Network \(CDN\) before you can 
 
 You can call API operations listed in the following table to manage Alibaba Cloud CDN.
 
-|API|Description|
-|---|-----------|
+|API operation|Description|
+|-------------|-----------|
 |[OpenCdnService](/intl.en-US/New API Reference/Service management operations/OpenCdnService.md)|Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.|
-|[ModifyCdnService](/intl.en-US/New API Reference/Service management operations/ModifyCdnService.md)|Changes the billing method of Alibaba Cloud CDN.|
 |[DescribeCdnService](/intl.en-US/New API Reference/Service management operations/DescribeCdnService.md)|Queries the status of your Alibaba Cloud CDN service. The status information includes the service activation time, current service status, current billing method, and new billing method.|
 |[DescribeCdnUserResourcePackage](/intl.en-US/New API Reference/Service management operations/DescribeCdnUserResourcePackage.md)|Queries the current resource plans that you have purchased for Alibaba Cloud CDN.|
 |[DescribeCdnUserQuota](/intl.en-US/New API Reference/Service management operations/DescribeCdnUserQuota.md)|Queries the quotas and usage of Alibaba Cloud CDN resources.|
