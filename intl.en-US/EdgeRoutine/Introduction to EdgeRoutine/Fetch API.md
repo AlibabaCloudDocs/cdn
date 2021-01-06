@@ -14,7 +14,7 @@ You can call the Fetch API to make HTTP or HTTPS requests. Each redirect is coun
 
 -   Method limits
 
-    -   The Fetch API supports only domain names. IP addresses are not supported. HTTP requests use port 80 and HTTPS request use port 443.
+    -   The Fetch API supports only domain names. IP addresses are not supported. HTTP requests use port 80 and HTTPS requests use port 443.
     -   The credentials, referrer, referrerPolicy, cache, and integrity parameters in the init object are not in use.
 
         **Note:** The cache parameter will be used in later versions.
@@ -35,8 +35,8 @@ The Fetch API supports 3xx redirects. Fetch requests can follow 3xx redirects. H
 
 The following table describes different 3xx redirects.
 
-|HTTP status code|Redirect description|
-|----------------|--------------------|
+|Status code|Redirect description|
+|-----------|--------------------|
 |301, 302, 303, and 308|The request method is changed to GET and the body is ignored.|
 |307|Requests follow 3xx redirects only if the request method is GET. Other request methods throw exceptions.|
 
@@ -50,13 +50,13 @@ The following table describes different 3xx redirects.
 The Fetch API allows you to configure a decompression mode, for example, `fetch("https://www.example.com",{decompress: "manual"})`. The decompress parameter supports the following values:
 
 -   manual: does not decompress data. If the server returns compressed data to a fetch request, the data that ER receives is also compressed.
--   decompress: automatically decompresses data. The Fetch API supports Gzip compression. ER automatically detects or decompresses data based on the content-encoding header. After ER decompresses data, ER automatically modifies the value of content-encoding. If the Gzip parameter is deleted, you can configure the following settings to prevent exceptions when you pass data.
+-   decompress: automatically decompresses data. The Fetch API supports Gzip compression. ER automatically detects or decompresses data based on the content-encoding header. After ER decompresses data, ER automatically modifies the value of content-encoding. If the Gzip parameter is deleted, you can configure the following settings to prevent exceptions when you pass data:
 
     -   `content-encoding: gzip`: The decompression algorithm can be recognized by ER.
     -   `content-encoding: gzip, identity`: The decompression algorithm can be recognized by ER.
     **Note:** Algorithms other than Gzip cause exceptions.
 
--   fallbackIdentity: Similar to the decompress value, if this value cannot be recognized by ER, ER does not decompress data.
+-   fallbackIdentity: This value is similar to the decompress value. If this value cannot be recognized by ER, ER does not decompress data.
 
 **Note:**
 
@@ -72,7 +72,7 @@ When you use the Fetch API to fetch data, you can use Alibaba Cloud CDN as a pro
 If you configure the content-length header in a fetch request, data is encoded in the encoding scheme specified in the content-length header. The way how the Fetch API transmits data is also changed. If you do not configure the content-length header, the Fetch API automatically fetches all data in the body stream and transmits the data. The transmitted data is encoded by using the chunked transfer encoding scheme.
 
 -   Configure content-length
-    -   If the content-length header is set to a negative value: The Fetch API fetches data from the Body stream based on the content-length header and transmits the fetched data. If content-length is set to 0, no data is transmitted.
+    -   If the content-length header is set to a negative value: The Fetch API fetches data from the body stream based on the content-length header and transmits the fetched data. If content-length is set to 0, no data is transmitted.
     -   If the content-length header is set to an invalid value: The Fetch API transmits all values in the body. The transmitted data is encoded by using the chunked transfer encoding scheme.
 -   Examples
 
@@ -107,7 +107,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
 -   Blacklist
 
-    ER provides a header blacklist. If you attempt to read and write the headers in the blacklist, exceptions are thrown. You cannot read or write the following headers:
+    ER provides a header blacklist. If you attempt to read and write headers in the blacklist, exceptions are thrown. You cannot read or write the following headers:
 
     -   expect
     -   te
@@ -128,7 +128,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
 -   Limits
 
-    The following properties of the Request object are not in use in contexts
+    The following properties of the Request object are not in use in contexts. They do not take effect in contexts.
 
     -   context
     -   credentials
@@ -142,7 +142,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
     -   Fetches the request method: `request.method`.
     -   Fetches the request URL: `request.url`.
-    -   Fetches the request header: `request.headers`.
+    -   Fetches the request header: `request.header`.
     -   Fetches the request payload: `request.body`. The Body property \(body\) is a ReadableStream object.
     -   Fetches JSON data: `await request.json()`.
     -   Fetches form data: `await request.formData()`.
@@ -160,7 +160,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
     The useFinalURLS and error properties of the Response object are not in use. They do not take effect in the contexts of requests redirected to CDN nodes.
 
--   Common uses of the Response operation
+-   Use cases of the Response operation
     -   Fetches the HTTP status code: `response.status`.
     -   Fetches the reason phrase of a response: `response.statusText`.
     -   Fetches the response header: `response.headers`.
