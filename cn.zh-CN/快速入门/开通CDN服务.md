@@ -17,11 +17,9 @@ keyword: [CDN服务, 云产品开通]
 
 2.  单击**立即开通**。
 
-3.  选择适合您的**计费类型**，并选中**服务协议**。
+3.  选择**计费类型**，默认按使用流量计费，并选中**服务协议**。
 
-    CDN的计费方式，请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。
-
-    ![云产品开通页](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4078749951/p66557.png)
+    CDN产品定价，请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.10.1b444ee22Dxy8y#/cdn/detail)。
 
 4.  单击**立即开通**。
 
