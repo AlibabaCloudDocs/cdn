@@ -19,6 +19,8 @@ keyword: [CDN服务, 云产品开通]
 
 3.  选择**计费方式**，默认按使用流量计费，并选中**服务协议**。
 
+    CDN产品定价，请参见[CDN定价](https://www.alibabacloud.com/zh/product/cdn/pricing)。
+
     ![开通](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4904607061/p162155.png)
 
 4.  单击**立即开通**。
