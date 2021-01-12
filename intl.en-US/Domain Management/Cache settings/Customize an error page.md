@@ -1,21 +1,20 @@
 ---
-keyword: [customize an error page, set the status code page, CDN]
+keyword: [custom page, customize an error page, CDN]
 ---
 
 # Customize an error page
 
-When a client requests a web service by using a browser, if the requested URL does not exist, the website hosting server returns the default 404 Not Found page. To improve the default error page of a web server and overall user experience, you can associate full URLs with error codes that are included in HTTP or HTTPS responses. When an error occurs, the server returns the associated custom page. This topic describes how to customize an error page.
+If a client requests a web service by using a browser and the requested URL does not exist, the website hosting server returns the default 404 Not Found page. To improve the default error page of a web server and overall user experience, you can associate complete URLs with error codes that are included in HTTP or HTTPS responses. When an error occurs, the server returns the specified custom page. This topic describes how to customize an error page.
 
-Alibaba Cloud Content Delivery Network \(CDN\) provides two types of error pages for the status codes: default page and custom page. The status code 404 is used as an example to describe the differences between a default page and a custom page.
+Alibaba Cloud provides a default error page and supports custom error pages. In the following example, the 404 Not Found page is used to demonstrate the differences between a default error page and a custom error page.
 
--   Default page: When the HTTP response includes the status code 404, the server returns the default 404 Not Found page.
--   Custom page: When the HTTP response includes the status code 404, the server returns the custom page. You must specify a full URL for the custom page.
+-   Default page: When the HTTP response includes the 404 status code, the server returns the default 404 Not Found page.
+-   Custom page: When the HTTP response includes the 404 status code, the server returns the custom page. You must specify the complete URL of the custom page.
 
 **Note:**
 
--   Default pages for the status code 404 are classified as Alibaba Cloud public resources. No fees are charged for the default pages.
--   Custom pages are classified as personal resources. Fees are charged for the custom pages based on the specified billing rules.
--   For more information about 404 Not Found pages, see [Why does the 404 Not Found page appear?]().
+-   Custom pages are classified as user resources. You are charged for the custom pages based on the specified billing rules.
+-   For more information about 404 Not Found pages, see [Why does the 404 Not Found page appear?]()
 
 1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
@@ -29,14 +28,14 @@ Alibaba Cloud Content Delivery Network \(CDN\) provides two types of error pages
 
 6.  On the **Custom Pages** tab, click **Customize**.
 
-    ![Customize Page dialog box](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3826297061/p7276.png)
+7.  In the **Customize Page** dialog box, select an HTTP status code and enter the URL of the custom page.
 
-7.  In the Customize Page dialog box, set the required parameters.
+    The 404 status code is used in this example. For example, the 404 Not Found page `error404.html` and other static files are stored under the domain name of the origin server and requests are sent to the accelerated domain name `exp.aliyun.com`. In this case, you can select **404** and enter the complete URL of the custom page. The complete URL is `http://exp.aliyun.com/error404.html`.
 
-    For example, you can store the `error404.html` page for the status code 404 in the same directory as the other static files on the origin server. This error page can be returned for requests that are addressed to the accelerated domain name `exp.aliyun.com`. In the Customize Page dialog box, select **404** from the Error Code drop-down list and enter the full URL `http://exp.aliyun.com/error404.html` in the Link field.
+    ![Customize an error page](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3826297061/p7276.png)
 
 8.  Click **OK**.
 
-    The newly configured error page appears on the **Custom Pages** tab. To modify or delete the error page, click **Modify** or **Delete** in the Actions column of the error page.
+    On the **Custom Pages** tab, you can click **Modify** or **Delete** in the Actions column to modify or delete a custom error page.
 
 
