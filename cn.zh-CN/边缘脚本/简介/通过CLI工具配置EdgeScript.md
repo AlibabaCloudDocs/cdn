@@ -12,20 +12,20 @@
 
 ## 工具下载
 
-您可以单击[附件](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip)，下载工具。
+您可以下载CLI工具配置EdgeScript。更多信息，[下载CLI工具](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip)。
 
 ## 使用说明
 
 EdgeScript CLI的使用说明如下：
 
--   配置AK
+-   配置AccessKey ID和AccessKey Secret
 
     ```
-    $python ./es.py config --id=AK_ID --secret=AK_SECRET
-    $cat aliyun.ini
+    python ./es.py config --id=AK_ID --secret=AK_SECRET
+    cat aliyun.ini
     [Credentials]
-    accesskeyid = 更新后AK
-    accesskeysecret = 更新后AK Secret
+    accesskeyid = 更新后的AccessKey ID
+    accesskeysecret = 更新后的AccessKey Secret
     ```
 
 -   发布EdgeScript规则至模拟环境或生产环境
@@ -37,8 +37,8 @@ EdgeScript CLI的使用说明如下：
 
     **说明：**
 
-    -   新增规则：不需要指定configid。
-    -   修改规则：需要指定configid; 使用查询接口可获取到对应规则的configid。
+    -   新增规则不需要指定configid。
+    -   修改规则需要指定configid，使用查询接口可获取到对应规则的configid。
     -   您可以指定多条rule。
 -   查询模拟环境或生产环境下的EdgeScript规则
 
