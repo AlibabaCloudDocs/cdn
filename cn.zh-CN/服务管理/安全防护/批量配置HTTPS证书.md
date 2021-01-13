@@ -6,6 +6,11 @@ CDN支持HTTPS加速服务，您可以上传自定义证书或将托管在阿里
 
 目前CDN仅支持`PEM`格式的证书。如果您的证书不是`PEM`格式，请进行格式转换，操作方法请参见[证书格式转换方式](/cn.zh-CN/域名管理/HTTPS配置/证书格式说明.md)。
 
+**说明：**
+
+-   CRT后缀文件是Certificate的简称，可能是PEM编码格式，也可能是DER编码格式。进行证书格式转换前请仔细确认您的证书格式是否需要转换。
+-   PEM（Privacy Enhanced Mail）一般为文本格式，以 -----BEGIN \*\*\*-----开头，以 -----END \*\*\*-----结尾，中间的内容是Base64编码。这种格式可以保存证书和私钥，为了区分证书与私钥，一般会将PEM格式的私钥后缀改为`.key`。
+
 HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费用单独按量计费，不包含在CDN流量包内。HTTPS计费介绍，请参见[增值服务计费](/cn.zh-CN/产品定价/计费方式/增值服务计费.md)。
 
 根据认证级别不同，证书分类如下：
@@ -24,7 +29,7 @@ HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费�
 
 4.  在**配置证书**面板，配置证书相关参数。
 
-    ![证书](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1095763061/p93743.png)
+    ![证书](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1095763061/p93743.png)
 
     |参数|说明|
     |--|--|
@@ -64,12 +69,12 @@ HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费�
 
     -   如果您选择的域名已经部署了证书，本次操作会覆盖已有证书。
     -   **云盾（SSL）证书中心**证书、**自定义上传（证书+私钥）**证书和**自定义上传（证书）**均可通过证书与域名的关联关系进行批量部署和更新，免费证书只支持单个域名进行部署和更新。
-    ![关联域名](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8086148951/p53679.png)
+    ![关联域名](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8086148951/p53679.png)
 
 7.  单击**确定**，即可完成证书部署和更新。
 
 
 更新HTTPS证书1分钟后全网生效。您可以验证证书是否生效，使用HTTPS方式访问资源，如果浏览器中出现锁的HTTPS标识，则HTTPS安全加速生效。
 
-![验证结果](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4663298951/p3701.png)
+![验证结果](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4663298951/p3701.png)
 
