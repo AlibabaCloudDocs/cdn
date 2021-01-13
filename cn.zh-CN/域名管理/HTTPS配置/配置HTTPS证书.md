@@ -10,6 +10,11 @@ HTTPS是以安全为目标的HTTP通道，为CDN的网络内容传输提供了�
 
 目前CDN仅支持`PEM`格式的证书。如果您的证书不是`PEM`格式，请进行格式转换，操作方法请参见[证书格式转换方式](/cn.zh-CN/域名管理/HTTPS配置/证书格式说明.md)。
 
+**说明：**
+
+-   CRT后缀文件是Certificate的简称，可能是PEM编码格式，也可能是DER编码格式。进行证书格式转换前请仔细确认您的证书格式是否需要转换。
+-   PEM（Privacy Enhanced Mail）一般为文本格式，以 -----BEGIN \*\*\*-----开头，以 -----END \*\*\*-----结尾，中间的内容是Base64编码。这种格式可以保存证书和私钥，为了区分证书与私钥，一般会将PEM格式的私钥后缀改为`.key`。
+
 HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费用单独按量计费，不包含在CDN流量包内。HTTPS计费介绍，请参见[增值服务计费](/cn.zh-CN/产品定价/计费方式/增值服务计费.md)。
 
 根据认证级别不同，证书分类如下：
@@ -35,8 +40,8 @@ HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费�
     **说明：**
 
     -   当您打开HTTPS安全加速开关时，系统弹出确认开启HTTPS界面，该操作单独计费，您可以根据所需选择是否开启。HTTPS计费标准请参见[增值服务计费](/cn.zh-CN/产品定价/计费方式/增值服务计费.md)。
-    -   有关配置HTTPS证书的常见问题，请参见[常见问题](/cn.zh-CN/域名管理/HTTPS配置/常见问题.md)。
-    ![证书](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7781382061/p93720.png)
+    -   有关配置HTTPS证书的常见问题，请参见[HTTPS相关常见问题](/cn.zh-CN/域名管理/HTTPS配置/HTTPS相关常见问题.md)。
+    ![证书](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7781382061/p93720.png)
 
     |参数|说明|
     |--|--|
@@ -73,5 +78,5 @@ HTTPS功能为增值服务，开启HTTPS将产生HTTPS请求数计费，该费�
 
 更新HTTPS证书1分钟后全网生效。您可以验证证书是否生效，使用HTTPS方式访问资源，如果浏览器中出现锁的HTTPS标识，则HTTPS安全加速生效。
 
-![验证结果](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4663298951/p3701.png)
+![验证结果](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4663298951/p3701.png)
 
