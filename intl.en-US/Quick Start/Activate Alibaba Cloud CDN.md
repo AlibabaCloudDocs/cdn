@@ -19,11 +19,13 @@ You must activate Alibaba Cloud Content Delivery Network \(CDN\) before you can 
 
 3.  Select a **Metering Method** and select the **Terms of Service**. The default metering method is pay-by-data-transfer.
 
+    For more information about the pricing of Alibaba Cloud CDN, see [CDN Pricing](https://www.alibabacloud.com/zh/product/cdn/pricing).
+
     ![Activate Alibaba Cloud CDN](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0209297061/p162155.png)
 
 4.  Click **Activate Now**.
 
-    After Alibaba Cloud CDN is activated, you can click **Alibaba Cloud CDN** to go to the console.
+    After Alibaba Cloud CDN is activated, you can click **Alibaba Cloud CDN** to log on to the console.
 
 
 ## API operations
