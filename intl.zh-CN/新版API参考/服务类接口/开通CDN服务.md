@@ -16,10 +16,7 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|OpenCdnService|操作接口名，系统规定参数。取值：**OpenCdnService**。 |
-|InternetChargeType|String|是|PayByTraffic|开通服务的计费类型。取值：
-
- -   **PayByTraffic**：按流量计费。
--   **PayByBandwidth**：按带宽峰值计费。 |
+|InternetChargeType|String|是|PayByTraffic|开通服务的计费类型。取值为**PayByTraffic**，表示按流量计费。 |
 
 ## 返回数据
 
@@ -39,7 +36,7 @@ http(s)://cdn.aliyuncs.com/?Action=OpenCdnService
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <OpenCdnServiceResponse>
@@ -47,7 +44,7 @@ http(s)://cdn.aliyuncs.com/?Action=OpenCdnService
 </OpenCdnServiceResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
