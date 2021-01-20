@@ -2,9 +2,9 @@
 
 阿里云CDN为您提供EdgeRoutine CLI工具，可以直接在CDN节点执行您自行编写的JavaScript代码，通过本文您可以了解使用EdgeRoutine CLI工具发布代码的具体步骤。
 
-EdgeRoutine CLI工具运行环境需要Node.js 8.0及以上版本。
+EdgeRoutine CLI工具运行环境需要是Node.js 8.0及以上版本。
 
-EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依赖您的阿里云账号来进行相关配置，所以您需要在控制台完成添加加速域名，具体操作请参见[添加加速域名](/cn.zh-CN/快速入门/添加加速域名.md)。获取AccessKeyID和AccessKeySecret，请参见[创建AccessKey]()。
+EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依赖您的阿里云账号进行相关配置，因此您需要在控制台完成加速域名的添加，具体操作，请参见[添加加速域名](/cn.zh-CN/快速入门/添加加速域名.md)。获取AccessKey ID和AccessKey Secret，请参见[创建AccessKey]()。
 
 1.  安装EdgeRoutine CLI工具。
 
@@ -81,10 +81,10 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
 
 6.  测试模拟环境代码。
 
-    请您在终端环境中访问目标域名，EdgeRoutine模拟环境节点IP：42.123.119.50或42.123.119.51。
+    请您在终端环境中访问目标域名，EdgeRoutine模拟环境节点IP为42.123.119.100或42.123.119.101。
 
     ```
-    $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.50:80
+    $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.100:80
     ```
 
 7.  发布代码到生产环境。
