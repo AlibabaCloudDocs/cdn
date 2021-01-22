@@ -1,8 +1,8 @@
-# Misc相关 {#concept_1322989 .concept}
+# Misc相关
 
 本文为您介绍Misc相关函数的语法、说明、参数、返回值和示例。
 
-## base64\_enc {#section_xrm_qws_dhv .section}
+## base64\_enc
 
 函数详细解释如下：
 
@@ -20,7 +20,7 @@
 
 -   示例
 
-    ``` {#codeblock_ivw_wv0_45q}
+    ```
     if $http_data {
        decdata = base64_dec($http_data)
        say(concat('base64_decdata=', decdata))
@@ -33,26 +33,26 @@
     ```
 
 
-## base64\_dec {#section_afr_4ol_cu9 .section}
+## base64\_dec
 
 函数详细解释如下：
 
 -   语法：`base64_dec(s)`。
 -   说明
 
-    base64编码。
+    base64解码。
 
 -   参数
 
-    s：待编码的字符串。
+    s：待解码的字符串。
 
 -   返回值
 
-    base64编码后的字符串。
+    base64解码后的字符串。
 
 -   示例
 
-    ``` {#codeblock_6m4_idk_eb3}
+    ```
     if $http_data {
        decdata = base64_dec($http_data)
        say(concat('base64_decdata=', decdata))
@@ -65,7 +65,7 @@
     ```
 
 
-## url\_escape {#section_l9q_hn2_m1b .section}
+## url\_escape
 
 函数详细解释如下：
 
@@ -84,7 +84,7 @@
 
 -   示例
 
-    ``` {#codeblock_cde_nev_hgn}
+    ```
     raw = '/abc/123/ dd/file.m3u8'
     esdata = url_escape(raw)
     dsdata = url_unescape(esdata)
@@ -98,26 +98,26 @@
     ```
 
 
-## url\_unescape {#section_ph0_rha_htm .section}
+## url\_unescape
 
 函数详细解释如下：
 
 -   语法：`url_unescape(s)`。
 -   说明：
 
-    URL编码。
+    URL解码。
 
 -   参数：
 
-    s：待编码的字符串。
+    s：待解码的字符串。
 
 -   返回值：
 
-    URL编码后的字符串。
+    URL解码后的字符串。
 
 -   示例
 
-    ``` {#codeblock_0s3_ebf_fsr}
+    ```
     raw = '/abc/123/ dd/file.m3u8'
     esdata = url_escape(raw)
     dsdata = url_unescape(esdata)
@@ -131,7 +131,7 @@
     ```
 
 
-## rand {#section_2mj_x6g_ay3 .section}
+## rand
 
 函数详细解释如下：
 
@@ -149,12 +149,12 @@
 
 -   示例
 
-    ``` {#codeblock_aj6_z5x_6tg}
+    ```
     r = rand(1,100)
     ```
 
 
-## rand\_hit {#section_gv8_0p3_p7g .section}
+## rand\_hit
 
 函数详细解释如下：
 
@@ -173,12 +173,12 @@
 
 -   示例
 
-    ``` {#codeblock_n0o_3e6_ecr}
+    ```
     rand_hit(80)
     ```
 
 
-## crc {#section_n3v_mkk_rkb .section}
+## crc
 
 函数详细解释如下：
 
@@ -197,12 +197,12 @@
 
 -   示例
 
-    ``` {#codeblock_k19_cmc_914}
+    ```
     crc('hello edgescript')
     ```
 
 
-## tonumber {#section_emy_zhf_iw3 .section}
+## tonumber
 
 函数详细解释如下：
 
@@ -216,11 +216,90 @@
     -   base：可指定目标转换进制，可用值：10和16，默认10进制。
 -   示例
 
-    ``` {#codeblock_faj_28b_izt}
+    ```
     n = tonumber('100')
     say(concat('tonumber()=', n))
     
     输出：tonumber()=100
+    ```
+
+
+## base64\_enc\_safe
+
+函数详细解释如下：
+
+-   语法：`base64_enc_safe(str)`。
+-   说明
+
+    对输入的字符串进行Base64安全编码。安全编码后输出时，需要将'+'替换'-'，'/'替换成'\_'，同时去掉编码后的'='。
+
+-   参数
+
+    str：待加密的字符串。
+
+-   返回值
+
+    返回字符串类型。
+
+-   示例
+
+    ```
+    add_rsp_header('X-RESPOND-OUTPUT', concat('base64_enc_safe=', base64_enc_safe('hello, dsl')), true)
+    ```
+
+    输出响应头：
+
+    ```
+    X-RESPOND-OUTPUT：base64_enc_safe=aGVsbG8sIGRzbA
+    ```
+
+
+## base64\_dec\_safe
+
+函数详细解释如下：
+
+-   语法：`base64_dec_safe(str)`。
+-   说明
+
+    对输入的字符串进行Base64安全解码。安全解码后输出时，需要将'-'替换'+'，'\_'替换'/'，末尾用'='按照4的余数补齐。
+
+-   参数
+
+    str：Base64加密后的内容。
+
+-   返回值
+
+    返回字符串类型。
+
+-   示例
+
+    ```
+    add_rsp_header('X-RESPOND-OUTPUT', concat('base64_dec_safe=', base64_dec_safe(base64_enc_safe('hello, dsl'))), true)
+    ```
+
+    输出响应头：
+
+    ```
+    X-RESPOND-OUTPUT:base64_dec_safe=hello, dsl
+    ```
+
+
+## randomseed
+
+函数详细解释如下：
+
+-   语法：`randomseed()`。
+-   说明
+
+    指定生成随机数种子。
+
+-   参数：无。
+-   返回值：无。
+-   示例
+
+    ```
+    randomseed()
+    r = rand(1,100)
     ```
 
 
