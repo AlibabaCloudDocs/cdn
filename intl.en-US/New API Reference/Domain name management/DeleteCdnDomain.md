@@ -2,10 +2,10 @@
 
 Deletes an accelerated domain name from Alibaba Cloud Content Delivery Network \(CDN\).
 
-**When you call this operation, note that:**
+**Note:**
 
 -   We recommend that you add an A record for the domain name in the system of your DNS service provider before you delete the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
--   After you successfully call the DeleteCdnDomain operation, all records of the deleted domain name are removed. If you need to only disable the domain name, we recommend that you can call the StopCdnDomain operation.
+-   After you successfully call the DeleteCdnDomain operation, all records of the deleted domain name are removed. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
 -   The maximum number of times that each user can call this operation per second is 10.
 
 ## Debugging
@@ -17,8 +17,7 @@ Deletes an accelerated domain name from Alibaba Cloud Content Delivery Network \
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DeleteCdnDomain|The operation that you want to perform. Set the value to **DeleteCdnDomain**. |
-|DomainName|String|Yes|www.yourdomain.com|The accelerated domain name that you want to delete. You can specify only one domain name. |
-|ResourceGroupId|String|No|your resourceGroupId|The ID of the resource group. |
+|DomainName|String|Yes|example.com|The accelerated domain name that you want to delete. You can specify only one domain name in each call. |
 
 ## Response parameters
 
@@ -31,8 +30,8 @@ Deletes an accelerated domain name from Alibaba Cloud Content Delivery Network \
 Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DeleteDomain
-&DomainName=test.com
+http(s)://cdn.aliyuncs.com/? Action=DeleteCdnDomain
+&DomainName=example.com
 &<Common request parameters>
 ```
 
@@ -49,7 +48,7 @@ Sample success responses
 `JSON` format
 
 ```
-{ "RequestId": "94E3559F-7B6A-4A5E-AFFD-44E2A208A249" }
+{ "RequestId": "16A96B9A-F203-4EC5-8E43-CB92E68F4CD8" }
 ```
 
 ## Error codes
