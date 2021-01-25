@@ -1,5 +1,5 @@
 ---
-keyword: [download log, download CDN log]
+keyword: [download log data, download CDN log data]
 ---
 
 # Download log data
@@ -30,13 +30,13 @@ The following table describes the fields in a log entry.
     |`[9/Jun/2015:01:58:09 +0800]`|The start time of the log entry.|
     |`192.168.15.75`|The IP address of the client that initiated the request.|
     |`-`|The proxy IP address of the client.|
-    |`1542`|The response time.Unit: milliseconds. |
+    |`1542`|The response time. Unit: milliseconds.|
     |`"-"`|The referer header field in the HTTP request.|
     |`GET`|The request method.|
-    |`http://www.aliyun.com/index.html`|The URI in the request.|
+    |`http://www.aliyun.com/index.html`|The URI in the request, excluding the information about the domain name.|
     |`200`|The HTTP status code.|
-    |`191`|The size of the request.Unit: bytes. |
-    |`2830`|The size of the response.Unit: bytes. |
+    |`191`|The size of the request message. Unit: bytes.|
+    |`2830`|The size of the response. Unit: bytes.|
     |`MISS`|The cache hit status.|
     |`Mozilla/5.0(compatible; AhrefsBot/5.0; +http://ahrefs.com/robot/)`|The information about the proxy of the client.|
     |`text/html`|The type of the requested file.|
