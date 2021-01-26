@@ -182,7 +182,7 @@ Fetch允许您配置API的解压缩模式，例如`fetch("https://www.example.co
 
 -   定义
 
-    URLSearchParams的定义，请参见MDN官方文档[RLSearchParams\(\)](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams/URLSearchParams)。
+    URLSearchParams的定义，请参见MDN官方文档[URLSearchParams\(\)](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams/URLSearchParams)。
 
 -   限制
 
