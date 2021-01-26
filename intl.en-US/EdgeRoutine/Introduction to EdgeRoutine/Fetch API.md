@@ -182,7 +182,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
 -   Definition
 
-    For more information about the URLSearchParams operation, see [RLSearchParams\(\)](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams/URLSearchParams).
+    For more information about the URLSearchParams operation, see [URLSearchParams\(\)](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams/URLSearchParams).
 
 -   Limits
 
