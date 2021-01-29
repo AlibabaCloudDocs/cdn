@@ -12,17 +12,17 @@ The EdgeScript CLI supports the following features:
 
 ## Download the EdgeScript CLI
 
-You can click [here](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip) to download the EdgeScript CLI.
+You can download and use the EdgeScript CLI to configure scripts. For more information, see [Download the EdgeScript CLI](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip).
 
-## Work with EdgeScript CLI
+## Work with the EdgeScript CLI
 
-You can use EdgeScript CLI to perform the following tasks:
+You can use the EdgeScript CLI to perform the following tasks:
 
 -   Configure your AccessKey pair.
 
     ```
-    $python ./es.py config --id=AK_ID --secret=AK_SECRET
-    $cat aliyun.ini
+    python ./es.py config --id=AK_ID --secret=AK_SECRET
+    cat aliyun.ini
     [Credentials]
     accesskeyid = AccessKey ID
     accesskeysecret = AccessKey secret
@@ -78,6 +78,6 @@ You can use EdgeScript CLI to perform the following tasks:
 
     The \_es\_dbg parameter is contained in the request header. The value of \_es\_dbg is set to the value of \_es\_dbg that you set in the option extension of the script. To view the debugging result, check the following information contained in the response header:
 
-    TRACE information: `X-DEBUG-ES-TRACE-RULE-{Script ID}`. Check the control flow of the scrip. The format of the control flow is `_flow number_function name (input parameter): Response{_execution time}`.
+    TRACE information: `X-DEBUG-ES-TRACE-RULE-{Script ID}`. Check the control flow of the script. The format of the control flow is `_flow number_function name (input parameter): Response{_execution time}`.
 
 
