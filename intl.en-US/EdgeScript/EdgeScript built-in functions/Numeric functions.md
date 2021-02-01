@@ -31,14 +31,19 @@ Details about this function:
     say(concat('n3=', n3))
     say(concat('n4=', n4))
     say(concat('n5=', n5))
-    
-    Output:
-    n1=30
-    n2=-10
-    n3=200
-    n4=0.5
-    n5=15
     ```
+
+    Output:
+
+    n1=30
+
+    n2=-10
+
+    n3=200
+
+    n4=0.5
+
+    n5=15
 
 
 ## sub
@@ -70,14 +75,19 @@ Details about this function:
     say(concat('n3=', n3))
     say(concat('n4=', n4))
     say(concat('n5=', n5))
-    
-    Output:
-    n1=30
-    n2=-10
-    n3=200
-    n4=0.5
-    n5=15
     ```
+
+    Output:
+
+    n1=30
+
+    n2=-10
+
+    n3=200
+
+    n4=0.5
+
+    n5=15
 
 
 ## mul
@@ -109,14 +119,19 @@ Details about this function:
     say(concat('n3=', n3))
     say(concat('n4=', n4))
     say(concat('n5=', n5))
-    
-    Output:
-    n1=30
-    n2=-10
-    n3=200
-    n4=0.5
-    n5=15
     ```
+
+    Output:
+
+    n1=30
+
+    n2=-10
+
+    n3=200
+
+    n4=0.5
+
+    n5=15
 
 
 ## div
@@ -148,14 +163,19 @@ Details about this function:
     say(concat('n3=', n3))
     say(concat('n4=', n4))
     say(concat('n5=', n5))
-    
-    Output:
-    n1=30
-    n2=-10
-    n3=200
-    n4=0.5
-    n5=15
     ```
+
+    Output:
+
+    n1=30
+
+    n2=-10
+
+    n3=200
+
+    n4=0.5
+
+    n5=15
 
 
 ## mod
@@ -187,21 +207,26 @@ Details about this function:
     say(concat('n3=', n3))
     say(concat('n4=', n4))
     say(concat('n5=', n5))
-    
-    Output:
-    n1=30
-    n2=-10
-    n3=200
-    n4=0.5
-    n5=15
     ```
+
+    Output:
+
+    n1=30
+
+    n2=-10
+
+    n3=200
+
+    n4=0.5
+
+    n5=15
 
 
 ## gt
 
 Details about this function:
 
--   Syntax: `gt(n1, n2)`
+-   Syntax: `gt(n1, n2)`.
 -   Description
 
     Determines whether a number is greater than another one.
@@ -228,12 +253,11 @@ Details about this function:
     if and($arg_num, le(tonumber($arg_num), 10)) {
         say('num <= 10')
     }
-    
-    Request: /path1/path2/file? num=10  Response: num <= 10   num >= 10
-    Request: /path1/path2/file? num=11  Response: num > 10    num >= 10
-    Request: /path1/path2/file? num=9   Response: num < 10    num <= 10
     ```
 
+    -   Request: /path1/path2/file? num=10 Response: num <= 10 num \>= 10
+    -   Request: /path1/path2/file? num=11 Response: num \> 10 num \>= 10
+    -   Request: /path1/path2/file? num=9 Response: num < 10 num <= 10
 
 ## ge
 
@@ -266,12 +290,11 @@ Details about this function:
     if and($arg_num, le(tonumber($arg_num), 10)) {
         say('num <= 10')
     }
-    
-    Request: /path1/path2/file? num=10  Response: num <= 10   num >= 10
-    Request: /path1/path2/file? num=11  Response: num > 10    num >= 10
-    Request: /path1/path2/file? num=9   Response: num < 10    num <= 10
     ```
 
+    -   Request: /path1/path2/file? num=10 Response: num <= 10 num \>= 10
+    -   Request: /path1/path2/file? num=11 Response: num \> 10 num \>= 10
+    -   Request: /path1/path2/file? num=9 Response: num < 10 num <= 10
 
 ## lt
 
@@ -304,12 +327,11 @@ Details about this function:
     if and($arg_num, le(tonumber($arg_num), 10)) {
         say('num <= 10')
     }
-    
-    Request: /path1/path2/file? num=10  Response: num <= 10   num >= 10
-    Request: /path1/path2/file? num=11  Response: num > 10    num >= 10
-    Request: /path1/path2/file? num=9   Response: num < 10    num <= 10
     ```
 
+    -   Request: /path1/path2/file? num=10 Response: num <= 10 num \>= 10
+    -   Request: /path1/path2/file? num=11 Response: num \> 10 num \>= 10
+    -   Request: /path1/path2/file? num=9 Response: num < 10 num <= 10
 
 ## le
 
@@ -325,7 +347,7 @@ Details about this function:
     -   n2: the other number to be compared.
 -   Response parameters
 
-    if `n1 <= n2`, `true` is returned. Otherwise, `false` is returned.
+    If `n1 <= n2`, `true` is returned. Otherwise, `false` is returned.
 
 -   Examples
 
@@ -342,12 +364,11 @@ Details about this function:
     if and($arg_num, le(tonumber($arg_num), 10)) {
         say('num <= 10')
     }
-    
-    Request: /path1/path2/file? num=10  Response: num <= 10   num >= 10
-    Request: /path1/path2/file? num=11  Response: num > 10    num >= 10
-    Request: /path1/path2/file? num=9   Response: num < 10    num <= 10
     ```
 
+    -   Request: /path1/path2/file? num=10 Response: num <= 10 num \>= 10
+    -   Request: /path1/path2/file? num=11 Response: num \> 10 num \>= 10
+    -   Request: /path1/path2/file? num=9 Response: num < 10 num <= 10
 
 ## floor
 
@@ -356,7 +377,7 @@ Details about this function:
 -   Syntax: `floor(n)`.
 -   Description
 
-    Generates the greatest integer smaller than or equal to a number.
+    Generates the greatest integer that is smaller than or equal to a number.
 
 -   Parameters
 
@@ -364,7 +385,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns the greatest integer smaller than or equal to the number specified by`n`.
+    Returns the greatest integer that is smaller than or equal to the number specified by`n`.
 
 -   Examples
 
@@ -373,9 +394,9 @@ Details about this function:
         say(concat('ceil: ', ceil(tonumber($arg_num))))
         say(concat('floor: ', floor(tonumber($arg_num))))
     }
-    
-    Request: /path1/path2/file? num=9.3  Response: ceil: 10   floor: 9
     ```
+
+    Request: /path1/path2/file? num=9.3 Response: ceil: 10 floor: 9
 
 
 ## ceil
@@ -385,7 +406,7 @@ Details about this function:
 -   Syntax: `ceil(n)`.
 -   Description
 
-    Generates the smallest integer greater than or equal to a number.
+    Generates the smallest integer that is greater than or equal to a number.
 
 -   Parameters
 
@@ -393,7 +414,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns the smallest integer greater than or equal to the number specified by`n`.
+    Returns the smallest integer that is greater than or equal to the number specified by`n`.
 
 -   Examples
 
@@ -402,8 +423,8 @@ Details about this function:
         say(concat('ceil: ', ceil(tonumber($arg_num))))
         say(concat('floor: ', floor(tonumber($arg_num))))
     }
-    
-    Request: /path1/path2/file? num=9.3  Response: ceil: 10   floor: 9
     ```
+
+    Request: /path1/path2/file? num=9.3 Response: ceil: 10 floor: 9
 
 
