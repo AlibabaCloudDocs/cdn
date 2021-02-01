@@ -4,108 +4,126 @@ keyword: [certificate format, HTTPS secure acceleration, PEM format]
 
 # Certificate formats
 
-To access resources based on HTTPS secure acceleration, you must configure an HTTPS certificate. This topic describes the certificate formats that are supported by Alibaba Cloud Content Delivery Network \(CDN\) and how to convert different formats of certificates into the Privacy-Enhanced Mail \(PEM\) format.
+To access resources based on HTTPS secure acceleration, you must configure a Secure Sockets Layer \(SSL\) certificate. To configure an SSL certificate, you must upload the certificate content and private key in Privacy-Enhanced Mail \(PEM\) format. Different certificate authorities \(CAs\) may have different requirements on the certificate content. This topic describes the certificate formats that are supported by Alibaba Cloud Content Delivery Network \(CDN\) and how to convert different formats of certificates into the PEM format.
 
-## Root CA certificates
+## Certificates issued by a root CA
 
-Root CA certificates are issued by root certificate authorities \(CAs\), including Apache, IIS, NGINX, and Tomcat. Each root CA certificate is unique. Alibaba Cloud CDN uses root CA certificates that are issued by NGINX. The certificate information is contained in a `.crt` file and the private key information is contained in a `.key` file.
+Root CA certificates are issued by root CAs, including Apache, IIS, NGINX, and Tomcat. Each root CA certificate is unique. SSL certificates used by Alibaba Cloud CDN are issued by NGINX. These certificates include the `.crt` and `.key` files. Open the NGINX folder and use a text editor to open the `.crt` and `.key` files. Then, you can view the certificate content and private key that are in PEM format, as shown in the following figure.
 
-The following rules apply to a root CA certificate:
+![Certificate in PEM format](../images/p214015.png "Certificate in PEM format")
 
--   A root CA certificate must start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`.
--   All the lines except the last line must be 64 characters in length and the last line cannot exceed 64 characters in length.
+**Certificate in PEM format**
 
-The following figure shows a sample certificate in the `PEM` format. The sample certificate is used when your system runs a Linux operating system.
+-   The certificate must start with "-----BEGIN CERTIFICATE-----" and end with "-----END CERTIFICATE-----".
+-   Each line \(except the last line\) must contain 64 characters. The last line can contain 64 or fewer characters.
 
-![PEM](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3946219951/p3703.png)
+**Requirements on uploading certificates**
+
+-   You must upload all content of the certificate that starts with "-----BEGIN CERTIFICATE-----" and ends with "-----END CERTIFICATE-----".
+-   Each line \(except the last line\) must contain 64 characters. The last line can contain 64 or fewer characters.
 
 ## Intermediate CA certificates
 
-A certificate file that is issued by an intermediate CA includes one server certificate and one intermediate certificate. You must manually concatenate the content of the server certificate and the intermediate certificate before you upload these certificates.
+A certificate file that is issued by an intermediate CA contains multiple certificates. When you configure HTTPS, you must combine the intermediate certificates and server certificate into a complete certificate before you upload it. The following figure shows an example of a complete certificate.
 
-**Note:** Make sure that the content of the server certificate is followed by the content of the intermediate certificate. In most cases, the CA provides the description of the concatenation method when the CA issues the certificates. Follow the description to concatenate the content of the certificates.
+![A complete certificate in PEM format](../images/p214007.png "A complete certificate in PEM format")
 
-The chain of certificates that are issued by an intermediate CA is in the following format:
+**Format of certificate chain**
 
-`-----BEGIN CERTIFICATE-----`
+The certificates that are issued by an intermediate CA are in the following format:
 
-`-----END CERTIFICATE-----`
+-----BEGIN CERTIFICATE-----
 
-`-----BEGIN CERTIFICATE-----`
+-----END CERTIFICATE-----
 
-`-----END CERTIFICATE-----`
+-----BEGIN CERTIFICATE-----
 
-`-----BEGIN CERTIFICATE-----`
+-----END CERTIFICATE-----
 
-`-----END CERTIFICATE-----`
+-----BEGIN CERTIFICATE-----
 
-The certificates in the chain must follow these rules:
+-----END CERTIFICATE-----
 
--   Blank lines are not allowed between certificates.
--   Each certificate must be in the specified format.
+**Combination rules**
 
-## RSA private keys
+Use a text editor to open all \*.PEM certificate files. When you combine the certificates, the first certificate must be the server certificate and the intermediate certificates follow the server certificate. Do not add space characters between certificates. The CA that issues the certificates may also release instructions. Pay attention to the instructions.
 
-A Rivest-Shamir-Adleman \(RSA\) private key must follow these rules:
+## Rivest–Shamir–Adleman \(RSA\) private key formats
 
--   The RSA private key must be generated based on the `openssl genrsa -out privateKey.pem 2048` command. `privateKey.pem` represents the private key file.
--   The private key must start with `-----BEGIN RSA PRIVATE KEY-----` and end with`-----END RSA PRIVATE KEY-----`.
--   All the lines except the last line must be 64 characters in length and the last line can be less than 64 characters in length.
+The extension of a private key file is `.pem` or `.key`. Use a text editor to open the private key file. The following figure shows an example of a private key file.
 
-![RSA](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3946219951/p3704.png)
+![RSA private key formats](../images/p214176.png "RSA private key formats")
 
-If you do not generate the private key based on these rules and the private key does not start with `-----BEGIN PRIVATE KEY-----` or end with `-----END PRIVATE KEY-----`, run the following command to convert the private key:
+**Private key in PEM format**
+
+-   The private key must start with "-----BEGIN RSA PRIVATE KEY-----" and end with "-----END RSA PRIVATE KEY-----".
+-   Each line \(except the last line\) must contain 64 characters. The last line can contain 64 or fewer characters.
+
+**Requirements on uploading private key**
+
+Before you upload a RSA private key, run the `openssl genrsa -out privateKey.pem 2048` command on your on-premises machine to generate a private key. The `privateKey.pem` file is the private key file.
+
+-   The private key must start with "-----BEGIN RSA PRIVATE KEY-----" and end with "-----END RSA PRIVATE KEY-----".
+-   Each line \(except the last line\) must contain 64 characters. The last line can contain 64 or fewer characters.
+
+If you want to generate a private key that starts with "-----BEGIN PRIVATE KEY-----" and ends with "-----END PRIVATE KEY-----", run the following command in OpenSSL to covert the format. Then, upload the content of `new_server_key.pem` and the certificate.
 
 ```
 openssl rsa -in old_server_key.pem -out new_server_key.pem
 ```
 
-Then, upload the `new_server_key.pem` file and the certificates.
+## Convert certificate formats
 
-## Certificate format conversion
+The HTTPS feature supports only certificates that are in PEM format. If your certificates are not in PEM format, you must convert them into the PEM format. We recommend that you use OpenSSL to convert certificate formats. This section describes how to convert certificates into the PEM format.
 
-HTTPS configuration supports only certificates that are in the PEM format. If your certificates are not in the PEM format, you must convert them from other formats to the PEM format. We recommend that you use OpenSSL to convert certificate formats. The following section describes how to convert certificates from other formats to the PEM format:
+**Note:**
 
--   Certificates in the DER format
+-   The CRT file extension is short for certificate. The certificate may be in PEM or Distinguished Encoding Rules \(DER\) format. Before you convert the format of a certificate, check whether the certificate needs to be converted into other formats.
+-   The PEM format is a text format. It starts with " -----BEGIN \*\*\*-----" and ends with "-----END \*\*\*-----". The content between these lines is encoded in Base64. Both the certificate and private key can be saved in this format. To distinguish a certificate from a private key, the extension of a private key file that is in PEM format is `.key`.
 
-    The Distinguished Encoding Rules \(DER\) format is typically used for Java.
+-   Convert a certificate from DER to PEM
 
-    -   Convert a certificate from the DER format to the PEM format:
+    The DER format is typically used for Java.
+
+    -   Convert the certificate format:
 
         ```
         openssl x509 -inform der -in certificate.cer -out certificate.pem
         ```
 
-    -   Convert a private key from the DER format to the PEM format:
+    -   Convert the private key format:
 
         ```
         openssl rsa -inform DER -outform pem -in privatekey.der -out privatekey.pem
         ```
 
--   Certificates in the P7B format
+-   Convert a certificate from P7B into PEM
 
     The P7B format is typically used for Windows Server and Tomcat.
 
-    -   Convert a certificate from the P7B format to the PEM format:
+    -   Convert the certificate format:
 
         ```
         openssl pkcs7 -print_certs -in incertificat.p7b -out outcertificate.cer
         ```
 
-        You must open the `outcertificat.cer` file. Then, copy and paste the part that starts with `-----BEGIN CERTIFICATE-----` and ends with `-----END CERTIFICATE-----` as the certificate content.
+        Open the `outcertificat.cer` file. Then, copy and upload the part that starts with "-----BEGIN CERTIFICATE-----" and ends with "-----END CERTIFICATE-----".
 
-    -   A certificate in the P7B format does not include a private key. When you configure an HTTPS certificate in the Alibaba Cloud CDN console, specify the certificate information. You do not need to specify the private key information.
--   Certificates in the PFX format
+    -   Convert the private key format:
+
+        A certificate in P7B format does not include a private key. When you configure an SSL certificate in the Alibaba Cloud CDN console, specify the certificate information. You do not need to specify the private key information.
+
+-   Convert a certificate from PFX into PEM
 
     The PFX format is typically used for Windows Server.
 
-    -   Convert a certificate from the PFX format to the PEM format:
+    -   Convert the certificate format:
 
         ```
         openssl pkcs12 -in certname.pfx -nokeys -out cert.pem
         ```
 
-    -   Convert a private key from the PFX format to the PEM format:
+    -   Convert the private key format:
 
         ```
         openssl pkcs12 -in certname.pfx -nocerts -out key.pem -nodes
