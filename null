@@ -1,106 +1,44 @@
-# 获取违规URL导出任务信息
+# DescribeIllegalUrlExportTask
 
-调用DescribeIllegalUrlExportTask查询违规URL导出任务。
+Queries the information about a specific task that exports invalid URLs.
 
-**说明：**
+**When you call this operation, note that:**
 
--   导出文件类型为csv文件。
--   单用户调用频率为1次/秒。
+-   Invalid URLs are exported to a CSV file.
+-   The maximum number of times that each use can call this operation per second is 1.
 
-## 调试
+## Debugging
 
-[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeIllegalUrlExportTask&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeIllegalUrlExportTask&type=RPC&version=2018-05-10)
 
-## 请求参数
+## Request parameters
 
-|名称|类型|是否必选|示例值|描述|
-|--|--|----|---|--|
-|Action|String|是|DescribeIllegalUrlExportTask|系统规定参数。取值：**DescribeIllegalUrlExportTask**。 |
-|TaskId|String|是|tu\_4b37ea97\_a7fa\_4d36\_b363\_061c1f\*\*\*\*|任务ID。您可以调用[CreateIllegalUrlExportTask](~~156492~~)获取任务ID。 |
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeIllegalUrlExportTask|The operation that you want to perform. Set the value to **DescribeIllegalUrlExportTask**. |
+|TaskId|String|Yes|tu\_4b37ea97\_a7fa\_4d36\_b363\_061c1fxxxx|The ID of the export task created by calling the [CreateIllegalUrlExportTask](~~156492~~) operation. |
 
-## 返回数据
+## Response parameters
 
-|名称|类型|示例值|描述|
-|--|--|---|--|
-|DownloadUrl|String|example.com/example\_task.csv|下载地址。当任务状态为成功时，该参数才有意义。 |
-|RequestId|String|64D28B53-5902-409B-94F6-FD46680144FE|请求ID。 |
-|Status|String|complete|任务状态，当返回**complete**时为成功。 |
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|DownloadUrl|String|example.com/example\_task.csv|The URL where you can download the file that contains invalid URLs. This parameter is valid only if the export task is successful. |
+|RequestId|String|64D28B53-5902-409B-94F6-FD46680144FE|The ID of the request. |
+|Status|String|complete|The status of the export task. A value of complete indicates that the task is successful. |
 
-**违规状态码对照表**
+## Examples
 
-|状态码
-
-|描述 |
-|-----|----|
-|gmt\_created
-
-|封禁时间。 |
-|punish\_domain
-
-|封禁的URL对应的域名。 |
-|punish\_url
-
-|封禁的具体URL。 |
-|user\_id
-
-|封禁的URL对应的账号UID。 |
-|reason
-
-|违规原因。具体如下：
-
- PR001：涉黄
-
- PR002：涉赌
-
- PR003：违禁商品
-
- PR004：违禁商品
-
- PR005：违禁商品
-
- PR006：非法活动
-
- PR007：涉政
-
- PR008：欺诈侵权
-
- PR009：违法信息
-
- PR100：暴力破解
-
- PR101：DDos攻击
-
- PR102：钓鱼行为
-
- PR103：恶意DNS
-
- PR104：垃圾邮件
-
- PR107：恶意爬虫
-
- PR108：僵尸网络
-
- PR109：对外攻击
-
- PR201：恶意程序
-
- PR300：域名未实名 |
-
-    
-
-## 示例
-
-请求示例
+Sample requests
 
 ```
-http(s)://cdn.aliyuncs.com/?Action=DescribeIllegalUrlExportTask
-&TaskId=tu_4b37ea97_a7fa_4d36_b363_061c1f****
-&<公共请求参数>
+http(s)://cdn.aliyuncs.com? Action=DescribeIllegalUrlExportTask
+&TaskId=tu_4b37ea97_a7fa_4d36_b363_061c1fxxxx
+&<Common request parameters>
 ```
 
-正常返回示例
+Sample success responses
 
-`XML`格式
+`XML` format
 
 ```
 <DescribeIllegalUrlExportTaskResponse>
@@ -110,7 +48,7 @@ http(s)://cdn.aliyuncs.com/?Action=DescribeIllegalUrlExportTask
 </DescribeIllegalUrlExportTaskResponse>
 ```
 
-`JSON`格式
+`JSON` format
 
 ```
 {
@@ -120,7 +58,7 @@ http(s)://cdn.aliyuncs.com/?Action=DescribeIllegalUrlExportTask
 }
 ```
 
-## 错误码
+## Error codes
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/Cdn)查看更多错误码。
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
