@@ -7,7 +7,7 @@ Queries the bandwidth data of an accelerated domain name. The data is collected 
 -   The time range specified by the StartTime and EndTime parameters cannot exceed 24 hours.
 -   If you do not set StartTime or EndTime, data collected within the last one hour is queried.
 -   The unit of bandwidth is bit/s.
--   The maximum number of times that each user can call this operation per second is 600.
+-   The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
 
