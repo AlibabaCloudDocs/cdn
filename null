@@ -1,104 +1,126 @@
-# DescribeDomainRealTimeDetailData
+# 获取违规URL导出任务信息
 
-Queries the data usage of each ISP and the number of visits in each region. The data is collected at intervals of one minute. You can query data that has been collected within the last seven days.
+调用DescribeIllegalUrlExportTask查询违规URL导出任务。
 
-**When you call this operation, note that:**
+**说明：**
 
--   The time range specified by the StartTime and EndTime parameters cannot exceed 10 minutes.
--   The maximum number of times that each user can call this operation per second is 10.
+-   导出文件类型为csv文件。
+-   单用户调用频率为1次/秒。
 
-## Debugging
+## 调试
 
-[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeDomainRealTimeDetailData&type=RPC&version=2018-05-10)
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cdn&api=DescribeIllegalUrlExportTask&type=RPC&version=2018-05-10)
 
-## Request parameters
+## 请求参数
 
-|Parameter|Type|Required|Example|Description|
-|---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeDomainRealTimeDetailData|The operation that you want to perform. Set the value to **DescribeDomainRealTimeDetailData**. |
-|DomainName|String|Yes|example.com|The accelerated domain name for which you want to query data. You can specify multiple accelerated domain names and separate them with commas \(,\). |
-|StartTime|String|Yes|2019-11-30T05:33:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
-|EndTime|String|Yes|2019-11-30T05:40:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|DescribeIllegalUrlExportTask|系统规定参数。取值：**DescribeIllegalUrlExportTask**。 |
+|TaskId|String|是|tu\_4b37ea97\_a7fa\_4d36\_b363\_061c1f\*\*\*\*|任务ID。您可以调用[CreateIllegalUrlExportTask](~~156492~~)获取任务ID。 |
 
-The end time must be later than the start time. |
-|Field|String|Yes|qps|The type of data usage that you want to query. You can specify multiple data types and separate them with commas \(,\). Valid values:
+## 返回数据
 
--   qps: the number of queries per second.
--   bps: bandwidth values.
--   http\_code: HTTP status codes. |
-|LocationNameEn|String|No|beijing|The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. If you do not set this parameter, all regions are queried. |
-|IspNameEn|String|No|unicom|The name of the Internet Service Provider \(ISP\). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are queried. |
-|Merge|String|No|false|Specifies whether to merge the results. Valid values:
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|DownloadUrl|String|example.com/example\_task.csv|下载地址。当任务状态为成功时，该参数才有意义。 |
+|RequestId|String|64D28B53-5902-409B-94F6-FD46680144FE|请求ID。 |
+|Status|String|complete|任务状态，当返回**complete**时为成功。 |
 
--   **true**: merge.
--   **false**: does not merge. This is the default value. |
-|MergeLocIsp|String|No|false|This parameter is unavailable. You do not need to set this parameter. |
+**违规状态码对照表**
 
-## Response parameters
+|状态码
 
-|Parameter|Type|Example|Description|
-|---------|----|-------|-----------|
-|Data|String|"Data":\{ "2018-06-05T20:00:00Z": \{ "example.com": \{ "Guangdong": \{ "telecom": 10.0 \}, "Jiangsu": \{ "unicom": 11.1 \} \} \} \}|The data usage of each ISP and the number of visits in each region. |
-|RequestId|String|B49E6DDA-F413-422B-B58E-2FA23F286726|The ID of the request. |
+|描述 |
+|-----|----|
+|gmt\_created
 
-## Examples
+|封禁时间。 |
+|punish\_domain
 
-Sample requests
+|封禁的URL对应的域名。 |
+|punish\_url
+
+|封禁的具体URL。 |
+|user\_id
+
+|封禁的URL对应的账号UID。 |
+|reason
+
+|违规原因。具体如下：
+
+ PR001：涉黄
+
+ PR002：涉赌
+
+ PR003：违禁商品
+
+ PR004：违禁商品
+
+ PR005：违禁商品
+
+ PR006：非法活动
+
+ PR007：涉政
+
+ PR008：欺诈侵权
+
+ PR009：违法信息
+
+ PR100：暴力破解
+
+ PR101：DDos攻击
+
+ PR102：钓鱼行为
+
+ PR103：恶意DNS
+
+ PR104：垃圾邮件
+
+ PR107：恶意爬虫
+
+ PR108：僵尸网络
+
+ PR109：对外攻击
+
+ PR201：恶意程序
+
+ PR300：域名未实名 |
+
+    
+
+## 示例
+
+请求示例
 
 ```
-https://cdn.aliyuncs.com/?Action=DescribeDomainRealTimeDetailData
-&DomainName=example.com
-&field=qps
-&StartTime=2018-06-05T20:00:00Z
-&EndTime=2018-06-05T20:03:00Z
-&<Common request parameters>
+http(s)://cdn.aliyuncs.com/?Action=DescribeIllegalUrlExportTask
+&TaskId=tu_4b37ea97_a7fa_4d36_b363_061c1f****
+&<公共请求参数>
 ```
 
-Sample success responses
+正常返回示例
 
-`XML` format
+`XML`格式
 
 ```
-<DescribeDomainRealTimeDetailDataResponse>
-  <Data>
-            <example.com>
-                  <Guangdong>
-                        <telecom>10</telecom>
-                  </Guangdong>
-                  <Jiangsu>
-                        <unicom>11.1</unicom>
-                  </Jiangsu>
-            </example.com>
-  </Data>
-  <RequestId>B49E6DDA-F413-422B-B58E-2FA23F286726</RequestId>
-</DescribeDomainRealTimeDetailDataResponse>
+<DescribeIllegalUrlExportTaskResponse>
+  <RequestId>64D28B53-5902-409B-94F6-FD46680144FE</RequestId>
+  <Status>complete</Status>
+  <DownloadUrl>example.com/example_task.csv</DownloadUrl>
+</DescribeIllegalUrlExportTaskResponse>
 ```
 
-`JSON` format
+`JSON`格式
 
 ```
 {
-   "Data":{
-        "2018-06-05T20:00:00Z": {
-            "example.com": {
-                "Guangdong": {
-                    "telecom": 10.0
-                },
-                "Jiangsu": {
-                    "unicom": 11.1
-                }
-            }
-        }
-   },
-   "RequestId":"B49E6DDA-F413-422B-B58E-2FA23F286726"
+    "RequestId": "64D28B53-5902-409B-94F6-FD46680144FE",
+    "Status": "complete",
+    "DownloadUrl": "example.com/example_task.csv"
 }
 ```
 
-## Error codes
+## 错误码
 
-|HttpCode|Error code|Error message|Description|
-|--------|----------|-------------|-----------|
-|400|InvalidTime.Malformed|Specified StartTime or EndTime is malformed.|The error message returned because the format of the specified start time or end time is invalid.|
-
-For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
+访问[错误中心](https://error-center.aliyun.com/status/product/Cdn)查看更多错误码。
 
