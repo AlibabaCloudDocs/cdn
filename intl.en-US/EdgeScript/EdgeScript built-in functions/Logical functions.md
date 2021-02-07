@@ -1,6 +1,6 @@
 # Logical functions
 
-This topic describes the syntax, description, parameters, and response parameters of logical functions. This topic also provides examples of these functions.
+This topic describes the syntax, description, parameters, and response parameters of IF functions. This topic also provides examples of these functions.
 
 ## and
 
@@ -8,7 +8,7 @@ Details about this function:
 
 -   Syntax: `and(arg, ...)`.
 -   Description
-    -   Performs the AND logical operator.
+    -   Executes the AND logical operator.
     -   Short-circuit evaluation is supported. When a value evaluates to false, the values that follow this value are not evaluated.
 -   Parameters
 
@@ -35,8 +35,8 @@ Details about this function:
 
 -   Syntax: `or(arg, ...)`.
 -   Description
-    -   Performs the OR logical operator.
-    -   Short-circuit evaluation is supported. When a value evaluates to true, the values that follow this parameter are not evaluated.
+    -   Executes the OR logical operator.
+    -   Short-circuit evaluation is supported. When a value evaluates to true, the values that follow this value are not evaluated.
 -   Parameters
 
     arg: the value to check. You can specify one or more values. Data type: any type.
@@ -54,7 +54,7 @@ Details about this function:
     ```
 
     -   a. If the request includes the from header and its value is wap or comos, a 302 HTTP status code is returned and the request is redirected to http://tech.com.cn/zt\_d/we2015/\[wap\|comos\].
-    -   b. If the request includes the from header and its value is wap, the short-circuit evaluation takes effect and the eq comos comparison is not performed. The or \(\) function returns a value of true.
+    -   b. If the request includes the from header and its value is wap, the short-circuit evaluation takes effect and the eq comos comparison is not performed.The or \(\) function returns a value of true.
 
 ## not
 
@@ -63,7 +63,7 @@ Details about this function:
 -   Syntax: `not(arg)`.
 -   Description
 
-    Performs the NOT logical operator. The values of `undef` and `false` evaluate to false, and other values evaluate to true.
+    Executes the NOT logical operator. The values of `undef` and `false` evaluate to false, and other values evaluate to true.
 
 -   Parameters
 
@@ -157,4 +157,45 @@ Details about this function:
     -   c. eq: whether the value of the k1 parameter is equal to value1.
     -   d. ne: whether the value of the k2 parameter is not equal to value2.
     -   e. The response that contains the response body "match condition" is returned only if the following conditions are met: the request includes both the k1 and k2 parameters, the value of the k1 parameter is equal to value1, and the value of the k2 parameter is not equal to value2.
+
+## null
+
+Details about this function:
+
+-   Syntax: `null(v)`.
+-   Description
+
+    Checks whether the data type of EdgeScript is specified.
+
+-   Parameters
+
+    v: the parameter to pass. Data type: array, dictionary, or string. A value of false is returned for other data types.
+
+-   Response parameters
+
+    Data type: Boolean.
+
+    -   A value of true is returned if the value of v is an array or a dictionary.
+    -   A value of true is returned if the value of v is an empty string.
+    -   A value of false is returned if v is set to other data types.
+-   Examples
+
+    ```
+    d = []
+    say(null(d))
+    set(d, 1, 'v1')
+    say(null(d))
+    say(tostring(null('x')))
+    say(tostring(null('')))
+    ```
+
+    Output:
+
+    ```
+    true
+    false
+    false
+    true
+    ```
+
 
