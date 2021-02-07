@@ -49,7 +49,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns the concatenated string.
+    Returns a concatenated string.
 
 -   Examples
 
@@ -312,7 +312,7 @@ Details about this function:
     -   sep: the separator that is used to split the string. Data type: string.
 -   Response parameters
 
-    Returns an array of key-value pairs in the dictionary type. The value of the `key` parameter is a number that starts from 1, for example, \[1\]=xx and \[2\]=y. If `sep` is left empty, the string is split by whitespace characters. Whitespace characters include space characters and tab characters \(\\t\).
+    Returns an array of key-value pairs in the dictionary type. The value of the `key` parameter is a number that starts from 1, for example, \[1\]=xx and \[2\]=y. If `sep` is left empty, the string is split by white-space characters. White-space characters include space characters and tab characters \(\\t\).
 
 -   Examples
 
@@ -383,7 +383,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns the hexadecimal string that is converted from the string specified by the `s` parameter.
+    Returns a hexadecimal string that is converted from the string specified by the `s` parameter.
 
 -   Examples
 
@@ -411,7 +411,7 @@ Details about this function:
 
 -   Response parameters
 
-    Returns the string that is converted from the value specified by the `a` parameter.
+    Returns a string that is converted from the value specified by the `a` parameter.
 
 -   Examples
 
@@ -458,6 +458,182 @@ Details about this function:
         add_rsp_header('Content-Disposition', concat('attachment;filename=', tochar(34), filename, tochar(34)))
         add_rsp_header(hn, hv)
     }                                                                                                                                      
+    ```
+
+
+## reverse
+
+Details about this function:
+
+-   Syntax: `reverse(str)`.
+-   Description
+
+    Reverses a string.
+
+-   Parameters
+
+    str: the string that you want to reverse.
+
+-   Response parameters
+
+    Returns a string reversed from the specified string.
+
+-   Examples
+
+    ```
+    say(reverse('hello'))
+    ```
+
+    Output:
+
+    ```
+    #olleh
+    ```
+
+
+## find
+
+Details about this function:
+
+-   Syntax: `string.find (s, substr, pos)`.
+-   Description
+
+    Search for the specified content in a specified string. The third parameter is used as the index.
+
+-   Parameters
+    -   s: the string that you want to search.
+    -   substr: the substring that you want to search.
+    -   pos: the position where the search starts. Data type: numeric. This parameter is optional. You can specify a negative integer. The default value is 1.
+-   Response parameters
+    -   Returns an array if the specified content is found.
+        -   Index 1 indicates the position where the search starts.
+        -   Index 2 indicates the position where the search ends.
+    -   Returns an empty array if the specified content is not found.
+-   Examples
+
+    ```
+     str = 'hello dsl'
+     add_rsp_header('string-find()-start', tostring(get(find(str, 'dsl'), 1)))
+     str = 'hello dsl 12'
+     add_rsp_header('string-find()-end', tostring(get(find(str, 'dsl'), 2)))
+     str = 'hello dsl'
+     add_rsp_header('string-find()-tail-start', tostring(get(find(str, 'dsl', -6), 1)))
+     str = 'hello dsl 12'
+     add_rsp_header('string-find()-tail-end', tostring(get(find(str, 'dsl', -6), 2)))
+    ```
+
+    Output:
+
+    ```
+    string-find()-start:7
+    string-find()-end:9
+    string-find()-tail-start:7
+    string-find()-tail-end:9
+    ```
+
+
+## format
+
+Details about this function:
+
+-   Syntax: `format(fmt, ···)`.
+-   Description
+
+    Generates a formatted string for one or more parameters. The format string is the first parameter, which must specify a string. The format string follows the specification of the sprintf parameter used by functions in the C programming language.
+
+    The syntax of a format string is: %\[parameter\]\[flag\]\[field width\]\[. precision\]specifier.
+
+    -   %%: prints literal percentage signs \(%\).
+    -   %c: converts integers into ASCII characters.
+    -   %d: coverts integers into decimal numbers.
+    -   %f: converts N-precision numbers into floating point numbers.
+    -   %o: converts integers into octal numbers.
+    -   %s: converts integers into strings.
+    -   %x: converts integers into hexadecimal numbers in lowercase letters.
+    -   %X: converts integers into hexadecimal numbers in uppercase letters.
+-   Parameter types
+    -   fmt: the string type. This parameter specifies a format string.
+    -   The variable number of parameters: any type.
+-   Response parameters
+
+    Returns a formatted string.
+
+-   Examples
+
+    ```
+    say(concat('format:', format('%%%s$%.2s$%s$%c$%d$%2.2f$%.2o$%x$%X', 'format', 3.1415926, true, 95, 3.1415926, 3.1415926, 3.1415926, 10, 10)))
+    ```
+
+    Output:
+
+    ```
+    format:%format$3.$true$_$3$3.14$03$a$A
+    ```
+
+
+## tobin
+
+Details about this function:
+
+-   Syntax: `tobin(str)`.
+-   Description
+
+    Converts a hexadecimal string into an ASCII string.
+
+-   Parameters
+
+    str: the hexadecimal string that you want to convert. It is not case-sensitive.
+
+-   Response parameters
+
+    Returns an ACSII string.
+
+-   Examples
+
+    ```
+    say(concat('tobin:', tobin('2F2F')))
+    ```
+
+    Output:
+
+    ```
+    tobin://
+    ```
+
+
+## trim
+
+Details about this function:
+
+-   Syntax: `trim(s, [, loc]])`.
+-   Description
+
+    Removes all white-space characters before or after the string specified by s, and returns a string with the specified white-space characters removed.
+
+-   Parameters
+    -   s: the string.
+    -   loc: the default value is both. This parameter is optional. Valid values:
+        -   both: removes the white-space characters before and after the string.
+        -   left: removes only the white-space characters before the string.
+        -   right: removes only the white-space characters after the string.
+-   Response parameters
+
+    Returns a string with the specified white-space characters removed.
+
+-   Examples
+
+    ```
+    say(concat('trim():', trim(' abcd ')))
+    say(concat('trim(left):', trim(' abcd ', 'left')))
+    say(concat('trim(right):', trim(' abcd ', 'right')))
+    ```
+
+    Output:
+
+    ```
+    trim():abcd
+    trim(left):abcd
+    trim(right): abcd
     ```
 
 
