@@ -4,11 +4,11 @@ Alibaba Cloud Content Delivery Network \(CDN\) provides the EdgeRoutine CLI to r
 
 The runtime environment of the EdgeRoutine CLI must be Node.js 8.0 or later.
 
-To enable EdgeRoutine, you must map the serverless computing environment on CDN nodes to your accelerated domain name. If you have not prepared the accelerated domain name and AccessKey information for mapping, you must log on to the Alibaba Cloud CDN console with your Alibaba Cloud account. In the console, you can add the domain name to Alibaba Cloud CDN. For more information, see [Add a domain name to Alibaba Cloud CDN](/intl.en-US/Quick Start/Add a domain name to Alibaba Cloud CDN.md). You can also view your AccessKey information including the AccessKey ID and AccessKey secret in the console. For more information, see [Create an AccessKey pair]().
+To enable EdgeRoutine, you must map the serverless computing environment on CDN nodes to your accelerated domain name. If you have not prepared the accelerated domain name and AccessKey information for mapping, you must log on to the Alibaba Cloud CDN console with your Alibaba Cloud account. In the console, you can add the domain name to Alibaba Cloud CDN. For more information, see [Add a domain name to Alibaba Cloud CDN](/intl.en-US/Quick Start/Add a domain name to Alibaba Cloud CDN.md). For more information about how to obtain an AccessKey ID and an AccessKey secret, see [Create an AccessKey pair]().
 
 1.  Install the EdgeRoutine CLI.
 
-    Open your terminal and run the following command to install the EdgeRoutine CLI:
+    On your terminal, run the following command to install the EdgeRoutine CLI:
 
     ```
     $ npm install @alicloud/edgeroutine-cli -g
@@ -30,7 +30,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     $ edgeroutine-cli init
     ```
 
-    The following example shows a code template. If you want to use your own code, you can move your code file to the code directory that you have created and rename the code file edge.js.
+    The following example shows a code template. If you want to use your own code, you can move your code file to the code directory that you have created, and rename the code file edge.js.
 
     ```
     /**
@@ -71,7 +71,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
         $ edgeroutine-cli build --show
         ```
 
-    3.  Delete the code in the staging environment.
+    3.  Delete the code from the staging environment.
 
         This operation deletes configurations from the staging environment. Proceed with caution.
 
@@ -81,10 +81,10 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
 
 6.  Validate the code in the staging environment.
 
-    You must connect to the accelerated domain name in the terminal environment by using the IP address of the staging environment for EdgeRoutine. The IP address is 42.123.119.50 or 42.123.119.51.
+    You must connect to the accelerated domain name in the terminal environment by using the IP address of the staging environment for EdgeRoutine. The IP address is 42.123.119.100 or 42.123.119.101.
 
     ```
-    $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.50:80
+    $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.100:80
     ```
 
 7.  Deploy the code to the production environment.
@@ -103,7 +103,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
         $ edgeroutine-cli publish --show
         ```
 
-    3.  Delete the code in the production environment. Then, the code and relevant configurations are deleted. This step is optional.
+    3.  Delete the code from the production environment. Then, the code and relevant configurations are deleted. This step is optional.
 
         ```
         $ edgeroutine-cli publish --delete
