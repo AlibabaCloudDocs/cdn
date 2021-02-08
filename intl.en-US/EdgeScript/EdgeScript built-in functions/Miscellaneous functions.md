@@ -1,10 +1,10 @@
 # Miscellaneous functions
 
-This topic describes the syntax, description, parameters, return values, and examples of Miscellaneous functions.
+This topic describes the syntax, description, parameters, and response parameters of Miscellaneous functions. This topic also provides examples of these functions.
 
 ## base64\_enc
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `base64_enc(s [, no_padding])`.
 -   Description
@@ -35,7 +35,7 @@ Details of this function:
 
 ## base64\_dec
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `base64_dec(s)`.
 -   Description
@@ -67,12 +67,12 @@ Details of this function:
 
 ## url\_escape
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `url_escape(s)`.
 -   Description
 
-    Encodes a string in URL.
+    Uses URL encoding to encode a string.
 
 -   Parameters
 
@@ -100,7 +100,7 @@ Details of this function:
 
 ## url\_unescape
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `url_unescape(s)`.
 -   Description
@@ -133,7 +133,7 @@ Details of this function:
 
 ## rand
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `rand(n1, n2)`.
 -   Description
@@ -156,7 +156,7 @@ Details of this function:
 
 ## rand\_hit
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `rand_hit(ratio)`.
 -   Description
@@ -180,7 +180,7 @@ Details of this function:
 
 ## crc
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `crc(s)`.
 -   Description
@@ -204,7 +204,7 @@ Details of this function:
 
 ## tonumber
 
-Details of this function:
+Details about this function:
 
 -   Syntax: `tonumber(s [, base])`.
 -   Description
@@ -221,6 +221,85 @@ Details of this function:
     say(concat('tonumber()=', n))
     
     Output: tonumber()=100
+    ```
+
+
+## base64\_enc\_safe
+
+Details about this function:
+
+-   Syntax: `base64_enc_safe(str)`.
+-   Description
+
+    Encodes a string in Base64. In the encoded string, plus signs \(+\) are replaced by minus signs \(-\), forward slashes are replaced by underscores \(\_\), and equal signs \(=\) are removed.
+
+-   Parameters
+
+    str: the string that you want to encode.
+
+-   Response parameters
+
+    Returns a Base64-encoded string.
+
+-   Examples
+
+    ```
+    add_rsp_header('X-RESPOND-OUTPUT', concat('base64_enc_safe=', base64_enc_safe('hello, dsl')), true)
+    ```
+
+    Response header:
+
+    ```
+    X-RESPOND-OUTPUT：base64_enc_safe=aGVsbG8sIGRzbA
+    ```
+
+
+## base64\_dec\_safe
+
+Details about this function:
+
+-   Syntax: `base64_dec_safe(str)`.
+-   Description
+
+    Decodes a Base64-encoded string. In the decoded string, minus signs \(-\) are replaced by plus signs \(+\) and underscores \(\_\) are replaced by forward slashes \(/\). Equal signs \(=\) are added to the end of the string to ensure that the string is padded to a multiple of four characters.
+
+-   Parameters
+
+    str: the Base64-encoded string that you want to decode.
+
+-   Response parameters
+
+    Returns a decoded raw string.
+
+-   Examples
+
+    ```
+    add_rsp_header('X-RESPOND-OUTPUT', concat('base64_dec_safe=', base64_dec_safe(base64_enc_safe('hello, dsl'))), true)
+    ```
+
+    Response header:
+
+    ```
+    X-RESPOND-OUTPUT:base64_dec_safe=hello, dsl
+    ```
+
+
+## randomseed
+
+Details about this function:
+
+-   Syntax: `randomseed()`.
+-   Description
+
+    Generates a random seed.
+
+-   Parameters: none.
+-   Response parameters: none.
+-   Examples
+
+    ```
+    randomseed()
+    r = rand(1,100)
     ```
 
 
