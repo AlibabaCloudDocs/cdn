@@ -79,6 +79,6 @@ http://cdn.aliyuncs.com?Action=StartCdnDomain&DomainName=example.com
 
 Alibaba Cloud CDN provides the following sample code for signature calculation:
 
--   [Python](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/109895/cn_zh/1561514315115/cdn-api.zip)
--   [Java](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/109895/cn_zh/1561514338764/SignatureUtils.java)
+-   [Python](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/109895/cn_zh/1561514315115/cdn-api.zip)
+-   [Java](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/109895/cn_zh/1561514338764/SignatureUtils.java)
 
