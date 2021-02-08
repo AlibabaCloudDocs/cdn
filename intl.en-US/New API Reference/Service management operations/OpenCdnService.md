@@ -9,17 +9,14 @@ Activates Alibaba Cloud Content Delivery Network \(CDN\). You must activate Alib
 
 ## Debugging
 
-[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer automatically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=OpenCdnService&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=OpenCdnService&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|OpenCdnService|The operation that you want to perform. Set the value to **OpenCdnService**. |
-|InternetChargeType|String|Yes|PayByTraffic|The metering method of Alibaba Cloud CDN. Valid values:
-
- -   **PayByTraffic**: Fees are charged based on data transfer.
--   **PayByBandwidth**: Fees are charged based on bandwidth usage. |
+|InternetChargeType|String|Yes|PayByTraffic|The metering method of Alibaba Cloud CDN. A value of **PayByTraffic** indicates that the metering method is pay-by-data-transfer. |
 
 ## Response parameters
 
@@ -37,7 +34,7 @@ http(s)://cdn.aliyuncs.com/? Action=OpenCdnService
 &<Common request parameters>
 ```
 
-Sample success responses
+Sample responses
 
 `XML` format
 
@@ -60,13 +57,13 @@ Sample success responses
 |HttpCode|Error code|Error message|Description|
 |--------|----------|-------------|-----------|
 |403|Forbidden.Intl|User not authorized to open Intl service.|The error message returned because Alibaba Cloud CDN is available to only selected users.|
-|400|InvalidInternetChargeType.ValueNotSupported|The specified value of parameter "InternetChargeType" is not valid.|The error message returned because the specified value of the InternetChargeType parameter is invalid.|
+|400|InvalidInternetChargeType.ValueNotSupported|The specified value of parameter "InternetChargeType" is not valid.|The error message returned because the InternetChargeType parameter is set to an invalid value.|
 |400|CdnService.HasOpened|Your cdn service has opened.|The error message returned because you have activated Alibaba Cloud CDN. You do not need to activate the service again.|
-|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because you have insufficient balance in your account. Top up your account and try again.|
-|400|NoRealNameAuthentication|Real name authentication is needed.|The error message returned because your account has not passed real-name verification.|
+|400|InsufficientBalance|Your account does not have enough balance.|The error message returned because your Alibaba Cloud account has an insufficient balance. Top up your account and try again.|
+|400|NoRealNameAuthentication|Real name authentication is needed.|The error message returned because your Alibaba Cloud account has not passed real-name verification.|
 |403|Forbidden.BidUser|Bid user is limited to open service.|The error message returned because you are not authorized to use this service.|
 |400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_INVALID\_PAY\_METHOD|INVALID\_PAY\_METHOD|The error message returned because the specified payment method is invalid.|
-|400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_USERPROFILECOMPLETE|MISSING\_USERPROFILE|The error message returned because the required user profile is missing.|
+|400|FUWU\_BIZ\_COMMODITY\_VERIFY\_FAIL\_USERPROFILECOMPLETE|MISSING\_USERPROFILE|The error message returned because a required user profile is missing.|
 |400|LX\_CREATE\_ORDER\_FAILED|Create order failed|The error message returned because the order failed to be created.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
