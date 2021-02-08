@@ -9,12 +9,12 @@ Details about this function:
 -   Syntax: `add_req_header(name, value [, append])`.
 -   Description
 
-    Adds an request header to back-to-origin requests.
+    Adds a request header to back-to-origin requests.
 
 -   Parameters
     -   `name`: the name of the request header that you want to add. Data type: string.
     -   `value`: the value of the request header that you want to add. Data type: string.
-    -   append: specifies whether to `append` a request header with the specified `value` if a request header with the same name already exists. Valid values: true and false. Default value: false. If you set this parameter to false, the specified value will overwrite the value of the existing request header.
+    -   `append`: specifies whether to append a request header with the specified `value` if a request header with the same name already exists. Valid values: true and false. Default value: false. If you set this parameter to false, the specified value will overwrite the value of the existing request header.
 -   Response parameters
 
     Returns `true` by default and returns `false` if you have specified an invalid request header.
@@ -173,7 +173,7 @@ Details about this function:
         add_rsp_header('X-DSL-DECODE-ARGS-SIGN', get(to_args, 'signature'))
     }
     
-    Output: The following response headers are added.
+    Output: The following response headers are added:
     X-DSL-ENCODE-ARGS: signature=da9dc4b7-87ae-4330-aaaf-e5454e2c2af1&algo=private%20sign1
     X-DSL-DECODE-ARGS-ALGO: private sign1
     X-DSL-DECODE-ARGS-SIGN: da9dc4b7-87ae-4330-aaaf-e5454e2c2af1
@@ -214,7 +214,7 @@ Details about this function:
         add_rsp_header('X-DSL-DECODE-ARGS-SIGN', get(to_args, 'signature'))
     }
     
-    Output: The following response headers are added.
+    Output: The following response headers are added:
     X-DSL-ENCODE-ARGS: signature=da9dc4b7-87ae-4330-aaaf-e5454e2c2af1&algo=private%20sign1
     X-DSL-DECODE-ARGS-ALGO: private sign1
     X-DSL-DECODE-ARGS-SIGN: da9dc4b7-87ae-4330-aaaf-e5454e2c2af1
@@ -235,8 +235,8 @@ Details about this function:
         -   If you set the flag parameter to redirect or break, only the URI is rewritten. This parameter specifies the URI after the rewrite operation.
         -   If you set the flag parameter to enhance\_redirect or enhance\_break, the URI and parameters are rewritten. This parameter specifies the URI and parameters after the rewrite operation.
     -   flag: the rewrite mode. Data type: string.
-        -   redirect: only rewrites the URI. Parameters are not rewritten. By default, a 302 redirect is performed. If you specify this mode, the `code` parameter is configurable. Valid values for the code parameter are 301, 302 \(default\), 303, 307, and 308.
-        -   break: only rewrites the URI to a URL. Parameters are not rewritten.
+        -   redirect: rewrites only the URI. Parameters are not rewritten. By default, a 302 redirect is performed. If you specify this mode, the `code` parameter is configurable. Valid values for the code parameter are 301, 302 \(default\), 303, 307, and 308.
+        -   break: rewrites only the URI to a URL. Parameters are not rewritten.
         -   enhance\_redirect: similar to `redirect`. However, both the URI and parameters are rewritten.
         -   enhance\_break: similar to `break`. However, both the URI and parameters are rewritten.
     -   code: the HTTP status code. Data type: numeric.
@@ -245,14 +245,14 @@ Details about this function:
 
 -   Response parameters
     -   Returns `true` by default for a rewrite operation.
-    -   Does not return a value by default for a rewrite operation.
+    -   Does not return values by default for a redirect operation.
 -   Examples
 
     ```
     if and($arg_mode, eq($arg_mode, 'rewrite:enhance_break')) {
         rewrite('/a/b/c.txt? k=v', 'enhance_break')
     }
-    The URI and parameters of the back-to-origin request are rewritten to /a/b/c.txt? k=v
+    Note: The URI and parameters of the back-to-origin request are rewritten to /a/b/c.txt? k=v
     
     if and($arg_mode, eq($arg_mode, 'rewrite:enhance_redirect')) {
         rewrite('/a/b/c.txt? k=v', 'enhance_redirect')
@@ -260,12 +260,12 @@ Details about this function:
     if and($arg_mode, eq($arg_mode, 'rewrite:enhance_redirect_301')) {
         rewrite('/a/b/c.txt? k=v', 'enhance_redirect', 301)
     }
-    A 302 or 301 redirect to /a/b/c.txt? is performed. k=v
+    Note: A 302 or 301 redirect to /a/b/c.txt? is performed. k=v
     
     if and($arg_mode, eq($arg_mode, 'rewrite:break')) {
         rewrite('/a/b/c.txt', 'break')
     }
-    The URI of the back-to-origin request is rewritten to /a/b/c.txt and the original parameters in the request remain unchanged.
+    Note: The URI of the back-to-origin request is rewritten to /a/b/c.txt and the original parameters in the request remain unchanged.
     
     if and($arg_mode, eq($arg_mode, 'rewrite:redirect')) {
         rewrite('/a/b/c.txt', 'redirect')
@@ -273,7 +273,7 @@ Details about this function:
     if and($arg_mode, eq($arg_mode, 'rewrite:redirect_301')) {
         rewrite('/a/b/c.txt', 'redirect', 301)
     }
-    A 302 or 301 redirect to /a/b/c.txt is performed and the original parameters remain unchanged.
+    Note: A 302 or 301 redirect to /a/b/c.txt is performed and the original parameters remain unchanged.
     ```
 
 
@@ -284,7 +284,7 @@ Details about this function:
 -   Syntax: `say(arg)`.
 -   Description
 
-    Outputs a response body and appends a newline character at the end of the output.
+    Prints a response body and appends a newline character at the end of the output.
 
 -   Parameters
 
@@ -311,10 +311,10 @@ Details about this function:
 
 Details about this function:
 
--   Syntax: `print(arg)`
+-   Syntax: `print(arg)`.
 -   Description
 
-    Outputs a response body. This function is different from the `say ()` function. This function does not append a newline at the end of the output.
+    Prints a response body. This function is different from the `say ()` function. This function does not append a newline at the end of the output.
 
 -   Parameters
 
@@ -347,7 +347,7 @@ Details about this function:
     Ends the current request with the specified `code`. If you also set the `body` parameter, a response that includes the specified response body is returned.
 
 -   Parameters
-    -   code: the status code to return.
+    -   code: the HTTP status code to return.
     -   body: the response body.
 -   Response parameters
 
@@ -360,22 +360,22 @@ Details about this function:
         if not($arg_key) {
             exit(403)
         }
-        If a request does not include the key parameter, the request is denied and status code 403 is returned.
+        Note: If a request does not include the key parameter, the request is denied and the 403 HTTP status code is returned.
         
         if not($cookie_user) {
             exit(403, 'not cookie user')
         }
-        If a request does not include cookie_user, the request is denied and a response that contains "not cookie user" is returned with the status code 403.
+        Note: If a request does not include cookie_user, the request is denied and a response that contains the body "not cookie user" is returned with the 403 HTTP status code.
         
         if not(0) {
             exit(403)
         }
-        The not (0) function returns false.
+        Note: The not (0) function returns a value of false.
         
         if not(false) {
             exit(403)
         }
-        The not (false) function returns true.
+        Note: The not (false) function returns a value of true.
         ```
 
     -   Example 2
