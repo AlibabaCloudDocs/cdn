@@ -13,18 +13,21 @@ Details about this function:
 
 -   Parameters
 
-    None.
+    N/A
 
 -   Response parameters
 
-    Returns the current date in the format of yyyy-mm-dd.
+    Returns the current date in an array in the format of yyyy-mm-dd.
 
--   Examples
+-   Example
 
     ```
     say(concat('today:', today()))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     today:2019-05-23
     ```
 
@@ -40,18 +43,21 @@ Details about this function:
 
 -   Parameters
 
-    None.
+    N/A
 
 -   Response parameters
 
     Returns the current UNIX timestamp.
 
--   Examples
+-   Example
 
     ```
     say(concat('time:', time()))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     time:1559109666
     ```
 
@@ -67,18 +73,21 @@ Details about this function:
 
 -   Parameters
 
-    None.
+    N/A
 
 -   Response parameters
 
     Returns the current UNIX timestamp.
 
--   Examples
+-   Example
 
     ```
     say(concat('now:', now()))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     now:1559109666.644
     ```
 
@@ -94,18 +103,21 @@ Details about this function:
 
 -   Parameters
 
-    None.
+    N/A
 
 -   Response parameters
 
-    Returns the current date and time in the format of yyyy-mm-dd hh: mm: ss.
+    Returns the current UTC in an array in the format of yyyy-mm-dd hh:mm:ss.
 
--   Examples
+-   Example
 
     ```
     say(concat('localtime:', localtime()))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     localtime:2019-05-29 14:02:41
     ```
 
@@ -121,18 +133,21 @@ Details about this function:
 
 -   Parameters
 
-    None.
+    N/A
 
 -   Response parameters
 
-    Returns the current UTC time in the format of yyyy-mm-dd hh:mm:ss.
+    Returns the current UTC time in an array in the format of yyyy-mm-dd hh:mm:ss.
 
--   Examples
+-   Example
 
     ```
     say(concat('utctime:', utctime()))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     utctime:2019-05-29 06:02:41
     ```
 
@@ -144,22 +159,25 @@ Details about this function:
 -   Syntax: `cookie_time(sec)`.
 -   Description
 
-    Generates a time string in the cookie time format from a UNIX timestamp.
+    Generates a time string in the cookie time format based on a UNIX timestamp.
 
 -   Parameters
 
-    sec: the UNIX timestamp. To obtain the UNIX timestamp, you can call the `time()` function.
+    sec: the UNIX timestamp. To query the UNIX timestamp, you can call the `time()` function.
 
 -   Response parameters
 
     Returns a time string in the cookie time format based on the UNIX timestamp specified by the `sec` parameter.
 
--   Examples
+-   Example
 
     ```
     say(concat('cookie_time:', cookie_time(time())))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     cookie_time:Wed, 29-May-19 06:02:41 GMT
     ```
 
@@ -171,22 +189,25 @@ Details about this function:
 -   Syntax: `http_time(sec)`.
 -   Description
 
-    Generates a time string in the HTTP header time format from a UNIX timestamp. For example, this function can generate the time displayed for the Last-Modified field in the HTTP header.
+    Generates a time string in the HTTP header time format based on a UNIX timestamp. For example, this function can generate the time displayed for the Last-Modified field in the HTTP header.
 
 -   Parameters
 
-    sec: the UNIX timestamp. To obtain the UNIX timestamp, you can call the `time()` function.
+    sec: the UNIX timestamp. To query the UNIX timestamp, you can call the `time()` function.
 
 -   Response parameters
 
     Returns a time string in the HTTP header time format based on the UNIX timestamp specified by the `sec` parameter.
 
--   Examples
+-   Example
 
     ```
     say(concat('http_time:', http_time(time())))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     http_time:Wed, 29 May 2019 06:02:41 GMT
     ```
 
@@ -198,27 +219,30 @@ Details about this function:
 -   Syntax: `parse_http_time(str)`.
 -   Description
 
-    Parses a time string in the HTTP header time format and returns the corresponding UNIX timestamp.
+    Parses a time string that is in the HTTP header time format and returns the corresponding UNIX timestamp.
 
 -   Parameters
 
-    str: the time string in the HTTP header format that you want to parse. Example: `Thu, 22-Dec-10 10:20:35 GMT`. To obtain the time string, you can call the `http_time()` function.
+    str: the time string in the HTTP header format that you want to parse. Example: `Thu, 22-Dec-10 10:20:35 GMT`. To query the time string, you can call the `http_time()` function.
 
 -   Response parameters
 
     If the function succeeds, a UNIX timestamp is returned. Otherwise, `false` is returned.
 
--   Examples
+-   Example
 
     ```
     say(concat('parse_http_time:', parse_http_time(http_time(time()))))
-    
-    Output:
+    ```
+
+    Output
+
+    ```
     parse_http_time:1559109761
     ```
 
 
-## unixtime
+## UNIXtime
 
 Details about this function:
 
@@ -238,13 +262,17 @@ Details about this function:
 
     Returns a UNIX timestamp.
 
--   Examples
+-   Example
 
     ```
-    t = unixtime(1970, 1, 1, 8, 0, 0)
-    say(concat('unixtime()=', t))
-    
-    Output: unixtime()=0
+    t = UNIXtime(1970, 1, 1, 8, 0, 0)
+    say(concat('UNIXtime()=', t))
+    ```
+
+    Output
+
+    ```
+    UNIXtime()=0
     ```
 
 
