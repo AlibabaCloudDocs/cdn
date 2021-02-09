@@ -1,34 +1,37 @@
 # DescribeRefreshQuota
 
-Queries the maximum and remaining numbers of URLs and directories for object refreshing, the maximum and remaining numbers of URLs for object prefetching, and the maximum and remaining numbers of URLs and directories that can be blocked.
+Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
 
-**Note:** You can call the RefreshObjectCaches operation to refresh content and call the PushObjectCache operation to prefetch content.
+**Note:**
 
-The maximum number of times that each user can call this operation per second is 20.
+-   You can call the RefreshObjectCaches operation to refresh content and call the PushObjectCache operation to prefetch content.
+-   The maximum number of times that each user can call this operation per second is 20.
 
 ## Debugging
 
-[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRefreshQuota&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer automatically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRefreshQuota&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeRefreshQuota|The operation that you want to perform. Set the value to **DescribeRefreshQuota**. |
+|Action|String|Yes|DescribeRefreshQuota|The operation that you want to perform. Set this parameter to **DescribeRefreshQuota**. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|RequestId|String|42E0554B-80F4-4921-AED6-ACFB22CAAAD0|The ID of the request. |
+|RequestId|String|42E0554B-80F4-4921-AED6-ACFB22CAAAD0|The ID of the request |
 |UrlQuota|String|2000|The maximum number of URLs that can be refreshed on the current day. |
 |DirQuota|String|100|The maximum number of directories that can be refreshed on the current day. |
 |UrlRemain|String|1996|The remaining number of URLs that can be refreshed on the current day. |
 |DirRemain|String|99|The remaining number of directories that can be refreshed on the current day. |
-|PreloadQuota|String|500|The maximum number of URLs that can be prefetched on the current day. |
-|PreloadRemain|String|400|The remaining number of URLs that can be prefetched on the current day. |
+|PreloadQuota|String|500|The maximum number of times that you can prefetch content to L2 nodes on the current day. |
+|PreloadRemain|String|400|The remaining number of times that you can prefetch content to L2 nodes on the current day. |
 |BlockQuota|String|300|The maximum number of URLs and directories that can be blocked on the current day. |
 |BlockRemain|String|100|The remaining number of URLs and directories that can be blocked on the current day. |
+|PreloadEdgeQuota|String|20|The maximum number of times that you can prefetch content to L1 nodes on the current day. |
+|PreloadEdgeRemain|String|20|The remaining number of times that you can prefetch content to L1 nodes on the current day. |
 |RegexQuota|String|20|The maximum number of times that you can use regular expressions to refresh directories or URLs on the current day. |
 |RegexRemain|String|10|The remaining number of times that you can use regular expressions to refresh directories or URLs on the current day. |
 
@@ -37,11 +40,11 @@ The maximum number of times that each user can call this operation per second is
 Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeRefreshQuota
+http(s)://cdn.aliyuncs.com/? Action=DescribeRefreshQuota
 &<Common request parameters>
 ```
 
-Sample success responses
+Sample responses
 
 `XML` format
 
