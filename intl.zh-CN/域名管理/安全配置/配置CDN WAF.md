@@ -13,21 +13,21 @@ CDN结合边缘Web应用防火墙WAF（Web Application Firewall）能力，将�
 
 |功能项|高级版|企业版|
 |---|---|---|
-|WEB扫描防护|[支持](https://icms.alibaba-inc.com/content/waf/protection-settings?l=1&m=56646&n=2119299)|[支持](https://icms.alibaba-inc.com/content/waf/protection-settings?l=1&m=56646&n=2119299)|
-|账号安全|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2120527)|
-|CC攻击防护|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119291)|
-|海量IP黑名单封禁|[支持](https://icms.alibaba-inc.com/content/cdn/bbd284?l=1&m=15599&n=134870)|[支持](https://icms.alibaba-inc.com/content/cdn/bbd284?l=1&m=15599&n=134870)|
-|Rate Limit|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119293)|
-|爬虫情报库|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2256927)|
-|验证码集成|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119293)|
-|爬虫智能算法|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2257008)|
-|基础Web攻击防护|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|0 DAY规则更新防护|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|预警\|阻断模式|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|解码防混淆编码绕过|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|规则组自定义|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=78570)|
-|HTTP字段访问控制|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=15565)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=15565)|
-|日志服务|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=40708)（1T）|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=40708)（3T）|
+|WEB扫描防护|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147717.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147717.htm)|
+|账号安全|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147940.htm)|
+|CC攻击防护|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147594.htm)|
+|海量IP黑名单封禁|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147687.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147687.htm)|
+|Rate Limit|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147937.htm)|
+|爬虫情报库|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/159911.htm)|
+|验证码集成|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147937.htm)|
+|爬虫智能算法|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/159910.htm)|
+|基础Web攻击防护|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|
+|0 DAY规则更新防护|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|
+|预警\|阻断模式|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|
+|解码防混淆编码绕过|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/147592.htm)|
+|规则组自定义|不支持|[支持](https://www.alibabacloud.com/help/zh/doc-detail/99477.htm)|
+|HTTP字段访问控制|[支持](https://www.alibabacloud.com/help/zh/doc-detail/42780.htm)|[支持](https://www.alibabacloud.com/help/zh/doc-detail/42780.htm)|
+|日志服务|[支持](https://www.alibabacloud.com/help/zh/doc-detail/95078.htm)（1T）|[支持](https://www.alibabacloud.com/help/zh/doc-detail/95078.htm)（3T）|
 
 ## 背景信息
 
