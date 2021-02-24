@@ -13,22 +13,22 @@ CDN结合边缘Web应用防火墙WAF（Web Application Firewall）能力，将�
 
 |功能项|基础版|高级版|企业版|
 |---|---|---|---|
-|WEB扫描防护|[支持](https://icms.alibaba-inc.com/content/waf/protection-settings?l=1&m=56646&n=2119299)|[支持](https://icms.alibaba-inc.com/content/waf/protection-settings?l=1&m=56646&n=2119299)|[支持](https://icms.alibaba-inc.com/content/waf/protection-settings?l=1&m=56646&n=2119299)|
-|主动防御|不支持|不支持|[支持](https://icms.alibaba-inc.com/content/waf/protection-settings?l=1&m=56646&n=2125161)|
-|账号安全|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2120527)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2120527)|
-|CC攻击防护|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119291)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119291)|
-|海量IP黑名单封禁|[支持](https://icms.alibaba-inc.com/content/cdn/bbd284?l=1&m=15599&n=134870)|[支持](https://icms.alibaba-inc.com/content/cdn/bbd284?l=1&m=15599&n=134870)|[支持](https://icms.alibaba-inc.com/content/cdn/bbd284?l=1&m=15599&n=134870)|
-|Rate Limit|不支持|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119293)|
-|爬虫情报库|不支持|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2256927)|
-|验证码集成|不支持|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119293)|
-|爬虫智能算法|不支持|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2257008)|
-|基础Web攻击防护|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|0 DAY规则更新防护|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|预警\|阻断模式|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|解码防混淆编码绕过|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=2119288)|
-|规则组自定义|不支持|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=78570)|
-|HTTP字段访问控制|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=15565)|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=15565)|
-|日志服务|不支持|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=40708)（1T）|[支持](https://icms.alibaba-inc.com/content/waf/a6c2a0?l=1&m=17132&n=40708)（3T）|
+|WEB扫描防护|[支持](https://help.aliyun.com/document_detail/147717.html)|[支持](https://help.aliyun.com/document_detail/147717.html)|[支持](https://help.aliyun.com/document_detail/147717.html)|
+|主动防御|不支持|不支持|[支持](https://help.aliyun.com/document_detail/147941.html)|
+|账号安全|不支持|[支持](https://help.aliyun.com/document_detail/147940.html)|[支持](https://help.aliyun.com/document_detail/147940.html)|
+|CC攻击防护|不支持|[支持](https://help.aliyun.com/document_detail/147594.html)|[支持](https://help.aliyun.com/document_detail/147594.html)|
+|海量IP黑名单封禁|[支持](https://help.aliyun.com/document_detail/147687.html)|[支持](https://help.aliyun.com/document_detail/147687.html)|[支持](https://help.aliyun.com/document_detail/147687.html)|
+|Rate Limit|不支持|不支持|[支持](https://help.aliyun.com/document_detail/147937.html)|
+|爬虫情报库|不支持|不支持|[支持](https://help.aliyun.com/document_detail/159911.html)|
+|验证码集成|不支持|不支持|[支持](https://help.aliyun.com/document_detail/147937.html)|
+|爬虫智能算法|不支持|不支持|[支持](https://help.aliyun.com/document_detail/159910.html)|
+|基础Web攻击防护|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|
+|0 DAY规则更新防护|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|
+|预警\|阻断模式|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|
+|解码防混淆编码绕过|不支持|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|
+|规则组自定义|不支持|不支持|[支持](https://help.aliyun.com/document_detail/99477.html)|
+|HTTP字段访问控制|不支持|[支持](https://help.aliyun.com/document_detail/42780.html)|[支持](https://help.aliyun.com/document_detail/42780.html)|
+|日志服务|不支持|[支持](https://help.aliyun.com/document_detail/95078.html)（1T）|[支持](https://help.aliyun.com/document_detail/95078.html)（3T）|
 
 ## 背景信息
 
