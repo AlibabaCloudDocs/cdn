@@ -4,14 +4,11 @@ keyword: [CDN服务, 云产品开通]
 
 # 开通CDN服务
 
-在使用CDN之前，您需要先开通CDN服务。本文为您详细介绍了快速开通CDN服务的方法。
+在使用CDN之前，您需要先开通CDN服务。本文介绍快速开通CDN服务的方法。
 
-执行本文操作之前，请确保您已完成阿里云[账号注册](https://account.alibabacloud.com/register/intl_register.htm)和[实名认证](https://account-intl.console.aliyun.com/#/intlAuth)。
+您已经注册了阿里云账号并完成账号实名认证。如果未注册，请先完成[账号注册](https://account.alibabacloud.com/register/intl_register.htm?spm=a2c45.11132027.495866.3.121a5455M9EN53)和[实名认证](https://account-intl.console.aliyun.com/#/intlAuth)。
 
-**说明：** 国际站用户在以下情况下需要进行账号实名认证。
-
--   根据中国内地（大陆）相关法规要求，购买和使用中国内地（大陆）节点云产品服务的用户（包括存量、新购、续费用户）需要进行实名认证。
--   购买云产品服务时，如果您选择的是中国内地（大陆）区域，系统将检查您的实名认证信息。如果您的账号未完成实名认证，您需要先完成账号的实名认证。
+## 操作步骤
 
 1.  登录[阿里云CDN平台](https://www.alibabacloud.com/en/product/cdn)。
 
@@ -25,17 +22,14 @@ keyword: [CDN服务, 云产品开通]
 
 4.  单击**立即开通**。
 
-    成功开通CDN服务后，您可以单击**管理控制台**，进入CDN控制台。
+    成功开通CDN服务后，您可以单击**管理控制台**，进入CDN管理控制台界面。
 
+
+## 后续步骤
+
+[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)
 
 ## 相关API
 
-您可以调用API接口，实现CDN服务管理，详情如下表所示。
-
-|API|描述|
-|---|--|
-|[OpenCdnService](/intl.zh-CN/新版API参考/服务类接口/开通CDN服务.md)|调用OpenCdnService开通CDN服务。只有开通服务后，才能进行域名操作。|
-|[DescribeCdnService](/intl.zh-CN/新版API参考/服务类接口/获取CDN服务状态.md)|调用DescribeCdnService查询CDN服务状态。包括：当前计费类型、服务开通时间、下次生效的计费类型、当前业务状态等。|
-|[DescribeCdnUserResourcePackage](/intl.zh-CN/新版API参考/服务类接口/获取CDN用户流量包信息.md)|调用DescribeCdnUserResourcePackage查询CDN用户当前流量包。|
-|[DescribeCdnUserQuota](/intl.zh-CN/新版API参考/服务类接口/获取用户资源使用信息.md)|调用DescribeCdnUserQuota查询用户资源上限及已使用情况。|
+[OpenCdnService](/intl.zh-CN/新版API参考/服务类接口/开通CDN服务.md)
 
