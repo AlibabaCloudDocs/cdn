@@ -13,7 +13,7 @@ This topic provides a list of country codes.
 |AI|Anguilla|ER|Eritrea|LA|Laos|SA|Saudi Arabia|
 |AL|Albania|ES|Spain|LB|Lebanon|SB|Solomon Islands|
 |AM|Armenia|ET|Ethiopia|LC|Saint Lucia|SC|Seychelles|
-|AN|Netherlands Antilles|EU|Europe|LI|Liechtenstein|SD|Sudan|
+|ZW|Zimbabwe|EU|Europe|LI|Liechtenstein|SD|Sudan|
 |AO|Angola|FI|Finland|LK|Sri Lanka|SE|Sweden|
 |AQ|Antarctica|FJ|Fiji|LR|Liberia|SG|Singapore|
 |AR|Argentina|FK|Falkland Islands|LS|Lesotho|SH|Helena|
@@ -25,7 +25,7 @@ This topic provides a list of country codes.
 |AX|Aland Islands|GBA|Alderney|MC|Monaco|SN|Senegal|
 |AZ|Azerbaijan|GB|UK|MD|Moldova|SO|Somalia|
 |BA|Bosnia and Herzegovina|GD|Grenada|ME|Montenegro|SR|Suriname|
-|BB|Barbados|GE|Georgia|MF|Saint Martin|SS|South Sudan|
+|BB|Barbados|GE|Georgia|MF|Collectivity of Saint Martin|SS|South Sudan|
 |BD|Bangladesh|GF|French Guiana|MG|Madagascar|ST|Sao Tome and Principe|
 |BE|Belgium|GG|Guernsey|MH|Marshall Islands|SV|El Salvador|
 |BF|Burkina Faso|GH|Ghana|MK|Macedonia|SX|Saint Martin|
@@ -68,7 +68,7 @@ This topic provides a list of country codes.
 |DJ|Djibouti|KG|Kyrgyzstan|PR|Puerto Rico|ZA|South Africa|
 |DK|Denmark|KH|Cambodia|PS|Palestine|ZM|Zambia|
 |DM|Dominica|KI|Kiribati|PT|Portugal|ZR|Zaire|
-|DO|Dominican Republic|KM|Comoros|PW|Palau|ZW|Zimbabwe|
+|DO|Dominican Republic|KM|Comoros|PW|Palau|N/A|N/A|
 |DQ|Jarvis Island|KN|Saint Kitts and Nevis|PY|Paraguay|N/A|N/A|
 |DZ|Algeria|KP|North Korea|QA|Qatar|N/A|N/A|
 |EA|Zanzibar|KR|South Korea|RE|Reunion Island|N/A|N/A|
