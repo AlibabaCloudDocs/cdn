@@ -1,16 +1,24 @@
-# Overdue payments {#concept_xbv_24v_tdb .concept}
+---
+keyword: [service suspension, overdue payments, low balance alerts, CDN service]
+---
 
-This topic describes the reasons for CDN service suspension and how to configure monthly spending alert.
+# Overdue payments
 
-## Overdue payments {#section_lj2_j4v_tdb .section}
+This topic explains the causes of low balance alerts and the suspension of Alibaba Cloud Content Delivery Network \(CDN\).
 
-When your CDN service incurs overdue payments, it will be stopped after 24 hours. The CDN system will notify you to pay the bills by SMS or email.
+## Service suspension
 
--   If you top up your account within 24 hours after the payment becomes overdue, your CDN service will not be stopped.
--   If you do not top up your account within 24 hours after the payment becomes overdue, your CDN service will be stopped. The cache resources you are using will be released. However, your configuration information will be retained for 12 months.
+**Note:** Alibaba Cloud CDN sends you a notification when you have an overdue payment. You must complete overdue payments at the earliest opportunity to ensure service continuity.
 
-## Spending alert prompt {#section_xs3_q4v_tdb .section}
+When an overdue payment occurs, the system sends notifications to you through SMS messages or emails.
 
--   PayByTraffic: The CDN system determines whether you have sufficient balance in your account to pay for the next three billing cycles based on the average amount due during last seven hours. If you do not have sufficient balance, the CDN system will send an SMS or email to you as a reminder.
--   PayByBandwidth: The CDN system determines whether you have sufficient balance in your account to pay for the next billing cycle \(day\) based on the amount due during the last billing cycle \(day\). If you do not have sufficient balance, the CDN system will send an SMS or email to you as a reminder.
+-   If you complete the payment within 24 hours after it becomes overdue, your CDN service will not be suspended.
+-   If an overdue payment is not completed within 24 hours, your CDN service will be suspended. The status of domain names accelerated by Alibaba Cloud CDN will change to offline. In this case, Alibaba Cloud CDN directly resolves the accelerated domain names to the origin servers. The resources cached on CDN nodes will be released. The configuration information about the accelerated domain names will be retained for one month.
+
+## Low balance alerts
+
+Low balance alerts are sent to you in the following scenarios:
+
+-   Pay-by-data-transfer: The system determines whether you have a sufficient balance in your account to pay for the next three billing cycles based on the average payable amount during the last seven hours. If you do not have a sufficient balance in your account, the system sends a notification to you through an SMS message or an email.
+-   Pay-by-bandwidth: The system determines whether you have a sufficient balance in your account to pay for the next billing cycle \(day\) based on the payable amount during the most recent billing cycle \(day\). If you do not have a sufficient balance in your account, the system sends a notification to you through an SMS message or an email.
 
