@@ -14,7 +14,7 @@ Alibaba Cloud CDN supports data transfer plans. For more information, see [CDN R
 
 ## Purchase basic services of Alibaba Cloud CDN
 
-By default, basic services of Alibaba Cloud CDN use the pay-by-data-transfer metering method. To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information about pay-by-data-transfer, see [CDN Pricing](https://www.alibabacloud.com/zh/product/cdn/pricing?spm=a2796.7980202.1167822.1.16755f45tSDVja).
+By default, basic services of Alibaba Cloud CDN use the pay-by-data-transfer metering method. To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information about pay-by-data-transfer, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
 ## Metering methods
 
