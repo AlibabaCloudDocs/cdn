@@ -1,6 +1,6 @@
 # Features of EdgeRoutine
 
-EdgeRoutine \(ER\) is a lightweight and serverless computing environment provided by Alibaba Cloud Content Delivery Network \(CDN\). It can run custom JavaScript code on CDN nodes. After you use the EdgeRoutine command-line interface \(CLI\) to deploy code to the production environment, the system automatically runs the code on all CDN nodes. The CDN nodes process requests in different regions worldwide by following the logical rules of the code.
+EdgeRoutine \(ER\) is a serverless computing environment provided by Alibaba Cloud Content Delivery Network \(CDN\). It can run custom JavaScript code on CDN nodes. After you use the EdgeRoutine command-line interface \(CLI\) to deploy code to the production environment, the system automatically runs the code on all CDN nodes. The CDN nodes process requests in different regions worldwide by following the logical rules of the code.
 
 ![Features of EdgeRoutine](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8427271161/p211835.png)
 
@@ -45,33 +45,32 @@ ER provides a fully integrated JavaScript runtime environment that allows you to
     -   API parameter validation |
 |CDN|-   Prefetching content to CDN nodes
 -   Caching content on CDN nodes
--   Redirecting requests from CDN nodes to multiple origin servers
+-   Redirecting requests from CDN nodes to multiple origin servers:
     -   Merging content returned from multiple origin servers
-    -   Optimized redirection with the lowest latency
--   Retrieval of content from different origin servers based on custom back-to-origin algorithms |
-|Web applications and applets|-   Edge rendering
+    -   Optimized redirection with the lowest latency |
+|Web applications and applets|-   Edge rendering:
     -   Markdown rendering
     -   Edge Side Includes \(ESI\) rendering
     -   Nunjucks rendering
--   Edge server-side rendering \(SSR\)
+-   Edge server-side rendering \(SSR\):
     -   Vue.js
     -   React.js
 -   Content prefetching and reduction of web page loading time
 -   Diverse services on CDN nodes, such as QR code generation |
 |Beacon|Capturing and analytics of edge tracking data|
 
-## Use ER
+## Work with ER
 
-The first private preview of ER was completed in September 2020. You cannot activate ER after the private preview is completed. If you have activated ER, you can continue to use ER free of charge. The next private preview of ER is expected to begin in February 2021.
+The first private preview of ER is completed. If you have activated ER during the preview, you can continue to use ER free of charge. The next private preview of ER is expected to begin in April 2021.
 
-After ER is activated, you can use the [EdgeRoutine CLI](/intl.en-US/EdgeRoutine/Work with EdgeRoutine CLI.md) to submit JavaScript code to CDN nodes. Then, the JavaScript code will be automatically deployed on the CDN nodes.
+After ER is activated, you can use the [EdgeRoute CLI](/intl.en-US/EdgeRoutine/Work with EdgeRoutine CLI.md) to submit JavaScript code to CDN nodes. If you have questions, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
 
-**Note:** ER is free of charge in private preview. When you write JavaScript code, take note of the following rules:
+**Note:** ER is free of charge during private preview. When you write JavaScript code, take note of the following limits:
 
 -   The code file must be smaller than 1 MB.
 -   The CPU time that is consumed to process an individual request must be less than 50 milliseconds.
 -   The response time for an individual request must be less than 120 seconds.
--   The total amount of consumed memory on an individual CDN node must be less than 128 MB.
+-   The total amount of memory consumed on an individual CDN node must be less than 128 MB.
 
 Alibaba Cloud will release the pricing policy and limits on JavaScript code upon the official release of ER. For more information, see the product updates.
 
