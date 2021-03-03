@@ -16,7 +16,7 @@ After you set a bandwidth cap for a domain name, the domain name is automaticall
 
 -   After you set a bandwidth cap for a domain name, the domain name is disabled if the average bandwidth value measured during a statistical cycle exceeds the specified bandwidth cap. We recommend that you estimate the maximum bandwidth value required by your workloads before you set a bandwidth cap for your domain name. This ensures service availability. Proceed with caution.
 
-    If a domain name is disabled because the specified bandwidth cap is reached, you can log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com)and navigate to the **Domain Names** page. On this page, select the domain name that you want to manage, and click **Enable** in the Actions column to enable the domain name.
+    If a domain name is disabled because the specified bandwidth cap is reached, you can log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com) and navigate to the **Domain Names** page. On this page, select the domain name that you want to manage, and click **Enable** in the Actions column to enable the domain name.
 
 -   The monitoring data of bandwidth values may not be up-to-date. A domain name is disabled about 10 minutes after the bandwidth cap set for the domain name is reached. A domain name cannot be disabled more than once within an hour.
 -   To allow a Resource Access Management \(RAM\) user to set bandwidth caps, you must grant the RAM user the required permissions.
