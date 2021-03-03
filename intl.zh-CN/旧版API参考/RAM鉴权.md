@@ -57,14 +57,11 @@ keyword: [鉴权, ram]
 |SetErrorPageConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetForceRedirectConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetRefererConfig|acs:cdn:\*:$accountid:domain/$domainName|
-|SetFileCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetPathCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
-|ModifyFileCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |ModifyPathCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |DeleteCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetReqAuthConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetHttpHeaderConfig|acs:cdn:\*:$accountid:domain/$domainName|
-|ModifyHttpHeaderConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |DeleteHttpHeaderConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |RefreshObjectCaches|acs:cdn:\*:$accountid:domain/$domainName|
 |PushObjectCache|acs:cdn:\*:$accountid:domain/$domainName|
@@ -77,7 +74,6 @@ keyword: [鉴权, ram]
 |DescribeLiveStreamOnlineUserNum|acs:cdn:\*:$accountid:domain/$domainName|
 |ForbidLiveStream|acs:cdn:\*:$accountid:domain/$domainName|
 |ResumeLiveStream|acs:cdn:\*:$accountid:domain/$domainName|
-|SetLiveStreamsNotifyUrlConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |DescribeDomainBpsData|acs:cdn:\*:$accountid:domain/\*|
 |acs:cdn:\*:$accountid:domain/$domainName|
 |DescribeDomainFlowData|acs:cdn:\*:$accountid:domain/\*|
