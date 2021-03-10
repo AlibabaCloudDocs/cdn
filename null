@@ -16,7 +16,7 @@
 
     记录类型、主机记录和记录值已经由系统自动生成，在验证完成前请不要关闭验证页面。
 
-    **说明：** 如果您是调用[AddCdnDomain](/cn.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/cn.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口添加的加速域名，则您需要先调用[DescribeVerifyContent](/cn.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口获取记录值，然后按照下方步骤添加TXT记录，再调用[AddCdnDomain](/cn.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/cn.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口才能正常添加加速域名。
+    **说明：** 如果您是调用[AddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口添加的加速域名，则您需要先调用[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口获取记录值，然后按照下方步骤添加TXT记录，再调用[AddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口才能正常添加加速域名。
 
     ![DNS验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9405314161/p112213.png)
 
@@ -47,21 +47,19 @@
 
 2.  单击`verification.html`，下载验证文件。
 
-    **说明：** verification.html文件的内容是由[DescribeVerifyContent](/cn.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口生成的字符串。如果您是调用[AddCdnDomain](/cn.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/cn.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口添加的加速域名，则您需要先调用[DescribeVerifyContent](/cn.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口获取字符串，然后自行创建`verification.html`文件并填入已获取的字符串，再按照下方的步骤上传文件。
+    **说明：** verification.html文件的内容是由[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口生成的字符串。如果您是调用[AddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口添加的加速域名，则您需要先调用[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口获取字符串，然后自行创建`verification.html`文件并填入已获取的字符串，再按照下方的步骤上传文件。
 
 3.  将验证文件上传到您域名源站服务器（例如您的ECS、OSS、CVM、COS、EC2等）的根目录。
 
     阿里云CDN系统后台将访问您的源站`http://a.com/verification.html`获取验证文件，判断您是否按要求上传了指定的验证文件，请确保验证文件可被访问。
-
-    ![上传文件到服务器](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6370238951/p112238.jpeg)
 
 4.  单击**点击验证**，完成验证。
 
 
 ## 相关API
 
--   DNS解析验证：[VerifyDomainOwner](/cn.zh-CN/新版API参考/域名管理类接口/域名归属校验.md)。
--   文件验证：[DescribeVerifyContent](/cn.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)。
+-   DNS解析验证：[VerifyDomainOwner](/intl.zh-CN/新版API参考/域名管理类接口/域名归属校验.md)。
+-   文件验证：[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)。
 
 ## 常见问题
 
@@ -89,6 +87,6 @@
 
 -   Q：我无法完成DNS验证或文件验证怎么办？
 
-    A：您可以[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex.htm)，说明无法完成域名归属权验证的原因，并提交可以证明您持有该域名的资料，阿里云将进行人工审核。
+    A：您可以[提交工单](https://workorder-intl.console.aliyun.com/#/ticket/createIndex)，说明无法完成域名归属权验证的原因，并提交可以证明您持有该域名的资料，阿里云将进行人工审核。
 
 
