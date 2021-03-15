@@ -55,7 +55,17 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
     $ edgeroutine-cli config
     ```
 
-5.  代码发布到模拟环境。
+5.  修改边缘程序ER（EdgeRoutine）的执行顺序。
+
+    1.  双击步骤4生成的config.js文件。
+
+    2.  修改pos参数为head或者foot，默认值为head。
+
+        pos代表边缘程序ER执行的位置，决定边缘程序ER和CDN控制台配置（缓存配置、HTTPS配置、访问控制、性能优化、视频相关）的执行顺序。
+
+        -   head：表示边缘程序ER在CDN控制台的配置前执行。
+        -   foot：表示边缘程序ER在CDN控制台的配置后执行。
+6.  代码发布到模拟环境。
 
     **说明：** 在您将代码发布到生产环境之前必须执行验证模拟环境。
 
@@ -79,7 +89,7 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
         $ edgeroutine-cli build --delete
         ```
 
-6.  测试模拟环境代码。
+7.  测试模拟环境代码。
 
     请您在终端环境中访问目标域名，EdgeRoutine模拟环境节点IP为42.123.119.100或42.123.119.101。
 
@@ -87,7 +97,7 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
     $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.100:80
     ```
 
-7.  发布代码到生产环境。
+8.  发布代码到生产环境。
 
     1.  您在完成模拟环境验证后，可以将模拟环境的代码发布到线上环境。
 
@@ -109,7 +119,7 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
         $ edgeroutine-cli publish --delete
         ```
 
-8.  测试生产环境。
+9.  测试生产环境。
 
     此时您可直接测试目标域名的线上业务。
 
