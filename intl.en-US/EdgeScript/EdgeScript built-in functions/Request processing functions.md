@@ -68,6 +68,77 @@ Details about this function:
     ```
 
 
+## add\_rsp\_header
+
+Details about this function:
+
+-   Syntax: `add_rsp_header(name, value [, append])`.
+-   Description
+
+    Adds a response header.
+
+-   Parameters
+    -   `name`: the name of the response header that you want to add. Data type: string.
+    -   `value`: the value of the response header that you want to add. Data type: string.
+
+        You can specify one of the following expressions for the `value` parameter to enable the value to be dynamically replaced in the response phase.
+
+        -   $\{x\}: replaced with the value of `ngx.var.x`.
+        -   @\{y\}: replaced with the value of `response header y`.
+    -   `append`: specifies whether to append a response header with the specified `value` if a response header with the same name already exists. Valid values: true and false. Default value: false. If you set this parameter to false, the specified value will overwrite the value of the existing response header.
+-   Response parameters
+
+    Returns `true` by default and returns `false` if you have specified an invalid response header.
+
+-   Examples
+
+    ```
+    add_rsp_header('USER-DEFINED-RSP-1', '1')
+    add_rsp_header('USER-DEFINED-RSP-1', 'x', true)
+    add_rsp_header('USER-DEFINED-RSP-2', '2')
+    del_rsp_header('USER-DEFINED-RSP-2')
+    
+    The following response headers are added:
+    USER-DEFINED-RSP-1: 1
+    USER-DEFINED-RSP-1: x
+    
+    The USER-DEFINED-RSP-2 header is added first and then deleted. Therefore, the USER-DEFINED-RSP-2 header is not included in the response.
+    ```
+
+
+## del\_rsp\_header
+
+Details about this function:
+
+-   Syntax: `del_rsp_header(name)`.
+-   Description
+
+    Deletes a response header.
+
+-   Parameters
+
+    `name`: the name of the response header that you want to delete. Data type: string.
+
+-   Response parameters
+
+    Returns `true` by default and returns `false` if you have specified an invalid response header.
+
+-   Examples
+
+    ```
+    add_rsp_header('USER-DEFINED-RSP-1', '1')
+    add_rsp_header('USER-DEFINED-RSP-1', 'x', true)
+    add_rsp_header('USER-DEFINED-RSP-2', '2')
+    del_rsp_header('USER-DEFINED-RSP-2')
+    
+    The following response headers are added:
+    USER-DEFINED-RSP-1: 1
+    USER-DEFINED-RSP-1: x
+    
+    The USER-DEFINED-RSP-2 header is added first and then deleted. Therefore, the USER-DEFINED-RSP-2 header is not included in the response.
+    ```
+
+
 ## encode\_args
 
 Details about this function:
