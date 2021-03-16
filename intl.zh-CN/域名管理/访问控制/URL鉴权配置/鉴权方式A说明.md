@@ -67,6 +67,8 @@ CDN服务器接到资源访问请求后，判断最终生成鉴权URL请求中�
 
 6.  加密URL请求。
 
+    **说明：** 如果您加密URL中有中文汉字，请先对其进行URL转码（即encode），然后执行该步骤。
+
     ```
     http://cdn.example.com/video/standard/1K.html?auth_key=1444435200-0-0-80cd3862d699b7118eed99103f2a3a4f
     ```
