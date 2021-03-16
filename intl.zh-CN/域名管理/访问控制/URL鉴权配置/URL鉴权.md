@@ -16,7 +16,7 @@ URL鉴权功能通过阿里云CDN加速节点与客户资源站点配合，形�
 
 **说明：** 您的请求URL经过CDN鉴权后，URL中的特殊字符，例如：`=`、`+`等会被转义。
 
-1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
+1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
 
 2.  在左侧导航栏，单击**域名管理**。
 
@@ -34,7 +34,7 @@ URL鉴权功能通过阿里云CDN加速节点与客户资源站点配合，形�
 
     |参数|说明|
     |--|--|
-    |**鉴权类型**|阿里云CDN兼容并支持三种鉴权方式。您可以根据自己的业务情况，选择合适的鉴权方式，来实现对源站资源的有效保护。URL鉴权类型如下：
+    |**鉴权类型**|阿里云CDN兼容并支持三种鉴权方式。您可以根据访问加密URL格式，选择合适的鉴权方式，来实现对源站资源的有效保护。URL鉴权类型如下：
 
     -   [鉴权方式A说明](/intl.zh-CN/域名管理/访问控制/URL鉴权配置/鉴权方式A说明.md)
     -   [鉴权方式B说明](/intl.zh-CN/域名管理/访问控制/URL鉴权配置/鉴权方式B说明.md)
