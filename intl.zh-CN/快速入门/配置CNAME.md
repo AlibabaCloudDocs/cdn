@@ -4,7 +4,9 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 # 配置CNAME
 
-加速域名添加成功后，阿里云CDN会为您分配对应的CNAME域名。CNAME域名可用于把一个域名解析到其他域名上，您需要在域名解析服务商处完成CNAME配置，实现域名解析。CNAME配置生效后即可享受CDN加速服务。
+成功添加加速域名后，系统会为您分配一个CNAME域名。您需要在域名解析服务商处完成CNAME配置，将加速域名的DNS解析记录指向CNAME域名，您的访问请求才能转发到CDN节点，待CNAME配置生效后，CDN才能真正实现加速。配置过程中如果CNAME记录与A记录冲突，您需要将A记录修改为CNAME记录。
+
+![CNAME域名](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1534975161/p249736.png)
 
 ## 配置CNAME方法汇总
 
@@ -20,7 +22,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 1.  获取加速域名的CNAME地址。
 
-    1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
+    1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
@@ -30,7 +32,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 2.  添加CNAME记录。
 
-    1.  登录[云解析DNS控制台](https://dc.console.aliyun.com/dns)。
+    1.  登录[云解析DNS控制台](https://dc.console.aliyun.com/dns)[云解析DNS控制台](https://partners-intl.aliyun.com/login-required#/dns)。
 
     2.  在**域名解析**页面，找到您的域名，在域名右侧单击**解析设置**。
 
@@ -39,7 +41,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
         **说明：**
 
         -   精准域名的CNAME解析大于泛域名的CNAME解析。如果您的加速域名为泛域名，且主机记录设置为星号（\*）时，需删除泛域名下所有已生效的二级域名的解析记录。
-        -   添加CNAME记录时如果遇到冲突问题，建议您更换一个加速域名或调整冲突的记录。
+        -   添加CNAME记录时如果遇到冲突问题，建议您更换一个加速域名或调整冲突的记录。详细信息，请参见[解析记录冲突规则](https://help.aliyun.com/knowledge_detail/39787.html)和[常见问题](#section_u25_nhf_h9n)。
         ![添加记录](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5843918061/p64412.png)
 
         |参数|说明|填写样例|
@@ -76,7 +78,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 1.  获取加速域名的CNAME地址。
 
-    1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
+    1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
@@ -126,7 +128,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 1.  获取加速域名的CNAME地址。
 
-    1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
+    1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
@@ -167,5 +169,39 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 ## 后续步骤
 
 -   配置缓存规则：CDN默认缓存时间为3600秒，您可以修改缓存时间。设置的缓存时间长短会导致回源流量不一样，回源费用也有所不同，建议根据不同的业务需求设置缓存时长。设置的缓存时间过短，会导致CDN频繁回源，从而增加源站的流量消耗。详细信息，请参见[配置缓存过期时间](/intl.zh-CN/域名管理/缓存配置/配置缓存过期时间.md)。
--   提高缓存命中率：使用CDN加速后如果缓存命中率低，您可以配置预热功能，在业务高峰前提前预热热门资源。详细信息，请参见[配置刷新和预热](/intl.zh-CN/服务管理/刷新预热/配置刷新和预热.md)。
+-   提高缓存命中率：使用CDN加速后如果缓存命中率低，您可以配置预热功能，在业务高峰前提前预热热门资源。详细信息，请参见[配置刷新和预热](/intl.zh-CN/服务管理/刷新预热/配置刷新和预热.md)。查看缓存命中率低的原因，请参见[CDN缓存命中率较低](https://help.aliyun.com/knowledge_detail/63874.html)。
+
+## 常见问题
+
+配置CNAME过程中，常见的解析记录冲突有以下两种：
+
+-   Q：CNAME记录和A记录冲突怎么办？
+
+    A：您需要先删除A记录再配置CNAME记录。删除A记录不会影响网站的访问，因为配置了CNAME记录后，客户端的请求会请求到CDN上，然后CDN再去访问源站服务器。CNAME在CDN加速中的原理，请参见[工作原理](/intl.zh-CN/产品简介/工作原理.md)。
+
+-   Q：CNAME记录和MX记录冲突怎么办？
+
+    A：详细信息，请参见[CNAME和MX冲突的解决方法](https://help.aliyun.com/knowledge_detail/39787.html#h2-cname-mx-2)。
+
+-   Q：如何验证CDN加速是否生效？
+
+    A：CNAME解析正确，CDN控制台会显示”✅”符号。具体如下：
+
+    -   有感叹号：表示未正常解析（图示中①）
+    -   有打勾符：表示解析正常（图示中②）
+    ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2135337061/p132031.png)
+
+    验证CDN节点是否已经生效，请参见[如何验证CDN节点是否生效](https://help.aliyun.com/knowledge_detail/40173.html)或[如何通过浏览器的审查元素判断CDN缓存是否成功](https://help.aliyun.com/knowledge_detail/40193.html)。
+
+-   Q：CNAME解析未生效的原因有哪些？
+
+    A：CNAME未正常解析的可能原因有以下几种：
+
+    -   检查配置的CNAME解析的记录值和CDN控制台获取的CNAME地址是否一致，不一致会导致解析失败。
+    -   完成CNAME配置后，运营商DNS的TTL还未更新，一般TTL时间为10分钟，实际以配置域名解析时选择的TTL为准。
+    -   完成CNAME配置后，CDN服务会全网检查加速域名是否解析到CDN，如果有个别地区没有解析也会显示感叹号，需要全网解析生效后才会显示正常。
+    -   您配置域名解析时设置了解析路线，让部分地区不走CDN加速，如下图所示。例如中国内地的解析路线解析到CDN，非中国内地的解析路线是A记录解析到服务器，因为非中国内地没有解析到CDN，因此控制台未显示正常解析，但不影响您的实际使用。
+
+        ![解析路径](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2135337061/p132035.png)
+
 
