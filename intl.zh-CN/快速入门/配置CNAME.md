@@ -6,7 +6,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 成功添加加速域名后，系统会为您分配一个CNAME域名。您需要在域名解析服务商处完成CNAME配置，将加速域名的DNS解析记录指向CNAME域名，您的访问请求才能转发到CDN节点，待CNAME配置生效后，CDN才能真正实现加速。配置过程中如果CNAME记录与A记录冲突，您需要将A记录修改为CNAME记录。
 
-![CNAME域名](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1534975161/p249736.png)
+![CNAME域名](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0259885161/p249736.png)
 
 ## 配置CNAME方法汇总
 
