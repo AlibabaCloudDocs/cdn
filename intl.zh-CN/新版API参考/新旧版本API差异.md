@@ -6,11 +6,9 @@ keyword: [api, cdn]
 
 本文档为您介绍了CDN新旧两个版本API接口的变更详情。
 
-新版CDN API请参见[API概览](/intl.zh-CN/新版API参考/API概览.md)。
+新版CDN API，请参见[API概览](/intl.zh-CN/新版API参考/API概览.md)。
 
-旧版CDN API请参见[旧版API参考](/intl.zh-CN/旧版API参考/API概览.md)。
-
-**说明：** 旧版API不再维护，请您使用新版API。
+**说明：** 旧版API已不再维护，请您使用新版API。
 
 ## 变更接口
 
@@ -142,7 +140,7 @@ keyword: [api, cdn]
 
 ## 未变更接口
 
-新旧版本没有变更的接口如下所示。
+新旧版本没有变更的接口如下所示：
 
 -   StartCdnDomain
 -   StopCdnDomain
@@ -153,7 +151,6 @@ keyword: [api, cdn]
 -   PurgeObjectCaches
 -   OpenCdnService
 -   ModifyCdnService
--   BlockObjectCaches
 -   DescribeUserConfigs
 -   DescribeCdnService
 -   DescribeCdnTypes
@@ -189,7 +186,7 @@ keyword: [api, cdn]
 
 ## 新增接口
 
-新版API新增如下接口。
+新版API新增如下接口：
 
 -   DescribeDomainSrcHttpCodeData
 -   DescribeDomainAverageResponseTime
