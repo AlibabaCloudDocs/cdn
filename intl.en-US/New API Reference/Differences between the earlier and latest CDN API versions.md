@@ -8,9 +8,7 @@ This topic describes the differences between the earlier and latest CDN API vers
 
 For more information, see [List of operations by function](/intl.en-US/New API Reference/List of operations by function.md).
 
-For more information about the earlier version of the Alibaba Cloud CDN API, see [List of operations by function](/intl.en-US/API Reference/List of operations by function.md).
-
-**Note:** The earlier version of the Alibaba Cloud CDN API is no longer maintained. We recommend that you use the latest version of the Alibaba Cloud CDN API.
+**Note:** The earlier version \(2014-11-11\) of the Alibaba Cloud CDN API is no longer maintained. We recommend that you use the latest version of the Alibaba Cloud CDN API.
 
 ## Changes to the opertaions
 
@@ -153,7 +151,6 @@ The following list shows the operations that remain unchanged:
 -   PurgeObjectCaches
 -   OpenCdnService
 -   ModifyCdnService
--   BlockObjectCaches
 -   DescribeUserConfigs
 -   DescribeCdnService
 -   DescribeCdnTypes
