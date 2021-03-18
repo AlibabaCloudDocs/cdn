@@ -9,7 +9,7 @@ CDN结合边缘Web应用防火墙WAF（Web Application Firewall）能力，将�
 
 ## 增值服务
 
-如果您是政府、金融、传媒、零售类客户或月消费金额大于2万，可通过[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)开通CDN WAF的高级版或企业版。高级版或企业版相对于基础版提供更多的功能以及其特殊的商业模式，因此需要支付更高的费用，关于更多CDN WAF具体功能配置，请参见[Web应用防火墙](https://help.aliyun.com/product/28515.html?spm=a2c4g.11174283.6.69.1b097035Dyzr9S)，具体功能单击下表中链接即可。
+如果您是政府、金融、传媒、零售类客户或月消费金额大于2万，可联系您对应的阿里云销售，协助您开通CDN WAF的高级版或企业版。高级版或企业版相对于基础版提供更多的功能以及其特殊的商业模式，因此需要支付更高的费用，关于更多CDN WAF具体功能配置，请参见[Web应用防火墙](https://help.aliyun.com/product/28515.html?spm=a2c4g.11174283.6.69.1b097035Dyzr9S)，具体功能单击下表中链接即可。
 
 |功能项|基础版|高级版|企业版|
 |---|---|---|---|
