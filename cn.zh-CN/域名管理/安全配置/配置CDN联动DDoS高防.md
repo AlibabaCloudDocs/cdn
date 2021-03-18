@@ -2,11 +2,9 @@
 
 阿里云CDN推出联动DDoS高防功能，帮助您的加速域名更好地防御DDoS攻击。本文为您介绍在控制台配置CDN联动DDoS高防功能的具体操作。
 
-在进行配置DDoS高防前，您需要购买DDoS高防实例，详情请参见[DDoS高防控制台](https://yundun.console.aliyun.com/?p=ddosbgp#/ddosbasic/cn-hangzhou)。
+CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒及政府等企业级用户开放，您可以加入钉钉群（32615821）进行咨询和开通该功能。在进行配置DDoS高防前，您需要购买DDoS高防实例，详情请参见[DDoS高防控制台](https://yundun.console.aliyun.com/?p=ddosbgp#/ddosbasic/cn-hangzhou)。同时，DDoS高防产品的联动调度器功能，也可以实现相同功能，建议您直接使用高防功能配置。
 
 如果您的业务使用CDN加速，并且需要防御DDoS攻击。当攻击发生时，需要从CDN切换至DDoS高防，您可以使用该功能进行自动化调度。当DDoS攻击结束后，可以自动将流量切换回CDN进行正常业务分发。
-
-CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒及政府等企业级用户开放，您可以加入钉钉群（32615821）进行咨询和开通该功能。
 
 使用场景包括但不限于以下：
 
@@ -37,7 +35,7 @@ CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒�
 
 6.  配置**DDoS联动产品**、**联动目标类型**及**联动目标**。
 
-    ![ddos高防](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2210652061/p113561.png)
+    ![ddos高防](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2210652061/p113561.png)
 
     **说明：** 当前域名没有查询到DDoS高防配置。
 
@@ -48,7 +46,7 @@ CDN联动功能正在邀测中，主要针对金融、零售、交通、传媒�
 
 返回**CDN联动DDoS**功能页面，可查看是否配置成功。
 
-![ddos-2](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1009068951/p113576.png)
+![ddos-2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1009068951/p113576.png)
 
 您使用联动DDoS功能，CDN将自动为您创建AliyunServiceRoleForCDNAccessingDDoS角色，并授权CDN使用该角色授权CDN访问DDoS高防产品中的资源。AliyunServiceRoleForCDNAccessingDDoS角色中包含的权限包括如下接口：
 
