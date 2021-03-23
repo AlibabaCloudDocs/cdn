@@ -48,13 +48,8 @@ ER provides a fully integrated JavaScript runtime environment that allows you to
 -   Redirecting requests from CDN nodes to multiple origin servers:
     -   Merging content returned from multiple origin servers
     -   Optimized redirection with the lowest latency |
-|Web applications and applets|-   Edge rendering:
-    -   Markdown rendering
-    -   Edge Side Includes \(ESI\) rendering
-    -   Nunjucks rendering
--   Edge server-side rendering \(SSR\):
-    -   Vue.js
-    -   React.js
+|Web applications and applets|-   Edge rendering
+-   Edge server-side rendering \(SSR\)
 -   Content prefetching and reduction of web page loading time
 -   Diverse services on CDN nodes, such as QR code generation |
 |Beacon|Capturing and analytics of edge tracking data|
