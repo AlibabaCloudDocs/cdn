@@ -22,7 +22,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 1.  获取加速域名的CNAME地址。
 
-    1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
+    1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
@@ -32,7 +32,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 2.  添加CNAME记录。
 
-    1.  登录[云解析DNS控制台](https://dc.console.aliyun.com/dns)[云解析DNS控制台](https://partners-intl.aliyun.com/login-required#/dns)。
+    1.  登录[云解析DNS控制台](https://dns.console.aliyun.com)。
 
     2.  在**域名解析**页面，找到您的域名，在域名右侧单击**解析设置**。
 
@@ -78,7 +78,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 1.  获取加速域名的CNAME地址。
 
-    1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
+    1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
@@ -128,7 +128,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 1.  获取加速域名的CNAME地址。
 
-    1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
+    1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
