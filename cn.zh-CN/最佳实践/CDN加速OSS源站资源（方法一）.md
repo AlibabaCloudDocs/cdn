@@ -104,7 +104,7 @@ OSS作为CDN的源站，通过CDN加速分发，用户通过CDN节点就近获�
 
 3.  在阿里云云解析DNS控制台上，配置CNAME。
 
-    1.  登录[云解析DNS控制台](https://dc.console.aliyun.com/dns)。
+    1.  登录[云解析DNS控制台](https://dns.console.aliyun.com)。
 
     2.  在**域名解析**页面，找到您的域名，在域名右侧单击**解析设置**。
 
