@@ -12,7 +12,7 @@ The EdgeScript CLI supports the following features:
 
 ## Download the EdgeScript CLI
 
-You can download and use the EdgeScript CLI to configure scripts. For more information, see [Download the EdgeScript CLI](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip).
+You can download and use the EdgeScript CLI to configure scripts. For more information, see [Download the EdgeScript CLI](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip).
 
 ## Work with the EdgeScript CLI
 
