@@ -20,7 +20,7 @@ After you add a domain name to Alibaba Cloud Content Delivery Network \(CDN\), A
 
     The following example shows how to add a CNAME record for a domain name. The Alibaba Cloud DNS console is used in this example. If your DNS service is provided by other DNS service providers, such as DNSPod, Xinnet, or GoDaddy, add a CNAME record for your domain name in the system of your service provider. The procedure is similar to the one that is described in this topic.
 
-    1.  Log on to the [Alibaba Cloud DNS console](https://dc.console.aliyun.com/dns).
+    1.  Log on to the [Alibaba Cloud DNS console](https://dns.console.aliyun.com).
 
     2.  On the **Manage DNS** page, click the Domains tab, select the domain name that you want to manage, and then click **Configure** in the Actions column.
 
