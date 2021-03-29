@@ -12,7 +12,7 @@
 
 ## 工具下载
 
-您可以下载CLI工具配置EdgeScript。更多信息，[下载CLI工具](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip)。
+您可以下载CLI工具配置EdgeScript。更多信息，[下载CLI工具](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/113904/cn_zh/1580886874093/openapi-es-tools-master-b7a3ee97c5d23b5885d8e0ed5fa674b10f83d9e5.zip)。
 
 ## 使用说明
 
