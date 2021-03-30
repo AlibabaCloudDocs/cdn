@@ -1,12 +1,12 @@
-# 快速入门
+# Quick start
 
-本文通过样例为您介绍EdgeScript规则的编写、保存、测试和发布的基本操作方法。
+This topic provides examples to describe how to use EdgeScript to create, save, test, and publish scripts.
 
-EdgeScript的基本操作如下：
+You can use EdgeScript to perform the following operations:
 
--   将编写的EdgeScript规则存储为本地文件
+-   Save a script to a local file.
 
-    例如：m3u8.es规则拦截所有.m3u8请求
+    For example, the m3u8.es script is used to block all M3U8 requests. You can save the script to a local file.
 
     ```
     $cat m3u8.es
@@ -16,7 +16,7 @@ EdgeScript的基本操作如下：
     }
     ```
 
--   发布规则至模拟环境
+-   Publish a script to the staging environment.
 
     ```
     $./es.py action=push_test_env domain=<your domain> rule='{"pos":"head","pri":"0","rule_path":"./m3u8.es","enable":"on"}'
@@ -32,7 +32,7 @@ EdgeScript的基本操作如下：
     }
     ```
 
--   查看模拟环境的规则列表
+-   Query scripts in the staging environment.
 
     ```
     $./es.py action=query_test_env domain=<your domain>
@@ -45,7 +45,7 @@ EdgeScript的基本操作如下：
     {
         "DomainConfigs": [
             {
-                "Status": "success",    # Status为success时，表示规则已成功设置
+                "Status": "success",    # If success is returned, the script is enabled.
                 "ConfigId": 17432558, 
                 "FunctionArgs": [
                     {
@@ -72,10 +72,10 @@ EdgeScript的基本操作如下：
     }
     ```
 
--   测试规则
+-   Test scripts.
 
     ```
-    $curl -x 模拟环境IP:80 -o /dev/null -v 'http://www.archnote.net/test.m3u8'
+    $curl -x Staging environment IP:80 -o /dev/null -v 'http://www.archnote.net/test.m3u8'
     < HTTP/1.1 400 Bad Request
     < Server: Tengine
     < Date: Thu, 18 Jul 2019 09:40:41 GMT
@@ -88,7 +88,7 @@ EdgeScript的基本操作如下：
     < EagleId: 2a7b771b15634428415537484e
     ```
 
--   发布规则至生产环境
+-   Publish all scripts from the staging environment to the production environment.
 
     ```
     $./es.py action=push_product_env domain=<your domain>
@@ -103,7 +103,7 @@ EdgeScript的基本操作如下：
     }
     ```
 
--   查看生产环境的规则列表
+-   Query scripts in the production environment.
 
     ```
     $./es.py action=query_product_env domain=<your domain>
