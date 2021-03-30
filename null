@@ -1,92 +1,150 @@
-# 验证域名归属权
+# 快速入门
 
-如果一个域名首次被添加到CDN控制台，您需要完成域名的归属权验证，确保域名只被真正的拥有者添加，避免出现用户A的域名被用户B添加导致域名冲突及安全隐患问题。验证通过CDN视为您拥有该域名，您在CDN控制台再次添加该域名或子域名时，不需要再次验证。
+本文通过样例为您介绍EdgeScript规则的编写、保存、测试和发布的基本操作方法。
 
-## 验证入口介绍
+EdgeScript的基本操作如下：
 
-您在CDN控制台的**添加域名**页面，完成各项信息的配置，单击**下一步**，将自动进入下图所示验证页面。CDN提供DNS解析验证和文件验证两种验证方法，您可以任选其一完成域名归属权验证，验证通过方可正常在CDN控制台添加加速域名。
+-   将编写的EdgeScript规则存储为本地文件
 
-![DNS验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9405314161/p112213.png)
+    例如：m3u8.es规则拦截所有.m3u8请求
 
-## 方法一：DNS解析验证（推荐）
+    ```
+    $cat m3u8.es
+    if eq(substr($uri, -5, -1), '.m3u8') {
+        add_rsp_header('X-DEBUG-DENY-REASON', 'block m3u8')
+        exit(400)
+    }
+    ```
 
-本文以添加`a.com`为例，为您介绍验证域名归属权的操作方法。如果您之前已经验证通过，无需再进行验证，请忽略本文。
+-   发布规则至模拟环境
 
-1.  在验证页面，单击**方法1：DNS解析验证**。
+    ```
+    $./es.py action=push_test_env domain=<your domain> rule='{"pos":"head","pri":"0","rule_path":"./m3u8.es","enable":"on"}'
+    
+    Response Code:
+    =============
+    200 OK
+    
+    Response Info:
+    ==============
+    {
+        "RequestId": "FB98CC67-8FBA-44CF-A98A-BCE3B19FE510"
+    }
+    ```
 
-    记录类型、主机记录和记录值已经由系统自动生成，在验证完成前请不要关闭验证页面。
+-   查看模拟环境的规则列表
 
-    **说明：** 如果您是调用[AddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口添加的加速域名，则您需要先调用[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口获取记录值，然后按照下方步骤添加TXT记录，再调用[AddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口才能正常添加加速域名。
+    ```
+    $./es.py action=query_test_env domain=<your domain>
+    Response Code:
+    =============
+    200 OK
+    
+    Response Info:
+    ==============
+    {
+        "DomainConfigs": [
+            {
+                "Status": "success",    # Status为success时，表示规则已成功设置
+                "ConfigId": 17432558, 
+                "FunctionArgs": [
+                    {
+                        "ArgName": "enable", 
+                        "ArgValue": "on"
+                    }, 
+                    {
+                        "ArgName": "pri", 
+                        "ArgValue": "0"
+                    }, 
+                    {
+                        "ArgName": "pos", 
+                        "ArgValue": "head"
+                    }, 
+                    {
+                        "ArgName": "rule", 
+                        "ArgValue": "if eq(substr($uri, -5, -1), '.m3u8') {\n    add_rsp_header('X-DEBUG-DENY-REASON', 'block m3u8')\n    exit(400)\n}\n"
+                    }
+                ], 
+                "FunctionName": "dsl_ex"
+            }
+        ], 
+        "RequestId": "4DDBF3DB-BCAC-4074-AC1E-B6C1F1C6CBFB"
+    }
+    ```
 
-    ![DNS验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9405314161/p112213.png)
+-   测试规则
 
-2.  在您的域名解析服务商，添加一条记录类型为TXT的DNS记录。
+    ```
+    $curl -x 模拟环境IP:80 -o /dev/null -v 'http://www.archnote.net/test.m3u8'
+    < HTTP/1.1 400 Bad Request
+    < Server: Tengine
+    < Date: Thu, 18 Jul 2019 09:40:41 GMT
+    < Content-Type: text/html
+    < Content-Length: 265
+    < Connection: close
+    < X-DEBUG-DENY-REASON: block m3u8
+    < Via: cache1.cn1191-1[,0]
+    < Timing-Allow-Origin: *
+    < EagleId: 2a7b771b15634428415537484e
+    ```
 
-    下面以阿里云云解析DNS为例，介绍在云解析DNS控制台添加TXT记录的方法。在腾讯云DNSPod、新网等其他DNS解析服务商添加TXT记录的方法与之相似。
+-   发布规则至生产环境
 
-    1.  登录[云解析DNS控制台](https://dc.console.aliyun.com/dns)。
+    ```
+    $./es.py action=push_product_env domain=<your domain>
+    Response Code:
+    =============
+    200 OK
+    
+    Response Info:
+    ==============
+    {
+        "RequestId": "F4B378F8-6AAE-457A-A70C-E856ED8341D8"
+    }
+    ```
 
-    2.  在**域名解析**页面，找到`a.com`域名，在域名右侧单击**解析设置**。
+-   查看生产环境的规则列表
 
-    3.  单击**添加记录**，填写步骤1中查看的记录类型、主机记录和记录值。
-
-3.  等待TXT解析生效，返回CDN控制台，单击**点击验证**，完成验证。
-
-    如果系统提示“验证失败”，请检查TXT记录是否正确填写，并等待DNS记录生效后重新验证。
-
-
-## 方法二：文件验证
-
-本文以添加`a.com`为例，为您介绍验证域名归属权的操作方法。如果您之前已经验证通过，无需再进行验证，请忽略本文。
-
-1.  在验证页面，单击**方法2: 文件验证**。
-
-    在验证完成前请不要关闭验证页面。
-
-    ![文件验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9405314161/p112219.png)
-
-2.  单击`verification.html`，下载验证文件。
-
-    **说明：** verification.html文件的内容是由[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口生成的字符串。如果您是调用[AddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/添加加速域名.md)或[BatchAddCdnDomain](/intl.zh-CN/新版API参考/域名管理类接口/批量添加加速域名.md)接口添加的加速域名，则您需要先调用[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)接口获取字符串，然后自行创建`verification.html`文件并填入已获取的字符串，再按照下方的步骤上传文件。
-
-3.  将验证文件上传到您域名源站服务器（例如您的ECS、OSS、CVM、COS、EC2等）的根目录。
-
-    阿里云CDN系统后台将访问您的源站`http://a.com/verification.html`获取验证文件，判断您是否按要求上传了指定的验证文件，请确保验证文件可被访问。
-
-4.  单击**点击验证**，完成验证。
-
-
-## 相关API
-
--   DNS解析验证：[VerifyDomainOwner](/intl.zh-CN/新版API参考/域名管理类接口/域名归属校验.md)。
--   文件验证：[DescribeVerifyContent](/intl.zh-CN/新版API参考/域名管理类接口/获取归属校验内容.md)。
-
-## 常见问题
-
-在添加新的加速域名时，您可能会遇到如下问题：
-
--   Q：为什么要做域名归属权验证？
-
-    A：为了确保域名只被真正的拥有者添加，避免出现用户A的域名被用户B添加导致域名冲突及安全隐患问题。
-
--   Q：我有多个阿里云账号，每个账号首次添加新域名时都要做归属权验证吗？
-
-    A：是的。多个账号视为多个不同的独立用户，每个账号都需要对新域名进行一次归属权验证。
-
--   Q：我已完成DNS验证或文件验证，是否可以删除用作验证的DNS记录或文件？
-
-    A：可以。要求您添加的DNS解析或文件，只用作添加域名时的归属权验证，验证通过后您可以删除记录或文件。
-
--   Q：已经添加到阿里云CDN控制台的存量域名，需要做域名归属权验证吗？
-
-    A：不需要。例如您已经添加了b.a.com，且配置了CDN分配的CNAME在正常使用中，则视为您拥有a.com的解析权。您后续再添加\*\*.a.com、\*\*\*.a.com等任意a.com的子域名，都无需再验证。
-
--   Q：通过API接口AddDomain添加域名是否需要验证？
-
-    A：需要。和控制台添加一样，您可以选择DNS解析验证或文件验证，先配置好DNS或在源站根目录放置好验证文件，然后调用AddDomain接口添加加速域名。
-
--   Q：我无法完成DNS验证或文件验证怎么办？
-
-    A：您可以[提交工单](https://workorder-intl.console.aliyun.com/#/ticket/createIndex)，说明无法完成域名归属权验证的原因，并提交可以证明您持有该域名的资料，阿里云将进行人工审核。
+    ```
+    $./es.py action=query_product_env domain=<your domain>
+    Response Code:
+    =============
+    200 OK
+    
+    Response Info:
+    ==============
+    {
+        "DomainConfigs": {
+            "DomainConfig": [
+                {
+                    "Status": "success", 
+                    "ConfigId": 17432558, 
+                    "FunctionArgs": {
+                        "FunctionArg": [
+                            {
+                                "ArgName": "enable", 
+                                "ArgValue": "on"
+                            }, 
+                            {
+                                "ArgName": "pri", 
+                                "ArgValue": "0"
+                            }, 
+                            {
+                                "ArgName": "pos", 
+                                "ArgValue": "head"
+                            }, 
+                            {
+                                "ArgName": "rule", 
+                                "ArgValue": "if eq(substr($uri, -5, -1), '.m3u8') {\n    add_rsp_header('X-DEBUG-DENY-REASON', 'block m3u8')\n    exit(400)\n}\n"
+                            }
+                        ]
+                    }, 
+                    "FunctionName": "dsl_ex"
+                }
+            ]
+        }, 
+        "RequestId": "36D57C1D-C820-43DA-8E70-DADC4B8BD4DD"
+    }
+    ```
 
 
