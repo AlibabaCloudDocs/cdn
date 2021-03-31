@@ -25,6 +25,6 @@ If MD5 verification is configured for files on the origin server, do not enable 
 
 5.  In the **HTML Optimization** section, turn on **HTML Optimization**.
 
-    ![Turn on HTML Optimization](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8056219951/p7303.png)
+    ![Turn on HTML Optimization](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5816717161/p7303.png)
 
 
