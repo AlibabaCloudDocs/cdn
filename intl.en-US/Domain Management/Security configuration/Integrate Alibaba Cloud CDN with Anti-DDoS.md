@@ -27,7 +27,7 @@ This feature can be applied, including but not limited to the following scenario
 
 2.  In the left-side navigation pane, click **Domain Names**.
 
-3.  On the Domain Names page, find the target domain name and click **Manage**.
+3.  On the **Domain Names** page, find the domain name that you want to manage and click **Manage** in the Actions column of the domain name.
 
 4.  Choose **Security Settings** \> **DDoS Interaction**.
 
@@ -37,7 +37,7 @@ This feature can be applied, including but not limited to the following scenario
 
 6.  Set the **Associated Anti-DDoS Service**, **Association Type**, and **Target** parameters.
 
-    ![Integrate CDN with Anti-DDoS](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3920652061/p113561.png)
+    ![Integrate CDN with Anti-DDoS](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3920652061/p113561.png)
 
     **Note:** This message may appear: No Anti-DDoS Pro/Premium settings are found for the specified domain name.
 
@@ -48,7 +48,7 @@ This feature can be applied, including but not limited to the following scenario
 
 On the **DDoS Interaction** tab, check whether the settings are effective.
 
-![ddos-2](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3448958951/p113576.png)
+![ddos-2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3448958951/p113576.png)
 
 After you enable this feature, Alibaba Cloud CDN automatically creates the following service linked role in Resource Access Management \(RAM\): AliyunServiceRoleForCDNAccessingDDoS. Alibaba Cloud CDN can assume this role to access Anti-DDoS resources. AliyunServiceRoleForCDNAccessingDDoS has the following permissions:
 
@@ -59,5 +59,5 @@ After you enable this feature, Alibaba Cloud CDN automatically creates the follo
 -   DescribeDomainQPSList: Queries the number of queries \(QPS\) of a website.
 -   DescribeCdnLinkageRules: Queries the parameters set for the integration of Alibaba Cloud CDN and Anti-DDoS.
 
-If you want to delete AliyunServiceRoleForCDNAccessingDDoS, you must disable the integration of Alibaba Cloud CDN and Anti-DDoS for all accelerated domain names. You can then delete the role in the RAM console. For more information, see [Service linked roles](/intl.en-US/RAM Role Management/Service linked roles.md).
+If you want to delete AliyunServiceRoleForCDNAccessingDDoS, you must disable the integration of Alibaba Cloud CDN and Anti-DDoS for all accelerated domain names. You can then delete the role in the RAM console. For more information, see [Service linked roles](/intl.en-US/RAM Role Management/Service-linked roles.md).
 
