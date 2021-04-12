@@ -10,8 +10,7 @@ If you have purchased an Alibaba Cloud Content Delivery Network \(CDN\) resource
 ## Procedure
 
 1.  Log on to the[Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
-2.  Log on to the[Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
-3.  Click the **Resource Plans** tab.
+2.  Click the **Resource Plans** tab.
 
     You can view the total capacity, remaining capacity, effective time, expiration time, and status of each resource plan.
 
@@ -25,7 +24,7 @@ You can call API operations listed in the following table to query details about
 |API operation|Description|
 |-------------|-----------|
 |[DescribeCdnUserResourcePackage](https://help.aliyun.com/document_detail/91171.htm)|Queries the resource plans that you have purchased for Alibaba Cloud CDN.|
-|[DescribeDcdnUserResourcePackage](https://help.aliyun.com/document_detail/131648.html)|Queries the resource plans that you have purchased for Dynamic Router for CDN \(DCDN\).|
+|[DescribeDcdnUserResourcePackage](https://www.alibabacloud.com/help/doc-detail/131648.htm)|Queries the resource plans that you have purchased for Dynamic Router for CDN \(DCDN\).|
 
 **Note:** Resource plans of DCDN can be shared between Alibaba Cloud CDN and DCDN. Therefore, you can also call the DCDN API to query details about resource plans of Alibaba Cloud CDN.
 
