@@ -1,12 +1,12 @@
 ---
-keyword: [add a domain name to be accelerated, accelerated domain name, domain name configuration, add a domain name, new domain name, domain name]
+keyword: [add a domain name to accelerate, accelerated domain name, domain name configuration, add a domain name, new domain name, domain name]
 ---
 
 # Add a domain name to Alibaba Cloud CDN
 
-If you want to use Alibaba Cloud Content Delivery Network \(CDN\) to accelerate the delivery of content on a specific website, you must add the domain name that you want to accelerate to Alibaba Cloud CDN and specify the website as the origin server. Alibaba Cloud CDN retrieves resources from origin servers and caches the resources on CDN nodes. This allows users to retrieve the resources from the nearest CDN nodes. After you add a domain name to Alibaba Cloud CDN, the system pushes the configuration of the domain name to all CDN nodes without affecting services of the domain name. To enable content delivery acceleration for the domain name, you must configure a Canonical Name \(CNAME\) record for the domain name.
+If you want to use Alibaba Cloud Content Delivery Network \(CDN\) to accelerate the delivery of content on a specified website, specify the website as the origin server. Then, add the domain name that you want to accelerate to Alibaba Cloud CDN. Alibaba Cloud CDN retrieves resources from the origin server and caches them on CDN nodes. This allows users to retrieve the resources from the nearest CDN nodes. After you add the domain name to Alibaba Cloud CDN, the system pushes the configuration of the domain name to all CDN nodes without affecting services of the domain name.
 
-Alibaba Cloud CDN is activated. For more information, see [Activate Alibaba Cloud CDN](/intl.en-US/Quick Start/Activate Alibaba Cloud CDN.md).
+Alibaba Cloud CDN is activated. For more information about how to activate Alibaba Cloud CDN, see [Activate Alibaba Cloud CDN](/intl.en-US/Quick Start/Activate Alibaba Cloud CDN.md).
 
 ## Procedure
 
@@ -31,7 +31,7 @@ Alibaba Cloud CDN is activated. For more information, see [Activate Alibaba Clou
 
 **Note:**
 
-        -   The specified wildcard domain names and the domain names that match the wildcard domain names must belong to the same Alibaba Cloud account. When you add a domain name to Alibaba Cloud CDN, Alibaba Cloud CDN verifies the ownership of the domain name. If the specified wildcard domain name and the domain names that match the wildcard domain name belong to different Alibaba Cloud accounts, an error message appears. To request technical support from Alibaba Cloud, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
+        -   The specified wildcard domain name and the domain names that match the wildcard domain name must belong to the same Alibaba Cloud account. When you add a domain name to Alibaba Cloud CDN, Alibaba Cloud CDN verifies the ownership of the domain name. If the specified wildcard domain name and the domain names that match the wildcard domain name belong to different Alibaba Cloud accounts, an error message appears. To request technical support from Alibaba Cloud, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
         -   If a wildcard domain has never been added to Alibaba Cloud CDN, you can add domain names that match the wildcard domain name to Alibaba Cloud CDN by using different Alibaba Cloud accounts.
     -   You cannot add a duplicate domain name to Alibaba Cloud CDN.
 
@@ -39,7 +39,7 @@ If a **DomainAlreadyExist** error occurs, check whether the domain name is alrea
 
     -   You can add at most 50 domain names to Alibaba Cloud CDN for each Alibaba Cloud account.
 
-If the average daily peak bandwidth of your domain names exceeds 50 Mbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to increase the maximum number of domain names that can be added to Alibaba Cloud CDN. Make sure that the increase of domain names does not cause business risks.
+However, if the sum of the average daily peak bandwidth values of your domain names exceeds 50 Mbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to add more domain names to Alibaba Cloud CDN. Make sure that the increase of domain names does not cause business risks.
 
     -   The content delivered from the domain name must be legal and comply with the Terms of Service for Alibaba Cloud CDN. For more information, see [Limits](/intl.en-US/Product Introduction/Limits.md). |
     |**Business Type**|    -   [Image and small file distribution](/intl.en-US/Product Introduction/Scenarios/Image and small file distribution.md): accelerates the delivery of small-sized static content on websites, such as e-commerce content and game images.
@@ -48,9 +48,9 @@ If the average daily peak bandwidth of your domain names exceeds 50 Mbit/s, you 
     -   [DCDN](/intl.en-US/Product Introduction/Scenarios/DCDN.md): accelerates the delivery of both static and dynamic content. DCDN can accelerate the delivery of large amounts of dynamic content.
 
 If you set Business Type to **DCDN**, you must follow the instructions to go to the DCDN console to add and configure the domain name. For more information, see [Add a domain name](). |
-    |**Origin Info**|Specify the information about the origin server. If the requested resources are not cached on CDN nodes, the requests are redirected to the origin server to retrieve the resources.     -   **OSS Domain**
+    |**Origin Info**|Enter the information about the origin server. If the requested resources are not cached on CDN nodes, requests are redirected to the origin server to retrieve the resources.     -   **OSS Domain**
 
-If your resources are stored in an Object Storage Bucket \(OSS\) bucket, you can enter the public endpoint of the OSS bucket, for example, xxx.oss-cn-hangzhou.aliyuncs.com. Internal endpoints of OSS buckets are not supported. You can view the public endpoint of an OSS bucket in the [OSS console](https://oss.console.aliyun.com/). You can also select an OSS bucket that belongs to the current Alibaba Cloud account.
+If your resources are stored in an Object Storage Bucket \(OSS\) bucket, you can enter the public endpoint of the OSS bucket, for example, xxx.oss-cn-hangzhou.aliyuncs.com. Internal endpoints of OSS buckets are not supported. You can view the public endpoint of an OSS bucket in the [OSS console](https://oss.console.aliyun.com/). You can also select an OSS bucket that belongs to the current Alibaba Cloud account from the Domain Name drop-down list.
 
     -   **IP**
 
@@ -67,7 +67,7 @@ Enter the domain names of one or more origin servers.
 Enter a Function Compute domain name. You must set the **Region** and **Domain Name** parameters for the Function Compute domain name. For more information, see [Overview](). |
     |**Port**|Select a port based on the specified origin server.     -   **Port 80**: Requests are redirected to the origin server through port 80.
     -   **Port 443**: Requests are redirected to the origin server through port 443. Make sure that the origin server supports HTTPS. |
-    |**Region**|Select the accelerated region. If you select **Mainland China Only** or **Global**, you must apply for an Internet Content Provider \(ICP\) number for the domain name. We recommend that you use [Alibaba Cloud ICP Filing System](https://beian.aliyun.com/pcContainer/myorder) to apply for ICP numbers. It may take some time to update data in the database of Ministry of Industry and Information Technology \(MIIT\). After you submit domain name information to MIIT, we recommend that you wait 8 hours before you configure the domain name in Alibaba Cloud CDN. **Note:** The pricing strategies vary based on the accelerated region. Choose an accelerated region based on your business requirements. For more information about the pricing of Alibaba Cloud CDN, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
+    |**Region**|Select an accelerated region. If you select **Mainland China Only** or **Global**, you must apply for an Internet Content Provider \(ICP\) number for the domain name. We recommend that you use [Alibaba Cloud ICP Filing System](https://beian.aliyun.com/pcContainer/myorder) to apply for ICP numbers. It may take some time to update data in the database of Ministry of Industry and Information Technology \(MIIT\). After you submit domain name information to MIIT, we recommend that you wait 8 hours before you configure the domain name in Alibaba Cloud CDN. **Note:** The pricing strategies vary based on the accelerated region. Choose an accelerated region based on your business requirements. For more information about the pricing of Alibaba Cloud CDN, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
     -   **Mainland China Only**: All requests are redirected to CDN nodes that are deployed in mainland China.
     -   **Global**: All requests are redirected to the nearest CDN nodes.
