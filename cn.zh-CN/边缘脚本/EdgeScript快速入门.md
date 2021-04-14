@@ -4,7 +4,7 @@
 
 ## 使用流程
 
-![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3701685161/p249648.png)
+![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1140697161/p249648.png)
 
 1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
@@ -20,7 +20,7 @@
 
         **说明：** 目前单个域名仅支持添加一条边缘脚本规则。如果您需要添加多条规则，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)申请。
 
-        ![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3910756161/p249714.png)
+        ![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8969638161/p249714.png)
 
         配置信息及说明，请参见下表：
 
