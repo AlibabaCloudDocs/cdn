@@ -1,35 +1,41 @@
 # How EdgeScript works
 
-This topic describes the model of scripts in EdgeScript, positions where the scripts are executed, script priorities, execution and termination of scripts, and fields that each script contains.
+This topic describes how EdgeScript \(ES\) works, the model of scripts in ES, positions where the scripts are executed, script priorities, and execution and termination of scripts.
+
+## How it works
+
+Scripts created by using ES are the same as the standard configurations specified in the Alibaba Cloud Content Delivery Network \(CDN\) console. They process requests that are sent to CDN nodes. The following figure shows the positions where scripts are executed. After a CDN node receives a request, the CDN node processes the request based on the configurations in the Alibaba Cloud CDN and scripts in ES. In a request processing pipeline, you can specify the position where a script is executed. A script can be executed before the configurations in the console are applied \(head\) or after they are applied \(foot\).
+
+![5](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7950738161/p255453.png)
 
 ## Model
 
-Scripts in EdgeScript are executed by using the following model:
+Scripts in ES are executed based on the following model:
 
--   EdgeScript executes scripts to achieve different functions. Functions are triggered when the conditions in scripts are met.
+-   ES executes scripts to achieve different functions. Functions are triggered only when the conditions in scripts are met.
 -   You can specify the position where a script is executed and the priority of the script in a request processing pipeline.
--   Scripts in EdgeScript are managed based on domain names.
+-   Scripts in ES are managed based on domain names.
 
 ## Positions and priorities
 
-The execution positions and priorities for executing scripts are:
+The positions and priorities for executing scripts are:
 
 -   Positions
 
-    You can execute a script at the start or end of a request processing pipeline.
+    You can execute a script at the head or foot of a request processing pipeline.
 
-    -   Start: for authentication, blocking, or throttling.
-    -   End: for cache setting, back-to-origin authentication, and A/B testing.
+    -   Head: for authentication, blocking, or throttling.
+    -   Foot: for cache settings, back-to-origin authentication, and A/B testing.
     ![ES](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4522036061/p62071.png)
 
 -   Priorities
 
-    If you want to execute more than one script at the start or end of a request processing pipeline, you can assign priorities to these scripts to determine the execution order.
+    If you want to execute more than one script at the head or foot of a request processing pipeline, you can assign priorities to these scripts to determine the execution order.
 
 
 ## Execution and termination
 
-The execution and termination of scripts are defined as follows:
+The execution and termination of scripts are defined based on the following rules:
 
 -   Execution of scripts
     -   If a condition that ends with `return true` in a script is met, the script is executed.
@@ -38,21 +44,4 @@ The execution and termination of scripts are defined as follows:
 
     For scripts that are executed in the same position, you can choose to skip the subsequent scripts when a script is executed.
 
-
-## Fields
-
-The following table describes the fields that you can use in a script.
-
-|Field|Required|Definition|Description|
-|-----|--------|----------|-----------|
-|enable|Y|Enables or disables the script.|Valid values: -   on
--   off |
-|pos|Y|The position where the script is executed.|Valid values: -   head
--   foot |
-|pri|Y|The priority of the script.|Valid values: from 0 to 999. Value 0 indicates the highest priority and value 999 indicates the lowest priority. You can only prioritize scripts that are executed in the same position.|
-|rule|Y|The content of the script.|None|
-|brk|N|Indicates whether to skip the subsequent scripts if the current script is executed.|Valid values: -   on
--   off |
-|testip|N|The IP address of the client.|By default, this field is empty. If you specify a client IP address, only requests sent from the specified IP address can trigger the execution of the script.|
-|option|N|An extension.|EdgeScript supports extensions. You can set this field to `_es_dbg=signature` to perform response header debugging.|
 
