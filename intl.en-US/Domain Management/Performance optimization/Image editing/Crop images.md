@@ -2,7 +2,7 @@
 
 Alibaba Cloud Content Delivery Network \(CDN\) allows you to crop images based on a specified size. This topic describes how to crop images and provides examples.
 
-**Note:** This feature is **free of charge** during the public preview. After official release, it charges fees. For more information, see the product updates.
+**Note:** Image editing is a paid service. It is currently free of charge until further notice.
 
 ## Parameters
 
