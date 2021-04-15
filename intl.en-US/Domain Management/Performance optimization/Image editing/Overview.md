@@ -2,7 +2,7 @@
 
 Alibaba Cloud Content Delivery Network \(CDN\) supports the image editing feature, which edits and distributes images on CDN nodes. This feature simplifies the back-to-origin process, reduces the number of requests that are redirected to origin servers, and reduces loads on origin servers. Image editing allows you to resize images, crop images, add watermarks to images, and perform other operations on images based on business requirements. The image editing feature of Alibaba Cloud CDN and the Image Processing \(IMG\) feature of Object Storage Service \(OSS\) are two separate features.
 
-**Note:** This feature is **free of charge** during the public preview. After official release, it charges fees. For more information, see the product updates.
+**Note:** Image editing is a paid service. It is currently free of charge until further notice.
 
 ## Scenarios
 
@@ -10,8 +10,8 @@ You must add a domain name to Alibaba Cloud CDN before you can enable image edit
 
 The following table describes some of the applicable scenarios.
 
-|Scenario|Description|
-|--------|-----------|
+|Scenario|Feature|
+|--------|-------|
 |**E-commerce platforms**|-   Efficiently edits different styles of image to be displayed on different terminals.
 -   Compresses images and their comments, changes image quality, and reduces data transfer.
 -   Adds watermarks to images to protect your copyright and promote your brand. |
@@ -57,6 +57,6 @@ When you use image editing, take note of the following limits:
 
 ## Related topics
 
--   For more information about how to enable image editing, see [Enable image editing]().
--   For more information about how to configure image editing, see [Configure image editing]().
+-   For more information about how to enable image editing, see [Enable image editing](/intl.en-US/Domain Management/Performance optimization/Image editing/Enable image editing.md).
+-   For more information about how to configure image editing, see [Configure image editing](/intl.en-US/Domain Management/Performance optimization/Image editing/Enable image editing.md).
 
