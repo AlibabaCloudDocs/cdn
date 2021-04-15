@@ -2,11 +2,11 @@
 
 You can adjust the quality of an image by compressing the image, changing the absolute quality value, and changing the quality coefficient. Alibaba Cloud Content Delivery Network \(CDN\) allows you to compress images on CDN nodes without changing the image format.
 
-**Note:** This feature is **free of charge** during the public preview. After official release, it charges fees. For more information, see the product updates.
+**Note:** Image editing is a paid service. It is currently free of charge until further notice.
 
 ## Compress images
 
-This feature reduces the size of all images that belong to a domain name without changing the resolution, format, or quality of the images. For more information, see [Enable image editing]().
+This feature reduces the size of all images that belong to a domain name without changing the resolution, format, or quality of the images. For more information, see [Enable image editing](/intl.en-US/Domain Management/Performance optimization/Image editing/Enable image editing.md).
 
 ## Change image quality
 
