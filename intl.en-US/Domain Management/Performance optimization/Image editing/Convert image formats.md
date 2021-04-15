@@ -2,11 +2,11 @@
 
 Alibaba Cloud Content Delivery Network \(CDN\) can automatically convert images to the WebP format. You can also convert images on CDN nodes to specified formats. This topic describes how to convert image formats and provides examples.
 
-**Note:** This feature is **free of charge** during the public preview. After official release, it charges fees. For more information, see the product updates.
+**Note:** Image editing is a paid service. It is currently free of charge until further notice.
 
 ## Automatically convert images to WebP
 
-WebP supports both lossy compression and lossless compression. Alibaba Cloud CDN can automatically convert images to the WebP format. After you enable automatic conversion to WebP, Alibaba Cloud CDN determines whether to convert images to the WebP format based on the Accept header in requests. If `image/webp` is included in the Accept header, images in the response are converted to the WebP format. For more information, see [Enable image editing]().
+WebP supports both lossy compression and lossless compression. Alibaba Cloud CDN can automatically convert images to the WebP format. After you enable automatic conversion to WebP, Alibaba Cloud CDN determines whether to convert images to the WebP format based on the Accept header in requests. If `image/webp` is included in the Accept header, images in the response are converted to the WebP format. For more information, see [Enable image editing](/intl.en-US/Domain Management/Performance optimization/Image editing/Enable image editing.md).
 
 **Note:** After you enable automatic conversion to WebP, the cache hit ratio decreases. It automatically increases after a short period of time. Do not enable this feature during peak hours.
 
