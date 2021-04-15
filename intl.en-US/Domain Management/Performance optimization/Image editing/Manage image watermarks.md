@@ -2,7 +2,7 @@
 
 Alibaba Cloud Content Delivery Network \(CDN\) supports picture watermarks and text watermarks. You can add picture watermarks and text watermarks to images. This topic describes how to add watermarks to images and provides examples.
 
-**Note:** This feature is **free of charge** during the public preview. After official release, it charges fees. For more information, see the product updates.
+**Note:** Image editing is a paid service. It is currently free of charge until further notice.
 
 ## Add picture watermarks
 
