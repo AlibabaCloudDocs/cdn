@@ -4,7 +4,7 @@ The image editing feature is available to apps and websites whose services invol
 
 ## Enable image editing
 
-**Note:** This feature is **free of charge** during the public preview. After official release, it charges fees. For more information, see the product updates.
+**Note:** Image editing is a paid service. It is currently free of charge until further notice.
 
 1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
