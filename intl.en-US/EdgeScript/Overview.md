@@ -11,7 +11,7 @@ ES provides encapsulated functions, simple decision making statements, and built
 ![7](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4630738161/p255500.png)
 
 -   For more information about variables, see [EdgeScript built-in variables](/intl.en-US/EdgeScript/EdgeScript built-in variables.md).
--   For more information about functions, see [EdgeScript built-in functions](https://help.aliyun.com/document_detail/126869.html?spm=a2c4g.11186623.6.730.d7aa4d674Q9xAO).
+-   For more information about functions, see [EdgeScript built-in functions](/intl.en-US/EdgeScript/EdgeScript built-in functions/Overview.md).
 -   For more information about logical functions, see [Logical functions](/intl.en-US/EdgeScript/EdgeScript built-in functions/Logical functions.md).
 
 ## Billing
