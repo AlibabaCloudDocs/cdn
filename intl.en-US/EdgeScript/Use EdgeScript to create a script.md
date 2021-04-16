@@ -6,7 +6,7 @@ In the Alibaba Cloud Content Delivery Network \(CDN\) console, you can create sc
 
 ![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8371687161/p249648.png)
 
-1.  Log on to the[Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
 2.  In the left-side navigation pane, click **Domain Names**.
 
