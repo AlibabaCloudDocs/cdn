@@ -80,7 +80,7 @@ HTTP headers include general headers, request headers, and response headers.
         |Header Name|x-code|Replaces the custom request header named x-code.|
         |Find|key|Allows you to use regular expressions to search for the value that you want to replace.|
         |Replace With|abc|Allows you to use regular expressions to replace matching values.|
-        |Match|Match All|If **Match** is set to **Match All**, all matching values will be replaced. For example, if you use a regular expression to replace all the "key" in `x-code:key1,key2,key3` with "abc", the name-value pair is changed to`x-code:abc1,abc2,abc3`.|
+        |Match|Match All|If **Match** is set to **Match All**, all matching values will be replaced. For example, if you use a regular expression to replace all the "key" in `x-code:key1,key2,key3` with "abc", the name-value pair is changed to `x-code:abc1,abc2,abc3`.|
         |Match the First Only|If **Match** is set to **Match the First Only**, only the first matching value will be replaced. For example, if you use a regular expression to replace the first "key" in `x-code:key1,key2,key3` with "abc", the name-value pair is changed to `x-code:abc1,key2,key3`.|
 
 8.  Click **OK**.
