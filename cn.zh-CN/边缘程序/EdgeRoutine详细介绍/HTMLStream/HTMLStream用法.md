@@ -24,7 +24,7 @@
     async function handle(event) {
       // 1.假设exmaple页面返回的是待修改的HTML页面。
       const response = await fetch("http://www.example.com");
-      // 2.您需要设置好HTML流氏解析器。流氏解析器允许您设置多个不同CSS Selector
+      // 2.您需要设置好HTML流式解析器。流式解析器允许您设置多个不同CSS Selector
       //    语法的捕获方式，然后注册回调函数进行改写。
       const htmlStream = new HTMLStream(
         response.body, // 放入需要改写的HTML流
