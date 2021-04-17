@@ -9,7 +9,7 @@ If you have purchased an Alibaba Cloud Content Delivery Network \(CDN\) resource
 
 ## Procedure
 
-1.  Log on to the[Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
+1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 2.  Click the **Resource Plans** tab.
 
     You can view the total capacity, remaining capacity, effective time, expiration time, and status of each resource plan.
