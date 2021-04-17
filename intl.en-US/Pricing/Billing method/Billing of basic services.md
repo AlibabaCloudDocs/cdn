@@ -8,7 +8,7 @@ This topic describes the metering methods of and considerations for basic servic
 
 ## Purchase basic services of Alibaba Cloud CDN
 
-Beginning January 8, 2021, Alibaba Cloud CDN uses the pay-by-data-transfer metering method by default. After Alibaba Cloud CDN is activated, you cannot manually change the metering method in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information, see[CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing?spm=a2796.7980202.1167822.1.16755f45tSDVja).
+Beginning January 8, 2021, Alibaba Cloud CDN uses the pay-by-data-transfer metering method by default. After Alibaba Cloud CDN is activated, you cannot manually change the metering method in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing?spm=a2796.7980202.1167822.1.16755f45tSDVja).
 
 ## Purchase data transfer plans
 
@@ -25,7 +25,7 @@ Description: You are charged for the amount of daily outbound data transfer of C
 
 Applicable scenarios: The network traffic fluctuates and the bandwidth usage spikes. The daily bandwidth usage is lower than 30%.
 
-How to purchase: Log on to the[Alibaba Cloud CDN console](https://account.alibabacloud.com/login/login.htm) and make a purchase.
+How to purchase: Log on to the [Alibaba Cloud CDN console](https://account.alibabacloud.com/login/login.htm) and make a purchase.
 
 ## Pay-by-bandwidth
 
@@ -43,7 +43,7 @@ The following figure shows the price tiers of Alibaba Cloud CDN on March 10, 202
 
 **Note:**
 
--   For more information about the distribution of CDN nodes in each region, see[CDN nodes in Hong Kong \(China\), Macao \(China\), Taiwan \(China\), and regions outside China](https://www.alibabacloud.com/help/doc-detail/163587.htm).
+-   For more information about the distribution of CDN nodes in each region, see [CDN nodes in Hong Kong \(China\), Macao \(China\), Taiwan \(China\), and regions outside China](https://www.alibabacloud.com/help/doc-detail/163587.htm).
 -   The prices provided in this topic are for reference only. The actual prices on the [console](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.1e5b3a30Sj5ONL#/cdn/detail) shall prevail.
 
 Data transfer in mainland China: The amount of data transfer from 00:00:00 \(UTC+8\) on March 1, 2021 to 23:59:59 \(UTC+8\) on March 9, 2021 is 10,200 GB. The amount of data transfer from 00:00:00 \(UTC+8\) on March 10, 2021 to 01:00:00 \(UTC+8\) on March 10, 2021 is 90 GB. The total amount of data transfer from March 1, 2021 to March 10, 2021 is 10,290 GB. On March 10, 2021, 40 GB of data transfer falls within the 0 GB to 10 TB price tier and the unit price is CNY 0.24 per GB. 50 GB of data transfer falls within the 10 TB to 50 TB price tier and the unit price is CNY 0.23 per GB.
@@ -58,7 +58,7 @@ The following figure shows the price tiers of Alibaba Cloud CDN on March 10, 202
 
 **Note:**
 
--   For more information about the distribution of CDN nodes in each region, see[CDN nodes in Hong Kong \(China\), Macao \(China\), Taiwan \(China\), and regions outside China](https://www.alibabacloud.com/help/zh/doc-detail/163587.htm).
+-   For more information about the distribution of CDN nodes in each region, see [CDN nodes in Hong Kong \(China\), Macao \(China\), Taiwan \(China\), and regions outside China](https://www.alibabacloud.com/help/zh/doc-detail/163587.htm).
 -   The prices provided in this topic are for reference only. The actual prices on the [console](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.1e5b3a30Sj5ONL#/cdn/detail) shall prevail.
 
 Bandwidth resources consumed in mainland China:
