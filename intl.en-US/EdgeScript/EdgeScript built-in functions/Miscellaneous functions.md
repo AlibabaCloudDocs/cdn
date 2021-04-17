@@ -250,7 +250,7 @@ Details about this function:
     Response header:
 
     ```
-    X-RESPOND-OUTPUT：base64_enc_safe=aGVsbG8sIGRzbA
+    X-RESPOND-OUTPUT:base64_enc_safe=aGVsbG8sIGRzbA
     ```
 
 
