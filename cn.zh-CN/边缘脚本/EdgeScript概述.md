@@ -11,7 +11,7 @@
 ![7](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8953907161/p255500.png)
 
 -   变量信息，请参见[EdgeScript内置变量表](/cn.zh-CN/边缘脚本/EdgeScript内置变量表.md)。
--   函数信息，请参见[EdgeScript内置函数库](https://help.aliyun.com/document_detail/126869.html?spm=a2c4g.11186623.6.730.d7aa4d674Q9xAO)。
+-   函数信息，请参见[EdgeScript内置函数库](/cn.zh-CN/边缘脚本/EdgeScript内置函数库/概述.md)。
 -   条件判断，请参见[条件判断相关](/cn.zh-CN/边缘脚本/EdgeScript内置函数库/条件判断相关.md)。
 
 ## 使用费用
