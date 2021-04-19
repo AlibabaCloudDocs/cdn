@@ -43,11 +43,11 @@ Sample responses in XML format
 
 ```
 <? xml version="1.0" encoding="utf-8"? > 
-    <!—Result Root Node-->
+    <!--Result Root Node-->
     <Operation Name+Response>
-        <!—Request ID-->
+        <!--Request ID-->
         <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
-        <!-Response Data-->
+        <!--Response Data-->
     </Operation Name+Response>
 ```
 
