@@ -1,8 +1,8 @@
-# Call method {#reference_etd_fzt_vdb .reference}
+# Call method
 
 CDN API interfaces are called by sending an HTTP GET request to the CDN API server. Such requests are completed by adding the relevant request parameters in the request according to the interface instructions. Results will be returned based on the request’s processing status.
 
-## Request Structure {#section_iy2_3p5_vdb .section}
+## Request Structure
 
 Service Address
 
@@ -24,7 +24,7 @@ Character encoding
 
 Requests and returned results both use UTF-8 character set encoding.
 
-## Common Parameters {#section_c34_plc_b2b .section}
+## Common Parameters
 
 Common Request Parameters
 
@@ -32,13 +32,13 @@ Common request parameters specify the request parameters that must be used by ev
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|Format|String|No|Type of value returned, JSON and  XML supported. The default value is XML.|
-|Version|String|Yes|The API version, with the date format:YYYY-MMDD. The current version is 2014-11- 11.|
+|Format|String|No|Type of valuereturned, JSON and XML supported. The default value is XML.|
+|Version|String|Yes|The API version, with the date format:YYYY-MMDD. The current version is 2014-11-11.|
 |AccessKeyId|String|Yes|The secret key ID used to access services, issued to a user by Alibaba Cloud.|
 |Signature|String|Yes|The signature result string. See the description of the signature mechanism for details on the signature calculation method.|
 |SignatureMethod|String|Yes|The signature method, HMACSHA1 currently supported.|
-|Timestamp|String|Yes|The request’s timestamp. The date format follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ. E.g.: 2014-11-11T12:00:00Z \(Equivalent to 11/11/2014 20:00:00 Beijing time\)|
-|SignatureVersion|String|Yes|Signature algorithm version. The current  version is 1.0.|
+|Timestamp|String|Yes|The request’s timestamp. The date format follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ. E.g.:2014-11-11T12:00:00Z \(Equivalent to 11/11/2014 20:00:00 Beijing time\)|
+|SignatureVersion|String|Yes|Signature algorithm version. The current version is 1.0.|
 |SignatureNonce|String|Yes|A unique random number, used to prevent replay attacks. The user must use different random numbers for different requests.|
 
 Request example:
@@ -55,13 +55,13 @@ Example of XML results returned:
 
 ```
 <? xml version="1.0" encoding="UTF-8"? > 
-<!—Result Root Node-->
+<!--Result Root Node-->
 <Interface Name+Response>
-    <!—Return Request Tag-->
+    <!--Return Request Tag-->
     <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
-    <!—Return Result Data-->
+    <!--Return Result Data-->
 </Interface Name+Response>
-
+                
 ```
 
 Example of XML results returned:
@@ -88,11 +88,11 @@ Example of XML results returned: \(XML results returned include a message statin
 
 ```
 <? xml version="1.0" encoding="UTF-8"? > 
-<!—Result Root Node-->
+<!--Result Root Node-->
 <API name+Response>
-    <!—Return Request Tag-->
+    <!--Return Request Tag-->
     <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
-    <!—Return Result Data-->
+    <!--Return Result Data-->
 </Interface name+Response>
 ```
 
@@ -134,7 +134,7 @@ JSON example:
 }
 ```
 
-## Signature Mechanism {#section_yqy_rnc_b2b .section}
+## Signature Mechanism
 
 Introduction
 
@@ -195,7 +195,7 @@ When a user calls a server, the following method is used to sign the request:
     GET&%2F&AccessKeyId%3Dtestid&Action%3DDescribeCdnService&Format%3DJSON&SignatureMethod%3DHMAC-SHA1&SignatureNonce%3D9b7a44b0-3be1-11e5-8c73-08002700c460&SignatureVersion%3D1.0&Timestamp%3D2015-08-06T02%253A19%253A46Z&Version%3D2014-11-11
     ```
 
-    If we assume the `Access Key Id` is“testid”, `Access Key Secret` is “testsecret”, and the Key used for HMAC calculation is “testsecret&”, the calculated signature value is:
+    If we assume the `Access Key Id` is“testid”, `Access Key Secret` is “testsecret”, and theKey used for HMAC calculation is “testsecret&”, the calculated signature value is:
 
     ```
     KkkQOf0ymKf4yVZLggy6kYiwgFs=
@@ -208,7 +208,7 @@ When a user calls a server, the following method is used to sign the request:
     ```
 
 
-## Sample code {#section_rfb_hpc_b2b .section}
+## Sample code
 
 Attachment: Signature Mechanism\_python\_sdk: [Click download](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/27149/cn_zh/1535445996600/callmethod_sdk_python.zip)
 
