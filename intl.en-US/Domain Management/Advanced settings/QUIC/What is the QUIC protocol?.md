@@ -12,7 +12,7 @@ Alibaba Cloud CDN supports the implementation of QUIC at Layer 7 \(HTTP over QUI
 
 The following figure shows how QUIC works with Alibaba Cloud CDN.
 
-![Diagram](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5163723061/p54879.png)
+![Diagram](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5163723061/p54879.png)
 
 ## Client requirements
 
@@ -23,7 +23,7 @@ QUIC has the following requirements for clients:
 
 ## Billing rules for QUIC
 
-QUIC is a value-added service and you are charged for the number of QUIC requests. For more information, see [CDN pricing](https://www.aliyun.com/price/product?spm=5176.175459.915900.btn2.3749312f2FsBxF#/cdn/detail).
+QUIC is a value-added service and you are charged for the number of QUIC requests. For more information, see [CDN pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
 **Note:** If QUIC requests contain an HTTPS header, you are charged for only HTTPS or QUIC requests based on relevant rules. The billing rules for HTTPS requests and QUIC requests are mutually exclusive. Each request is billed as an HTTPS request or a QUIC request.
 
