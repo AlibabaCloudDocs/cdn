@@ -2,7 +2,7 @@
 
 Alibaba Cloud Content Delivery Network \(CDN\) allows you to refresh and prefetch resources. You can use the refresh feature to force the CDN nodes to retrieve the latest resources from the origin servers. You can use the prefetch feature to fetch frequently requested resources during off-peak hours. This accelerates content delivery. This topic describes how to configure the refresh and prefetch features and how to query the refresh and prefetch records.
 
-The refresh and prefetch features can refresh resources from specific URLs and directories and prefetch resources from specific URLs. For more information, see [Overview](/intl.en-US/Service Management/Refresh and prefetch/Overview.md).
+The refresh and prefetch features can refresh resources from specific URLs and directories and prefetch resources from specific URLs.
 
 1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
