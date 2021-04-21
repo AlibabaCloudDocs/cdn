@@ -2,10 +2,8 @@
 
 调用DescribeDomainHttpCodeDataByLayer获取HTTPCode分布情况。
 
-**调用该接口前，请您注意：**
-
--   不指定StartTime和EndTime时，该接口默认读取过去24小时的数据，同时支持按指定的起止时间查询，两者需要同时指定。
--   支持批量域名查询，多个域名可用英文逗号（,）分隔。
+-   不指定**StartTime**和**EndTime**时，该接口默认读取过去24小时的数据，同时支持按指定的起止时间查询，两者需要同时指定。
+-   支持批量域名查询，多个域名用英文逗号（,）分隔。
 -   最多可获取最近90天的数据。
 
 ## 调试
@@ -16,7 +14,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeDomainHttpCodeDataByLayer|操作接口名，系统规定参数，取值：**DescribeDomainHttpCodeDataByLayer**。 |
+|Action|String|是|DescribeDomainHttpCodeDataByLayer|系统规定参数。取值：**DescribeDomainHttpCodeDataByLayer**。 |
 |DomainName|String|否|example.com|需要查询的加速域名。支持批量域名查询，多个域名用英文逗号（,）分隔。
 
  若参数为空，默认返回所有加速域名合并后的数据。 |
@@ -32,12 +30,12 @@
 
  该参数使用限制如下：
 
- -   3天以内（不包含3天整）支持300秒，3600秒，86400秒。
--   3-31天（不包含31天整）支持3600秒和86400秒。
--   3天以上支持86400秒。
+ -   3天以内（不包含3天整）：支持**300**秒、**3600**秒、**86400**秒。
+-   3~31天（不包含31天整）：支持**3600**秒和**86400**秒。
+-   31天及以上：支持**86400**秒。
 
  不传值和传的值不支持时，使用默认值。 |
-|LocationNameEn|String|否|hangzhou|区域英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。
+|LocationNameEn|String|否|hangzhou|地域英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。
 
  不传值代表所有区域。 |
 |IspNameEn|String|否|telecom|运营商英文名，通过[DescribeCdnRegionAndIsp](~~91077~~)接口获得。
@@ -64,7 +62,7 @@
 请求示例
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeDomainHttpCodeDataByLayer
+http(s)://cdn.aliyuncs.com/?Action=DescribeDomainHttpCodeDataByLayer
 &DomainName=example.com
 &StartTime=2015-12-10T20:00:00Z
 &EndTime=2015-12-10T21:00:00Z
@@ -73,7 +71,7 @@ http://cdn.aliyuncs.com?Action=DescribeDomainHttpCodeDataByLayer
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <DescribeDomainHttpCodeDataByLayerResponse>
@@ -100,7 +98,7 @@ http://cdn.aliyuncs.com?Action=DescribeDomainHttpCodeDataByLayer
 </DescribeDomainHttpCodeDataByLayerResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
