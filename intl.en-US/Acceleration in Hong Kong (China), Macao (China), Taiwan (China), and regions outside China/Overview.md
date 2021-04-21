@@ -42,7 +42,7 @@ Alibaba Cloud CDN can be applied in the following scenarios to accelerate conten
 Alibaba Cloud CDN supports the following metering methods: pay-by-data-transfer and pay-by-bandwidth. Value-added services are billed based on the actual usage, such as the number of HTTPS requests to static resources. Related topics:
 
 -   [Pay by traffic](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Billing rules/Pay by traffic.md)
--   [Pay by bandwidth](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Billing rules/Pay by bandwidth.md)
+-   [Pay-by-bandwidth](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Billing rules/Pay-by-bandwidth.md)
 -   [Billing of value-added services](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Billing rules/Billing of value-added services.md)
 
 Both the subscription and pay-as-you-go billing methods charge fees based on the actual resource usage. Alibaba Cloud CDN provides cost-effective subscription resource plans. For more information, see [CDN/DCDN resource plans](https://common-buy.aliyun.com/?commodityCode=dcdnpaybag#/buy).
@@ -55,10 +55,11 @@ For more information about the pricing of Alibaba Cloud CDN, see [Pricing of CDN
 
 After you create an Alibaba Cloud account and pass real-name verification, you can use Alibaba Cloud CDN in the CDN console or through API operations to accelerate content delivery in regions outside mainland China, including China \(Hong Kong\), China \(Macao\), and China \(Taiwan\). For more information, see:
 
--   [Configure CDN acceleration in accelerated regions outside mainland China in the CDN console](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure CDN acceleration in accelerated regions outside mainland China in the CDN console.md)
+-   [Configure CDN acceleration in accelerated regions outside mainland China in the CDN console](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure Alibaba Cloud CDN in accelerated regions outside mainland China in the CDN
+         console.md)
 -   [Make API calls to accelerate content delivery outside mainland China](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Make API calls to accelerate content delivery outside mainland China.md)
 
-**Note:** Whether you need to file for an ICP number for the domain name to be accelerated depends on the accelerated region. If you select **Global** or **Mainland China Only**, you must file for an ICP number for the domain name. We recommend that you apply for an ICP number through [Alibaba Cloud ICP Filing System](https://beian.aliyun.com/?spm=5176.8142029.388261.3.a0SCC3).
+**Note:** Whether you need to file for an ICP number for the domain name to be accelerated depends on the accelerated region. If you select Global or Mainland China Only, you must file for an ICP number for the domain name. We recommend that you apply for an ICP number through Alibaba Cloud ICP Filing System.
 
 ## Related services
 
@@ -68,7 +69,7 @@ This section describes the related services of Alibaba Cloud CDN to help you und
 |---------------|-------|
 |[Object Storage Service \(OSS\)](/intl.en-US/Product Introduction/What is OSS?.md)|You can integrate Alibaba Cloud CDN with OSS to accelerate access to websites. This way, you can retrieve content directly from CDN nodes to reduce the costs of Internet data transfer.|
 |[ApsaraVideo Live](https://www.alibabacloud.com/help/product/29949.htm)|You can integrate Alibaba Cloud CDN with ApsaraVideo Live to achieve media feed storage, video segmentation and transcoding, access authentication, and content delivery acceleration.|
-|[Alibaba Cloud DNS](https://www.alibabacloud.com/help/zh/product/34269.htm)|You can use Alibaba Cloud DNS that is highly available and scalable to ensure smooth access to resources.|
+|[Alibaba Cloud DNS](https://www.alibabacloud.com/help/product/29697.htm)|You can use Alibaba Cloud DNS that is highly available and scalable to ensure smooth access to resources.|
 |[Elastic Compute Service \(ECS\)](/intl.en-US/Product Introduction/What is ECS?.md)|You can use Alibaba Cloud CDN with ECS to improve website availability, protect origin information, and minimize bandwidth usage costs.|
-|[Server Load Balancer \(SLB\)](/intl.en-US/Product Introduction/What is SLB?.md)|You can specify the IP address of an SLB instance as the origin address to balance the bandwidth required for retrieving resources from the origin server.|
+|[Server Load Balancer \(SLB\)](/intl.en-US/Classic Load Balancer/Product Introduction/What is CLB?.md)|You can specify the IP address of an SLB instance as the origin address to balance the bandwidth required for retrieving resources from the origin server.|
 
