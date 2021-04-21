@@ -6,7 +6,7 @@ Before you call this operation, complete the following steps:
 
 -   [Create an Alibaba Cloud account](https://account.alibabacloud.com/register/intl_register.htm)
 -   [Complete real-name verification](https://www.alibabacloud.com/help/doc-detail/52595.htm)
--   [Activate Alibaba Cloud Content CDN](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure CDN acceleration in accelerated regions outside mainland China in the CDN console.md)
+-   [Activate Alibaba Cloud Content CDN](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure Alibaba Cloud CDN in accelerated regions outside mainland China in the CDN console.md)
 -   [Use Alibaba Cloud SDK for Java](https://www.alibabacloud.com/help/doc-detail/66496.htm)
 
 Alibaba Cloud CDN applies to a wide array of scenarios, including but not limited to:
@@ -38,7 +38,7 @@ If your workloads are deployed in one of the preceding scenarios, and the origin
 
     The endpoint of an Object Storage Service \(OSS\) bucket is added to Alibaba Cloud CDN in this example. The accelerated region is set to global. The OSS bucket delivers images and small files. For more information about the API operation, see [AddCdnDomain](/intl.en-US/New API Reference/Domain name management/AddCdnDomain.md).
 
-    **Note:** If your CDN service is deployed outside mainland China, select global or global \(excluding mainland China\) as the accelerated region. When you select global as the accelerated region, the accelerated domain name must obtain an Internet Content Provider \(ICP\) number. We recommend that you apply for an ICP number through [Alibaba Cloud ICP Filing System](https://beian.aliyun.com/order/index.htm).
+    **Note:** If your CDN service is deployed outside mainland China, select global or global \(excluding mainland China\) as the accelerated region. When you select global as the accelerated region, the accelerated domain name must obtain an Internet Content Provider \(ICP\) number.We recommend that you apply for an ICP number through Alibaba Cloud ICP Filing System.
 
     ```
     import com.aliyuncs.DefaultAcsClient;
@@ -86,5 +86,5 @@ If the API call is successful, the system returns a request ID to you.
 }
 ```
 
-You can log on to the Alibaba Cloud CDN console to view the accelerated domain name and configure a CNAME record for the domain name. For more information about what to do next, see [Configure a CNAME record](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure CDN acceleration in accelerated regions outside mainland China in the CDN console.md).
+You can log on to the Alibaba Cloud CDN console to view the accelerated domain name and configure a CNAME record for the domain name. For more information about what to do next, see [Configure a CNAME record](/intl.en-US/Acceleration in Hong Kong (China), Macao (China), Taiwan (China), and regions outside China/Configure CDN acceleration/Configure Alibaba Cloud CDN in accelerated regions outside mainland China in the CDN console.md).
 
