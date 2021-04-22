@@ -1,6 +1,6 @@
 # Enable image editing
 
-The image editing feature is available to apps and websites whose services involve images. You must enable image editing before you can use it. This topic describes how to edit images. You can set parameters to resize, crop, and rotate images based on business requirements.
+The image editing feature is available to apps and websites whose services use images. You must enable image editing before you can use it. This topic describes how to edit images. You can set parameters to resize, crop, and rotate images based on business requirements.
 
 ## Enable image editing
 
@@ -25,7 +25,7 @@ The image editing feature is available to apps and websites whose services invol
     |**Supported Image Formats**|Select the formats of images that you want to edit. Supported formats are JPEG, PNG, WebP, BMP, GIF, TIFF, and JPEG 2000.|
     |**Automatic Conversion to WebP**|Turn on **Automatic Conversion to WebP** based on your business requirements. After you turn on **Automatic Conversion to WebP**, images in other formats are automatically converted to the WebP format. **Note:** After you enable automatic conversion to WebP, the cache hit ratio decreases. It automatically increases after a short period of time. Do not enable this feature during peak hours. |
     |**Automatic Rotation**|Turn on **Automatic Rotation** based on your business requirements. After you turn on **Automatic Rotation**, images are automatically rotated to a proper orientation. Only images that carry the orientation parameter are rotated. **Note:** After you enable automatic conversion to WebP, the cache hit ratio decreases. It automatically increases after a short period of time. Do not enable this feature during peak hours. |
-    |**Automatic Compression**|Automatic compression supports only the JPG and WebP formats. It compresses images without changing the width, height, or format of the images. Therefore, automatic compression can reduce the amount of data transfer. **Automatic Compression** is enabled by default. You can enable or disable automatic compression based on your business requirements. If you set Automatic Compression to 90%, the quality of images is changed to 90% of the original quality.
+    |**Automatic Compression**|Automatic compression supports only the JPEG and WebP formats. It compresses images without changing the width, height, or format of the images. Therefore, automatic compression can reduce the amount of data transfer. **Automatic Compression** is enabled by default. You can enable or disable automatic compression based on your business requirements. If you set Automatic Compression to 90%, the quality of images is changed to 90% of the original quality.
 
     -   100%: disables automatic compression.
     -   Values other than 100%: enables automatic compression. |
@@ -61,7 +61,7 @@ You can pass one or more actions to image\_process based on your business requir
 
 |Feature|Action|Description|
 |-------|------|-----------|
-|[Convert image formats](/intl.en-US/Domain Management/Performance optimization/Image editing/Convert image formats.md)|format|Converts image to specified formats.|
+|[Convert image formats](/intl.en-US/Domain Management/Performance optimization/Image editing/Convert image formats.md)|format|Converts images to specified formats.|
 |[Change image quality](/intl.en-US/Domain Management/Performance optimization/Image editing/Change image quality.md)|quality|Changes the quality of images.|
 |[Crop images](/intl.en-US/Domain Management/Performance optimization/Image editing/Crop images.md)|crop|Crops images based on specified sizes.|
 |[Resize images](/intl.en-US/Domain Management/Performance optimization/Image editing/Resize images.md)|resize|Resizes images to specified sizes.|
@@ -73,7 +73,7 @@ You can pass one or more actions to image\_process based on your business requir
 -   contrast: specifies the contrast of images.
 -   sharpen: specifies the sharpness of images.
 
-|Changes the brightness, contrast, and sharpness of images.|
+|Adjusts the brightness, contrast, and sharpness of images.|
 |[Manage image watermarks](/intl.en-US/Domain Management/Performance optimization/Image editing/Manage image watermarks.md)|watermark|Adds picture or text watermarks to images.|
 |[Query image information](/intl.en-US/Domain Management/Performance optimization/Image editing/Query image information.md)|info|Queries image information, including the width, height, format, and quality.|
 
