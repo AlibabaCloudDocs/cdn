@@ -1,170 +1,149 @@
-# DescribeCdnDomainDetail {#reference_crt_dny_5db .reference}
+# DescribeCdnDomainDetail
 
-Obtain the basic information for the specified CDN domain name configuration.
+Queries the basic information about an accelerated domain name.
 
-## Request parameters {#section_cqh_sny_5db .section}
+## Debugging
 
-|Parameters|Type|Required|Example values|Description|
-|:---------|:---|:-------|:-------------|:----------|
-|Action|String|Yes|Describecdndomaindetail| The name of this interface. Value:
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different software development kits \(SDKs\).](https://api.aliyun.com/#product=Cdn&api=DescribeCdnDomainDetail&type=RPC&version=2014-11-11)
 
- DescribeCdnDomainDetail
+## Request parameters
 
- |
-|DomainName|String|Yes|www.yourdomain.com| Domain name.
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|DescribeCdnDomainDetail|The operation that you want to perform. Set the value to **DescribeCdnDomainDetail**. |
+|DomainName|String|Yes|www.yourdomain.com|The accelerated domain name. You can specify only one domain name in each query. |
 
- |
+## Response parameters
 
-## Return Parameters {#section_rkq_d4y_5db .section}
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|GetDomainDetailModel|Struct| |The detailed information about the accelerated domain name. |
+|CdnType|String|web|The workload type of the accelerated domain name.
 
-|Parameters|Type|Example values|Description|
-|:---------|:---|:-------------|:----------|
-|RequestId|String|15C66C7B-671A-4297-9187-2C4477247A74| Requestid.
+ -   **web**: images and small files.
+-   **download**: larges files.
+-   **video**: on-demand video and audio streaming.
+-   **liveStream**: live streaming. |
+|Cname|String|domain.w.alikunlun.net|The Canonical Name \(CNAME\) that is assigned to the accelerated domain name. You must add the CNAME record in the system of your DNS service provider to map the accelerated domain name to the CNAME. |
+|Description|String|Live streaming|The remarks of the accelerated domain name. |
+|DomainName|String|yourdomain.com|The accelerated domain name. |
+|DomainStatus|String|online|The status of the accelerated domain name. |
+|GmtCreated|String|2015-06-25T03:30:50Z|The time when the accelerated domain name was added to Alibaba Cloud Content Delivery Network \(CDN\). |
+|GmtModified|String|2017-06-25T03:30:50Z|The last time when the accelerated domain name was modified. |
+|HttpsCname|String|yourdomain.com.alikunlun.com|The CNAME for which the HTTPS protocol is enabled. |
+|Region|String|cn-hangzhou|The region where the domain name resides. |
+|ResourceGroupId|String|abcd1234abcd1234|The ID of the resource group. |
+|Scope|String|domestic|The accelerated region. |
+|ServerCertificateStatus|String|on|Indicates whether the Security Socket Layer \(SSL\) certificate is enabled.
 
- |
-|GetDomainDetailModel| | | Domain name details.
+ -   **on**: enabled
+-   **off**: disabled |
+|SourceModels|Array| |The information about the origin server. |
+|SourceModel| | | |
+|Content|String|test.com|The address of the origin server. |
+|Enabled|String|online|The status of the origin server. |
+|Port|Integer|80|The port over which requests are transmitted. Ports 443 and 80 are supported. |
+|Priority|String|20|The priority of the origin server if multiple origin servers are specified. |
+|Type|String|domain|The type of origin server. Valid values:
 
- |
-|└GmtCreated|String|2015-06-25T03:30:50Z| Creation time.
+ -   **ipaddr**: a server that you can access by using an IP address.
+-   **domain**: a server that you can access by using a domain name.
+-   **oss**: an Object Storage Service \(OSS\) bucket. |
+|SourcePort|Integer|80|The port over which requests are redirected to the origin server. |
+|SourceType|String|domain|The type of the origin server. Valid values:
 
- |
-|└GmtModified|String|2017-06-25T03:30:50Z| Recent modification time.
+ -   **ipaddr**: a server that you can access by using an IP address.
+-   **domain**: a server that you can access by using a domain name.
+-   **oss**: an OSS bucket. |
+|Sources|List|yourdomain.com|The address of the origin server. The address can be a domain name or an IP address. |
+|RequestId|String|15C66C7B-671A-4297-9187-2C4477247A74|The ID of the request. |
 
- |
-|└ SourceType|String|domain| Source site type. Value meaning:
+## Examples
 
--   ipaddr indicates IP source site.
--   domain indicates domain name source site.
--   oss indicates the specified OSS Bucket is the source site.
-
- |
-|└DomainStatus|String|online| The domain name status.
-
- |
-|└SourcePort|Integer|80| The source port number.
-
- |
-|└CdnType|String|web| The business type of CDN domain name. Value meaning:
-
--   web: the acceleration of images and small files. 
--   download: acceleration of large file downloads.
--   video: the acceleration of the audio and video on demand.
--   liveStream: the accerleration of the live streaming media.
-
- |
-|└Cname|String|domain.w.alikunlun.net| The CNAME domain name generated for the CDN domain name. It is required to resolve the CNAME of the CDN domain name to this domain name at the DNS provider.
-
- |
-|└HttpsCname|String|yourdomain.com.alikunlun.com| Activate the CNAME domain name of the https.
-
- |
-|Doubledomainname|String|yourdomain.com| Domain name.
-
- |
-|└Description|String|The live domain name.| Note.
-
- |
-|└ServerCertificateStatus|String|on| Whether the ssl certificate is activated.
-
--   on indicates the certificate is activated.
--   off indicates the certificate is deactivated.
-
- |
-|└ServerCertificate|String|——-BEGIN CERTIFICATE——-\\nMIxxxxxxxxx8LDVT2o=\\n——-END Certificate ---| If activated, this is the certificate public key.
-
- |
-|└Region|String|cn-hangzhou| The unit information of the live domain name.
-
- |
-|└Scope|String|domestic| Region.
-
- |
-|└CertificateName|String|Certificate 1| The name of the certificate.
-
- |
-|└ResourceGroupId|String|abcd1234abcd1234| The resource group ID.
-
- |
-|└SourceModels| | | The source site information.
-
- |
-|└Content|String|test.com| Source site address.
-
- |
-|└Type|String|domain| The source site type. Value:
-
--   ipaddr: IP source site.
--   domain: the domain name source site.
--   oss: OSS Bucket is the source site.
-
- |
-|└Port|Integer|80| Port that supports 443 and 80.
-
- |
-|└Enabled|String|online| Status.
-
- |
-|└Priority|String|20| Priority.
-
- |
-|└Sources|String|Source site information.| \{ "Source": \[ "yourdomain.com" \] \}
-
- |
-
-## Examples {#section_qbz_lqy_5db .section}
-
-**Request example**
+Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeCdnDomainDetail&Public request parameter
+http://cdn.aliyuncs.com/?Action=DescribeCdnDomainDetail
+&DomainName=example.com
+&<Common request parameters>
 ```
 
-**Normal return example**
+Sample success responses
 
--   JSON format
+`XML` format
 
-    ```
-    
-        "GetDomainDetailModel":{
-            "CdnType":"web",
-            "Cname":"bb.test.com.w.kunlunle.com",
-            "DomainName":"bb.test.com",
-            "DomainStatus":"online",
-            "GmtCreated":"2015-06-25T03:30:50Z",
-            "GmtModified":"2015-06-25T03:30:53Z",
-            "HttpsCname":"bb-test-com.alikunlun.com",
-            "Region":"huadong",
-            "ResourceGroupId":"abcd1234abcd1234",
-            "Sourcemodels ":{
-                "SourceModel":[{
-                    "Content":"test.com",
-                    "Enabled":"online",
-                    "Port":80,
-                    "Priority":"20",
-                    "Type":"domain"
-                
-            
-            "Sourcetype": "Domain ",
-            "Sources":{
-                "Source":["test.com"]
-            
-        
-        "Requestid": "maid"
-    
-    ```
+```
+<DescribeCdnDomainDetailResponse>
+    <GetDomainDetailModel>
+        <CdnType>web</CdnType>
+        <Cname>example1.com.w.kunlunle.com</Cname>
+        <DomainName>example1.com</DomainName>
+        <DomainStatus>online</DomainStatus>
+        <GmtCreated>2015-06-25T03:30:50Z</GmtCreated>
+        <GmtModified>2015-06-25T03:30:53Z</GmtModified>
+        <HttpsCname>example1.com.alikunlun.com</HttpsCname>
+        <SourceType>domain</SourceType>
+        <Region>huadong</Region>
+        <ResourceGroupId>abcd1234abcd1234</ResourceGroupId>
+        <Sources>
+            <Source>example.com</Source>
+        </Sources>
+        <SourceModels>
+              <SourceModel>
+                      <Enabled>online</Enabled>
+                      <Port>80</Port>
+                      <Type>domain</Type>
+                      <Content>example.com</Content>
+                      <Priority>20</Priority>
+              </SourceModel>
+        </SourceModels>
+    </GetDomainDetailModel>
+    <RequestId>C6AAEE3B-5859-40B6-903A-884DC4C448AF</RequestId>
+</DescribeCdnDomainDetailResponse>
+```
 
+`JSON` format
 
-**Exception return example**
+```
+{
+  "GetDomainDetailModel": {
+    "CdnType": "web",
+    "Cname": "example1.com.w.kunlunle.com",
+    "DomainName": "example1.com",
+    "DomainStatus": "online",
+    "GmtCreated": "2015-06-25T03:30:50Z",
+    "GmtModified": "2015-06-25T03:30:53Z",
+    "HttpsCname": "example1.com.alikunlun.com",
+    "SourceType": "domain",
+    "Region":"huadong",
+    "ResourceGroupId":"abcd1234abcd1234",
+    "SourceModels": {
+        "SourceModel": [
+            {
+             "Enabled": "online",
+             "Port": 80,
+             "Type": "domain",
+             "Content": "example.com",
+             "Priority": "20"
+             }
+           ]
+            },
+    "Sources": {
+      "Source": [
+        "example.com"
+      ]
+    }
+  },
+  "RequestId": "18CF38AA-1275-451D-A12B-4EC0BF1C5E30"
+}
+```
 
--   JSON format
+## Error codes
 
-    ```
-    
-        "Code":"InternalError",
-        "HostId":"cdn.aliyuncs.com",
-        "Message":"The request processing has failed due to some unknown error.",
-        "RequestId":"16A96B9A-F203-4EC5-8E43-CB92E68F4CD8"
-    
-    ```
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
+|400|InvalidParameter|Describe live region parameters have error.|The error message returned because the Region parameter is set to an invalid value.|
+|400|NotExist|Not find the certificate info.|The error message returned because the specified SSL certificate does not exist.|
 
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
 
