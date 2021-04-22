@@ -65,7 +65,11 @@ Fetch允许您配置API的解压缩模式，例如`fetch("https://www.example.co
 
 ## CdnProxy
 
-当您使用Fetch请求数据时，可以选择使用CDN链路来代理请求，例如`fetch("http://www.example.com", {cdnProxy: true})`。您Fetch的域名必须是已经在阿里云CDN上的域名，否则会返回403，该方法会自动触发所有CDN的业务逻辑，包括缓存、回源等。
+当您在ER内发起Fetch子请求时，默认由ER直接向公网发起HTTP请求（例如下图中的第5步），您也可以用cdnProxy通过CDN回源链路来代理请求（请求链路见下图中的7→8→9→10），cdnProxy的用法是`fetch("http://www.example.com", {cdnProxy: true})`，使用cdnProxy的好处在于Fetch的URL获得的数据将默认缓存在CDN中，后续的Fetch请求可直接命中缓存并返回给ER，无需真正地向源站重新拉取数据。
+
+**说明：** 您通过cdnProxy发起Fetch的域名（例如示例中的www.example.com）必须是已经接入阿里云CDN的域名，否则会返回403，该方法会自动触发域名在CDN上的所有配置，包括缓存、回源等规则。
+
+![原理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2099230161/p86758.png)
 
 ## content-length
 
