@@ -11,5 +11,5 @@ The following table describes the metering methods that are supported by Alibaba
 |Billing of value-added services|If HTTPS secure acceleration is enabled, you are charged for it.
 
 |[Billing of value-added services](/intl.en-US/Pricing/Billing method/Billing of value-added services.md)|
-|Subscription outbound data transfer plans|You are charged based on an annual subscription. You can make a one-off payment and the data transfer plan immediately takes effect after you complete the payment. The amount of data transfer that exceeds the quota of the plan is billed on a pay-as-you-go basis.|[Pricing of subscription resource plans](/intl.en-US/Pricing/Billing method/Pricing of subscription resource plans.md)|
+|Subscription outbound data transfer plans|You are charged based on an annual subscription. You can make a one-off payment and the data transfer plan immediately takes effect after you complete the payment. The amount of data transfer that exceeds the quota of the plan is billed on a pay-as-you-go basis.|None |
 
