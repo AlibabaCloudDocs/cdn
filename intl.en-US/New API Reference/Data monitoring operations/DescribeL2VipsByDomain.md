@@ -2,7 +2,7 @@
 
 Queries the virtual IP addresses of L2 Content Delivery Network \(CDN\) nodes for a specific domain name.
 
-This operation is available to only users whose daily peak bandwidth is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://selfservice.console.aliyun.com/ticket/createIndex) to apply for permissions to use this operation.
+This operation is available to only users whose daily peak bandwidth is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
 
 The maximum number of time that each user can call this operation per second is 40.
 
@@ -41,17 +41,17 @@ Sample success responses
 
 ```
 <DescribeL2VipsByDomainResponse>
-	  <Vips>
-		    <Vip>xxx.111.111/25</Vip>
-		    <Vip>xxx.112.112/25</Vip>
-		    <Vip>xxx.33.190/25</Vip>
-		    <Vip>xxx.96.109/25</Vip>
-		    <Vip>xxx.20.226/25</Vip>
-		    <Vip>xxx.19.140/25</Vip>
-		    <Vip>xxx.215.140/25</Vip>
-	  </Vips>
-	  <RequestId>820E7900-5CA9-4AEF-B0DD-20ED5F64BE55</RequestId>
-	  <DomainName>example.com</DomainName>
+      <Vips>
+            <Vip>xxx.111.111/25</Vip>
+            <Vip>xxx.112.112/25</Vip>
+            <Vip>xxx.33.190/25</Vip>
+            <Vip>xxx.96.109/25</Vip>
+            <Vip>xxx.20.226/25</Vip>
+            <Vip>xxx.19.140/25</Vip>
+            <Vip>xxx.215.140/25</Vip>
+      </Vips>
+      <RequestId>820E7900-5CA9-4AEF-B0DD-20ED5F64BE55</RequestId>
+      <DomainName>example.com</DomainName>
 </DescribeL2VipsByDomainResponse>
 ```
 
