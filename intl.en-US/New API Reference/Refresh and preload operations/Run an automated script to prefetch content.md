@@ -42,7 +42,7 @@ Before you run an automated script to refresh or prefetch content, make sure tha
      from aliyunsdkcdn.request.v20180510.DescribeRefreshTasksRequest import DescribeRefreshTasksRequest
      from aliyunsdkcdn.request.v20180510.DescribeRefreshQuotaRequest import DescribeRefreshQuotaRequest
     except:
-     sys.exit("[Error] Please pip install aliyun-python-sdk-cdn and aliyun-python-sdk-core ，please install now......")
+     sys.exit("[Error] Please pip install aliyun-python-sdk-cdn and aliyun-python-sdk-core, please install now......")
     
     class Refresh(object):
     
