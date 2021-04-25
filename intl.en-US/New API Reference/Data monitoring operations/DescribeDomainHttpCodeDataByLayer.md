@@ -2,9 +2,7 @@
 
 Queries the numbers of HTTP status codes during a specified period of time.
 
-**Before you call this operation, take note of the following rules:**
-
--   If you do not set the StartTime or EndTime parameter, data within the last 24 hours is queried. If you set both the StartTime and EndTime parameters, data within the specified time range is queried. You must set both parameters or leave both of them empty.
+-   If you do not set the **StartTime** or **EndTime** parameter, data within the last 24 hours is queried. If you set both the StartTime and EndTime parameters, data within the specified time range is queried. You must set both parameters or leave both of them empty.
 -   You can specify multiple domain names and separate them with commas \(,\).
 -   You can query data within the last 90 days.
 
@@ -19,7 +17,7 @@ Queries the numbers of HTTP status codes during a specified period of time.
 |Action|String|Yes|DescribeDomainHttpCodeDataByLayer|The operation that you want to perform. Set the value to **DescribeDomainHttpCodeDataByLayer**. |
 |DomainName|String|No|example.com|The accelerated domain name. You can specify multiple domain names and separate them with commas \(,\).
 
- If you do not specify a domain name, data of all domain names are queried and merged. |
+ If you do not specify a domain name, data of all domain names is queried and merged. |
 |StartTime|String|No|2020-07-05T22:00:00Z|The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
 
  The minimum data collection interval is 5 minutes.
@@ -30,14 +28,14 @@ Queries the numbers of HTTP status codes during a specified period of time.
  The end of the time range to query. The end time must be later than the start time. |
 |Interval|String|No|300|The interval at which data is collected. Unit: seconds. The valid values vary based on the specified time range.
 
- Valid values are:
+ Valid values:
 
- -   If the specified time range is less than 3 days, valid values are 300, 3600, and 86400.
--   If the specified time range is 3 to 31 days \(31 days excluded\), valid values are 3600 and 86400.
--   If the specified time range is 31 days or longer, the valid value is 86400.
+ -   If the specified time range is less than 3 days, valid values are **300**, **3600**, and **86400**.
+-   If the specified time range is 3 to 31 days \(31 days excluded\), valid values are **3600** and **86400**.
+-   If the specified time range is 31 days or longer, the valid value is **86400**.
 
  If you do not set this parameter or the specified value is invalid, the default value is used. |
-|LocationNameEn|String|No|hangzhou|The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
+|LocationNameEn|String|No|hangzhou|The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
 
  If you do not specify a region, data in all regions is queried. |
 |IspNameEn|String|No|telecom|The name of the Internet service provider \(ISP\) for your Content Delivery Network \(CDN\) service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent ISP list.
@@ -64,7 +62,7 @@ Queries the numbers of HTTP status codes during a specified period of time.
 Sample requests
 
 ```
-http://cdn.aliyuncs.com?Action=DescribeDomainHttpCodeDataByLayer
+http(s)://cdn.aliyuncs.com/?Action=DescribeDomainHttpCodeDataByLayer
 &DomainName=example.com
 &StartTime=2015-12-10T20:00:00Z
 &EndTime=2015-12-10T21:00:00Z
