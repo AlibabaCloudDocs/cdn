@@ -21,7 +21,7 @@ Brotli是开源的一种新型压缩算法，开启Brotli压缩功能，CDN节�
 -   源站开启了压缩功能，且服务端响应中携带了`content_encoding`，则CDN的压缩功能将不再生效。
 -   同时开启Brotli压缩和Gzip压缩，且客户端请求头`Accept-Encoding`同时携带`br`和`gzip`时，只有Brotli压缩生效。
 -   如果您同时开启了页面优化和压缩功能（智能压缩或者Brotli压缩），页面优化功能将会失效，CDN只会对文件进行压缩。
--   Gzip的浏览器兼容性高于Brotli，Gzip基本兼容所有浏览器，Brotli只兼容部分浏览器，单击[这里](https://caniuse.com)查询浏览器兼容情况。
+-   Gzip的浏览器兼容性高于Brotli，Gzip基本兼容所有浏览器，Brotli只兼容部分浏览器，单击[浏览器兼容](https://caniuse.com)查询网站，查询浏览器的兼容情况。
 
 ## 操作步骤
 
