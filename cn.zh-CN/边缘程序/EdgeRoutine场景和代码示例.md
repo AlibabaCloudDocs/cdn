@@ -28,8 +28,8 @@ Edgeroutine支持Web标准API - Service Worker API，兼容标准ES6语法，且
 
 我们提供edge.ialicdn.com域名用来测试已默认配置的JavaScript Demo，示例源码见文章末尾。
 
--   示例代码使用js构建不同代码片段用于解决各种常见场景，目前是15+场景供您参考和学习。
--   为区分不同场景的示例，须在请求的body中携带json格式的kv对来将请求路由到不同的函数。
+-   示例代码使用JS构建不同代码片段用于解决各种常见场景，目前是15+场景供您参考和学习。
+-   为区分不同场景的示例，须在请求的body中携带JSON格式的KV对来将请求路由到不同的函数。
 
 ## Hello World
 
@@ -41,7 +41,7 @@ Edgeroutine支持Web标准API - Service Worker API，兼容标准ES6语法，且
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "helloworld"}'
 ```
 
-![hello world](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9811117951/p102006.gif)
+![hello world](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9811117951/p102006.gif)
 
 ## Geo
 
@@ -53,11 +53,11 @@ curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "helloworld"}'
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "geo"}' -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36"
 ```
 
-![Geo](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9811117951/p102007.gif)
+![Geo](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9811117951/p102007.gif)
 
 ## Fetch
 
-需求：该示例场景实现一个简单的边缘代理服务，在JS代码中调用内置api fetch做了http自请求，响应给客户端fetch的最终内容。
+需求：该示例场景实现一个简单的边缘代理服务，在JS代码中调用内置api fetch做了HTTP自请求，响应给客户端fetch的最终内容。
 
 命令：
 
@@ -65,7 +65,7 @@ curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "geo"}' -H "User-Agent: M
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "fetch", "url": "http://a.hongxiaolong.com/xx"}'
 ```
 
-![fetch](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9811117951/p102008.gif)
+![fetch](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9811117951/p102008.gif)
 
 ## Request
 
@@ -77,7 +77,7 @@ curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "fetch", "url": "http://a
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"request", "headers":{"aa":"bb"}, "body":"Hello ER!"}'
 ```
 
-![request](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9811117951/p102009.gif)
+![request](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9811117951/p102009.gif)
 
 ## Response
 
@@ -89,7 +89,7 @@ curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"request", "headers":{"aa":"b
 curl -v 'http://edge.ialicdn.com/?xx=yy' -d '{"name":"response", "headers":{"ra":"rb"}}'
 ```
 
-![response](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9811117951/p102010.gif)
+![response](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9811117951/p102010.gif)
 
 ## AB test
 
@@ -101,7 +101,7 @@ curl -v 'http://edge.ialicdn.com/?xx=yy' -d '{"name":"response", "headers":{"ra"
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"ab-test"}' -H "user-agent: a/canary-client/b"
 ```
 
-![ab test](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9811117951/p102011.gif)
+![ab test](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9811117951/p102011.gif)
 
 ## Multi origin
 
@@ -113,11 +113,11 @@ curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"ab-test"}' -H "user-agent: a
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"multi-origin"}'
 ```
 
-![origin](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0911117951/p102012.gif)
+![origin](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0911117951/p102012.gif)
 
 ## Precache/Prefetch
 
-需求：该示例场景实现一个简单的\(CDN\)预热功能，预热任务在响应客户端时将异步完成（需下个版本支持，目前忽略\)。
+需求：该示例场景实现一个简单的CDN预热功能，预热任务在响应客户端时将异步完成（需下个版本支持，目前忽略）。
 
 命令：
 
@@ -125,9 +125,9 @@ curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"multi-origin"}'
 curl -v 'http://edge.ialicdn.com/' -d '{"name": "prefetch", "prefetch": ["http://a.hongxiaolong.com/prefetch", "http://b.hongxiaolong.com/prefetch"]}'
 ```
 
-![Precache/Prefetch •](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0911117951/p102013.gif)
+![Precache/Prefetch •](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0911117951/p102013.gif)
 
-![Precache/Prefetch •1](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1911117951/p102014.gif)
+![Precache/Prefetch •1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1911117951/p102014.gif)
 
 ## Race
 
@@ -139,7 +139,7 @@ curl -v 'http://edge.ialicdn.com/' -d '{"name": "prefetch", "prefetch": ["http:/
 curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"race", "fetchList" : [ "https://www.taobao.com", "https://www.tmall.com", "https://www.baidu.com" ]}'
 ```
 
-![race](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1911117951/p102016.gif)
+![race](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1911117951/p102016.gif)
 
 ## ESI
 
@@ -151,7 +151,7 @@ curl -v 'http://edge.ialicdn.com/?x=y' -d '{"name":"race", "fetchList" : [ "http
 curl -v 'http://edge.ialicdn.com/' -d '{"name":"esi","esi" : "<esi:include src=@http://www.baidu.com@> This is after the ESI for www.baidu.com"}'
 ```
 
-![esi](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1911117951/p102017.gif)
+![esi](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1911117951/p102017.gif)
 
 ## Log
 
@@ -163,7 +163,7 @@ curl -v 'http://edge.ialicdn.com/' -d '{"name":"esi","esi" : "<esi:include src=@
 curl -v 'http://edge.ialicdn.com/' -d '{"name":"log"}'
 ```
 
-![log](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2911117951/p102018.gif)
+![log](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2911117951/p102018.gif)
 
 ## 3xx
 
@@ -175,7 +175,7 @@ curl -v 'http://edge.ialicdn.com/' -d '{"name":"log"}'
 curl -v 'http://edge.ialicdn.com/' -d '{"name":"3xx"}'
 ```
 
-![3xx](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2911117951/p102020.gif)
+![3xx](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2911117951/p102020.gif)
 
 ## Redirect
 
@@ -187,7 +187,7 @@ curl -v 'http://edge.ialicdn.com/' -d '{"name":"3xx"}'
 curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "redirect"}'
 ```
 
-![redirect](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2911117951/p102021.gif)
+![redirect](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2911117951/p102021.gif)
 
 ## Deny bot
 
@@ -199,7 +199,7 @@ curl -v 'http://edge.ialicdn.com/a/b?x=y' -d '{"name": "redirect"}'
 curl -v 'http://edge.ialicdn.com' -d '{"name":"deny-bot"}' -H "user-agent: xxxspider"
 ```
 
-![deny bot](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2911117951/p102022.gif)
+![deny bot](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2911117951/p102022.gif)
 
 ## Waf
 
@@ -211,7 +211,7 @@ curl -v 'http://edge.ialicdn.com' -d '{"name":"deny-bot"}' -H "user-agent: xxxsp
 curl -v 'http://edge.ialicdn.com' -d '{"name":"waf", "city":"Hangzhou"}'
 ```
 
-![waf](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2911117951/p102023.gif)
+![waf](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2911117951/p102023.gif)
 
 ## 示例源码
 
