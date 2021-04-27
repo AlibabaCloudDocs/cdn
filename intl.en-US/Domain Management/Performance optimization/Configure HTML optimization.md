@@ -14,7 +14,7 @@ Alibaba Cloud Content Delivery Network \(CDN\) supports the HTML optimization fe
 
 -   If the origin server has Gzip or Brotli compression enabled, HTML optimization does not take effect. Alibaba Cloud CDN directly returns compressed files to clients.
 
-    If you want to enable HTML optimization without disabling Gzip or Brotli compression on the origin server, you can set Alibaba Cloud CDN to delete the Accept-Encoding header from requests before they are redirected to the origin server. This way, both HTML optimization and Gzip or Brotli compression can work at the same time. For more information about how to delete the Accept-Encoding header, see [Create a custom HTTP response header](/intl.en-US/Domain Management/Cache settings/Create a custom HTTP response header.md).
+    If you want to enable HTML optimization without disabling Gzip or Brotli compression on the origin server, you can set Alibaba Cloud CDN to delete the Accept-Encoding header from requests before they are redirected to the origin server. This way, both HTML optimization and Gzip or Brotli compression can work at the same time. For more information about how to delete the Accept-Encoding header, see [Customize an HTTP request header](/intl.en-US/Domain Management/Back-to-origin settings/Customize an HTTP request header.md).
 
 -   If both HTML optimization and Intelligent or Brotli compression are enabled, HTML optimization does not take effect. Alibaba Cloud CDN only compresses files.
 
