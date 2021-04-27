@@ -140,7 +140,7 @@ OSS作为CDN的源站，通过CDN加速分发，用户通过CDN节点就近获�
 
 5.  在OSS控制台上，打开加速域名的CDN缓存自动刷新开关。
 
-    **说明：** 执行本操作后，如果Object有更新，OSS会自动将更新后的Object刷新到CDN的缓存节点上，从而实现文件更新后实时刷新缓存的功能。当您解除Bucket与用户域名之间的绑定关系后，OSS控制台将不支持CDN缓存自动刷新操作，您可以在CDN控制台进行配置。操作方法，请参见[配置刷新和预热](/intl.zh-CN/服务管理/刷新预热/配置刷新和预热.md)。
+    **说明：** 执行本操作后，如果Object有更新，OSS会自动将更新后的Object刷新到CDN的缓存节点上，从而实现文件更新后实时刷新缓存的功能。当您解除Bucket与用户域名之间的绑定关系后，OSS控制台将不支持CDN缓存自动刷新操作，您可以在CDN控制台进行配置。操作方法，请参见[刷新和预热资源](/intl.zh-CN/服务管理/刷新和预热资源.md)。
 
     1.  登录[OSS管理控制台](https://oss.console.aliyun.com/overview)。
 
@@ -155,7 +155,7 @@ OSS作为CDN的源站，通过CDN加速分发，用户通过CDN节点就近获�
         ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3111008951/p87718.png)
 
 
-配置CNAME生效后，如果您直接通过CDN加速域名访问OSS上的资源，则会提示错误AccessDenied，可以通过如下方法访问OSS资源 。
+配置CNAME生效后，如果您直接通过CDN加速域名访问OSS上的资源，则会提示错误AccessDenied，可以通过如下方法访问OSS资源：
 
 -   当您通过网页访问OSS资源时，可以通过CDN加速域名+文件访问路径的方式访问。例如：当CDN加速域名为`mydomain.cn`，需要访问根目录下的文件123.jpg时，访问地址为`http://mydomain.cn/123.jpg`。
 -   当您通过客户端访问OSS资源时，可以将客户端中OSS的Bucket域名配置为CDN加速域名，再通过CDN加速域名访问。
