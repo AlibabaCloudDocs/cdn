@@ -1,16 +1,22 @@
 ---
-keyword: [content moderation, real-time logs, value-added services, HTTPS]
+keyword: [content moderation, real-time log delivery, value-added services, HTTPS]
 ---
 
 # Billing of value-added services
 
-This topic describes the billing items and rules for value-added services of Alibaba Cloud Content Delivery Network \(CDN\).
+This topic describes the billable items and billing rules for value-added services of Alibaba Cloud Content Delivery Network \(CDN\).
 
-## Static HTTPS requests
+## HTTPS requests for static content
 
-After you enable HTTPS in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com), you are charged for static HTTPS. For more information about the pricing, see [CDN pricing](https://www.alibabacloud.com/product/cdn/pricing).
+After you enable HTTPS in the [Alibaba Cloud CDN console](https://account.alibabacloud.com/login/login.htm), you are charged for HTTPS requests that request static content. For more information, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
-## DCDN
+## QUIC requests
 
-[Dynamic Route for CDN]() \(DCDN\) is an independent Alibaba Cloud service. If you set the business type to **DCDN** in the Alibaba Cloud CDN console when you add a domain name to Alibaba Cloud CDN, you can go to the [DCDN console](https://dcdn.console.aliyun.com/?spm=5176.11785003.aliyun_sidebar.aliyun_sidebar_dcdn.2921142fPeink5#/overview) to view and manage the domain name. **DCDN**-accelerated domain names that are retained in the CDN console are billed based on the pricing of the DCDN service. If you have purchased CDN or DCDN resource plans, Alibaba Cloud CDN and DCDN can share resource plans of outbound traffic or static HTTPS requests.
+After you enable QUIC in the [Alibaba Cloud CDN console](https://account.alibabacloud.com/login/login.htm), you are charged for QUIC requests. For more information, see [Value-added services - QUIC requests](https://www.alibabacloud.com/product/cdn/pricing).
+
+**Note:** By default, Alibaba Cloud CDN does not generate billing details about requests for dynamic content. Therefore, Alibaba Cloud CDN does not include QUIC requests for dynamic content in the billable items. If a domain name uses Dynamic Route for CDN \(DCDN\) to accelerate content delivery and requests for dynamic content are generated, billing details about these requests are generated.
+
+## Real-time log delivery
+
+To use this feature,log on to the [Alibaba Cloud CDN console](https://account.alibabacloud.com/login/login.htm) and choose **Logs** \> **Real-time Logging** in the left-side navigation pane. You are charged for the number of log entries. For more information, see [Value-added services - Real-time log delivery](https://www.alibabacloud.com/product/cdn/pricing).
 
