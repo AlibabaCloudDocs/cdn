@@ -91,7 +91,7 @@ CDN提供以下相关API接口。
 |API|描述|
 |---|--|
 |[PushObjectCache](/cn.zh-CN/新版API参考/刷新预热类接口/预热源站内容到缓存节点.md)|调用PushObjectCache将源站的内容主动预热到L2 Cache节点上，您首次访问可直接命中缓存，缓解源站压力。|
-|[DescribeRefreshQuota](/cn.zh-CN/新版API参考/刷新预热类接口/获取缓存刷新预热信息.md)|DescribeRefreshQuota查询当天URL刷新、目录刷新、预热及封禁的最大限制数量和剩余量。|
+|[DescribeRefreshQuota](/cn.zh-CN/新版API参考/刷新预热类接口/获取刷新预热的配额信息.md)|DescribeRefreshQuota查询当天URL刷新、目录刷新、预热及封禁的最大限制数量和剩余量。|
 |[DescribeRefreshTasks](/cn.zh-CN/新版API参考/刷新预热类接口/获取刷新预热任务信息.md)|调用DescribeRefreshTasks查询刷新、预热状态是否在全网生效。|
 |[RefreshObjectCaches](/cn.zh-CN/新版API参考/刷新预热类接口/刷新节点上的文件内容.md)|调用RefreshObjectCaches刷新节点上的文件内容。被刷新的文件缓存将立即失效，新的请求将回源获取最新的文件，支持URL批量刷新。|
 
@@ -125,7 +125,7 @@ CDN提供以下相关API接口。
 |---|--|
 |[DescribeUserUsageDataExportTask](/cn.zh-CN/新版API参考/用量查询类接口/获取用量数据导出任务信息.md)|调用DescribeUserUsageDataExportTask查询用户最近三个月的用量导出任务信息。|
 |[CreateUserUsageDataExportTask](/cn.zh-CN/新版API参考/用量查询类接口/创建历史用量数据导出任务.md)|调用CreateUserUsageDataExportTask创建账号历史用量数据导出任务，将历史用量生成PDF文件用于下载。|
-|[CreateUsageDetailDataExportTask](/cn.zh-CN/新版API参考/用量查询类接口/创建用量数据导出任务.md)|调用CreateUsageDetailDataExportTask创建用量详细数据导出任务，将详细用量生成excel文件用于下载。|
+|[CreateUsageDetailDataExportTask](/cn.zh-CN/新版API参考/用量查询类接口/创建用量数据导出任务.md)|调用CreateUsageDetailDataExportTask创建用量详细数据导出任务，将详细用量生成Excel文件用于下载。|
 |[DescribeUserUsageDetailDataExportTask](/cn.zh-CN/新版API参考/用量查询类接口/获取用量明细导出任务信息.md)|调用DescribeUserUsageDetailDataExportTask查询您账户下单个或多个域名5分钟明细数据的导出任务。|
 |[DescribeDomainUsageData](/cn.zh-CN/新版API参考/用量查询类接口/获取特定区域的用量数据.md)|调用DescribeDomainUsageData查询域名在特定计费区域的用量数据。|
 |[DeleteUserUsageDataExportTask](/cn.zh-CN/新版API参考/用量查询类接口/删除历史用量数据导出任务.md)|调用DeleteUserUsageDataExportTask删除账号历史用量数据导出任务。|
@@ -146,5 +146,5 @@ CDN提供以下相关API接口。
 |---|--|
 |[DescribeIpInfo](/cn.zh-CN/新版API参考/辅助工具类接口/验证IP是否为CDN节点.md)|调用DescribeIpInfo验证指定的IP是否为阿里云CDN节点的IP地址。|
 |[CreateIllegalUrlExportTask](/cn.zh-CN/新版API参考/日志信息类接口/创建违规URL导出任务.md)|调用CreateIllegalUrlExportTask提交违规URL导出任务。|
-|[DescribeIllegalUrlExportTask](/cn.zh-CN/新版API参考/日志信息类接口/获取违规URL导出任务信息.md)|调用DescribeIllegalUrlExportTask查询违规URL导出任务.。|
+|[DescribeIllegalUrlExportTask]()|调用DescribeIllegalUrlExportTask查询违规URL导出任务.。|
 
