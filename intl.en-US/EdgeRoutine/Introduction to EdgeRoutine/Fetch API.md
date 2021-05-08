@@ -35,8 +35,8 @@ The Fetch API supports 3xx redirects. Fetch requests can follow 3xx redirects. H
 
 The following table describes different 3xx redirects.
 
-|Status code|Redirect description|
-|-----------|--------------------|
+|HTTP status code|Redirect description|
+|----------------|--------------------|
 |301, 302, 303, and 308|The request method is changed to GET and the body is ignored.|
 |307|Requests follow 3xx redirects only if the request method is GET. Other request methods throw exceptions.|
 
@@ -47,36 +47,40 @@ The following table describes different 3xx redirects.
 
 ## Decompress
 
-The Fetch API allows you to configure a decompression mode, for example, `fetch("https://www.example.com",{decompress: "manual"})`. The decompress parameter supports the following values:
+The Fetch API allows you to configure a decompression mode, for example, `fetch("https://www.example.com",{decompress: "manual"}) "manual"})`. The decompress parameter supports the following values:
 
 -   manual: does not decompress data. If the server returns compressed data to a fetch request, the data that ER receives is also compressed.
--   decompress: automatically decompresses data. The Fetch API supports Gzip compression. ER automatically detects or decompresses data based on the content-encoding header. After ER decompresses data, ER automatically modifies the value of content-encoding. If the Gzip parameter is deleted, you can configure the following settings to prevent exceptions when you pass data:
+-   decompress: automatically decompresses data. The Fetch API supports Gzip compression. ER automatically detects or decompresses data based on the Content-Encoding header. After ER decompresses data, ER automatically modifies the value of Content-Encoding. If the Gzip parameter is deleted, you can configure the following settings to prevent exceptions when you pass data:
 
     -   `content-encoding: gzip`: The decompression algorithm can be recognized by ER.
     -   `content-encoding: gzip, identity`: The decompression algorithm can be recognized by ER.
-    **Note:** Algorithms other than Gzip cause exceptions.
+    **Note:** Compression algorithms other than Gzip cause exceptions.
 
 -   fallbackIdentity: This value is similar to the decompress value. If this value cannot be recognized by ER, ER does not decompress data.
 
 **Note:**
 
 -   The default value is decompress, which indicates that ER automatically uses Gzip to decompress data.
--   After the server compresses the data, you cannot pass the content-length header as needed if the response contains the content-length header. This is because the content-length header indicates the size of the data before decompression.
+-   After the server compresses the data, you cannot pass the Content-Length header as needed if the response contains the Content-Length header. This is because the Content-Length header indicates the size of the data before decompression.
 
 ## CdnProxy
 
-When you use the Fetch API to fetch data, you can use Alibaba Cloud CDN as a proxy to process requests. For example, you can set `fetch("http://www.example.com", {cdnProxy: true})`. The domain name from which you use the Fetch API to fetch resources must be added to Alibaba Cloud CDN. Otherwise, a 403 status code is returned. Using Alibaba Cloud CDN as a proxy automatically triggers all business logic of Alibaba Cloud CDN, including the caching and back-to-origin processes.
+When you use the Fetch API to make subrequests in ER, ER directly sends HTTP requests to the Internet, as Step 5 in the following figure. You can also use Alibaba Cloud CDN as a proxy to process the subrequests, as shown in the following figure. In this case, the subrequests are processed in the following steps: 7→8→9→10. To use Alibaba Cloud CDN as a proxy, set `fetch("http://www.example.com", {cdnProxy: true})`. If you use this method, the content retrieved from the URL specified in the Fetch API call is stored on CDN nodes. Subsequent Fetch API calls can directly hit cache and return requested content to clients. This method does not need to fetch content from the origin servers.
+
+**Note:** The domain name, for example, www.example.com, from which you use the Fetch API to fetch resources must be added to Alibaba Cloud CDN. Otherwise, an HTTP 403 status code is returned. Using Alibaba Cloud CDN as a proxy automatically triggers all business logic of Alibaba Cloud CDN, including the caching and back-to-origin processes.
+
+![How it works](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8427271161/p86758.png)
 
 ## content-length
 
-If you configure the content-length header in a fetch request, data is encoded in the encoding scheme specified in the content-length header. The way how the Fetch API transmits data is also changed. If you do not configure the content-length header, the Fetch API automatically fetches all data in the body stream and transmits the data. The transmitted data is encoded by using the chunked transfer encoding scheme.
+If you configure the Content-Length header in a fetch request, data is encoded in the encoding scheme specified in the Content-Length header. The way how the Fetch API transmits data is also changed. If you do not configure the Content-Length header, the Fetch API automatically fetches all data in the body stream and transmits the data. The transmitted data is encoded by using the chunked transfer encoding scheme.
 
--   Configure content-length
-    -   If the content-length header is set to a negative value: The Fetch API fetches data from the body stream based on the content-length header and transmits the fetched data. If content-length is set to 0, no data is transmitted.
-    -   If the content-length header is set to an invalid value: The Fetch API transmits all values in the body. The transmitted data is encoded by using the chunked transfer encoding scheme.
+-   Configure Content-Length
+    -   If the Content-Length header is set to a negative value: The Fetch API fetches data from the body stream based on the Content-Length header and transmits the fetched data. If Content-Length is set to 0, no data is transmitted.
+    -   If the Content-Length header is set to an invalid value: The Fetch API transmits all values in the body. The transmitted data is encoded by using the chunked transfer encoding scheme.
 -   Examples
 
-    The Fetch API automatically decompresses data. After the data is decompressed, the content-length header is still retained in the response. The content-length header indicates the size of the response before it is decompressed. If you call the Fetch API after you modify the body, check whether you need to modify the content-length header. Otherwise, the content that is transmitted may be incorrect. For more information, see the following example:
+    The Fetch API automatically decompresses data. After the data is decompressed, the Content-Length header is still retained in the response. The Content-Length header indicates the size of the response before it is decompressed. If you call the Fetch API after you modify the body, check whether you need to modify the Content-Length header. Otherwise, the content that is transmitted may be incorrect. For more information, see the following example:
 
     ```
     addEventListener('fetch', (event) => {
@@ -92,7 +96,7 @@ If you configure the content-length header in a fetch request, data is encoded i
     }
     ```
 
-    In the preceding example, a POST request that contains the content-length header is sent from a client. When you call the Fetch API to fetch data, the request body uses the Headers object from the client request. The value of the content-length header may be different from the actual size of the body. When you pass the Headers object, check whether the size of the body is changed.
+    In the preceding example, a POST request that contains the Content-Length header is sent from a client. When you call the Fetch API to fetch data, the request body uses the Headers object from the client request. The value of the Content-Length header may be different from the actual size of the body. When you pass the Headers object, check whether the size of the body is changed.
 
 
 ## Headers
@@ -107,7 +111,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
 -   Blacklist
 
-    ER provides a header blacklist. If you attempt to read and write headers in the blacklist, exceptions are thrown. You cannot read or write the following headers:
+    ER provides a header blacklist. If you attempt to read or write headers that are in the blacklist, exceptions are thrown. You cannot read or write the following headers:
 
     -   expect
     -   te
@@ -147,7 +151,7 @@ If you configure the content-length header in a fetch request, data is encoded i
     -   Fetches JSON data: `await request.json()`.
     -   Fetches form data: `await request.formData()`.
     -   Fetches strings encoded in UTF-8: `await request.text()`.
-    The Request operation is a standard API operation. It can ignore the body while fetching all values of the body without consuming the memory resources of ER. This prevents long garbage collection \(GC\) time and fetches all values of the request body from the underlying sockets. If you do not need to fetch the body, you can call `request.ignore` in `await request.ignore()` for all fetch requests. After the body of a request is fetched, ER automatically sends the request to the connection pool for future use.
+    The Request operation is a standard API operation. It can ignore the body while fetching all values of the body without consuming the memory resources of ER. This minimizes the garbage collection \(GC\) pause time and fetches all values of the request body from the underlying sockets. If you do not need to fetch the body, you can call `request.ignore` in `await request.ignore()` for all fetch requests. After the body of a request is fetched, ER automatically sends the request to the connection pool for future use.
 
 
 ## Response
@@ -158,14 +162,14 @@ If you configure the content-length header in a fetch request, data is encoded i
 
 -   Limits
 
-    The useFinalURLS and error properties of the Response object are not in use. They do not take effect in the contexts of requests redirected to CDN nodes.
+    The useFinalURLS and error properties of the Response object are not in use. They do not take effect in the contexts of requests that are redirected to CDN nodes.
 
 -   Use cases of the Response operation
     -   Fetches the HTTP status code: `response.status`.
     -   Fetches the reason phrase of a response: `response.statusText`.
     -   Fetches the response header: `response.headers`.
     -   Fetches the response URL: `response.url`.
-    -   Fetches a list of URLs that redirect to other URLs: `response.urlList`. It is a non-standard method. Similar to the implementation of the Body mixin by the Response object, you can use similar methods to fetch the Body object.
+    -   Fetches a list of URLs that redirect to other URLs: `response.urlList`. It is a non-standard method, which is similar to the implementation of the Body mixin by the Response object. You can use similar methods to fetch the Body object.
 
 ## FormData
 
@@ -182,7 +186,7 @@ If you configure the content-length header in a fetch request, data is encoded i
 
 -   Definition
 
-    For more information about the URLSearchParams operation, see [URLSearchParams\(\)](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams/URLSearchParams).
+    For more information about the URLSearchParams operation, see [RLSearchParams\(\)](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams/URLSearchParams).
 
 -   Limits
 
@@ -196,6 +200,6 @@ If you configure the content-length header in a fetch request, data is encoded i
     -   For more information about the Blob operation, see [Blob](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob).
 -   Limits
 
-    To meet the standards of the Blob and File operations, ER supports the Blob and File classes. ER does not support reading or writing files. You can pass the Blob and File classes supported by ER into the response body. The value of the `content-type` header is the same as that of the mime type parameter in the `Blob` or `File` operation.
+    To meet the standards of the Blob and File operations, ER supports the Blob and File classes. ER does not support reading or writing files. You can pass the Blob and File classes supported by ER into the response body. The value of the `content-type` header is the same as that of the MIME type parameter in the `Blob` or `File` operation.
 
 
