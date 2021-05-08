@@ -27,7 +27,7 @@ CDN结合边缘Web应用防火墙WAF（Web Application Firewall）能力，将�
 |预警\|阻断模式|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|
 |解码防混淆编码绕过|不支持|[支持](https://help.aliyun.com/document_detail/147592.html)|[支持](https://help.aliyun.com/document_detail/147592.html)|
 |规则组自定义|不支持|不支持|[支持](https://help.aliyun.com/document_detail/99477.html)|
-|HTTP字段访问控制|不支持|[支持](https://help.aliyun.com/document_detail/42780.html)|[支持](https://help.aliyun.com/document_detail/42780.html)|
+|HTTP字段访问控制|不支持|[支持](https://help.aliyun.com/document_detail/61993.html)|[支持](https://help.aliyun.com/document_detail/61993.html)|
 |日志服务|不支持|[支持](https://help.aliyun.com/document_detail/95078.html)（1T）|[支持](https://help.aliyun.com/document_detail/95078.html)（3T）|
 
 ## 背景信息
