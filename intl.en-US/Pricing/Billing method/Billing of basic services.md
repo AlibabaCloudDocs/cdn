@@ -8,7 +8,7 @@ This topic describes the metering methods of and considerations for basic servic
 
 ## Purchase basic services of Alibaba Cloud CDN
 
-Beginning January 8, 2021, Alibaba Cloud CDN uses the pay-by-data-transfer metering method by default. After Alibaba Cloud CDN is activated, you cannot manually change the metering method in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing?spm=a2796.7980202.1167822.1.16755f45tSDVja).
+Beginning January 8, 2021, Alibaba Cloud Content Delivery Network \(CDN\) uses the pay-by-data-transfer metering method by default. After Alibaba Cloud CDN is activated, the metering method cannot be changed in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
 ## Purchase data transfer plans
 
@@ -16,7 +16,7 @@ Alibaba Cloud CDN supports data transfer plans. For more information, see [CDN R
 
 **Note:**
 
--   Regions outside mainland China are divided into the following billable regions based on the location where the CDN nodes are deployed: North America, Europe, Asia Pacific 1, Asia Pacific 2, Asia Pacific 3, Middle East, Africa, and South America. The billing rules vary based on the billable region.
+-   Regions outside mainland China are divided into the following billable regions based on the location where the CDN nodes are deployed: North America, Europe, Asia Pacific 1, Asia Pacific 2, Asia Pacific 3, Middle East, Africa, and South America.
 -   If your workloads are deployed in different regions, you must purchase data transfer plans that can be used in these regions.
 
 ## Pay-by-data-transfer
@@ -25,7 +25,7 @@ Description: You are charged for the amount of daily outbound data transfer of C
 
 Applicable scenarios: The network traffic fluctuates and the bandwidth usage spikes. The daily bandwidth usage is lower than 30%.
 
-How to purchase: Log on to the [Alibaba Cloud CDN console](https://account.alibabacloud.com/login/login.htm) and make a purchase.
+How to purchase: Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com) and make a purchase.
 
 ## Pay-by-bandwidth
 
