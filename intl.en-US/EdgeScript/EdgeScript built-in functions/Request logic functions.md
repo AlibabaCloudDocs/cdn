@@ -1,6 +1,6 @@
 # Request logic functions
 
-This topic describes the syntax, description, parameters, and response parameters of request logic functions. This topic also provides examples of these functions.
+This topic describes the syntax, description, parameters, and return values of request logic functions. This topic also provides examples of these functions.
 
 ## server\_addr
 
@@ -9,12 +9,12 @@ Queries the IP addresses of servers that receive the current request. The follow
 |Item|Description|
 |----|-----------|
 |Syntax|server\_addr\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 s_addr = server_addr()
 say(concat('s_addr:', s_addr))
 ``` |
-|Response parameters|Returns the IP addresses of the servers in a string.|
+|Return value|Returns the IP addresses of the servers in a string.|
 
 ## server\_port
 
@@ -23,12 +23,12 @@ Queries the server port that receives the current request. The following table d
 |Item|Description|
 |----|-----------|
 |Syntax|server\_port\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 s_addr = server_addr()
 say(concat('s_addr:', s_addr))
 ``` |
-|Response parameters|Returns the server port. Data type: numeric.|
+|Return value|Returns the server port that receives the current request. Data type: numeric.|
 
 ## client\_addr
 
@@ -37,14 +37,14 @@ Queries the IP address of a client. The following table describes the details ab
 |Item|Description|
 |----|-----------|
 |Syntax|client\_addr\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 c_addr = client_addr()
 c_port = client_port()
 say(concat('c_addr:', c_addr))
 say(concat('c_port:', tostring(c_port)))
 ``` |
-|Response parameters|Returns the IP address of the specified client in a string.|
+|Return value|Returns the IP address of the specified client in a string.|
 
 ## client\_country
 
@@ -53,11 +53,10 @@ Queries the country code of a client. The following table describes the details 
 |Item|Description|
 |----|-----------|
 |Syntax|client\_country\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 c_country = client_country()
 c_region = client_region()
-c_city = client_city()
 c_isp = client_isp()
 if c_country {
     say(concat('client_country:', c_country))
@@ -65,14 +64,11 @@ if c_country {
 if c_region {
     say(concat('client_region:', c_region))
 }
-if c_city {
-    say(concat('client_city:', c_city))
-}
 if c_isp {
     say(concat('client_isp:', c_isp))
 }
 ``` |
-|Response parameters|Returns the country code of the specified client in a string. For more information about country codes, see [Country codes](/intl.en-US/EdgeScript/EdgeScript built-in functions/Appendix.md).|
+|Return value|Returns the country code of the specified client in a string. For more information about country codes, see [Country codes](/intl.en-US/EdgeScript/EdgeScript built-in functions/Appendix.md).|
 
 ## client\_region
 
@@ -81,11 +77,10 @@ Queries the administrative division code of a client. The following table descri
 |Item|Description|
 |----|-----------|
 |Syntax|client\_region\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 c_country = client_country()
 c_region = client_region()
-c_city = client_city()
 c_isp = client_isp()
 if c_country {
     say(concat('client_country:', c_country))
@@ -93,27 +88,23 @@ if c_country {
 if c_region {
     say(concat('client_region:', c_region))
 }
-if c_city {
-    say(concat('client_city:', c_city))
-}
 if c_isp {
     say(concat('client_isp:', c_isp))
 }
 ``` |
-|Response parameters|Returns the administrative division code of the specified client in a string. For more information about administrative division codes, see [Administrative division codes](#section_q86_hoc_ph6).|
+|Return value|Returns the administrative division code of the specified client in a string. For more information about administrative division codes, see [Administrative division codes](#section_q86_hoc_ph6).|
 
 ## client\_isp
 
-Queries the Internet Service Provider \(ISP\) code of a client. The following table describes the details about this function.
+Queries the Internet service provider \(ISP\) code of a client. The following table describes the details about this function.
 
 |Item|Description|
 |----|-----------|
 |Syntax|client\_isp\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 c_country = client_country()
 c_region = client_region()
-c_city = client_city()
 c_isp = client_isp()
 if c_country {
     say(concat('client_country:', c_country))
@@ -121,14 +112,11 @@ if c_country {
 if c_region {
     say(concat('client_region:', c_region))
 }
-if c_city {
-    say(concat('client_city:', c_city))
-}
 if c_isp {
     say(concat('client_isp:', c_isp))
 }
 ``` |
-|Response parameters|Returns the ISP code of the specified client in a string.ISP codes are:
+|Return value|Returns the ISP code of the specified client in a string. ISP codes are:
 
 -   100017: China Telecom
 -   100025: China Mobile
@@ -141,8 +129,8 @@ Queries the country code of a specified IP address. The following table describe
 |Item|Description|
 |----|-----------|
 |Syntax|ip\_country\(ipaddr\)|
-|Parameters|ipaddr: specifies an IP address in dotted decimal notation.|
-|Examples|```
+|Parameter|ipaddr: specifies an IP address in dotted decimal notation.|
+|Example|```
 c_country = ip_country('112.10.80.80')
 c_region = ip_region('112.10.80.80')
 c_city = ip_city('112.10.80.80')
@@ -160,7 +148,7 @@ if c_isp {
     say(concat('ip_isp:', c_isp))
 }
 ``` |
-|Response parameters|Returns the country code of the specified IP address in a string. For more information about country codes, see [Country codes](/intl.en-US/EdgeScript/EdgeScript built-in functions/Appendix.md).|
+|Return value|Returns the country code of the specified IP address in a string. For more information about country codes, see [Country codes](/intl.en-US/EdgeScript/EdgeScript built-in functions/Appendix.md).|
 
 ## ip\_region
 
@@ -169,8 +157,8 @@ Queries the administrative division code of the city or province to which a spec
 |Item|Description|
 |----|-----------|
 |Syntax|ip\_region\(ipaddr\)|
-|Parameters|ipaddr: specifies an IP address in dotted decimal notation.|
-|Examples|```
+|Parameter|ipaddr: specifies an IP address in dotted decimal notation.|
+|Example|```
 c_country = ip_country('112.10.80.80')
 c_region = ip_region('112.10.80.80')
 c_city = ip_city('112.10.80.80')
@@ -188,7 +176,7 @@ if c_isp {
     say(concat('ip_isp:', c_isp))
 }
 ``` |
-|Response parameters|Returns the administrative division code of the city or province to which the specified IP address belongs in a string. For more information about administrative division codes, see [Administrative division codes](#section_q86_hoc_ph6).|
+|Return value|Returns the administrative division code of the city or province to which the specified IP address belongs in a string. For more information about administrative division codes, see [Administrative division codes](#section_q86_hoc_ph6).|
 
 ## ip\_isp
 
@@ -197,8 +185,8 @@ Queries the ISP code of a specified IP address. The following table describes th
 |Item|Description|
 |----|-----------|
 |Syntax|ip\_isp\(ipaddr\)|
-|Parameters|ipaddr: specifies an IP address in dotted decimal notation.|
-|Examples|```
+|Parameter|ipaddr: specifies an IP address in dotted decimal notation.|
+|Example|```
 c_country = ip_country('112.10.80.80')
 c_region = ip_region('112.10.80.80')
 c_city = ip_city('112.10.80.80')
@@ -216,7 +204,7 @@ if c_isp {
     say(concat('ip_isp:', c_isp))
 }
 ``` |
-|Response parameters|Returns the ISP code of the specified IP address in a string.ISP codes are:
+|Return value|Returns the ISP code of the specified IP address in a string. ISP codes are:
 
 -   100017: China Telecom
 -   100025: China Mobile
@@ -234,9 +222,9 @@ The following tables describe the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_uri\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported: -   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_uri
 say(concat('req_uri: ', req_uri()))
 if req_uri('/path1/path2') {
@@ -246,13 +234,13 @@ if req_uri('re:/path[0-9]/path[0-9]') {
     say('req_uri: regex match')
 }
 ``` |
-|Response parameters|-   If the pattern parameter is not included in the request. The request URI is returned. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   If the pattern parameter is not included in the request, the request URI is returned. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
-Request: /path1/path2? mode=ip   
+Request: /path1/path2?mode=ip   
 Response:
 req_uri: /path1/path2
 req_uri: plain match
@@ -277,9 +265,9 @@ Details about this function:
 |Item|Description|
 |----|-----------|
 |Syntax|req\_uri\_basename\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_uri_basename
 basename = req_uri_basename()
 say(concat('req_uri_basename: ', basename, ' ', len(basename)))
@@ -290,10 +278,10 @@ if req_uri_basename('re:^f.*') {
     say('req_uri_basename: regex match')
 }
 ``` |
-|Response parameters|-   Returns the file name in the request URI if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the file name in the request URI if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: /path1/path2/foo.tar.bz2
@@ -316,14 +304,14 @@ Examples of extensions:
 -   Example 2: For /M604/guopei\_mp4/ZYJY2017BJGL0101/2-1\_g.mp4, the extension is .mp4.
 -   Example 3: For /tarball/foo.tar.bz2, the extension is .tar.bz2.
 
-Details about this function:
+The following table describes the details about this function.
 
 |Item|Description|
 |----|-----------|
 |Syntax|req\_uri\_ext\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_uri_ext
 ext = req_uri_ext()
 say(concat('req_uri_ext: ', ext, ' ', len(ext)))
@@ -334,10 +322,10 @@ if req_uri_ext('re:\.tar\.bz[0-2]') {
     say('req_uri_ext: regex match')
 }
 ``` |
-|Response parameters|-   Returns the extension in the request URI if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the extension in the request URI if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: /path1/path2/foo.tar.bz2
@@ -362,8 +350,8 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_uri\_seg\(\[idx\]\)|
-|Parameters|idx: specifies the start index.|
-|Examples|```
+|Parameter|idx: specifies the start index. This parameter is optional.|
+|Example|```
 # req_uri_seg
 def echo_each(k, v, u) {
     say(concat(get(u, 'msg'), ' : segs[', k, ']=', v))
@@ -383,12 +371,12 @@ if get(segs, 5) {
     say(concat('req_uri_seg(3): segs[5]=', get(segs, 5)))
 }
 ``` |
-|Response parameters|Data type: dictionary. The relevant paragraphs are included.**Note:** When the function retrieves the paragraph from the returned dictionary based on the specified index, the function checks whether the paragraph is empty.
+|Return value|Data type: dictionary. The relevant paragraphs are included. **Note:** When the function retrieves the paragraph from the returned dictionary based on the specified index, the function checks whether the paragraph is empty.
 
-Response parameters:
+Sample return values:
 
 ```
-Request: /path1/path2/path3/path4? mode=req2
+Request: /path1/path2/path3/path4?mode=req2
 Response:
 req_uri_seg() : segs[1]=path1
 req_uri_seg() : segs[2]=path2
@@ -405,14 +393,14 @@ Queries the value of a specified parameter. If the pattern parameter is included
 |Item|Description|
 |----|-----------|
 |Syntax|req\_uri\_arg\(name, \[pattern\]\)|
-|Parameters|-   name: the name of the parameter.
+|Parameter|-   name: the name of the parameter.
 
-Replace the hyphens \(-\) in the parameter name with underscores \(\_\). For example, X-USER-ID must be changed to x\_user\_id.
+Replace hyphens \(-\) in the parameter name with underscores \(\_\). For example, X-USER-ID must be changed to x\_user\_id.
 
 -   pattern: compared with the match conditions. The following match types are supported:
     -   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
     -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_uri_arg
 uid = req_uri_arg('uid')
 if uid {
@@ -433,29 +421,29 @@ if uid_chk {
     say('check uid fail. regex mode')
 }
 ``` |
-|Response parameters|-   If the pattern parameter is not included in the request
+|Return value|-   If the pattern parameter is not included in the request
     -   The specified parameter exists: returns the value of the parameter specified by the name parameter in a string.
     -   The specified parameter does not exist: returns a value of false.
 -   If the pattern parameter is included in the request
     -   The specified parameter exists: returns a value of true if the value matches the match conditions. Otherwise, a value of false is returned.
     -   The specified parameter does not exist: returns a value of false.
 
-Response parameters of this example:
+Sample return values:
 
 ```
-Request: /path1/path2/path3/path4? mode=req4&uid
+Request: /path1/path2/path3/path4?mode=req4&uid
 Response:
 not found uid
 check uid fail. plain mode
 check uid fail. regex mode
 
-Request: /path1/path2/path3/path4? mode=req4&uid=
+Request: /path1/path2/path3/path4?mode=req4&uid=
 Response:
 found uid
 check uid fail. plain mode
 check uid fail. regex mode
 
-Request: /path1/path2/path3/path4? mode=req4&uid=12345
+Request: /path1/path2/path3/path4?mode=req4&uid=12345
 Response:
 found uid 12345
 check uid fail. plain mode
@@ -474,9 +462,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_uri\_query\_string\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_uri_query_string
 say(concat('req_uri_query_string: ', req_uri_query_string()))
 if req_uri_query_string('mode=') {
@@ -490,13 +478,13 @@ if req_uri_query_string('re:mode=[0-9a-z]+') {
     say('check uri query string fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the parameters in the request if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the parameters in the request if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
-Request: /path1/path2/path3/path4? mode=req5&token=34Deasd#243
+Request: /path1/path2/path3/path4?mode=req5&token=34Deasd#243
 Response:
 req_uri_query_string: mode=req5&token=34Deasd
 check uri query string fail. plain mode
@@ -515,9 +503,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_scheme\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_scheme
 say(concat('req_scheme: ', req_scheme()))
 if req_scheme('https') {
@@ -531,10 +519,10 @@ if req_scheme('re:https?') {
     say('check scheme fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the request scheme if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the request scheme if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: http://xx..
@@ -555,9 +543,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_method\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_method
 say(concat('req_method: ', req_method()))
 if req_method('GET') {
@@ -571,10 +559,10 @@ if req_method('re:(GET|POST)') {
     say('check method fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the request method if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the request method if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: POST /xxxx/xxx
@@ -596,9 +584,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_host\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_host
 say(concat('req_host: ', req_host()))
 if req_host('x.y.z.com') {
@@ -606,16 +594,16 @@ if req_host('x.y.z.com') {
 } else {
     say('check host fail. plain mode')
 }
-if req_host('re:. +\.y\.z\.com') {
+if req_host('re:.+\.y\.z\.com') {
     say('check host ok. regex mode')
 } else {
     say('check host fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the value of the Host request header if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the value of the Host request header if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: Host: x2.y.z.com
@@ -637,9 +625,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_user\_agent\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_user_agent
 say(concat('req_user_agent: ', req_user_agent()))
 if req_user_agent('Mozilla') {
@@ -653,13 +641,13 @@ if req_user_agent('re:^Mozilla') {
     say('check user_agent fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the value of the User-Agent request header if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the value of the User-Agent request header if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
-Request: User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+ua: specifies user agents. Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 Response:
 req_user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 check user_agent fail. plain mode
@@ -678,9 +666,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_referer\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_referer
 say(concat('req_referer: ', req_referer()))
 if req_referer('https://foo.bar.cn/******00003') {
@@ -694,10 +682,10 @@ if req_referer('re:https://foo\.bar\.cn/\*+[0-9]+') {
     say('check referer fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the value of the Referer request header if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the value of the Referer request header if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: Referer: https://foo.bar.cn/******00003
@@ -714,14 +702,14 @@ Queries the value of a specified cookie. If the pattern parameter is included in
 |Item|Description|
 |----|-----------|
 |Syntax|req\_cookie\(name, \[pattern\]\)|
-|Parameters|-   name: specifies the name of the cookie.
+|Parameter|-   name: specifies the name of the cookie.
 
 Replace hyphens \(-\) in the cookie name with underscores \(\_\). For example, X-USER-ID must be changed to x\_user\_id.
 
 -   pattern: compared with the match conditions. The following match types are supported:
     -   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
     -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_cookie
 uid = req_cookie('uid')
 if uid {
@@ -742,14 +730,14 @@ if uid_chk {
     say('check cookie uid fail. regex mode')
 }
 ``` |
-|Response parameters|-   If the pattern parameter is not included in the request
+|Return value|-   If the pattern parameter is not included in the request
     -   The specified cookie exists: returns the value of the cookie specified by the name parameter in a string.
     -   The specified parameter does not exist: returns a value of false.
 -   If the pattern parameter is included in the request
     -   The specified parameter exists: returns a value of true if the value matches the match conditions. Otherwise, a value of false is returned.
     -   The specified parameter does not exist: returns a value of false.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: Cookie: uid=123456; token=value2
@@ -771,9 +759,9 @@ The following table describes the details about this function.
 |Item|Description|
 |----|-----------|
 |Syntax|req\_first\_x\_forwarded\_addr\(\[pattern\]\)|
-|Parameters|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
+|Parameter|pattern: compared with the match conditions. The following match types are supported:-   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
 -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_first_x_forwarded
 say(concat('req_first_x_forwarded: ', req_first_x_forwarded()))
 if req_first_x_forwarded('1.1.1.1') {
@@ -787,10 +775,10 @@ if req_first_x_forwarded('re:1.1.1.[0-9]') {
     say('check first_x_forwarded fail. regex mode')
 }
 ``` |
-|Response parameters|-   Returns the first address in the X-Forwarded-For request header if the pattern parameter is not included in the request. Data type: string.
--   Returns a value of true if the pattern parameter is included in the request and the request matches the match conditions. Otherwise, a value of false is returned. A value of false indicates that no condition is matched.
+|Return value|-   Returns the first address in the X-Forwarded-For request header if the pattern parameter is not included in the request. Data type: string.
+-   If the pattern parameter is included in the request and the request matches the match conditions, a value of true is returned. If no condition is matched, a value of false is returned.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: X-Forwarded-For: 1.1.1.1, 2.2.2.2, 3.3.3.3
@@ -807,14 +795,14 @@ Queries the value of a specified request header. If the pattern parameter is inc
 |Item|Description|
 |----|-----------|
 |Syntax|req\_header\(name, \[pattern\]\)|
-|Parameters|-   name: specifies the name of the request header.
+|Parameter|-   name: specifies the name of the request header.
 
 Replace hyphens \(-\) in the request header with underscores \(\_\). For example, X-USER-ID must be changed to x\_user\_id.
 
 -   pattern: compared with the match conditions. The following match types are supported:
     -   Brute-force algorithm: compares the values based on a brute-force algorithm. This is the default match type.
     -   Regular expression: compares the values based on a regular expression. |
-|Examples|```
+|Example|```
 # req_header
 uid = req_header('x_uid')
 if uid {
@@ -835,14 +823,14 @@ if uid_chk {
     say('check header x-uid fail. regex mode')
 }
 ``` |
-|Response parameters|-   If the pattern parameter is not included in the request
+|Return value|-   If the pattern parameter is not included in the request
     -   The specified request header exists: returns the value of the specified request header specified by the name parameter in a string.
     -   The specified parameter does not exist: returns a value of false.
 -   If the pattern parameter is included in the request
     -   The specified parameter exists: returns a value of true if the value matches the match conditions. Otherwise, a value of false is returned.
     -   The specified parameter does not exist: returns a value of false.
 
-Response parameters of this example:
+Sample return values:
 
 ```
 Request: X-UID: es developer
@@ -859,12 +847,12 @@ Queries the Eagle Eye ID of a request. Each Eagle Eye ID uniquely identifies a r
 |Item|Description|
 |----|-----------|
 |Syntax|req\_id\(\)|
-|Parameters|N/A|
-|Examples|```
+|Parameter|N/A|
+|Example|```
 # req_id
 say(concat('req_id: ', req_id()))
 ``` |
-|Response parameters|Returns the request ID in a string. In this example, the ID of the request is `req_id: 6451c43d15815890089411000e`.|
+|Return value|Returns the request ID in a string. The return value in this example is `req_id: 6451c43d15815890089411000e`.|
 
 ## Administrative division codes
 
@@ -880,6 +868,6 @@ say(concat('req_id: ', req_id()))
 |130000|Hebei|510000|Sichuan|500000|Chongqing|
 |610000|Shaanxi|220000|Jilin|140000|Shanxi|
 |650000|Xinjiang|350000|Fujian|430000|Hunan|
-|520000|Guizhou|HK\_01|Hong Kong \(China\)|MO\_01|Macau \(China\)|
-|TW\_01|Taiwan \(China\)|N/A|N/A|N/A|N/A|
+|520000|Guizhou|810000|Hong Kong \(China\)|820000|Macau \(China\)|
+|710000|Taiwan \(China\)|N/A|N/A|N/A|N/A|
 
