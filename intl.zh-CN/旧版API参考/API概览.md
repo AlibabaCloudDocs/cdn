@@ -30,7 +30,7 @@ CDN提供以下相关API接口。
 |[RefreshObjectCaches](/intl.zh-CN/旧版API参考/刷新预热类接口/刷新节点上的文件内容.md)|调用RefreshObjectCaches刷新节点上的文件内容。|
 |[PushObjectCache](/intl.zh-CN/旧版API参考/刷新预热类接口/预热源站内容到缓存节点.md)|调用PushObjectCache接口将源站的内容主动预热到L2 Cache节点上。|
 |[DescribeRefreshTasks](/intl.zh-CN/旧版API参考/刷新预热类接口/获取刷新预热任务信息.md)|调用DescribeRefreshTasks查询刷新、预热状态是否在全网生效。|
-|[DescribeRefreshQuota](/intl.zh-CN/旧版API参考/刷新预热类接口/获取缓存刷新预热数量信息.md)|调用DescribeRefreshQuota查询url刷新、目录刷新、url预热的最大限制数量及剩余量。|
+|[DescribeRefreshQuota](/intl.zh-CN/旧版API参考/刷新预热类接口/获取缓存刷新预热数量信息.md)|调用DescribeRefreshQuota查询URL刷新、目录刷新、URL预热的最大限制数量及剩余量。|
 
 ## 配置操作接口
 
@@ -42,13 +42,13 @@ CDN提供以下相关API接口。
 |[SetIgnoreQueryStringConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置过滤参数功能.md)|调用SetIgnoreQueryStringConfig设置过滤参数功能。|
 |[SetRangeConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置Range回源功能.md)|调用SetRangeConfig设置Range回源功能。|
 |[SetVideoSeekConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置拖拽播放功能.md)|调用SetVideoSeekConfig设置拖拽播放功能。|
-|[SetSourceHostConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置回源HOST功能.md)|调用SetSourceHostConfig设置回源host功能。|
+|[SetSourceHostConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置回源HOST功能.md)|调用SetSourceHostConfig设置回源HOST功能。|
 |[SetForceRedirectConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置强制访问跳转方式.md)|调用SetForceRedirectConfig设置强制访问跳转方式。|
 |[SetRefererConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置加速域名的防盗链功能.md)|调用SetRefererConfig设置加速域名的Refer防盗链功能。|
 |[SetPathCacheExpiredConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置目录缓存过期功能.md)|调用SetPathCacheExpiredConfig修改目录过期配置。|
 |[DeleteCacheExpiredConfig](/intl.zh-CN/旧版API参考/配置操作接口/删除自定义缓存策略.md)|调用DeleteCacheExpiredConfig删除自定义缓存策略。|
 |[SetReqAuthConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置访问鉴权功能.md)|调用SetReqAuthConfig设置加速域名的访问鉴权配置。|
-|[SetHttpHeaderConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置自定义HTTP头.md)|调用SetHttpHeaderConfig设置自定义http头的缓存配置。|
+|[SetHttpHeaderConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置自定义HTTP头.md)|调用SetHttpHeaderConfig设置自定义HTTP头的缓存配置。|
 |[DeleteHttpHeaderConfig](/intl.zh-CN/旧版API参考/配置操作接口/删除自定义HTTP头.md)|调用DeleteHttpHeaderConfig删除加速域名的Refer防盗链配置。|
 |[SetDomainServerCertificate](/intl.zh-CN/旧版API参考/配置操作接口/设置加速域名的证书信息.md)|调用SetDomainServerCertificate设置某域名下证书功能是否启用及修改证书信息。|
 |[SetIpBlackListConfig](/intl.zh-CN/旧版API参考/配置操作接口/设置加速域名的IP黑名单.md)|调用SetIpBlackListConfig设置加速域名的IP黑名单。|
@@ -84,11 +84,11 @@ CDN提供以下相关API接口。
 |[DescribeDomainBpsDataByTimeStamp](/intl.zh-CN/旧版API参考/资源监控接口/获取在某个时刻的带宽数据.md)|调用DescribeDomainBpsDataByTimeStamp获取加速域名的在某个时刻不同运营商和区域的带宽数据。|
 |[DescribeDomainMax95BpsData](/intl.zh-CN/旧版API参考/资源监控接口/获取95带宽峰值监控数据.md)|调用DescribeDomainMax95BpsData获取加速域名95带宽峰值监控数据。|
 |[DescribeDomainPathData](/intl.zh-CN/旧版API参考/资源监控接口/获取不同路径的监控数据.md)|调用DescribeDomainPathData获取加速域名路径级别的5分钟维度的监控数据，包括流量和访问次数。该接口仅限白名单用户使用。|
-|[DescribeL2VipsByDomain](/intl.zh-CN/旧版API参考/资源监控接口/获取L2节点的回源IP.md)|调用DescribeL2VipsByDomain查询L2节点vip列表。|
+|[DescribeL2VipsByDomain](/intl.zh-CN/旧版API参考/资源监控接口/获取L2节点的回源IP.md)|调用DescribeL2VipsByDomain查询L2节点VIP列表。|
 |[DescribeRangeDataByLocateAndIspService](/intl.zh-CN/旧版API参考/资源监控接口/获取运营商和地域带宽数据.md)|调用DescribeRangeDataByLocateAndIspService获取加速域名在某个时刻不同区域和运营商上的带宽数据。|
 |[DescribeDomainRealTimeBpsData](/intl.zh-CN/旧版API参考/资源监控接口/获取加速域名的带宽数据.md)|调用DescribeDomainRealTimeBpsData获取加速域名1分钟粒度带宽数据。|
 |[DescribeDomainRealTimeByteHitRateData](/intl.zh-CN/旧版API参考/资源监控接口/获取字节命中率数据.md)|调用DescribeDomainRealTimeByteHitRateData获取加速域名1分钟粒度字节命中率数据。|
-|[DescribeDomainRealTimeQpsData](/intl.zh-CN/旧版API参考/资源监控接口/获取实时每秒访问次数数据.md)|调用DescribeDomainRealTimeQpsData获取加速域名1分钟粒度每秒访问次数（Qps）数据。|
+|[DescribeDomainRealTimeQpsData](/intl.zh-CN/旧版API参考/资源监控接口/获取实时每秒访问次数数据.md)|调用DescribeDomainRealTimeQpsData获取加速域名1分钟粒度每秒访问次数（QPS）数据。|
 |[DescribeDomainRealTimeReqHitRateData](/intl.zh-CN/旧版API参考/资源监控接口/获取请求命中率数据.md)|调用DescribeDomainRealTimeReqHitRateData获取加速域名1分钟粒度请求命中率数据。|
 |[DescribeDomainTopReferVisit](/intl.zh-CN/旧版API参考/资源监控接口/获取热门页面引用次数排名.md)|调用DescribeDomainTopReferVisit获取加速域名某天的热门页面引用次数排名。|
 |[DescribeDomainQpsData](/intl.zh-CN/旧版API参考/资源监控接口/获取每秒访问次数数据.md)|调用DescribeDomainQpsData获取加速域名的每秒访问次数（QPS）。|
