@@ -12,7 +12,7 @@ Traditional CDN services are used to only cache and distribute content, but cann
 
 ER runs on CDN nodes and provides a serverless JavaScript runtime environment for you to deploy JavaScript code.
 
-![How it works](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8427271161/p86758.png)
+![How it works](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0715180261/p86758.png)
 
 -   Scenarios where ER is not used
 
