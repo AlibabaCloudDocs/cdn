@@ -1,10 +1,10 @@
 ---
-keyword: [cdn, api]
+keyword: [CDN, API]
 ---
 
 # Make API requests
 
-To send an Alibaba Cloud Content Delivery Network \(CDN\) API request, you must send an HTTP GET request to the Alibaba Cloud CDN endpoint. You must add the request parameters that correspond to the API operation being called. After you call the API, the system returns a response.
+To send an Alibaba Cloud Content Delivery Network \(CDN\) API request, you must send an HTTP GET request to the Alibaba Cloud CDN endpoint. You must add the request parameters that correspond to the API operation that you want to call. After you call the API, the system returns a response.
 
 ## Request syntax
 
@@ -15,9 +15,9 @@ https://Endpoint/?Action=xx&Version=xx&Parameters
 ```
 
 -   Endpoint: the endpoint of the Alibaba Cloud CDN API is cdn.aliyuncs.com.
--   Action: the name of the operation being performed. For example, to add a domain name to Alibaba Cloud CDN, you must set the Action parameter to AddCdnDomain.
+-   Action: the name of the operation that you want to perform. For example, to add a domain name to Alibaba Cloud CDN, you must set the Action parameter to AddCdnDomain.
 -   Version: the version of the Alibaba Cloud CDN API. Set the value to 2018-05-10.
--   Parameters: the request parameters for the operation. Separate multiple parameters with ampersands \(`&`\). Request parameters include both common request parameters and operation-specific parameters. Common parameters include the API version number and identify verification information. For more information, see [Common request parameters](/intl.en-US/New API Reference/Common request parameters.md).
+-   Parameters: the request parameters for the operation. Separate multiple parameters with ampersands \(`&`\). Request parameters include both common request parameters and operation-specific parameters. Common request parameters include the API version number, authentication information, and other information. For more information, see [Common request parameters](/intl.en-US/New API Reference/Common request parameters.md).
 
 The following example demonstrates how to call the StartCdnDomain operation in Alibaba Cloud CDN.
 
@@ -37,7 +37,7 @@ http://cdn.aliyuncs.com?Action=StartCdnDomain
 
 ## Request signatures
 
-Alibaba Cloud CDN uses the request signature to verify the identity of the request caller. You must sign all API requests whether they are sent over HTTP or HTTPS. For more information about how signatures are calculated, see [Signature method](/intl.en-US/New API Reference/Signature method.md).
+Alibaba Cloud CDN uses the request signature to verify the identity of the API caller. You must sign all API requests whether they are sent over HTTP or HTTPS. For more information about how signatures are calculated, see [Signature method](/intl.en-US/New API Reference/Signature method.md).
 
 Alibaba Cloud CDN implements symmetric encryption with an AccessKey pair to verify the identity of the request sender. An AccessKey pair consists of an `AccessKey ID` and an `AccessKey secret`. An AccessKey pair is an identity credential issued to Alibaba Cloud accounts and Resource Access Management \(RAM\) users that is similar to a pair of logon username and password.
 
@@ -46,9 +46,9 @@ Alibaba Cloud CDN implements symmetric encryption with an AccessKey pair to veri
 -   The `AccessKey ID` is used to verify the identity of the user.
 -   The `AccessKey secret` is used to encrypt and verify the signature string. You must keep your AccessKey secret strictly confidential.
 
-You can create an AccessKey pair for an Alibaba Cloud account or a RAM user. When you call the Alibaba Cloud CDN API, you must use your AccessKey pair to complete identity verification. If the AccessKey pair of your Alibaba Cloud account is disclosed, your resources are exposed to potential risks. We recommend that you call API operations as a RAM user to minimize the risk of disclosing your AccessKey pair. For more information, see [Create an AccessKey pair]().
+You can create an AccessKey pair for an Alibaba Cloud account or a RAM user. When you call the Alibaba Cloud CDN API, you must use your AccessKey pair to complete identity verification. If the AccessKey pair of your Alibaba Cloud account is leaked, all your resources may be compromised. We recommend that you call API operations as a RAM user to minimize the risk of leaking your AccessKey pair. For more information, see [Create an AccessKey pair]().
 
-The following example demonstrates how to call the StartCdnDomain operation. The `AccessKeyId` parameter is set to `testid` and the `AccessKeySecret` parameter is set to `testsecret`. The request URL to be signed:
+The following example demonstrates how to call the StartCdnDomain operation. The `AccessKeyId` parameter is set to `testid` and the `AccessKeySecret` parameter is set to `testsecret`. The request URL to be signed is:
 
 ```
 http://cdn.aliyuncs.com?Action=StartCdnDomain&DomainName=example.com
@@ -65,7 +65,7 @@ The signature string calculated by using `testsecret&`:
 YGOjauEr2WSn6scXDxc9X0DKwsM=
 ```
 
-Add the signature string to the request as the Signature parameter. The URL of the signed request is:
+Add the Signature parameter to the request and set the value to the calculated signature string. The URL of the signed request is:
 
 ```
 http://cdn.aliyuncs.com?Action=StartCdnDomain&DomainName=example.com
