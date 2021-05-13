@@ -14,9 +14,9 @@ URL鉴权功能通过阿里云CDN加速节点与客户资源站点配合，形�
 
 如果您想了解Python鉴权代码示例，请参见 [鉴权示例](/intl.zh-CN/域名管理/访问控制/URL鉴权配置/鉴权示例.md)。
 
-**说明：** 您的请求URL经过CDN鉴权后，URL中的特殊字符，例如：`=`、`+`等会被转义。
+**说明：** 您的请求URL经过CDN鉴权后，URL中的特殊字符，例如`=`、`+`等会被转义。
 
-1.  登录[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://cdn.console.aliyun.com)[CDN控制台](https://partners-intl.aliyun.com/login-required#cdn)。
+1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
 2.  在左侧导航栏，单击**域名管理**。
 
@@ -24,13 +24,13 @@ URL鉴权功能通过阿里云CDN加速节点与客户资源站点配合，形�
 
 4.  在指定域名的左侧导航栏，单击**访问控制**。
 
-5.  在右侧域名管理区域，单击**URL鉴权**。
+5.  单击**URL鉴权**页签。
 
 6.  在**鉴权URL设置**区域，单击**修改配置**。
 
 7.  打开**URL鉴权**开关，配置URL鉴权信息。
 
-    ![URL鉴权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4798068951/p64280.png)
+    ![URL鉴权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9731090261/p64280.png)
 
     |参数|说明|
     |--|--|
@@ -39,7 +39,7 @@ URL鉴权功能通过阿里云CDN加速节点与客户资源站点配合，形�
     -   [鉴权方式A说明](/intl.zh-CN/域名管理/访问控制/URL鉴权配置/鉴权方式A说明.md)
     -   [鉴权方式B说明](/intl.zh-CN/域名管理/访问控制/URL鉴权配置/鉴权方式B说明.md)
     -   [鉴权方式C说明](/intl.zh-CN/域名管理/访问控制/URL鉴权配置/鉴权方式C说明.md)
-**说明：** URL鉴权错误，都会返回403报错。
+**说明：** URL鉴权错误都会返回403报错：
 
     -   MD5计算类错误
 
