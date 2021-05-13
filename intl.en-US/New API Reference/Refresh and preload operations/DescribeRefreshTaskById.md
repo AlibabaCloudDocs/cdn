@@ -4,7 +4,7 @@ Queries the status of refresh or prefetch tasks by ID for an accelerated domain 
 
 **Note:**
 
--   You can query data up to the last 30 days.
+-   You can query data up to the last 3 days.
 -   The maximum number of times that each user can call this operation per second is 30.
 
 ## Debugging
@@ -18,7 +18,7 @@ Queries the status of refresh or prefetch tasks by ID for an accelerated domain 
 |Action|String|Yes|DescribeRefreshTaskById|The operation that you want to perform. Set the value to **DescribeRefreshTaskById**. |
 |TaskId|String|Yes|12345678|The ID of the task that you want to query.
 
- You can call the [RefreshObjectCaches](~~91164~~) operation to query task IDs. Then, you can use the task IDs to query task status. You can specify at most 10 task IDs. Separate multiple task IDs with commas \(,\). |
+You can call the [RefreshObjectCaches](~~91164~~) operation to query task IDs. Then, you can use the task IDs to query task status. You can specify at most 10 task IDs. Separate multiple task IDs with commas \(,\). |
 
 ## Response parameters
 
@@ -29,19 +29,19 @@ Queries the status of refresh or prefetch tasks by ID for an accelerated domain 
 |CreationTime|String|2020-08-03T08:54:23Z|The time when the task was created. The time is displayed in UTC. |
 |Description|String|Internal Error|The error returned when the refresh or prefetch task failed. Valid values:
 
- -   **InternalError**: An internal error occurred.
+-   **InternalError**: An internal error occurred.
 -   **OriginTimeout**: The response from the origin server timed out.
 -   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error. |
 |ObjectPath|String|http://example.com/abc.jpg|The path of the object refreshed by the refresh task. |
 |ObjectType|String|file|The type of the task. Valid values:
 
- -   **file**: refreshes an individual file.
+-   **file**: refreshes an individual file.
 -   **directory**: refreshes files under the specified directories.
 -   **preload**: prefetches an individual file. |
 |Process|String|100%|The progress of the task, in percentage. |
 |Status|String|Complete|The status of the task. Valid values:
 
- -   **Complete**: the task has completed.
+-   **Complete**: the task has completed.
 -   **Pending**: The task is pending.
 -   **Refreshing**: The task is in progress.
 -   **Failed**: The task has failed. |
