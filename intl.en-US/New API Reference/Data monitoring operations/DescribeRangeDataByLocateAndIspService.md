@@ -18,7 +18,7 @@ Queries the bandwidth values at a specific time based on each Internet service p
 
 **Note:** The end time must be later than the start time. The difference between the end time and the start time cannot exceed one hour. |
 |StartTime|String|Yes|2019-11-30T05:33:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
-|IspNames|String|No|unicom,telecom|The name of the ISP. You can specify multiple ISP names and separate multiple ISP names with commas \(,\).
+|IspNames|String|No|unicom,telecom|The name of the ISP.
 
 You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. |
 |LocationNames|String|No|liaoning,guangxi|The names of the regions. Separate multiple regions with commas \(,\).
