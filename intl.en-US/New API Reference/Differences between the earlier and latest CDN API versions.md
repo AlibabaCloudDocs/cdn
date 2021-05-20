@@ -72,10 +72,6 @@ For more information, see [List of operations by function](/intl.en-US/New API R
 -   DescribeDomainTopUrlVisit
 
 |The DomainName request parameter is changed from optional to required.|
-|DescribeDomainHttpsData|-   The DomainType, TimeMerge, Cls, and FixTimeGap request parameters are removed.
--   The time format is changed from YYYY-MM-DDThh:mmZ to yyyy-MM-ddTHH:mm:ssZ.
--   The maximum time range for data query is changed from the last 90 days to 90 days.
--   The response parameters that specify static and dynamic resources are removed. |
 |-   SetPageCompressConfig
 -   SetIgnoreQueryStringConfig
 -   SetVideoSeekConfig
@@ -160,14 +156,11 @@ The following list shows the operations that remain unchanged:
 -   BatchStartCdnDomain
 -   BatchStopCdnDomain
 -   SetRangeConfig
--   SetUserAgentAcessRestriction
 -   BatchSetCdnDomainConfig
--   SetL2OssKeyConfig
 -   SetForwardSchemeConfig
 -   SetPathCacheExpiredConfig
 -   SetForceRedirectConfig
 -   SetReqAuthConfig
--   SetErrorPageConfig
 -   SetIpAllowListConfig
 -   SetDomainGreenManagerConfig
 -   SetHttpErrorPageConfig
@@ -179,8 +172,6 @@ The following list shows the operations that remain unchanged:
 -   SetHttpHeaderConfig
 -   SetRefererConfig
 -   SetReqHeaderConfig
--   ModifyFileCacheExpiredConfig
--   ModifyPathCacheExpiredConfig
 -   ModifyHttpHeaderConfig
 -   DeleteHttpHeaderConfig
 
