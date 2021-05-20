@@ -41,7 +41,6 @@ CDN提供以下相关API接口。
 |[SetPageCompressConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置智能压缩功能.md)|调用SetPageCompressConfig设置智能压缩功能。|
 |[SetIgnoreQueryStringConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置过滤参数功能.md)|调用SetIgnoreQueryStringConfig设置过滤参数功能。|
 |[SetRangeConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置Range回源功能.md)|调用SetRangeConfig设置Range回源功能。|
-|[SetVideoSeekConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置拖拽播放功能.md)|调用SetVideoSeekConfig设置拖拽播放功能。|
 |[SetSourceHostConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置回源HOST功能.md)|调用SetSourceHostConfig设置回源HOST功能。|
 |[SetForceRedirectConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置强制访问跳转方式.md)|调用SetForceRedirectConfig设置强制访问跳转方式。|
 |[SetRefererConfig](/cn.zh-CN/旧版API参考/配置操作接口/设置加速域名的防盗链功能.md)|调用SetRefererConfig设置加速域名的Refer防盗链功能。|
@@ -101,7 +100,6 @@ CDN提供以下相关API接口。
 |[DescribeCustomLogConfig](/cn.zh-CN/旧版API参考/日志接口/获取自定义日志配置信息.md)|调用DescribeCustomLogConfig查询日志配置信息。|
 |[DescribeDomainCustomLogConfig](/cn.zh-CN/旧版API参考/日志接口/获取加速域名日志配置信息.md)|调用DescribeDomainCustomLogConfig获取域名自定义日志格式配置信息。|
 |[DescribeUserCustomLogConfig](/cn.zh-CN/旧版API参考/日志接口/获取自定义日志配置ID.md)|调用DescribeUserCustomLogConfig获取用户下所有自定义日志配置信息。|
-|[ListDomainsByLogConfigId](/cn.zh-CN/旧版API参考/日志接口/获取日志配置ID的加速域名.md)|调用ListDomainsByLogConfigId查询应用某自定义日志格式的所有域名列表。|
 
 ## 辅助工具接口
 
