@@ -13,9 +13,9 @@ keyword: [鉴权, ram]
 
 当其他账号通过CDN API访问主账号资源时，阿里云CDN首先向RAM发起权限检查，以确保资源拥有者已经将相关权限授予调用者。不同的CDN API会根据涉及的资源以及API语义确定需要检查哪些资源的权限。实现授权策略和权限控制，您可以参见[访问控制产品文档](/intl.zh-CN/产品简介/什么是访问控制.md)和[API参考](/intl.zh-CN/API参考/API参考（RAM）/API概览.md)。
 
-了解CDN子账户如何使用，您可以参见[CDN子账户使用指南](/intl.zh-CN/服务管理/其他配置/CDN子账户使用指南.md)。
+了解CDN子账户如何使用，请参见[CDN子账户使用指南](/intl.zh-CN/服务管理/其他配置/CDN子账户使用指南.md)。
 
-了解RAM为CDN创建自定义授权策略，您可以参见[使用RAM对CDN进行权限管理](/intl.zh-CN/教程/使用RAM对CDN进行权限管理.md)。
+了解RAM为CDN创建自定义授权策略，请参见[使用RAM对CDN进行权限管理](/intl.zh-CN/教程/使用RAM对CDN进行权限管理.md)。
 
 ## 可授权的CDN资源类型
 
@@ -58,7 +58,6 @@ keyword: [鉴权, ram]
 |SetForceRedirectConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetRefererConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetPathCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
-|ModifyPathCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |DeleteCacheExpiredConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetReqAuthConfig|acs:cdn:\*:$accountid:domain/$domainName|
 |SetHttpHeaderConfig|acs:cdn:\*:$accountid:domain/$domainName|
