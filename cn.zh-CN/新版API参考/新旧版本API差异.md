@@ -1,5 +1,5 @@
 ---
-keyword: [api, cdn]
+keyword: [API, CDN]
 ---
 
 # 新旧版本API差异
@@ -72,10 +72,6 @@ keyword: [api, cdn]
 -   DescribeDomainTopUrlVisit
 
 |入参DomainName改成必传。|
-|DescribeDomainHttpsData|-   去掉DomainType、TimeMerge、Cls、FixTimeGap入参。
--   时间格式由YYYY-MM-DDThh:mmZ变更为yyyy-MM-ddTHH:mm:ssZ。
--   最多可获取最近90天的数据变更为：最多可获取90天的数据。
--   去掉动态、静态数据的出参。 |
 |-   SetPageCompressConfig
 -   SetIgnoreQueryStringConfig
 -   SetVideoSeekConfig
@@ -160,14 +156,11 @@ keyword: [api, cdn]
 -   BatchStartCdnDomain
 -   BatchStopCdnDomain
 -   SetRangeConfig
--   SetUserAgentAcessRestriction
 -   BatchSetCdnDomainConfig
--   SetL2OssKeyConfig
 -   SetForwardSchemeConfig
 -   SetPathCacheExpiredConfig
 -   SetForceRedirectConfig
 -   SetReqAuthConfig
--   SetErrorPageConfig
 -   SetIpAllowListConfig
 -   SetDomainGreenManagerConfig
 -   SetHttpErrorPageConfig
@@ -179,8 +172,6 @@ keyword: [api, cdn]
 -   SetHttpHeaderConfig
 -   SetRefererConfig
 -   SetReqHeaderConfig
--   ModifyFileCacheExpiredConfig
--   ModifyPathCacheExpiredConfig
 -   ModifyHttpHeaderConfig
 -   DeleteHttpHeaderConfig
 
