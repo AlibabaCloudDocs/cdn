@@ -66,7 +66,7 @@ Data is transmitted over HTTPS. |
 
 ## Step 3: Configure a CNAME record
 
-After you add a domain name to Alibaba Cloud CDN, Alibaba Cloud CDN verifies the ownership of the domain name. After the domain name passes the ownership verification, Alibaba Cloud CDN assigns a Canonical Name \(CNAME\) to the domain name. To enable CDN acceleration for the domain name, you must add a CNAME record to map the domain name to the CNAME. This way, requests sent to the domain name can be redirected to CDN nodes. The following example demonstrates how to add a CANME record for the domain name. Alibaba Cloud DNS \(previously known as HiChina\) is used in the example.
+After you add a domain name to Alibaba Cloud CDN, Alibaba Cloud CDN verifies the ownership of the domain name. After the domain name passes the ownership verification, Alibaba Cloud CDN assigns a Canonical Name \(CNAME\) to the domain name. To enable CDN acceleration for the domain name, you must add a CNAME record to map the domain name to the CNAME. This way, requests sent to the domain name can be redirected to CDN nodes. The following example demonstrates how to add a CNAME record for the domain name. Alibaba Cloud DNS \(previously known as HiChina\) is used in the example.
 
 1.  Obtain the CNAME assigned to the domain name.
 
