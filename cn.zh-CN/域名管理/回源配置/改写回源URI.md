@@ -70,6 +70,46 @@
 
 该请求将不再继续匹配**回源URI改写**规则列表中其余的规则。|
 
+样例四
+
+使用场景：在文件名是变量的情况下添加URI前缀。
+
+例如：将包含/xxx的URI（xxx代表任意文件名称，例如：/hello.jpg、/hello.html等等）改写为/image/xxx，即对根目录下的任意文件的URI都插入路径/image。
+
+|待改写URI|^\(.\*\)$**说明：** ^\(.\*\)$代表任意字符，\(\)代表的是一个分组，可以在目标URI中通过$1来调用分组的变量内容。 |
+|目标URI|/image$1**说明：** $1表示正则表达式中第一对圆括号中的表达式匹配到的内容，$2是第二个小括号里面的内容，依此类推。 |
+|执行规则|break|
+|结果说明|-   原始请求：`http://domain.com/hello.jpg`
+
+改写后的回源请求：`http://domain.com/image/hello.jpg`
+
+-   原始请求：`http://domain.com/hello.html`
+
+改写后的回源请求：`http://domain.com/image/hello.html`
+
+
+该请求将不再继续匹配**回源URI改写**规则列表中其余的规则。|
+
+样例五
+
+使用场景：在文件名是变量的情况下添加URI前缀。
+
+例如：将包含/live/xxx的URI（xxx代表任意文件名称，例如：/live/hello.jpg、/live/hello.html 等等）改写为/image/live/xxx，即对目录 /live 下的任意文件的URI都插入路径/image。
+
+|待改写URI|^/live/\(.\*\)$|
+|目标URI|/image/live/$1|
+|执行规则|break|
+|结果说明|-   原始请求：`http://domain.com/live/hello.jpg`
+
+改写后的回源请求：`http://domain.com/image/live/hello.jpg`
+
+-   原始请求：`http://domain.com/live/hello.html`
+
+改写后的回源请求：`http://domain.com/image/live/hello.html`
+
+
+该请求将不再继续匹配**回源URI改写**规则列表中其余的规则。|
+
 **相关文档**  
 
 
