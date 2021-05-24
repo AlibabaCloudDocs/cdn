@@ -1,11 +1,10 @@
 # DescribeDomainQpsData
 
-Queries the number of queries per second for an accelerated domain name. The data is collected at an interval of five minutes. You can query data collected within the last 90 days.
+Queries the number of queries per second for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
 
-**When you call this operation, note that:**
+**Note:**
 
 -   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data collected within the specified time range is queried.
--   You can specify one or more domain names. Separate multiple domain names with commas \(,\).
 -   The maximum number of times that each user can call this operation per second is 100.
 
 ## Debugging
@@ -16,8 +15,8 @@ Queries the number of queries per second for an accelerated domain name. The dat
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeDomainQpsData|The operation that you want to perform. Set the value to **DescribeDomainQpsData**. |
-|DomainName|String|No|test.test.com|The accelerated domain names. Separate multiple domain names with commas \(,\).
+|Action|String|No|DescribeDomainQpsData|The operation that you want to perform. Set the value to **DescribeDomainQpsData**. |
+|DomainName|String|No|test.test.com|The accelerated domain name. You can specify one or more domain names. Separate multiple domain names with commas \(,\).
 
 By default, this operation queries the number of queries per second for all accelerated domain names. |
 |StartTime|String|No|2019-11-30T05:33:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
@@ -26,17 +25,17 @@ By default, this operation queries the number of queries per second for all acce
 The end time must be later than the start time. |
 |Interval|String|No|300|The time interval between the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:
 
--   If the time span between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.
--   If the time span between StartTime and EndTime is from 3 to 31 days \(31 days excluded\), valid values are **3600** and **86400**. Default value: **3600**.
--   No less than 31 days: **86400**. Default value:**86400**. |
+-   If the time range between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.
+-   If the time range between StartTime and EndTime is from 3 to 31 days \(31 days excluded\), valid values are **3600** and **86400**. Default value: **3600**.
+-   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**. |
 |IspNameEn|String|No|unicom|The name of the Internet service provider \(ISP\) for your Content Delivery Network \(CDN\) service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are queried. |
-|LocationNameEn|String|No|beijing|The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. If you do not set this parameter, all regions are queried. |
+|LocationNameEn|String|No|beijing|The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|DataInterval|String|300|The time interval between the entries returned. Unit: seconds. |
+|DataInterval|String|300|The time interval between the data entries returned. Unit: seconds. |
 |DomainName|String|test.test.com|The accelerated domain name. |
 |StartTime|String|2019-11-30T05:33:00Z|The beginning of the time range that was queried. |
 |EndTime|String|2019-11-30T05:40:00Z|The end of the time range that was queried. |
@@ -49,12 +48,12 @@ The end time must be later than the start time. |
 |DomesticValue|String|0|The number of queries per second in mainland China. |
 |HttpsAccDomesticValue|String|1|The number of HTTPS requests sent to L1 CDN nodes inside mainland China. |
 |HttpsAccOverseasValue|String|1|The number of HTTPS requests sent to L1 CDN nodes outside mainland China. |
-|HttpsAccValue|String|1|The number of HTTPS requests sent to L1 CDN nodes. |
+|HttpsAccValue|String|1|The total number of HTTPS requests sent to L1 CDN nodes. |
 |HttpsDomesticValue|String|1|The number of queries per second that is calculated based on the HTTPS requests sent to L1 CDN nodes inside mainland China. |
 |HttpsOverseasValue|String|1|The number of queries per second that is calculated based on the HTTPS requests sent to L1 CDN nodes outside mainland China. |
 |HttpsValue|String|1|The number of queries per second that is calculated based on the HTTPS requests sent to L1 CDN nodes. |
 |OverseasValue|String|0|The number of queries per second outside mainland China. |
-|TimeStamp|String|2019-11-30T05:40:00Z|The timestamp of the data. |
+|TimeStamp|String|2019-11-30T05:40:00Z|The timestamp of the data returned. |
 |Value|String|0|The total number of queries per second. |
 
 ## Examples
@@ -62,7 +61,7 @@ The end time must be later than the start time. |
 Sample requests
 
 ```
-http://cdn.aliyuncs.com/?Action=DescribeDomainQpsData
+http(s)://cdn.aliyuncs.com/?Action=DescribeDomainQpsData
 &DomainName=test.com
 &StartTime=2019-11-30T05:33:00Z
 &EndTime=2019-11-30T05:40:00Z
