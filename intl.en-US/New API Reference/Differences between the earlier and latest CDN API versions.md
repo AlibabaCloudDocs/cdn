@@ -41,7 +41,7 @@ For more information, see [List of operations by function](/intl.en-US/New API R
 -   The description for the SupplyBpsDatas response parameter is removed. |
 |DescribeCdnDomainLogs|-   The time format is changed from YYYY-MM-DDThh:mmZ to yyyy-MM-ddTHH:mm:ssZ.
 -   The LogDay request parameter is removed.
--   The response parameter format is adjusted. For more information, see [here](#no8). |
+-   The response parameter format is adjusted. For more information, see [here](#codeblock_ob5_zwc_48m). |
 |DeleteSpecificConfig|The FunctionName parameter is removed.|
 |DescribeDomainAverageResponseTime|The time format is changed from YYYY-MM-DDThh:mmZ to yyyy-MM-ddTHH:mm:ssZ.|
 |DescribeUserDomains|-   The SourceType response parameter is removed.
