@@ -18,7 +18,7 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |[DescribeUserDomains](/intl.en-US/API Reference/Domain Operation Interface/DescribeUserDomains.md)|Queries all accelerated domain names under your account and their status.|
 |[DescribeCdnDomainDetail](/intl.en-US/API Reference/Domain Operation Interface/DescribeCdnDomainDetail.md)|Queries the basic information about an accelerated domain name.|
 |[ModifyCdnDomain](/intl.en-US/API Reference/Domain Operation Interface/ModifyCdnDomain.md)|Modifies an accelerated domain name.|
-|[StartCdnDomain](/intl.en-US/API Reference/Domain Operation Interface/Enable a disabled CDN domain, changing the DomainStatus to online..md)|Enables Alibaba Cloud CDN for an accelerated domain name. After Alibaba Cloud CDN is enabled for the accelerated domain name, the value of the DomainStatus parameter is changed to Online.|
+|[StartCdnDomain](/intl.en-US/API Reference/Domain Operation Interface/StartCdnDomain.md)|Enables Alibaba Cloud CDN for an accelerated domain name. After Alibaba Cloud CDN is enabled for the accelerated domain name, the value of the DomainStatus parameter is changed to Online.|
 |[StopCdnDomain](/intl.en-US/API Reference/Domain Operation Interface/StopCdnDomain.md)|Disables Alibaba Cloud CDN for an accelerated domain name.|
 |[DeleteCdnDomain](/intl.en-US/API Reference/Domain Operation Interface/DeleteCdnDomain.md)|Removes a domain name from Alibaba Cloud CDN.|
 |[DescribeDomainsBySource](/intl.en-US/API Reference/Domain Operation Interface/DescribeDomainsBySource.md)|Queries all domain names corresponding to one or more origins under your account.|
@@ -41,7 +41,6 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |[SetPageCompressConfig](/intl.en-US/API Reference/Configuration Interfaces/SetPageCompressConfig.md)|Configures the smart compression feature for an accelerated domain name.|
 |[SetIgnoreQueryStringConfig](/intl.en-US/API Reference/Configuration Interfaces/SetIgnoreQueryStringConfig.md)|Configures the parameter filtering feature for an accelerated domain name.|
 |[SetRangeConfig](/intl.en-US/API Reference/Configuration Interfaces/SetRangeConfig.md)|Configures the object chunking feature for an accelerated domain name.|
-|[SetVideoSeekConfig](/intl.en-US/API Reference/Configuration Interfaces/SetVideoSeekConfig.md)|Configures the video seeking feature for an accelerated domain name.|
 |[SetSourceHostConfig](/intl.en-US/API Reference/Configuration Interfaces/SetSourceHostConfig.md)|Specifies an origin host for an accelerated domain name.|
 |[SetForceRedirectConfig](/intl.en-US/API Reference/Configuration Interfaces/SetForceRedirectConfig.md)|Configures the force redirect feature for an accelerated domain name.|
 |[SetRefererConfig](/intl.en-US/API Reference/Configuration Interfaces/SetRefererConfig.md)|Configures the Referer-based hotlink protection feature for an accelerated domain name.|
@@ -101,7 +100,6 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |[DescribeCustomLogConfig](/intl.en-US/API Reference/Log Information Interface/DescribeCustomLogConfig.md)|Queries the detailed configuration of logging.|
 |[DescribeDomainCustomLogConfig](/intl.en-US/API Reference/Log Information Interface/ModifyDomainCustomLogConfig.md)|Queries the custom log configuration of an accelerated domain name.|
 |[DescribeUserCustomLogConfig](/intl.en-US/API Reference/Log Information Interface/DescribeUserCustomLogConfig.md)|Queries all custom log configurations under your account.|
-|[ListDomainsByLogConfigId](/intl.en-US/API Reference/Log Information Interface/ListDomainsByLogConfigId.md)|Queries all accelerated domain names associated with a custom log configuration.|
 
 ## Auxiliary tools
 
