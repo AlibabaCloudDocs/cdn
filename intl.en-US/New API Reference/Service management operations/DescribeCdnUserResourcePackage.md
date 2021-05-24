@@ -1,8 +1,8 @@
 # DescribeCdnUserResourcePackage
 
-Queries the current resource plans that you have purchased for Alibaba Cloud Content Delivery Network \(CDN\).
+Queries the resource plans that you have purchased for Alibaba Cloud Content Delivery Network \(CDN\).
 
-You can call this operation up to 30 times per second with each account.
+**Note:** The maximum number of times that each user can call this operation per second is 30.
 
 ## Debugging
 
@@ -19,25 +19,25 @@ You can call this operation up to 30 times per second with each account.
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
 |RequestId|String|84839536-2B7E-457D-9D8C-82E6C7D4E1A3|The ID of the request. |
-|ResourcePackageInfos|Array| |The details of each resource plan that is indicated by the ResourcePackageInfo parameter. |
+|ResourcePackageInfos|Array of ResourcePackageInfo| |The details about each resource plan. The details are organized in an array. The array consists of the subparameter values of the ResourcePackageInfo parameter. |
 |ResourcePackageInfo| | | |
-|CommodityCode|String|cdnflowbag|The code of the resource plan. |
+|CommodityCode|String|cdnflowbag|The code of the data transfer plan. |
 |CurrCapacity|String|10995089554629|The remaining quota of the resource plan.
 
- -   The remaining network traffic in the resource plan. The network traffic is consumed when you access the specified URL. Unit: bytes.
--   The remaining number of requests that are supported by the resource plan. |
+ -   The remaining amount of data transfer provided by the resource plan. Unit: bytes.
+-   The remaining number of requests provided by the resource plan. |
 |DisplayName|String|CDN resource plan \(mainland China\)|The name of the resource plan. |
 |EndTime|String|2018-07-01T08:00:00Z|The time when the resource plan expires. |
 |InitCapacity|String|536870912000|The total quota of the resource plan.
 
- -   The remaining network traffic in the resource plan. The network traffic is consumed when you access the specified URL. Unit: bytes.
--   The maximum number of requests that are supported by the resource plan. |
+ -   The total amount of data transfer provided by the resource plan. Unit: bytes.
+-   The total number of requests provided by the resource plan. |
 |InstanceId|String|FP-ilttxc23a|The ID of the instance. |
-|StartTime|String|2017-12-05T19:10:58Z|The time when the resource plan takes effect. |
-|Status|String|valid|The status of the resource plan. Valid values:
+|StartTime|String|2017-12-05T19:10:58Z|The time when the resource plan took effect. |
+|Status|String|valid|The status of the data transfer plan. Valid values: Valid values:
 
  -   **valid**: The resource plan is valid.
--   **closed**: The resource plan is expired. |
+-   **closed**: The resource package is invalid. |
 |TemplateName|String|CDN resource plan|The name of the template. |
 
 ## Examples
@@ -45,7 +45,7 @@ You can call this operation up to 30 times per second with each account.
 Sample requests
 
 ```
-https://cdn.aliyuncs.com/?Action=DescribeCdnUserResourcePackage
+http(s)://cdn.aliyuncs.com/?Action=DescribeCdnUserResourcePackage
 &<Common request parameters>
 ```
 
@@ -83,7 +83,7 @@ Sample success responses
 			      <InitCapacity>10000000</InitCapacity>
 			      <EndTime>2018-12-06T08:00:00Z</EndTime>
 			      <StartTime>2017-12-05T19:10:58Z</StartTime>
-			      <DisplayName>CDN HTTPS request resource plan</DisplayName>
+			      <DisplayName>CDN resource plan for HTTPS requests</DisplayName>
 			      <CurrCapacity>9999645</CurrCapacity>
 		    </ResourcePackageInfo>
 	  </ResourcePackageInfos>
@@ -124,7 +124,7 @@ Sample success responses
                 "InitCapacity": "10000000",
                 "EndTime": "2018-12-06T08:00:00Z",
                 "StartTime": "2017-12-05T19:10:58Z",
-                "DisplayName": "CDN HTTPS request resource plan",
+                "DisplayName": "CDN resource plan for HTTPS requests",
                 "CurrCapacity": "9999645"
             }
         ]
