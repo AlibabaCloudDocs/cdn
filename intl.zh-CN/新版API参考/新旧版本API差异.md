@@ -4,7 +4,7 @@ keyword: [API, CDN]
 
 # 新旧版本API差异
 
-本文档为您介绍了CDN新旧两个版本API接口的变更详情。
+本文为您介绍了CDN新旧两个版本API接口的变更详情。
 
 新版CDN API，请参见[API概览](/intl.zh-CN/新版API参考/API概览.md)。
 
@@ -41,7 +41,7 @@ keyword: [API, CDN]
 -   去掉SupplyBpsDatas出参说明。 |
 |DescribeCdnDomainLogs|-   时间格式由YYYY-MM-DDThh:mmZ变更为yyyy-MM-ddTHH:mm:ssZ。
 -   去掉LogDay入参。
--   出参模型调整，详情请见[下方](#no8)。 |
+-   出参模型调整，详细信息，请见下方的[示例代码](#codeblock_ob5_zwc_48m)。 |
 |DeleteSpecificConfig|去掉FunctionName参数。|
 |DescribeDomainAverageResponseTime|时间格式由YYYY-MM-DDThh:mmZ变更为yyyy-MM-ddTHH:mm:ssZ。|
 |DescribeUserDomains|-   去掉SourceType出参。
