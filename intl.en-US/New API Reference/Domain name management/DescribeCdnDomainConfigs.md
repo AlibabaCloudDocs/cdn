@@ -2,11 +2,11 @@
 
 Queries the configurations of an accelerated domain name. You can query the configuration of one or more features at a time.
 
-**Note:** The maximum number of times that each user can call this operation per second is 100.
+**Note:** The maximum number of times that each Alibaba Cloud account can call this operation per second is 100.
 
 ## Debugging
 
-[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different software development kits \(SDKs\).](https://api.aliyun.com/#product=Cdn&api=DescribeCdnDomainConfigs&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeCdnDomainConfigs&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
@@ -14,153 +14,316 @@ Queries the configurations of an accelerated domain name. You can query the conf
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeCdnDomainConfigs|The operation that you want to perform. Set the value to **DescribeCdnDomainConfigs**. |
 |DomainName|String|Yes|example.com|The accelerated domain name. You can specify only one domain name in each call. |
-|FunctionNames|String|No|aliauth|The names of the features that you want to query. Separate multiple features with commas \(,\). |
+|FunctionNames|String|No|aliauth|The names of the features to query. Separate features with commas \(,\). |
 
-The following table describes the features.
+The following table describes the supported features.
 
 |Feature
 
-|Description |
-|---------|-------------|
-|referer\_white\_list\_set
+|Parameter |
+|---------|-----------|
+|referer\_white\_list\_set: configures a referer whitelist.
 
-|Configures a referer whitelist. |
-|referer\_black\_list\_set
+|refer\_domain\_allow\_list: specifies the referers to be added to the whitelist. Separate referers with commas \(,\).
 
-|Configures a referer blacklist. |
-|filetype\_based\_ttl\_set
+ allow\_empty: specifies whether requests with an empty referer header are allowed to access CDN resources. Valid values: on and off. |
+|referer\_black\_list\_set: configures a referer blacklist.
 
-|Sets expiration rules for files. |
-|path\_based\_ttl\_set
+|refer\_domain\_deny\_list: specifies the referers to be added to the blacklist. Separate referers with commas \(,\).
 
-|Sets expiration rules for directories. |
-|oss\_auth
+ allow\_empty: specifies whether requests with an empty referer header are allowed to access DCDN resources. Valid values: on and off. |
+|filetype\_based\_ttl\_set: sets an expiration rule for specified file types.
 
-|Specifies the Object Storage Bucket \(OSS\) bucket that requires access authentication. |
-|ip\_black\_list\_set
+|ttl: specifies the time period after which the cached data expires. Unit: seconds.
 
-|Configures an IP blacklist. ip\_list: specifies the IP addresses to be added to the blacklist. Separate multiple IP addresses with commas \(,\). |
-|ip\_allow\_list\_set
+ file\_type: specifies the file types. Separate file types with commas \(,\), for example, TXT,JPG.
 
-|Configures an IP whitelist. ip\_list: specifies the IP addresses to be added to the whitelist. Separate multiple IP addresses with commas \(,\). |
-|ip\_white\_list\_set
+ weight: specifies the weight. Maximum value: 99. Minimum value: 1. A greater value indicates a higher priority. |
+|path\_based\_ttl\_set: sets an expiration rule for a specified directory.
 
-|Configures a rate limiting list. ip\_list: specifies the IP addresses to be added to the rate limiting list. Separate multiple IP addresses with commas \(,\). |
-|error\_page
+|ttl: specifies the time period after which the cached data expires. Unit: seconds.
 
-|Redirects requests from an error page to a specified page. |
-|tesla
+ path: specifies a directory. It must start with a forward slash \(/\).
 
-|Configures the HTML optimization feature. |
-|set\_req\_host\_header
+ weight: specifies the weight. Maximum value: 99. Minimum value: 1. A greater value indicates a higher priority. |
+|oss\_auth: configures authentication for requests destined for an Object Storage Service \(OSS\) bucket.
 
-|Modifies the Host header in requests before they are redirected to the origin server. |
-|set\_req\_header
+|oss\_bucket\_id: specifies the endpoint of the OSS bucket. |
+|ip\_black\_list\_set: configures an IP blacklist.
 
-|Modifies custom headers in requests before they are redirected to the origin server. |
-|set\_hashkey\_args
+|ip\_list: specifies the IP addresses to be added to the blacklist. Separate IP addresses with commas \(,\). |
+|ip\_allow\_list\_set: configures an IP whitelist.
 
-|Ignores URL parameters. |
-|aliauth
+|ip\_list: specifies the IP addresses to be added to the whitelist. Separate IP addresses with commas \(,\). |
+|ip\_white\_list\_set: configures an IP whitelist for rate limiting.
 
-|Configures Alibaba authentication. |
-|set\_resp\_header
+|ip\_list: specifies the IP addresses to be added to the whitelist. Separate IP addresses with commas \(,\). |
+|error\_page: redirects requests to a specified error page.
 
-|Sets a response header. To verify this setting, you can check the response messages in a browser. |
-|video\_seek
+|error\_code: specifies the error code.
 
-|Configures the video seeking feature. |
-|range
+ rewrite\_page: specifies the error page to which requests are redirected when the specified error occurs. |
+|set\_req\_host\_header: configures custom headers for requests that are redirected to the origin server.
 
-|Configures the object chunking feature. |
-|gzip
+|domain\_name: specifies a domain name that is used as the origin host. |
+|set\_hashkey\_args: retains specified URL parameters.
 
-|Configures the Gzip compression feature. |
-|https\_force
+|hashkey\_args: specifies the URL parameters to be retained. Separate parameters with commas \(,\). You can specify up to 10 parameters to be retained.
 
-|Redirects requests from HTTP URLs to HTTPS URLs. |
-|http\_force
+ disable: A value of on indicates that all URL parameters are deleted. A value of off indicates that all URL parameters are retained. The hashkey\_args setting has a higher priority. Even if you have set this parameter to on, the parameters specified in hashkey\_args are retained.
 
-|Redirects requests from HTTPS URLs to HTTP URLs. |
-|alilive
+ keep\_oss\_args: specifies whether to retain all URL parameters in requests before they are redirected to origin servers. A value of on indicates that all URL parameters are retained in requests before they are redirected to origin servers. A value of off indicates that only the parameters specified in hashkey\_args are retained. |
+|aliauth: configures Alibaba Cloud authentication.
 
-|Configures the ApsaraVideo Live service. |
-|forward\_scheme
+|auth\_type: specifies the authentication type. no\_auth: disables authentication. type\_a: enables signing type A. type\_b: enables signing type B. type\_c: enables signing type C.
 
-|Configures the static origin protocol policy. |
-|tmd\_signature
+ auth\_key1: specifies the primary authentication key. auth\_key2: specifies the secondary authentication key.
 
-|Creates a custom rate limiting rule. |
-|cdn\_waf
+ ali\_auth\_delta: customizes the buffer time for authentication. |
+|set\_resp\_header: configures an HTTP response header. To verify the setting, you can check responses in a browser.
 
-|Configures basic WAF protection features. |
-|https\_origin\_sni
+|key: specifies the response header. This parameter is required.
 
-|Configures an origin Server Name Indication \(SNI\). |
-|quic
+ value: specifies the value of the response header. This parameter is required. Enter null if you want to delete the header.
 
-|Sets basic parameters of Quick UDP Internet Connection \(QUIC\). |
-|forward\_timeout
+ header\_operation\_type: specifies the action to be performed on a request header. Valid values: add, delete, modify, and rewrite. add: adds a request header. delete: deletes a request header. modify: modifies a request header. rewrite: replaces a request header.
 
-|Specifies the timeout period of requests that are redirected to the origin server. |
-|ali\_video\_split
+ duplicate: specifies whether duplicate request headers are allowed. Valid values: on and off.
 
-|Configures the audio extraction feature. |
-|ipv6
+ header\_source: searches for the source of the request header.
 
-|Configures IPv6 settings. |
-|ali\_video\_preview
+ header\_destination: replaces the request header.
 
-|Configures the video preview feature. |
-|default\_ttl\_code
+ match\_all: specifies whether to match all requests. Valid values: on and off. |
+|https\_force: redirects visitors from HTTP URLs to corresponding HTTPS URLs.
 
-|Specifies a time-to-live \(TTL\) value for HTTP status codes. |
-|edge\_function
+|enable: specifies whether to enable this feature. Valid values: on and off. |
+|https\_force: redirects visitors from HTTPS URLs to corresponding HTTP URLs.
 
-|Configures EdgeScript functions. |
-|follow\_302
+|enable: specifies whether to enable this feature. Valid values: on and off. |
+|https\_option: configures basic HTTPS parameters.
 
-|Configures 302 redirects. |
-|aws\_s3\_bucket
+|http2: specifies whether to enable HTTP/2. Valid values: on and off.
 
-|Specifies the Amazon Web Services \(AWS\) Simple Storage Service \(S3\) buckets that require authentication. |
-|origin\_certificate\_verification
+ ocsp\_stapling: specifies whether to enable Online Certificate Status Protocol \(OCSP\) stapling. Valid values: on and off. |
+|forward\_scheme: configures the static origin protocol policy.
 
-|Verifies certificates of requests before they are redirected to the origin server. |
-|origin\_dns\_host
+|enable: specifies whether to enable this feature. Valid values: on and off.
 
-|Configures an origin host. |
-|cc\_defense
+ scheme\_origin: specifies the protocol policy that is used to communicate with the origin server. Valid values: http, https, and follow. |
+|set\_req\_header: configures an HTTP header for requests that are redirected to the origin server.
 
-|Sets the priorities of custom rate limiting rules. |
-|cc\_rule
+|set\_req\_header is supported by version 1. We recommend that use origin\_request\_header, which is supported by version 2 and provides more features.
 
-|Configures the rate limiting feature. |
-|back\_to\_origin\_argument\_rewrite
+ key: specifies the name of the header.
 
-|Rewrites parameters in requests before they are redirected to the origin server. |
-|back\_to\_origin\_url\_rewrite
+ value: specifies the value of the header. |
+|l2\_oss\_key: retrieves content from private OSS buckets.
 
-|Rewrites URLs in requests before they are redirected to the origin server. |
-|self\_defined\_cachekey
+|private\_oss\_auth: specifies whether to enable this feature. Valid values: on and off. |
+|range: configures object chunking to retrieve content from the origin server based on HTTP range requests.
 
-|Configures custom cache keys. |
-|advanced\_origin
+|enable: specifies whether to enable this feature. Valid values: on, off, and force. |
+|video\_seek: configures video seeking.
 
-|Configures advanced settings for requests that are redirected to the origin server. |
-|ddos\_domain
+|enable: specifies whether to enable this feature. This parameter is required. Valid values: on and off.
 
-|Configures DDoS mitigation rules. |
-|ali\_location
+ flv\_seek\_by\_time: specifies whether to enable Flash Video \(FLV\) seeking by time. Valid values: on and off.
 
-|Blocks requests from specified regions. |
-|https\_option
+ mp4\_seek\_start: customizes MP4 video start parameters.
 
-|Sets the basic parameters of HTTPS. Sets the basic parameters of HTTPS. Valid values:
+ mp4\_seek\_end: customizes MP4 video end parameters.
 
-**http2**: Specifies whether to enable HTTP/2. Valid values: on and off.
+ flv\_seek\_start: customizes FLV video start parameters.
 
-**ocsp\_stapling**: Specifies whether to enable OCSP stapling. Valid values: on and off. |
+ flv\_seek\_end: customizes FLV video end parameters. |
+|ali\_remove\_args: deletes URL parameters.
+
+|ali\_remove\_args: specifies the parameters to be deleted. The remaining parameters are used as the URL parameters in hashkey\_args. Separate parameters with spaces. The ali\_remove\_args parameter is required.
+
+ keep\_oss\_args: specifies whether to retain URL parameters in requests before they are redirected to origin servers. A value of on indicates that all URL parameters are retained in requests before they are redirected to origin servers. A value of off indicates that only the parameters in the hashkey\_args are retained. |
+|https\_tls\_version: configures the TLS protocol.
+
+|tls10: configures TLS 1.0. Valid values: on and off. Default value: on.
+
+ tls11: configures TLS 1.1. Valid values: on and off. Default value: on.
+
+ tls12: configures TLS 1.2. Valid values: on and off. Default value: on.
+
+ tls13: configures TLS 1.3. Valid values: on and off. Default value: off. |
+|HSTS: configures HSTS.
+
+|enabled: specifies whether to enable this feature. This parameter is required. Valid values: on and off. Default value: off.
+
+ https\_hsts\_max\_age: specifies the validity period of the HSTS policy. This parameter is required. Unit: seconds. We recommend that you set the value to 5184000, which equals 60 days.
+
+ https\_hsts\_include\_subdomains: specifies whether the HSTS header contains the includeSubDomains parameter. Valid values: on and off. Use caution if you want to enable this feature. Make sure that HTTPS is enabled for all the subdomains of the domain name to be accelerated. Otherwise, the HTTPS URLs to which users are redirected from the subdomains become inaccessible. |
+|filetype\_force\_ttl\_code: specifies a time-to-live \(TTL\) value for HTTP status codes based on file types.
+
+|file\_type: specifies the file type. You can specify one or more file types. Separate file types with commas \(,\), for example, TXT,JPG. This parameter is required.
+
+ code\_string: specifies the HTTP status codes. Separate status codes with commas \(,\). This parameter is required. Example: 302=0,301=0,4xx=2. |
+|path\_force\_ttl\_code: specifies a TTL value for HTTP status codes based on directories.
+
+|path: specifies a directory. It must start with a forward slash \(/\), for example, /image. This parameter is required.
+
+ code\_string: specifies the HTTP status codes. Separate status codes with commas \(,\). This parameter is required. Example: 302=0,301=0,4xx=2. |
+|gzip: configures Gzip compression.
+
+|enable: specifies whether to enable this feature. This parameter is required. Valid values: on and off. |
+|tesla: configures HTML optimization.
+
+|enable: specifies whether to enable this feature. This parameter is required. Valid values: on and off.
+
+ trim\_js: specifies whether to optimize the JavaScript code of HTML pages. Valid values: on and off.
+
+ trim\_css: specifies whether to optimize the CSS code of HTML pages. Valid values: on and off. |
+|https\_origin\_sni: configures origin Server Name Indication \(SNI\) settings.
+
+|enabled: specifies whether to enable this feature. This parameter is required. Valid values: on and off.
+
+ https\_origin\_sni: specifies the origin SNI settings. This parameter is required. |
+|limit\_rate: configures traffic throttling for individual requests.
+
+|ali\_limit\_rate: specifies the maximum amount of data that can be transferred per second after traffic throttling is triggered, such as 200 KB or 1 MB. Unit: byte/s. This parameter is required.
+
+ ali\_limit\_rate\_after: specifies the amount of data that can be sent before traffic throttling is triggered. Unit: byte/s.
+
+ traffic\_limit\_arg: specifies the name of the URL parameter based on which traffic throttling is triggered. Example: rate.
+
+ traffic\_limit\_unit: specifies the unit for traffic throttling. Valid values: k, m, and g. For example, when the ali\_limit\_rate\_after parameter is set to 1, the maximum data transfer rate can be 1 MB/s, 1 KB/s, or 1 GB/s.
+
+ ali\_limit\_start\_hour: specifies the start time of traffic throttling. Valid values: 0 to 24. Default: 0. The start time must be earlier than the end time.
+
+ ali\_limit\_end\_hour: specifies the end time of traffic throttling. Valid values: 0 to 24. Default: 24. The end time must be later than the start time. |
+|brotli: configures Brotli compression.
+
+|enable: specifies whether to enable this feature. This parameter is required. Valid values: on and off.
+
+ brotli\_level: specifies the compression level. Valid values: 1 to 11. |
+|ali\_ua: configures a user agent whitelist or blacklist.
+
+|ua: specifies the user agents that you want to add to the list.
+
+ type: specifies the type of the user agent list. Valid values: black and white. |
+|set\_l2\_req\_header: configures HTTP headers for requests that are sent to L2 CDN nodes.
+
+|set\_l2\_req\_header is supported by version 1. We recommend that you use origin\_request\_header, which is supported by version 2 and provides more features.
+
+ key: specifies the name of the header.
+
+ value: specifies the value of the header. Enter null if you want to delete the header. |
+|host\_redirect: configures URL rewrite.
+
+|regex: specifies the URL to be rewritten, for example, ^/$.
+
+ replacement: specifies the final URL, for example, /go/act/sale/tbzlsy.php.
+
+ flag: Valid values are redirect and break. |
+|forward\_timeout: configures the timeout period for requests that are redirected to the origin server.
+
+|forward\_timeout: specifies a time period, in seconds. We recommend that you set a value that is at most 100. |
+|ali\_video\_split: configures audio extraction.
+
+|enabled: specifies whether to enable this feature. Valid values: on and off. |
+|ipv6: configures IPv6.
+
+|switch: specifies whether to enable IPv6. on: enables IPv6. off: disables IPv6. This parameter is required.
+
+ region: specifies the region where you want to enable IPv6. You can enter an asterisk \(\*\) to specify all regions. |
+|ali\_video\_preview: configures video preview.
+
+|enable: specifies whether to enable this feature. Valid values: on and off. The video preview feature supports the TS and MP3 formats. For FLV and MP4 video files, visitors can advance and rewind videos. This parameter is required.
+
+ ali\_video\_preview\_argument: specifies the length of the videos that can be previewed by visitors. The parameter value must be measured in seconds. This parameter is required. |
+|default\_ttl\_code: configures a TTL value for specified HTTP status codes.
+
+|default\_ttl\_code: specifies a TTL value for HTTP status codes. Unit: seconds. Separate status codes with commas \(,\). Example: 4xx=3,200=3600,5xx=1. This parameter is required. |
+|back\_to\_origin\_argument\_rewrite: configures parameter rewrite.
+
+|Action priorities: Add \> Delete \> Reserve \> Modify. Separate parameters with spaces.
+
+ delete\_argument: specifies the parameters to be deleted.
+
+ save\_argument: specifies the parameters to be retained. Only the specified parameters are retained. The Add and Delete rules take effect at the same time.
+
+ ignore\_all\_argument: specifies whether to delete all parameters in requests that are redirected to the origin server. Valid values: on and off. However, parameters added by the Add action are reserved.
+
+ add\_argument: specifies parameters to be added. The Add action has the highest priority.
+
+ modify\_argument: specifies parameters to be modified. The Modify action has the lowest priority. Parameters specified by the Delete action are not retained. |
+|back\_to\_origin\_url\_rewrite: configures URL rewrite.
+
+|source\_url: specifies the URL to be rewritten. This parameter is required.
+
+ target\_url: specifies the final URL. This parameter is required.
+
+ flag: specifies an action. Valid values: null, break, and enhance\_break. null: continues to apply subsequent rewrite rules after applying the current rule. break: stops applying subsequent rewrite rules after applying the current rule. enhance\_break: applies the current rewrite rule to both the URL and its parameters, and then stops applying subsequent rules. This action is also effective on FLV streaming. |
+|edge\_function: configures scripts in EdgeScript.
+
+|rule: specifies DSL-based scripts. This parameter is required.
+
+ pri: specifies the priority of the DSL script. This parameter is required.
+
+ enable: specifies whether to enable the script. This parameter is required. Valid values: on and off.
+
+ name: specifies the name of the script.
+
+ pos: specifies whether to execute the script at the start or end of the request processing pipeline.
+
+ brk: specifies that after the current script is matched, the subsequent scripts at the specified position are skipped.
+
+ option: specifies extensions that are used to perform response header debugging.
+
+ grammar: an extension used to specify the scripting language. Valid values: es2 and js. You can also leave this parameter empty.
+
+ jsmode: an extension used to manage the domain name whitelist in JavaScript. Valid value: redirect and bypass. |
+|follow\_302: configures 302 redirects.
+
+|enable: specifies whether to enable this feature. This parameter is required. Valid values: on and off.
+
+ max\_tries: specifies the maximum number of 302 redirects that can be performed. You can set the value to n+1. The value of n cannot be greater than 5. The default value is 3. In this case, the maximum number of redirects is three times \(2+1=3\). |
+|aws\_s3\_bucket: specifies the Amazon Web Services \(AWS\) Simple Storage Service \(S3\) buckets that require authentication.
+
+|enable: specifies whether to enable this feature. Valid values: l2 and off. This parameter is required.
+
+ bucketname: specifies the names of the AWS S3 buckets.
+
+ accesskey: specifies the AWS access key ID. This parameter is required.
+
+ secretkey: specifies the AWS secret access key. This parameter is required.
+
+ region: specifies the Region where the AWS S3 bucket is deployed. This parameter is required. |
+|origin\_request\_header: configures HTTP request headers.
+
+|header\_operation\_type: specifies the action to be performed on the request header. Valid values: add, delete, modify, and rewrite. add: adds a header. delete: deletes a header. modify: modifies a header. rewrite: rewrites a header. This parameter is required.
+
+ header\_name: specifies the name of the request header. This parameter is required.
+
+ header\_value: specifies the value of the request header.
+
+ duplicate: specifies whether to allow duplicate request headers. Valid values: on and off.
+
+ header\_source: searches for the source of the request header.
+
+ header\_destination: replaces the request header.
+
+ match\_all: specifies whether to match all responses. Valid values: on and off. |
+|origin\_response\_header: configures HTTP response headers.
+
+|header\_operation\_type: specifies the action to be performed on the response header. This parameter is required. Valid values: add, delete, modify, and rewrite. add: adds a response header. delete: deletes a response header. modify: modifies a response header. rewrite: rewrites a response header.
+
+ header\_name: specifies the name of the response header. This parameter is required.
+
+ header\_value: specifies the value of the response header.
+
+ duplicate: specifies whether to allow duplicate request headers. Valid values: on and off.
+
+ header\_source: searches for the source of the request header.
+
+ header\_destination: replaces the request header.
+
+ match\_all: specifies whether to match all responses. Valid values: on and off. |
 
 ## Response parameters
 
@@ -171,12 +334,12 @@ The following table describes the features.
 |ConfigId|String|6295|The ID of the configuration. |
 |FunctionArgs|Array of FunctionArg| |The description of each feature. |
 |FunctionArg| | | |
-|ArgName|String|auth\_type|The key of the parameter. |
+|ArgName|String|auth\_type|The name of the configuration. |
 |ArgValue|String|req\_auth|The value of the configuration. |
 |FunctionName|String|aliauth|The name of the feature. |
 |Status|String|success|The status of the configuration. Valid values:
 
--   **success**: The configuration has been applied.
+ -   **success**: The configuration has been applied.
 -   **testing**: The configuration is under testing.
 -   **failed**: The configuration failed.
 -   **configuring**: The feature is being configured. |
@@ -187,7 +350,7 @@ The following table describes the features.
 Sample requests
 
 ```
-http://cdn.aliyuncs.com/?Action=DescribeCdnDomainConfigs
+http(s)://cdn.aliyuncs.com/?Action=DescribeCdnDomainConfigs
 &DomainName=example.com
 &FunctionNames=aliauth
 &<Common request parameters>
@@ -199,24 +362,24 @@ Sample success responses
 
 ```
 <DescribeCdnDomainConfigsResponse>
-      <RequestId>C80705BF-0F76-41FA-BAD1-5B59296A4E59</RequestId>
-      <DomainConfigs>
-            <DomainConfig>
-                  <Status>success</Status>
-                  <FunctionArgs>
-                        <FunctionArg>
-                              <ArgName>auth_type</ArgName>
-                              <ArgValue>req_auth</ArgValue>
-                        </FunctionArg>
-                        <FunctionArg>
-                              <ArgName>ali_auth_dual</ArgName>
-                              <ArgValue>on</ArgValue>
-                        </FunctionArg>
-                  </FunctionArgs>
-                  <ConfigId>6295</ConfigId>
-                  <FunctionName>aliauth</FunctionName>
-            </DomainConfig>
-      </DomainConfigs>
+	  <RequestId>C80705BF-0F76-41FA-BAD1-5B59296A4E59</RequestId>
+	  <DomainConfigs>
+		    <DomainConfig>
+			      <Status>success</Status>
+			      <FunctionArgs>
+				        <FunctionArg>
+					          <ArgName>auth_type</ArgName>
+					          <ArgValue>req_auth</ArgValue>
+				        </FunctionArg>
+				        <FunctionArg>
+					          <ArgName>ali_auth_dual</ArgName>
+					          <ArgValue>on</ArgValue>
+				        </FunctionArg>
+			      </FunctionArgs>
+			      <ConfigId>6295</ConfigId>
+			      <FunctionName>aliauth</FunctionName>
+		    </DomainConfig>
+	  </DomainConfigs>
 </DescribeCdnDomainConfigsResponse>
 ```
 
