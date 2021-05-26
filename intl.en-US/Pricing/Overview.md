@@ -20,7 +20,7 @@ You are charged for the basic services and value-added services of Alibaba Cloud
 
 ## Billable regions
 
-Regions inside mainland China and outside mainland China are divided into different billable regions. For more information, see [CDN nodes in Hong Kong \(China\), Macao \(China\), Taiwan \(China\), and regions outside China](https://www.alibabacloud.com/help/zh/doc-detail/163587.htm).
+Regions inside mainland China and outside mainland China are divided into different billable regions.
 
 -   **Inside mainland China**: Regions inside mainland China are in the same billable region.
 -   **Outside mainland China**: Regions outside mainland China are divided into the following billable regions based on the location where the CDN nodes are deployed: North America \(NA\), Europe \(EU\), Asia Pacific 1 \(AP1\), Asia Pacific 2 \(AP2\), Asia Pacific 3 \(AP3\), Middle East and Africa \(MEAA\), and South America \(SA\).
@@ -34,7 +34,7 @@ Regions inside mainland China and outside mainland China are divided into differ
 
 ## Metering methods
 
-Alibaba Cloud CDN is billed for [basic services](#table_wbd_iye_txc) and [value-added services](#table_ci9_2ze_f7w). For more information, see [CDN Pricing](https://www.alibabacloud.com/zh/product/cdn/pricing?spm=a2796.7980202.1167822.1.16755f45tSDVja).
+Alibaba Cloud CDN is billed for [basic services](#table_wbd_iye_txc) and [value-added services](#table_ci9_2ze_f7w). For more information, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
 
 |Billable item|Billing rules|Metering method|Billing method|
 |-------------|-------------|---------------|--------------|
