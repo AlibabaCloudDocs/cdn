@@ -47,8 +47,8 @@ The following table describes the causes of a low cache hit ratio and the corres
 
 |Optimization strategy|Cause|
 |---------------------|-----|
-|[Prefetch URLs]()|-   During peak hours, a large number of requests are redirected to the origin server.
+|[Prefetch resources](/intl.en-US/Service Management/Refresh and prefetch resources.md)|-   During peak hours, a large number of requests are redirected to the origin server.
 -   If the accelerated domain name is not frequently visited, resources of the domain name that are cached on CDN nodes may be removed before the resources expire. |
-|[Configure cache rules for resources]()|When the ETag or Last-Modified response header is not returned, the requested static resource fails to be cached on CDN nodes.|
-|[Ignore variable parameters in a URL]()|When the URL of a request includes a query string or other variable parameters, the requested resource needs to be retrieved from the origin server.|
+|[Create a cache expiration rule](/intl.en-US/Domain Management/Cache settings/Create a cache expiration rule.md)|When the ETag or Last-Modified response header is not returned, the requested static resource fails to be cached on CDN nodes.|
+|[Retain URL parameters](/intl.en-US/Domain Management/Performance optimization/Retain URL parameters.md)|When the URL of a request includes a query string or other variable parameters, the requested resource needs to be retrieved from the origin server.|
 
