@@ -102,7 +102,6 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
     请您在终端环境中访问目标域名，EdgeRoutine模拟环境节点IP为42.123.119.100或42.123.119.101。
 
     ```
-    $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.100:80
     $ curl -v 'http://yourdomain.com/yourpath/' -x 42.123.119.100:80
     ```
 
