@@ -103,6 +103,7 @@ EdgeRoutine需要将边缘Serverless环境绑定至您的CDN加速域名，依�
 
     ```
     $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.100:80
+    $ curl -v 'http://yourdomain.com/yourpath/' -x 42.123.119.100:80
     ```
 
 8.  发布代码到生产环境。
