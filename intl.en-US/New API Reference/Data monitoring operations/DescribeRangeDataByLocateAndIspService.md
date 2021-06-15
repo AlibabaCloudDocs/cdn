@@ -1,8 +1,8 @@
 # DescribeRangeDataByLocateAndIspService
 
-Queries the bandwidth values at a specific time based on each Internet service provider \(ISP\) in different regions for an accelerated domain name.
+Queries the bandwidth values at a specific time based on an Internet service provider \(ISP\) in different regions for an accelerated domain name.
 
-**Note:** The data is collected at an interval of five minutes.
+**Note:** The data is collected every 5 minutes.
 
 ## Debugging
 
@@ -16,22 +16,22 @@ Queries the bandwidth values at a specific time based on each Internet service p
 |DomainNames|String|Yes|example.com|The accelerated domain name. |
 |EndTime|String|Yes|2019-11-30T05:40:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
-**Note:** The end time must be later than the start time. The difference between the end time and the start time cannot exceed one hour. |
+ **Note:** The end time must be later than the start time. The difference between the end time and the start time cannot exceed 1 hour. |
 |StartTime|String|Yes|2019-11-30T05:33:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
-|IspNames|String|No|unicom,telecom|The name of the ISP.
+|IspNames|String|No|unicom|The name of the ISP. You can specify only one ISP name in each call.
 
-You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. |
-|LocationNames|String|No|liaoning,guangxi|The names of the regions. Separate multiple regions with commas \(,\).
+ You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. |
+|LocationNames|String|No|liaoning,guangxi|The names of the regions. Separate regions with commas \(,\).
 
-You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. |
+ You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|JsonResult|String|\{"1472659200":\{"Tianjin":\{"China Telecom":\{"http\_codes":\{"000":0,"200":6,"400":0\},"rt":4183,"bandwidth":46639,"avg\_speed":7773,"pv":6,"hit\_rate":0.93,"request\_hit\_rate":0.66\}\}\}\}|The response parameters in the JSON format.
+|JsonResult|String|\{"1472659200":\{"Tianjin":\{"China Telecom":\{"http\_codes":\{"000":0,"200":6,"400":0\},"rt":4183,"bandwidth":46639,"avg\_speed":7773,"pv":6,"hit\_rate":0.93,"request\_hit\_rate":0.66\}\}\}\}|The response parameters in JSON format.
 
-These parameters indicate the following information in sequence: UNIX time, region, ISP, distribution of HTTP status codes, response time, bandwidth \(unit: bit/s\), average response rate, page views, cache hit ratio, and request hit ratio. |
+ These parameters indicate the following information in sequence: UNIX time, region, ISP, distribution of HTTP status codes, response time, bandwidth \(bit/s\), average response rate, page views, cache hit ratio, and request hit ratio. |
 |RequestId|String|16A96B9A-F203-4EC5-8E43-CB92E68F4CD8|The ID of the request. |
 
 ## Examples
@@ -42,7 +42,7 @@ Sample requests
 http://cdn.aliyuncs.com/?Action=DescribeRangeDataByLocateAndIspService
 &DomainNames=example.com
 &LocationNames=liaoning,guangxi
-&IspNames=unicom,telecom
+&IspNames=unicom
 &startTime=2019-11-30T05:33:00Z
 &EndTime=2019-11-30T05:40:00Z
 &<Common request parameters>
@@ -157,8 +157,8 @@ Sample success responses
 {
     "JsonResult":[{
     "1472659200": {
-        "Tianjin": {
-            "China Telecom": {
+        "Tianjin": { {
+            "China Telecom" {
                 "bandwidth": 9889849.592,
                 "pv": 5739,
                 "hit_rate": 0,
@@ -186,8 +186,8 @@ Sample success responses
             "China Unicom": {},
             "China Mobile": {}
         },
-        "Beijing": {
-            "China Telecom": {
+        "Beijing": { {
+            "China Telecom" {
                 "bandwidth": 9889849.592,
                 "pv": 5739,
                 "hit_rate": 0,
@@ -217,8 +217,8 @@ Sample success responses
         }
     },
     "1472659500": {
-        "Tianjin": {
-            "China Telecom": {
+        "Tianjin": { {
+            "China Telecom" {
                 "bandwidth": 7024681.44,
                 "pv": 5819,
                 "hit_rate": 0,
@@ -243,7 +243,7 @@ Sample success responses
                 },
                 "rt": 0
             },
-            "China Unicom": {},
+            "China Telecom" {},
             "China Mobile": {}
         }
     }
@@ -254,10 +254,10 @@ Sample success responses
 
 ## Error codes
 
-|HTTP status code|Error code|Error message|Description|
-|----------------|----------|-------------|-----------|
+|HttpCode|Error code|Error message|Description|
+|--------|----------|-------------|-----------|
 |400|InvalidStartTime.Malformed|Specified StartTime is malformed.|The error message returned because the format of the specified start time is invalid. For more information about the time format, see the Request parameters section.|
-|400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the end time is invalid. For more information about the time format, see the Request parameters section.|
+|400|InvalidEndTime.Malformed|Specified EndTime is malformed.|The error message returned because the format of the specified end time is invalid. For more information about the time format, see the Request parameters section.|
 |400|InvalidStartTime.ValueNotSupported|The specified value of parameter StartTime is not supported.|The error message returned because the specified start time is invalid. Rectify the start time and try again.|
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cdn).
