@@ -1,10 +1,10 @@
 ---
-keyword: [鉴权, ram]
+keyword: [鉴权, RAM]
 ---
 
 # RAM鉴权
 
-通过访问控制RAM（Resource Access Management）的RAM用户调用CDN API之前，您需要通过阿里云账号创建授权策略对RAM用户进行授权。在授权策略中，使用资源描述符ARN（Alibaba Cloud Resource Name）指定授权资源。本文介绍可授权的CDN资源类型和API。
+通过访问控制RAM（Resource Access Management）的RAM用户调用CDN API之前，您需要通过阿里云账号创建授权策略对RAM用户进行授权。在授权策略中使用资源描述符ARN（Alibaba Cloud Resource Name）指定授权资源。本文介绍可授权的CDN资源类型和API。
 
 默认情况下，阿里云账号或RAM用户均能使用CDN控制台或CDN API完整操作自己创建的CDN资源。在以下场景中，会涉及到操作授权问题：
 
@@ -13,9 +13,11 @@ keyword: [鉴权, ram]
 
 当其他账号通过CDN API访问阿里云账号的资源时，阿里云CDN首先向RAM发起权限检查，以确保资源拥有者已经将相关权限授予调用者。不同的CDN API会根据涉及的资源以及API语义确定需要检查哪些资源的权限。实现授权策略和权限控制，请参见[访问控制产品文档](/cn.zh-CN/产品简介/什么是访问控制.md)和[API参考文档](/cn.zh-CN/API参考/API参考（RAM）/API概览.md)。
 
-了解CDN的RAM用户如何使用，请参见[CDN子账户使用指南](/cn.zh-CN/服务管理/其他配置/CDN子账户使用指南.md)。
+了解CDN的RAM用户如何使用，请参见[CDN子账户使用指南](/cn.zh-CN/服务管理/RAM用户权限管理/CDN子账户使用指南.md)。
 
-了解RAM为CDN创建自定义授权策略，请参见[使用RAM对CDN进行权限管理](/cn.zh-CN/教程/使用RAM对CDN进行权限管理.md)。
+了解通过RAM为CDN创建自定义授权策略，请参见[通过RAM对CDN进行权限管理](/cn.zh-CN/教程/通过RAM对CDN进行权限管理.md)。
+
+了解如何通过RAM为RAM用户授予刷新预热功能的权限，请参见[授予RAM用户刷新预热权限](/cn.zh-CN/服务管理/RAM用户权限管理/授予RAM用户刷新预热权限.md)。
 
 ## 可授权的CDN资源类型
 
