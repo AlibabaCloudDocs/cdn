@@ -34,7 +34,5 @@ Billing rules for QUIC:
 
 ## Enable QUIC
 
-Domain names that have IPv6 enabled do not support QUIC.
-
 The first private preview of QUIC has completed in June 2020. QUIC is unavailable to new users of Alibaba Cloud CDN. The second private preview will soon begin. You can apply for participation in the private preview.
 
