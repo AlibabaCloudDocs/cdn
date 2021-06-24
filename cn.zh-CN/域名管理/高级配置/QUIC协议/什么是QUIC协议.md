@@ -12,7 +12,7 @@ QUIC（Quick UDP Internet Connections）是一种实验性传输层网络协议�
 
 在阿里云CDN中使用QUIC的工作原理如下图所示。
 
-![原理图](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7490246851/p54879.png)
+![原理图](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7490246851/p54879.png)
 
 ## 对客户端的要求
 
@@ -23,18 +23,16 @@ QUIC协议对客户端的要求如下：
 
 ## QUIC计费规则
 
-QUIC协议属于增值服务，会对QUIC请求数进行额外计费，详情请参见[CDN 详细价格信息](https://www.aliyun.com/price/product?spm=5176.175459.915900.btn2.3749312f2FsBxF#/cdn/detail)的QUIC部分。
+QUIC协议属于增值服务，会对QUIC请求数进行额外计费。详细信息，请参见[CDN详细价格信息](https://www.aliyun.com/price/product?spm=5176.175459.915900.btn2.3749312f2FsBxF#/cdn/detail)的QUIC部分。
 
 **说明：** 一个协议头为HTTPS的QUIC协议请求，不会同时收取HTTPS请求数和QUIC请求数两笔费用。因为各个请求数的计费互斥，一个请求仅会被收取一种请求数费用。
 
-QUIC协议请求统计规则如下。
+QUIC协议请求统计规则如下：
 
 -   QUIC协议的请求不区分请求头，而是判断请求是否基于UDP协议。
 -   CDN优先判断是否为QUIC协议请求，如果是，则对其进行QUIC请求数计费，不再匹配是否为HTTPS请求；如果不是，则会匹配HTTPS请求。
 
 ## 使用QUIC
-
-开启IPv6的域名暂不支持开启QUIC协议。
 
 QUIC第一轮内测已经于2020年6月结束，目前暂不支持新用户接入，敬请期待下一轮内测。
 
