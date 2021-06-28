@@ -9,11 +9,10 @@ This topic provides answers to some commonly asked questions about domain name m
     -   [t5346.md\#]()
     -   [How can I query IP addresses of L2 nodes for a CDN domain?]()
     -   [How does CDN process 302 redirects from an origin server?]()
-    -   [How do I handle domain names without an ICP number?]()
+    -   [What can I do if the Internet Content Provider \(ICP\) number of my domain name expires?]()
     -   [What are the differences between a CDN node and a mirror?]()
     -   [What is the health check mechanism of Alibaba Cloud CDN?]()
     -   [What are the impacts if I change the accelerated region of Alibaba Cloud CDN?]()
-    -   [What HTTP methods does CDN support?]()
     -   [How can I check whether a CNAME record is correctly resolved?]()
     -   [Why does the 404 Not Found page appear?]()
 
