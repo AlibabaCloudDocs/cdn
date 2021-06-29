@@ -40,7 +40,6 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |[SetOptimizeConfig](/intl.en-US/API Reference/Configuration Interfaces/SetOptimizeConfig.md)|Enables or disables the HTML optimization feature for an accelerated domain name.|
 |[SetPageCompressConfig](/intl.en-US/API Reference/Configuration Interfaces/SetPageCompressConfig.md)|Configures the intelligent compression feature for an accelerated domain name.|
 |[SetIgnoreQueryStringConfig](/intl.en-US/API Reference/Configuration Interfaces/SetIgnoreQueryStringConfig.md)|Configures the parameter filtering feature for an accelerated domain name.|
-|[SetRangeConfig](/intl.en-US/API Reference/Configuration Interfaces/SetRangeConfig.md)|Configures the object chunking feature for an accelerated domain name.|
 |[SetSourceHostConfig](/intl.en-US/API Reference/Configuration Interfaces/SetSourceHostConfig.md)|Specifies an origin host for an accelerated domain name.|
 |[SetForceRedirectConfig](/intl.en-US/API Reference/Configuration Interfaces/SetForceRedirectConfig.md)|Configures the URL redirect feature for an accelerated domain name.|
 |[SetRefererConfig](/intl.en-US/API Reference/Configuration Interfaces/SetRefererConfig.md)|Configures the referer-based hotlink protection feature for an accelerated domain name.|
@@ -48,17 +47,11 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |[DeleteCacheExpiredConfig](/intl.en-US/API Reference/Configuration Interfaces/DeleteCacheExpiredConfig.md)|Deletes a custom caching policy.|
 |[SetReqAuthConfig](/intl.en-US/API Reference/Configuration Interfaces/SetReqAuthConfig.md)|Configures the authentication feature for an accelerated domain name.|
 |[SetHttpHeaderConfig](/intl.en-US/API Reference/Configuration Interfaces/SetHttpHeaderConfig.md)|Specifies a custom HTTP header for an accelerated domain name.|
-|[DeleteHttpHeaderConfig](/intl.en-US/API Reference/Configuration Interfaces/DeleteHttpHeaderConfig.md)|Deletes the configuration of referer-based hotlink protection for an accelerated domain name.|
 |[SetDomainServerCertificate](/intl.en-US/API Reference/Configuration Interfaces/SetDomainServerCertificate.md)|Configures an SSL certificate for an accelerated domain name.|
 |[SetIpBlackListConfig](/intl.en-US/API Reference/Configuration Interfaces/SetIpBlackListConfig.md)|Configures an IP blacklist for an accelerated domain name.|
 |[SetHttpsOptionConfig](/intl.en-US/API Reference/Configuration Interfaces/SetHttpsOptionConfig.md)|Enables or disables the HTTP/2 protocol for an accelerated domain name.|
-|[BatchDeleteCdnDomainConfig](/intl.en-US/API Reference/Configuration Interfaces/BatchDeleteCdnDomainConfig.md)|Deletes the configurations of specified features for one or more accelerated domain names.|
-|[DeleteSpecificConfig](/intl.en-US/API Reference/Configuration Interfaces/DeleteSpecificConfig.md)|Deletes specified configurations for an accelerated domain name.|
-|[SetRemoveQueryStringConfig](/intl.en-US/API Reference/Configuration Interfaces/SetRemoveQueryStringConfig.md)|Configures the parameter filtering feature for an accelerated domain name.|
 |[SetCcConfig](/intl.en-US/API Reference/Configuration Interfaces/SetCcConfig.md)|Configures protection against HTTP flood attacks, and configures an IP blacklist and an IP whitelist for an accelerated domain name.|
 |[SetReqHeaderConfig](/intl.en-US/API Reference/Configuration Interfaces/SetReqHeaderConfig.md)|Customizes a header for requests before they are redirected to the origin server for an accelerated domain name.|
-|[SetIpAllowListConfig](/intl.en-US/API Reference/Configuration Interfaces/SetIpAllowListConfig.md)|Configures an IP whitelist for an accelerated domain name.|
-|[DescribeUserConfigs](/intl.en-US/API Reference/Configuration Interfaces/DescribeUserConfigs.md)|Queries services that you have activated with your Alibaba Cloud account.|
 
 ## Resource monitoring
 
@@ -84,11 +77,8 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |[DescribeDomainMax95BpsData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainMax95BpsData.md)|Queries the 95th percentile bandwidth values of one or more accelerated domain names.|
 |[DescribeDomainPathData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainPathData.md)|Queries monitoring data of network traffic and visits for an accelerated domain name. The data is collected every 5 minutes. This operation is available to only selected users.|
 |[DescribeL2VipsByDomain](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeL2VipsByDomain.md)|Queries the virtual IP addresses of L2 CDN nodes for an accelerated domain name.|
-|[DescribeRangeDataByLocateAndIspService](/intl.en-US/API Reference/Resource Monitoring Interface/Describerangedatabylocateandispservice.md)|Queries the bandwidth data at a specified time for each ISP in different regions.|
+|[DescribeRangeDataByLocateAndIspService](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeRangeDataByLocateAndIspService.md)|Queries the bandwidth data at a specified time for each ISP in different regions.|
 |[DescribeDomainRealTimeBpsData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainRealTimeBpsData.md)|Queries the bandwidth data that is collected every minute.|
-|[DescribeDomainRealTimeByteHitRateData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainRealTimeByteHitRateData.md)|Queries byte hit ratios for an accelerated domain name. The data is collected every minute.|
-|[DescribeDomainRealTimeQpsData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainRealTimeQpsData.md)|Queries the number of queries per second for one or more accelerated domain names. The data is collected every minute.|
-|[DescribeDomainRealTimeReqHitRateData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainRealTimeReqHitRateData.md)|Queries the request hit ratios for one or more accelerated domain names. The data is collected every minute.|
 |[DescribeDomainTopReferVisit](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainTopReferVisit.md)|Queries frequently requested web pages on a specified day and sorts the web pages.|
 |[DescribeDomainQpsData](/intl.en-US/API Reference/Resource Monitoring Interface/DescribeDomainQpsData.md)|Queries the number of queries per second for one or more accelerated domain names.|
 
@@ -97,9 +87,6 @@ The following tables list API operations available for use in Alibaba Cloud Cont
 |API operation|Description|
 |-------------|-----------|
 |[DescribeCdnDomainLogs](/intl.en-US/API Reference/Log Information Interface/DescribeCdnDomainLogs.md)|Queries the address where you can download the raw access log data of a specific domain name.|
-|[DescribeCustomLogConfig](/intl.en-US/API Reference/Log Information Interface/DescribeCustomLogConfig.md)|Queries the detailed configuration of logging.|
-|[DescribeDomainCustomLogConfig](/intl.en-US/API Reference/Log Information Interface/ModifyDomainCustomLogConfig.md)|Queries the custom log configuration of an accelerated domain name.|
-|[DescribeUserCustomLogConfig](/intl.en-US/API Reference/Log Information Interface/DescribeUserCustomLogConfig.md)|Queries all custom log configurations that belong to your Alibaba Cloud account.|
 
 ## Auxiliary tools
 
