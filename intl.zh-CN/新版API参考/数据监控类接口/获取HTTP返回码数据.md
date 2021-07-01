@@ -2,9 +2,9 @@
 
 调用DescribeDomainHttpCodeData获取加速域名HTTP返回码的总数和占比数据，支持获取最近90天的数据。
 
-**调用该接口前，请您注意：**
+**说明：**
 
--   如果您不指定StartTime和EndTime，该接口返回过去24小时的数据；指定StartTime和EndTime，返回起止时间的数据。
+-   如果您不指定**StartTime**和**EndTime**，该接口返回过去24小时的数据；指定**StartTime**和**EndTime**，返回起止时间的数据。
 -   您可以查询批量域名的数据，多个域名用英文逗号（,）分隔。
 -   该接口的计算粒度为5分钟。
 -   单用户调用频率：100次/秒。
@@ -21,8 +21,8 @@
 |DomainName|String|否|test.test.com|加速域名，多个域名用英文逗号（,）分隔。
 
  默认查询所有加速域名。 |
-|StartTime|String|否|2015-11-30T05:33:00Z|获取数据起始时间点。日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。 |
-|EndTime|String|否|2015-11-30T05:40:00Z|获取数据结束时间点。日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
+|StartTime|String|否|2021-06-29T05:30:00Z|获取数据起始时间点。日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。 |
+|EndTime|String|否|2021-06-29T05:45:00Z|获取数据结束时间点。日期格式按照ISO8601表示法，并使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。
 
  结束时间需大于起始时间。 |
 |Interval|String|否|300|查询数据的时间粒度，单位：秒。根据您指定**StartTime**和**EndTime**两者的时间跨度，该参数取值如下：
@@ -37,215 +37,223 @@
 |--|--|---|--|
 |DataInterval|String|300|时间间隔。 |
 |DomainName|String|test.test.com|加速域名。 |
-|EndTime|String|2015-11-30T05:40:00Z|结束时间。 |
+|EndTime|String|2021-06-29T05:45:00Z|结束时间。 |
 |HttpCodeData|Array of UsageData| |每个时间间隔的HTTP返回码占比数据。 |
 |UsageData| | | |
-|TimeStamp|String|2015-11-30T05:30:00Z|时间片起始时刻。 |
+|TimeStamp|String|2021-06-29T05:40:00Z|时间片起始时刻。 |
 |Value|Array of CodeProportionData| |各返回码占比使用数据列表。 |
 |CodeProportionData| | | |
 |Code|String|200|HTTP返回码。 |
 |Count|String|300|总数。 |
 |Proportion|String|66.046511627907|占比使用数据。 |
 |RequestId|String|BC858082-736F-4A25-867B-E5B67C85ACF7|请求ID。 |
-|StartTime|String|2015-11-30T05:33:00Z|开始时间。 |
+|StartTime|String|2021-06-29T05:30:00Z|开始时间。 |
 
 ## 示例
 
 请求示例
 
 ```
-http://cdn.aliyuncs.com/?Action=DescribeDomainHttpCodeData
+http(s)://cdn.aliyuncs.com/?Action=DescribeDomainHttpCodeData
 &DomainName="test.com,abc.com"
-&StartTime=2015-11-30T05:33:00Z
-&EndTime=2015-11-30T05:40:00Z
+&StartTime=2021-06-29T05:30:00Z
+&EndTime=2021-06-29T05:45:00Z
 &<公共请求参数>
 ```
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
-<DescribeDomainHttpCodeDataResponse>
-	  <HttpCodeData>
-		    <UsageData>
-			      <TimeStamp>2015-11-30T05:40:00Z</TimeStamp>
-			      <Value>
-				        <CodeProportionData>
-					          <Proportion>66.046511627907</Proportion>
-					          <Code>200</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>4.72868217054264</Proportion>
-					          <Code>206</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>0.155038759689922</Proportion>
-					          <Code>302</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>0.62015503875969</Proportion>
-					          <Code>304</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>28.4496124031008</Proportion>
-					          <Code>500</Code>
-				        </CodeProportionData>
-			      </Value>
-		    </UsageData>
-		    <UsageData>
-			      <TimeStamp>2015-11-30T05:35:00Z</TimeStamp>
-			      <Value>
-				        <CodeProportionData>
-					          <Proportion>64.7822765469824</Proportion>
-					          <Code>200</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>3.74331550802139</Proportion>
-					          <Code>206</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>0.152788388082506</Proportion>
-					          <Code>302</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>1.90985485103132</Proportion>
-					          <Code>304</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>29.4117647058824</Proportion>
-					          <Code>500</Code>
-				        </CodeProportionData>
-			      </Value>
-		    </UsageData>
-		    <UsageData>
-			      <TimeStamp>2015-11-30T05:30:00Z</TimeStamp>
-			      <Value>
-				        <CodeProportionData>
-					          <Proportion>67.1458998935037</Proportion>
-					          <Code>200</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>12.6730564430245</Proportion>
-					          <Code>206</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>0.053248136315229</Proportion>
-					          <Code>302</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>0.958466453674121</Proportion>
-					          <Code>304</Code>
-				        </CodeProportionData>
-				        <CodeProportionData>
-					          <Proportion>19.1693290734824</Proportion>
-					          <Code>500</Code>
-				        </CodeProportionData>
-			      </Value>
-		    </UsageData>
-	  </HttpCodeData>
-	  <DataInterval>300</DataInterval>
-	  <RequestId>BC858082-736F-4A25-867B-E5B67C85ACF7</RequestId>
-	  <DomainName>example1.com,example2.com</DomainName>
-	  <EndTime>2015-11-30T05:40:00Z</EndTime>
-	  <StartTime>2015-11-30T05:33:00Z</StartTime>
-</DescribeDomainHttpCodeDataResponse>
+<RequestId>BC858082-736F-4A25-867B-E5B67C85ACF7</RequestId>
+<EndTime>2021-06-29T05:45:00Z</EndTime>
+<DomainName>test.test.com</DomainName>
+<DataInterval>300</DataInterval>
+<StartTime>2021-06-29T05:30:00Z</StartTime>
+<HttpCodeData>
+    <UsageData>
+        <Value>
+            <CodeProportionData>
+                <Proportion>64.26332288401254</Proportion>
+                <Count>205</Count>
+                <Code>200</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>22.570532915360502</Proportion>
+                <Count>72</Count>
+                <Code>403</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>10.344827586206897</Proportion>
+                <Count>33</Count>
+                <Code>499</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>2.8213166144200628</Proportion>
+                <Count>9</Count>
+                <Code>504</Code>
+            </CodeProportionData>
+        </Value>
+        <TimeStamp>2021-06-29T05:30:00Z</TimeStamp>
+    </UsageData>
+    <UsageData>
+        <Value>
+            <CodeProportionData>
+                <Proportion>66.96969696969697</Proportion>
+                <Count>221</Count>
+                <Code>200</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>18.787878787878785</Proportion>
+                <Count>62</Count>
+                <Code>403</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>12.121212121212121</Proportion>
+                <Count>40</Count>
+                <Code>499</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>2.1212121212121215</Proportion>
+                <Count>7</Count>
+                <Code>504</Code>
+            </CodeProportionData>
+        </Value>
+        <TimeStamp>2021-06-29T05:35:00Z</TimeStamp>
+    </UsageData>
+    <UsageData>
+        <Value>
+            <CodeProportionData>
+                <Proportion>79.6976241900648</Proportion>
+                <Count>369</Count>
+                <Code>200</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>15.118790496760258</Proportion>
+                <Count>70</Count>
+                <Code>403</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>4.535637149028078</Proportion>
+                <Count>21</Count>
+                <Code>499</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>0.21598272138228944</Proportion>
+                <Count>1</Count>
+                <Code>502</Code>
+            </CodeProportionData>
+            <CodeProportionData>
+                <Proportion>0.4319654427645789</Proportion>
+                <Count>2</Count>
+                <Code>504</Code>
+            </CodeProportionData>
+        </Value>
+        <TimeStamp>2021-06-29T05:40:00Z</TimeStamp>
+    </UsageData>
+</HttpCodeData>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
-    "HttpCodeData": {
-        "UsageData": [
+  "RequestId": "BC858082-736F-4A25-867B-E5B67C85ACF7",
+  "EndTime": "2021-06-29T05:45:00Z",
+  "DomainName": "test.test.com",
+  "DataInterval": 300,
+  "StartTime": "2021-06-29T05:30:00Z",
+  "HttpCodeData": {
+    "UsageData": [
+      {
+        "Value": {
+          "CodeProportionData": [
             {
-                "TimeStamp": "2015-11-30T05:40:00Z",
-                "Value": {
-                    "CodeProportionData": [
-                        {
-                            "Proportion": "66.046511627907",
-                            "Code": "200"
-                        },
-                        {
-                            "Proportion": "4.72868217054264",
-                            "Code": "206"
-                        },
-                        {
-                            "Proportion": "0.155038759689922",
-                            "Code": "302"
-                        },
-                        {
-                            "Proportion": "0.62015503875969",
-                            "Code": "304"
-                        },
-                        {
-                            "Proportion": "28.4496124031008",
-                            "Code": "500"
-                        }
-                    ]
-                }
+              "Proportion": 64.26332288401254,
+              "Count": 205,
+              "Code": "200"
             },
             {
-                "TimeStamp": "2015-11-30T05:35:00Z",
-                "Value": {
-                    "CodeProportionData": [
-                        {
-                            "Proportion": "64.7822765469824",
-                            "Code": "200"
-                        },
-                        {
-                            "Proportion": "3.74331550802139",
-                            "Code": "206"
-                        },
-                        {
-                            "Proportion": "0.152788388082506",
-                            "Code": "302"
-                        },
-                        {
-                            "Proportion": "1.90985485103132",
-                            "Code": "304"
-                        },
-                        {
-                            "Proportion": "29.4117647058824",
-                            "Code": "500"
-                        }
-                    ]
-                }
+              "Proportion": 22.570532915360502,
+              "Count": 72,
+              "Code": "403"
             },
             {
-                "TimeStamp": "2015-11-30T05:30:00Z",
-                "Value": {
-                    "CodeProportionData": [
-                        {
-                            "Proportion": "67.1458998935037",
-                            "Code": "200"
-                        },
-                        {
-                            "Proportion": "12.6730564430245",
-                            "Code": "206"
-                        },
-                        {
-                            "Proportion": "0.053248136315229",
-                            "Code": "302"
-                        },
-                        {
-                            "Proportion": "0.958466453674121",
-                            "Code": "304"
-                        },
-                        {
-                            "Proportion": "19.1693290734824",
-                            "Code": "500"
-                        }
-                    ]
-                }
+              "Proportion": 10.344827586206897,
+              "Count": 33,
+              "Code": "499"
+            },
+            {
+              "Proportion": 2.8213166144200628,
+              "Count": 9,
+              "Code": "504"
             }
-        ]
-    },
-    "DataInterval": "300",
-    "RequestId": "BC858082-736F-4A25-867B-E5B67C85ACF7",
-    "DomainName": "example1.com,example2.com",
-    "EndTime": "2015-11-30T05:40:00Z",
-    "StartTime": "2015-11-30T05:33:00Z"
+          ]
+        },
+        "TimeStamp": "2021-06-29T05:30:00Z"
+      },
+      {
+        "Value": {
+          "CodeProportionData": [
+            {
+              "Proportion": 66.96969696969697,
+              "Count": 221,
+              "Code": "200"
+            },
+            {
+              "Proportion": 18.787878787878785,
+              "Count": 62,
+              "Code": "403"
+            },
+            {
+              "Proportion": 12.121212121212121,
+              "Count": 40,
+              "Code": "499"
+            },
+            {
+              "Proportion": 2.1212121212121215,
+              "Count": 7,
+              "Code": "504"
+            }
+          ]
+        },
+        "TimeStamp": "2021-06-29T05:35:00Z"
+      },
+      {
+        "Value": {
+          "CodeProportionData": [
+            {
+              "Proportion": 79.6976241900648,
+              "Count": 369,
+              "Code": "200"
+            },
+            {
+              "Proportion": 15.118790496760258,
+              "Count": 70,
+              "Code": "403"
+            },
+            {
+              "Proportion": 4.535637149028078,
+              "Count": 21,
+              "Code": "499"
+            },
+            {
+              "Proportion": 0.21598272138228944,
+              "Count": 1,
+              "Code": "502"
+            },
+            {
+              "Proportion": 0.4319654427645789,
+              "Count": 2,
+              "Code": "504"
+            }
+          ]
+        },
+        "TimeStamp": "2021-06-29T05:40:00Z"
+      }
+    ]
+  }
 }
 ```
 
