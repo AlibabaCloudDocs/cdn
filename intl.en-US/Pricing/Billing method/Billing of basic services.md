@@ -4,11 +4,11 @@ keyword: [CDN pricing, CDN billing rules]
 
 # Billing of basic services
 
-This topic describes the metering methods of and considerations for basic services of Alibaba Cloud Content Delivery Network \(CDN\).
+This topic describes the metering methods and considerations for basic services of Alibaba Cloud Content Delivery Network \(CDN\).
 
-## Purchase basic services of Alibaba Cloud CDN
+## Purchase guide
 
-Beginning January 8, 2021, Alibaba Cloud Content Delivery Network \(CDN\) uses the pay-by-data-transfer metering method by default. After Alibaba Cloud CDN is activated, the metering method cannot be changed in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information, see [CDN Pricing](https://www.alibabacloud.com/product/cdn/pricing).
+Beginning January 8, 2021, Alibaba Cloud CDN uses the pay-by-data-transfer metering method by default. After Alibaba Cloud CDN is activated, you cannot manually change the metering method in the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com). To change to the pay-by-bandwidth metering method, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) or contact your sales manager. For more information, see [CDN Pricing](https://www.alibabacloud.com/zh/product/cdn/pricing?spm=a2796.7980202.1167822.1.16755f45tSDVja).
 
 ## Purchase data transfer plans
 
@@ -29,7 +29,7 @@ How to purchase: Log on to the [Alibaba Cloud CDN console](https://cdn.console.a
 
 ## Pay-by-bandwidth
 
-Description: You are charged based on daily peak bandwidth values. A bandwidth value is collected every 5 minutes. A total of 288 values are collected every day. The highest bandwidth value is the daily peak bandwidth value.
+Description: You are charged based on daily peak bandwidth values. A bandwidth value is collected every 5 minutes. A total of 288 values are collected every day. The highest bandwidth value is used as the daily peak bandwidth value.
 
 Applicable scenarios: The network traffic is relatively flat and the daily bandwidth usage exceeds 30%.
 
@@ -37,5 +37,5 @@ How to purchase: If you want to use the pay-by-bandwidth metering method and the
 
 ## Considerations
 
-The amount of data transfer that is actually billed is higher than the amount of data transfer recorded in logs. The amount of data transfer recorded in CDN logs equals the amount of data transfer captured at the application layer. However, an extra amount of data is consumed to transmit the additional bytes inserted to TCP or IP packet headers and to retransmit TCP packets. Therefore, the actual amount of data transfer is higher than the amount of data transfer captured at the application layer. For more information, see [Why is the actual billed network traffic different from the network traffic reported by the logging feature?]()
+The amount of data transfer that is actually billed is higher than the amount of data transfer recorded in logs. The amount of data transfer recorded in CDN logs equals the amount of data transfer captured at the application layer. However, an extra amount of data is consumed to transmit the additional bytes inserted into TCP or IP packet headers and to retransmit TCP packets. Therefore, the actual amount of data transfer is higher than the amount of data transfer captured at the application layer. For more information, see [Why is the actual billed network traffic different from the network traffic reported by the logging feature?]()
 
