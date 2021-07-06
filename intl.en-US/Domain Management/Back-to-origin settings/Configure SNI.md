@@ -8,7 +8,7 @@ If the IP address of your origin server is associated with multiple domain names
 
 SNI is an extension of Transport Layer Security \(TLS\) by which a client determines which hostname it is attempting to connect to at the beginning of the handshake process. This allows a server to present multiple certificates on the same IP address and TCP port number. This way, multiple HTTPS-capable websites or TLS-capable services that have different certificates can be served by the same IP address.
 
-If your origin server uses only one IP address that is associated with multiple HTTPS-capable websites, and requests are redirected to the origin server over port 443, you must configure SNI for the origin server. SNI specifies the domain name for which requests are destined. When CDN nodes access the origin server over HTTPS, the origin server can respond with the correct certificate.
+If an origin server uses one IP address to provide HTTPS services through multiple domain names and you have set Alibaba Cloud CDN to communicate with the origin server over HTTPS, you must set an SNI value to specify the requested domain name. This way, when a CDN node wants to access the origin server over HTTPS, the origin server can return the valid certificate of the requested domain name.
 
 **Note:** If your origin server is an Object Storage Service \(OSS\) bucket, you do not need to configure SNI.
 
@@ -32,14 +32,20 @@ SNI works based on the following process:
 
 5.  On the **Configurations** tab, find the **Origin SNI** section and click **Modify**.
 
-6.  In the **Origin SNI** dialog box, turn on the **Origin SNI** switch and enter the domain name served by the origin server.
+6.  In the **Origin SNI** dialog box, turn on **Origin SNI** and enter the domain name served by the origin server.
 
     **Note:**
 
     -   The SNI feature of Alibaba Cloud CDN specifies domain names served by origin servers. If your origin server uses only one IP address that is associated with multiple HTTPS-capable websites, you must configure SNI to specify a domain name, for example, cdn.console.aliyun.com.
-    -   SNI supports only specific domain names. Wildcard domain names are not supported. If the accelerated domain name is a wildcard domain name, you can [submit ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to enable SNI to automatically recognize the domain name for which requests are destined.
+    -   SNI supports only specific domain names. Wildcard domain names are not supported.
+    -   If the accelerated domain name is a wildcard domain name, and the back-to-origin process uses the HTTPS protocol, you can configure SNI to specify the domain names that want to retrieve resources from the origin server. You can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to request Alibaba Cloud to configure relevant settings.
     ![Configure SNI](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3993247061/p40954.png)
 
 7.  Click **OK**.
 
+
+**Related topics**  
+
+
+[BatchSetCdnDomainConfig](/intl.en-US/New API Reference/Domain name management/BatchSetCdnDomainConfig.md)
 
