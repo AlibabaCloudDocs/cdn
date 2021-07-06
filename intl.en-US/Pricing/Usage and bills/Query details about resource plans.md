@@ -21,10 +21,10 @@ If you have purchased an Alibaba Cloud Content Delivery Network \(CDN\) resource
 
 You can call API operations listed in the following table to query details about resource plans.
 
-|API|Description|
-|---|-----------|
-|[DescribeCdnUserResourcePackage](https://www.alibabacloud.com/help/doc-detail/91171.htm)|Queries the resource plans that you have purchased for Alibaba Cloud CDN.|
-|[DescribeDcdnUserResourcePackage](https://www.alibabacloud.com/help/doc-detail/131648.htm)|Queries the resource plans that you have purchased for Dynamic Router for CDN \(DCDN\).|
+|API operation|Description|
+|-------------|-----------|
+|[DescribeCdnUserResourcePackage](/intl.en-US/New API Reference/Service management operations/DescribeCdnUserResourcePackage.md)|Queries the resource plans that you have purchased for Alibaba Cloud CDN.|
+|[DescribeDcdnUserResourcePackage]()|Queries the resource plans that you have purchased for Dynamic Router for CDN \(DCDN\).|
 
 **Note:** Resource plans of DCDN can be shared between Alibaba Cloud CDN and DCDN. Therefore, you can also call the DCDN API to query details about resource plans of Alibaba Cloud CDN.
 
