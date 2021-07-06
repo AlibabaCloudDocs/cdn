@@ -69,15 +69,15 @@ The following table describes the usage notes of HTTPS secure acceleration.
 |Category|Usage note|
 |--------|----------|
 |Configuration|-   The following scenarios support HTTPS secure acceleration:
-    -   [Image and small file distribution](/intl.en-US/Product Introduction/Scenarios/Image and small file distribution.md)
+    -   [Image and small file distribution](/intl.en-US/Product Introduction/Scenarios.md)
 
 Web portals, e-commerce websites, news websites and applications, government websites, enterprise websites, entertainment websites and applications, and gaming websites and applications.
 
-    -   [Delivery of large files](/intl.en-US/Product Introduction/Scenarios/Delivery of large files.md)
+    -   [Large file distribution](/intl.en-US/Product Introduction/Scenarios.md)
 
 Applications and websites that provide downloads of video and audio files.
 
-    -   [ApsaraVideo for VOD](/intl.en-US/Product Introduction/Scenarios/ApsaraVideo for VOD.md)
+    -   [On-demand audio and video streaming](/intl.en-US/Product Introduction/Scenarios.md)
 
 Websites and applications that provide audio and video content such as movies, online education, news, and social media.
 
@@ -87,7 +87,7 @@ Websites and applications that provide audio and video content such as movies, o
     -   When HTTPS secure acceleration is disabled, the system no longer supports HTTPS requests or retains the certificate or private key information. When you enable HTTPS again, you must upload an SSL certificate or private key again. For more information, see [Configure an SSL certificate](/intl.en-US/Domain Management/HTTPS/Configure an SSL certificate.md).
 -   You can view certificates. You cannot view private keys because they are sensitive information Keep certificate-related information confidential.
 -   You can renew an SSL certificate. Proceed with caution. After a certificate is renewed, it takes effect within one minute. |
-|Billing|HTTPS secure acceleration is a value-added service. After you enable HTTPS, fees are charged based on the number of HTTPS requests. For more information, see [Static HTTPS requests](/intl.en-US/Pricing/Billing method/Billing of value-added services.md).
+|Billing|HTTPS secure acceleration is a value-added service. After you enable HTTPS, fees are charged based on the number of HTTPS requests. For more information, see [t15633.md\#section\_dk8\_ui4\_itq](/intl.en-US/Pricing/Billing method/Billing of value-added services.md).
 
 **Note:** HTTPS requests are separately billed and the fees cannot be offset by data transfer plans of Alibaba Cloud CDN. Before you enable HTTPS secure acceleration, make sure that you have a sufficient balance in your account. If the balance is insufficient, your CDN service may be suspended. |
 |SSL certificate|-   You must upload SSL certificates and private keys in the `PEM` format for domain names for which HTTPS secure acceleration is enabled.
