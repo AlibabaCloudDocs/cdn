@@ -4,13 +4,13 @@ keyword: [, CDN whitelist, IP blacklist, IP whitelist]
 
 # Configure an IP blacklist or whitelist
 
-Alibaba Cloud Content Delivery Network \(CDN\) allows you to configure an IP address blacklist or whitelist to identify and filter users. This helps you control access to CDN resources and improve resource security. This topic describes how to configure an IP address blacklist or whitelist.
+Alibaba Cloud Content Delivery Network \(CDN\) allows you to configure an IP blacklist or whitelist to identify and filter users. This helps you control access to CDN resources and improve resource security. This topic describes how to configure an IP blacklist or whitelist.
 
--   IP address blacklist: IP addresses in the blacklist are not allowed to access resources.
+-   IP blacklist: IP addresses in the blacklist are not allowed to access resources.
 
-    If an IP address is added to the blacklist, requests from the IP address can be sent to CDN nodes. However, CDN nodes reject the requests and return a 403 error. These requests are recorded in the CDN logs.
+    If an IP address is added to the blacklist, requests from the IP address can be sent to CDN nodes. However, CDN nodes reject the requests and return an HTTP 403 status code. These requests are recorded in the CDN logs.
 
--   IP address whitelist: Only requests from IP addresses in the whitelist can access resources. Other IP addresses are blocked.
+-   IP whitelist: Only requests from IP addresses in the whitelist can access CDN resources. Other IP addresses are blocked.
 
 **Note:**
 
@@ -39,13 +39,17 @@ Alibaba Cloud Content Delivery Network \(CDN\) allows you to configure an IP add
 
 IP addresses in the blacklist are not allowed to access the current accelerated domain name.
 
-    -   whitelist
+    -   Whitelist
 
 Only IP addresses in the whitelist are allowed to access the current accelerated domain name. Other IP addresses are blocked.
 
-**Note:** The blacklist and whitelist are mutually exclusive. The most recent configuration takes effect. |
-    |**Rules**|You can specify at most 5,000 IP addresses or CIDR blocks and separate them with carriage return characters. Each CIDR block must be unique. For example, if the IP address 127.0.0.0/24 is already in the whitelist, it cannot be added again.|
+**Note:** Blacklists and whitelists are mutually exclusive. The most recent configuration takes effect. |
+    |**Rules**|You can specify at most 5,000 IP addresses or CIDR blocks and separate them with carriage return characters. Each CIDR block must be unique. For example, if the IP address 127.0.0.0/24 is already in the whitelist, it cannot be added again. **Note:** If you want to control access from specific client IP addresses, you must add the X-Forwarded-For \(XFF\) HTTP header to the IP whitelist or blacklist. By default, the IP blacklist blocks requests based on the XFF header. For more information about how to retrieve actual IP addresses of clients, see [Retrieve actual IP addresses of clients](/intl.en-US/Website Access/Retrieve actual IP addresses of clients.md). |
 
 8.  Click **OK**.
 
+
+## Related API operations
+
+You can call the BatchSetCdnDomainConfig operation to configure an IP blacklist or whitelist for multiple domain names at a time. The ip\_black\_list\_set parameter specifies an IP blacklist and the ip\_allow\_list\_set parameter specifies an IP whitelist. For more information, see [BatchSetCdnDomainConfig](/intl.en-US/New API Reference/Domain name management/BatchSetCdnDomainConfig.md).
 
