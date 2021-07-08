@@ -1,8 +1,8 @@
 # EdgeScript monitoring
 
-EdgeScript \(ES\) supports the monitoring feature. You can query the monitoring data to check whether scripts are executed as expected at the edges.
+EdgeScript \(ES\) supports the monitoring feature. You can query the monitoring data to check whether scripts are executed at the edges as expected.
 
-ES allows you to create scripts to customize your Alibaba Cloud Content Delivery Network \(CDN\) service. If the standard features provided in the Alibaba Cloud CDN console cannot meet your configuration requirements, you can use ES to create custom scripts that support more complex request processing logic. ES provides a wide array of built-in functions that simplify the programming process. You can use simple syntax and logic to invoke these functions in custom scripts. For more information, see [Overview](/intl.en-US/EdgeScript/Introduction/Overview.md).
+ES allows you to create scripts to customize your Alibaba Cloud Content Delivery Network \(CDN\) service. If the standard features provided in the Alibaba Cloud CDN console cannot meet your configuration requirements, you can use ES to create custom scripts that support more complex request processing logic. ES provides a wide array of built-in functions that simplify the programming process. You can use simple syntax and logic to invoke these functions in custom scripts. For more information, see [Overview](/intl.en-US/EdgeScript/Overview.md)
 
 ## Features
 
@@ -24,7 +24,7 @@ The script is executed but the execution result is not return true. This indicat
 
 -   Exception
 
-An error occurs while Alibaba Cloud CDN is executing the script. Typically, the error is caused by logic errors in the script or timeouts of script execution. For example, a parameter passed to the request is set to an invalid value or Alibaba Cloud CDN has been executing the script for more than 50 milliseconds. You can add the \_es\_dbg **extension** to the script and use the debugging tool in the upper-corner of the EdgeScript page to debug the code. Then, you can use the debugging information to troubleshoot the error. For more information about how to add the \_es\_dbg extension, see [Configure a script in the Alibaba Cloud CDN console](/intl.en-US/EdgeScript/Introduction/Configure a script in the Alibaba Cloud CDN console.md).
+An error occurs while Alibaba Cloud CDN was executing the script. Typically, the error is caused by logic errors in the script or timeouts of script execution. For example, a parameter passed to the request is set to an invalid value or Alibaba Cloud CDN has been executing the script for more than 50 milliseconds. You can add the \_es\_dbg **extension** to the script and use the debugging tool in the upper-corner of the EdgeScript page to debug the code. Then, you can use the debugging information to troubleshoot the error. For more information about how to add the \_es\_dbg extension, see [Use EdgeScript to create a script](/intl.en-US/EdgeScript/Use EdgeScript to create a script.md).
 
 **Note:** You can set \_es\_dbg to any value. Client requests must carry the same value. For example, if you set \_es\_dbg=123 in the Alibaba Cloud CDN console, client requests must also carry \_es\_dbg=123. |
 |**Error**|Indicates that an error occurs while Alibaba Cloud CDN is executing the script. In this case, an error code is returned. Error codes and descriptions:-   400: The script contains an unsupported function.
