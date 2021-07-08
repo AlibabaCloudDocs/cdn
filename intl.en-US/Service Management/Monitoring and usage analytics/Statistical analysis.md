@@ -4,28 +4,43 @@ keyword: [statistical analysis, CDN]
 
 # Statistical analysis
 
-Alibaba Cloud Content Delivery Network \(CDN\) provides statistics for your CDN service. You can query performance data within the last day or a custom time range by domain name. This allows you to monitor the performance of your CDN service.
+Alibaba Cloud Content Delivery Network \(CDN\) provides statistics of your CDN service. You can query performance data within a specified time range by domain name. You can also export the data to a table. This allows you to monitor the performance of domain names accelerated by Alibaba Cloud CDN and make informed business decisions.
 
-The following metrics are collected: page view \(PV\), unique visitor \(UV\), top N client IP addresses, region, Internet service provider \(ISP\), top N referer headers, frequently requested URLs, top N back-to-origin URLs, and frequently visited domain names. You can export detailed raw data such as network bandwidth, network traffic, domain name ranked by traffic proportion, and request distribution by visitor or ISP.
+## Overview
 
-**Note:** The time interval at which raw data is collected varies based on the specified time range. If you export data by day, the data is collected every 300 seconds. If you export data by week, the data is collected every 3,600 seconds. If you export data by month, the data is collected every 14,400 seconds.
+Statistical analysis includes the following items. You can query data of each item from the last day to the last 90 days. You can specify a time range based on business requirements. You can export the raw data and perform analytics as needed.
+
+**Note:**
+
+-   The collection interval of the raw data varies based on the specified time range. If you export data by day, the data is collected every 300 seconds. If you export data by week, the data is collected every 3,600 seconds. If you export data by month, the data is collected every 14,400 seconds.
+-   Data is collected and calculated by calling API operations. For more information, see the API references. The statistics are for reference only. The result may be different from the log data due to algorithms and limits. The actual log data prevails.
+
+|Item|Description|API reference|
+|----|-----------|-------------|
+|**PV/UV**|Allows you to query page views \(PV\) and unique visitors \(UV\) of accelerated domain names by time.|-   [DescribeDomainPvData](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainPvData.md)
+-   [DescribeDomainUvData](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainUvData.md) |
+|**Top Client IPs**|Displays top client IP addresses based on specified query conditions. Ranking by traffic or number of requests is supported.|[DescribeDomainTopClientIpVisit](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainTopClientIpVisit.md)|
+|**By Region/Provider**|Allows you to query the proportions of requests initiated through each ISP, total amount of data transfer, proportions of data transfer through each ISP, bandwidth values, number of requests, proportions of requests initiated through each ISP, and average response time within a specified time range in regions inside or outside mainland China.|-   [DescribeDomainISPData](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainISPData.md)
+-   [DescribeDomainRegionData](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainRegionData.md) |
+|**Popular Referers**|Displays the amount of data transfer, data transfer proportions, number of visits, and visit proportions of popular referer headers.|[DescribeDomainTopReferVisit](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainTopReferVisit.md)|
+|**Popular URLs**|Displays popular URLs based on specified query conditions. Queries by HTTP status code are supported. **Note:** The end time must be later than the start time. The time span between the start and end time must not exceed seven days.
+
+|[DescribeDomainTopUrlVisit](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainTopUrlVisit.md)|
+|**Popular Back-to-origin URLs**|Displays popular back-to-origin URLs based on specified query conditions. Queries by HTTP status code are supported. **Note:** The end time must be later than the start time. The time span between the start and end time must not exceed seven days.
+
+|[DescribeDomainSrcTopUrlVisit](/intl.en-US/New API Reference/Data monitoring operations/DescribeDomainSrcTopUrlVisit.md)|
+|**Domain Name Ranking \(Upgrading\)**|Displays the rank, amount of data transfer, data transfer proportions, peak bandwidth values, time of peak bandwidth values, and number of visits for each accelerated domain name.|[DescribeTopDomainsByFlow](/intl.en-US/New API Reference/Data monitoring operations/DescribeTopDomainsByFlow.md)|
+
+## Procedure
 
 1.  Log on to the [Alibaba Cloud CDN console](https://cdn.console.aliyun.com).
 
 2.  In the left-side navigation pane, choose **Monitoring & Usage Analytics** \> **Statistics**.
 
-3.  On the **Statistics** page, select the monitoring item and metric that you want to query and click **Search**.
+3.  On the **Statistics** tab, select the item that you want to query, set the query conditions, and then click **Search**.
 
-    ![Statistical analysis](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8494136061/p63175.png)
+    Data of the specified item is filtered and displayed based on the specified query conditions. You can analyze the data in the console, or export the data and then perform analytics.
 
-    |Item|Metric|Supported time range|
-    |:---|:-----|:-------------------|
-    |**PV/UV**|PV, UV, user distribution by region, and PV and UV proportion distributed by ISP.|Yesterday, last 7 days, last 30 days, and a custom time range that is within the last 90 days.|
-    |**Top Client IPs**|Network traffic and the number of requests.|Yesterday, last 7 days, last 30 days, and a custom time range that is within the last 90 days.|
-    |**By Region/Provider**|Ranking, region, total traffic, total traffic proportion distributed by region or ISP, number of visits, visit proportion distributed by region or ISP, and response time|Yesterday, last 7 days, last 30 days, and a custom time range that is within the last 90 days.|
-    |**Popular Referers**|Traffic, traffic proportion distributed by URL, number of visits, and visit proportion distributed by referer|Yesterday and a specified day that is within the last 90 days.|
-    |**Popular URLs**|Traffic, traffic proportion distributed by URL, number of visits, and visit proportion distributed by referer header.|Yesterday and a specified day that is within the last 90 days. **Note:** The data is collected from the top 100 most requested URLs within every minute and based on the network traffic of and number of visits to the selected domain name. The data returned to you includes both the preceding data and the network traffic or number of requests within the queried time range. The data of each metric is returned separately. The returned data may not include log data of all requested URLs because the data is collected from only the top 100 most requested URLs. The data is also separated by network traffic and the number of requests. Therefore, the data of most requested URLs may be slightly different from the actual data. The data is for reference only. It takes a long time to retrieve data from the access log. If you require completely accurate data, we recommend that you query data from the access log on the Log Download tab. You can then use the data to produce more accurate analysis results. For more information, see [Download logs](/intl.en-US/Service Management/Log Management/Download logs.md). |
-    |**Popular Back-to-origin URLs**|Traffic, traffic proportion distributed by URL, number of visits, and visit proportion distributed by referer header.|Yesterday and a specified day that is within the last 90 days.|
-    |**Domain Name Ranking**|Request ranking, traffic, traffic proportion distributed by domain, peak bandwidth values, peak hours, and number of visits to each domain name.|Yesterday, last 7 days, last 30 days, and a custom time range that is within the last 90 days.|
+    ![Statistical analysis](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1654651161/p63175.png)
 
 
