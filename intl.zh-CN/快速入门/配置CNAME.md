@@ -8,7 +8,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 ## 配置CNAME方法汇总
 
-配置CNAME需要在域名所在的服务商完成。本文为您介绍在阿里云、腾讯云和新网配置CNAME的方法，在其他域名服务商配置CNAME的方法与本文介绍的方法类似。
+配置CNAME需要在域名所在的DNS解析服务商完成。本文为您介绍在阿里云、腾讯云和新网配置CNAME的方法，在其他域名服务商配置CNAME的方法与本文介绍的方法类似。
 
 -   如果您的域名是在阿里云，请参见[阿里云配置CNAME流程](#section_pbv_cbm_ipp)。
 -   如果您的域名是在腾讯云，请参见[腾讯云配置CNAME流程](#section_1bd_hlb_5w4)。
