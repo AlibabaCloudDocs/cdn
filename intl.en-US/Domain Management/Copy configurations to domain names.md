@@ -22,8 +22,6 @@ When you copy configurations from a domain name to other domain names, take note
 
 3.  On the **Domain Names** page, find the domain name that you want to manage and click **Copy Configurations**.
 
-    ![Domain Names](../images/p64602.png)
-
 4.  Select the configurations that you want to copy and click **Next**.
 
     **Note:**
