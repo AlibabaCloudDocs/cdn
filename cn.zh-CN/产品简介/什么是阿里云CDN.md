@@ -169,8 +169,8 @@ CDN计费详情，请参见[CDN产品定价](https://www.aliyun.com/price/produc
 
 如果您想使用CDN加速OSS、ECS，以及提升缓存命中率，可参见以下最佳实践文档：
 
--   [CDN加速OSS资源（方法一）](/cn.zh-CN/最佳实践/CDN加速OSS资源（方法一）.md)
--   [CDN加速OSS资源（方法二）](/cn.zh-CN/最佳实践/CDN加速OSS资源（方法二）.md)
+-   [通过CDN控制台实现](/cn.zh-CN/最佳实践/CDN加速OSS资源/通过CDN控制台实现.md)
+-   [通过OSS控制台实现](/cn.zh-CN/最佳实践/CDN加速OSS资源/通过OSS控制台实现.md)
 -   [CDN加速ECS资源](/cn.zh-CN/最佳实践/CDN加速ECS资源.md)
 -   [影响CDN缓存命中率的因素及优化策略](/cn.zh-CN/最佳实践/提高CDN缓存命中率.md)
 
