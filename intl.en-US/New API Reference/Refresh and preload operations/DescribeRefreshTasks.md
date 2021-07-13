@@ -6,20 +6,21 @@ Queries the status of refresh or prefetch tasks that belong to a specified accel
 
 -   You can query the status of tasks by task ID or URL.
 -   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page \(20 entries\) collected within the last three days are returned.
--   You can query only data collected within the last three days.
--   The maximum number of times that each user can call this operation per second is 10.
+-   You can query data collected within the last three days.
+-   If auto CDN cache update is enabled in the Object Storage Service \(OSS\) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
+-   The maximum number of times that each user can call this operation per second is 10. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](~~187709~~) operation. This operation allows you to query tasks by task ID.
 
 ## Debugging
 
-[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer automatically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRefreshTasks&type=RPC&version=2018-05-10)
+[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Cdn&api=DescribeRefreshTasks&type=RPC&version=2018-05-10)
 
 ## Request parameters
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|DescribeRefreshTasks|The operation that you want to perform. Set the value to **DescribeRefreshTasks**. |
-|TaskId|String|No|1234321|The task ID by which the task status is queried. |
-|ObjectPath|String|No|http://aaa.com/1.txt|The path of the object. The path is used as a condition for an exact match. |
+|TaskId|String|No|1234321|The ID of the task that you want to query. |
+|ObjectPath|String|No|http://aaa.com/1.txt|The path of the object. The path is used as a condition for exact matching. |
 |PageNumber|Integer|No|1|The number of the page to return. Valid values: **1** to **100000**. |
 |ObjectType|String|No|file|The type of the task. Valid values:
 
@@ -29,7 +30,7 @@ Queries the status of refresh or prefetch tasks that belong to a specified accel
 
  **Note:** If you set the **DomainName** or **TaskStatus** parameter, you must also set the **ObjectType** parameter. |
 |DomainName|String|No|www.yourdomain.com|The accelerated domain name to which the tasks belong. You can specify only one accelerated domain name in each call. By default, this operation queries the status of tasks for all accelerated domain names. |
-|Status|String|No|Complete|The status of the task. Valid values:
+|Status|String|No|Complete|The status of the task to be queried. Valid values:
 
  -   **Complete**: The task is completed.
 -   **Refreshing**: The task is in progress.
@@ -38,7 +39,7 @@ Queries the status of refresh or prefetch tasks that belong to a specified accel
 |StartTime|String|No|2017-12-21T08:00:00Z|The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. |
 |EndTime|String|No|2017-12-22T08:00:00Z|The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 
- **Note:** The end time must be later than the start time. |
+ **Note:** The end of the time range to query. The end time must be later than the start time. |
 |ResourceGroupId|String|No|rg-acfmyuji4b6r4\*\*|The ID of the resource group. |
 
 ## Response parameters
@@ -54,9 +55,9 @@ Queries the status of refresh or prefetch tasks that belong to a specified accel
  -   **Complete**: The task is completed.
 -   **Refreshing**: The task is in progress.
 -   **Failed**: The task has failed.
--   **Pending**: The task is pending. |
+-   **Pending**: The task is in the pending state. |
 |Process|String|100%|The progress of the task, in percentage. |
-|ObjectType|String|file|The type of the task. Valid values:
+|ObjectType|String|file|The type of the task.
 
  -   **file**: refreshes an individual file.
 -   **directory**: refreshes files under the specified directories.
@@ -67,8 +68,8 @@ Queries the status of refresh or prefetch tasks that belong to a specified accel
  -   **InternalError**: An internal error occurred.
 -   **OriginTimeout**: The response from the origin server timed out.
 -   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error. |
-|PageSize|Long|1|The number of entries returned per page. |
-|PageNumber|Long|10|The number of the returned page. |
+|PageSize|Long|1|The number of entries returned on each page. |
+|PageNumber|Long|10|The number of the page. |
 |TotalCount|Long|2|The total number of entries returned. |
 |RequestId|String|174F6032-AA26-470D-B90E-36F0EB205BEE|The ID of the request. |
 
@@ -77,14 +78,14 @@ Queries the status of refresh or prefetch tasks that belong to a specified accel
 Sample requests
 
 ```
-http(s)://cdn.aliyuncs.com/? Action=DescribeRefreshTasks
+http(s)://cdn.aliyuncs.com/?Action=DescribeRefreshTasks
 &ObjectPath=http://aaa.com/1.txt
 &PageNumber=1
 &PageSize=10
 &<Common request parameters>
 ```
 
-Sample responses
+Sample success responses
 
 `XML` format
 
