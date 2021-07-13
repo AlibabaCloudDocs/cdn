@@ -1,6 +1,6 @@
 # Work with the EdgeRoutine CLI
 
-Alibaba Cloud Content Delivery Network \(CDN\) provides the EdgeRoutine CLI to run custom JavaScript code on CDN nodes. This topic describes how to use the EdgeRoutine CLI to deploy JavaScript code.
+Alibaba Cloud CDN provides the EdgeRoutine CLI to run custom JavaScript code on CDN nodes. This topic describes how to use the EdgeRoutine CLI to deploy JavaScript code.
 
 The runtime environment of the EdgeRoutine CLI must be Node.js 8.0 or later.
 
@@ -102,7 +102,7 @@ To enable EdgeRoutine, you must map the serverless computing environment on CDN 
     You must connect to the accelerated domain name in the terminal environment by using the IP address of the staging environment for EdgeRoutine. The IP address is 42.123.119.100 or 42.123.119.101.
 
     ```
-    $ curl-v'http://yourdomain.com/yourpath/'-x42.123.119.100:80
+    $ curl -v 'http://yourdomain.com/yourpath/' -x 42.123.119.100:80
     ```
 
 8.  Deploy the code to the production environment.
