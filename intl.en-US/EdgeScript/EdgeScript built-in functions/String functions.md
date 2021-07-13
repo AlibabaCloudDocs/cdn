@@ -227,7 +227,7 @@ The following table describes the details about this function.
 |Return value|Returns an array of key-value pairs in the dictionary type. The value of the `key` parameter is a number that starts from 1, for example, \[1\]=xx and \[2\]=y. If `sep` is left empty, the string is split by whitespace characters. Whitespace characters include space characters and tab characters \(\\t\).|
 |Example|```
 //Request: ?from=xx1,xx2,xx3  
-//Response: [1]=xx1  
+//Response: [1]=xx1
 //[2]=xx1
 
 if $arg_from {
@@ -251,7 +251,7 @@ The following table describes the details about this function.
 |Description|Splits a string into an array of substrings and returns the array.|
 |Parameter|-   s: the string that you want to split. Data type: string.
 -   sep: the separator that is used to split the string. Data type: string. |
-|Return value|Returns values in the same way as the `split()` function. However, the `key` parameter is named after each split element: `Element 1` -\> `Element 2`.|
+|Return value|Returns response parameters in the same way as the `split()` function. However, the `key` parameter is named after each split element: `Element 1` -\> `Element 2`.|
 |Example|```
 //Request: ?from=xx1,xx2,xx3  
 //Response: xx2=xx2 u=hi,dsl
