@@ -4,7 +4,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 # 配置CNAME
 
-成功添加加速域名后，系统会为您分配一个CNAME域名。您需要在域名解析服务商处完成CNAME配置，将加速域名的DNS解析记录指向CNAME域名，您的访问请求才能转发到CDN节点，待CNAME配置生效后，CDN才能真正实现加速。配置过程中如果CNAME记录与A记录冲突，您需要将A记录修改为CNAME记录。
+成功添加加速域名后，CDN会为您分配一个CNAME域名。您需要在域名解析服务商处将加速域名的DNS解析记录指向CNAME域名，访问请求才能转发到CDN节点上，实现CDN加速。
 
 ## 配置CNAME方法汇总
 
@@ -14,19 +14,24 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 -   如果您的域名是在腾讯云，请参见[腾讯云配置CNAME流程](#section_1bd_hlb_5w4)。
 -   如果您的域名是在新网，请参见[新网配置CNAME流程](#section_z5s_mcc_0cq)。
 
+**说明：**
+
+-   同一个域名解析服务商下，域名解析存在冲突规则。
+-   配置过程中如果CNAME记录与A记录冲突，您需要将A记录修改为CNAME记录。
+
 ## 阿里云配置CNAME流程
 
 如果您的DNS服务商是阿里云，您可以根据以下步骤完成CNAME配置。
 
-1.  获取加速域名的CNAME地址。
+1.  获取加速域名的CNAME记录值。
 
     1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
-    3.  在**域名管理**页面，复制加速域名对应的CNAME地址。
+    3.  在**域名管理**页面，复制加速域名对应的CNAME记录值。
 
-        ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9618134161/p66555.png)
+        ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3949706261/p66555.png)
 
 2.  添加CNAME记录。
 
@@ -50,9 +55,9 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
         -   加速域名为`aliyun.com`，主机记录为`@`。
         -   加速域名为`*.aliyun.com`，主机记录为`*`。 |
         |**解析线路**|默认线路。|保持默认|
-        |**记录值**|输入加速域名对应的CNAME地址。
+        |**记录值**|输入加速域名对应的CNAME记录值。
 
-**说明：** 一个加速域名对应一个CNAME地址，二级域名不能使用主域名的CNAME地址。如果您要加速二级域名，需要将二级域名也添加到CDN上并解析到对应的CNAME地址，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。添加泛域名或二级域名，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)。
+**说明：** 一个加速域名对应一个CNAME记录值，二级域名不能使用主域名的CNAME记录值。如果您要加速二级域名，需要将二级域名也添加到CDN上并解析到对应的CNAME记录值，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。添加泛域名或二级域名，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)。
 
 |all.example.com.w.kunlunsl.com|
         |**TTL**|TTL为缓存时间，数值越小，修改记录后各地生效时间越快，默认为10分钟。|保持默认|
@@ -62,6 +67,10 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
         成功配置CNAME且生效后加速服务会立即生效。新增CNAME记录实时生效，修改CNAME记录在10分钟后生效（具体生效时间长短取决于域名DNS解析配置的TTL时长，10分钟为TTL的默认时长）。成功配置CNAME后状态更新约有10分钟延迟，CDN控制台的域名列表中可能仍显示“未配置CNAME”，请先忽略。
 
 3.  验证CNAME配置是否生效。
+
+    方法一：在CDN控制台的CNAME配置向导中，单击**点击查询**，一键验证。
+
+    方法二：通过ping命令验证。
 
     1.  打开Windows操作系统中的cmd程序。
 
@@ -74,15 +83,15 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 如果您的DNS服务商是腾讯云，您可以根据以下步骤完成CNAME配置。
 
-1.  获取加速域名的CNAME地址。
+1.  获取加速域名的CNAME记录值。
 
     1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
-    3.  在**域名管理**页面，复制加速域名对应的CNAME地址。
+    3.  在**域名管理**页面，复制加速域名对应的CNAME记录值。
 
-        ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9618134161/p66555.png)
+        ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3949706261/p66555.png)
 
 2.  添加CNAME记录。
 
@@ -98,9 +107,9 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
         -   加速域名为`*.aliyun.com`，主机记录为`*`。 |
         |**记录类型**|选择CNAME。|CNAME|
         |**线路类型**|选择“默认”类型。|保持默认|
-        |**记录值**|输入加速域名对应的CNAME地址。
+        |**记录值**|输入加速域名对应的CNAME记录值。
 
-**说明：** 一个加速域名对应一个CNAME地址，二级域名不能使用主域名的CNAME地址。如果您要加速二级域名，需要将二级域名也添加到CDN上并解析到对应的CNAME地址，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。添加泛域名或二级域名，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)。
+**说明：** 一个加速域名对应一个CNAME记录值，二级域名不能使用主域名的CNAME记录值。如果您要加速二级域名，需要将二级域名也添加到CDN上并解析到对应的CNAME记录值，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。添加泛域名或二级域名，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)。
 
 |all.example.com.w.kunlunsl.com|
         |**权重**|无需填写。|不涉及|
@@ -113,6 +122,10 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 3.  验证CNAME配置是否生效。
 
+    方法一：在CDN控制台的CNAME配置向导中，单击**点击查询**，一键验证。
+
+    方法二：通过ping命令验证。
+
     1.  打开Windows操作系统中的cmd程序。
 
     2.  在命令行中ping加速域名，如果返回的解析结果和CDN控制台上该加速域名的CNAME值一致，则表示CDN加速已经生效。
@@ -124,15 +137,15 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
 如果您的DNS服务商是新网，您可以根据以下步骤完成CNAME配置。
 
-1.  获取加速域名的CNAME地址。
+1.  获取加速域名的CNAME记录值。
 
     1.  登录[CDN控制台](https://cdn.console.aliyun.com)。
 
     2.  在左侧导航栏，单击**域名管理**。
 
-    3.  在**域名管理**页面，复制加速域名对应的CNAME地址。
+    3.  在**域名管理**页面，复制加速域名对应的CNAME记录值。
 
-        ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9618134161/p66555.png)
+        ![域名管理](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3949706261/p66555.png)
 
 2.  添加CNAME记录。
 
@@ -142,7 +155,7 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
 
         |参数|说明|填写样例|
         |--|--|----|
-        |**别名**|需指向的域名，即CDN为您分配的CNAME域名。**说明：** 一个加速域名对应一个CNAME地址，二级域名不能使用主域名的CNAME地址。如果您要加速二级域名，需要将二级域名也添加到CDN上并解析到对应的CNAME地址，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。添加泛域名或二级域名，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)。
+        |**别名**|需指向的域名，即CDN为您分配的CNAME域名。**说明：** 一个加速域名对应一个CNAME记录值，二级域名不能使用主域名的CNAME记录值。如果您要加速二级域名，需要将二级域名也添加到CDN上并解析到对应的CNAME记录值，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。添加泛域名或二级域名，请参见[添加加速域名](/intl.zh-CN/快速入门/添加加速域名.md)。
 
 |all.example.com.w.kunlunsl.com|
         |**别名主机**|别名主机指加速域名的前缀。|        -   加速域名为`testcdn.aliyun.com`，别名主机为`testcdn`。
@@ -156,6 +169,10 @@ keyword: [CNAME, 万网CNAME接入CDN, 万网CNAME解析, 阿里云域名CNAME]
         成功配置CNAME且生效后加速服务会立即生效。成功配置CNAME后状态更新约有10分钟延迟，CDN控制台的域名列表中可能仍显示“未配置CNAME”，请先忽略。
 
 3.  验证CNAME配置是否生效。
+
+    方法一：在CDN控制台的CNAME配置向导中，单击**点击查询**，一键验证。
+
+    方法二：通过ping命令验证。
 
     1.  打开Windows操作系统中的cmd程序。
 
