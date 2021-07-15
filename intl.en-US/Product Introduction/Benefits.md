@@ -28,7 +28,7 @@ Alibaba Cloud CDN is an all-in-one content delivery service. It allows you to us
 
 **Custom configurations**
 
-Alibaba Cloud CDN is an all-in-one and also programmable CDN service. You can use ES to customize Alibaba Cloud CDN. If the standard configurations in the Alibaba Cloud CDN cannot meet your business requirements, ES allows you to use scripts to customize features. ES supports quick and agile service customization.
+Alibaba Cloud CDN is an all-in-one and also programmable CDN service. You can use ES to customize Alibaba Cloud CDN. If the standard configurations in the Alibaba Cloud CDN console cannot meet your business requirements, ES allows you to use scripts to customize features. ES supports quick and agile service customization.
 
 **Custom routines on edge nodes**
 
